@@ -1,0 +1,36 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext"],
+    "module": "esnext",
+    "jsx": "preserve",
+    "jsxImportSource": "@emotion/react",
+    "incremental": true,
+    "paths": {
+      "@/test-utils": ["../config/jest/test-utils"],
+      "@/config/*": ["./config/*"],
+      "@/config": ["./config/index"],
+      "@/core/*": ["./core/*"],
+      "@/components/*": ["./components/*"],
+      "@/backend/*": ["./backend/*"],
+      "@/features/*": ["./features/*"],
+      "@/pages/*": ["./pages/*"],
+      "@/public/*": ["../public/*"],
+      "@/themes/*": ["./themes/*"],
+      "@/themes": ["./themes/index"],
+      "@belgattitude/db-main": ["../../../packages/db-main/src/index"]
+    }
+  },
+  "exclude": ["**/node_modules", "**/.*/", ".next"],
+  "include": [
+    "next-env.d.ts",
+    "**/*.ts",
+    "**/*.tsx",
+    "**/*.js",
+    "**/*.jsx",
+    "**/*.mjs",
+    "**/*.json"
+  ]
+}

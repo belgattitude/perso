@@ -1,0 +1,19 @@
+@import 'mixins.responsive';
+@import 'variables';
+
+/*
+@font-face {
+  font-family: 'FiraSans';
+  src: url('/static/fonts/FiraSans-Bold.ttf');
+  font-weight: bold;
+  font-display: auto;
+  font-style: normal;
+}
+*/
+
+body {
+  font-family: 'Raleway', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  overflow-x: hidden;
+}
