@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
-import { FC } from 'react';
-import { GithubRepo } from './github-repo';
+import type { FC } from 'react';
 import { useQuery } from 'react-query';
 import { getGithubRepos } from '@/features/resume/api/getGithubRepos';
+import { GithubRepo } from './github-repo';
 
 export type GithubRepoListProps = {
   className?: string;

@@ -15,7 +15,7 @@ import { Block } from '@/features/resume/blocks/block';
 import type { TechnosProps } from '@/features/resume/blocks/technos/technos';
 import { defaultTheme } from '@/themes';
 import { Footer } from '../layouts';
-//import { SocialIcon } from 'react-social-icons';
+// import { SocialIcon } from 'react-social-icons';
 
 const Technos = dynamic<TechnosProps>(
   () =>

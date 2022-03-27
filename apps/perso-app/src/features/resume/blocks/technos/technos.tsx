@@ -1,9 +1,8 @@
-import styled from '@emotion/styled';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { defaultSection, skillsRecords } from '@/config';
-import type { SkillsPanelProps } from '../../components/skills';
 import { TechnosCtn } from '@/features/resume/blocks/technos/technos.style';
+import type { SkillsPanelProps } from '../../components/skills';
 
 export type TechnosProps = {
   className?: string;

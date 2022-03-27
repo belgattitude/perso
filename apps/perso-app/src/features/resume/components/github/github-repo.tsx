@@ -1,8 +1,8 @@
 import styled from '@emotion/styled';
+import type { FC } from 'react';
+import type { GetGithubRepos } from '@/features/resume/api/getGithubRepos';
 import { CustomTag } from '@/features/resume/components/github/custom-tag';
 import { truncateText } from '../../../../utils/utils';
-import { FC } from 'react';
-import type { GetGithubRepos } from '@/features/resume/api/getGithubRepos';
 
 const UnstyledGithubRepo: FC<{
   className?: string;

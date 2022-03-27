@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import { GithubRepoList } from '@/features/resume/components/github/github-repo-list';
 import GithubIcon from '@/assets/icons/social/github.svg';
 import { OpensourceCtn } from '@/features/resume/blocks/opensource/opensource.style';
+import { GithubRepoList } from '@/features/resume/components/github/github-repo-list';
 
 type OpensourceProps = {
   className?: string;

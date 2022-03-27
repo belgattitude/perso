@@ -1,4 +1,3 @@
-import styled from '@emotion/styled';
 import type { FC } from 'react';
 import { AboutMeCtn } from '@/features/resume/blocks/about-me/about-me.style';
 

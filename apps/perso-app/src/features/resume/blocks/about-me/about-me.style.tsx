@@ -1,5 +1,4 @@
 import styled from '@emotion/styled';
-import type { FC } from 'react';
 
 export const AboutMeCtn = styled.div`
   a,

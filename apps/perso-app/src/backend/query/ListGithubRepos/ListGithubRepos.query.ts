@@ -1,6 +1,6 @@
-import { UnPromisify } from '@/core/type-utils/type-utils';
 import { graphql } from '@octokit/graphql';
-import { Repository } from '@octokit/graphql-schema';
+import type { Repository } from '@octokit/graphql-schema';
+import type { UnPromisify } from '@/core/type-utils/type-utils';
 
 export type ListGithubRepos = UnPromisify<
   ReturnType<ListGithubReposQuery['execute']>
