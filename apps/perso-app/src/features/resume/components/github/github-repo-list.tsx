@@ -1,51 +1,22 @@
 import styled from '@emotion/styled';
-import React, { useEffect, useState } from 'react';
+import { FC } from 'react';
 import { GithubRepo } from './github-repo';
-import type { RepoItems } from './github.api';
-import GithubApi from './github.api';
+import { useQuery } from 'react-query';
+import { getGithubRepos } from '@/features/resume/api/getGithubRepos';
 
 export type GithubRepoListProps = {
-  githubQuery: string;
-  filters?: Array<[string, string[]]>;
   className?: string;
   children?: never;
 };
 
-const UnstyledGithubRepoList: React.FC<GithubRepoListProps> = (props) => {
-  const [repos, setRepos] = useState<RepoItems>([]);
-  const [isError, setIsError] = useState<boolean>(false);
-  const [loading, setLoading] = useState<boolean>(false);
-  const { filters = [], className, githubQuery } = props;
+const UnstyledGithubRepoList: FC<GithubRepoListProps> = (props) => {
+  const { className } = props;
+  const { isError, isLoading, data } = useQuery(
+    'getGithubRepos',
+    getGithubRepos
+  );
 
-  useEffect(() => {
-    let mounted = true;
-    const abortController = new AbortController();
-    const fetchData = async () => {
-      const api = GithubApi.createFromDefaults();
-      setIsError(false);
-      setLoading(true);
-      const { payload } = await api.getMyRepos({
-        githubQuery,
-        signal: abortController.signal,
-        filterOnly: filters,
-      });
-      if (mounted) {
-        if (payload.isError) {
-          setIsError(true);
-        } else {
-          setRepos(payload.value);
-        }
-        setLoading(false);
-      }
-    };
-    fetchData();
-    return () => {
-      abortController.abort();
-      mounted = false;
-    };
-  }, [filters, githubQuery]);
-
-  if (loading) {
+  if (isLoading) {
     return <div className={className}>Loading...</div>;
   }
 
@@ -56,9 +27,9 @@ const UnstyledGithubRepoList: React.FC<GithubRepoListProps> = (props) => {
   return (
     <div className={className}>
       <ul>
-        {repos.map((repoData) => {
+        {data?.map((repoData) => {
           return (
-            <li key={repoData.id}>
+            <li key={repoData.name}>
               <GithubRepo repo={repoData} />
             </li>
           );

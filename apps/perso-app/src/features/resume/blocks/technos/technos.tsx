@@ -2,7 +2,8 @@ import styled from '@emotion/styled';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { defaultSection, skillsRecords } from '@/config';
-import type { SkillsPanelProps } from '../components/skills';
+import type { SkillsPanelProps } from '../../components/skills';
+import { TechnosCtn } from '@/features/resume/blocks/technos/technos.style';
 
 export type TechnosProps = {
   className?: string;
@@ -11,17 +12,19 @@ export type TechnosProps = {
 
 const SkillsPanel = dynamic<SkillsPanelProps>(
   () =>
-    import('../components/skills/skills-panel').then((mod) => mod.SkillsPanel),
+    import('../../components/skills/skills-panel').then(
+      (mod) => mod.SkillsPanel
+    ),
   {
     loading: () => <div>Loading...</div>,
     ssr: false,
   }
 );
 
-const UnstyledTechnos: FC<TechnosProps> = (props) => {
+export const Technos: FC<TechnosProps> = (props) => {
   const { className } = props;
   return (
-    <div className={className}>
+    <TechnosCtn className={className}>
       <h1>Technos</h1>
       <h2>what do I work with (and relics) ?</h2>
       <SkillsPanel skills={skillsRecords} defaultSection={defaultSection} />
@@ -60,25 +63,6 @@ const UnstyledTechnos: FC<TechnosProps> = (props) => {
       </p>
 
       <p>I usually share my time between frontend and backend.</p>
-    </div>
+    </TechnosCtn>
   );
 };
-
-export const Technos = styled(UnstyledTechnos)<TechnosProps>`
-  > div {
-    width: 100%;
-    max-width: 650px;
-  }
-  > h3 {
-    font-weight: 300;
-  }
-  > p {
-    width: 80%;
-    margin: 20px 0;
-    text-align: left;
-    > strong {
-      color: black;
-      font-weight: 500;
-    }
-  }
-`;

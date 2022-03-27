@@ -1,17 +1,12 @@
 import styled from '@emotion/styled';
-import React from 'react';
 import { CustomTag } from '@/features/resume/components/github/custom-tag';
 import { truncateText } from '../../../../utils/utils';
-import type { RepoItemDTO } from './github.api';
+import { FC } from 'react';
+import type { GetGithubRepos } from '@/features/resume/api/getGithubRepos';
 
-const getRepoHomePage = (repo: RepoItemDTO): string => {
-  const { homepage, html_url, custom_tags = [] } = repo;
-  return !homepage || custom_tags.includes('pwa') ? html_url : homepage;
-};
-
-const UnstyledGithubRepo: React.FC<{
+const UnstyledGithubRepo: FC<{
   className?: string;
-  repo: RepoItemDTO;
+  repo: GetGithubRepos[0];
   limitChars?: number;
   children?: never;
 }> = (props) => {
@@ -19,21 +14,21 @@ const UnstyledGithubRepo: React.FC<{
   return (
     <div className={className}>
       <div>
-        <a href={getRepoHomePage(repo)} target="_blank" rel="noreferrer">
+        <a href={repo.homepageUrl ?? repo.url} target="_blank" rel="noreferrer">
           {repo.name}
-          {repo.homepage ? (
+          {repo.homepageUrl ? (
             <i className="fas fa-home" />
           ) : (
             <i className="fab fa-github" />
           )}
         </a>
-        <p>{truncateText(repo.description, limitChars, false)}</p>
-        {(repo.custom_tags || []).map((label) => (
+        <p>{truncateText(repo.description ?? '', limitChars, false)}</p>
+        {(repo.customTags || []).map((label) => (
           <CustomTag key={label} title={label} />
         ))}
       </div>
       <div>
-        <div>{repo.stargazers_count}</div>
+        <div>{repo.stargazerCount}</div>
         <div>
           <i className="fas fa-star" />
         </div>

@@ -1,16 +1,17 @@
 import styled from '@emotion/styled';
 import type { FC } from 'react';
+import { AboutMeCtn } from '@/features/resume/blocks/about-me/about-me.style';
 
-type AboutMeProps = {
+export type AboutMeProps = {
   className?: string;
   children?: never;
 };
 
-const UnstyledAboutMe: FC<AboutMeProps> = (props) => {
+export const AboutMe: FC<AboutMeProps> = (props) => {
   const { className } = props;
 
   return (
-    <div className={className}>
+    <AboutMeCtn className={className}>
       <h1 className={'font-serif text-4xl'}>About me</h1>
       <p>
         I'm a passionate developer with more than 15 years experience in backend
@@ -28,16 +29,6 @@ const UnstyledAboutMe: FC<AboutMeProps> = (props) => {
         </a>{' '}
         is an answer to a problem ;)
       </p>
-    </div>
+    </AboutMeCtn>
   );
 };
-
-export const AboutMe = styled(UnstyledAboutMe)<AboutMeProps>`
-  a,
-  &:link,
-  &:visited {
-    color: ${(props) => props.theme.colors.link};
-    text-decoration: none;
-    padding: 0;
-  }
-`;

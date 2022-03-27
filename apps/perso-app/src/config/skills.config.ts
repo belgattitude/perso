@@ -13,15 +13,14 @@ export const skillSections = [
   'Node',
   'DB',
   'Dev',
-  'Emerging',
   'Relics',
 ] as const;
 export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
-  none: ['Relics'],
-  adrenaline: ['Frontend', 'PHP', 'DB', 'Overview', 'Emerging'],
-  topdown: ['Node', 'Dev'],
+  none: [],
+  adrenaline: ['Overview'],
+  topdown: ['Frontend', 'PHP', 'DB', 'Overview'],
   soft: ['Relics'],
 };
 
@@ -241,39 +240,12 @@ export const skillsRecords: SkillRecord[] = [
     type: 'library',
   },
   {
-    name: 'MDX',
-    logo: '/images/logos/technos/mdx.png',
-    homepage: 'https://mdxjs.com/',
-    years: 0.1,
-    rating: 1,
-    sections: ['Emerging'],
-    type: 'library',
-  },
-  {
-    name: 'NestJs',
-    logo: '/images/logos/technos/nestjs.svg',
-    homepage: 'https://nestjs.com',
-    years: 0.1,
-    rating: 1,
-    sections: ['Emerging'],
-    type: 'library',
-  },
-  {
-    name: 'Lerna',
-    logo: '/images/logos/technos/lerna.png',
-    homepage: 'https://github.com/lerna',
-    years: 0.4,
-    rating: 3,
-    sections: ['Emerging'],
-    type: 'library',
-  },
-  {
     name: 'Docker',
     logo: '/images/logos/technos/docker.png',
     homepage: 'https://docker.com',
     years: 0.2,
     rating: 1,
-    sections: ['Emerging'],
+    sections: ['Dev'],
     type: 'tooling',
   },
   {

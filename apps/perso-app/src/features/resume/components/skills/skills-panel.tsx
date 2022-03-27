@@ -29,7 +29,6 @@ export type SkillRecord = {
   type: SkillType;
 };
 
-// Utilitary
 const isSectionsActive =
   (activeSections: SkillSections[]) =>
   (sections: SkillSections[]): boolean => {

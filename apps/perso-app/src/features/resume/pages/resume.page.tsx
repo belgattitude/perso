@@ -12,12 +12,16 @@ import {
   Features,
 } from '@/features/resume/blocks';
 import { Block } from '@/features/resume/blocks/block';
-import type { TechnosProps } from '@/features/resume/blocks/technos';
+import type { TechnosProps } from '@/features/resume/blocks/technos/technos';
 import { defaultTheme } from '@/themes';
 import { Footer } from '../layouts';
+//import { SocialIcon } from 'react-social-icons';
 
 const Technos = dynamic<TechnosProps>(
-  () => import('@/features/resume/blocks/technos').then((mod) => mod.Technos),
+  () =>
+    import('@/features/resume/blocks/technos/technos').then(
+      (mod) => mod.Technos
+    ),
   {
     ssr: false,
   }
@@ -72,17 +76,13 @@ export const ResumePage: FC<{ chidren?: never }> = () => {
           <Footer>
             Contact me on
             <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">
-              &nbsp;
-              <i className="fab fa-linkedin" />
-              &nbsp;linked.in
+              &nbsp; &nbsp;linked.in
             </a>
             <p>No recruiters please !</p>
             <p>
               Want to see the
               <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
-                &nbsp;
-                <i className="fab fa-github" />
-                &nbsp;code&nbsp;
+                &nbsp; &nbsp;code&nbsp;
               </a>
               ?
             </p>

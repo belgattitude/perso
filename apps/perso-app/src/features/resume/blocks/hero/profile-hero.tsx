@@ -1,5 +1,4 @@
 import { css } from '@emotion/react';
-import styled from '@emotion/styled';
 import {
   m as motion,
   useViewportScroll,
@@ -13,6 +12,7 @@ import type { FC } from 'react';
 import React, { useCallback, useState } from 'react';
 import { breakpoints } from '@/config';
 import { Avatar } from '@/features/resume/components/avatar';
+import { ProfileHeroCtn } from './profile-hero.style';
 
 type ProfileHeroProps = {
   className?: string;
@@ -20,7 +20,7 @@ type ProfileHeroProps = {
   avatarImg?: string;
 };
 
-const UnstyledProfileHero: FC<ProfileHeroProps> = (props) => {
+export const ProfileHero: FC<ProfileHeroProps> = (props) => {
   const { avatarImg, className } = props;
   const { scrollY } = useViewportScroll();
 
@@ -86,7 +86,11 @@ const UnstyledProfileHero: FC<ProfileHeroProps> = (props) => {
   const img = '/images/crop-nicolas-i-unsplash.webp';
   return (
     <LazyMotion strict features={domAnimation}>
-      <div ref={measuredRef} className={className} css={{ overflow: 'hidden' }}>
+      <ProfileHeroCtn
+        ref={measuredRef}
+        className={className}
+        css={{ overflow: 'hidden' }}
+      >
         <div
           className={'background'}
           css={css`
@@ -163,50 +167,7 @@ const UnstyledProfileHero: FC<ProfileHeroProps> = (props) => {
             Developer in React, Typescript and PHP.
           </motion.p>
         </div>
-      </div>
+      </ProfileHeroCtn>
     </LazyMotion>
   );
 };
-
-export const ProfileHero = styled(UnstyledProfileHero)<ProfileHeroProps>`
-  position: relative;
-  height: 100vh;
-  // @link https://css-tricks.com/css-fix-for-100vh-in-mobile-webkit/
-  min-height: -webkit-fill-available;
-  @media (${breakpoints.large}) {
-    height: 100vh;
-    //min-height: unset;
-    min-height: -webkit-fill-available;
-  }
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  > * {
-    z-index: 1;
-  }
-  div.content {
-    text-align: center;
-    font-size: 1em;
-    color: white;
-    @media (${breakpoints.large}) {
-      font-size: 1.1em;
-    }
-
-    h1 {
-      font-size: 2em;
-      letter-spacing: 0.1em;
-      font-weight: 400;
-      margin: 15px;
-    }
-    p {
-      font-size: 1.5em;
-      font-variant: all-small-caps;
-      margin: 0;
-      letter-spacing: 0.17em;
-      @media (${breakpoints.large}) {
-        font-size: 1.5em;
-        letter-spacing: 0.19em;
-      }
-    }
-  }
-`;

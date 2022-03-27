@@ -1,16 +1,15 @@
-import styled from '@emotion/styled';
 import type { FC } from 'react';
-import { breakpoints } from '@/config';
+import { FeaturesCtn } from '@/features/resume/blocks/features/features.style';
 
 type FeaturesProps = {
   className?: string;
   children?: never;
 };
 
-const UnstyledFeatures: FC<FeaturesProps> = (props) => {
+export const Features: FC<FeaturesProps> = (props) => {
   const { className } = props;
   return (
-    <div className={className}>
+    <FeaturesCtn className={className}>
       <h1>What do I do ?</h1>
       <h2>and what you might be interested in</h2>
       <div className={'card-container'}>
@@ -57,34 +56,6 @@ const UnstyledFeatures: FC<FeaturesProps> = (props) => {
           </p>
         </div>
       </div>
-    </div>
+    </FeaturesCtn>
   );
 };
-
-export const Features = styled(UnstyledFeatures)<FeaturesProps>`
-  div.card-container {
-    display: flex;
-    flex-direction: row;
-    justify-content: flex-start;
-    align-items: stretch;
-    flex-wrap: wrap;
-
-    div {
-      flex: 1 1 auto;
-
-      width: 50%;
-      @media all and (${breakpoints.large}) {
-        width: 33.33%;
-      }
-      h3 {
-        font-size: 1em;
-        font-weight: 500;
-        letter-spacing: 0.025em;
-        padding: 0;
-      }
-      > p {
-        margin: 5px;
-      }
-    }
-  }
-`;

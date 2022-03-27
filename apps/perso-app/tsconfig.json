@@ -10,6 +10,7 @@
     "incremental": true,
     "paths": {
       "@/test-utils": ["../config/jest/test-utils"],
+      "@/assets/*": ["./assets/*"],
       "@/config/*": ["./config/*"],
       "@/config": ["./config/index"],
       "@/core/*": ["./core/*"],

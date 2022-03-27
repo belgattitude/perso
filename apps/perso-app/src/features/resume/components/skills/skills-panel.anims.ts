@@ -47,8 +47,8 @@ export const getListVariants = (type: AnimationType = 'none'): Variants => {
 };
 
 export const getItemVariants = (type: AnimationType = 'none'): Variants => {
-  const vw = window !== undefined ? Math.ceil(window.innerWidth / 4.9) : 800;
-  const vh = window !== undefined ? Math.ceil(window.innerWidth / 4.9) : 800;
+  const vw = window !== undefined ? Math.ceil(window.innerWidth / 1.9) : 800;
+  const vh = window !== undefined ? Math.ceil(window.innerWidth / 1.9) : 800;
 
   const initialX = Math.random() > 0.5 ? vw : -vw;
   const initialY = Math.random() > 0.5 ? vh : -vh;
@@ -110,15 +110,15 @@ export const getItemVariants = (type: AnimationType = 'none'): Variants => {
     case 'adrenaline':
       return {
         initial: {
-          rotateX: 90,
-          rotateZ: 120,
+          rotateX: 0,
+          rotateZ: 240,
           opacity: 0,
-          scale: 12,
-          x: initialX,
-          y: initialY,
+          scale: 1000,
+          x: 1400,
+          y: -2000,
         },
         enter: {
-          opacity: 0.9,
+          opacity: 0.3,
           rotateX: 0,
           rotateZ: 0,
           scale: 1,
