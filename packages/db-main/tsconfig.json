@@ -3,26 +3,13 @@
   "compilerOptions": {
     "baseUrl": "./src",
     "target": "ES2020",
-    "lib": ["esnext"],
+    "lib": [
+      "esnext"
+    ],
     "module": "ES2020",
     "noEmit": false,
     "incremental": true,
-    "paths": {
-      "@your-org/core-lib/*": ["../../../packages/core-lib/src/*"],
-      "@your-org/core-lib": ["../../../packages/core-lib/src/index"]
-    }
-  },
-  // Prisma seed requires to use commonjs
-  // @link https://github.com/TypeStrong/ts-node#via-tsconfigjson-recommended
-  "ts-node": {
-    "transpileOnly": true,
-    "files": true,
-    "compilerOptions": {
-      "module": "commonjs",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "allowJs": true
-    }
+    "paths": {}
   },
   "exclude": ["**/node_modules", "**/.*/"]
 }
