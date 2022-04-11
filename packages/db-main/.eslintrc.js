@@ -3,13 +3,24 @@
  * @see https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-linters.md
  */
 
+const {
+  getDefaultIgnorePatterns,
+} = require('@belgattitude/eslint-config-bases/helpers');
+
 module.exports = {
   root: true,
-  ignorePatterns: ['dist', 'build', 'src/generated'],
-  extends: ['../../.eslintrc.base.js'],
-  env: {
-    browser: false,
-    es6: true,
-    node: true,
+  ignorePatterns: [...getDefaultIgnorePatterns(), 'src/generated'],
+  extends: [
+    '@belgattitude/eslint-config-bases/typescript',
+    '@belgattitude/eslint-config-bases/sonar',
+    '@belgattitude/eslint-config-bases/regexp',
+    // Apply prettier and disable incompatible rules
+    '@belgattitude/eslint-config-bases/prettier',
+  ],
+  rules: {
+    // optional overrides per project
   },
+  overrides: [
+    // optional overrides per project file match
+  ],
 };
