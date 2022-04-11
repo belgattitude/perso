@@ -1,0 +1,71 @@
+version: '3.9'
+services:
+  develop:
+    container_name: belgattitude-website-develop
+    profiles:
+      - donotstart
+    stdin_open: true
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: develop
+    volumes:
+      # Share the source code to allow development
+      - .:/app/
+      # Prevent sharing of node_modules between host and container
+      # to avoid ownership and/or platform issues
+      - build_website:/app/apps/website/.next
+      - nm_website:/app/node_modules
+      - nm_prisma:/app/packages/db-main-prisma/node_modules
+
+  # Convenience production "deps" stage service for debugging
+  # Build > docker buildx bake -f docker-compose.web-app.yml --progress=tty deps
+  deps:
+    container_name: website-multistage-deps
+    profiles:
+      - donotstart
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: deps
+
+  # Convenience production "builder" stage service for debugging
+  # Build > docker buildx bake -f docker-compose.website.yml --progress=tty runner
+  builder:
+    container_name: website-multistage-builder
+    profiles:
+      - donotstart
+    stdin_open: true
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: builder
+
+  # Convenience production "runner" stage service for debugging
+  # Build > docker buildx bake -f docker-compose.website.yml --progress=tty runner
+  # Run   > docker-compose -f docker-compose.website.yml --env-file ./apps/website/.env.local up runner
+  runner:
+    container_name: website-multistage-runner
+    profiles:
+      - donotstart
+    stdin_open: true
+    ports:
+      - target: 3000
+        published: 3000
+        protocol: tcp
+    build:
+      context: .
+      dockerfile: Dockerfile
+      target: runner
+    environment:
+      - PRISMA_DATABASE_URL
+
+volumes:
+  build_website:
+  nm_website:
+  nm_prisma:

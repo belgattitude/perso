@@ -1,14 +1,6 @@
-# @your-org/db-main-prisma
+# @belgattitude/db-main
 
-<p align="left">
-  <a aria-label="Build" href="https://github.com/belgattitude/nextjs-monorepo-example/actions?query=workflow%3ACI">
-    <img alt="build" src="https://img.shields.io/github/workflow/status/belgattitude/nextjs-monorepo-example/CI-web-app/main?label=CI&logo=github&style=flat-quare&labelColor=000000" />
-  </a>
-</p>
 
-## Intro
-
-Basic demo of a shared package using [prisma](<(https://prisma.io)>) to handle database access, part of the [nextjs-monorepo-example](https://github.com/belgattitude/nextjs-monorepo-example)
 
 ## Quick start
 
@@ -21,8 +13,6 @@ yarn prisma-db-seed
 ```
 
 > See the .env(.local|.production|.development) file to edit the connection.
-> **Curious about the setup ?**, we use [dotenv-flow](https://github.com/kerimdzhanov/dotenv-flow) under the hood read [this](https://github.com/prisma/prisma/issues/3865)
-> and see the script section of [./package.json](./package.json)
 
 ## Install
 
@@ -70,12 +60,3 @@ Create and seed the database the first time or after a change.
 yarn prisma-db-seed
 ```
 
-## DB type generation
-
-Create or update the types. This is generally automatically done in
-a postinstall from any app, see script section of [../../apps/web-app/package.json](../../apps/web-app/package.json)
-or try it out with `yarn workspace web-app postinstall`
-
-```bash
-yarn prisma generate
-```

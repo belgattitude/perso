@@ -3970,15 +3970,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:17.0.14":
-  version: 17.0.14
-  resolution: "@types/react-dom@npm:17.0.14"
-  dependencies:
-    "@types/react": "*"
-  checksum: b54cd0ef573236b3d87fe7493e6d1c36d8b4ca37a3b46364272a5c91ac178e3296b68ea1aeb299ce68f12ad663c5720ee890d0539b14881c6754bdcbdb0befa0
-  languageName: node
-  linkType: hard
-
 "@types/react@npm:*, @types/react@npm:18.0.1, @types/react@npm:>=16":
   version: 18.0.1
   resolution: "@types/react@npm:18.0.1"
@@ -3987,17 +3978,6 @@ __metadata:
     "@types/scheduler": "*"
     csstype: ^3.0.2
   checksum: ede927ed3766fef5fec513fe75e79180bb3c97d21ca7707321e969193c596bc4a531160238546a845e4131df02ec9be7803277a268bc270156362d16b29b4ffb
-  languageName: node
-  linkType: hard
-
-"@types/react@npm:17.0.43":
-  version: 17.0.43
-  resolution: "@types/react@npm:17.0.43"
-  dependencies:
-    "@types/prop-types": "*"
-    "@types/scheduler": "*"
-    csstype: ^3.0.2
-  checksum: 981b0993f5b3ea9d3488b8cc883201e8ae47ba7732929f788f450a79fd72829e658080d5084e67caa008e58d989b0abc1d5f36ff0a1cda09315ea3a3c0c9dc11
   languageName: node
   linkType: hard
 
@@ -4051,6 +4031,13 @@ __metadata:
   dependencies:
     "@types/jest": "*"
   checksum: 77fe7ad3a9d49250972a0e3289b6d536942f95f0d539f32a917cf78c9422113d55c00de53b53dd4de1de49b68c8b500faea62e3017c4a64736cfbfbade749e04
+  languageName: node
+  linkType: hard
+
+"@types/use-sync-external-store@npm:^0.0.3":
+  version: 0.0.3
+  resolution: "@types/use-sync-external-store@npm:0.0.3"
+  checksum: 161ddb8eec5dbe7279ac971531217e9af6b99f7783213566d2b502e2e2378ea19cf5e5ea4595039d730aa79d3d35c6567d48599f69773a02ffcff1776ec2a44e
   languageName: node
   linkType: hard
 
@@ -4896,100 +4883,6 @@ __metadata:
   checksum: 669632eb3745404c2f822a18fc3a0122d2f9a7a13f7fb8b5823ee19d1d2ff9ee5b52c53367176ea4ad093c332fd5ab4bd0ebae5a8e27917a4105a4cfc86b1005
   languageName: node
   linkType: hard
-
-"belgattitude-blog@workspace:apps/belgattitude-blog":
-  version: 0.0.0-use.local
-  resolution: "belgattitude-blog@workspace:apps/belgattitude-blog"
-  dependencies:
-    "@babel/core": 7.17.9
-    "@belgattitude/db-main": "workspace:^"
-    "@belgattitude/eslint-config-bases": "workspace:^"
-    "@emotion/babel-plugin": 11.9.2
-    "@emotion/cache": 11.7.1
-    "@emotion/react": 11.9.0
-    "@emotion/server": 11.4.0
-    "@emotion/styled": 11.8.1
-    "@fontsource/inter": 4.5.7
-    "@fontsource/raleway": 4.5.5
-    "@headlessui/react": 1.5.0
-    "@mdx-js/react": 2.1.1
-    "@mui/icons-material": 5.6.1
-    "@next/bundle-analyzer": 12.1.4
-    "@next/env": 12.1.4
-    "@octokit/graphql": 4.8.0
-    "@octokit/graphql-schema": 10.73.0
-    "@playwright/test": 1.20.2
-    "@sentry/nextjs": 6.19.6
-    "@sentry/react": 6.19.6
-    "@sindresorhus/is": 4.6.0
-    "@size-limit/file": 7.0.8
-    "@soluble/cache-ioredis": 0.8.6
-    "@svgr/webpack": 6.2.1
-    "@tailwindcss/aspect-ratio": 0.4.0
-    "@tailwindcss/forms": 0.5.0
-    "@tailwindcss/line-clamp": 0.3.1
-    "@tailwindcss/typography": 0.5.2
-    "@testing-library/jest-dom": 5.16.4
-    "@testing-library/react": 13.0.0
-    "@testing-library/react-hooks": 8.0.0
-    "@tsed/exceptions": 6.111.0
-    "@types/cors": 2.8.12
-    "@types/ioredis": 4.28.10
-    "@types/jest": 27.4.1
-    "@types/node": 17.0.23
-    "@types/react": 17.0.43
-    "@types/react-dom": 17.0.14
-    autoprefixer: 10.4.4
-    axios: 0.26.1
-    cors: 2.8.5
-    cross-env: 7.0.3
-    dotenv-flow: 3.2.0
-    dotenv-flow-cli: 1.0.0
-    es-check: 6.2.1
-    eslint: 8.13.0
-    eslint-config-next: 12.1.4
-    framer-motion: 6.2.9
-    graphql: 16.3.0
-    i18next: 21.6.15
-    ioredis: 5.0.4
-    jest: 27.5.1
-    jest-css-modules-transform: 4.3.0
-    ky: 0.30.0
-    micro: 9.3.4
-    next: 12.1.4
-    next-auth: 4.3.1
-    next-connect: 0.12.2
-    next-i18next: 11.0.0
-    next-secure-headers: 2.2.0
-    next-seo: 5.4.0
-    next-transpile-modules: 9.0.0
-    npm-run-all: 4.1.5
-    picocolors: 1.0.0
-    popmotion: 11.0.3
-    postcss: 8.4.12
-    postcss-flexbugs-fixes: 5.0.2
-    postcss-preset-env: 7.4.3
-    prettier: 2.6.2
-    react: 18.0.0
-    react-dom: 18.0.0
-    react-i18next: 11.16.5
-    react-query: 3.34.19
-    react-social-icons: 5.13.0
-    rimraf: 3.0.2
-    rooks: 5.11.0
-    sass: 1.50.0
-    sharp: 0.30.3
-    size-limit: 7.0.8
-    superjson: 1.8.1
-    symlink-dir: 5.0.1
-    sync-directory: 4.0.12
-    tailwindcss: 3.0.23
-    ts-jest: 27.1.4
-    ts-node: 10.7.0
-    type-fest: 2.12.2
-    typescript: 4.6.3
-  languageName: unknown
-  linkType: soft
 
 "better-path-resolve@npm:1.0.0, better-path-resolve@npm:^1.0.0":
   version: 1.0.0
@@ -9822,13 +9715,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ky@npm:0.30.0":
-  version: 0.30.0
-  resolution: "ky@npm:0.30.0"
-  checksum: d6ec6461e18cd2e4abb809b0574ff704c2e17bd61248843471c2492dd9486dfeadd4d139a5a6ec194b0175f9bc7b8c634685880d1ac646553a9f440c0982e8d3
-  languageName: node
-  linkType: hard
-
 "language-subtag-registry@npm:~0.3.2":
   version: 0.3.21
   resolution: "language-subtag-registry@npm:0.3.21"
@@ -10837,6 +10723,7 @@ __metadata:
     prettier: 2.6.2
     rimraf: 3.0.2
     shell-quote: 1.7.3
+    typescript: 4.6.3
   languageName: unknown
   linkType: soft
 
@@ -12403,21 +12290,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-query@npm:3.34.19":
-  version: 3.34.19
-  resolution: "react-query@npm:3.34.19"
+"react-query@npm:4.0.0-beta.2":
+  version: 4.0.0-beta.2
+  resolution: "react-query@npm:4.0.0-beta.2"
   dependencies:
     "@babel/runtime": ^7.5.5
+    "@types/use-sync-external-store": ^0.0.3
     broadcast-channel: ^3.4.1
     match-sorter: ^6.0.2
+    use-sync-external-store: ^1.0.0
   peerDependencies:
-    react: ^16.8.0 || ^17.0.0
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
   peerDependenciesMeta:
     react-dom:
       optional: true
     react-native:
       optional: true
-  checksum: 765bec81e521a78ef04a8feb6710041ce838ef82bf6e1d35c7e9327cc242b232b242fd89f3604adf6747dce2df055d12b15e8e4208687cc5eb493c1c0bf71d34
+  checksum: f8f5bdf877ee550c124744541a1234a9dd8fb76a926a3940be6508786fce69a46d3e58cc892be95ec8c0dc4c1bdd95f237e5ff2a391e61d15ac1d577628db136
   languageName: node
   linkType: hard
 
@@ -14596,6 +14485,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-sync-external-store@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "use-sync-external-store@npm:1.0.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0-rc
+  checksum: f3df10af62625169d6a8cd8d4f38942dc6817aa27398fa7f474421fd574b0c4c83679b9d15f983f482c396ee1183416eb146814c81f44241e1480acd701ef018
+  languageName: node
+  linkType: hard
+
 "util-deprecate@npm:^1.0.1, util-deprecate@npm:^1.0.2, util-deprecate@npm:~1.0.1":
   version: 1.0.2
   resolution: "util-deprecate@npm:1.0.2"
@@ -14757,6 +14655,99 @@ __metadata:
   checksum: 00b7bf4ac9fca17062b66b6897145b94e87153d3ec8815f0e0c05a3b8a1ca75320262db01a5fa634f604ee3d41aecde1ee59838d05b6d03cd5be62eb1addbcf8
   languageName: node
   linkType: hard
+
+"website@workspace:apps/website":
+  version: 0.0.0-use.local
+  resolution: "website@workspace:apps/website"
+  dependencies:
+    "@babel/core": 7.17.9
+    "@belgattitude/db-main": "workspace:^"
+    "@belgattitude/eslint-config-bases": "workspace:^"
+    "@emotion/babel-plugin": 11.9.2
+    "@emotion/cache": 11.7.1
+    "@emotion/react": 11.9.0
+    "@emotion/server": 11.4.0
+    "@emotion/styled": 11.8.1
+    "@fontsource/inter": 4.5.7
+    "@fontsource/raleway": 4.5.5
+    "@headlessui/react": 1.5.0
+    "@mdx-js/react": 2.1.1
+    "@mui/icons-material": 5.6.1
+    "@next/bundle-analyzer": 12.1.4
+    "@next/env": 12.1.4
+    "@octokit/graphql": 4.8.0
+    "@octokit/graphql-schema": 10.73.0
+    "@playwright/test": 1.20.2
+    "@sentry/nextjs": 6.19.6
+    "@sentry/react": 6.19.6
+    "@sindresorhus/is": 4.6.0
+    "@size-limit/file": 7.0.8
+    "@soluble/cache-ioredis": 0.8.6
+    "@svgr/webpack": 6.2.1
+    "@tailwindcss/aspect-ratio": 0.4.0
+    "@tailwindcss/forms": 0.5.0
+    "@tailwindcss/line-clamp": 0.3.1
+    "@tailwindcss/typography": 0.5.2
+    "@testing-library/jest-dom": 5.16.4
+    "@testing-library/react": 13.0.0
+    "@testing-library/react-hooks": 8.0.0
+    "@tsed/exceptions": 6.111.0
+    "@types/cors": 2.8.12
+    "@types/ioredis": 4.28.10
+    "@types/jest": 27.4.1
+    "@types/node": 17.0.23
+    "@types/react": 18.0.1
+    "@types/react-dom": 18.0.0
+    autoprefixer: 10.4.4
+    axios: 0.26.1
+    cors: 2.8.5
+    cross-env: 7.0.3
+    dotenv-flow: 3.2.0
+    dotenv-flow-cli: 1.0.0
+    es-check: 6.2.1
+    eslint: 8.13.0
+    eslint-config-next: 12.1.4
+    framer-motion: 6.2.9
+    graphql: 16.3.0
+    i18next: 21.6.15
+    ioredis: 5.0.4
+    jest: 27.5.1
+    jest-css-modules-transform: 4.3.0
+    micro: 9.3.4
+    next: 12.1.4
+    next-auth: 4.3.1
+    next-connect: 0.12.2
+    next-i18next: 11.0.0
+    next-secure-headers: 2.2.0
+    next-seo: 5.4.0
+    next-transpile-modules: 9.0.0
+    npm-run-all: 4.1.5
+    picocolors: 1.0.0
+    popmotion: 11.0.3
+    postcss: 8.4.12
+    postcss-flexbugs-fixes: 5.0.2
+    postcss-preset-env: 7.4.3
+    prettier: 2.6.2
+    react: 18.0.0
+    react-dom: 18.0.0
+    react-i18next: 11.16.5
+    react-query: 4.0.0-beta.2
+    react-social-icons: 5.13.0
+    rimraf: 3.0.2
+    rooks: 5.11.0
+    sass: 1.50.0
+    sharp: 0.30.3
+    size-limit: 7.0.8
+    superjson: 1.8.1
+    symlink-dir: 5.0.1
+    sync-directory: 4.0.12
+    tailwindcss: 3.0.23
+    ts-jest: 27.1.4
+    ts-node: 10.7.0
+    type-fest: 2.12.2
+    typescript: 4.6.3
+  languageName: unknown
+  linkType: soft
 
 "whatwg-encoding@npm:^1.0.5":
   version: 1.0.5

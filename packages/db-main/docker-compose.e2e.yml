@@ -2,7 +2,7 @@ version: '3.8'
 
 services:
   e2e-postgres:
-    container_name: db-main-prisma-e2e-postgresql
+    container_name: db-main-e2e-postgresql
     image: postgres:14-alpine
     ports:
       - target: 5432
