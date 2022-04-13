@@ -3,9 +3,9 @@ import type { I18nActiveNamespaces } from '@/lib/i18n';
 export type AboutConfig = {
   // Define installed namespaces in the type here
   // to allow full typechecking of your translation keys.
-  i18nNamespaces: Readonly<I18nActiveNamespaces<'common' | 'resume'>>;
+  i18nNamespaces: Readonly<I18nActiveNamespaces<'common' | 'about'>>;
 };
-export const resumeConfig: AboutConfig = {
+export const aboutConfig: AboutConfig = {
   /** Namespaces that should be loaded for this page */
-  i18nNamespaces: ['common', 'resume'],
+  i18nNamespaces: ['common', 'about'],
 } as const;

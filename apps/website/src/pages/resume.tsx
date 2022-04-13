@@ -1,8 +1,8 @@
 import { BadRequest } from '@tsed/exceptions';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
-import { resumeConfig } from '@/features/about/about.config';
-import { ResumePage } from '@/features/about/pages';
+import { aboutConfig } from '@/features/about/about.config';
+import { DeveloperResumePage } from '@/features/about/pages';
 
 type Props = {
   /** Add HomeRoute props here */
@@ -11,7 +11,7 @@ type Props = {
 export default function HomeRoute(
   _props: InferGetStaticPropsType<typeof getStaticProps>
 ) {
-  return <ResumePage />;
+  return <DeveloperResumePage />;
 }
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
@@ -19,7 +19,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   if (locale === undefined) {
     throw new BadRequest('locale is missing');
   }
-  const { i18nNamespaces } = resumeConfig;
+  const { i18nNamespaces } = aboutConfig;
   return {
     props: {
       // i18nNamespaces.slice() is needed here to get rid off readonly

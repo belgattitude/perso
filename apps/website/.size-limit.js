@@ -17,6 +17,7 @@ const limitCfg = {
     '/_app': '160kb',
     '/_error': '80kb',
     '/404': '100kb',
+    '/resume': '170kb',
     '/': '105kb',
   },
 };

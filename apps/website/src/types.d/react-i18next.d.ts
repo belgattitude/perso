@@ -7,7 +7,7 @@
 import 'react-i18next';
 import type common from '../../public/locales/en/common.json';
 import type home from '../../public/locales/en/home.json';
-import type resume from '../../public/locales/en/resume.json';
+import type about from '../../public/locales/en/about.json';
 import type system from '../../public/locales/en/system.json';
 
 declare module 'react-i18next' {
@@ -16,7 +16,7 @@ declare module 'react-i18next' {
     resources: {
       common: typeof common;
       home: typeof home;
-      resume: typeof resume;
+      about: typeof about;
       system: typeof system;
     };
   }
