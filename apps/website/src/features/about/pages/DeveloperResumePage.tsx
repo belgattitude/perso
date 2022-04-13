@@ -1,5 +1,6 @@
 import { css, ThemeProvider } from '@emotion/react';
 import { MDXProvider } from '@mdx-js/react';
+import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
@@ -15,7 +16,6 @@ import { Block } from '@/features/about/blocks/block';
 import type { TechnosProps } from '@/features/about/blocks/technos/technos';
 import { defaultTheme } from '@/themes';
 import { Footer } from '../layouts';
-import { NextSeo } from 'next-seo';
 // import { SocialIcon } from 'react-social-icons';
 
 const Technos = dynamic<TechnosProps>(

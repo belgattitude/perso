@@ -25,8 +25,8 @@ const Index = () => {
   });
   const [video] = useState(() => {
     const vid = document.createElement('video');
-    //vid.src = 'https://soluble.io/studioworks/mhr/assets/paola-video-bg.mp4';
-    //vid.src = '/videos/paola-video-bg.m4v';
+    // vid.src = 'https://soluble.io/studioworks/mhr/assets/paola-video-bg.mp4';
+    // vid.src = '/videos/paola-video-bg.m4v';
     vid.src = '/videos/red.mp4';
     vid.crossOrigin = 'Anonymous';
     vid.loop = true;

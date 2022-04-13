@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo';
-import { FC } from 'react';
+import type { FC } from 'react';
 
 type Props = {
   children?: never;
