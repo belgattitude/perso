@@ -2,7 +2,7 @@ import { BadRequest } from '@tsed/exceptions';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { resumeConfig } from '@/features/about/about.config';
-import { ResumePage } from '@/features/about/pages/ResumePage';
+import { ResumePage } from '@/features/about/pages';
 
 type Props = {
   /** Add HomeRoute props here */

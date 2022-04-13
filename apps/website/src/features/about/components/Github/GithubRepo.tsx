@@ -1,7 +1,7 @@
 import styled from '@emotion/styled';
 import type { FC } from 'react';
 import type { GetGithubRepos } from '@/features/about/api/getGithubRepos';
-import { CustomTag } from '@/features/about/components/github/custom-tag';
+import { CustomTag } from '@/features/about/components/Github/CustomTag';
 import { truncateText } from '../../../../utils/utils';
 
 const UnstyledGithubRepo: FC<{

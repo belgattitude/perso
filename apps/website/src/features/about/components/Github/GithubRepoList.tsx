@@ -2,7 +2,7 @@ import styled from '@emotion/styled';
 import type { FC } from 'react';
 import { useQuery } from 'react-query';
 import { getGithubRepos } from '@/features/about/api/getGithubRepos';
-import { GithubRepo } from './github-repo';
+import { GithubRepo } from './GithubRepo';
 
 export type GithubRepoListProps = {
   className?: string;

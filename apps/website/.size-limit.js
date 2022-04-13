@@ -1,4 +1,3 @@
-// Just a basic example for size limit with simple file preset
 // @link https://github.com/ai/size-limit
 
 let manifest;
@@ -19,8 +18,6 @@ const limitCfg = {
     '/_error': '80kb',
     '/404': '100kb',
     '/': '105kb',
-    '/demo': '105kb',
-    '/home': '100kb',
   },
 };
 const getPageLimits = () => {

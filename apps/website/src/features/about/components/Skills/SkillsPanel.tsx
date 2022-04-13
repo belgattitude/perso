@@ -11,12 +11,12 @@ import type { FC, ReactNode } from 'react';
 import { useState } from 'react';
 import type { skillType } from '@/config';
 import { skillSections } from '@/config';
-import { SkillLabel } from './skill-label';
+import { SkillLabel } from './SkillLabel';
 import {
   getAnimationType,
   getItemVariants,
   getListVariants,
-} from './skills-panel.anims';
+} from './SkillsPanelAnims';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];

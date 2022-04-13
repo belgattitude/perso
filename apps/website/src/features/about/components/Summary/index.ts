@@ -6,4 +6,4 @@
  * @license   https://github.com/belgattitude/profile-in-a-rush/blob/master/LICENSE.md MIT
  */
 
-export * from './summary';
+export * from './Summary';

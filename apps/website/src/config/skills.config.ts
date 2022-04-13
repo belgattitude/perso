@@ -4,7 +4,7 @@
 import type {
   SectionAnimationConfig,
   SkillRecord,
-} from '@/features/about/components/skills';
+} from '@/features/about/components/Skills';
 
 export const skillSections = [
   'Overview',

@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import type { FC } from 'react';
-import type { SkillRecord } from './skills-panel';
+import type { SkillRecord } from './SkillsPanel';
 
 const UnstyledSkillLabel: FC<{
   skill: SkillRecord;

@@ -2,7 +2,7 @@ import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { defaultSection, skillsRecords } from '@/config';
 import { TechnosCtn } from '@/features/about/blocks/technos/technos.style';
-import type { SkillsPanelProps } from '../../components/skills';
+import type { SkillsPanelProps } from '../../components/Skills';
 
 export type TechnosProps = {
   className?: string;
@@ -10,7 +10,7 @@ export type TechnosProps = {
 
 const SkillsPanel = dynamic<SkillsPanelProps>(
   () =>
-    import('../../components/skills/skills-panel').then(
+    import('../../components/Skills/SkillsPanel').then(
       (mod) => mod.SkillsPanel
     ),
   {
