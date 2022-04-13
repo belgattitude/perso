@@ -115,12 +115,12 @@ jobs:
           # Fully disable sentry registration here (no overhead in build time)
           NEXTJS_SENTRY_UPLOAD_DRY_RUN: true
 
-      - name: Check bundle size
-        working-directory: apps/website
-        run: |
-          yarn check-build-size
-
       - name: Check ecmascript checks for build files
         working-directory: apps/website
         run: |
           yarn check-dist
+
+      - name: Check bundle size
+        working-directory: apps/website
+        run: |
+          yarn check-build-size

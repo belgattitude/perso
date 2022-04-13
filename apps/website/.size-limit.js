@@ -14,11 +14,13 @@ const limitCfg = {
   defaultSize: '120kb',
   pages: {
     // Customize specific page limits if needed
-    '/_app': '160kb',
-    '/_error': '80kb',
-    '/404': '100kb',
+    '/_app': '150kb',
+    '/_error': '100kb',
+    '/404': '80kb',
+    // includes react-three
+    '/': '280kb',
+    // includes framer-motion
     '/resume': '170kb',
-    '/': '105kb',
   },
 };
 const getPageLimits = () => {
