@@ -1410,7 +1410,7 @@ __metadata:
     "@prisma/client": "npm:3.12.0"
     "@soluble/dsn-parser": "npm:1.3.5"
     "@types/jest": "npm:27.4.1"
-    "@types/node": "npm:17.0.23"
+    "@types/node": "npm:17.0.24"
     camelcase: "npm:6.3.0"
     cross-env: "npm:7.0.3"
     dotenv-flow: "npm:3.2.0"
@@ -1441,10 +1441,10 @@ __metadata:
     "@testing-library/react": "npm:13.0.1"
     "@testing-library/react-hooks": "npm:8.0.0"
     "@types/jest": "npm:27.4.1"
-    "@types/node": "npm:17.0.23"
+    "@types/node": "npm:17.0.24"
     "@types/prettier": "npm:2.6.0"
-    "@types/react": "npm:18.0.3"
-    "@types/react-dom": "npm:18.0.0"
+    "@types/react": "npm:18.0.5"
+    "@types/react-dom": "npm:18.0.1"
     "@typescript-eslint/eslint-plugin": "npm:5.19.0"
     "@typescript-eslint/parser": "npm:5.19.0"
     eslint: "npm:8.13.0"
@@ -1461,6 +1461,7 @@ __metadata:
     eslint-plugin-regexp: "npm:1.6.0"
     eslint-plugin-sonarjs: "npm:0.13.0"
     eslint-plugin-testing-library: "npm:5.3.1"
+    graphql: "npm:^16.3.0"
     prettier: "npm:2.6.2"
     react: "npm:18.0.0"
     react-dom: "npm:18.0.0"
@@ -1468,10 +1469,13 @@ __metadata:
     typescript: "npm:4.6.3"
   peerDependencies:
     eslint: ^8.0.0
+    graphql: ^16.3.0
     react: ^17.0.2 || ^18.0.0
     react-dom: ^17.0.2 || ^18.0.0
     typescript: ^4.5.2
   peerDependenciesMeta:
+    graphql:
+      optional: true
     react:
       optional: true
     react-dom:
@@ -3929,14 +3933,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsed/exceptions@npm:6.112.0":
-  version: 6.112.0
-  resolution: "@tsed/exceptions@npm:6.112.0"
+"@tsed/exceptions@npm:6.113.0":
+  version: 6.113.0
+  resolution: "@tsed/exceptions@npm:6.113.0"
   dependencies:
     change-case: "npm:4.1.2"
     statuses: "npm:>=2.0.1"
     tslib: "npm:2.3.1"
-  checksum: 5d58a8e50afc54c2848d1a31d1998dd01aa638066454e833517e27acc3a67122fda2dc32742ccd4c87f6a8e942875cf894fd1fdbcd6d6c3e9e1562d4b92a8255
+  checksum: 2ef5adf907cb1a64b70c96f920718675260506f0f48ba35db9f583feebefd7d8453457ea024cc12717477c517445b633353c5e803213a46dd9642eaa46cf5658
   languageName: node
   linkType: hard
 
@@ -4119,10 +4123,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.23, @types/node@npm:>=12":
-  version: 17.0.23
-  resolution: "@types/node@npm:17.0.23"
-  checksum: 79a3fdedb799336773a0e664fcdab8f86923c369a9d7f1bd6917b6cf57b06480670b477207f81f9d723c347730f4a0884984646788cdc351701feee3cacde481
+"@types/node@npm:*, @types/node@npm:17.0.24, @types/node@npm:>=12":
+  version: 17.0.24
+  resolution: "@types/node@npm:17.0.24"
+  checksum: c9f00bac557e21b19955db9da2020bb0ac42e6a2d93a8b342c489cd4841e622dc9d65777ec4b24b12e318c35225fa1a9151524cdb7ad3d9d53efe174e27bdc60
   languageName: node
   linkType: hard
 
@@ -4168,12 +4172,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-dom@npm:18.0.0, @types/react-dom@npm:^18.0.0":
-  version: 18.0.0
-  resolution: "@types/react-dom@npm:18.0.0"
+"@types/react-dom@npm:18.0.1, @types/react-dom@npm:^18.0.0":
+  version: 18.0.1
+  resolution: "@types/react-dom@npm:18.0.1"
   dependencies:
     "@types/react": "npm:*"
-  checksum: 6e7c50ef44491412b1594d8092827e8028f99589a2be511ec58492df12bc655c4303e12d5a1cd34ace7cf880826de0333944defb39aaf50d875162641e4eea05
+  checksum: 024781a4692c7d6e86e9d9164bce8e4f3d289e5d882ce7d5c6f084c896181464fd3dc81017c54833b3874780f07a18f63a64056dce79d196b58fe4db114b5396
   languageName: node
   linkType: hard
 
@@ -4186,14 +4190,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react@npm:*, @types/react@npm:18.0.3, @types/react@npm:>=16":
-  version: 18.0.3
-  resolution: "@types/react@npm:18.0.3"
+"@types/react@npm:*, @types/react@npm:18.0.5, @types/react@npm:>=16":
+  version: 18.0.5
+  resolution: "@types/react@npm:18.0.5"
   dependencies:
     "@types/prop-types": "npm:*"
     "@types/scheduler": "npm:*"
     csstype: "npm:^3.0.2"
-  checksum: 7ff7105ea4685cdf7feca9f682dd5bffae734729e3ff77cb10842801f0ba3f0f356e2d3742769a446ed4f0b7aed8cef49439192f5496db417b28616e9f5f8d77
+  checksum: 84639c6139335c11f70f8ec2cfc572b6b1a162b460896805cc8112db5fc0610e57df3799096ebbda26425e29d1005b55347a8e5e5cd0645ae6592820523f09f0
   languageName: node
   linkType: hard
 
@@ -7992,9 +7996,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:6.2.10":
-  version: 6.2.10
-  resolution: "framer-motion@npm:6.2.10"
+"framer-motion@npm:6.3.0":
+  version: 6.3.0
+  resolution: "framer-motion@npm:6.3.0"
   dependencies:
     "@emotion/is-prop-valid": "npm:^0.8.2"
     framesync: "npm:6.0.1"
@@ -8008,7 +8012,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 2601ddefe67421be2b00cd55eeaefb80f0d55ecd1ee4f67408ae91bccf0d81867c11a5ae374f1b05cf916e37d38895174673fd0eaf31dcce765f81bcece66dfa
+  checksum: ae97cc9c09a5ba28cd95a5c4c53eba374637b9bd97c02d0d0383ff5e3ca534e9c707fac20713c697e09b8dc54efec1243eac0c20fd763f075574f1a28a99c17a
   languageName: node
   linkType: hard
 
@@ -8389,7 +8393,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.3.0":
+"graphql@npm:16.3.0, graphql@npm:^16.3.0":
   version: 16.3.0
   resolution: "graphql@npm:16.3.0"
   checksum: d1f500014d2719891bff7d1169c2dcb011a66962b5856be88da99d6a3a5dc95e3c9945fd825b7b1847a4adf075dfadf940c8c04942eb4b67473c55b7029b09b4
@@ -10894,9 +10898,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-auth@npm:4.3.1":
-  version: 4.3.1
-  resolution: "next-auth@npm:4.3.1"
+"next-auth@npm:4.3.2":
+  version: 4.3.2
+  resolution: "next-auth@npm:4.3.2"
   dependencies:
     "@babel/runtime": "npm:^7.16.3"
     "@panva/hkdf": "npm:^1.0.1"
@@ -10914,7 +10918,7 @@ __metadata:
   peerDependenciesMeta:
     nodemailer:
       optional: true
-  checksum: 493bbf8868c52f0ab6730f09151f879c858376e2b488a8cc15e32c51f95a32e7baa01ffdb9c4c2a85db3517a32bd50bead200db9b9bad06459505039b78a1e5c
+  checksum: 67319d695e67d588481abeccfbcefc85e14eb32ce55748cf2cb8db787718e0c4dda0a418518ac07504c5e23933935d717ef1eae0a95788d973fefb331518860f
   languageName: node
   linkType: hard
 
@@ -15228,13 +15232,13 @@ __metadata:
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.0.1"
     "@testing-library/react-hooks": "npm:8.0.0"
-    "@tsed/exceptions": "npm:6.112.0"
+    "@tsed/exceptions": "npm:6.113.0"
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:27.4.1"
-    "@types/node": "npm:17.0.23"
-    "@types/react": "npm:18.0.3"
-    "@types/react-dom": "npm:18.0.0"
+    "@types/node": "npm:17.0.24"
+    "@types/react": "npm:18.0.5"
+    "@types/react-dom": "npm:18.0.1"
     "@types/three": "npm:0.139.0"
     autoprefixer: "npm:10.4.4"
     axios: "npm:0.26.1"
@@ -15245,7 +15249,7 @@ __metadata:
     es-check: "npm:6.2.1"
     eslint: "npm:8.13.0"
     eslint-config-next: "npm:12.1.5"
-    framer-motion: "npm:6.2.10"
+    framer-motion: "npm:6.3.0"
     graphql: "npm:16.3.0"
     i18next: "npm:21.6.16"
     ioredis: "npm:5.0.4"
@@ -15253,7 +15257,7 @@ __metadata:
     jest-css-modules-transform: "npm:4.3.0"
     micro: "npm:9.3.4"
     next: "npm:12.1.5"
-    next-auth: "npm:4.3.1"
+    next-auth: "npm:4.3.2"
     next-connect: "npm:0.12.2"
     next-i18next: "npm:11.0.0"
     next-secure-headers: "npm:2.2.0"
