@@ -176,6 +176,10 @@ const nextConfig = {
         source: `/pro`,
         destination: '/about/resume',
       },
+      {
+        source: `/opensource`,
+        destination: '/about/opensource',
+      },
     ];
   },
 
