@@ -5,7 +5,7 @@ import { aboutConfig } from '@/features/about/about.config';
 import { ResumePage } from '@/features/about/pages';
 
 type Props = {
-  /** Add HomeRoute props here */
+  /** Add props here */
 };
 
 export default function ResumeRoute(
