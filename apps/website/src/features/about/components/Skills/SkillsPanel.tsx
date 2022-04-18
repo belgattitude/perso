@@ -8,22 +8,22 @@ import {
 import type { AnimatePresenceProps } from 'framer-motion/types/components/AnimatePresence/types';
 import Image from 'next/image';
 import type { FC, ReactNode } from 'react';
-import { useState } from 'react';
-import type { skillType } from '@/config';
-import { skillSections } from '@/config';
+import React, { useState } from 'react';
 import { SkillLabel } from './SkillLabel';
 import {
   getAnimationType,
   getItemVariants,
   getListVariants,
 } from './SkillsPanelAnims';
+import type { skillType } from '@/config';
+import { skillSections } from '@/config';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];
 
 export type SkillRecord = {
   name: string;
-  logo?: string;
+  logo: string;
   homepage?: string;
   years?: number;
   rating?: number;
@@ -106,19 +106,7 @@ const UnstyledSkillsPanel: FC<SkillsPanelProps> = (props) => {
                   >
                     <div className={'card-picture'}>
                       <a href={homepage} target="_blank" rel="noreferrer">
-                        {logo ? (
-                          <Image src={logo} alt={name} width={60} height={60} />
-                        ) : (
-                          <div
-                            style={{
-                              fontSize: '2em',
-                              padding: '1em',
-                              fontWeight: 600,
-                            }}
-                          >
-                            {name}
-                          </div>
-                        )}
+                        <Image src={logo} width={60} height={60} />
                       </a>
                     </div>
                     <motion.div

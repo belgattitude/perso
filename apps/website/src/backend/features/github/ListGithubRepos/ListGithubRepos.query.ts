@@ -1,5 +1,6 @@
 import { graphql } from '@octokit/graphql';
 import type { Repository } from '@octokit/graphql-schema';
+import type { SearchQuery } from '@/backend/lib/query';
 import type { UnPromisify } from '@/lib/type-utils/type-utils';
 
 export type ListGithubRepos = UnPromisify<
@@ -10,7 +11,11 @@ export type GraphqlGetGithubRepos = UnPromisify<
   ReturnType<ListGithubReposQuery['getGithubRepos']>
 >;
 
-export class ListGithubReposQuery {
+export class ListGithubReposQuery
+  implements SearchQuery<never, ListGithubRepos>
+{
+  readonly queryName = 'ListGithubReposQuery';
+
   constructor(private readonly githubToken: string) {}
 
   execute = async () => {
@@ -21,6 +26,7 @@ export class ListGithubReposQuery {
 
   private mapToApi = (repos: GraphqlGetGithubRepos) => {
     return repos.viewer.repositories.nodes.map((repo) => {
+      console.log('repo', repo);
       return {
         name: repo.name,
         description: repo.description,

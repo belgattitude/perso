@@ -1,7 +1,7 @@
 import type { FC } from 'react';
-import GithubIcon from '@/assets/icons/social/github.svg';
 import { OpensourceCtn } from '@/features/about/blocks/opensource/opensource.style';
-import { GithubRepoList } from '@/features/about/components/Github';
+import { RepoList } from '@/features/about/components/Github';
+import GithubIcon from '@/public/icons/devicons/github/github-original.svg';
 
 type OpensourceProps = {
   className?: string;
@@ -22,7 +22,7 @@ export const Opensource: FC<OpensourceProps> = (props) => {
       </h1>
       <h1>Opensource</h1>
       <h2>Some code I committed once upon a time...</h2>
-      <GithubRepoList />
+      <RepoList />
     </OpensourceCtn>
   );
 };

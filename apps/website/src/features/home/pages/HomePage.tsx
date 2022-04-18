@@ -1,11 +1,7 @@
 import { NextSeo } from 'next-seo';
 import type { FC } from 'react';
 
-type Props = {
-  children?: never;
-};
-
-export const HomePage: FC<Props> = () => {
+export const HomePage: FC = () => {
   return (
     <>
       <NextSeo title="Home" description="Home page" />
