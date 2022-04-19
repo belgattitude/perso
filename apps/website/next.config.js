@@ -153,7 +153,7 @@ const nextConfig = {
     // https://nextjs.org/docs/api-reference/next/image#caching-behavior
     minimumCacheTTL: 60,
     // Allowed domains for next/image
-    domains: ['source.unsplash.com'],
+    // domains: [],
   },
 
   typescript: {
@@ -174,7 +174,11 @@ const nextConfig = {
     return [
       {
         source: `/pro`,
-        destination: '/about/it',
+        destination: '/about/resume',
+      },
+      {
+        source: `/opensource`,
+        destination: '/about/opensource',
       },
     ];
   },
@@ -183,7 +187,7 @@ const nextConfig = {
     if (isServer) {
       // Till undici 4 haven't landed in prisma, we need this for docker/alpine
       // @see https://github.com/prisma/prisma/issues/6925#issuecomment-905935585
-      config.externals.push('_http_common');
+      // config.externals.push('_http_common');
     }
 
     config.module.rules.push({

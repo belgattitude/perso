@@ -1,7 +1,7 @@
 import { test, expect } from '@playwright/test';
+import packageJson from '../../../package.json';
 import { isIsoDateString } from '@/lib/type-utils/typeguards';
 import type { HealthCheckApiPayload } from '@/pages/api/_monitor/healthcheck';
-import packageJson from '../../../package.json';
 
 test('should return a success payload', async ({ request }) => {
   const resp = await request.get('/api/_monitor/healthcheck');

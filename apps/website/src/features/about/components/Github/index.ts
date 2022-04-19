@@ -1,1 +1,1 @@
-export * from './GithubRepoList';
+export { RepoList } from './RepoList';

@@ -34,6 +34,13 @@ module.exports = {
   },
   overrides: [
     {
+      files: ['src/config/**/*.ts'],
+      rules: {
+        'sonarjs/no-duplicate-string': 'off',
+      },
+    },
+
+    {
       files: ['src/types.d/**/*.d.ts'],
       rules: {
         'react/display-name': 'off',
