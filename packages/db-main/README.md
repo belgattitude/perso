@@ -1,13 +1,11 @@
 # @belgattitude/db-main
 
-
-
 ## Quick start
 
 Start the database with `docker-compose up database` then run
 
 ```bash
-cd packages/db-main-prisma
+cd packages/db-main
 yarn prisma-db-push
 yarn prisma-db-seed
 ```
@@ -59,4 +57,3 @@ Create and seed the database the first time or after a change.
 ```bash
 yarn prisma-db-seed
 ```
-
