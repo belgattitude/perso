@@ -1,16 +1,19 @@
 import type { FC } from 'react';
-import { useQuery } from 'react-query';
+import { useEffect, useState } from 'react';
 
-const fetchAndAlwaysThrow = async () => {
+const getAsyncError = async (): Promise<void> => {
   throw new Error(
     'Error purposely crafted for monitoring sentry (/pages/_monitor/sentry/csr-page.tsx)'
   );
 };
 
 const MonitorSentryCsrRoute: FC = () => {
-  const { error } = useQuery(['monitor-sentry'], fetchAndAlwaysThrow, {
-    cacheTime: 0,
-  });
+  const [error, setError] = useState<Error | null>(null);
+
+  useEffect(() => {
+    getAsyncError().catch((err) => setError(err));
+  }, []);
+
   if (error) {
     throw error;
   }
