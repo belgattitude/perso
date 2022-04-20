@@ -1,3 +1,4 @@
+import { css } from '@emotion/react';
 import type { FC } from 'react';
 import { OpensourceCtn } from '@/features/about/blocks/opensource/opensource.style';
 import { RepoList } from '@/features/about/components/Github';
@@ -17,7 +18,12 @@ export const Opensource: FC<OpensourceProps> = (props) => {
           target={'_blank'}
           rel={'noreferrer'}
         >
-          <GithubIcon />
+          <GithubIcon
+            css={css`
+              width: 64px;
+              height: 64px;
+            `}
+          />
         </a>
       </h1>
       <h1>Opensource</h1>

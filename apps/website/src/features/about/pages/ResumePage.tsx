@@ -70,20 +70,7 @@ export const ResumePage: FC = () => {
           <Block>
             <Opensource />
           </Block>
-          <Footer>
-            Contact me on
-            <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">
-              &nbsp; &nbsp;linked.in
-            </a>
-            <p>No recruiters please !</p>
-            <p>
-              Want to see the
-              <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
-                &nbsp; &nbsp;code&nbsp;
-              </a>
-              ?
-            </p>
-          </Footer>
+          <Footer />
         </MDXProvider>
       </ThemeProvider>
     </div>

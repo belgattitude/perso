@@ -15,8 +15,6 @@ export const RepoList: FC<RepoListProps> = (props) => {
     getGithubRepos
   );
 
-  console.log('data', data);
-
   if (isLoading) {
     return <div className={className}>Loading...</div>;
   }
