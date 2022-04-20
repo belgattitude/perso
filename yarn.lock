@@ -3261,18 +3261,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.4.4":
-  version: 9.4.4
-  resolution: "@react-three/drei@npm:9.4.4"
+"@react-three/drei@npm:9.5.0":
+  version: 9.5.0
+  resolution: "@react-three/drei@npm:9.5.0"
   dependencies:
     "@babel/runtime": "npm:^7.11.2"
     "@react-spring/three": "npm:^9.3.1"
+    "@types/nanoid": "npm:^3.0.0"
     "@use-gesture/react": "npm:^10.2.0"
     detect-gpu: "npm:^4.0.14"
     glsl-noise: "npm:^0.0.0"
     lodash.omit: "npm:^4.5.0"
     lodash.pick: "npm:^4.4.0"
     meshline: "npm:^2.0.4"
+    nanoid: "npm:^3.3.3"
     react-composer: "npm:^5.0.2"
     react-merge-refs: "npm:^1.1.0"
     stats.js: "npm:^0.17.0"
@@ -3290,7 +3292,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: bb05b0afed510f4e472613ba42e044ac525573026c604d0ff6bf5c26544274e2d2ec1e821a2dbbd3f7111e91145fcc32a69f590ef4c375d0c513a0abc3396f4c
+  checksum: 4a74b31b66a9f16b33c485f9c6f50c00c6f93861c6c75ecb0bfc1dcb198057e3ecf0b830cbeed4cb465c75d5b2473bd5afbd58add1e5c333dc9042caa94731e5
   languageName: node
   linkType: hard
 
@@ -4097,6 +4099,15 @@ __metadata:
   version: 1.2.2
   resolution: "@types/minimist@npm:1.2.2"
   checksum: 7fd2a4dc547de09d78c688d79aefcceb54e8c86eb61a5b1a593dfc03bbf1f8589a616ae978585211d078e51abc55b93064b2039c34266db8f277bd6bc03557c3
+  languageName: node
+  linkType: hard
+
+"@types/nanoid@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/nanoid@npm:3.0.0"
+  dependencies:
+    nanoid: "npm:*"
+  checksum: 009435c95e8ddaa6b500ad6ed26834d5ce4057999e33104245f694487bcc020e414477fd4fb656255e59897d5d06450b0417ad0a9de9fd744d214179a8050470
   languageName: node
   linkType: hard
 
@@ -10829,12 +10840,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.30, nanoid@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "nanoid@npm:3.3.1"
+"nanoid@npm:*, nanoid@npm:^3.1.30, nanoid@npm:^3.3.1, nanoid@npm:^3.3.3":
+  version: 3.3.3
+  resolution: "nanoid@npm:3.3.3"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: da34ffd9cbd6fbc13421cb1642c4d715d8bcec74ee82edda3e471e312d604358ef615078f065254e189378eb7df647729f967cb93c4fc568b0ada41d3d0cf250
+  checksum: c87b8384f305756695669e409ec54d5f2f2862f5cb5b138c8f539bbae102619a8e523cb074a24e6b501924d375fc80f860a5ce8fa566e3e5cee08f1f2d98bf30
   languageName: node
   linkType: hard
 
@@ -15194,7 +15205,7 @@ __metadata:
     "@octokit/graphql": "npm:4.8.0"
     "@octokit/graphql-schema": "npm:10.73.0"
     "@playwright/test": "npm:1.21.1"
-    "@react-three/drei": "npm:9.4.4"
+    "@react-three/drei": "npm:9.5.0"
     "@react-three/fiber": "patch:@react-three/fiber@npm%3A8.0.10#~/.yarn/patches/@react-three-fiber-npm-8.0.10-8df904dc6a.patch"
     "@sentry/nextjs": "npm:6.19.6"
     "@sentry/react": "npm:6.19.6"
