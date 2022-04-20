@@ -26,7 +26,6 @@ export class ListGithubReposQuery
 
   private mapToApi = (repos: GraphqlGetGithubRepos) => {
     return repos.viewer.repositories.nodes.map((repo) => {
-      console.log('repo', repo);
       return {
         name: repo.name,
         description: repo.description,

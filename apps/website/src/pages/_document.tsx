@@ -9,7 +9,7 @@ import type {
 import type { DocumentContext, DocumentProps } from 'next/document';
 import Document, { Html, Main, Head, NextScript } from 'next/document';
 import { Children as ReactChildren } from 'react';
-import { FavIcons } from '@/components/head/FavIcons';
+import { MainLayoutFonts } from '@/layouts/main/head';
 import { createEmotionCache } from '@/lib/emotion';
 
 type Props = DocumentProps;
@@ -62,7 +62,7 @@ class MyDocument extends Document<Props> {
       <Html>
         <Head>
           <meta charSet="utf-8" />
-          <FavIcons />
+          <MainLayoutFonts />
         </Head>
         <body>
           <Main />

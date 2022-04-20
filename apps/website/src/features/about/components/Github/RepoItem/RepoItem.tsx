@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 import type { FC } from 'react';
 
-import { truncateText } from '../../../../../utils/utils';
-import { RepoItemCtn } from './styles';
 import type { GetGithubRepos } from '@/features/about/api/getGithubRepos';
 import { RepoTag } from '@/features/about/components/Github/RepoTag';
 import GithubIcon from '@/public/icons/devicons/github/github-original.svg';
+import { truncateText } from '../../../../../utils/utils';
+import { RepoItemCtn } from './styles';
 
 export const RepoItem: FC<{
   className?: string;

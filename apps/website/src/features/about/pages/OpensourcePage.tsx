@@ -5,12 +5,7 @@ import Head from 'next/head';
 import React from 'react';
 import type { FC } from 'react';
 import { mdxConfig, siteConfig, appClassName } from '@/config';
-import {
-  ProfileHero,
-  AboutMe,
-  Opensource,
-  Features,
-} from '@/features/about/blocks';
+import { ProfileHero, AboutMe, Opensource } from '@/features/about/blocks';
 import { Block } from '@/features/about/blocks/block';
 import { defaultTheme } from '@/themes';
 

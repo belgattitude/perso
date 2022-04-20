@@ -1,8 +1,8 @@
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
-import type { SkillsPanelProps } from '../../components/Skills';
 import { defaultSection, skillsRecords } from '@/config';
 import { TechnosCtn } from '@/features/about/blocks/technos/technos.style';
+import type { SkillsPanelProps } from '../../components/Skills';
 
 export type TechnosProps = {
   className?: string;

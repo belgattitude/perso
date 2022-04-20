@@ -1428,7 +1428,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     transliteration: "npm:2.2.0"
     ts-jest: "npm:27.1.4"
-    typescript: "npm:4.6.3"
+    typescript: "npm:4.7.0-beta"
   languageName: unknown
   linkType: soft
 
@@ -1466,7 +1466,7 @@ __metadata:
     react: "npm:18.0.0"
     react-dom: "npm:18.0.0"
     rimraf: "npm:3.0.2"
-    typescript: "npm:4.6.3"
+    typescript: "npm:4.7.0-beta"
   peerDependencies:
     eslint: ^8.0.0
     graphql: ^16.3.0
@@ -2878,111 +2878,111 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/bundle-analyzer@npm:12.1.6-canary.2"
+"@next/bundle-analyzer@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/bundle-analyzer@npm:12.1.6-canary.3"
   dependencies:
     webpack-bundle-analyzer: "npm:4.3.0"
-  checksum: bc75d8950e197967b74b661d8747f5f1963d11909fefe4c5ee8805018a0dd77c36d337a39e84fd9440abb8c83fcf8d8fdaa9353fb9ed4d018c511751fec3e5a3
+  checksum: 43b5a40e21300ea4c8ea0f2ccace32605a509c87e36198c04b556862c813350e8abba190062fc7e8dcee24823016eefd5194a3ca64901ccf792e53a7f8c7205f
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/env@npm:12.1.6-canary.2"
-  checksum: a5934a6e2cf2761c91f0c0e5e4ebfc186fab76637153e4d0b0a0c4e15b74f970749e5cc5086105b3abc8bbb21840acd893a96fa5fc78fadaa992084215203cc9
+"@next/env@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/env@npm:12.1.6-canary.3"
+  checksum: 4186fdf24aa94322686d6d1dd13ddd20d4332c8b4f09bc4a60f89e76fcc16214388553f07440a34e31dcb36669578ffbd55d0c0b9188c50d3840b2f79fc80381
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/eslint-plugin-next@npm:12.1.6-canary.2"
+"@next/eslint-plugin-next@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/eslint-plugin-next@npm:12.1.6-canary.3"
   dependencies:
     glob: "npm:7.1.7"
-  checksum: ed88bfef63f90c89e3961f9b752398efcb07675c5141e5e724ed978432cca9e280a4a8983342af55be159e62b024d9db20e1d5e7f204d7d615a14fde9948adb5
+  checksum: 22776755cc7ee3b3310dcfa9b0598098b0aed423665a8da0145f5536bb52e0a48c92e8b800f5447996fae887740b19aeedd0375c27ed592180c41e2e78f83f9d
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-android-arm-eabi@npm:12.1.6-canary.2"
+"@next/swc-android-arm-eabi@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-android-arm-eabi@npm:12.1.6-canary.3"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-android-arm64@npm:12.1.6-canary.2"
+"@next/swc-android-arm64@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-android-arm64@npm:12.1.6-canary.3"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-darwin-arm64@npm:12.1.6-canary.2"
+"@next/swc-darwin-arm64@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-darwin-arm64@npm:12.1.6-canary.3"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-darwin-x64@npm:12.1.6-canary.2"
+"@next/swc-darwin-x64@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-darwin-x64@npm:12.1.6-canary.3"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.2"
+"@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.3"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.6-canary.2"
+"@next/swc-linux-arm64-gnu@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.6-canary.3"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-linux-arm64-musl@npm:12.1.6-canary.2"
+"@next/swc-linux-arm64-musl@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-linux-arm64-musl@npm:12.1.6-canary.3"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-linux-x64-gnu@npm:12.1.6-canary.2"
+"@next/swc-linux-x64-gnu@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-linux-x64-gnu@npm:12.1.6-canary.3"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-linux-x64-musl@npm:12.1.6-canary.2"
+"@next/swc-linux-x64-musl@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-linux-x64-musl@npm:12.1.6-canary.3"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.6-canary.2"
+"@next/swc-win32-arm64-msvc@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.6-canary.3"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.6-canary.2"
+"@next/swc-win32-ia32-msvc@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.6-canary.3"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "@next/swc-win32-x64-msvc@npm:12.1.6-canary.2"
+"@next/swc-win32-x64-msvc@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "@next/swc-win32-x64-msvc@npm:12.1.6-canary.3"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -3114,9 +3114,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@playwright/test@npm:1.21.0":
-  version: 1.21.0
-  resolution: "@playwright/test@npm:1.21.0"
+"@playwright/test@npm:1.21.1":
+  version: 1.21.1
+  resolution: "@playwright/test@npm:1.21.1"
   dependencies:
     "@babel/code-frame": "npm:7.16.7"
     "@babel/core": "npm:7.16.12"
@@ -3147,14 +3147,14 @@ __metadata:
     ms: "npm:2.1.3"
     open: "npm:8.4.0"
     pirates: "npm:4.0.4"
-    playwright-core: "npm:1.21.0"
+    playwright-core: "npm:1.21.1"
     rimraf: "npm:3.0.2"
     source-map-support: "npm:0.4.18"
     stack-utils: "npm:2.0.5"
     yazl: "npm:2.5.1"
   bin:
     playwright: cli.js
-  checksum: 9b888005e4b2b7d8b3088758db7eaefefd19af387977b3c876f5ef790ce6d77353f6192b0732010010648d0a409498b00eecaca4e150a1ed34ee16a6718549f8
+  checksum: 99151b7e892941a2bef12482c2b1cc940b2a72f4f34dfdc4b216d0e196fc9fbf5602f8e86765ff9d4a0bf644b88522354b14a86dafd3b907577b8cc6a09c3372
   languageName: node
   linkType: hard
 
@@ -3261,18 +3261,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.4.3":
-  version: 9.4.3
-  resolution: "@react-three/drei@npm:9.4.3"
+"@react-three/drei@npm:9.5.0":
+  version: 9.5.0
+  resolution: "@react-three/drei@npm:9.5.0"
   dependencies:
     "@babel/runtime": "npm:^7.11.2"
     "@react-spring/three": "npm:^9.3.1"
+    "@types/nanoid": "npm:^3.0.0"
     "@use-gesture/react": "npm:^10.2.0"
     detect-gpu: "npm:^4.0.14"
     glsl-noise: "npm:^0.0.0"
     lodash.omit: "npm:^4.5.0"
     lodash.pick: "npm:^4.4.0"
     meshline: "npm:^2.0.4"
+    nanoid: "npm:^3.3.3"
     react-composer: "npm:^5.0.2"
     react-merge-refs: "npm:^1.1.0"
     stats.js: "npm:^0.17.0"
@@ -3290,7 +3292,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 58d749fc1c5d5fda651a533a828bb7075a132e912b139463822bba5aaec8f9261981e77ce2bf18cfc90a676d142cc37f330adb5fe33b7280543e6a38ac180768
+  checksum: 4a74b31b66a9f16b33c485f9c6f50c00c6f93861c6c75ecb0bfc1dcb198057e3ecf0b830cbeed4cb465c75d5b2473bd5afbd58add1e5c333dc9042caa94731e5
   languageName: node
   linkType: hard
 
@@ -4097,6 +4099,15 @@ __metadata:
   version: 1.2.2
   resolution: "@types/minimist@npm:1.2.2"
   checksum: 7fd2a4dc547de09d78c688d79aefcceb54e8c86eb61a5b1a593dfc03bbf1f8589a616ae978585211d078e51abc55b93064b2039c34266db8f277bd6bc03557c3
+  languageName: node
+  linkType: hard
+
+"@types/nanoid@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@types/nanoid@npm:3.0.0"
+  dependencies:
+    nanoid: "npm:*"
+  checksum: 009435c95e8ddaa6b500ad6ed26834d5ce4057999e33104245f694487bcc020e414477fd4fb656255e59897d5d06450b0417ad0a9de9fd744d214179a8050470
   languageName: node
   linkType: hard
 
@@ -7154,11 +7165,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "eslint-config-next@npm:12.1.6-canary.2"
+"eslint-config-next@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "eslint-config-next@npm:12.1.6-canary.3"
   dependencies:
-    "@next/eslint-plugin-next": "npm:12.1.6-canary.2"
+    "@next/eslint-plugin-next": "npm:12.1.6-canary.3"
     "@rushstack/eslint-patch": "npm:1.0.8"
     "@typescript-eslint/parser": "npm:5.19.0"
     eslint-import-resolver-node: "npm:0.3.4"
@@ -7174,7 +7185,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: 90902247118b87942c806b2332a95aef2a33115f4efe670706d4be506ddbf8e7873662025af73ef4589f5bb32f5f2aa7443ec2a17a4745ca6bec77f7f83d0b9c
+  checksum: 57ed55c001bcf0964937d6ddc0c2ac6e9e23abce9d7903dd7915f48c7162eb67bdc9dc5ec8afca5b61b50feceae230d410cd28c4ef465c205ac8cf06044a1ab1
   languageName: node
   linkType: hard
 
@@ -10829,12 +10840,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:^3.1.30, nanoid@npm:^3.3.1":
-  version: 3.3.1
-  resolution: "nanoid@npm:3.3.1"
+"nanoid@npm:*, nanoid@npm:^3.1.30, nanoid@npm:^3.3.1, nanoid@npm:^3.3.3":
+  version: 3.3.3
+  resolution: "nanoid@npm:3.3.3"
   bin:
     nanoid: bin/nanoid.cjs
-  checksum: da34ffd9cbd6fbc13421cb1642c4d715d8bcec74ee82edda3e471e312d604358ef615078f065254e189378eb7df647729f967cb93c4fc568b0ada41d3d0cf250
+  checksum: c87b8384f305756695669e409ec54d5f2f2862f5cb5b138c8f539bbae102619a8e523cb074a24e6b501924d375fc80f860a5ce8fa566e3e5cee08f1f2d98bf30
   languageName: node
   linkType: hard
 
@@ -10947,23 +10958,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.1.6-canary.2":
-  version: 12.1.6-canary.2
-  resolution: "next@npm:12.1.6-canary.2"
+"next@npm:12.1.6-canary.3":
+  version: 12.1.6-canary.3
+  resolution: "next@npm:12.1.6-canary.3"
   dependencies:
-    "@next/env": "npm:12.1.6-canary.2"
-    "@next/swc-android-arm-eabi": "npm:12.1.6-canary.2"
-    "@next/swc-android-arm64": "npm:12.1.6-canary.2"
-    "@next/swc-darwin-arm64": "npm:12.1.6-canary.2"
-    "@next/swc-darwin-x64": "npm:12.1.6-canary.2"
-    "@next/swc-linux-arm-gnueabihf": "npm:12.1.6-canary.2"
-    "@next/swc-linux-arm64-gnu": "npm:12.1.6-canary.2"
-    "@next/swc-linux-arm64-musl": "npm:12.1.6-canary.2"
-    "@next/swc-linux-x64-gnu": "npm:12.1.6-canary.2"
-    "@next/swc-linux-x64-musl": "npm:12.1.6-canary.2"
-    "@next/swc-win32-arm64-msvc": "npm:12.1.6-canary.2"
-    "@next/swc-win32-ia32-msvc": "npm:12.1.6-canary.2"
-    "@next/swc-win32-x64-msvc": "npm:12.1.6-canary.2"
+    "@next/env": "npm:12.1.6-canary.3"
+    "@next/swc-android-arm-eabi": "npm:12.1.6-canary.3"
+    "@next/swc-android-arm64": "npm:12.1.6-canary.3"
+    "@next/swc-darwin-arm64": "npm:12.1.6-canary.3"
+    "@next/swc-darwin-x64": "npm:12.1.6-canary.3"
+    "@next/swc-linux-arm-gnueabihf": "npm:12.1.6-canary.3"
+    "@next/swc-linux-arm64-gnu": "npm:12.1.6-canary.3"
+    "@next/swc-linux-arm64-musl": "npm:12.1.6-canary.3"
+    "@next/swc-linux-x64-gnu": "npm:12.1.6-canary.3"
+    "@next/swc-linux-x64-musl": "npm:12.1.6-canary.3"
+    "@next/swc-win32-arm64-msvc": "npm:12.1.6-canary.3"
+    "@next/swc-win32-ia32-msvc": "npm:12.1.6-canary.3"
+    "@next/swc-win32-x64-msvc": "npm:12.1.6-canary.3"
     caniuse-lite: "npm:^1.0.30001283"
     postcss: "npm:8.4.5"
     styled-jsx: "npm:5.0.1"
@@ -11007,7 +11018,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 222df7a00f58fedea2b70755f60c34f7338dd1554bdf40a8e90ffa08803eaa174f7b7ebe4b0751fca4fb0bd73e5e528bcd7124112f223b2ef14d69b7b3a2ee77
+  checksum: 410f9a44bd813b7b40c998f0e262ec3be57b3996e82e6abc6783ca359e3d741520c4ebb8dced90f7a703860bd4fa86ab715ac160a53ac679e93533c380b92e44
   languageName: node
   linkType: hard
 
@@ -11031,7 +11042,7 @@ __metadata:
     prettier: "npm:2.6.2"
     rimraf: "npm:3.0.2"
     shell-quote: "npm:1.7.3"
-    typescript: "npm:4.6.3"
+    typescript: "npm:4.7.0-beta"
   languageName: unknown
   linkType: soft
 
@@ -11792,9 +11803,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"playwright-core@npm:1.21.0":
-  version: 1.21.0
-  resolution: "playwright-core@npm:1.21.0"
+"playwright-core@npm:1.21.1":
+  version: 1.21.1
+  resolution: "playwright-core@npm:1.21.1"
   dependencies:
     colors: "npm:1.4.0"
     commander: "npm:8.3.0"
@@ -11816,7 +11827,7 @@ __metadata:
     yazl: "npm:2.5.1"
   bin:
     playwright: cli.js
-  checksum: 427c16e02885c589b8769731bf4cd79d0568c6bdb279f4915b7e8c2e2e4ab01d1f55fb71bdb48dcd9a1d5095678fc4591c30348dbd682d4388dc5fa364db52aa
+  checksum: 7143f6a3b03d9ab3911a801bcb6a9530ead6d484c240e250a46eca9310dc89ecf4a3697f415d6089a89552968cb0a37def5efbd3f94fe9e5d4954c298947c971
   languageName: node
   linkType: hard
 
@@ -12604,9 +12615,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:11.16.6, react-i18next@npm:^11.16.2":
-  version: 11.16.6
-  resolution: "react-i18next@npm:11.16.6"
+"react-i18next@npm:11.16.7, react-i18next@npm:^11.16.2":
+  version: 11.16.7
+  resolution: "react-i18next@npm:11.16.7"
   dependencies:
     "@babel/runtime": "npm:^7.14.5"
     html-escaper: "npm:^2.0.2"
@@ -12619,7 +12630,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: ff29bedbfadd78b7998243d3fbc1d97155ca891a491915583b4dd6a12a05cd0dffbb27d1230adfed450139249ef9d81171e356b7c43701a78e56356f08590f37
+  checksum: 08c78d33479ffed813319d28668db4cc9c916c3538f3f5db3f6b9d9cd6be6b27de5f9485a2a5bcfd5e7c822a659673e92240f8ff16c89ac2b4728e7cdf25d12a
   languageName: node
   linkType: hard
 
@@ -13207,16 +13218,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.50.0":
-  version: 1.50.0
-  resolution: "sass@npm:1.50.0"
+"sass@npm:1.50.1":
+  version: 1.50.1
+  resolution: "sass@npm:1.50.1"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: c59e68d677f5887f128da47b766bccef4081b0461bc2ca41883c465489d33a315fd3344d58065db3d89e19f3107b3cfa3eee36fa36820cdb442c1b1b79f00fad
+  checksum: 2aca7dfcb9ec2f3af3fbdfa43f040465f6e060fe7a526a0ce3908debf12301dd2fce7284dfb44279487383eaa250178791f1b6b782b6afc255d891dc5d8c4e97
   languageName: node
   linkType: hard
 
@@ -14161,9 +14172,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sync-directory@npm:4.0.12":
-  version: 4.0.12
-  resolution: "sync-directory@npm:4.0.12"
+"sync-directory@npm:4.0.14":
+  version: 4.0.14
+  resolution: "sync-directory@npm:4.0.14"
   dependencies:
     chokidar: "npm:^3.3.1"
     commander: "npm:^6.2.0"
@@ -14171,8 +14182,8 @@ __metadata:
     is-absolute: "npm:^1.0.0"
     readdir-enhanced: "npm:^1.5.2"
   bin:
-    syncdir: ./cmd.js
-  checksum: 9e0bece1cb65e662fe96f76c851dd11b7ecac8510b5aff69e85f53f62c9101a444610ee3e9b4b2ab6dc0dc9ed24fc96899d7b8a808400f091167a6b136540cca
+    syncdir: cmd.js
+  checksum: 9d313b0b8b18091ef5f8c6f5c1390f656cfaeaa381f88e81071a061d5fbb8c3ea0b5cc909c4d2888ba68882ec280870259733099da66d2425e4b1849a7ab2d48
   languageName: node
   linkType: hard
 
@@ -14785,16 +14796,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.6.3, typescript@npm:^4.4.3":
-  version: 4.6.3
-  resolution: "typescript@npm:4.6.3"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 6d79afd83b60614b18d469795c0d5725dcc89d8c943b0b09162ce15e1ec7cd73111642accdbb10c2be21bfabccb5b296554b5ea09948b2931d51ecbdece22a48
-  languageName: node
-  linkType: hard
-
 "typescript@npm:4.7.0-beta":
   version: 4.7.0-beta
   resolution: "typescript@npm:4.7.0-beta"
@@ -14805,13 +14806,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^4.4.3#optional!builtin<compat/typescript>":
+"typescript@npm:^4.4.3":
   version: 4.6.3
-  resolution: "typescript@patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>::version=4.6.3&hash=7ad353"
+  resolution: "typescript@npm:4.6.3"
   bin:
     tsc: bin/tsc
     tsserver: bin/tsserver
-  checksum: 694ec10096afa6f172ffeb1b3794bbf4a354f9d59af4f1ac62d4a705a4cdc708f970514deaf7d9a87c7ecdc4b1f5d297ce89ecbde720a251caac801adf5588f6
+  checksum: 6d79afd83b60614b18d469795c0d5725dcc89d8c943b0b09162ce15e1ec7cd73111642accdbb10c2be21bfabccb5b296554b5ea09948b2931d51ecbdece22a48
   languageName: node
   linkType: hard
 
@@ -14822,6 +14823,16 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 8c1dfb967ca11421585d0dbb92aea95a02b234fefecc6f65361bcbfd7fe44cce3657fc47eeca7572c1b83dc344fec53ffcf546f49836a28d40a311b231c36043
+  languageName: node
+  linkType: hard
+
+"typescript@patch:typescript@npm%3A^4.4.3#optional!builtin<compat/typescript>":
+  version: 4.6.3
+  resolution: "typescript@patch:typescript@npm%3A4.6.3#optional!builtin<compat/typescript>::version=4.6.3&hash=7ad353"
+  bin:
+    tsc: bin/tsc
+    tsserver: bin/tsserver
+  checksum: 694ec10096afa6f172ffeb1b3794bbf4a354f9d59af4f1ac62d4a705a4cdc708f970514deaf7d9a87c7ecdc4b1f5d297ce89ecbde720a251caac801adf5588f6
   languageName: node
   linkType: hard
 
@@ -15189,12 +15200,12 @@ __metadata:
     "@fontsource/raleway": "npm:4.5.5"
     "@headlessui/react": "npm:1.5.0"
     "@mdx-js/react": "npm:2.1.1"
-    "@next/bundle-analyzer": "npm:12.1.6-canary.2"
-    "@next/env": "npm:12.1.6-canary.2"
+    "@next/bundle-analyzer": "npm:12.1.6-canary.3"
+    "@next/env": "npm:12.1.6-canary.3"
     "@octokit/graphql": "npm:4.8.0"
     "@octokit/graphql-schema": "npm:10.73.0"
-    "@playwright/test": "npm:1.21.0"
-    "@react-three/drei": "npm:9.4.3"
+    "@playwright/test": "npm:1.21.1"
+    "@react-three/drei": "npm:9.5.0"
     "@react-three/fiber": "patch:@react-three/fiber@npm%3A8.0.10#~/.yarn/patches/@react-three-fiber-npm-8.0.10-8df904dc6a.patch"
     "@sentry/nextjs": "npm:6.19.6"
     "@sentry/react": "npm:6.19.6"
@@ -15226,7 +15237,7 @@ __metadata:
     dotenv-flow-cli: "npm:1.0.0"
     es-check: "npm:6.2.1"
     eslint: "npm:8.13.0"
-    eslint-config-next: "npm:12.1.6-canary.2"
+    eslint-config-next: "npm:12.1.6-canary.3"
     framer-motion: "npm:6.3.0"
     graphql: "npm:16.3.0"
     i18next: "npm:21.6.16"
@@ -15234,7 +15245,7 @@ __metadata:
     jest: "npm:27.5.1"
     jest-css-modules-transform: "npm:4.3.0"
     micro: "npm:9.3.4"
-    next: "npm:12.1.6-canary.2"
+    next: "npm:12.1.6-canary.3"
     next-auth: "npm:4.3.2"
     next-connect: "npm:0.12.2"
     next-i18next: "npm:11.0.0"
@@ -15250,16 +15261,16 @@ __metadata:
     prettier: "npm:2.6.2"
     react: "npm:18.0.0"
     react-dom: "npm:18.0.0"
-    react-i18next: "npm:11.16.6"
+    react-i18next: "npm:11.16.7"
     react-query: "npm:4.0.0-beta.2"
     rimraf: "npm:3.0.2"
     rooks: "npm:5.11.0"
-    sass: "npm:1.50.0"
+    sass: "npm:1.50.1"
     sharp: "npm:0.30.4"
     size-limit: "npm:7.0.8"
     superjson: "npm:1.8.1"
     symlink-dir: "npm:5.0.1"
-    sync-directory: "npm:4.0.12"
+    sync-directory: "npm:4.0.14"
     tailwindcss: "npm:3.0.24"
     three: "npm:0.139.2"
     three-stdlib: "npm:2.9.1"

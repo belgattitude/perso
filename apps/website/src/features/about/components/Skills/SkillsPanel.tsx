@@ -9,14 +9,14 @@ import type { AnimatePresenceProps } from 'framer-motion/types/components/Animat
 import Image from 'next/image';
 import type { FC, ReactNode } from 'react';
 import React, { useState } from 'react';
+import type { skillType } from '@/config';
+import { skillSections } from '@/config';
 import { SkillLabel } from './SkillLabel';
 import {
   getAnimationType,
   getItemVariants,
   getListVariants,
 } from './SkillsPanelAnims';
-import type { skillType } from '@/config';
-import { skillSections } from '@/config';
 
 export type SkillSections = typeof skillSections[number];
 export type SkillType = typeof skillType[number];

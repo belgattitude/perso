@@ -10,9 +10,9 @@ import {
 import { backOut } from 'popmotion';
 import type { FC } from 'react';
 import React, { useCallback, useState } from 'react';
-import { ProfileHeroCtn } from './profile-hero.style';
 import { breakpoints } from '@/config';
 import { Avatar } from '@/features/about/components/Avatar';
+import { ProfileHeroCtn } from './profile-hero.style';
 
 type ProfileHeroProps = {
   className?: string;

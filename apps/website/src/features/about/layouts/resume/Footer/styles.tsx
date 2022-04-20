@@ -1,21 +1,6 @@
 import styled from '@emotion/styled';
-import type { FC, ReactNode } from 'react';
 
-type FooterProps = {
-  className?: string;
-  children: ReactNode;
-};
-
-const UnstyledFooter: FC<FooterProps> = (props) => {
-  const { children, className } = props;
-  return (
-    <div className={className}>
-      <div>{children}</div>
-    </div>
-  );
-};
-
-export const Footer = styled(UnstyledFooter)`
+export const FooterCtn = styled.div`
   display: flex;
   flex-direction: row;
   color: white;
