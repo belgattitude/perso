@@ -103,7 +103,7 @@ const nextConfig = {
 
   // @link https://nextjs.org/docs/advanced-features/compiler#minification
   // Still buggy as of nextjs 12.1.5
-  swcMinify: false,
+  swcMinify: true,
 
   experimental: {
     /*
