@@ -5,7 +5,6 @@ import dynamic from 'next/dynamic';
 import Head from 'next/head';
 import React from 'react';
 import type { FC } from 'react';
-import { Footer } from '../layouts';
 import { mdxConfig, siteConfig, appClassName } from '@/config';
 import {
   ProfileHero,
@@ -16,6 +15,7 @@ import {
 import { Block } from '@/features/about/blocks/block';
 import type { TechnosProps } from '@/features/about/blocks/technos/technos';
 import { defaultTheme } from '@/themes';
+import { Footer } from '../layouts/resume/Footer';
 
 const Technos = dynamic<TechnosProps>(
   () =>
@@ -32,8 +32,6 @@ export const ResumePage: FC = () => {
     <div css={appClassName}>
       <Head>
         <title>{siteConfig.siteTitle}</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1" />
-        <meta charSet="utf-8" />
         <meta name="description" content={siteConfig.siteDesc} />
         <meta property="og:url" content={siteConfig.canonical} />
         <meta property="og:type" content="website" />
@@ -44,15 +42,13 @@ export const ResumePage: FC = () => {
         <meta name="twitter:title" content={siteConfig.siteTitle} />
         <meta name="twitter:description" content={siteConfig.siteDesc} />
         <meta name="twitter:image" content={siteConfig.siteImg} />
-        <link rel="apple-touch-icon" href="/favicon.ico" />
-        <link rel="shortcut icon" type="image/x-icon" href="/favicon.ico" />
         <NextSeo nofollow={true} noindex={true} />
       </Head>
 
       <ThemeProvider theme={defaultTheme}>
         <MDXProvider components={mdxConfig}>
           <ProfileHero
-          /* avatarImg={siteConfig.profileImg} */
+          // avatarImg={siteConfig.profileImg}
           />
           <Block
             css={css`
