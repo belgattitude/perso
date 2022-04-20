@@ -1,4 +1,4 @@
-import { softShadows, OrbitControls } from '@react-three/drei';
+import { OrbitControls } from '@react-three/drei';
 import { Canvas } from '@react-three/fiber';
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
@@ -10,8 +10,6 @@ const canvasStyle: CSSProperties = {
   width: '100vw',
   height: '100vh',
 };
-
-softShadows();
 
 export const HomePage: FC = () => {
   const { t } = useTranslation(homeConfig.i18nNamespaces);
