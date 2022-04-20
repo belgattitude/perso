@@ -1,10 +1,10 @@
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import { defaultSection, skillsRecords } from '@/config';
-import { TechnosCtn } from '@/features/about/blocks/technos/technos.style';
 import type { SkillsPanelProps } from '../../components/Skills';
+import * as S from './styles';
 
-export type TechnosProps = {
+export type TechnosBlockProps = {
   className?: string;
 };
 
@@ -19,10 +19,10 @@ const SkillsPanel = dynamic<SkillsPanelProps>(
   }
 );
 
-export const Technos: FC<TechnosProps> = (props) => {
+export const TechnosBlock: FC<TechnosBlockProps> = (props) => {
   const { className } = props;
   return (
-    <TechnosCtn className={className}>
+    <S.TechnosCtn className={className}>
       <h1>Technos</h1>
       <h2>what do I work with (and relics) ?</h2>
       <SkillsPanel skills={skillsRecords} defaultSection={defaultSection} />
@@ -61,6 +61,6 @@ export const Technos: FC<TechnosProps> = (props) => {
       </p>
 
       <p>I usually share my time between frontend and backend.</p>
-    </TechnosCtn>
+    </S.TechnosCtn>
   );
 };

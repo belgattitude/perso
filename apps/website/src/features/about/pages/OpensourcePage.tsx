@@ -2,11 +2,14 @@ import { css, ThemeProvider } from '@emotion/react';
 import { MDXProvider } from '@mdx-js/react';
 import { NextSeo } from 'next-seo';
 import Head from 'next/head';
-import React from 'react';
 import type { FC } from 'react';
 import { mdxConfig, siteConfig, appClassName } from '@/config';
-import { ProfileHero, AboutMe, Opensource } from '@/features/about/blocks';
-import { Block } from '@/features/about/blocks/block';
+import {
+  HeroBlock,
+  AboutMeBlock,
+  OpenSourceBlock,
+  Block,
+} from '@/features/about/blocks';
 import { defaultTheme } from '@/themes';
 
 export const OpensourcePage: FC = () => {
@@ -33,7 +36,7 @@ export const OpensourcePage: FC = () => {
 
       <ThemeProvider theme={defaultTheme}>
         <MDXProvider components={mdxConfig}>
-          <ProfileHero
+          <HeroBlock
           /* avatarImg={siteConfig.profileImg} */
           />
           <Block
@@ -41,10 +44,10 @@ export const OpensourcePage: FC = () => {
               margin-top: 3.5em;
             `}
           >
-            <AboutMe />
+            <AboutMeBlock />
           </Block>
           <Block>
-            <Opensource />
+            <OpenSourceBlock />
           </Block>
         </MDXProvider>
       </ThemeProvider>

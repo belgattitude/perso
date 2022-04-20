@@ -1,5 +1,5 @@
 import styled from '@emotion/styled';
-import { breakpoints } from '@/config';
+import { breakpoints } from '@/features/about/config';
 
 export const ProfileHeroCtn = styled.div`
   position: relative;

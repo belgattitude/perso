@@ -8,7 +8,7 @@ import {
 import type { AnimatePresenceProps } from 'framer-motion/types/components/AnimatePresence/types';
 import Image from 'next/image';
 import type { FC, ReactNode } from 'react';
-import React, { useState } from 'react';
+import { useState } from 'react';
 import type { skillType } from '@/config';
 import { skillSections } from '@/config';
 import { SkillLabel } from './SkillLabel';

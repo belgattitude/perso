@@ -1,11 +1,11 @@
 import type { FC } from 'react';
-import { FeaturesCtn } from '@/features/about/blocks/features/features.style';
+import { FeaturesCtn } from '@/features/about/blocks/features/styles';
 
 type FeaturesProps = {
   className?: string;
 };
 
-export const Features: FC<FeaturesProps> = (props) => {
+export const FeaturesBlock: FC<FeaturesProps> = (props) => {
   const { className } = props;
   return (
     <FeaturesCtn className={className}>

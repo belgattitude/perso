@@ -1,15 +1,15 @@
 import type { FC } from 'react';
-import { AboutMeCtn } from '@/features/about/blocks/about-me/about-me.style';
+import * as S from './styles';
 
 export type AboutMeProps = {
   className?: string;
 };
 
-export const AboutMe: FC<AboutMeProps> = (props) => {
+export const AboutMeBlock: FC<AboutMeProps> = (props) => {
   const { className } = props;
 
   return (
-    <AboutMeCtn className={className}>
+    <S.AboutMeCtn className={className}>
       <h1 className={'font-serif text-4xl'}>About me</h1>
       <p>
         I'm a passionate developer with more than 15 years experience in backend
@@ -27,6 +27,6 @@ export const AboutMe: FC<AboutMeProps> = (props) => {
         </a>{' '}
         is an answer to a problem ;)
       </p>
-    </AboutMeCtn>
+    </S.AboutMeCtn>
   );
 };

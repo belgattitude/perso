@@ -1,17 +1,17 @@
 import { css } from '@emotion/react';
 import type { FC } from 'react';
-import { OpensourceCtn } from '@/features/about/blocks/opensource/opensource.style';
 import { RepoList } from '@/features/about/components/Github';
 import GithubIcon from '@/public/icons/devicons/github/github-original.svg';
+import * as S from './styles';
 
 type OpensourceProps = {
   className?: string;
 };
 
-export const Opensource: FC<OpensourceProps> = (props) => {
+export const OpenSourceBlock: FC<OpensourceProps> = (props) => {
   const { className } = props;
   return (
-    <OpensourceCtn className={className}>
+    <S.OpensourceCtn className={className}>
       <h1>
         <a
           href={'https://github.com/belgattitude'}
@@ -29,6 +29,6 @@ export const Opensource: FC<OpensourceProps> = (props) => {
       <h1>Opensource</h1>
       <h2>Some code I committed once upon a time...</h2>
       <RepoList />
-    </OpensourceCtn>
+    </S.OpensourceCtn>
   );
 };

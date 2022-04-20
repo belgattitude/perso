@@ -9,21 +9,21 @@ import {
 } from 'framer-motion';
 import { backOut } from 'popmotion';
 import type { FC } from 'react';
-import React, { useCallback, useState } from 'react';
-import { breakpoints } from '@/config';
+import { useCallback, useState } from 'react';
 import { Avatar } from '@/features/about/components/Avatar';
-import { ProfileHeroCtn } from './profile-hero.style';
+import { breakpoints } from '@/features/about/config';
+import * as S from './styles';
 
-type ProfileHeroProps = {
+type HeroProps = {
   className?: string;
   avatarImg?: string;
 };
 
-export const ProfileHero: FC<ProfileHeroProps> = (props) => {
+export const HeroBlock: FC<HeroProps> = (props) => {
   const { avatarImg, className } = props;
   const { scrollY } = useViewportScroll();
 
-  const [elementRect, setElementRect] = useState<ClientRect | null>(null);
+  const [elementRect, setElementRect] = useState<DOMRect | null>(null);
 
   // just because useRef and useLayoutEffect won't do it.
   const measuredRef = useCallback((node: HTMLDivElement | null) => {
@@ -80,12 +80,13 @@ export const ProfileHero: FC<ProfileHeroProps> = (props) => {
   );
   const opacityAvatar = useTransform(scrollY, [0, height], [0, 1]);
 
-  // const img = '/images/unsplash-bigrock.jpg';
+  const img = '/images/unsplash-bigrock.jpg';
   // const img = '/images/wolfgang-hasselmann-cow.jpg';
-  const img = '/images/crop-nicolas-i-unsplash.webp';
+  // const img = '/images/crop-nicolas-i-unsplash.webp';
+  // const img = 'https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   return (
     <LazyMotion strict features={domAnimation}>
-      <ProfileHeroCtn
+      <S.ProfileHeroCtn
         ref={measuredRef}
         className={className}
         css={{ overflow: 'hidden' }}
@@ -94,8 +95,9 @@ export const ProfileHero: FC<ProfileHeroProps> = (props) => {
           className={'background'}
           css={css`
             background: black;
-            background-size: contain;
+            background-size: cover;
             background-image: url(${img});
+            // background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
             background-attachment: fixed;
             background-position: bottom left;
             background-repeat: no-repeat;
@@ -106,8 +108,6 @@ export const ProfileHero: FC<ProfileHeroProps> = (props) => {
             right: 0;
             @media (${breakpoints.large}) {
               background-size: cover;
-              background-attachment: fixed;
-              background-position: bottom left;
             }
           `}
         />
@@ -121,8 +121,10 @@ export const ProfileHero: FC<ProfileHeroProps> = (props) => {
             right: 0;
             //background: #0f0c29;
             //background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-            background-image: url('/images/wolfgang-hasselmann-cow.webp');
-            //background-image: url("/images/cine.jpg");
+            //background-image: url('/images/wolfgang-hasselmann-cow.webp');
+            //background-image: url('/images/cine.jpg');
+            background-image: url('https://images.pexels.com/photos/220357/pexels-photo-220357.jpeg');
+            background-image: url('https://images.pexels.com/photos/1440387/pexels-photo-1440387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
             //background-image: url('/images/picos.jpg');
             //background-image: url('https://images.unsplash.com/photo-1563057828-434ef414eff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80');
             //background-image: url("https://images.unsplash.com/photo-1588359886706-cbbd20ff2b29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
@@ -166,7 +168,7 @@ export const ProfileHero: FC<ProfileHeroProps> = (props) => {
             Developer in React, Typescript and PHP.
           </motion.p>
         </div>
-      </ProfileHeroCtn>
+      </S.ProfileHeroCtn>
     </LazyMotion>
   );
 };

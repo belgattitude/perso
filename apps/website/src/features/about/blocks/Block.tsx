@@ -1,6 +1,6 @@
 import styled from '@emotion/styled';
 import type { FC, ReactNode } from 'react';
-import { breakpoints } from '@/config';
+import { breakpoints } from '@/features/about/config';
 
 type BlockProps = {
   className?: string;
