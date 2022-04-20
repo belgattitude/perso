@@ -1,6 +1,6 @@
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
-import { defaultSection, skillsRecords } from '@/config';
+import { defaultSection, skillsRecords } from '@/features/about/config';
 import type { SkillsPanelProps } from '../../components/Skills';
 import * as S from './styles';
 

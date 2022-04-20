@@ -80,9 +80,9 @@ export const HeroBlock: FC<HeroProps> = (props) => {
   );
   const opacityAvatar = useTransform(scrollY, [0, height], [0, 1]);
 
-  const img = '/images/unsplash-bigrock.jpg';
+  // const img = '/images/unsplash-bigrock.jpg';
   // const img = '/images/wolfgang-hasselmann-cow.jpg';
-  // const img = '/images/crop-nicolas-i-unsplash.webp';
+  const img = '/images/crop-nicolas-i-unsplash.webp';
   // const img = 'https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1'
   return (
     <LazyMotion strict features={domAnimation}>
