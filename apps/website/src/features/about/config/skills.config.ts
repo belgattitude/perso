@@ -8,7 +8,7 @@ export const skillSections = [
   'Frontend',
   'PHP',
   'Node',
-  'Database',
+  'DB',
   'Dev',
   'Past stacks',
 ] as const;
@@ -16,8 +16,8 @@ export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
   none: [],
-  adrenaline: ['Overview'],
-  topdown: ['Frontend', 'PHP', 'Database', 'Overview'],
+  adrenaline: [],
+  topdown: ['Overview', 'Frontend', 'PHP', 'DB', 'Overview'],
   soft: ['Past stacks'],
 };
 
@@ -150,7 +150,7 @@ export const skillsRecords: SkillRecord[] = [
     homepage: 'https://en.wikipedia.org/wiki/SQL',
     years: 10,
     rating: 5,
-    sections: ['Database', 'Overview'],
+    sections: ['DB', 'Overview'],
     type: 'language',
   },
   {
@@ -192,7 +192,7 @@ export const skillsRecords: SkillRecord[] = [
     logo: '/icons/devicons/mysql/mysql-plain.svg',
     homepage: 'https://mysql.com',
     rating: 5,
-    sections: ['Database'],
+    sections: ['DB'],
     type: 'database',
   },
   {
@@ -200,7 +200,7 @@ export const skillsRecords: SkillRecord[] = [
     logo: '/images/logos/technos/mariadb.png',
     homepage: 'https://mariadb.com',
     rating: 5,
-    sections: ['Database'],
+    sections: ['DB'],
     type: 'database',
   },
   {
@@ -208,7 +208,7 @@ export const skillsRecords: SkillRecord[] = [
     logo: '/icons/devicons/redis/redis-plain.svg',
     homepage: 'https://redis.io',
     rating: 3,
-    sections: ['Database'],
+    sections: ['DB'],
     type: 'database',
   },
   {
@@ -216,9 +216,18 @@ export const skillsRecords: SkillRecord[] = [
     logo: '/icons/devicons/postgresql/postgresql-plain.svg',
     homepage: 'https://www.postgresql.org/',
     rating: 3,
-    sections: ['Database'],
+    sections: ['DB'],
     type: 'database',
   },
+  {
+    name: 'Algolia',
+    logo: '/images/logos/technos/algolia.png',
+    homepage: 'https://www.algolia.com/',
+    rating: 3,
+    sections: ['DB'],
+    type: 'database',
+  },
+
   {
     name: 'Git',
     logo: '/icons/devicons/git/git-plain.svg',
@@ -322,7 +331,7 @@ export const skillsRecords: SkillRecord[] = [
   },
   {
     name: 'Java',
-    logo: '/images/logos/technos/java.png',
+    logo: '/icons/devicons/java/java-original.svg',
     homepage: 'https://www.oracle.com/java',
     rating: 3,
     sections: ['Past stacks'],

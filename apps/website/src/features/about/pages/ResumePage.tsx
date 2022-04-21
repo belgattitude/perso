@@ -3,24 +3,25 @@ import { MDXProvider } from '@mdx-js/react';
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import Head from 'next/head';
-import React from 'react';
 import type { FC } from 'react';
 import { mdxConfig, siteConfig, appClassName } from '@/config';
 import {
-  ProfileHero,
-  AboutMe,
-  Opensource,
-  Features,
+  HeroBlock,
+  AboutMeBlock,
+  OpenSourceBlock,
+  FeaturesBlock,
+  Block,
+  BlockTitle,
 } from '@/features/about/blocks';
-import { Block } from '@/features/about/blocks/block';
-import type { TechnosProps } from '@/features/about/blocks/technos/technos';
+import type { TechnosBlockProps } from '@/features/about/blocks/technos/TechnosBlock';
+import LinkedInIcon from '@/public/icons/devicons/linkedin/linkedin-original.svg';
 import { defaultTheme } from '@/themes';
 import { Footer } from '../layouts/resume/Footer';
 
-const Technos = dynamic<TechnosProps>(
+const Technos = dynamic<TechnosBlockProps>(
   () =>
-    import('@/features/about/blocks/technos/technos').then(
-      (mod) => mod.Technos
+    import('@/features/about/blocks/technos/TechnosBlock').then(
+      (mod) => mod.TechnosBlock
     ),
   {
     ssr: false,
@@ -30,9 +31,13 @@ const Technos = dynamic<TechnosProps>(
 export const ResumePage: FC = () => {
   return (
     <div css={appClassName}>
+      <NextSeo
+        nofollow={true}
+        noindex={true}
+        title={siteConfig.siteTitle}
+        description={siteConfig.siteDesc}
+      />
       <Head>
-        <title>{siteConfig.siteTitle}</title>
-        <meta name="description" content={siteConfig.siteDesc} />
         <meta property="og:url" content={siteConfig.canonical} />
         <meta property="og:type" content="website" />
         <meta property="og:title" content={siteConfig.siteTitle} />
@@ -42,12 +47,10 @@ export const ResumePage: FC = () => {
         <meta name="twitter:title" content={siteConfig.siteTitle} />
         <meta name="twitter:description" content={siteConfig.siteDesc} />
         <meta name="twitter:image" content={siteConfig.siteImg} />
-        <NextSeo nofollow={true} noindex={true} />
       </Head>
-
       <ThemeProvider theme={defaultTheme}>
         <MDXProvider components={mdxConfig}>
-          <ProfileHero
+          <HeroBlock
           // avatarImg={siteConfig.profileImg}
           />
           <Block
@@ -55,10 +58,10 @@ export const ResumePage: FC = () => {
               margin-top: 3.5em;
             `}
           >
-            <AboutMe />
+            <AboutMeBlock />
           </Block>
           <Block>
-            <Features
+            <FeaturesBlock
               css={css`
                 background-color: #fefefe;
               `}
@@ -68,7 +71,42 @@ export const ResumePage: FC = () => {
             <Technos />
           </Block>
           <Block>
-            <Opensource />
+            <div>
+              <BlockTitle title={'Experience'} subtitle={'Current'} />
+              <p>
+                I'm currently Tech Lead at{' '}
+                <a
+                  href={'https://www.sortlist.com'}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  Sortlist
+                </a>
+                , a Belgium scale-up that connects projects with a network of
+                international agencies. Check my{' '}
+              </p>
+              <h3
+                css={css`
+                  margin-top: 20px;
+                `}
+              >
+                <a
+                  href={siteConfig.linkedIn}
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
+                  <LinkedInIcon
+                    css={css`
+                      display: inline-block;
+                      width: 64px;
+                    `}
+                  />
+                </a>
+              </h3>
+            </div>
+          </Block>
+          <Block>
+            <OpenSourceBlock />
           </Block>
           <Footer />
         </MDXProvider>

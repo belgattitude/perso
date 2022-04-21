@@ -1,5 +1,6 @@
-export * from './about-me/about-me';
-export * from './features/features';
-export * from './opensource/opensource';
-export * from './hero/profile-hero';
-export * from './technos/technos';
+export { Block, BlockTitle } from './Block';
+export * from './about/AboutMeBlock';
+export * from './features/FeaturesBlock';
+export * from './opensource/OpenSourceBlock';
+export * from './hero/HeroBlock';
+export * from './technos/TechnosBlock';

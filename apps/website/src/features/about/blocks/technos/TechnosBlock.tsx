@@ -1,10 +1,12 @@
+import { css } from '@emotion/react';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
-import { defaultSection, skillsRecords } from '@/config';
-import { TechnosCtn } from '@/features/about/blocks/technos/technos.style';
+import { BlockTitle } from '@/features/about/blocks';
+import { defaultSection, skillsRecords } from '@/features/about/config';
 import type { SkillsPanelProps } from '../../components/Skills';
+import * as S from './styles';
 
-export type TechnosProps = {
+export type TechnosBlockProps = {
   className?: string;
 };
 
@@ -19,14 +21,23 @@ const SkillsPanel = dynamic<SkillsPanelProps>(
   }
 );
 
-export const Technos: FC<TechnosProps> = (props) => {
+export const TechnosBlock: FC<TechnosBlockProps> = (props) => {
   const { className } = props;
   return (
-    <TechnosCtn className={className}>
-      <h1>Technos</h1>
-      <h2>what do I work with (and relics) ?</h2>
-      <SkillsPanel skills={skillsRecords} defaultSection={defaultSection} />
-      <h3>Frontend</h3>
+    <S.TechnosCtn className={className}>
+      <BlockTitle
+        title={'Technos'}
+        subtitle={'what do I work with (and relics) ?'}
+      />
+      <SkillsPanel
+        skills={skillsRecords}
+        defaultSection={defaultSection}
+        css={css`
+          margin-bottom: 30px;
+        `}
+      />
+      <BlockTitle title={'Areas'} subtitle={'Areas of expertise'} />
+      <h3 className={'highlight'}>Frontend</h3>
       <p>
         When working on frontend I mainly code with the <strong>react</strong>/
         <strong>typescript</strong> combo and its associated ecosystem (redux,
@@ -34,7 +45,7 @@ export const Technos: FC<TechnosProps> = (props) => {
         around 2015 moving away from AngularJs and ExtJs.
       </p>
 
-      <h3>Backend</h3>
+      <h3 className={'highlight'}>Backend</h3>
 
       <p>
         Occasionally in <strong>node / express</strong>, but most of the time in{' '}
@@ -45,22 +56,23 @@ export const Technos: FC<TechnosProps> = (props) => {
         (psr) and prefer thinking of architecture than style.
       </p>
 
-      <h3>Database</h3>
+      <h3 className={'highlight'}>Database</h3>
 
       <p>
-        Have a long story with SQL and relational databases (complex queries,
-        optimizations, triggers, procedures, architecture...). Had to deal with
+        Have a long story with SQL and relational databases (design, complex
+        queries, optimizations, triggers, procedures, cte,...). Had to deal with
         analytics and ecommerce for a while...
       </p>
 
-      <h3>Architecture</h3>
+      <h3 className={'highlight'}>Architecture</h3>
       <p>
         In the recent years, I sensed the need to improve my knowledge of
-        application architecture (DDD...), something that I always felt missing
-        or too partially understood. A lifetime process...
+        application architecture (DDD, clean architecture...), something that I
+        always felt missing or too partially understood. A lifetime process...
       </p>
 
-      <p>I usually share my time between frontend and backend.</p>
-    </TechnosCtn>
+      <h3 className={'highlight'}>Project Management</h3>
+      <p>Project planning, task estimation... Scrum context or others.</p>
+    </S.TechnosCtn>
   );
 };

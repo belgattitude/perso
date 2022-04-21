@@ -48,6 +48,8 @@
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
     "@emotion/babel-plugin": "11.9.2",
+    "@fontsource/raleway": "4.5.5",
+    "@fontsource/rubik": "4.5.6",
     "@next/bundle-analyzer": "12.1.6-canary.4",
     "@next/env": "12.1.6-canary.4",
     "@playwright/test": "1.21.1",
@@ -68,6 +70,7 @@
     "@types/react": "18.0.5",
     "@types/react-dom": "18.0.1",
     "@types/three": "0.139.0",
+    "add": "2.0.6",
     "autoprefixer": "10.4.4",
     "cross-env": "7.0.3",
     "dotenv-flow": "3.2.0",
@@ -90,7 +93,8 @@
     "tailwindcss": "3.0.24",
     "ts-jest": "27.1.4",
     "ts-node": "10.7.0",
-    "typescript": "4.7.0-beta"
+    "typescript": "4.7.0-beta",
+    "yarn": "1.22.18"
   },
   "dependencies": {
     "@babel/core": "7.17.9",
@@ -100,7 +104,6 @@
     "@emotion/server": "11.4.0",
     "@emotion/styled": "11.8.1",
     "@fontsource/inter": "4.5.7",
-    "@fontsource/raleway": "4.5.5",
     "@headlessui/react": "1.5.0",
     "@mdx-js/react": "2.1.1",
     "@octokit/graphql": "4.8.0",
@@ -120,7 +123,7 @@
     "ioredis": "5.0.4",
     "micro": "9.3.4",
     "next": "12.1.6-canary.4",
-    "next-auth": "4.3.2",
+    "next-auth": "4.3.3",
     "next-connect": "0.12.2",
     "next-i18next": "11.0.0",
     "next-secure-headers": "2.2.0",
@@ -137,6 +140,7 @@
     "superjson": "1.8.1",
     "three": "0.139.2",
     "three-stdlib": "2.9.1",
-    "type-fest": "2.12.2"
+    "type-fest": "2.12.2",
+    "typewriter-effect": "2.18.2"
   }
 }

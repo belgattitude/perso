@@ -47,11 +47,10 @@ const tmModules = [
   ...(isProd
     ? [
         // ie: '@react-google-maps/api'...
-        'next-seo',
       ]
     : []),
   // ESM only packages are not yet supported by NextJs if you're not
-  // using experimental experimental esmExternals
+  // using experimental esmExternals
   // @link {https://nextjs.org/blog/next-11-1#es-modules-support|Blog 11.1.0}
   // @link {https://github.com/vercel/next.js/discussions/27876|Discussion}
   // @link https://github.com/vercel/next.js/issues/23725
@@ -103,7 +102,7 @@ const nextConfig = {
 
   // @link https://nextjs.org/docs/advanced-features/compiler#minification
   // Still buggy as of nextjs 12.1.5
-  swcMinify: true,
+  swcMinify: false,
 
   experimental: {
     /*

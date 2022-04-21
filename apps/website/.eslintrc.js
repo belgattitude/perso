@@ -34,7 +34,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/config/**/*.ts'],
+      files: ['src/config/**/*.ts', '*.config.ts'],
       rules: {
         'sonarjs/no-duplicate-string': 'off',
       },
