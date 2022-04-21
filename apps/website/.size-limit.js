@@ -20,7 +20,8 @@ const limitCfg = {
     // includes react-three
     '/': '280kb',
     // includes framer-motion
-    '/resume': '170kb',
+    '/about/resume': '150kb',
+    '/about/opensource': '150kb',
   },
 };
 const getPageLimits = () => {

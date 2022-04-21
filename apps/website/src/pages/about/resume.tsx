@@ -31,6 +31,6 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
       // i18nNamespaces.slice() is needed here to get rid off readonly
       ...(await serverSideTranslations(locale, i18nNamespaces.slice())),
     },
-    revalidate: 60,
+    // revalidate: 60,
   };
 };
