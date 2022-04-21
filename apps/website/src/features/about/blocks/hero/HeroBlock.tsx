@@ -197,7 +197,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
                   <Typewriter
                     options={{
                       strings: [
-                        'Sébastien.',
+                        'Sébastien Vanvelthem.',
                         'A Software Developer.',
                         // 'A Backend Engineer.',
                       ],
