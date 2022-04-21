@@ -2320,6 +2320,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@fontsource/rubik@npm:4.5.6":
+  version: 4.5.6
+  resolution: "@fontsource/rubik@npm:4.5.6"
+  checksum: c648bdb2e5ea1fa8ed9c543532a7d361a7c9b56c37d282fd9562f05b239775046bc1382c35f45701847e4b8c14928bbc27e57cdd247f2167dcadb850aece90c6
+  languageName: node
+  linkType: hard
+
 "@gar/promisify@npm:^1.0.1":
   version: 1.1.2
   resolution: "@gar/promisify@npm:1.1.2"
@@ -4611,6 +4618,13 @@ __metadata:
   bin:
     acorn: bin/acorn
   checksum: 26f306a42307f88da845d11e53b2c61164e9e59ea2bac52e25074f2edb4b49cbc7d0d10960095b4a571a5de8d8053f168b15aff9c0f7ba0e1f0bfcc4693ec380
+  languageName: node
+  linkType: hard
+
+"add@npm:2.0.6":
+  version: 2.0.6
+  resolution: "add@npm:2.0.6"
+  checksum: a899e4bd5ad974fac367c83be3ba3adebb143af21eb9ce792f10e12db0a2f7a81e90695524307a3833089eadc187c614d8d0df51f50d8398fdc4150677f3a826
   languageName: node
   linkType: hard
 
@@ -12458,7 +12472,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"prop-types@npm:^15.6.0, prop-types@npm:^15.8.1":
+"prop-types@npm:^15.6.0, prop-types@npm:^15.6.2, prop-types@npm:^15.8.1":
   version: 15.8.1
   resolution: "prop-types@npm:15.8.1"
   dependencies:
@@ -12546,7 +12560,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"raf@npm:^3.4.1":
+"raf@npm:^3.4.0, raf@npm:^3.4.1":
   version: 3.4.1
   resolution: "raf@npm:3.4.1"
   dependencies:
@@ -14836,6 +14850,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"typewriter-effect@npm:2.18.2":
+  version: 2.18.2
+  resolution: "typewriter-effect@npm:2.18.2"
+  dependencies:
+    prop-types: "npm:^15.6.2"
+    raf: "npm:^3.4.0"
+  peerDependencies:
+    react: 17.x
+    react-dom: 17.x
+  checksum: 22e5662de96a80f5a38b4ca7c2d985add913028e163a1543db396429a10d4ca0ad684cfb5ca07170c34582ccfee32234aa6ec9c84da51c1f5588bdeaacac107a
+  languageName: node
+  linkType: hard
+
 "unbox-primitive@npm:^1.0.1":
   version: 1.0.1
   resolution: "unbox-primitive@npm:1.0.1"
@@ -15198,6 +15225,7 @@ __metadata:
     "@emotion/styled": "npm:11.8.1"
     "@fontsource/inter": "npm:4.5.7"
     "@fontsource/raleway": "npm:4.5.5"
+    "@fontsource/rubik": "npm:4.5.6"
     "@headlessui/react": "npm:1.5.0"
     "@mdx-js/react": "npm:2.1.1"
     "@next/bundle-analyzer": "npm:12.1.6-canary.4"
@@ -15229,6 +15257,7 @@ __metadata:
     "@types/react": "npm:18.0.5"
     "@types/react-dom": "npm:18.0.1"
     "@types/three": "npm:0.139.0"
+    add: "npm:2.0.6"
     autoprefixer: "npm:10.4.4"
     axios: "npm:0.26.1"
     cors: "npm:2.8.5"
@@ -15278,6 +15307,8 @@ __metadata:
     ts-node: "npm:10.7.0"
     type-fest: "npm:2.12.2"
     typescript: "npm:4.7.0-beta"
+    typewriter-effect: "npm:2.18.2"
+    yarn: "npm:1.22.18"
   languageName: unknown
   linkType: soft
 
@@ -15628,6 +15659,16 @@ __metadata:
     y18n: "npm:^5.0.5"
     yargs-parser: "npm:^20.2.2"
   checksum: 56757e6149bd1af4cea9c9cfebe09b652f730223072cd0b5297aaf3b70f0c25bf76a60a1fddf51c6bca080d1a33ed7b20924e09fcec6deff061bf88b4abecf3a
+  languageName: node
+  linkType: hard
+
+"yarn@npm:1.22.18":
+  version: 1.22.18
+  resolution: "yarn@npm:1.22.18"
+  bin:
+    yarn: bin/yarn.js
+    yarnpkg: bin/yarn.js
+  checksum: 661530c88db632b2f6a0a6ea21c23289ef1f3e06ad4f12ff8b9eecea9085fe38341bb613278101ffbc5aa65c8145319da7310538c1a93958667cf9ef4e3fcd61
   languageName: node
   linkType: hard
 

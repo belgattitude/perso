@@ -1,4 +1,5 @@
 import type { FC } from 'react';
+import { BlockTitle } from '@/features/about/blocks';
 import { FeaturesCtn } from '@/features/about/blocks/features/styles';
 
 type FeaturesProps = {
@@ -9,8 +10,10 @@ export const FeaturesBlock: FC<FeaturesProps> = (props) => {
   const { className } = props;
   return (
     <FeaturesCtn className={className}>
-      <h1>What do I do ?</h1>
-      <h2>and what you might be interested in</h2>
+      <BlockTitle
+        title={'What do I do ?'}
+        subtitle={'and what you might be interested in'}
+      />
       <div className={'card-container'}>
         <div>
           <h3>Programming</h3>

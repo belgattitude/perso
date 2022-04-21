@@ -16,8 +16,8 @@ export const defaultSection: typeof skillSections[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
   none: [],
-  adrenaline: ['Overview'],
-  topdown: ['Frontend', 'PHP', 'DB', 'Overview'],
+  adrenaline: [],
+  topdown: ['Overview', 'Frontend', 'PHP', 'DB', 'Overview'],
   soft: ['Past stacks'],
 };
 
@@ -219,6 +219,15 @@ export const skillsRecords: SkillRecord[] = [
     sections: ['DB'],
     type: 'database',
   },
+  {
+    name: 'Algolia',
+    logo: '/images/logos/technos/algolia.png',
+    homepage: 'https://www.algolia.com/',
+    rating: 3,
+    sections: ['DB'],
+    type: 'database',
+  },
+
   {
     name: 'Git',
     logo: '/icons/devicons/git/git-plain.svg',

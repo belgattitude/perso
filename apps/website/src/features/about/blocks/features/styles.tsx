@@ -8,10 +8,8 @@ export const FeaturesCtn = styled.div`
     justify-content: flex-start;
     align-items: stretch;
     flex-wrap: wrap;
-
     div {
       flex: 1 1 auto;
-
       width: 50%;
       @media all and (${breakpoints.large}) {
         width: 33.33%;
@@ -23,7 +21,7 @@ export const FeaturesCtn = styled.div`
         padding: 0;
       }
       > p {
-        margin: 5px;
+        margin: 10px;
       }
     }
   }

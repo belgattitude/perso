@@ -1,4 +1,4 @@
-export { Block } from './Block';
+export { Block, BlockTitle } from './Block';
 export * from './about/AboutMeBlock';
 export * from './features/FeaturesBlock';
 export * from './opensource/OpenSourceBlock';
