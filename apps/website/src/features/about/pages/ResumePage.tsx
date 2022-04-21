@@ -11,8 +11,10 @@ import {
   OpenSourceBlock,
   FeaturesBlock,
   Block,
+  BlockTitle,
 } from '@/features/about/blocks';
 import type { TechnosBlockProps } from '@/features/about/blocks/technos/TechnosBlock';
+import LinkedInIcon from '@/public/icons/devicons/linkedin/linkedin-original.svg';
 import { defaultTheme } from '@/themes';
 import { Footer } from '../layouts/resume/Footer';
 
@@ -67,6 +69,41 @@ export const ResumePage: FC = () => {
           </Block>
           <Block>
             <Technos />
+          </Block>
+          <Block>
+            <div>
+              <BlockTitle title={'Experience'} subtitle={'Current'} />
+              <p>
+                I'm currently Tech Lead at{' '}
+                <a
+                  href={'https://www.sortlist.com'}
+                  target={'_blank'}
+                  rel={'noreferrer'}
+                >
+                  Sortlist
+                </a>
+                , a Belgium scale-up that connects projects with a network of
+                international agencies. Check my{' '}
+              </p>
+              <h3
+                css={css`
+                  margin-top: 20px;
+                `}
+              >
+                <a
+                  href={siteConfig.linkedIn}
+                  target={'_blank'}
+                  rel="noreferrer"
+                >
+                  <LinkedInIcon
+                    css={css`
+                      display: inline-block;
+                      width: 64px;
+                    `}
+                  />
+                </a>
+              </h3>
+            </div>
           </Block>
           <Block>
             <OpenSourceBlock />

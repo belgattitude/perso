@@ -73,8 +73,6 @@ export const TechnosBlock: FC<TechnosBlockProps> = (props) => {
 
       <h3 className={'highlight'}>Project Management</h3>
       <p>Project planning, task estimation... Scrum context or others.</p>
-
-      <p>I usually share my time between frontend, backend and mentoring. </p>
     </S.TechnosCtn>
   );
 };
