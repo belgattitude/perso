@@ -1,6 +1,6 @@
 import { useEffect, useRef, useState } from 'react';
 import type { HTMLAttributes, FC } from 'react';
-import { useRaf } from '../../../../hooks/useRaf';
+// import { useRaf } from '../../../../hooks/useRaf';
 
 type TypedTextProps = {
   /**
