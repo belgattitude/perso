@@ -34,8 +34,8 @@ export const HeroBlock: FC<HeroProps> = (props) => {
 
   const springConfig = {
     damping: 10,
-    stiffness: 40,
-    mass: 1,
+    stiffness: 20,
+    mass: 1.2,
   };
 
   const minWidth = 600;
@@ -150,7 +150,6 @@ export const HeroBlock: FC<HeroProps> = (props) => {
                 font-size: 1.3em;
                 // border: 1px solid blue;
                 font-weight: 700;
-                color: rgb(236, 239, 244);
                 letter-spacing: 0;
                 line-height: 1.5em;
                 display: flex;
@@ -182,7 +181,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
                     .Typewriter {
                       opacity: 0.3;
                       display: inline-block;
-                      &:first-child {
+                      &:first-of-type {
                         border: 1px solid white;
                         box-shadow: 0 0 4px 0px white inset, 0 0 3px 0px white;
                         padding: 15px 10px;
