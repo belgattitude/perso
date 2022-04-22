@@ -26,7 +26,7 @@ export const Wobble: FC = () => {
     <>
       <mesh ref={meshRef} onClick={() => setWireframe(!wireframe)}>
         <sphereGeometry args={[2, 2]} />
-        <MeshWobbleMaterial color={'red'} speed={0.8} wireframe={wireframe}>
+        <MeshWobbleMaterial color="#4488FF" speed={0.8} wireframe={wireframe}>
           <videoTexture attach="map" args={[video]} />
         </MeshWobbleMaterial>
       </mesh>

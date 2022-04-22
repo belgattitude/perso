@@ -35,7 +35,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
   const springConfig = {
     damping: 10,
     stiffness: 20,
-    mass: 2,
+    mass: 1.2,
   };
 
   const minWidth = 600;
