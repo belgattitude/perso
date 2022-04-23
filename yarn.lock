@@ -1436,7 +1436,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/eslint-config-bases@workspace:packages/eslint-config-bases"
   dependencies:
-    "@graphql-eslint/eslint-plugin": "npm:3.10.2"
+    "@graphql-eslint/eslint-plugin": "npm:3.10.3"
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.1.1"
     "@testing-library/react-hooks": "npm:8.0.0"
@@ -2334,23 +2334,23 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-eslint/eslint-plugin@npm:3.10.2":
-  version: 3.10.2
-  resolution: "@graphql-eslint/eslint-plugin@npm:3.10.2"
+"@graphql-eslint/eslint-plugin@npm:3.10.3":
+  version: 3.10.3
+  resolution: "@graphql-eslint/eslint-plugin@npm:3.10.3"
   dependencies:
-    "@babel/code-frame": "npm:7.16.7"
-    "@graphql-tools/code-file-loader": "npm:^7.2.8"
-    "@graphql-tools/graphql-tag-pluck": "npm:^7.2.0"
-    "@graphql-tools/utils": "npm:^8.6.5"
-    chalk: "npm:4.1.2"
-    debug: "npm:4.3.4"
-    fast-glob: "npm:3.2.11"
+    "@babel/code-frame": "npm:^7.16.7"
+    "@graphql-tools/code-file-loader": "npm:^7.2.14"
+    "@graphql-tools/graphql-tag-pluck": "npm:^7.2.6"
+    "@graphql-tools/utils": "npm:^8.6.9"
+    chalk: "npm:^4.1.2"
+    debug: "npm:^4.3.4"
+    fast-glob: "npm:^3.2.11"
     graphql-config: "npm:^4.3.0"
-    graphql-depth-limit: "npm:1.1.0"
-    lodash.lowercase: "npm:4.3.0"
+    graphql-depth-limit: "npm:^1.1.0"
+    lodash.lowercase: "npm:^4.3.0"
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 4e6e0067648f419a16de2c1c9fdff2049e21a96eb040216a0efefa074bfd33b3c92e3bb7f7057ccc79210dfd183eee88951245c484e94244ac31d914144cb121
+  checksum: 36ff83c11fa706f996b70837e8cd89fee691eef36089c87dd94f59a72c4df639ce45b024b5478d7571920c908130c67fe37b661a5f5e853050e497e1ff2e0c3c
   languageName: node
   linkType: hard
 
@@ -2368,18 +2368,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/code-file-loader@npm:^7.2.8":
-  version: 7.2.11
-  resolution: "@graphql-tools/code-file-loader@npm:7.2.11"
+"@graphql-tools/code-file-loader@npm:^7.2.14":
+  version: 7.2.14
+  resolution: "@graphql-tools/code-file-loader@npm:7.2.14"
   dependencies:
-    "@graphql-tools/graphql-tag-pluck": "npm:7.2.3"
-    "@graphql-tools/utils": "npm:8.6.6"
+    "@graphql-tools/graphql-tag-pluck": "npm:7.2.6"
+    "@graphql-tools/utils": "npm:8.6.9"
     globby: "npm:^11.0.3"
     tslib: "npm:~2.3.0"
     unixify: "npm:^1.0.0"
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 248d62c2da5fc1a2c2f52d606a8fd32c2a46319649fb8471313425272d52a81c31336b0762d89926ea546872d9cc202ba46e65aab52f5f676ad39d58ebdb5879
+  checksum: e72479f3a5f7d515ea1c98f26042558051f2367729079f395f2b2fbc180072a50387be9163b87996114a8bc2eb083e2181969d8678403eacb3c2327be2756048
   languageName: node
   linkType: hard
 
@@ -2415,18 +2415,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/graphql-tag-pluck@npm:7.2.3, @graphql-tools/graphql-tag-pluck@npm:^7.2.0":
-  version: 7.2.3
-  resolution: "@graphql-tools/graphql-tag-pluck@npm:7.2.3"
+"@graphql-tools/graphql-tag-pluck@npm:7.2.6, @graphql-tools/graphql-tag-pluck@npm:^7.2.6":
+  version: 7.2.6
+  resolution: "@graphql-tools/graphql-tag-pluck@npm:7.2.6"
   dependencies:
     "@babel/parser": "npm:^7.16.8"
     "@babel/traverse": "npm:^7.16.8"
     "@babel/types": "npm:^7.16.8"
-    "@graphql-tools/utils": "npm:8.6.6"
+    "@graphql-tools/utils": "npm:8.6.9"
     tslib: "npm:~2.3.0"
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 5c4cb9c50668e0ff4c23653d7e2883bf234ed4ff02aa77150a59a01bacb5f8ae99e5d4b88005b408e74f126313d9d90bff78ec6e8af77dd909bd09a1a439979b
+  checksum: cb27746cb3d83654c3ac731d327d376310b4d12bfcb8e5210b135b74a201b908590038bf4616750513242c229b706bd1211b0c486c13401cd364637dffd9de4a
   languageName: node
   linkType: hard
 
@@ -2525,7 +2525,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-tools/utils@npm:8.6.6, @graphql-tools/utils@npm:^8.6.5":
+"@graphql-tools/utils@npm:8.6.6":
   version: 8.6.6
   resolution: "@graphql-tools/utils@npm:8.6.6"
   dependencies:
@@ -2533,6 +2533,17 @@ __metadata:
   peerDependencies:
     graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
   checksum: a7c9f67590030d0378fe4213a5bb1f5e6fcf40eea4f45fff463ca15fd83ed80a56a1a27c8fa6bad3093546ea06e2a19c8178527dbdada54af84599f0db87f639
+  languageName: node
+  linkType: hard
+
+"@graphql-tools/utils@npm:8.6.9, @graphql-tools/utils@npm:^8.6.5, @graphql-tools/utils@npm:^8.6.9":
+  version: 8.6.9
+  resolution: "@graphql-tools/utils@npm:8.6.9"
+  dependencies:
+    tslib: "npm:~2.3.0"
+  peerDependencies:
+    graphql: ^14.0.0 || ^15.0.0 || ^16.0.0
+  checksum: 49785b60bb30aff7d47246a0e7a9859146a02b2a8f778f0f8900174cbb54103a05645f4511bee5ae07ff9c86e5c2e9fb0566069a513c2685eff79c7c89c43230
   languageName: node
   linkType: hard
 
@@ -2885,111 +2896,111 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/bundle-analyzer@npm:12.1.6-canary.4"
+"@next/bundle-analyzer@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/bundle-analyzer@npm:12.1.6-canary.6"
   dependencies:
     webpack-bundle-analyzer: "npm:4.3.0"
-  checksum: 1265cb77b208d2cec3a0ef60fe5d349f84b0c0a1e6e6bd69be4926a505f99f2bbe3b4437daf0b8676e7e6ecdbba4470afb1783b42cac298cc3e1d299abed6ff3
+  checksum: 257ba5a785e286aaa9b430cdf233b7c2895b335d46ac777256d32e1270b6cb0552b753634d54ad34abd3be39698f3fe7a3d2a12039a00635146a6a87d973fc2c
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/env@npm:12.1.6-canary.4"
-  checksum: 00692e221548532c7133a5330e113487b65c15d4d7dd07ce23aa44a32270f2a8faff99e5db27ad9bf12f24b85ebc2f6ecaa89bbeca6f0a06262694f24f82bbfc
+"@next/env@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/env@npm:12.1.6-canary.6"
+  checksum: 5008d8c424248d6a0292ce555c532e5972e90bc73cfb2b70285b6b9c48a437b4566ee73cf3485ee86c668034bc3e2bbf9bd5d44fd666c637146b9c7a0661873d
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/eslint-plugin-next@npm:12.1.6-canary.4"
+"@next/eslint-plugin-next@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/eslint-plugin-next@npm:12.1.6-canary.6"
   dependencies:
     glob: "npm:7.1.7"
-  checksum: 37fe2949d17ed0d6e4c594ab4ec38a7bd04a4c37973b185558b915e738c45253b459218aa88f8be309cd039dc7b787ffc3e0094b1b0797b7a8b9779557b61840
+  checksum: 45a8b40f0018a916fd47e6102c4d478426cbde7ee00554323cf74ba214bf42b71dbe65cf0ff74ff596a01da737e1dfb367efe8aabd329f67fb7f5f0eb1d449ff
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-android-arm-eabi@npm:12.1.6-canary.4"
+"@next/swc-android-arm-eabi@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-android-arm-eabi@npm:12.1.6-canary.6"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-android-arm64@npm:12.1.6-canary.4"
+"@next/swc-android-arm64@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-android-arm64@npm:12.1.6-canary.6"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-darwin-arm64@npm:12.1.6-canary.4"
+"@next/swc-darwin-arm64@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-darwin-arm64@npm:12.1.6-canary.6"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-darwin-x64@npm:12.1.6-canary.4"
+"@next/swc-darwin-x64@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-darwin-x64@npm:12.1.6-canary.6"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.4"
+"@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.6-canary.6"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.6-canary.4"
+"@next/swc-linux-arm64-gnu@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.6-canary.6"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-linux-arm64-musl@npm:12.1.6-canary.4"
+"@next/swc-linux-arm64-musl@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-linux-arm64-musl@npm:12.1.6-canary.6"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-linux-x64-gnu@npm:12.1.6-canary.4"
+"@next/swc-linux-x64-gnu@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-linux-x64-gnu@npm:12.1.6-canary.6"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-linux-x64-musl@npm:12.1.6-canary.4"
+"@next/swc-linux-x64-musl@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-linux-x64-musl@npm:12.1.6-canary.6"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.6-canary.4"
+"@next/swc-win32-arm64-msvc@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.6-canary.6"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.6-canary.4"
+"@next/swc-win32-ia32-msvc@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.6-canary.6"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "@next/swc-win32-x64-msvc@npm:12.1.6-canary.4"
+"@next/swc-win32-x64-msvc@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "@next/swc-win32-x64-msvc@npm:12.1.6-canary.6"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5418,10 +5429,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"caniuse-lite@npm:^1.0.30001283, caniuse-lite@npm:^1.0.30001317":
-  version: 1.0.30001319
-  resolution: "caniuse-lite@npm:1.0.30001319"
-  checksum: a9ea4e09b439ec5cdf09485f41770480c0d2b46223502a2a522d69a13c635894dd429b21145d3322e746acae21739e58fe2fc83df553c96bf4459288f6a0cf42
+"caniuse-lite@npm:^1.0.30001317, caniuse-lite@npm:^1.0.30001332":
+  version: 1.0.30001332
+  resolution: "caniuse-lite@npm:1.0.30001332"
+  checksum: 15c35ce4664c9c4e4e25662e716ea97b2b4ef73eeb7974d4f2249d963e8c9fbddeac3af8da8cdc565f3a081017e9ec057472d6eb4440f315fd727caaaccb93d2
   languageName: node
   linkType: hard
 
@@ -5446,16 +5457,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"chalk@npm:4.1.2, chalk@npm:^4.0.0, chalk@npm:^4.1.0":
-  version: 4.1.2
-  resolution: "chalk@npm:4.1.2"
-  dependencies:
-    ansi-styles: "npm:^4.1.0"
-    supports-color: "npm:^7.1.0"
-  checksum: cb96ab47eb1b55525e72caac9eed1513bff28e686df7eee6b04379c80922df21c8283d9938af16a645826c94c9e19fb52ad63cbead6b5073d08ae5f8fa2661a2
-  languageName: node
-  linkType: hard
-
 "chalk@npm:^2.0.0, chalk@npm:^2.1.0, chalk@npm:^2.4.1, chalk@npm:^2.4.2":
   version: 2.4.2
   resolution: "chalk@npm:2.4.2"
@@ -5464,6 +5465,16 @@ __metadata:
     escape-string-regexp: "npm:^1.0.5"
     supports-color: "npm:^5.3.0"
   checksum: befd2fe888067cfc8ceac2e7a6a62ee763b26112479dce4ee396981288fa21d5cdf3cc1b45692c94c7c6dc3638c4dc3ee6ec1c794efdf42b02e02f93039285ec
+  languageName: node
+  linkType: hard
+
+"chalk@npm:^4.0.0, chalk@npm:^4.1.0, chalk@npm:^4.1.2":
+  version: 4.1.2
+  resolution: "chalk@npm:4.1.2"
+  dependencies:
+    ansi-styles: "npm:^4.1.0"
+    supports-color: "npm:^7.1.0"
+  checksum: cb96ab47eb1b55525e72caac9eed1513bff28e686df7eee6b04379c80922df21c8283d9938af16a645826c94c9e19fb52ad63cbead6b5073d08ae5f8fa2661a2
   languageName: node
   linkType: hard
 
@@ -6280,7 +6291,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"debug@npm:4, debug@npm:4.3.4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4":
+"debug@npm:4, debug@npm:^4.0.1, debug@npm:^4.1.0, debug@npm:^4.1.1, debug@npm:^4.3.1, debug@npm:^4.3.2, debug@npm:^4.3.3, debug@npm:^4.3.4":
   version: 4.3.4
   resolution: "debug@npm:4.3.4"
   dependencies:
@@ -7179,11 +7190,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "eslint-config-next@npm:12.1.6-canary.4"
+"eslint-config-next@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "eslint-config-next@npm:12.1.6-canary.6"
   dependencies:
-    "@next/eslint-plugin-next": "npm:12.1.6-canary.4"
+    "@next/eslint-plugin-next": "npm:12.1.6-canary.6"
     "@rushstack/eslint-patch": "npm:1.0.8"
     "@typescript-eslint/parser": "npm:5.19.0"
     eslint-import-resolver-node: "npm:0.3.4"
@@ -7199,7 +7210,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: be4ce66c1cb57b179abc7d52aedef2c7152ac38ad9fcabb441e1b85dbafb72ae983a4cba6a490c9c24502c5c0baa9eca1c8e18dfa225c5fd930b53ef3f341fa0
+  checksum: bb546c4ad44ba30ece0b60b3214979d31531c553380aa3cb176ffa33eab411cbcfdbc15c0f743ea6752ca68cfe6ca8a3b2f5921ae267c64bd84285d8d64e0ffb
   languageName: node
   linkType: hard
 
@@ -7795,7 +7806,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"fast-glob@npm:3.2.11, fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
+"fast-glob@npm:^3.2.11, fast-glob@npm:^3.2.9":
   version: 3.2.11
   resolution: "fast-glob@npm:3.2.11"
   dependencies:
@@ -8346,7 +8357,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql-depth-limit@npm:1.1.0":
+"graphql-depth-limit@npm:^1.1.0":
   version: 1.1.0
   resolution: "graphql-depth-limit@npm:1.1.0"
   dependencies:
@@ -10246,7 +10257,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"lodash.lowercase@npm:4.3.0":
+"lodash.lowercase@npm:^4.3.0":
   version: 4.3.0
   resolution: "lodash.lowercase@npm:4.3.0"
   checksum: 6400c27ab8852eb0a00d790ffb4363b819a08ac65c30dfcf66f61cbf279483f0e577c5de9ec49026ce543ba90124d20ea9e30b2806ac6544c46572179dd215d2
@@ -10972,24 +10983,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.1.6-canary.4":
-  version: 12.1.6-canary.4
-  resolution: "next@npm:12.1.6-canary.4"
+"next@npm:12.1.6-canary.6":
+  version: 12.1.6-canary.6
+  resolution: "next@npm:12.1.6-canary.6"
   dependencies:
-    "@next/env": "npm:12.1.6-canary.4"
-    "@next/swc-android-arm-eabi": "npm:12.1.6-canary.4"
-    "@next/swc-android-arm64": "npm:12.1.6-canary.4"
-    "@next/swc-darwin-arm64": "npm:12.1.6-canary.4"
-    "@next/swc-darwin-x64": "npm:12.1.6-canary.4"
-    "@next/swc-linux-arm-gnueabihf": "npm:12.1.6-canary.4"
-    "@next/swc-linux-arm64-gnu": "npm:12.1.6-canary.4"
-    "@next/swc-linux-arm64-musl": "npm:12.1.6-canary.4"
-    "@next/swc-linux-x64-gnu": "npm:12.1.6-canary.4"
-    "@next/swc-linux-x64-musl": "npm:12.1.6-canary.4"
-    "@next/swc-win32-arm64-msvc": "npm:12.1.6-canary.4"
-    "@next/swc-win32-ia32-msvc": "npm:12.1.6-canary.4"
-    "@next/swc-win32-x64-msvc": "npm:12.1.6-canary.4"
-    caniuse-lite: "npm:^1.0.30001283"
+    "@next/env": "npm:12.1.6-canary.6"
+    "@next/swc-android-arm-eabi": "npm:12.1.6-canary.6"
+    "@next/swc-android-arm64": "npm:12.1.6-canary.6"
+    "@next/swc-darwin-arm64": "npm:12.1.6-canary.6"
+    "@next/swc-darwin-x64": "npm:12.1.6-canary.6"
+    "@next/swc-linux-arm-gnueabihf": "npm:12.1.6-canary.6"
+    "@next/swc-linux-arm64-gnu": "npm:12.1.6-canary.6"
+    "@next/swc-linux-arm64-musl": "npm:12.1.6-canary.6"
+    "@next/swc-linux-x64-gnu": "npm:12.1.6-canary.6"
+    "@next/swc-linux-x64-musl": "npm:12.1.6-canary.6"
+    "@next/swc-win32-arm64-msvc": "npm:12.1.6-canary.6"
+    "@next/swc-win32-ia32-msvc": "npm:12.1.6-canary.6"
+    "@next/swc-win32-x64-msvc": "npm:12.1.6-canary.6"
+    caniuse-lite: "npm:^1.0.30001332"
     postcss: "npm:8.4.5"
     styled-jsx: "npm:5.0.1"
   peerDependencies:
@@ -11032,7 +11043,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 1b1e3cb3ceedd3136e14d330f8156373d7fa82de3e6f4ba4f1400219f3f09b5f192012e81c0bd68d6a53765364e75658e11caade38de431a8570402ebdb8915e
+  checksum: f8785f3dcd20096403400ecaae68ba0c6bd419b43099ad17923b233c90098e34a6cf1560dfeae130a5eaaefc47be6dce98366002078e307076bc12ed173427b5
   languageName: node
   linkType: hard
 
@@ -15228,8 +15239,8 @@ __metadata:
     "@fontsource/rubik": "npm:4.5.6"
     "@headlessui/react": "npm:1.5.0"
     "@mdx-js/react": "npm:2.1.1"
-    "@next/bundle-analyzer": "npm:12.1.6-canary.4"
-    "@next/env": "npm:12.1.6-canary.4"
+    "@next/bundle-analyzer": "npm:12.1.6-canary.6"
+    "@next/env": "npm:12.1.6-canary.6"
     "@octokit/graphql": "npm:4.8.0"
     "@octokit/graphql-schema": "npm:10.73.0"
     "@playwright/test": "npm:1.21.1"
@@ -15266,7 +15277,7 @@ __metadata:
     dotenv-flow-cli: "npm:1.0.0"
     es-check: "npm:6.2.1"
     eslint: "npm:8.14.0"
-    eslint-config-next: "npm:12.1.6-canary.4"
+    eslint-config-next: "npm:12.1.6-canary.6"
     framer-motion: "npm:6.3.1"
     graphql: "npm:16.3.0"
     i18next: "npm:21.6.16"
@@ -15274,7 +15285,7 @@ __metadata:
     jest: "npm:27.5.1"
     jest-css-modules-transform: "npm:4.3.0"
     micro: "npm:9.3.4"
-    next: "npm:12.1.6-canary.4"
+    next: "npm:12.1.6-canary.6"
     next-auth: "npm:4.3.3"
     next-connect: "npm:0.12.2"
     next-i18next: "npm:11.0.0"

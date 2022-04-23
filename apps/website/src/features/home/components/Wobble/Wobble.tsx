@@ -3,6 +3,7 @@ import { useFrame } from '@react-three/fiber';
 import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import type { Mesh } from 'three';
+import { Vector2 } from 'three';
 
 export const Wobble: FC = () => {
   const meshRef = useRef<Mesh>();
@@ -14,7 +15,7 @@ export const Wobble: FC = () => {
   });
   const [video] = useState(() => {
     const vid = document.createElement('video');
-    vid.src = '/videos/red.mp4';
+    vid.src = '/videos/influx-red.mp4';
     vid.crossOrigin = 'Anonymous';
     vid.loop = true;
     vid.playbackRate = 1;
@@ -27,7 +28,11 @@ export const Wobble: FC = () => {
       <mesh ref={meshRef} onClick={() => setWireframe(!wireframe)}>
         <sphereGeometry args={[2, 2]} />
         <MeshWobbleMaterial color="#4488FF" speed={0.8} wireframe={wireframe}>
-          <videoTexture attach="map" args={[video]} />
+          <videoTexture
+            attach="map"
+            args={[video]}
+            offset={new Vector2(0.4, 0.1)}
+          />
         </MeshWobbleMaterial>
       </mesh>
     </>
