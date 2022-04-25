@@ -1,4 +1,3 @@
-import type { EmotionCache } from '@emotion/react';
 import type { NextPage } from 'next';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps as NextAppProps } from 'next/app';
@@ -15,7 +14,6 @@ import '../styles/global.css';
 export type AppProps = NextAppProps & {
   /** Will be defined only is there was an error */
   err?: Error;
-  emotionCache?: EmotionCache;
 } & {
   Component: NextPageWithLayout;
 };
@@ -28,13 +26,13 @@ type NextPageWithLayout = NextPage & {
  * @link https://nextjs.org/docs/advanced-features/custom-app
  */
 const MyApp = (appProps: AppProps) => {
-  const { Component, pageProps, emotionCache, err } = appProps;
+  const { Component, pageProps, err } = appProps;
 
   const getLayout =
     Component.getLayout ?? ((page) => <MainLayout>{page}</MainLayout>);
 
   return (
-    <AppProviders emotionCache={emotionCache}>
+    <AppProviders>
       <MainLayout>
         {/* Workaround for https://github.com/vercel/next.js/issues/8592 */}
         {getLayout(<Component {...pageProps} err={err} />)}
