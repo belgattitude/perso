@@ -9,7 +9,13 @@ const {
 
 module.exports = {
   root: true,
-  ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
+  ignorePatterns: [
+    ...getDefaultIgnorePatterns(),
+    '.mesh',
+    '**/generated',
+    '.next',
+    '.out',
+  ],
   extends: [
     '@belgattitude/eslint-config-bases/typescript',
     '@belgattitude/eslint-config-bases/sonar',
