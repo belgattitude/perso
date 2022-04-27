@@ -8,44 +8,6 @@ datasource db {
   url      = env("PRISMA_DATABASE_URL")
 }
 
-model Poem {
-  id        Int            @id @default(autoincrement())
-  slug      String         @unique
-  title     String         @db.VarChar(255)
-  content   String         @db.Text
-  locale    String?        @db.VarChar(5)
-  keywords  PoemKeywords[]
-  author    String         @db.VarChar(120)
-  link      String?        @db.VarChar(255)
-  image     String?        @db.VarChar(255)
-  createdAt DateTime       @default(now()) @map(name: "created_at")
-  updatedAt DateTime       @updatedAt @map(name: "updated_at")
-
-  @@map(name: "poem")
-}
-
-model PoemKeywords {
-  id        Int      @id @default(autoincrement())
-  poem      Poem     @relation(fields: [poemId], references: [id], onDelete: Cascade)
-  poemId    Int      @map(name: "poem_id")
-  keyword   Keyword  @relation(fields: [keywordId], references: [id], onDelete: Cascade)
-  keywordId Int      @map(name: "keyword_id")
-  createdAt DateTime @default(now()) @map(name: "created_at")
-  updatedAt DateTime @updatedAt @map(name: "updated_at")
-
-  @@unique([poemId, keywordId])
-  @@map(name: "poem_keywords")
-}
-
-model Keyword {
-  id     Int            @id @default(autoincrement())
-  name   String         @unique @db.VarChar(120)
-  locale String?        @db.VarChar(5)
-  poems  PoemKeywords[]
-
-  @@map(name: "keyword")
-}
-
 model Post {
   id          Int       @id @default(autoincrement())
   slug        String    @unique
@@ -54,24 +16,25 @@ model Post {
   link        String?   @db.VarChar(300)
   image       String?   @db.VarChar(300)
   author      User?     @relation(fields: [authorId], references: [id])
-  authorId    Int?      @map(name: "author_id")
-  publishedAt DateTime? @map(name: "published_at")
-  createdAt   DateTime  @default(now()) @map(name: "created_at")
-  updatedAt   DateTime  @updatedAt @map(name: "updated_at")
+  authorId    Int?
+  publishedAt DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
 
   @@map(name: "post")
 }
 
 model User {
   id            Int       @id @default(autoincrement())
-  firstName     String?   @map(name: "first_name") @db.VarChar(80)
-  lastName      String?   @map(name: "last_name") @db.VarChar(80)
+  firstName     String?   @db.VarChar(80)
+  lastName      String?   @db.VarChar(80)
   nickname      String    @unique @db.VarChar(64)
   email         String    @unique @db.VarChar(150)
-  emailVerified DateTime? @map("email_verified")
-  avatarUrl     String?   @map("avatar_url") @db.VarChar(255)
-  createdAt     DateTime  @default(now()) @map(name: "created_at")
-  updatedAt     DateTime  @updatedAt @map(name: "updated_at")
+  emailVerified DateTime?
+  password      String?   @db.VarChar(255)
+  avatarUrl     String?   @db.VarChar(255)
+  createdAt     DateTime  @default(now())
+  updatedAt     DateTime  @updatedAt
   accounts      Account[]
   sessions      Session[]
 
@@ -81,10 +44,10 @@ model User {
 
 model Account {
   id                String  @id @default(cuid())
-  userId            Int     @map("user_id")
+  userId            Int
   type              String
   provider          String
-  providerAccountId String  @map("provider_account_id")
+  providerAccountId String
   refresh_token     String? @db.Text
   access_token      String? @db.Text
   expires_at        Int?
@@ -101,8 +64,8 @@ model Account {
 
 model Session {
   id           String   @id @default(cuid())
-  sessionToken String   @unique @map("session_token")
-  userId       Int      @map("user_id")
+  sessionToken String   @unique
+  userId       Int
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
 

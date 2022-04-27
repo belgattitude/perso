@@ -1,6 +1,5 @@
 import type { Prisma } from '@prisma/client';
 import { PrismaClient } from '@prisma/client';
-import { poemsSeed } from './seeds/poem/poems.seed';
 
 const prisma = new PrismaClient();
 
@@ -10,7 +9,6 @@ const userData: Prisma.UserCreateInput[] = [
     lastName: 'Vanvelthem',
     nickname: 'belgattitude',
     email: 'belgattitude@gmail.com',
-    // eslint-disable-next-line @typescript-eslint/naming-convention
     Post: {
       create: [
         {
@@ -37,20 +35,6 @@ async function main() {
       create: u,
     });
     console.log(`Created or updated user with id: ${user.id}`);
-  }
-  // poems
-  for (const poem of poemsSeed) {
-    const { keywords, ...poemWithoutKeywords } = poem;
-    await prisma.poem.upsert({
-      where: {
-        slug: poem.slug,
-      },
-      update: {
-        ...poemWithoutKeywords,
-      },
-      create: poem,
-    });
-    console.log(`Created or updated poem with slug: ${poem.slug}`);
   }
   console.log(`Seeding finished.`);
 }
