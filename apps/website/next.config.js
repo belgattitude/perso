@@ -60,15 +60,22 @@ const tmModules = [
   ],
 ];
 
-// Example of setting up secure headers
 // @link https://github.com/jagaapple/next-secure-headers
 const { createSecureHeaders } = require('next-secure-headers');
 const secureHeaders = createSecureHeaders({
   contentSecurityPolicy: {
-    directives: {
-      // defaultSrc: "'self'",
-      // styleSrc: ["'self'"],
-    },
+    directives: isProd
+      ? {
+          defaultSrc: "'self'",
+          styleSrc: ["'self'", "'unsafe-inline'"],
+          connectSrc: [
+            "'self'",
+            'https://vitals.vercel-insights.com',
+            'https://*.sentry.io',
+          ],
+          imgSrc: ["'self'", 'https:', 'http:', 'data:'],
+        }
+      : {},
   },
   ...(isProd
     ? {
@@ -101,7 +108,7 @@ const nextConfig = {
   },
 
   // @link https://nextjs.org/docs/advanced-features/compiler#minification
-  // Still buggy as of nextjs 12.1.5
+  // Sometimes buggy so enable/disable when debugging.
   swcMinify: true,
 
   experimental: {
