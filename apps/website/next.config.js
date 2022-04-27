@@ -11,6 +11,7 @@ const trueEnv = ['true', '1', 'yes'];
 
 const isProd = process.env.NODE_ENV === 'production';
 const isCI = trueEnv.includes(process.env?.CI ?? 'false');
+const enableCSP = true;
 
 const NEXTJS_IGNORE_ESLINT = trueEnv.includes(
   process.env?.NEXTJS_IGNORE_ESLINT ?? 'false'
@@ -64,10 +65,20 @@ const tmModules = [
 const { createSecureHeaders } = require('next-secure-headers');
 const secureHeaders = createSecureHeaders({
   contentSecurityPolicy: {
-    directives: isProd
+    directives: enableCSP
       ? {
           defaultSrc: "'self'",
-          styleSrc: ["'self'", "'unsafe-inline'"],
+          styleSrc: [
+            "'self'",
+            "'unsafe-inline'",
+            'https://unpkg.com/@graphql-yoga/graphiql/dist/style.css',
+          ],
+          scriptSrc: [
+            "'self'",
+            "'unsafe-eval'",
+            "'unsafe-inline'",
+            'https://unpkg.com/@graphql-yoga/graphiql',
+          ],
           connectSrc: [
             "'self'",
             'https://vitals.vercel-insights.com',
@@ -77,7 +88,7 @@ const secureHeaders = createSecureHeaders({
         }
       : {},
   },
-  ...(isProd
+  ...(enableCSP && process.env.NODE_ENV === 'production'
     ? {
         forceHTTPSRedirect: [
           true,
