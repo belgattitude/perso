@@ -27,17 +27,13 @@ export default async function apiGithubProjectsRoute(
 
   if (isSuccess) {
     res.status(200).send(
-      JSON.stringify(
-        {
-          success: true,
-          data: data,
-          metadata: {
-            cacheHit: isHit,
-          },
+      JSON.stringify({
+        success: true,
+        data: data,
+        metadata: {
+          cacheHit: isHit,
         },
-        null,
-        2
-      )
+      })
     );
   } else {
     res.status(500).send(error);
