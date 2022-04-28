@@ -1,7 +1,7 @@
+import type { UnPromisify } from '@belgattitude/ts-utils';
 import { graphql } from '@octokit/graphql';
 import type { Repository } from '@octokit/graphql-schema';
 import type { SearchQuery } from '@/backend/lib/query';
-import type { UnPromisify } from '@/lib/type-utils/type-utils';
 
 export type ListGithubRepos = UnPromisify<
   ReturnType<ListGithubReposQuery['execute']>

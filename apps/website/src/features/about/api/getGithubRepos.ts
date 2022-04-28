@@ -1,8 +1,8 @@
+import type { UnPromisify } from '@belgattitude/ts-utils';
 import axios from 'axios';
 import type { ListGithubRepos } from '@/backend/features/github/ListGithubRepos';
 import { filteredRepos } from '@/config';
 import type { JsonApiResponse } from '@/lib/api/json-api';
-import type { UnPromisify } from '@/lib/type-utils/type-utils';
 
 export type GetGithubRepos = UnPromisify<ReturnType<typeof getGithubRepos>>;
 

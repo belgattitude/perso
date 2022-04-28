@@ -24,7 +24,8 @@
       "@/public/*": ["../public/*"],
       "@/themes/*": ["./themes/*"],
       "@/themes": ["./themes/index"],
-      "@belgattitude/db-main": ["../../../packages/db-main/src/index"]
+      "@belgattitude/db-main": ["../../../packages/db-main/src/index"],
+      "@belgattitude/ts-utils": ["../../../packages/ts-utils/src/index"]
     }
   },
   "exclude": ["**/node_modules", "**/.*/", ".next"],
