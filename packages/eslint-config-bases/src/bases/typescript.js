@@ -140,7 +140,7 @@ module.exports = {
         selector: ['typeProperty'],
         format: ['camelCase'],
         // For graphql __typename
-        leadingUnderscore: 'allowDouble',
+        leadingUnderscore: 'allow',
       },
       {
         selector: ['typeParameter'],
