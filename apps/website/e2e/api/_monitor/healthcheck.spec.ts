@@ -1,5 +1,5 @@
+import { isIsoDateString } from '@belgattitude/ts-utils';
 import { test, expect } from '@playwright/test';
-import { isIsoDateString } from '@/lib/type-utils/typeguards';
 import type { HealthCheckApiPayload } from '@/pages/api/_monitor/healthcheck';
 import packageJson from '../../../package.json';
 
