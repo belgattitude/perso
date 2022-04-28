@@ -1,8 +1,7 @@
-import type { DbMainPrismaTypes } from '@belgattitude/db-main';
+import type { DbMainPrismaTypes, PrismaDbMain } from '@belgattitude/db-main';
 import SchemaBuilder from '@pothos/core';
 import ErrorsPlugin from '@pothos/plugin-errors';
 import PrismaPlugin from '@pothos/plugin-prisma';
-import type { Prisma } from '@prisma/client';
 import { prismaDbMain } from '@/backend/config';
 
 const builder = new SchemaBuilder<{
@@ -17,8 +16,8 @@ const builder = new SchemaBuilder<{
   prisma: {
     client: (_ctx) => prismaDbMain,
     // Because the prisma client is loaded dynamically, we need to explicitly pass the builder some information about the prisma schema
-    // eslint-disable-next-line @typescript-eslint/naming-convention
-    dmmf: (prismaDbMain as unknown as { _dmmf: Prisma.DMMF.Document })._dmmf,
+    dmmf: (prismaDbMain as unknown as { _dmmf: PrismaDbMain.DMMF.Document })
+      ._dmmf,
   },
   errorOptions: {
     defaultTypes: [],
