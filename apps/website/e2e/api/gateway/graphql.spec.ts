@@ -2,7 +2,7 @@ import { isNonEmptyString, isParsableNumeric } from '@belgattitude/ts-utils';
 import { test, expect } from '@playwright/test';
 
 test('should call the mesh for random cats', async ({ request }) => {
-  const resp = await request.post('/api/mesh/graphql', {
+  const resp = await request.post('/api/gateway/graphql', {
     data: {
       query: `{ getRandomFact { fact, length } }`,
     },
