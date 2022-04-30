@@ -1,6 +1,6 @@
+import systemJsonEn from '@belgattitude/common-i18n/locales/en/system.json';
+import systemJsonFR from '@belgattitude/common-i18n/locales/fr/system.json';
 import { test, expect } from '@playwright/test';
-import systemJsonEn from '@/public/locales/en/system.json';
-import systemJsonFR from '@/public/locales/fr/system.json';
 
 const pageSlug = 'this-page-does-not-exist';
 

@@ -1,22 +1,16 @@
 {
-  "name": "nextjs-monorepo-example",
+  "name": "belgattitude-perso",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/belgattitude/nextjs-monorepo-example",
+  "homepage": "https://github.com/belgattitude/perso",
   "repository": {
     "type": "git",
-    "url": "https://github.com/belgattitude/nextjs-monorepo-example"
+    "url": "https://github.com/belgattitude/perso"
   },
   "author": {
     "name": "Vanvelthem Sébastien",
     "url": "https://github.com/belgattitude"
   },
-  "keywords": [
-    "example",
-    "workspace",
-    "nextjs",
-    "next-transpile-modules"
-  ],
   "workspaces": [
     "apps/*",
     "packages/*"
@@ -61,7 +55,7 @@
     "nuke:node_modules": "rimraf '**/node_modules'",
     "deps:check": "yarn dlx npm-check-updates@latest --configFileName ncurc.yml --deep",
     "deps:update": "yarn dlx npm-check-updates@latest --configFileName ncurc.yml -u --deep",
-    "check:install": "yarn dlx @yarnpkg/doctor@4.0.0-rc.2 .",
+    "check:install": "yarn dlx @yarnpkg/doctor@3.1 .",
     "check:renovate:config": "docker run -v renovate.json5:/usr/src/app/renovate.json5 -it renovate/renovate renovate-config-validator",
     "install:playwright": "npx playwright install",
     "postinstall": "is-ci || yarn husky install"
@@ -85,7 +79,7 @@
     "prettier": "2.6.2",
     "rimraf": "3.0.2",
     "shell-quote": "1.7.3",
-    "typescript": "4.7.0-beta"
+    "typescript": "4.6.4"
   },
   "engines": {
     "node": "^14.13.1 || >=16.13.0",

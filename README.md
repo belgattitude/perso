@@ -2,18 +2,18 @@ My personal website and playgrounds.
 
 ## Structure
 
-
 ```
 .
 ├── apps
-│   ├── website 
+│   ├── website
 └── packages
+    ├── common-i18n
     ├── db-main
-    └── eslint-config-bases    
+    ├── graphql-mesh
+    └── eslint-config-bases
 ```
 
 ## Scripts
-
 
 | Name                         | Description                                                                                                                          |
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
@@ -33,5 +33,3 @@ My personal website and playgrounds.
 | `yarn deps:update --dep dev` | Apply possible updates (run `yarn install && yarn dedupe` after)                                                                     |
 | `yarn check:install`         | Verify if there's no dependency missing in packages                                                                                  |
 | `yarn install:playwright`    | Install playwright for e2e                                                                                                           |
-
-

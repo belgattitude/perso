@@ -6,10 +6,10 @@ import type { Mesh } from 'three';
 import { Vector2 } from 'three';
 
 export const Wobble: FC = () => {
-  const meshRef = useRef<Mesh>();
+  const meshRef = useRef<Mesh>(null);
   const [wireframe, setWireframe] = useState(false);
   useFrame(() => {
-    if (meshRef.current !== undefined) {
+    if (meshRef.current) {
       meshRef.current.rotation.x = meshRef.current.rotation.y += 0.0001;
     }
   });

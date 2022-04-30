@@ -1,6 +1,6 @@
+import homeJsonEn from '@belgattitude/common-i18n/locales/en/home.json';
+import homeJsonFr from '@belgattitude/common-i18n/locales/fr/home.json';
 import { test, expect } from '@playwright/test';
-import homeJsonEn from '@/public/locales/en/home.json';
-import homeJsonFr from '@/public/locales/fr/home.json';
 
 test.describe('Home page', () => {
   test('should have the title in english by default', async ({ page }) => {
