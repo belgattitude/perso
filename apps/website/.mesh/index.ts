@@ -323,7 +323,7 @@ export type CatFactsContext = {
 export type MeshContext = CatFactsContext & BaseMeshContext;
 
 
-import { getMesh } from '@graphql-mesh/runtime';
+import { getMesh, ExecuteMeshFn, SubscribeMeshFn } from '@graphql-mesh/runtime';
 import { MeshStore, FsStoreStorageAdapter } from '@graphql-mesh/store';
 import { path as pathModule } from '@graphql-mesh/cross-helpers';
 import { fileURLToPath } from '@graphql-mesh/utils';
@@ -372,7 +372,7 @@ import NewOpenapiHandler from '@graphql-mesh/new-openapi'
 import BareMerger from '@graphql-mesh/merger-bare';
 import { resolveAdditionalResolvers } from '@graphql-mesh/utils';
 import { parseWithCache } from '@graphql-mesh/utils';
-export const rawConfig: YamlConfig.Config = {"sources":[{"name":"CatFacts","handler":{"newOpenapi":{"baseUrl":"https://catfact.ninja","oasFilePath":"https://catfact.ninja/docs/api-docs.json"}}}]} as any
+export const rawConfig: YamlConfig.Config = {"cache":{"inmemoryLRU":{"max":10}},"sources":[{"name":"CatFacts","handler":{"newOpenapi":{"baseUrl":"https://catfact.ninja","oasFilePath":"https://catfact.ninja/docs/api-docs.json"}}}]} as any
 export async function getMeshOptions(): Promise<GetMeshOptions> {
 const pubsub = new PubSub();
 const cache = new (MeshCache as any)({
@@ -440,14 +440,28 @@ const documents = documentsInSDL.map((documentSdl: string, i: number) => ({
 
 export const documentsInSDL = /*#__PURE__*/ [];
 
-export async function getBuiltMesh(): Promise<MeshInstance<MeshContext>> {
-  const meshConfig = await getMeshOptions();
-  return getMesh<MeshContext>(meshConfig);
+let meshInstance$: Promise<MeshInstance<MeshContext>>;
+
+export function getBuiltMesh(): Promise<MeshInstance<MeshContext>> {
+  if (meshInstance$ == null) {
+    meshInstance$ = getMeshOptions().then(meshOptions => getMesh<MeshContext>(meshOptions)).then(mesh => {
+      const id$ = mesh.pubsub.subscribe('destroy', () => {
+        meshInstance$ = undefined;
+        id$.then(id => mesh.pubsub.unsubscribe(id)).catch(err => console.error(err));
+      });
+      return mesh;
+    });
+  }
+  return meshInstance$;
 }
 
-export async function getMeshSDK<TGlobalContext = any, TOperationContext = any>(globalContext?: TGlobalContext) {
-  const { sdkRequesterFactory } = await getBuiltMesh();
-  return getSdk<TOperationContext>(sdkRequesterFactory(globalContext));
+export const execute: ExecuteMeshFn = (...args) => getBuiltMesh().then(({ execute }) => execute(...args));
+
+export const subscribe: SubscribeMeshFn = (...args) => getBuiltMesh().then(({ subscribe }) => subscribe(...args));
+
+export function getMeshSDK<TGlobalContext = any, TOperationContext = any>(globalContext?: TGlobalContext) {
+  const sdkRequester$ = getBuiltMesh().then(({ sdkRequesterFactory }) => sdkRequesterFactory(globalContext));
+  return getSdk<TOperationContext>((...args) => sdkRequester$.then(sdkRequester => sdkRequester(...args)));
 }
 
 export type Requester<C= {}> = <R, V>(doc: DocumentNode, vars?: V, options?: C) => Promise<R>
