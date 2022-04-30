@@ -1,1 +1,1 @@
-# @belgattitude/ts-utils
+# @belgattitude/graphql-mesh
