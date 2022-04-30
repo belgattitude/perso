@@ -4415,12 +4415,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.0.10":
-  version: 8.0.10
-  resolution: "@react-three/fiber@npm:8.0.10"
+"@react-three/fiber@npm:8.0.12":
+  version: 8.0.12
+  resolution: "@react-three/fiber@npm:8.0.12"
   dependencies:
     "@babel/runtime": "npm:^7.17.8"
-    "@types/react-reconciler": "npm:^0.26.4"
+    "@types/react-reconciler": "npm:^0.26.6"
     react-merge-refs: "npm:^1.1.0"
     react-reconciler: "npm:^0.27.0"
     react-use-measure: "npm:^2.1.1"
@@ -4446,42 +4446,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 986282bd2a79b320b5eb1930f90af497c580a31a63ee9ac99ba69f785ba5e5463782160ba6e489f466803518db28674afb068a5933966ef8a708ce87996a109d
-  languageName: node
-  linkType: hard
-
-"@react-three/fiber@patch:@react-three/fiber@npm%3A8.0.10#~/.yarn/patches/@react-three-fiber-npm-8.0.10-8df904dc6a.patch":
-  version: 8.0.10
-  resolution: "@react-three/fiber@patch:@react-three/fiber@npm%3A8.0.10#~/.yarn/patches/@react-three-fiber-npm-8.0.10-8df904dc6a.patch::version=8.0.10&hash=1bc54c"
-  dependencies:
-    "@babel/runtime": "npm:^7.17.8"
-    "@types/react-reconciler": "npm:^0.26.4"
-    react-merge-refs: "npm:^1.1.0"
-    react-reconciler: "npm:^0.27.0"
-    react-use-measure: "npm:^2.1.1"
-    scheduler: "npm:^0.21.0"
-    suspend-react: "npm:^0.0.8"
-    zustand: "npm:^3.7.1"
-  peerDependencies:
-    expo: ">=43.0"
-    expo-asset: ">=8.4"
-    expo-gl: ">=11.0"
-    react: ">=18.0"
-    react-dom: ">=18.0"
-    react-native: ">=0.64"
-    three: ">=0.133"
-  peerDependenciesMeta:
-    expo:
-      optional: true
-    expo-asset:
-      optional: true
-    expo-gl:
-      optional: true
-    react-dom:
-      optional: true
-    react-native:
-      optional: true
-  checksum: 76d28c930472305e6180e3c85ba051c2805a4e9e21be66b13e53ffdb29ca3588497795d01e8cad11a50245818110540d08d330e6ef1dd566ba0cb300397ddf9a
+  checksum: c05430c26f89f0c3693e9c1c4708a63e4870630cfede40947725bfa82a9aca82b2db91db569e3a2baf05ececd7357f8bf85157531a2e55913c7991c6ff913f49
   languageName: node
   linkType: hard
 
@@ -5500,7 +5465,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/react-reconciler@npm:^0.26.4":
+"@types/react-reconciler@npm:^0.26.6":
   version: 0.26.6
   resolution: "@types/react-reconciler@npm:0.26.6"
   dependencies:
@@ -19333,7 +19298,7 @@ __metadata:
     "@pothos/plugin-errors": "npm:3.3.0"
     "@pothos/plugin-prisma": "npm:3.6.1"
     "@react-three/drei": "npm:9.6.0"
-    "@react-three/fiber": "patch:@react-three/fiber@npm%3A8.0.10#~/.yarn/patches/@react-three-fiber-npm-8.0.10-8df904dc6a.patch"
+    "@react-three/fiber": "npm:8.0.12"
     "@sentry/nextjs": "npm:6.19.7"
     "@sentry/react": "npm:6.19.7"
     "@sindresorhus/is": "npm:4.6.0"
