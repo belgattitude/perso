@@ -2,8 +2,7 @@
 
 # About
 
-Custom composable eslint config bases that can be easily shared and fine-tuned by apps and
-packages that lives in the [monorepo](https://github.com/belgattitude/profile).
+Custom opionionated & composable eslint config for [my personal playgrounds](https://github.com/belgattitude/perso).
 
 ## Features
 
