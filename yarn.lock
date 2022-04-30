@@ -1562,6 +1562,31 @@ __metadata:
   languageName: unknown
   linkType: soft
 
+"@belgattitude/graphql-mesh@workspace:^, @belgattitude/graphql-mesh@workspace:packages/graphql-mesh":
+  version: 0.0.0-use.local
+  resolution: "@belgattitude/graphql-mesh@workspace:packages/graphql-mesh"
+  dependencies:
+    "@belgattitude/eslint-config-bases": "workspace:^"
+    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
+    "@graphql-mesh/cli": "npm:0.69.1"
+    "@graphql-mesh/config": "npm:0.36.0"
+    "@graphql-mesh/graphql": "npm:0.25.1"
+    "@graphql-mesh/new-openapi": "npm:0.4.15"
+    "@graphql-mesh/runtime": "npm:0.34.5"
+    "@types/jest": "npm:27.4.1"
+    "@types/node": "npm:17.0.30"
+    cross-env: "npm:7.0.3"
+    eslint: "npm:8.14.0"
+    jest: "npm:27.5.1"
+    microbundle: "npm:0.15.0"
+    npm-run-all: "npm:4.1.5"
+    prettier: "npm:2.6.2"
+    rimraf: "npm:3.0.2"
+    ts-jest: "npm:27.1.4"
+    typescript: "npm:4.7.0-beta"
+  languageName: unknown
+  linkType: soft
+
 "@belgattitude/ts-utils@workspace:^, @belgattitude/ts-utils@workspace:packages/ts-utils":
   version: 0.0.0-use.local
   resolution: "@belgattitude/ts-utils@workspace:packages/ts-utils"
@@ -19282,6 +19307,7 @@ __metadata:
     "@babel/core": "npm:7.17.10"
     "@belgattitude/db-main": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
+    "@belgattitude/graphql-mesh": "workspace:^"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.9.2"
     "@emotion/cache": "npm:11.7.1"
@@ -19295,12 +19321,6 @@ __metadata:
     "@graphql-codegen/typescript": "npm:2.4.8"
     "@graphql-codegen/typescript-operations": "npm:2.3.5"
     "@graphql-codegen/typescript-resolvers": "npm:2.6.1"
-    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
-    "@graphql-mesh/cli": "npm:0.69.1"
-    "@graphql-mesh/config": "npm:0.36.0"
-    "@graphql-mesh/graphql": "npm:0.25.1"
-    "@graphql-mesh/new-openapi": "npm:0.4.15"
-    "@graphql-mesh/runtime": "npm:0.34.5"
     "@graphql-yoga/node": "npm:2.3.0"
     "@headlessui/react": "npm:1.6.0"
     "@mdx-js/react": "npm:2.1.1"

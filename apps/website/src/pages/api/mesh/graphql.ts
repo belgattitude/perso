@@ -1,7 +1,6 @@
+import { getBuiltMesh } from '@belgattitude/graphql-mesh';
 import { createServer } from '@graphql-yoga/node';
 import type { NextApiRequest, NextApiResponse } from 'next';
-
-import { getBuiltMesh } from '../../../../.mesh';
 
 async function buildServer() {
   const mesh = await getBuiltMesh();
