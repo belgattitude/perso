@@ -112,8 +112,8 @@ jobs:
           NEXT_DISABLE_SOURCEMAPS: true
           # Don't send telemetry for ci
           NEXT_TELEMETRY_DISABLED: true
-          # Fully disable sentry registration here (no overhead in build time)
-          NEXTJS_SENTRY_UPLOAD_DRY_RUN: true
+          # Fully disable sentry
+          NEXTJS_DISABLE_SENTRY: true
 
       - name: Check ecmascript checks for build files
         working-directory: apps/website
