@@ -1,6 +1,10 @@
+import { css } from '@emotion/react';
+import { OrbitControls } from '@react-three/drei';
+import { Canvas } from '@react-three/fiber';
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
+import { AnimatedThing } from '@/features/meet/components/AnimatedThing';
 import { Header } from '@/features/meet/components/Header';
 import { ProviderSelectionCard } from '@/features/meet/components/ProviderSelection';
 import type { JitsiEmbedProps } from '../components/Jitsi';
@@ -66,6 +70,30 @@ export const Welcome: FC<Props> = (props) => {
 
       <div className="container mx-auto px-4">
         <ProviderSelectionCard />
+      </div>
+      <div
+        css={css`
+          position: absolute;
+          bottom: 0;
+          right: 0;
+          width: 45vw;
+          height: 50vh;
+        `}
+      >
+        <Canvas>
+          <ambientLight intensity={0.4} />
+          <directionalLight color="yellow" position={[0, 5, 5]} />
+          <AnimatedThing />
+          <OrbitControls
+            maxPolarAngle={90}
+            minPolarAngle={1}
+            enablePan={false}
+            enableRotate={true}
+            enableZoom={true}
+            maxZoom={0.1}
+            minZoom={0.01}
+          />
+        </Canvas>
       </div>
     </div>
   );
