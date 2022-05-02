@@ -24,9 +24,19 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
   context
 ) => {
   const { meetingSlug = '' } = context.params ?? {};
+  const { redirect } = context.query ?? {};
   Asserts.nonEmptyString(meetingSlug, () => {
     throw new BadRequest('Meeting slug is required');
   });
+  if (redirect === 'google-meet') {
+    // We can log the redirection here
+    return {
+      redirect: {
+        destination: `https://meet.google.com/${meetingSlug}`,
+        permanent: false,
+      },
+    };
+  }
   return {
     props: {
       meetingSlug,
