@@ -59,6 +59,7 @@ const tmModules = [
   // @link https://github.com/vercel/next.js/issues/23725
   // @link https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
   ...[
+    // 'jitsi/react-sdk',
     // ie: newer versions of https://github.com/sindresorhus packages
   ],
 ];
@@ -74,13 +75,18 @@ const secureHeaders = createSecureHeaders({
             "'self'",
             "'unsafe-inline'",
             'https://unpkg.com/@graphql-yoga/graphiql/dist/style.css',
+            'https://meet.jitsi.si',
+            'https://8x8.vc',
           ],
           scriptSrc: [
             "'self'",
             "'unsafe-eval'",
             "'unsafe-inline'",
             'https://unpkg.com/@graphql-yoga/graphiql',
+            'https://meet.jit.si/external_api.js',
+            'https://8x8.vc/external_api.js',
           ],
+          frameSrc: ['https://meet.jit.si', 'https://8x8.vc'],
           connectSrc: [
             "'self'",
             'https://vitals.vercel-insights.com',
@@ -122,7 +128,7 @@ const nextConfig = {
 
   // @link https://nextjs.org/docs/advanced-features/compiler#minification
   // Sometimes buggy so enable/disable when debugging.
-  swcMinify: true,
+  swcMinify: false,
 
   experimental: {
     /*
