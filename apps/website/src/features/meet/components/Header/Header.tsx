@@ -1,4 +1,4 @@
-import Image from 'next/image';
+import Link from 'next/link';
 import type { FC } from 'react';
 import { useStore } from '@/features/meet/stores';
 
@@ -10,20 +10,13 @@ export const Header: FC = () => {
     })
   );
   return (
-    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-2.5 rounded dark:bg-gray-800">
+    <nav className="bg-white border-gray-200 px-2 sm:px-4 py-5 rounded bg-white/30">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
-        <a href="https://soluble.io" className="flex items-center">
-          <Image
-            src="/layouts/main/favicon-32x32.png"
-            className="mr-3 h-6 sm:h-9"
-            width={24}
-            height={24}
-            alt="Belgattitude logo"
-          />
-          <span className="self-center ml-3 text-xl font-semibold whitespace-nowrap dark:text-white">
-            Meet experiments
+        <Link href="/" className="flex items-center">
+          <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
+            {/* TITLE */}
           </span>
-        </a>
+        </Link>
         <button
           data-collapse-toggle="mobile-menu"
           type="button"
@@ -60,13 +53,13 @@ export const Header: FC = () => {
         <div className="hidden w-full md:block md:w-auto" id="mobile-menu">
           <ul className="flex flex-col mt-4 md:flex-row md:space-x-8 md:mt-0 md:text-sm md:font-medium">
             <li>
-              <a
-                href="#"
+              <Link
+                href="/"
                 className="block py-2 pr-4 pl-3 text-white bg-blue-700 rounded md:bg-transparent md:text-blue-700 md:p-0 dark:text-white"
                 aria-current="page"
               >
                 Home
-              </a>
+              </Link>
             </li>
             <li>
               <a

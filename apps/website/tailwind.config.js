@@ -3,7 +3,10 @@ const sharedTheme = require('./src/themes/tailwind/tailwind.theme');
 const { tailwindV3Colors } = require('./src/themes/shared/colors');
 
 module.exports = {
-  content: ['./src/**/*.{js,ts,jsx,tsx}'],
+  content: [
+    './src/**/*.{js,ts,jsx,tsx}',
+    '../../node_modules/flowbite-react/**/*.js}',
+  ],
   theme: {
     screens: {
       ...defaultTheme.screens,
@@ -41,5 +44,6 @@ module.exports = {
     require('@tailwindcss/line-clamp'),
     require('@tailwindcss/aspect-ratio'),
     require('@tailwindcss/forms'),
+    require('flowbite/plugin'),
   ],
 };

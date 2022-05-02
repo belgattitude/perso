@@ -1424,7 +1424,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.13.17, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.16.7, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.13.17, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.16.7, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.2":
   version: 7.17.9
   resolution: "@babel/runtime@npm:7.17.9"
   dependencies:
@@ -2515,6 +2515,46 @@ __metadata:
     minimatch: "npm:^3.0.4"
     strip-json-comments: "npm:^3.1.1"
   checksum: d20e31d17b672ce4e2cee647b93d3ad9d8db3328fd959b367da757b11ca8a13e8ed8192b8347d22b3efd9e18dfc14a87fe18404af8bf7569eb58d5fee0ef05cf
+  languageName: node
+  linkType: hard
+
+"@floating-ui/core@npm:^0.6.2":
+  version: 0.6.2
+  resolution: "@floating-ui/core@npm:0.6.2"
+  checksum: fecff48dfdab908c874ff5014b6b7e11a8d39f4c24ba629fd071b7f7885aedec1b59ef8a6931a6d99dc586bd606bc56a0c17c94f2991a8298767cd8284f0bf67
+  languageName: node
+  linkType: hard
+
+"@floating-ui/dom@npm:^0.4.5":
+  version: 0.4.5
+  resolution: "@floating-ui/dom@npm:0.4.5"
+  dependencies:
+    "@floating-ui/core": "npm:^0.6.2"
+  checksum: 0d34892d7a3b70b19ce00e2e4aa5e53088da394ceb603e3aa5f674121da9671602c70e698638660d3c4abae649b32a21bb804e3f354c255b7c47ac7aefd58a26
+  languageName: node
+  linkType: hard
+
+"@floating-ui/react-dom-interactions@npm:^0.4.0":
+  version: 0.4.0
+  resolution: "@floating-ui/react-dom-interactions@npm:0.4.0"
+  dependencies:
+    "@floating-ui/react-dom": "npm:^0.6.3"
+    aria-hidden: "npm:^1.1.3"
+    use-isomorphic-layout-effect: "npm:^1.1.1"
+  checksum: 9b73eec5805782e88a80da103375b602327d63985c1d96a0b4868fa63229fee5b9d9830e56e12a983599c2a4861941739a1f90ceeefb44602578a090e064240b
+  languageName: node
+  linkType: hard
+
+"@floating-ui/react-dom@npm:^0.6.3":
+  version: 0.6.3
+  resolution: "@floating-ui/react-dom@npm:0.6.3"
+  dependencies:
+    "@floating-ui/dom": "npm:^0.4.5"
+    use-isomorphic-layout-effect: "npm:^1.1.1"
+  peerDependencies:
+    react: ">=16.8.0"
+    react-dom: ">=16.8.0"
+  checksum: 27e6f07c804a4ad7065696980e7c8fc81f3b084a79d110f4acc22a28d533873e7b57ec141ef13003922a6e7077a430cdc7ad36862007e985cfd861b00334f886
   languageName: node
   linkType: hard
 
@@ -4256,6 +4296,13 @@ __metadata:
   version: 1.0.0-next.21
   resolution: "@polka/url@npm:1.0.0-next.21"
   checksum: 1329b8590b529d068d76c89c7f2bd08c3fbde82f7ed2ed6dede29b6711f8a42f4206b0bd769e472177708f7388b6213501e48272a2602605a7577a52ef919034
+  languageName: node
+  linkType: hard
+
+"@popperjs/core@npm:^2.9.3":
+  version: 2.11.5
+  resolution: "@popperjs/core@npm:2.11.5"
+  checksum: 868c9c5fc2765417d55e8a0a2449b9b8ec3f613b626a12905b9700f8413b433a1ee37ec581a929e0c51ea00a32a7fe5b58ea75d3772d7d85146ecdbd0288331b
   languageName: node
   linkType: hard
 
@@ -6162,6 +6209,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"aria-hidden@npm:^1.1.3":
+  version: 1.1.3
+  resolution: "aria-hidden@npm:1.1.3"
+  dependencies:
+    tslib: "npm:^1.0.0"
+  checksum: 5cfe132b55ef86adf4e7e66e23cb3f096cdf37e6c714724f1770a0a8734690211ac4cf12228de902aefdef15916a0d477373d25fae79de0c060c8eef8bab3ed1
+  languageName: node
+  linkType: hard
+
 "aria-query@npm:^4.2.2":
   version: 4.2.2
   resolution: "aria-query@npm:4.2.2"
@@ -7156,6 +7212,13 @@ __metadata:
   version: 1.2.2
   resolution: "cjs-module-lexer@npm:1.2.2"
   checksum: a16484407ca1ed082b84f9581c757a17a9329a4f3096876a7eb6a434d3405f9774dcf1cc37779e0fa0024ef9bff4ebc2bae6549c84b3f6500b28797a5c5e5982
+  languageName: node
+  linkType: hard
+
+"classnames@npm:^2.2.6, classnames@npm:^2.3.1":
+  version: 2.3.1
+  resolution: "classnames@npm:2.3.1"
+  checksum: 282e29eeb023740bfd9d00e44d6baf2b2f023f0d0a460cd327869062eaa512cea66a1fd97d730b4f934fb94b9425c1702963be62029fa0ec1383c5e34c89f404
   languageName: node
   linkType: hard
 
@@ -8613,6 +8676,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"easy-bem@npm:^1.1.1":
+  version: 1.1.1
+  resolution: "easy-bem@npm:1.1.1"
+  checksum: 1aa25439f85790782b22f89b7dce19deb160a2ab583b3d001d181f931aa7a328fb629cc4b68dd18c0e88e6b4284ddd6792ede6eb230210f28f495f0d9e743740
+  languageName: node
+  linkType: hard
+
 "ecdsa-sig-formatter@npm:1.0.11":
   version: 1.0.11
   resolution: "ecdsa-sig-formatter@npm:1.0.11"
@@ -10021,6 +10091,35 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flowbite-react@npm:0.0.20":
+  version: 0.0.20
+  resolution: "flowbite-react@npm:0.0.20"
+  dependencies:
+    "@floating-ui/react-dom": "npm:^0.6.3"
+    "@floating-ui/react-dom-interactions": "npm:^0.4.0"
+    classnames: "npm:^2.3.1"
+    react-icons: "npm:^4.3.1"
+    react-indiana-drag-scroll: "npm:^2.1.0"
+  peerDependencies:
+    flowbite: ^1
+    react: ^17 || ^18
+    react-dom: ^17 || ^18
+    react-router-dom: ^6
+    tailwindcss: ^3
+  checksum: 9de4e3f9a6d6859b581b10e6916aefafac94830c87ad70cc986d6bcaf9f58068f45576dcdab79605b5fe17441cebac224e8874aaea2dce429195bac090d2f52b
+  languageName: node
+  linkType: hard
+
+"flowbite@npm:1.4.4":
+  version: 1.4.4
+  resolution: "flowbite@npm:1.4.4"
+  dependencies:
+    "@popperjs/core": "npm:^2.9.3"
+    mini-svg-data-uri: "npm:^1.4.3"
+  checksum: 9964098363fc07b3253f781ec315795d131719d00647315c602cbfe5a4b292bebeef3f94f5c14cb3ee92961fec3fe1d04dd2a0cca3b6ad110e07bc1cf49fd3f4
+  languageName: node
+  linkType: hard
+
 "follow-redirects@npm:^1.14.9":
   version: 1.14.9
   resolution: "follow-redirects@npm:1.14.9"
@@ -10788,6 +10887,15 @@ __metadata:
   version: 1.0.8
   resolution: "hey-listen@npm:1.0.8"
   checksum: df37118177eac898cbe3f0709227e26de98bede83bd78a0c6254ad38df4cac53c7c4bde4fd7e278d676023ae73a0e0fa659b3860178496bf15f8dbd7e9fcb560
+  languageName: node
+  linkType: hard
+
+"history@npm:^5.2.0":
+  version: 5.3.0
+  resolution: "history@npm:5.3.0"
+  dependencies:
+    "@babel/runtime": "npm:^7.7.6"
+  checksum: 95f5983c15ce77b5e9aea74e604de4f99d2a165e1e743e58a21e202bd978c566444ab2bb914a1ede85cffa5ec91b4b5b8e46d37c8c79abe8810f554e8b84530f
   languageName: node
   linkType: hard
 
@@ -13652,7 +13760,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"mini-svg-data-uri@npm:^1.2.3":
+"mini-svg-data-uri@npm:^1.2.3, mini-svg-data-uri@npm:^1.4.3":
   version: 1.4.4
   resolution: "mini-svg-data-uri@npm:1.4.4"
   bin:
@@ -16307,6 +16415,29 @@ __metadata:
   languageName: node
   linkType: hard
 
+"react-icons@npm:^4.3.1":
+  version: 4.3.1
+  resolution: "react-icons@npm:4.3.1"
+  peerDependencies:
+    react: "*"
+  checksum: 688916aa1b9300a342524016b06c0f297805cb82ca07fa6bda61050982ecf25f5b7e5062c7945b0d02827bf25ed7a83b0d8615dad6794cd84b6381cfd191ef97
+  languageName: node
+  linkType: hard
+
+"react-indiana-drag-scroll@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "react-indiana-drag-scroll@npm:2.1.0"
+  dependencies:
+    classnames: "npm:^2.2.6"
+    debounce: "npm:^1.2.0"
+    easy-bem: "npm:^1.1.1"
+  peerDependencies:
+    react: ^15.0.0 || ^16.0.0 || ^17.0.0
+    react-dom: ^15.0.0 || ^16.0.0 || ^17.0.0
+  checksum: 118d5b095b1d1f3684182b60376da1f3a4a5364e5dcfe09fde9a1e0c250134ec6e018e23a6930b1337f55549840e5bbe264e7e8bc7b636fcd3402b3b085b181b
+  languageName: node
+  linkType: hard
+
 "react-is@npm:^16.13.1, react-is@npm:^16.7.0":
   version: 16.13.1
   resolution: "react-is@npm:16.13.1"
@@ -16380,6 +16511,30 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
   checksum: 0ca5a6d85dd6012b8e9f2f8af716166b3f88576c0e41767d0ffd0629297477cf4f00e367a207c9ebc2edca80a081c7d53e394e8835d2fa12458ac20e91e64e27
+  languageName: node
+  linkType: hard
+
+"react-router-dom@npm:6.3.0":
+  version: 6.3.0
+  resolution: "react-router-dom@npm:6.3.0"
+  dependencies:
+    history: "npm:^5.2.0"
+    react-router: "npm:6.3.0"
+  peerDependencies:
+    react: ">=16.8"
+    react-dom: ">=16.8"
+  checksum: 78051169fdc7642103479e7194f616cd1d316af8474503d5d3ea8125ed1d3ded2776e2653e8184509220349d3713ceca572cce3297266e2b7ab3dd0067db8605
+  languageName: node
+  linkType: hard
+
+"react-router@npm:6.3.0":
+  version: 6.3.0
+  resolution: "react-router@npm:6.3.0"
+  dependencies:
+    history: "npm:^5.2.0"
+  peerDependencies:
+    react: ">=16.8"
+  checksum: e18db7761282cb28dda7a4f81c4df696f0484c7f998dc339b4939cb9bb9e8d968e33b627a9616adfed141b588ca1885be6be602c12ff52e81b4bab4bf3e629f8
   languageName: node
   linkType: hard
 
@@ -18851,7 +19006,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
+"tslib@npm:^1.0.0, tslib@npm:^1.8.1, tslib@npm:^1.9.0, tslib@npm:^1.9.3":
   version: 1.14.1
   resolution: "tslib@npm:1.14.1"
   checksum: 441af59dc42ad4ae57140e62cb362369620c6076845c2c2b0ecc863c1d719ce24fdbc301e9053433fef43075e061bf84b702318ff1204b496a5bba10baf9eb9f
@@ -19206,6 +19361,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"use-isomorphic-layout-effect@npm:^1.1.1":
+  version: 1.1.2
+  resolution: "use-isomorphic-layout-effect@npm:1.1.2"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+  peerDependenciesMeta:
+    "@types/react":
+      optional: true
+  checksum: 6023f4526e38f66f3eaef7204aa503de484b1c1e6fbe74cf4c9cc012a42c7e8dc04c6160ec49a117eee11dd306b2cdb66a14f7d20f5cb2d1d4827bb43713b453
+  languageName: node
+  linkType: hard
+
 "use-sync-external-store@npm:1.1.0, use-sync-external-store@npm:^1.0.0":
   version: 1.1.0
   resolution: "use-sync-external-store@npm:1.1.0"
@@ -19495,6 +19662,8 @@ __metadata:
     es-check: "npm:6.2.1"
     eslint: "npm:8.14.0"
     eslint-config-next: "npm:12.1.6-canary.16"
+    flowbite: "npm:1.4.4"
+    flowbite-react: "npm:0.0.20"
     framer-motion: "npm:6.3.3"
     graphql: "npm:16.4.0"
     i18next: "npm:21.6.16"
@@ -19521,6 +19690,7 @@ __metadata:
     react-dom: "npm:18.1.0"
     react-i18next: "npm:11.16.7"
     react-query: "npm:4.0.0-beta.7"
+    react-router-dom: "npm:6.3.0"
     rimraf: "npm:3.0.2"
     rooks: "npm:5.11.0"
     sass: "npm:1.51.0"

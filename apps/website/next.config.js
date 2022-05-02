@@ -144,6 +144,9 @@ const nextConfig = {
       labelFormat: '[local]',
     },
     */
+    images: {
+      layoutRaw: true,
+    },
 
     // React 18
     // @link https://nextjs.org/docs/advanced-features/react-18
