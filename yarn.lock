@@ -3786,6 +3786,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@jitsi/react-sdk@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@jitsi/react-sdk@npm:1.0.1"
+  peerDependencies:
+    react: 16 || 17 || 18
+    react-dom: 16 || 17 || 18
+  checksum: adda9913e17ece96b124e4e4d1178b3539798733ebd86faf7fe46d1066c659ca979a75e1e361b7ba53b0def79e317906b6a8682045a0e768bb3d120a30615aa5
+  languageName: node
+  linkType: hard
+
 "@jridgewell/gen-mapping@npm:^0.1.0":
   version: 0.1.1
   resolution: "@jridgewell/gen-mapping@npm:0.1.1"
@@ -13859,7 +13869,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:*, nanoid@npm:^3.1.30, nanoid@npm:^3.1.32, nanoid@npm:^3.3.3":
+"nanoid@npm:*, nanoid@npm:3.3.3, nanoid@npm:^3.1.30, nanoid@npm:^3.1.32, nanoid@npm:^3.3.3":
   version: 3.3.3
   resolution: "nanoid@npm:3.3.3"
   bin:
@@ -19171,7 +19181,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:^1.0.0":
+"use-sync-external-store@npm:1.1.0, use-sync-external-store@npm:^1.0.0":
   version: 1.1.0
   resolution: "use-sync-external-store@npm:1.1.0"
   peerDependencies:
@@ -19415,6 +19425,7 @@ __metadata:
     "@graphql-codegen/typescript-resolvers": "npm:2.6.1"
     "@graphql-yoga/node": "npm:2.3.0"
     "@headlessui/react": "npm:1.6.0"
+    "@jitsi/react-sdk": "npm:1.0.1"
     "@mdx-js/react": "npm:2.1.1"
     "@next/bundle-analyzer": "npm:12.1.6-canary.16"
     "@next/env": "npm:12.1.6-canary.16"
@@ -19466,6 +19477,7 @@ __metadata:
     jest: "npm:27.5.1"
     jest-css-modules-transform: "npm:4.4.2"
     micro: "npm:9.3.4"
+    nanoid: "npm:3.3.3"
     next: "npm:12.1.6-canary.16"
     next-auth: "npm:4.3.4"
     next-connect: "npm:0.12.2"
@@ -19500,6 +19512,7 @@ __metadata:
     type-fest: "npm:2.12.2"
     typescript: "npm:4.6.4"
     typewriter-effect: "npm:2.18.2"
+    zustand: "npm:4.0.0-rc.1"
   languageName: unknown
   linkType: soft
 
@@ -19932,6 +19945,23 @@ __metadata:
   version: 0.0.2
   resolution: "zstddec@npm:0.0.2"
   checksum: ecefc5d3bde35a268b752b532c56363881f24d51e3901ea870bab32208bcae3ce88600d3ba7a49a08bdf2164d9947c1835ce12a4fa00d7037c834b38c77913be
+  languageName: node
+  linkType: hard
+
+"zustand@npm:4.0.0-rc.1":
+  version: 4.0.0-rc.1
+  resolution: "zustand@npm:4.0.0-rc.1"
+  dependencies:
+    use-sync-external-store: "npm:1.1.0"
+  peerDependencies:
+    immer: ">=9.0"
+    react: ">=16.8"
+  peerDependenciesMeta:
+    immer:
+      optional: true
+    react:
+      optional: true
+  checksum: a57a88d951afb9d97378863ff24f66452f67a8a05c3c588bcd7779f5fc5bd8455a6cee5af8bca94941c3f976d1828c8036f6c830f88d8721862dc47e6f61e5d7
   languageName: node
   linkType: hard
 
