@@ -22,6 +22,7 @@ const limitCfg = {
     // includes framer-motion
     '/about/resume': '150kb',
     '/about/opensource': '150kb',
+    '/meet/[meetingSlug]': '310kb',
   },
 };
 const getPageLimits = () => {
