@@ -12,7 +12,6 @@ export class PusherServerSideMeetingLogger implements MeetingLogger {
   constructor(private pusher: Pusher, private params: Params) {}
   captureEvent = async (event: CaptureMeetingEvent): Promise<true | Error> => {
     const resp = await this.pusher.trigger(this.params.channel, event.name, {
-      date: new Date().toISOString(),
       ...event.payload,
     });
     if (resp.status === 200) {

@@ -19,6 +19,7 @@ export default async function apiLogMeetRoute(
   const resp = await logger.captureEvent({
     name: 'log',
     payload: {
+      date: new Date().toISOString(),
       meetingId: '123',
       browserString: req.headers['user-agent'] ?? '',
     },
