@@ -11456,6 +11456,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"is-base64@npm:^1.1.0":
+  version: 1.1.0
+  resolution: "is-base64@npm:1.1.0"
+  bin:
+    is-base64: bin/is-base64
+    is_base64: bin/is-base64
+  checksum: e5989bd61d31b90a254b149552901a76527335583925061ecb398e1f47e7344cae3db734197187f4624c2d7247e1e6edbb647897b64f17e504be12c602564693
+  languageName: node
+  linkType: hard
+
 "is-bigint@npm:^1.0.1":
   version: 1.0.4
   resolution: "is-bigint@npm:1.0.4"
@@ -16347,6 +16357,19 @@ __metadata:
   languageName: node
   linkType: hard
 
+"pusher@npm:5.1.0-beta":
+  version: 5.1.0-beta
+  resolution: "pusher@npm:5.1.0-beta"
+  dependencies:
+    abort-controller: "npm:^3.0.0"
+    is-base64: "npm:^1.1.0"
+    node-fetch: "npm:^2.6.1"
+    tweetnacl: "npm:^1.0.0"
+    tweetnacl-util: "npm:^0.15.0"
+  checksum: 920dd7da61074048f840c0eefcf61f4e95261fa5a26c0aba39d2230816fe305372d47febf5a39a0f2d5f88f0586c4d62e09355c4071ec134d43fed9c36063530
+  languageName: node
+  linkType: hard
+
 "q@npm:^1.5.1":
   version: 1.5.1
   resolution: "q@npm:1.5.1"
@@ -19141,7 +19164,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tweetnacl@npm:^1.0.3":
+"tweetnacl-util@npm:^0.15.0":
+  version: 0.15.1
+  resolution: "tweetnacl-util@npm:0.15.1"
+  checksum: 8f9bf160c4912bed92ab294a2a0f2e9e427a1cbc0c5c40f732dd6dcc2e3f01df54d1c4557c3707f6f85fb3d9e3fda9c8b2c486977bd78e7ef2a2130bbdc97ea6
+  languageName: node
+  linkType: hard
+
+"tweetnacl@npm:^1.0.0, tweetnacl@npm:^1.0.3":
   version: 1.0.3
   resolution: "tweetnacl@npm:1.0.3"
   checksum: e6d5730951ebcb2bf67874dd9f70de3e049a3c58d0b0bc5cc70e888fbd253f77e5bab00aea42fb71b605c42807542edda807f00ecdc29324f2154049fc5a341a
@@ -19778,6 +19808,7 @@ __metadata:
     postcss-flexbugs-fixes: "npm:5.0.2"
     postcss-preset-env: "npm:7.5.0"
     prettier: "npm:2.6.2"
+    pusher: "npm:5.1.0-beta"
     react: "npm:18.1.0"
     react-dom: "npm:18.1.0"
     react-i18next: "npm:11.16.7"
