@@ -1,8 +1,7 @@
-export type EventName = 'CONNECT' | 'CLOSE';
-
-export type CaptureMeetingEvent<T extends EventName = EventName> = {
-  name: T;
+export type CaptureMeetingEvent = {
+  name: 'log';
   payload: {
+    date: string;
     browserString: string;
     meetingId: string;
   };

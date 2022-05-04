@@ -1,6 +1,4 @@
 import { css } from '@emotion/react';
-import { OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';

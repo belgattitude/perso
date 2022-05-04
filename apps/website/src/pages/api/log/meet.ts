@@ -1,9 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getPusherServerSide } from '@/backend/config/pusher-node';
+import { meetConfig } from '@/features/meet/config';
 import { PusherServerSideMeetingLogger } from '@/features/meet/lib/logger';
 
 const logger = new PusherServerSideMeetingLogger(getPusherServerSide(), {
-  channel: 'meet-log',
+  channel: meetConfig.logger.channel,
 });
 
 export default async function apiLogMeetRoute(
@@ -16,7 +17,7 @@ export default async function apiLogMeetRoute(
   }
 
   const resp = await logger.captureEvent({
-    name: 'CONNECT',
+    name: 'log',
     payload: {
       meetingId: '123',
       browserString: req.headers['user-agent'] ?? '',
