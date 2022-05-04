@@ -2,6 +2,7 @@ import type { DbMainPrismaTypes, PrismaDbMain } from '@belgattitude/db-main';
 import SchemaBuilder from '@pothos/core';
 import ErrorsPlugin from '@pothos/plugin-errors';
 import PrismaPlugin from '@pothos/plugin-prisma';
+import type { Contact, Meeting } from '@prisma/client';
 import { prismaDbMain } from '@/backend/config';
 
 const builder = new SchemaBuilder<{
@@ -22,6 +23,43 @@ const builder = new SchemaBuilder<{
   errorOptions: {
     defaultTypes: [],
   },
+});
+
+builder.prismaObject('Contact', {
+  findUnique: (contact) => ({ id: contact.id }),
+  fields: (t) => ({
+    id: t.exposeID('id'),
+    email: t.exposeString('email'),
+  }),
+});
+
+builder.prismaObject('MeetingAttendee', {
+  findUnique: (attendee) => ({ id: attendee.id }),
+  fields: (t) => ({
+    id: t.exposeID('id'),
+    role: t.exposeString('role'),
+  }),
+});
+
+builder.prismaObject('Meeting', {
+  findUnique: (meeting) => ({ id: meeting.id }),
+  fields: (t) => ({
+    id: t.exposeID('id'),
+    slug: t.exposeString('slug'),
+    title: t.exposeString('title'),
+    description: t.exposeString('description'),
+    status: t.exposeString('status'),
+    meetProvider: t.exposeString('meetProvider', { nullable: true }),
+    meetProviderUrl: t.exposeString('meetProviderUrl', { nullable: true }),
+
+    MeetingAttendees: t.relation('MeetingAttendees', {
+      query: (args, _context) => ({
+        orderBy: {
+          createdAt: 'asc',
+        },
+      }),
+    }),
+  }),
 });
 
 builder.prismaObject('User', {
@@ -58,6 +96,19 @@ builder.queryType({
         name: t.arg.string(),
       },
       resolve: (parent, { name }) => `hello, ${name || 'World'}`,
+    }),
+    getMeeting: t.prismaField({
+      type: 'Meeting',
+      args: {
+        slug: t.arg.string({ required: true }),
+      },
+      resolve: async (query, root, args, _ctx, _info) => {
+        return prismaDbMain.meeting.findUnique({
+          ...query,
+          rejectOnNotFound: true,
+          where: { slug: args.slug },
+        });
+      },
     }),
     me: t.prismaField({
       type: 'User',

@@ -1,5 +1,9 @@
 import type { Prisma } from '@prisma/client';
-import { PrismaClient } from '@prisma/client';
+import {
+  MeetingAttendeeRole,
+  MeetingStatus,
+  PrismaClient,
+} from '@prisma/client';
 
 const prisma = new PrismaClient();
 
@@ -25,6 +29,72 @@ const userData: Prisma.UserCreateInput[] = [
   },
 ];
 
+const companySeed: Prisma.CompanyCreateInput[] = [
+  {
+    slug: 'wwf',
+    title: 'Word Wild Fundation',
+    Contact: {
+      connectOrCreate: [
+        {
+          create: {
+            firstName: 'Jacques',
+            lastName: 'Bergier',
+            email: 'lemondevousaime@gmail.com',
+          },
+          where: {
+            email: 'lemondevousaime@gmail.com',
+          },
+        },
+      ],
+    },
+  },
+  {
+    slug: 'msf',
+    title: 'Médecins sans frontières',
+    Contact: {
+      connectOrCreate: [
+        {
+          create: {
+            firstName: 'John',
+            lastName: 'Wayne',
+            email: 'belgattitude@gmail.com',
+          },
+          where: {
+            email: 'belgattitude@gmail.com',
+          },
+        },
+      ],
+    },
+  },
+];
+
+const projectSeed: Prisma.ProjectCreateInput[] = [
+  {
+    slug: 'first-project',
+    title: 'My very first cool project',
+    Meetings: {
+      connectOrCreate: [
+        {
+          create: {
+            slug: 'my-first-meeting',
+            timeZone: 'Europe/Brussels',
+            title: 'First meeting',
+            description: 'Hey this is our meeting description',
+            startAt: new Date(),
+            endAt: new Date(),
+            meetProvider: 'google',
+            meetProviderUrl: 'https://meet.google.com/',
+            status: MeetingStatus.PENDING,
+          },
+          where: {
+            slug: 'my-first-meeting',
+          },
+        },
+      ],
+    },
+  },
+];
+
 async function main() {
   console.log(`Start seeding ...`);
   // users and posts
@@ -36,6 +106,34 @@ async function main() {
     });
     console.log(`Created or updated user with id: ${user.id}`);
   }
+  for (const c of companySeed) {
+    const company = await prisma.company.upsert({
+      where: { slug: c.slug },
+      update: {},
+      create: c,
+    });
+    console.log(`Created or updated company with id: ${company.id}`);
+  }
+  for (const p of projectSeed) {
+    const project = await prisma.project.upsert({
+      where: { slug: p.slug },
+      include: {
+        Meetings: true,
+      },
+      update: {},
+      create: p,
+    });
+
+    const person1 = await prisma.contact.findUnique({
+      where: { email: 'belgattitude@gmail.com' },
+    });
+    const person2 = await prisma.contact.findUnique({
+      where: { email: 'lemondevousaime@gmail.com' },
+    });
+
+    console.log(`Created or updated company with id: ${project.id}`);
+  }
+
   console.log(`Seeding finished.`);
 }
 

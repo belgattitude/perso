@@ -4,14 +4,120 @@ generator client {
 }
 
 generator pothos {
-  provider = "prisma-pothos-types"
+  provider     = "prisma-pothos-types"
   clientOutput = "@prisma/client"
-  output = "../src/generated/pothos-types.ts"
+  output       = "../src/generated/pothos-types.ts"
 }
 
 datasource db {
   provider = "postgresql"
   url      = env("PRISMA_DATABASE_URL")
+}
+
+model Company {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Contact Contact[]
+  @@map(name: "company")
+}
+
+model Contact {
+  id            String    @id @default(cuid())
+  firstName     String?   @db.VarChar(80)
+  lastName      String?   @db.VarChar(80)
+  email         String    @unique @db.VarChar(150)
+  emailVerified DateTime?
+  gsm           String?   @db.VarChar(20)
+
+  companyId String
+  company   Company  @relation(fields: [companyId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  MeetingAttendees MeetingAttendee[]
+  MeetingReview    MeetingReview[]
+  @@unique([companyId, email])
+  @@map(name: "contact")
+}
+
+model Project {
+  id        String   @id @default(cuid())
+  slug      String   @unique
+  title     String
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  Meetings Meeting[]
+  @@map(name: "project")
+}
+
+enum MeetingStatus {
+  PENDING    @map("pending")
+  CONFIRMED  @map("confirmed")
+  CANCELLED  @map("cancelled")
+  COMPLETED  @map("completed")
+}
+
+model Meeting {
+  id               String            @id @default(cuid())
+  slug             String            @unique
+  userId           Int?
+  User             User?             @relation(fields: [userId], references: [id])
+  title            String
+  description      String
+  projectId        String
+  Project          Project           @relation(fields: [projectId], references: [id])
+  timeZone         String            @default("Europe/Brussels")
+  startAt          DateTime
+  endAt            DateTime
+  meetProvider     String
+  meetProviderUrl  String
+  status           MeetingStatus     @default(PENDING)
+  MeetingReview    MeetingReview[]
+  MeetingAttendees MeetingAttendee[]
+
+  @@map(name: "meeting")
+}
+
+model MeetingReview {
+  id        String   @id @default(cuid())
+  meetingId String
+  starCount Int?
+  comment   String?
+  Meeting   Meeting  @relation(fields: [meetingId], references: [id])
+  contactId String
+  Contact   Contact  @relation(fields: [contactId], references: [id])
+  createdAt DateTime @default(now())
+  updatedAt DateTime @updatedAt
+
+  @@unique([meetingId, contactId])
+  @@map(name: "meeting_review")
+}
+
+enum MeetingAttendeeRole {
+  OWNER   @map("owner")
+  AGENCY  @map("agency")
+  CLIENT  @map("client")
+}
+
+model MeetingAttendee {
+  id          String    @id @default(cuid())
+  meetingId   String
+  role        MeetingAttendeeRole
+  Meeting     Meeting   @relation(fields: [meetingId], references: [id])
+  contactId   String
+  Contact     Contact   @relation(fields: [contactId], references: [id])
+  connectedAt DateTime?
+  endedAt     DateTime?
+  createdAt   DateTime  @default(now())
+  updatedAt   DateTime  @updatedAt
+
+  @@unique([meetingId, contactId])
+  @@map(name: "meeting_attendees")
 }
 
 model Post {
@@ -44,7 +150,8 @@ model User {
   accounts      Account[]
   sessions      Session[]
 
-  Post Post[]
+  Post    Post[]
+  Meeting Meeting[]
   @@map("users")
 }
 

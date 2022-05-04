@@ -17,10 +17,13 @@ module.exports = {
     // Apply prettier and disable incompatible rules
     '@belgattitude/eslint-config-bases/prettier',
   ],
-  rules: {
-    // optional overrides per project
-  },
   overrides: [
     // optional overrides per project file match
+    {
+      files: ['**/*seed.ts'],
+      rules: {
+        'sonarjs/no-duplicate-string': 'off',
+      },
+    },
   ],
 };
