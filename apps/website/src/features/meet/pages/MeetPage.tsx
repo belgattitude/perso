@@ -80,7 +80,6 @@ export const Welcome: FC<Props> = (props) => {
 
       <div className="container mx-auto px-4">
         <ProviderSelectionCard />
-        <LoggerPanel />
       </div>
       <div
         css={css`
@@ -91,19 +90,7 @@ export const Welcome: FC<Props> = (props) => {
           height: 50vh;
         `}
       >
-        <Canvas>
-          <ambientLight intensity={0.4} />
-          <directionalLight color="yellow" position={[0, 5, 5]} />
-          <OrbitControls
-            maxPolarAngle={90}
-            minPolarAngle={1}
-            enablePan={false}
-            enableRotate={true}
-            enableZoom={true}
-            maxZoom={0.1}
-            minZoom={0.01}
-          />
-        </Canvas>
+        <LoggerPanel />
       </div>
     </div>
   );

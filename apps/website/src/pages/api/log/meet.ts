@@ -1,7 +1,10 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { getPusherServerSide } from '@/backend/config/pusher-node';
+import { PusherServerSideMeetingLogger } from '@/features/meet/lib/logger';
 
-const pusher = getPusherServerSide();
+const logger = new PusherServerSideMeetingLogger(getPusherServerSide(), {
+  channel: 'meet-log',
+});
 
 export default async function apiLogMeetRoute(
   req: NextApiRequest,
@@ -12,17 +15,21 @@ export default async function apiLogMeetRoute(
     return;
   }
 
-  const resp = await pusher.trigger('my-channel', 'my-event', {
-    message: 'hello world',
+  const resp = await logger.captureEvent({
+    name: 'CONNECT',
+    payload: {
+      meetingId: '123',
+      browserString: req.headers['user-agent'] ?? '',
+    },
   });
 
-  if (resp.status === 200) {
+  if (resp === true) {
     res.status(200).send(
       JSON.stringify({
         success: true,
       })
     );
   } else {
-    res.status(500).send('Error while connecting to pusher');
+    res.status(500).send(resp.message);
   }
 }
