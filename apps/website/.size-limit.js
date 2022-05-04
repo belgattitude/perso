@@ -20,8 +20,8 @@ const limitCfg = {
     // includes react-three
     '/': '280kb',
     // includes framer-motion
-    '/about/resume': '150kb',
-    '/about/opensource': '150kb',
+    '/about/resume': '160kb',
+    '/about/opensource': '160kb',
     '/meet/[meetingSlug]': '310kb',
   },
 };

@@ -91,8 +91,13 @@ const secureHeaders = createSecureHeaders({
             "'self'",
             'https://vitals.vercel-insights.com',
             'https://*.sentry.io',
+            'wss://ws.pusherapp.com',
+            'wss://ws-eu.pusher.com',
+            'https://sockjs.pusher.com',
+            'https://sockjs-eu.pusher.com',
           ],
           imgSrc: ["'self'", 'https:', 'http:', 'data:'],
+          workerSrc: ['blob:'],
         }
       : {},
   },

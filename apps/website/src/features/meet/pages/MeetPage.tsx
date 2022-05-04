@@ -1,11 +1,9 @@
 import { css } from '@emotion/react';
-import { OrbitControls } from '@react-three/drei';
-import { Canvas } from '@react-three/fiber';
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
-import { AnimatedThing } from '@/features/meet/components/AnimatedThing';
 import { Header } from '@/features/meet/components/Header';
+import type { LoggerPanelProps } from '@/features/meet/components/Logger';
 import { ProviderSelectionCard } from '@/features/meet/components/ProviderSelection';
 import type { JitsiEmbedProps } from '../components/Jitsi';
 import { useStore } from '../stores';
@@ -14,6 +12,16 @@ const JitsiEmbed = dynamic<JitsiEmbedProps>(
   () =>
     // eslint-disable-next-line @typescript-eslint/no-explicit-any
     import('../components/Jitsi').then(({ JitsiEmbed }) => JitsiEmbed) as any,
+  {
+    ssr: false,
+  }
+);
+
+const LoggerPanel = dynamic<LoggerPanelProps>(
+  () =>
+    import('../components/Logger/LoggerPanel').then(
+      ({ LoggerPanel }) => LoggerPanel
+    ),
   {
     ssr: false,
   }
@@ -80,20 +88,7 @@ export const Welcome: FC<Props> = (props) => {
           height: 50vh;
         `}
       >
-        <Canvas>
-          <ambientLight intensity={0.4} />
-          <directionalLight color="yellow" position={[0, 5, 5]} />
-          <AnimatedThing />
-          <OrbitControls
-            maxPolarAngle={90}
-            minPolarAngle={1}
-            enablePan={false}
-            enableRotate={true}
-            enableZoom={true}
-            maxZoom={0.1}
-            minZoom={0.01}
-          />
-        </Canvas>
+        <LoggerPanel />
       </div>
     </div>
   );
