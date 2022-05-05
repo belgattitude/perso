@@ -70,7 +70,7 @@ export const Welcome: FC<Props> = (props) => {
     window.open(
       `/meet/_log/${encodeURIComponent(meetingSlug)}`,
       '_blank',
-      'width=400,height=400,scrollbars=no,toolbar=no,screenx=0,screeny=0,location=no,titlebar=no,directories=no,status=no,menubar=no'
+      'width=400,height=800,scrollbars=no,toolbar=no,screenx=0,screeny=0,location=no,titlebar=no,directories=no,status=no,menubar=no'
     );
   };
 
