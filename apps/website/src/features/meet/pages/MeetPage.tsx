@@ -1,69 +1,29 @@
 import { css } from '@emotion/react';
-import axios from 'axios';
+
 import { NextSeo } from 'next-seo';
-import dynamic from 'next/dynamic';
+
+import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import { Header } from '@/features/meet/components/Header';
-import type { LoggerPanelProps } from '@/features/meet/components/Logger';
 import { ProviderSelectionCard } from '@/features/meet/components/ProviderSelection';
-import type { JitsiEmbedProps } from '../components/Jitsi';
+import { logMeeting } from '@/features/meet/lib/logMeeting';
 import { useStore } from '../stores';
-
-const JitsiEmbed = dynamic<JitsiEmbedProps>(
-  () =>
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    import('../components/Jitsi').then(({ JitsiEmbed }) => JitsiEmbed) as any,
-  {
-    ssr: false,
-  }
-);
-
-const LoggerPanel = dynamic<LoggerPanelProps>(
-  () =>
-    import('../components/Logger/LoggerPanel').then(
-      ({ LoggerPanel }) => LoggerPanel
-    ),
-  {
-    ssr: false,
-  }
-);
 
 type Props = {
   meetingSlug: string;
 };
 
-const Jitsi: FC<Props> = (props) => {
-  const { meetingSlug } = props;
-  return (
-    <JitsiEmbed
-      jitsiConfig={{
-        configOverwrite: {
-          startWithAudioMuted: true,
-          hiddenPremeetingButtons: ['microphone'],
-        },
-        roomName: meetingSlug,
-        getIFrameRef: (node) => (node.style.height = '800px'),
-      }}
-    />
-  );
-};
-
-const logMeeting = (meetingSlug: string, action: string) => {
-  axios.get(`/api/log/meet`, {
-    params: {
-      meetingSlug,
-      action,
-    },
-  });
-};
-
 export const Welcome: FC<Props> = (props) => {
+  const router = useRouter();
   const { meetingSlug } = props;
   const openVideoEmbed = useStore((state) => state.openVideoEmbed);
 
   const connect = (meetingSlug: string, action: string) => {
-    openVideoEmbed();
+    // openVideoEmbed();
     logMeeting(meetingSlug, action);
+    setTimeout(() => {
+      router.push(`/meet/j/${meetingSlug}`);
+    }, 200);
   };
 
   const openLogWindow = (meetingSlug: string) => {
@@ -134,11 +94,7 @@ export const MeetPage: FC<Props> = (props) => {
       <NextSeo nofollow={true} noindex={true} />
       <Header meetingSlug={meetingSlug} />
       <div className="container mx-auto px-4">
-        {videoEmbedStatus === 'open' ? (
-          <Jitsi {...props} />
-        ) : (
-          <Welcome {...props} />
-        )}
+        <Welcome {...props} />
       </div>
     </>
   );
