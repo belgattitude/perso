@@ -138,7 +138,7 @@ module.exports = {
       },
       {
         selector: ['typeProperty'],
-        format: ['camelCase'],
+        format: ['camelCase', 'PascalCase'],
         // For graphql __typename
         leadingUnderscore: 'allow',
       },
