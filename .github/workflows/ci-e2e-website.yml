@@ -114,6 +114,10 @@ jobs:
           NEXT_DISABLE_SOURCEMAPS: true
           NEXT_TELEMETRY_DISABLED: true
           NEXTJS_SENTRY_UPLOAD_DRY_RUN: true
+          NEXT_PUBLIC_PUSHER_CLUSTER: eu
+          NEXT_PUBLIC_PUSHER_KEY: blah
+          PUSHER_APP_ID: 111
+          PUSHER_SECRET: balah
 
       # Playwright recommends if you cache the binaries to keep it tied to the version of playwright you are using.
       # https://playwright.dev/docs/ci#caching-browsers

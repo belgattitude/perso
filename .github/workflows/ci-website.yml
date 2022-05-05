@@ -114,6 +114,10 @@ jobs:
           NEXT_TELEMETRY_DISABLED: true
           # Fully disable sentry
           NEXTJS_DISABLE_SENTRY: true
+          NEXT_PUBLIC_PUSHER_CLUSTER: eu
+          NEXT_PUBLIC_PUSHER_KEY: blah
+          PUSHER_APP_ID: 111
+          PUSHER_SECRET: balah
 
       - name: Check ecmascript checks for build files
         working-directory: apps/website
