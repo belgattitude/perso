@@ -1,4 +1,5 @@
 import { css } from '@emotion/react';
+import axios from 'axios';
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
@@ -47,9 +48,32 @@ const Jitsi: FC<Props> = (props) => {
   );
 };
 
+const logMeeting = (meetingSlug: string, action: string) => {
+  axios.get(`/api/log/meet`, {
+    params: {
+      meetingSlug,
+      action,
+    },
+  });
+};
+
 export const Welcome: FC<Props> = (props) => {
   const { meetingSlug } = props;
   const openVideoEmbed = useStore((state) => state.openVideoEmbed);
+
+  const connect = (meetingSlug: string, action: string) => {
+    openVideoEmbed();
+    logMeeting(meetingSlug, action);
+  };
+
+  const openLogWindow = (meetingSlug: string) => {
+    window.open(
+      `/meet/_log/${encodeURIComponent(meetingSlug)}`,
+      '_blank',
+      'width=400,height=800,scrollbars=no,toolbar=no,screenx=0,screeny=0,location=no,titlebar=no,directories=no,status=no,menubar=no'
+    );
+  };
+
   return (
     <div className="container mx-auto px-4">
       <div className="container mx-auto px-4 p-5">
@@ -58,10 +82,11 @@ export const Welcome: FC<Props> = (props) => {
           <span className="text-cyan-700 font-bold">{meetingSlug}</span> Next
           meeting is wednesday at 10:00 AM.
         </div>
-
         <div className="flex flex-wrap gap-2">
           <button
-            onClick={openVideoEmbed}
+            onClick={() => {
+              connect(meetingSlug, 'connect');
+            }}
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
           >
@@ -84,23 +109,30 @@ export const Welcome: FC<Props> = (props) => {
           position: absolute;
           bottom: 0;
           right: 0;
-          width: 45vw;
-          height: 50vh;
         `}
       >
-        <LoggerPanel />
+        <button
+          onClick={() => {
+            openLogWindow(meetingSlug);
+          }}
+          type="button"
+          className="py-2.5 px-5 mr-2 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+        >
+          Open logs
+        </button>
       </div>
     </div>
   );
 };
 
 export const MeetPage: FC<Props> = (props) => {
+  const { meetingSlug } = props;
   const videoEmbedStatus = useStore((state) => state.videoEmbedStatus);
 
   return (
     <>
       <NextSeo nofollow={true} noindex={true} />
-      <Header />
+      <Header meetingSlug={meetingSlug} />
       <div className="container mx-auto px-4">
         {videoEmbedStatus === 'open' ? (
           <Jitsi {...props} />

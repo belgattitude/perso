@@ -1,14 +1,36 @@
+import { Guards } from '@soluble/cache-interop';
+import axios from 'axios';
 import Link from 'next/link';
 import type { FC } from 'react';
 import { useStore } from '@/features/meet/stores';
 
-export const Header: FC = () => {
+const logMeeting = (meetingSlug: string, action: string) => {
+  axios.get(`/api/log/meet`, {
+    params: {
+      meetingSlug,
+      action,
+    },
+  });
+};
+
+type HeaderProps = {
+  meetingSlug: string;
+};
+
+export const Header: FC<HeaderProps> = (props) => {
+  const { meetingSlug } = props;
   const { videoEmbedStatus, closeVideoEmbed } = useStore(
     ({ closeVideoEmbed, videoEmbedStatus }) => ({
       closeVideoEmbed,
       videoEmbedStatus,
     })
   );
+
+  const returnToMain = (meetingSlug: string) => {
+    logMeeting(meetingSlug, 'disconnect');
+    closeVideoEmbed();
+  };
+
   return (
     <nav className="bg-white border-gray-200 px-2 sm:px-4 py-5 rounded bg-white/30">
       <div className="container flex flex-wrap justify-between items-center mx-auto">
@@ -80,7 +102,7 @@ export const Header: FC = () => {
             {videoEmbedStatus === 'open' && (
               <li>
                 <button
-                  onClick={closeVideoEmbed}
+                  onClick={() => returnToMain(meetingSlug)}
                   type="button"
                   className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
                 >
