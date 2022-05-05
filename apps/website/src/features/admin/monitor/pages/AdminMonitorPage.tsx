@@ -1,5 +1,4 @@
 import { NextSeo } from 'next-seo';
-import Pusher from 'pusher-js';
 import type { FC } from 'react';
 import { Header } from '@/features/meet/components/Header';
 
