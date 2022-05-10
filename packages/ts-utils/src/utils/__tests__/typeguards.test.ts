@@ -3,6 +3,7 @@ import {
   isNonEmptyString,
   isParsableNumeric,
   isPlainObject,
+  isPresent,
 } from '../typeguards';
 
 describe('Typeguards tests', () => {
@@ -68,6 +69,20 @@ describe('Typeguards tests', () => {
       [() => 'cool', false],
     ])('when "%p" is given, should return %p', (v, expected) => {
       expect(isPlainObject(v)).toStrictEqual(expected);
+    });
+  });
+
+  describe('isPresent', () => {
+    it('should return false when null or undefined', () => {
+      expect(isPresent(null)).toBeFalsy();
+      expect(isPresent(undefined)).toBeFalsy();
+    });
+    it('should return true when not null and not undefined', () => {
+      expect(isPresent(false)).toBeTruthy();
+      expect(isPresent(true)).toBeTruthy();
+      expect(isPresent(NaN)).toBeTruthy();
+      expect(isPresent('hello')).toBeTruthy();
+      expect(isPresent(0)).toBeTruthy();
     });
   });
 });

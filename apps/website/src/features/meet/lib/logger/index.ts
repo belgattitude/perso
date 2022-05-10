@@ -1,6 +1,9 @@
 export type {
-  CaptureMeetingEvent,
-  MeetingLogger,
-} from './MeetingLogger.interface';
+  MeetLogEvent,
+  MeetEventAction,
+  MeetAttendeeRole,
+  MeetAttendee,
+  MeetLoggerInterface,
+} from './MeetLogger.interface';
 
 export { PusherServerSideMeetingLogger } from './pusher/PusherServerSideMeetingLogger';

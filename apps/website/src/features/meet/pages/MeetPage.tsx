@@ -1,12 +1,12 @@
 import { css } from '@emotion/react';
-
 import { NextSeo } from 'next-seo';
-
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
+import { logMeetEvent } from '@/features/meet/api/logMeetEvent';
 import { Header } from '@/features/meet/components/Header';
 import { ProviderSelectionCard } from '@/features/meet/components/ProviderSelection';
-import { logMeeting } from '@/features/meet/lib/logMeeting';
+import { createMeetLogEvent } from '@/features/meet/lib/helper';
+import type { MeetEventAction } from '@/features/meet/lib/logger';
 import { useStore } from '../stores';
 
 type Props = {
@@ -16,11 +16,17 @@ type Props = {
 export const Welcome: FC<Props> = (props) => {
   const router = useRouter();
   const { meetingSlug } = props;
-  const openVideoEmbed = useStore((state) => state.openVideoEmbed);
+  // const openVideoEmbed = useStore((state) => state.openVideoEmbed);
 
-  const connect = (meetingSlug: string, action: string) => {
+  const connect = (action: MeetEventAction, meetingSlug: string) => {
     // openVideoEmbed();
-    logMeeting(meetingSlug, action);
+    logMeetEvent(
+      createMeetLogEvent({
+        meetingSlug,
+        action,
+        role: 'AGENCY',
+      })
+    );
     setTimeout(() => {
       router.push(`/meet/j/${meetingSlug}`);
     }, 200);
@@ -45,7 +51,7 @@ export const Welcome: FC<Props> = (props) => {
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => {
-              connect(meetingSlug, 'connect');
+              connect('JOIN', meetingSlug);
             }}
             type="button"
             className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
@@ -87,7 +93,7 @@ export const Welcome: FC<Props> = (props) => {
 
 export const MeetPage: FC<Props> = (props) => {
   const { meetingSlug } = props;
-  const videoEmbedStatus = useStore((state) => state.videoEmbedStatus);
+  // const videoEmbedStatus = useStore((state) => state.videoEmbedStatus);
 
   return (
     <>
