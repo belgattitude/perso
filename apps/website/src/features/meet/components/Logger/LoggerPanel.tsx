@@ -2,7 +2,7 @@ import { css } from '@emotion/react';
 import type { FC } from 'react';
 import { useEffect, useState } from 'react';
 import { getPusher } from '@/config';
-import type { CaptureMeetingEvent } from '@/features/meet/lib/logger';
+import type { MeetLogEvent } from '@/features/meet/lib/logger';
 
 const pusher = getPusher();
 
@@ -10,7 +10,7 @@ export type LoggerPanelProps = {
   meetingSlug: string;
 };
 
-type LogPayload = CaptureMeetingEvent['payload'];
+type LogPayload = MeetLogEvent;
 
 export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
   const { meetingSlug } = props;
@@ -87,7 +87,7 @@ export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
       <ul>
         {messages.map((message) => (
           <li key={message.date}>
-            {message.date}-{message.meetingId}-{message.browserString}
+            {message.date}-{message.meetingSlug}-{message.browserString}
           </li>
         ))}
       </ul>

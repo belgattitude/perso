@@ -1,7 +1,8 @@
 import Link from 'next/link';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
-import { logMeeting } from '@/features/meet/lib/logMeeting';
+import { logMeetEvent } from '@/features/meet/api/logMeetEvent';
+import { createMeetLogEvent } from '@/features/meet/lib/helper';
 import { useStore } from '@/features/meet/stores';
 
 type HeaderProps = {
@@ -18,9 +19,14 @@ export const Header: FC<HeaderProps> = (props) => {
       videoEmbedStatus,
     })
   );
-
   const returnToMain = (meetingSlug: string) => {
-    logMeeting(meetingSlug, 'disconnect');
+    logMeetEvent(
+      createMeetLogEvent({
+        action: 'LEAVE',
+        meetingSlug,
+        role: 'AGENCY',
+      })
+    );
     setTimeout(() => {
       router.push(`/meet/${meetingSlug}`);
     }, 250);

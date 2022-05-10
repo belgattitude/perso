@@ -70,7 +70,7 @@ export const TypedText: FC<TypedTextProps> = (props) => {
           dir = 'forward';
           sentIdx = sentenceIdx >= sentences.length - 1 ? 0 : sentenceIdx + 1;
           sent = sentences[sentIdx];
-          setD(delay);
+          setD(props.delay);
         }
         return {
           currIdx: dir === 'forward' ? currIdx + 1 : currIdx - 1,
@@ -85,7 +85,7 @@ export const TypedText: FC<TypedTextProps> = (props) => {
         window.clearInterval(interval.current);
       }
     };
-  }, [d, sentences]);
+  }, [d, sentences, props.delay]);
 
   const slice =
     state.currIdx - 1 > state.sentence.length
