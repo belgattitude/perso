@@ -55,6 +55,10 @@ const handler = nc<NextApiRequest, NextApiResponse>({
   },
 })
   .use(getCorsMiddleware())
+  .options((req, res) => {
+    // to allow preflight request
+    res.status(200).end();
+  })
   .post((req, res) => {
     apiLogMeetRoute(req, res);
   });
