@@ -23,6 +23,13 @@
       "enabled": false
     },
     {
+      "groupName": "Pothos graphql",
+      "groupSlug": "pothos",
+      "matchPackagePrefixes": [
+        "@pothos/"
+      ]
+    },
+    {
       // Root package.json
       "matchPaths": ["package.json"],
       "matchDepTypes": [
