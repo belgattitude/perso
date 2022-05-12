@@ -22,13 +22,12 @@
     }
   },
   "scripts": {
-    "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo ./.eslintcache && jest --clear-cache",
+    "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo ./.eslintcache",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
     "typecheck": "tsc --project ./tsconfig.json --noEmit"
   },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
-    "@types/jest": "27.5.1",
     "@types/node": "17.0.32",
     "cross-env": "7.0.3",
     "eslint": "8.15.0",

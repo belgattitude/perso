@@ -5,10 +5,9 @@ const { defaults: tsjPreset } = require('ts-jest/presets');
 const { getJestCachePath } = require('../../../cache.config');
 const packageJson = require('../package.json');
 
-/** @typedef {import('ts-jest/dist/types')} */
-/** @type {import('@jest/types').Config.InitialOptions} */
+/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 const config = {
-  name: `${packageJson.name}:e2e`,
+  displayName: `${packageJson.name}:e2e`,
   cacheDirectory: getJestCachePath(`${packageJson.name}:e2e`),
   testEnvironment: 'node',
   setupFilesAfterEnv: ['<rootDir>/e2e/jest.setup.ts'],
@@ -20,7 +19,7 @@ const config = {
   testMatch: ['<rootDir>/e2e/suites/**/*.test.ts'],
   globals: {
     'ts-jest': {
-      diagnostics: true,
+      diagnostics: false,
       tsconfig: './e2e/tsconfig.e2e.json',
     },
   },

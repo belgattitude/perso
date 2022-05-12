@@ -18,12 +18,11 @@ const getTsConfigBasePaths = () => {
     : {};
 };
 
-/** @typedef {import('ts-jest/dist/types')} */
-/** @type {import('@jest/types').Config.InitialOptions} */
+/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
 const config = {
-  name: `${packageJson.name}:unit`,
+  displayName: `${packageJson.name}:unit`,
   cacheDirectory: getJestCachePath(packageJson.name),
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
   verbose: true,
   rootDir: './src',
   transform: {
