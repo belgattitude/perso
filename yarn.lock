@@ -1909,13 +1909,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:16.2.4":
-  version: 16.2.4
-  resolution: "@commitlint/cli@npm:16.2.4"
+"@commitlint/cli@npm:16.3.0":
+  version: 16.3.0
+  resolution: "@commitlint/cli@npm:16.3.0"
   dependencies:
     "@commitlint/format": "npm:^16.2.1"
     "@commitlint/lint": "npm:^16.2.4"
-    "@commitlint/load": "npm:^16.2.4"
+    "@commitlint/load": "npm:^16.3.0"
     "@commitlint/read": "npm:^16.2.1"
     "@commitlint/types": "npm:^16.2.1"
     lodash: "npm:^4.17.19"
@@ -1924,7 +1924,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: b581b53529a1a6b483e9ceb9754df0cfcb027078a2c0c0f62402f5606b2a774f087f1994541086047fd481c36d3ea9d906c57405228881878513f1a7662147f8
+  checksum: 0d375fd3cdae6d6b6781fe583e6b71547b702c65e39a83e6af756ea699b7167e09e953d8c6a9b214f1c32f145684498fdece6453e1ae60bdb68bf4b64da6b9e9
   languageName: node
   linkType: hard
 
@@ -1996,9 +1996,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:^16.2.4":
-  version: 16.2.4
-  resolution: "@commitlint/load@npm:16.2.4"
+"@commitlint/load@npm:^16.3.0":
+  version: 16.3.0
+  resolution: "@commitlint/load@npm:16.3.0"
   dependencies:
     "@commitlint/config-validator": "npm:^16.2.1"
     "@commitlint/execute-rule": "npm:^16.2.1"
@@ -2007,11 +2007,11 @@ __metadata:
     "@types/node": "npm:>=12"
     chalk: "npm:^4.0.0"
     cosmiconfig: "npm:^7.0.0"
-    cosmiconfig-typescript-loader: "npm:^1.0.0"
+    cosmiconfig-typescript-loader: "npm:^2.0.0"
     lodash: "npm:^4.17.19"
     resolve-from: "npm:^5.0.0"
     typescript: "npm:^4.4.3"
-  checksum: 414ea7038528aeeb1607b33288f3bb442a8b081a1a3696b7eefbe1028f8d766c78c5c6557cb5751316fd453b8533b389ab3fd5a2857efb18f18f47387e543dbc
+  checksum: d7fd915999ef580e2e07ff5c1c51a4da92de832912b1485c7c63255f4bd4eda9534205f658bd54be1ebc3e810fec3a4058723d82f5efd89be7880629bc5e14f3
   languageName: node
   linkType: hard
 
@@ -6760,7 +6760,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@changesets/changelog-github": "npm:0.4.4"
     "@changesets/cli": "npm:2.22.0"
-    "@commitlint/cli": "npm:16.2.4"
+    "@commitlint/cli": "npm:16.3.0"
     "@commitlint/config-conventional": "npm:16.2.4"
     "@types/prettier": "npm:2.6.1"
     "@types/shell-quote": "npm:1.7.1"
@@ -7831,9 +7831,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig-typescript-loader@npm:^1.0.0":
-  version: 1.0.9
-  resolution: "cosmiconfig-typescript-loader@npm:1.0.9"
+"cosmiconfig-typescript-loader@npm:^2.0.0":
+  version: 2.0.0
+  resolution: "cosmiconfig-typescript-loader@npm:2.0.0"
   dependencies:
     cosmiconfig: "npm:^7"
     ts-node: "npm:^10.7.0"
@@ -7841,7 +7841,7 @@ __metadata:
     "@types/node": "*"
     cosmiconfig: ">=7"
     typescript: ">=3"
-  checksum: 96fbc55e336b06b39a52a9baadb3ec8110a86a8a9d176eaf0c5a19d1d8d7d1a8e6f3f99945a80b25da529cae822db6d22ef81a0a284a01cc6203b674d108f439
+  checksum: 6e27d529178d376425c4241baf84b72ff85935532b94cb7b870d4b4b6dc358cfadaa6e5d6217c1c1693751e437dc5049265f2a1172c6a29f2a7ffbf756666663
   languageName: node
   linkType: hard
 
