@@ -227,14 +227,10 @@ const nextConfig = {
   },
 
   webpack: (config, { isServer }) => {
-    if (isServer) {
+    if (!isServer) {
       // Fixes npm packages that depend on `fs` module
       // @link https://github.com/vercel/next.js/issues/36514#issuecomment-1112074589
       config.resolve.fallback = { ...config.resolve.fallback, fs: false };
-
-      // Till undici 4 haven't landed in prisma, we need this for docker/alpine
-      // @see https://github.com/prisma/prisma/issues/6925#issuecomment-905935585
-      // config.externals.push('_http_common');
     }
 
     config.module.rules.push({
@@ -308,5 +304,4 @@ if (process.env.ANALYZE === 'true') {
   });
   config = withBundleAnalyzer(config);
 }
-
 module.exports = config;
