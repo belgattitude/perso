@@ -3,6 +3,7 @@
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 const { withSentryConfig } = require('@sentry/nextjs');
+const { withContentlayer } = require('next-contentlayer');
 const pc = require('picocolors');
 const packageJson = require('./package.json');
 const { i18n } = require('./next-i18next.config');
@@ -113,7 +114,7 @@ const secureHeaders = createSecureHeaders({
 });
 
 /**
- * @type {import('next').NextConfig}
+ * @type {Partial<import('next').NextConfig>}
  */
 const nextConfig = {
   reactStrictMode: true,
@@ -186,7 +187,7 @@ const nextConfig = {
     // https://nextjs.org/docs/api-reference/next/image#caching-behavior
     minimumCacheTTL: 60,
     // Allowed domains for next/image
-    // domains: [],
+    domains: ['pbs.twimg.com', 'avatars.githubusercontent.com', 'i.imgur.com'],
   },
 
   typescript: {
@@ -199,7 +200,16 @@ const nextConfig = {
   },
 
   async headers() {
-    return [{ source: '/(.*)', headers: secureHeaders }];
+    return [
+      { source: '/(.*)', headers: secureHeaders },
+      {
+        source: '/:path*',
+        headers: [
+          { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
+          { key: 'Cross-Origin-Embedder-Policy', value: 'same-origin' },
+        ],
+      },
+    ];
   },
 
   // @link https://nextjs.org/docs/api-reference/next.config.js/rewrites
@@ -263,7 +273,7 @@ const nextConfig = {
   },
 };
 
-let config;
+let config = withContentlayer(nextConfig);
 
 if (tmModules.length > 0) {
   const withNextTranspileModules = require('next-transpile-modules')(
@@ -274,12 +284,11 @@ if (tmModules.length > 0) {
     }
   );
   config = withNextTranspileModules(nextConfig);
-} else {
-  config = nextConfig;
 }
 
 if (!NEXTJS_DISABLE_SENTRY) {
-  config = withSentryConfig(config, {
+  // @ts-ignore because sentry does not match nextjs current definitions
+  config = withSentryConfig(nextConfig, {
     // Additional config options for the Sentry Webpack plugin. Keep in mind that
     // the following options are set automatically, and overriding them is not
     // recommended:
