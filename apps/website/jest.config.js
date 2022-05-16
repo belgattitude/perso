@@ -31,8 +31,6 @@ const config = {
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
-    // For @testing-library/react
-    '^@/test-utils$': '<rootDir>/../config/jest/test-utils',
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
     '\\.svg$': '<rootDir>/../config/jest/__mocks__/react-svgr-mock.tsx',
     ...getTsConfigBasePaths(),
