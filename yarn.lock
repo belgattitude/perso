@@ -17740,21 +17740,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.35.1":
-  version: 2.71.1
-  resolution: "rollup@npm:2.71.1"
-  dependencies:
-    fsevents: "npm:~2.3.2"
-  dependenciesMeta:
-    fsevents:
-      optional: true
-  bin:
-    rollup: dist/bin/rollup
-  checksum: 6a91cb98e9ae674b2d2f997c85487c65fa9f98dd3fa631388796f55cdcce56cc7f89b85354cebe14d8a1f9fcda0a393ac07ca9b21cb72151fc2f726bdbc46446
-  languageName: node
-  linkType: hard
-
-"rollup@npm:^2.59.0":
+"rollup@npm:^2.35.1, rollup@npm:^2.59.0":
   version: 2.73.0
   resolution: "rollup@npm:2.73.0"
   dependencies:
@@ -20185,7 +20171,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:^2.9.8":
+"vite@npm:2.9.9, vite@npm:^2.9.8":
   version: 2.9.9
   resolution: "vite@npm:2.9.9"
   dependencies:
@@ -20456,6 +20442,7 @@ __metadata:
     postcss-preset-env: "npm:7.5.0"
     prettier: "npm:2.6.2"
     pusher: "npm:5.1.0-beta"
+    pusher-js: "npm:7.1.0-beta"
     react: "npm:18.1.0"
     react-dom: "npm:18.1.0"
     react-i18next: "npm:11.16.9"
@@ -20477,6 +20464,7 @@ __metadata:
     type-fest: "npm:2.12.2"
     typescript: "npm:4.7.1-rc"
     typewriter-effect: "npm:2.18.2"
+    vite: "npm:2.9.9"
     vite-plugin-svgr: "npm:2.1.0"
     vite-tsconfig-paths: "npm:3.4.1"
     vitest: "npm:0.12.6"
