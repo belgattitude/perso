@@ -21,7 +21,7 @@ const Post = defineDocumentType(() => ({
   computedFields: {
     url: {
       type: 'string',
-      resolve: (doc) => `/posts/${doc._raw.flattenedPath}`,
+      resolve: (doc) => `/blog/${doc._raw.flattenedPath}`,
     },
   },
 }));
