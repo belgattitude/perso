@@ -10151,13 +10151,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flowbite-react@npm:0.0.23":
-  version: 0.0.23
-  resolution: "flowbite-react@npm:0.0.23"
+"flowbite-react@npm:0.0.24":
+  version: 0.0.24
+  resolution: "flowbite-react@npm:0.0.24"
   dependencies:
     "@floating-ui/react-dom": "npm:^0.6.3"
     "@floating-ui/react-dom-interactions": "npm:^0.4.0"
     classnames: "npm:^2.3.1"
+    nanoid: "npm:^3.3.4"
     react-icons: "npm:^4.3.1"
     react-indiana-drag-scroll: "npm:^2.1.0"
   peerDependencies:
@@ -10165,7 +10166,7 @@ __metadata:
     react: ^17 || ^18
     react-dom: ^17 || ^18
     tailwindcss: ^3
-  checksum: 7d98972386b91a67957a2caf0d7c133a763abafe0d2b12e3665bd21bf1d4a5f33d39c4b0627f8e181a53d46f3ccb90dab8bfef264aa1ec5f0705a2d2bace2f65
+  checksum: 9a95fee609b21afee21a4d142ec50c8d64e76a54aaf82e4714f153c207a3205278b7e1dcd2d4ac3380c9cbdbd58ffdd776cd3cdcd20d5f956f6114e74ebd092e
   languageName: node
   linkType: hard
 
@@ -14000,7 +14001,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nanoid@npm:3.3.4, nanoid@npm:^3.1.30, nanoid@npm:^3.1.32, nanoid@npm:^3.3.3":
+"nanoid@npm:3.3.4, nanoid@npm:^3.1.30, nanoid@npm:^3.1.32, nanoid@npm:^3.3.3, nanoid@npm:^3.3.4":
   version: 3.3.4
   resolution: "nanoid@npm:3.3.4"
   bin:
@@ -19685,7 +19686,7 @@ __metadata:
     eslint: "npm:8.15.0"
     eslint-config-next: "npm:12.1.6"
     flowbite: "npm:1.4.5"
-    flowbite-react: "npm:0.0.23"
+    flowbite-react: "npm:0.0.24"
     framer-motion: "npm:6.3.3"
     graphql: "npm:16.5.0"
     i18next: "npm:21.8.2"
