@@ -11405,6 +11405,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"flowbite@patch:flowbite@npm%3A1.4.5#~/.yarn/patches/flowbite-npm-1.4.5-5ae5e503ca.patch":
+  version: 1.4.5
+  resolution: "flowbite@patch:flowbite@npm%3A1.4.5#~/.yarn/patches/flowbite-npm-1.4.5-5ae5e503ca.patch::version=1.4.5&hash=33784a"
+  dependencies:
+    "@popperjs/core": "npm:^2.9.3"
+    mini-svg-data-uri: "npm:^1.4.3"
+  checksum: b61039013c2ea4e384142418fba326958675630ebdc2b658c069aac90bbebcb0f262f433b8eaae70eda2aa671040f8402475d84edfdf1cc1d4389f2564edd57e
+  languageName: node
+  linkType: hard
+
 "follow-redirects@npm:^1.14.9":
   version: 1.14.9
   resolution: "follow-redirects@npm:1.14.9"
@@ -22404,7 +22414,7 @@ __metadata:
     es-check: "npm:6.2.1"
     eslint: "npm:8.15.0"
     eslint-config-next: "npm:12.1.6"
-    flowbite: "npm:1.4.5"
+    flowbite: "patch:flowbite@npm%3A1.4.5#~/.yarn/patches/flowbite-npm-1.4.5-5ae5e503ca.patch"
     flowbite-react: "npm:0.0.24"
     framer-motion: "npm:6.3.3"
     graphql: "npm:16.5.0"
