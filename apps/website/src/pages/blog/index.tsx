@@ -1,10 +1,8 @@
-// eslint-disable-next-line @typescript-eslint/ban-ts-comment
-// @ts-ignore
-// eslint-disable-next-line import/no-unresolved
-import { allPosts } from 'contentlayer/generated';
 import { compareDesc, format, parseISO } from 'date-fns';
 import Head from 'next/head';
 import Link from 'next/link';
+import type { Post } from 'contentlayer/generated';
+import { allPosts } from 'contentlayer/generated';
 
 export async function getStaticProps() {
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
@@ -16,24 +14,27 @@ export async function getStaticProps() {
 }
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
-function PostCard(post: any) {
+function PostCard(post: Post) {
   return (
-    <div className="mb-6">
-      <time dateTime={post.date} className="block text-sm text-slate-600">
-        {format(parseISO(post.date), 'LLLL d, yyyy')}
-      </time>
-      <h2 className="text-lg">
+    <div className="mb-8">
+      <h2 className="text-xl">
         <Link href={post.url}>
           <a className="text-blue-700 hover:text-blue-900">{post.title}</a>
         </Link>
       </h2>
+      <time dateTime={post.date} className="block text-xs text-gray-600 mb-2">
+        {format(parseISO(post.date), 'LLLL d, yyyy')}
+      </time>
+      <div
+        className="text-sm"
+        dangerouslySetInnerHTML={{ __html: post.body.html }}
+      />
     </div>
   );
 }
 
 type Props = {
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  posts: any[];
+  posts: Post[];
 };
 
 export default function Home(props: Props) {
