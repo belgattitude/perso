@@ -9,6 +9,7 @@
     "jsxImportSource": "@emotion/react",
     "incremental": true,
     "paths": {
+      "contentlayer/generated": ["../.contentlayer/generated"],
       "@/test-utils": ["../config/tests/test-utils"],
       "@/assets/*": ["./assets/*"],
       "@/config/*": ["./config/*"],
@@ -33,7 +34,7 @@
       "@belgattitude/ts-utils": ["../../../packages/ts-utils/src/index"]
     }
   },
-  "exclude": ["**/node_modules", "**/.*/", ".next"],
+  "exclude": ["**/node_modules", ".next"],
   "include": [
     "next-env.d.ts",
     "**/*.ts",
@@ -41,7 +42,8 @@
     "**/*.js",
     "**/*.jsx",
     "**/*.mjs",
-    "**/*.json"
+    "**/*.json",
+    ".contentlayer/generated"
   ],
   "types": ["vitest/globals"]
 }
