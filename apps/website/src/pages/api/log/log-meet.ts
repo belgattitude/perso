@@ -46,7 +46,7 @@ async function apiLogMeetRoute(req: NextApiRequest, res: NextApiResponse) {
 }
 
 const handler = nc<NextApiRequest, NextApiResponse>({
-  onError: (err, req, res, next) => {
+  onError: (err, req, res, _next) => {
     // console.error(err.stack);
     res.status(500).end('Something broke!');
   },
