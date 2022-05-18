@@ -152,6 +152,12 @@ const nextConfig = {
     */
     images: {
       layoutRaw: true,
+      remotePatterns: [
+        {
+          protocol: 'https',
+          hostname: '**.githubusercontent.com',
+        },
+      ],
     },
 
     // React 18
@@ -269,7 +275,7 @@ const nextConfig = {
   },
 };
 
-let config = withContentlayer(nextConfig);
+let config = nextConfig;
 
 if (!NEXTJS_DISABLE_SENTRY) {
   // @ts-ignore because sentry does not match nextjs current definitions
@@ -300,6 +306,10 @@ if (tmModules.length > 0) {
   );
   config = withNextTranspileModules(config);
 }
+
+// withContentLayer does not play well with next-transpile-modules right now
+// @todo find why
+// config = withContentlayer(nextConfig);
 
 if (process.env.ANALYZE === 'true') {
   // @ts-ignore
