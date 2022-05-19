@@ -55,7 +55,7 @@ const NavLink: FC<{
 
 export const TopNav: FC<Props> = (_props) => {
   return (
-    <header className="fixed z-50 w-full bg-white border-b border-gray-200 backdrop-blur bg-opacity/90">
+    <header className="fixed z-50 w-full bg-white/90 border-b border-gray-200 backdrop-blur">
       <div className="flex justify-between items-center px-4 mx-auto w-full max-w-screen-2xl h-16 md:px-8 lg:px-16">
         <div className="flex items-center space-x-2.5">
           <Link href="/">

@@ -1,4 +1,4 @@
-export const siteConfig = {
+export const pageConfig = {
   linkedIn: 'https://www.linkedin.com/in/s%C3%A9bastien-v-b369565/',
   githubRepo: 'https://github.com/belgattitude/perso',
   canonical: 'https://soluble.io/about/resume',
@@ -8,4 +8,4 @@ export const siteConfig = {
   profileImg: '/images/me2.png',
 };
 
-export type SiteConfig = typeof siteConfig;
+export type PageConfig = typeof pageConfig;

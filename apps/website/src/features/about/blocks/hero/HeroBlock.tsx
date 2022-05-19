@@ -12,7 +12,6 @@ import type { FC } from 'react';
 import { useCallback, useState } from 'react';
 import Typewriter from 'typewriter-effect';
 
-// import { TypedText } from '@/features/about/components/TypedText/TypedText';
 import { breakpoints } from '@/features/about/config';
 import * as S from './styles';
 
@@ -68,23 +67,15 @@ export const HeroBlock: FC<HeroProps> = (props) => {
   const opacity = useTransform(scrollY, [0, height], [1, 0.3], {
     ease: backOut,
   });
-  const opacity2 = useTransform(
+  const bgOverlayOpacity = useTransform(
     scrollY,
     [0, height / 2],
-    width < 500 ? [1, 0.1] : [0.0, 0.5]
+    // width < 500 ? [1, 0.1] : [0.0, 0.5]
+    [1, 0.1]
   );
   const zoom = useTransform(scrollY, [0, height], [1, 0]);
-  const xAvatar = useSpring(
-    useTransform(scrollY, [0, height], [0, Math.ceil(width / 2)]),
-    springConfig
-  );
-  const opacityAvatar = useTransform(scrollY, [0, height], [0, 1]);
 
   const img = '/images/unsplash-bigrock.jpg';
-  // const img = '/images/wolfgang-hasselmann-cow.jpg';
-  // const img = '/images/crop-nicolas-i-unsplash.webp';
-  // const img =
-  // ('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   return (
     <div className="z-50 w-full bg-white border-b border-gray-200">
       <LazyMotion strict features={domAnimation}>
@@ -109,7 +100,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
               left: 0;
               right: 0;
               @media (${breakpoints.large}) {
-                background-size: cover;
+                //                background-size: cover;
               }
             `}
           />
@@ -121,22 +112,14 @@ export const HeroBlock: FC<HeroProps> = (props) => {
               bottom: 0;
               left: 0;
               right: 0;
-              //background: #0f0c29;
-              //background: linear-gradient(to right, #24243e, #302b63, #0f0c29);
-              //background-image: url('/images/wolfgang-hasselmann-cow.webp');
               //background-image: url('/images/cine.jpg');
-              background-image: url('https://images.pexels.com/photos/220357/pexels-photo-220357.jpeg');
-              //background-image: url('https://images.pexels.com/photos/1440387/pexels-photo-1440387.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-              //background-image: url(/images/cine.jpg);
-              //background-image: url('https://images.pexels.com/photos/911738/pexels-photo-911738.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
-              //background-image: url('https://images.unsplash.com/photo-1563057828-434ef414eff6?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=648&q=80');
-              //background-image: url("https://images.unsplash.com/photo-1588359886706-cbbd20ff2b29?ixlib=rb-1.2.1&ixid=eyJhcHBfaWQiOjEyMDd9&auto=format&fit=crop&w=1350&q=80");
+              background-image: url('/images/keyboard-pexels-photo-220357.webp');
               background-size: cover;
               background-repeat: no-repeat;
               background-position: top;
             `}
             initial={{ opacity: 0 }}
-            style={{ opacity: opacity2 }}
+            style={{ opacity: bgOverlayOpacity }}
           ></motion.div>
 
           <div className={'content'}>
@@ -155,8 +138,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
                 line-height: 1.5em;
                 display: flex;
                 flex-direction: column;
-                color: black;
-                
+                color: white;
                 text-align: left;
                 text-transform: capitalize;
                 @supports (font-variation-settings: normal) {
@@ -180,11 +162,11 @@ export const HeroBlock: FC<HeroProps> = (props) => {
                   <span
                     css={css`
                       .Typewriter {
-                        opacity: 0.3;
+                        opacity: 0.85;
                         display: inline-block;
                         &:first-of-type {
                           border: 1px solid white;
-                          box-shadow: 0 0 4px 0px white inset, 0 0 3px 0px white;
+                          box-shadow: 0 0 4px 0 white inset, 0 0 3px 0 white;
                           padding: 15px 10px;
                           border-radius: 91% 9% 90% 10% / 29% 82% 18% 71%;
                           background-color: #500895;

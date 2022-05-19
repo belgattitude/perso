@@ -6,7 +6,7 @@ module.exports = {
   regexp: require('./regexp'),
   reactTestingLibrary: require('./rtl'),
   storybook: require('./storybook'),
-  typescript: require('./typescript'),
   sonar: require('./sonar'),
   tailwind: require('./tailwind'),
+  typescript: require('./typescript'),
 };

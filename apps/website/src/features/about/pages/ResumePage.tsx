@@ -3,7 +3,7 @@ import { MDXProvider } from '@mdx-js/react';
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
-import { mdxConfig, siteConfig, appClassName } from '@/config';
+import { mdxConfig, appClassName } from '@/config';
 import {
   HeroBlock,
   AboutMeBlock,
@@ -13,6 +13,7 @@ import {
   BlockTitle,
 } from '@/features/about/blocks';
 import type { TechnosBlockProps } from '@/features/about/blocks/technos/TechnosBlock';
+import { pageConfig } from '@/features/about/config';
 import LinkedInIcon from '@/public/icons/devicons/linkedin/linkedin-original.svg';
 import { defaultTheme } from '@/themes';
 import { Footer } from '../layouts/resume/Footer';
@@ -33,17 +34,17 @@ export const ResumePage: FC = () => {
       <NextSeo
         nofollow={true}
         noindex={true}
-        title={siteConfig.siteTitle}
-        description={siteConfig.siteDesc}
+        title={pageConfig.siteTitle}
+        description={pageConfig.siteDesc}
         openGraph={{
           type: 'website',
-          title: siteConfig.siteTitle,
-          description: siteConfig.siteDesc,
-          url: siteConfig.canonical,
-          images: [{ url: siteConfig.siteImg }],
+          title: pageConfig.siteTitle,
+          description: pageConfig.siteDesc,
+          url: pageConfig.canonical,
+          images: [{ url: pageConfig.siteImg }],
         }}
         twitter={{
-          site: siteConfig.siteTitle,
+          site: pageConfig.siteTitle,
           cardType: 'summary_large_image',
         }}
       />
@@ -90,7 +91,7 @@ export const ResumePage: FC = () => {
                 `}
               >
                 <a
-                  href={siteConfig.linkedIn}
+                  href={pageConfig.linkedIn}
                   target={'_blank'}
                   rel="noreferrer"
                 >

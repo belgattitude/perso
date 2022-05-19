@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import type { FC } from 'react';
-import { siteConfig } from '@/config';
+import { pageConfig } from '@/features/about/config';
 import GithubIcon from '@/public/icons/devicons/github/github-original.svg';
 import LinkedInIcon from '@/public/icons/devicons/linkedin/linkedin-original.svg';
 import { FooterCtn } from './styles';
@@ -10,7 +10,7 @@ export const Footer: FC = () => {
     <FooterCtn>
       <div>
         Contact me on
-        <a href={siteConfig.linkedIn} target="_blank" rel="noreferrer">
+        <a href={pageConfig.linkedIn} target="_blank" rel="noreferrer">
           <LinkedInIcon
             css={css`
               width: 32px;
@@ -22,7 +22,7 @@ export const Footer: FC = () => {
         <p>No recruiters please !</p>
         <p>
           Want to see the
-          <a href={siteConfig.githubRepo} target="_blank" rel="noreferrer">
+          <a href={pageConfig.githubRepo} target="_blank" rel="noreferrer">
             <GithubIcon
               css={css`
                 width: 32px;
