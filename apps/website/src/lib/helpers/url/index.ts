@@ -1,0 +1,1 @@
+export { isExternalUrl } from './isExternalUrl';

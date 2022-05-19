@@ -36,18 +36,18 @@ export const ResumePage: FC = () => {
         noindex={true}
         title={siteConfig.siteTitle}
         description={siteConfig.siteDesc}
+        openGraph={{
+          type: 'website',
+          title: siteConfig.siteTitle,
+          description: siteConfig.siteDesc,
+          url: siteConfig.canonical,
+          images: [{ url: siteConfig.siteImg }],
+        }}
+        twitter={{
+          site: siteConfig.siteTitle,
+          cardType: 'summary_large_image',
+        }}
       />
-      <Head>
-        <meta property="og:url" content={siteConfig.canonical} />
-        <meta property="og:type" content="website" />
-        <meta property="og:title" content={siteConfig.siteTitle} />
-        <meta property="og:description" content={siteConfig.siteDesc} />
-        <meta property="og:image" content={siteConfig.siteImg} />
-        <meta name="twitter:card" content="summary_large_image" />
-        <meta name="twitter:title" content={siteConfig.siteTitle} />
-        <meta name="twitter:description" content={siteConfig.siteDesc} />
-        <meta name="twitter:image" content={siteConfig.siteImg} />
-      </Head>
       <ThemeProvider theme={defaultTheme}>
         <MDXProvider components={mdxConfig}>
           <HeroBlock

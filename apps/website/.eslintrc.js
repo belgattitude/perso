@@ -22,6 +22,7 @@ module.exports = {
     '@belgattitude/eslint-config-bases/regexp',
     '@belgattitude/eslint-config-bases/jest',
     '@belgattitude/eslint-config-bases/react',
+    '@belgattitude/eslint-config-bases/tailwind',
     '@belgattitude/eslint-config-bases/rtl',
     '@belgattitude/eslint-config-bases/graphql-schema',
     // Add specific rules for nextjs

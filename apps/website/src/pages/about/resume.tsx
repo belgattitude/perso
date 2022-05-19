@@ -16,9 +16,10 @@ export default function ResumeRoute(
   return <ResumePage />;
 }
 
+/*
 ResumeRoute.getLayout = function getLayout(page: ReactElement) {
   return <ResumeLayout>{page}</ResumeLayout>;
-};
+}; */
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const { locale } = context;
