@@ -32,7 +32,7 @@ const config = {
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
-    '\\.svg$': '<rootDir>/../config/jest/__mocks__/react-svgr-mock.tsx',
+    '\\.svg$': '<rootDir>/../config/tests/ReactSvgrMock.tsx',
     ...getTsConfigBasePaths(),
   },
   // false by default, overrides in cli, ie: yarn test:unit --collect-coverage=true
