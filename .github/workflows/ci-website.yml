@@ -72,7 +72,6 @@ jobs:
             ${{ github.workspace }}/apps/website/.next/cache
             ${{ github.workspace }}/.cache
             ${{ github.workspace }}/**/tsconfig.tsbuildinfo
-            ${{ github.workspace }}/**/.eslintcache
 
           key: ${{ runner.os }}-website-${{ hashFiles('**/yarn.lock') }}-${{ hashFiles('apps/website/src/**.[jt]sx?', 'apps/website/src/**.json') }}
           restore-keys: |
@@ -92,7 +91,7 @@ jobs:
       - name: Linter
         working-directory: apps/website
         run: |
-          yarn lint --cache
+          yarn lint
 
       - name: Unit tests
         working-directory: apps/website
