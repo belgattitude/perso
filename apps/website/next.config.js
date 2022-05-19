@@ -3,7 +3,11 @@
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 const { withSentryConfig } = require('@sentry/nextjs');
+
+// Till it works with next-transpile-modules
+// eslint-disable-next-line @typescript-eslint/no-unused-vars
 const { withContentlayer } = require('next-contentlayer');
+
 const pc = require('picocolors');
 const packageJson = require('./package.json');
 const { i18n } = require('./next-i18next.config');

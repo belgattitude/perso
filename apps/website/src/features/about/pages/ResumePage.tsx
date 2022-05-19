@@ -2,7 +2,6 @@ import { css, ThemeProvider } from '@emotion/react';
 import { MDXProvider } from '@mdx-js/react';
 import { NextSeo } from 'next-seo';
 import dynamic from 'next/dynamic';
-import Head from 'next/head';
 import type { FC } from 'react';
 import { mdxConfig, siteConfig, appClassName } from '@/config';
 import {

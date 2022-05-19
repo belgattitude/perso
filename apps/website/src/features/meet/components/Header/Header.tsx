@@ -13,7 +13,7 @@ type HeaderProps = {
 export const Header: FC<HeaderProps> = (props) => {
   const router = useRouter();
   const { meetingSlug, inMeeting = false } = props;
-  const { videoEmbedStatus, closeVideoEmbed } = useStore(
+  const { videoEmbedStatus } = useStore(
     ({ closeVideoEmbed, videoEmbedStatus }) => ({
       closeVideoEmbed,
       videoEmbedStatus,
