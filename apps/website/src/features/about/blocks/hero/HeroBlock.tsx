@@ -71,7 +71,8 @@ export const HeroBlock: FC<HeroProps> = (props) => {
     scrollY,
     [0, height / 2],
     // width < 500 ? [1, 0.1] : [0.0, 0.5]
-    [1, 0.1]
+    [0.0, 0.5]
+    // [1, 0.1]
   );
   const zoom = useTransform(scrollY, [0, height], [1, 0]);
 
@@ -138,7 +139,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
                 line-height: 1.5em;
                 display: flex;
                 flex-direction: column;
-                color: white;
+                color: black;
                 text-align: left;
                 text-transform: capitalize;
                 @supports (font-variation-settings: normal) {
