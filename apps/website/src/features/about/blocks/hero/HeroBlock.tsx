@@ -86,7 +86,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
   // const img =
   // ('https://images.pexels.com/photos/1103970/pexels-photo-1103970.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1');
   return (
-    <div className="z-50 w-full border-b border-gray-200 bg-white">
+    <div className="z-50 w-full bg-white border-b border-gray-200">
       <LazyMotion strict features={domAnimation}>
         <S.ProfileHeroCtn
           ref={measuredRef}

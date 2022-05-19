@@ -22,7 +22,7 @@ function PostCard(post: Post) {
           <a className="text-blue-700 hover:text-blue-900">{post.title}</a>
         </Link>
       </h2>
-      <time dateTime={post.date} className="block text-xs text-gray-600 mb-2">
+      <time dateTime={post.date} className="block mb-2 text-xs text-gray-600">
         {format(parseISO(post.date), 'LLLL d, yyyy')}
       </time>
       <div
@@ -40,7 +40,7 @@ type Props = {
 export default function Home(props: Props) {
   const { posts } = props;
   return (
-    <div className="mx-auto max-w-2xl py-16 text-center">
+    <div className="py-16 mx-auto max-w-2xl text-center">
       <Head>
         <title>Contentlayer Blog Example</title>
       </Head>

@@ -17,7 +17,7 @@ export const MainLayout: FC<Props> = (props) => {
         <MainLayoutFonts />
       </Head>
       <TopNav />
-      <div className="flex min-h-screen flex-col justify-between">
+      <div className="flex flex-col justify-between min-h-screen">
         <main className="relative pt-16">{children}</main>
       </div>
     </>
