@@ -8,4 +8,5 @@ module.exports = {
   storybook: require('./storybook'),
   typescript: require('./typescript'),
   sonar: require('./sonar'),
+  tailwind: require('./tailwind'),
 };
