@@ -8,9 +8,10 @@ type Props = {
   children: ReactNode;
 };
 
+const { navLinks, iconLinks } = siteConfig.topNav;
+
 export const MainLayout: FC<Props> = (props) => {
   const { children } = props;
-  const { navLinks, iconLinks } = siteConfig.topNav;
   return (
     <>
       <Head>
