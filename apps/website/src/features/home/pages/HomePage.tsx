@@ -1,8 +1,16 @@
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
+import dynamic from 'next/dynamic';
 import type { FC } from 'react';
-import { WobbleCanvas } from '@/features/home/components/Wobble';
+import type { WobbleCanvasProps } from '@/features/home/components/Wobble/WobbleCanvas';
 import { homeConfig } from '@/features/home/home.config';
+const WobbleCanvas = dynamic<WobbleCanvasProps>(
+  () => import('../components/Wobble').then((mod) => mod.WobbleCanvas),
+  {
+    loading: () => <div></div>,
+    ssr: false,
+  }
+);
 
 const videoUrl = '/videos/influx-red.mp4';
 
