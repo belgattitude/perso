@@ -1,8 +1,6 @@
 import Link from 'next/link';
 import type { FC } from 'react';
-import { Label } from '@/components/ui/label';
 import { isExternalUrl } from '@/lib/helpers/url';
-import GithubIcon from '@/public/icons/devicons/github/github-original.svg';
 import ExternalLinkIcon from '@/public/icons/main/external-link.svg';
 import { TopNavLink } from './TopNavLink';
 

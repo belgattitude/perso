@@ -1,7 +1,7 @@
 import Link from 'next/link';
-import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import { isExternalUrl } from '@/lib/helpers/url';
+import { isUrlCurrentRoute } from '@/lib/hooks';
 
 export const TopNavLink: FC<{
   label?: string;
@@ -9,16 +9,14 @@ export const TopNavLink: FC<{
   Icon?: FC;
   url: string;
 }> = ({ label, hideLabel = false, Icon, url }) => {
-  const router = useRouter();
-  const active = router.pathname.split('/')[1] == url.replace('/', '');
-
+  const active = isUrlCurrentRoute(url);
   return (
     <Link href={url}>
       <a
         className={`group flex h-8 items-center rounded-md bg-transparent px-3 text-sm font-medium leading-none ${
           active
-            ? 'bg-purple-50 text-purple-800 hover:bg-purple-100'
-            : 'text-slate-600 hover:bg-purple-100 hover:text-slate-700'
+            ? 'bg-gray-100 text-purple-800'
+            : 'text-purple-900 hover:bg-gray-50 hover:text-purple-800'
         }`}
         target={isExternalUrl(url) ? '_blank' : undefined}
         rel={isExternalUrl(url) ? 'noreferrer' : undefined}
