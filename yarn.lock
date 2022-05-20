@@ -5085,9 +5085,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.11.0":
-  version: 9.11.0
-  resolution: "@react-three/drei@npm:9.11.0"
+"@react-three/drei@npm:9.11.2":
+  version: 9.11.2
+  resolution: "@react-three/drei@npm:9.11.2"
   dependencies:
     "@babel/runtime": "npm:^7.11.2"
     "@react-spring/three": "npm:^9.3.1"
@@ -5114,7 +5114,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 8419fe51c3720bcbf81c51f4fae3feb913b1a1cb3814e1281750c09e601cb2f881e761d4bda4070e591c7dbd98e2bbef0660b8f3594ee65886c82536786946b8
+  checksum: c4aa81f3d139c472b97f4af47af5d90487fbcb863a426c04f6e78ec58f822d410e73a7b298de37a18f15298d8450d4c3a4aa3df7757276f92854caeff3b9e88b
   languageName: node
   linkType: hard
 
@@ -6610,12 +6610,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/ui@npm:0.12.6":
-  version: 0.12.6
-  resolution: "@vitest/ui@npm:0.12.6"
+"@vitest/ui@npm:0.12.7":
+  version: 0.12.7
+  resolution: "@vitest/ui@npm:0.12.7"
   dependencies:
     sirv: "npm:^2.0.2"
-  checksum: 9be9f61d34897aecf39558c8c1beddfc1d96e42f4d9b0c0e37306be206d9f7c7abdb99684a3edafcc22ae569799b03f6dbac7edcd9215af891240fc17d2305b3
+  checksum: e8f0af4dce8530fe4de2c40e817a7aa7b12fd34b482bf069ff39bd6d8f46e1b93d8053157a510c46db495d18765cec7c5449a02c80801dc5a04ec17d804a01d4
   languageName: node
   linkType: hard
 
@@ -11152,9 +11152,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flowbite-react@npm:0.0.24":
-  version: 0.0.24
-  resolution: "flowbite-react@npm:0.0.24"
+"flowbite-react@npm:0.0.25":
+  version: 0.0.25
+  resolution: "flowbite-react@npm:0.0.25"
   dependencies:
     "@floating-ui/react-dom": "npm:^0.6.3"
     "@floating-ui/react-dom-interactions": "npm:^0.4.0"
@@ -11167,7 +11167,7 @@ __metadata:
     react: ^17 || ^18
     react-dom: ^17 || ^18
     tailwindcss: ^3
-  checksum: 9a95fee609b21afee21a4d142ec50c8d64e76a54aaf82e4714f153c207a3205278b7e1dcd2d4ac3380c9cbdbd58ffdd776cd3cdcd20d5f956f6114e74ebd092e
+  checksum: 28726358f0a9ca713592ade5ce495291321d3fc4366e69548da56e1e4ad8bc4b57e8f137529485b20d12cfbd69982649ecb62c54953abab4333a45f2f05bd7f8
   languageName: node
   linkType: hard
 
@@ -19708,16 +19708,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.51.0":
-  version: 1.51.0
-  resolution: "sass@npm:1.51.0"
+"sass@npm:1.52.0":
+  version: 1.52.0
+  resolution: "sass@npm:1.52.0"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: da0118d34b7c0808b91716a39cc6f49a3388a50498ccf7c85bddb68a598f42af61a606b8210e5c89255c73f8e1baccbc74d6da629b8b16f5f394bcca0b286347
+  checksum: 456ce778c668cf54188cdbfd3323fa2ff0ca490f4e9d96655f30c58855d8e74e7b609c371805c95303b82800bfb744d33f1962c243f810051da693ee3109b634
   languageName: node
   linkType: hard
 
@@ -22304,13 +22304,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:0.12.6":
-  version: 0.12.6
-  resolution: "vitest@npm:0.12.6"
+"vitest@npm:0.12.7":
+  version: 0.12.7
+  resolution: "vitest@npm:0.12.7"
   dependencies:
     "@types/chai": "npm:^4.3.1"
     "@types/chai-subset": "npm:^1.3.3"
     chai: "npm:^4.3.6"
+    debug: "npm:^4.3.4"
     local-pkg: "npm:^0.4.1"
     tinypool: "npm:^0.1.3"
     tinyspy: "npm:^0.3.2"
@@ -22331,7 +22332,7 @@ __metadata:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: e52930006d1c120448d158311c378f5c244b1e46ff36f28d997fe6a563f2d4202d6efb54010c53fbc206648b7892dad36f45682b66ac6b7655252aa6e842d58a
+  checksum: c154a21a87c58cedda832f06cd6a2b26038330a46b2451bb6cc7bb231a246c52180e2ef7ef8e403f3ca09e08bddb537373758fded0a24806001856571ec6888f
   languageName: node
   linkType: hard
 
@@ -22488,7 +22489,7 @@ __metadata:
     "@pothos/plugin-errors": "npm:3.4.1"
     "@pothos/plugin-prisma": "npm:3.8.0"
     "@prisma/client": "npm:3.14.0"
-    "@react-three/drei": "npm:9.11.0"
+    "@react-three/drei": "npm:9.11.2"
     "@react-three/fiber": "npm:8.0.18"
     "@sentry/nextjs": "npm:7.0.0-beta.1"
     "@sentry/react": "npm:7.0.0-beta.1"
@@ -22514,7 +22515,7 @@ __metadata:
     "@types/react-dom": "npm:18.0.4"
     "@types/three": "npm:0.140.0"
     "@vitejs/plugin-react": "npm:1.3.2"
-    "@vitest/ui": "npm:0.12.6"
+    "@vitest/ui": "npm:0.12.7"
     autoprefixer: "npm:10.4.7"
     axios: "npm:0.27.2"
     c8: "npm:7.11.3"
@@ -22528,7 +22529,7 @@ __metadata:
     eslint: "npm:8.15.0"
     eslint-config-next: "npm:12.1.7-canary.9"
     flowbite: "npm:1.4.5"
-    flowbite-react: "npm:0.0.24"
+    flowbite-react: "npm:0.0.25"
     framer-motion: "npm:6.3.3"
     graphql: "npm:16.5.0"
     happy-dom: "npm:4.0.0"
@@ -22576,7 +22577,7 @@ __metadata:
     remark-rehype: "npm:10.1.0"
     rimraf: "npm:3.0.2"
     rooks: "npm:5.11.0"
-    sass: "npm:1.51.0"
+    sass: "npm:1.52.0"
     sharp: "npm:0.30.4"
     size-limit: "npm:7.0.8"
     superjson: "npm:1.9.1"
@@ -22593,7 +22594,7 @@ __metadata:
     vite: "npm:2.9.9"
     vite-plugin-svgr: "npm:2.1.0"
     vite-tsconfig-paths: "npm:3.4.1"
-    vitest: "npm:0.12.6"
+    vitest: "npm:0.12.7"
     zustand: "npm:4.0.0-rc.1"
   languageName: unknown
   linkType: soft

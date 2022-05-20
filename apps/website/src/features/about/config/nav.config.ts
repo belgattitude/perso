@@ -3,7 +3,10 @@ import LinkedInIcon from '@/public/icons/devicons/linkedin/linkedin-original.svg
 
 export const navConfig = {
   topNav: {
-    navLinks: [{ label: 'Blog', url: '/blog' }],
+    navLinks: [
+      { label: 'Resume', url: '/about/resume' },
+      // { label: 'Blog', url: '/blog' },
+    ],
     iconLinks: [
       {
         label: 'Github',
