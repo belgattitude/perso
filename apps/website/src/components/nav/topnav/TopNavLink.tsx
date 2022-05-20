@@ -1,7 +1,7 @@
 import Link from 'next/link';
 import type { FC } from 'react';
 import { isExternalUrl } from '@/lib/helpers/url';
-import { isUrlCurrentRoute } from '@/lib/hooks';
+import { useIsUrlCurrentRoute } from '@/lib/hooks';
 
 export const TopNavLink: FC<{
   label?: string;
@@ -9,7 +9,7 @@ export const TopNavLink: FC<{
   Icon?: FC;
   url: string;
 }> = ({ label, hideLabel = false, Icon, url }) => {
-  const active = isUrlCurrentRoute(url);
+  const active = useIsUrlCurrentRoute(url);
   return (
     <Link href={url}>
       <a
