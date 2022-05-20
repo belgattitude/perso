@@ -7,7 +7,7 @@ import { homeConfig } from '@/features/home/home.config';
 const WobbleCanvas = dynamic<WobbleCanvasProps>(
   () => import('../components/Wobble').then((mod) => mod.WobbleCanvas),
   {
-    loading: () => <div></div>,
+    loading: () => <div />,
     ssr: false,
   }
 );
