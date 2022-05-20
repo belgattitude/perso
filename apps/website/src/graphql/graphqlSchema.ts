@@ -2,7 +2,6 @@ import type { DbMainPrismaTypes, PrismaDbMain } from '@belgattitude/db-main';
 import SchemaBuilder from '@pothos/core';
 import ErrorsPlugin from '@pothos/plugin-errors';
 import PrismaPlugin from '@pothos/plugin-prisma';
-import type { Contact, Meeting } from '@prisma/client';
 import { prismaDbMain } from '@/backend/config';
 
 const builder = new SchemaBuilder<{
@@ -53,7 +52,7 @@ builder.prismaObject('Meeting', {
     meetProviderUrl: t.exposeString('meetProviderUrl', { nullable: true }),
 
     MeetingAttendees: t.relation('MeetingAttendees', {
-      query: (args, _context) => ({
+      query: (_args, _context) => ({
         orderBy: {
           createdAt: 'asc',
         },

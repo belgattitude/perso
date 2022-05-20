@@ -10,12 +10,6 @@ type Props = {
   /** Add props here */
 };
 
-export default function ResumeRoute(
-  _props: InferGetStaticPropsType<typeof getStaticProps>
-) {
-  return <ResumePage />;
-}
-
 ResumeRoute.getLayout = function getLayout(page: ReactElement) {
   return <ResumeLayout>{page}</ResumeLayout>;
 };
@@ -34,3 +28,9 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
     // revalidate: 60,
   };
 };
+
+export default function ResumeRoute(
+  _props: InferGetStaticPropsType<typeof getStaticProps>
+) {
+  return <ResumePage />;
+}

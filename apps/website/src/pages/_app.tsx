@@ -33,10 +33,8 @@ const MyApp = (appProps: AppProps) => {
 
   return (
     <AppProviders>
-      <MainLayout>
-        {/* Workaround for https://github.com/vercel/next.js/issues/8592 */}
-        {getLayout(<Component {...pageProps} err={err} />)}
-      </MainLayout>
+      {/* Workaround for https://github.com/vercel/next.js/issues/8592 */}
+      {getLayout(<Component {...pageProps} err={err} />)}
     </AppProviders>
   );
 };

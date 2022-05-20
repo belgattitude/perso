@@ -15,6 +15,7 @@ declare module 'react-i18next' {
       home: I18nNamespaces['home'];
       about: I18nNamespaces['about'];
       system: I18nNamespaces['system'];
+      navigation: I18nNamespaces['navigation'];
     };
   }
 }

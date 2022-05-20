@@ -1,11 +1,16 @@
-export const siteConfig = {
-  linkedIn: 'https://www.linkedin.com/in/s%C3%A9bastien-v-b369565/',
-  githubRepo: 'https://github.com/belgattitude/perso',
-  canonical: 'https://soluble.io/about/resume',
-  siteTitle: 'Sébastien Vanvelthem - CV',
-  siteDesc: 'React, Typescript and PHP developer',
-  siteImg: 'https://soluble.io/images/social-img.jpg',
-  profileImg: '/images/me2.png',
-};
+import GithubIcon from '@/public/icons/devicons/github/github-original.svg';
 
-export type SiteConfig = typeof siteConfig;
+export const siteConfig = {
+  topNav: {
+    navLinks: [
+      // { label: 'Blog', url: '/blog' }
+    ],
+    iconLinks: [
+      {
+        label: 'Github',
+        Icon: GithubIcon,
+        url: 'https://github.com/belgattitude',
+      },
+    ],
+  },
+};

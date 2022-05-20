@@ -4,10 +4,20 @@ import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import type { Mesh } from 'three';
 import { Vector2 } from 'three';
+import { useStore } from '@/features/home/stores';
 
-export const Wobble: FC = () => {
+export type WobbleProps = {
+  wireframe?: boolean;
+  videoUrl: string;
+};
+
+export const Wobble: FC<WobbleProps> = (props) => {
+  const { videoUrl } = props;
+
+  const w = useStore((state) => state.wirefame);
+
   const meshRef = useRef<Mesh>(null);
-  const [wireframe, setWireframe] = useState(false);
+  const [wireframe, setWireframe] = useState(props.wireframe ?? w);
   useFrame(() => {
     if (meshRef.current) {
       meshRef.current.rotation.x = meshRef.current.rotation.y += 0.0001;
@@ -15,7 +25,7 @@ export const Wobble: FC = () => {
   });
   const [video] = useState(() => {
     const vid = document.createElement('video');
-    vid.src = '/videos/influx-red.mp4';
+    vid.src = videoUrl;
     vid.crossOrigin = 'Anonymous';
     vid.loop = true;
     vid.playbackRate = 1;

@@ -8,11 +8,11 @@
 import type { SVGProps } from 'react';
 import React from 'react';
 
-const SvgrMock = React.forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
+const ReactSvgrMock = React.forwardRef<SVGSVGElement, SVGProps<SVGSVGElement>>(
   (props, ref) => <svg ref={ref} {...props} />
 );
 
-SvgrMock.displayName = 'SvgrMock';
+ReactSvgrMock.displayName = 'SvgrMock';
 
-export const ReactComponent = SvgrMock;
-export default SvgrMock;
+export const ReactComponent = ReactSvgrMock;
+export default ReactSvgrMock;

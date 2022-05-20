@@ -41,11 +41,11 @@ export const Welcome: FC<Props> = (props) => {
   };
 
   return (
-    <div className="container mx-auto px-4">
-      <div className="container mx-auto px-4 p-5">
-        <div className={'mb-5 pt-5'}>
+    <div className="container px-4 mx-auto">
+      <div className="container p-5 px-4 mx-auto">
+        <div className={'pt-5 mb-5'}>
           Welcome to this experiment, you've joined the project{' '}
-          <span className="text-cyan-700 font-bold">{meetingSlug}</span> Next
+          <span className="font-bold text-cyan-700">{meetingSlug}</span> Next
           meeting is wednesday at 10:00 AM.
         </div>
         <div className="flex flex-wrap gap-2">
@@ -54,20 +54,20 @@ export const Welcome: FC<Props> = (props) => {
               connect('JOIN', meetingSlug);
             }}
             type="button"
-            className="text-white bg-blue-700 hover:bg-blue-800 focus:ring-4 focus:ring-blue-300 font-medium rounded-lg text-lg px-5 py-2.5 mr-2 mb-2 dark:bg-blue-600 dark:hover:bg-blue-700 focus:outline-none dark:focus:ring-blue-800"
+            className="py-2.5 px-5 mr-2 mb-2 text-lg font-medium text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
           >
             Enter the meeting
           </button>
           <button
             type="button"
-            className="py-2.5 px-5 mr-2 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+            className="focus:z-10 py-2.5 px-5 mr-2 mb-2 text-lg font-medium text-gray-900 hover:text-blue-700 dark:text-gray-400 dark:hover:text-white bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700"
           >
             Alternate ?
           </button>
         </div>
       </div>
 
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         <ProviderSelectionCard />
       </div>
       <div
@@ -82,7 +82,7 @@ export const Welcome: FC<Props> = (props) => {
             openLogWindow(meetingSlug);
           }}
           type="button"
-          className="py-2.5 px-5 mr-2 mb-2 text-lg font-medium text-gray-900 focus:outline-none bg-white rounded-lg border border-gray-200 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700 dark:bg-gray-800 dark:text-gray-400 dark:border-gray-600 dark:hover:text-white dark:hover:bg-gray-700"
+          className="focus:z-10 py-2.5 px-5 mr-2 mb-2 text-lg font-medium text-gray-900 hover:text-blue-700 dark:text-gray-400 dark:hover:text-white bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700"
         >
           Open logs
         </button>
@@ -99,7 +99,7 @@ export const MeetPage: FC<Props> = (props) => {
     <>
       <NextSeo nofollow={true} noindex={true} />
       <Header meetingSlug={meetingSlug} />
-      <div className="container mx-auto px-4">
+      <div className="container px-4 mx-auto">
         <Welcome {...props} />
       </div>
     </>

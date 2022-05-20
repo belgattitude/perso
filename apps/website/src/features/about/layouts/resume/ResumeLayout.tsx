@@ -1,5 +1,7 @@
 import Head from 'next/head';
 import type { FC, ReactNode } from 'react';
+import { TopNav } from '@/components/nav/topnav';
+import { navConfig } from '@/features/about/config';
 import { MainLayoutFavicon } from '@/layouts/main/head';
 import { ResumeLayoutFonts, ResumeLayoutMeta } from './Head';
 
@@ -7,8 +9,11 @@ type Props = {
   children: ReactNode;
 };
 
+const { navLinks, iconLinks } = navConfig.topNav;
+
 export const ResumeLayout: FC<Props> = (props) => {
   const { children } = props;
+
   return (
     <>
       <Head>
@@ -16,7 +21,10 @@ export const ResumeLayout: FC<Props> = (props) => {
         <MainLayoutFavicon />
         <ResumeLayoutFonts />
       </Head>
-      {children}
+      <TopNav navLinks={navLinks} iconLinks={iconLinks} />
+      <div className="flex flex-col justify-between min-h-screen">
+        <main className="relative pt-16">{children}</main>
+      </div>
     </>
   );
 };
