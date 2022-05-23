@@ -8,7 +8,7 @@ async function buildServer() {
     plugins: mesh.plugins,
     graphiql: {
       endpoint: '/api/gateway/graphql',
-      title: 'GraphQL Gateway',
+      title: 'Api Gateway',
     },
   });
 }

@@ -5,7 +5,17 @@ import {
 } from '@/backend/config/cors.config';
 import { isCorsAllowed } from './isCorsAllowed';
 
-export const getCorsMiddleware = () => {
+type CorsMiddlewareParams = {
+  credentials: boolean;
+};
+
+const defaultParams = {
+  credentials: true,
+};
+
+export const getCorsMiddleware = (params?: CorsMiddlewareParams) => {
+  const { credentials } = { ...defaultParams, ...(params ?? {}) };
+
   return Cors({
     origin: (origin, callback) => {
       if (
@@ -19,8 +29,11 @@ export const getCorsMiddleware = () => {
         callback(new Error('Not allowed by CORS'));
       }
     },
+    // Will set Access-Control-Max-Age
+    // @link https://httptoolkit.tech/blog/cache-your-cors/#cors-caching-for-browsers
+    // @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Headers/Access-Control-Max-Age
     maxAge: corsDefaultOptions.maxAge,
-    credentials: true,
+    credentials: credentials,
     methods: ['GET', 'POST', 'OPTIONS', 'PUT', 'PATCH'],
     /**
      * Configures the Access-Control-Allow-Headers CORS header.
@@ -39,8 +52,6 @@ export const getCorsMiddleware = () => {
       'Range',
     ],
     exposedHeaders: ['Content-Length'],
-    // Do not let preflight continue cause otherwise you need to
-    // change the options into a GET in next-connect api routes
-    preflightContinue: true,
+    preflightContinue: false,
   });
 };
