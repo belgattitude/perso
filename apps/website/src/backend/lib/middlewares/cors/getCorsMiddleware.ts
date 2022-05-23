@@ -41,6 +41,6 @@ export const getCorsMiddleware = () => {
     exposedHeaders: ['Content-Length'],
     // Do not let preflight continue cause otherwise you need to
     // change the options into a GET in next-connect api routes
-    preflightContinue: false,
+    preflightContinue: true,
   });
 };
