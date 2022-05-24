@@ -1,12 +1,14 @@
 import Script from 'next/script';
 import type { FC } from 'react';
+import type { HubspotContact } from '@/features/meet/api/hubspot/getHubspotContacts';
 
 type Props = {
   user: string;
+  contacts: HubspotContact[];
 };
 
 export const HubspotSchedulePage: FC<Props> = (props) => {
-  const { user } = props;
+  const { user, contacts } = props;
 
   const prefillData = {
     email: 'belgattitude@gmail.com',
@@ -28,6 +30,7 @@ export const HubspotSchedulePage: FC<Props> = (props) => {
         strategy="afterInteractive"
       />
       <div className="meetings-iframe-container" data-src={link} />
+      <pre>{JSON.stringify(contacts, null, 2)}</pre>
     </>
   );
 };
