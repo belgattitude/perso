@@ -26,6 +26,7 @@ export default async function apiGithubProjectsRoute(
   );
 
   if (isSuccess) {
+    res.setHeader('Content-Type', 'application/json');
     res.status(200).send(
       JSON.stringify({
         success: true,
