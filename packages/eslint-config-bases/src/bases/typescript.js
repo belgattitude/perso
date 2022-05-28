@@ -132,6 +132,8 @@ module.exports = {
           // DB / Graphql might use PascalCase for relationships
           'PascalCase',
         ],
+        leadingUnderscore: 'allowSingleOrDouble',
+        trailingUnderscore: 'allowSingleOrDouble',
       },
       {
         selector: ['typeAlias', 'interface'],
