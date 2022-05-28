@@ -132,6 +132,8 @@ module.exports = {
           // DB / Graphql might use PascalCase for relationships
           'PascalCase',
         ],
+        leadingUnderscore: 'allowSingleOrDouble',
+        trailingUnderscore: 'allowSingleOrDouble',
       },
       {
         selector: ['typeAlias', 'interface'],
@@ -141,7 +143,7 @@ module.exports = {
         selector: ['typeProperty'],
         format: ['camelCase', 'PascalCase'],
         // For graphql __typename
-        leadingUnderscore: 'allow',
+        leadingUnderscore: 'allowSingleOrDouble',
       },
       {
         selector: ['typeParameter'],
