@@ -7,7 +7,7 @@ on:
 
 jobs:
   release:
-    if: github.repository == 'belgattitude/profile'
+    if: github.repository == 'belgattitude/perso'
     name: Release and changelog
     runs-on: ubuntu-latest
     steps:
