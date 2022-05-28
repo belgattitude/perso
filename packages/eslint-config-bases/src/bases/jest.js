@@ -12,6 +12,12 @@ module.exports = {
     es6: true,
     node: true,
   },
+  settings: {
+    // To prevent autodetection issues in monorepos or via vitest
+    jest: {
+      version: 'latest',
+    },
+  },
   overrides: [
     {
       // Perf: To ensure best performance enable eslint-plugin-jest for test files only.
@@ -23,7 +29,6 @@ module.exports = {
         'jest/prefer-hooks-on-top': 'error',
         'jest/no-duplicate-hooks': 'error',
         'jest/no-test-return-statement': 'error',
-        'jest/prefer-lowercase-title': 'error',
         'jest/prefer-strict-equal': 'error',
         'jest/prefer-to-have-length': 'error',
         'jest/consistent-test-it': ['error', { fn: 'it' }],
