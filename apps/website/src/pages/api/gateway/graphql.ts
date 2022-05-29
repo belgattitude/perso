@@ -1,4 +1,4 @@
-import { getBuiltMesh } from '@belgattitude/graphql-mesh';
+import { getBuiltMesh } from '@belgattitude/api-gateway';
 import { createServer } from '@graphql-yoga/node';
 import type { NextApiRequest, NextApiResponse } from 'next';
 

@@ -7,9 +7,9 @@ My personal website and playgrounds.
 ├── apps
 │   ├── website
 └── packages
+    ├── api-gateway
     ├── common-i18n
     ├── db-main
-    ├── graphql-mesh
     └── eslint-config-bases
 ```
 

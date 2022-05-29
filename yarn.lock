@@ -1462,6 +1462,33 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@belgattitude/api-gateway@workspace:^, @belgattitude/api-gateway@workspace:packages/api-gateway":
+  version: 0.0.0-use.local
+  resolution: "@belgattitude/api-gateway@workspace:packages/api-gateway"
+  dependencies:
+    "@belgattitude/eslint-config-bases": "workspace:^"
+    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
+    "@graphql-mesh/cli": "npm:0.71.0"
+    "@graphql-mesh/config": "npm:0.37.0"
+    "@graphql-mesh/graphql": "npm:0.26.0"
+    "@graphql-mesh/new-openapi": "npm:0.4.21"
+    "@graphql-mesh/runtime": "npm:0.35.0"
+    "@types/jest": "npm:27.5.1"
+    "@types/node": "npm:17.0.36"
+    cross-env: "npm:7.0.3"
+    eslint: "npm:8.16.0"
+    graphql: "npm:16.5.0"
+    jest: "npm:28.1.0"
+    npm-run-all: "npm:4.1.5"
+    prettier: "npm:2.6.2"
+    rimraf: "npm:3.0.2"
+    ts-jest: "npm:28.0.3"
+    typescript: "npm:4.7.2"
+  peerDependencies:
+    graphql: ^16.4.0
+  languageName: unknown
+  linkType: soft
+
 "@belgattitude/common-i18n@workspace:^, @belgattitude/common-i18n@workspace:packages/common-i18n":
   version: 0.0.0-use.local
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
@@ -1563,33 +1590,6 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  languageName: unknown
-  linkType: soft
-
-"@belgattitude/graphql-mesh@workspace:^, @belgattitude/graphql-mesh@workspace:packages/graphql-mesh":
-  version: 0.0.0-use.local
-  resolution: "@belgattitude/graphql-mesh@workspace:packages/graphql-mesh"
-  dependencies:
-    "@belgattitude/eslint-config-bases": "workspace:^"
-    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
-    "@graphql-mesh/cli": "npm:0.71.0"
-    "@graphql-mesh/config": "npm:0.37.0"
-    "@graphql-mesh/graphql": "npm:0.26.0"
-    "@graphql-mesh/new-openapi": "npm:0.4.21"
-    "@graphql-mesh/runtime": "npm:0.35.0"
-    "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.36"
-    cross-env: "npm:7.0.3"
-    eslint: "npm:8.16.0"
-    graphql: "npm:16.5.0"
-    jest: "npm:28.1.0"
-    npm-run-all: "npm:4.1.5"
-    prettier: "npm:2.6.2"
-    rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.3"
-    typescript: "npm:4.7.2"
-  peerDependencies:
-    graphql: ^16.4.0
   languageName: unknown
   linkType: soft
 
@@ -22384,10 +22384,10 @@ __metadata:
   resolution: "website@workspace:apps/website"
   dependencies:
     "@babel/core": "npm:7.18.2"
+    "@belgattitude/api-gateway": "workspace:^"
     "@belgattitude/common-i18n": "workspace:^"
     "@belgattitude/db-main": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@belgattitude/graphql-mesh": "workspace:^"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.9.2"
     "@emotion/cache": "npm:11.7.1"
