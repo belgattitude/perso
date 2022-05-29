@@ -1462,12 +1462,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@belgattitude/api-gateway@workspace:^, @belgattitude/api-gateway@workspace:packages/api-gateway":
+  version: 0.0.0-use.local
+  resolution: "@belgattitude/api-gateway@workspace:packages/api-gateway"
+  dependencies:
+    "@belgattitude/eslint-config-bases": "workspace:^"
+    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
+    "@graphql-mesh/cli": "npm:0.71.0"
+    "@graphql-mesh/config": "npm:0.37.0"
+    "@graphql-mesh/graphql": "npm:0.26.0"
+    "@graphql-mesh/new-openapi": "npm:0.4.21"
+    "@graphql-mesh/runtime": "npm:0.35.0"
+    "@types/jest": "npm:27.5.1"
+    "@types/node": "npm:17.0.36"
+    cross-env: "npm:7.0.3"
+    eslint: "npm:8.16.0"
+    graphql: "npm:16.5.0"
+    jest: "npm:28.1.0"
+    npm-run-all: "npm:4.1.5"
+    prettier: "npm:2.6.2"
+    rimraf: "npm:3.0.2"
+    ts-jest: "npm:28.0.3"
+    typescript: "npm:4.7.2"
+  peerDependencies:
+    graphql: ^16.4.0
+  languageName: unknown
+  linkType: soft
+
 "@belgattitude/common-i18n@workspace:^, @belgattitude/common-i18n@workspace:packages/common-i18n":
   version: 0.0.0-use.local
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.16.0"
     prettier: "npm:2.6.2"
@@ -1486,7 +1513,7 @@ __metadata:
     "@prisma/client": "npm:3.14.0"
     "@soluble/dsn-parser": "npm:1.4.1"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     camelcase: "npm:6.3.0"
     cross-env: "npm:7.0.3"
     dotenv-flow: "npm:3.2.0"
@@ -1518,11 +1545,11 @@ __metadata:
   dependencies:
     "@graphql-eslint/eslint-plugin": "npm:3.10.3"
     "@testing-library/jest-dom": "npm:5.16.4"
-    "@testing-library/react": "npm:13.2.0"
+    "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.0"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
-    "@types/prettier": "npm:2.6.1"
+    "@types/node": "npm:17.0.36"
+    "@types/prettier": "npm:2.6.3"
     "@types/react": "npm:18.0.9"
     "@types/react-dom": "npm:18.0.5"
     "@typescript-eslint/eslint-plugin": "npm:5.26.0"
@@ -1531,7 +1558,7 @@ __metadata:
     eslint-config-prettier: "npm:8.5.0"
     eslint-import-resolver-typescript: "npm:2.7.1"
     eslint-plugin-import: "npm:2.26.0"
-    eslint-plugin-jest: "npm:26.2.2"
+    eslint-plugin-jest: "npm:26.4.2"
     eslint-plugin-jest-formatting: "npm:3.1.0"
     eslint-plugin-jsx-a11y: "npm:6.5.1"
     eslint-plugin-playwright: "npm:0.9.0"
@@ -1566,40 +1593,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@belgattitude/graphql-mesh@workspace:^, @belgattitude/graphql-mesh@workspace:packages/graphql-mesh":
-  version: 0.0.0-use.local
-  resolution: "@belgattitude/graphql-mesh@workspace:packages/graphql-mesh"
-  dependencies:
-    "@belgattitude/eslint-config-bases": "workspace:^"
-    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
-    "@graphql-mesh/cli": "npm:0.71.0"
-    "@graphql-mesh/config": "npm:0.37.0"
-    "@graphql-mesh/graphql": "npm:0.26.0"
-    "@graphql-mesh/new-openapi": "npm:0.4.21"
-    "@graphql-mesh/runtime": "npm:0.35.0"
-    "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
-    cross-env: "npm:7.0.3"
-    eslint: "npm:8.16.0"
-    graphql: "npm:16.5.0"
-    jest: "npm:28.1.0"
-    npm-run-all: "npm:4.1.5"
-    prettier: "npm:2.6.2"
-    rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.3"
-    typescript: "npm:4.7.2"
-  peerDependencies:
-    graphql: ^16.4.0
-  languageName: unknown
-  linkType: soft
-
 "@belgattitude/ts-utils@workspace:^, @belgattitude/ts-utils@workspace:packages/ts-utils":
   version: 0.0.0-use.local
   resolution: "@belgattitude/ts-utils@workspace:packages/ts-utils"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.16.0"
     jest: "npm:28.1.0"
@@ -3853,9 +3853,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-yoga/common@npm:2.7.0":
-  version: 2.7.0
-  resolution: "@graphql-yoga/common@npm:2.7.0"
+"@graphql-yoga/common@npm:2.8.0":
+  version: 2.8.0
+  resolution: "@graphql-yoga/common@npm:2.8.0"
   dependencies:
     "@envelop/core": "npm:^2.0.0"
     "@envelop/parser-cache": "npm:^4.0.0"
@@ -3869,23 +3869,23 @@ __metadata:
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: dd2906d0a9d99a10af7a48c5e6fc12639a4026536f41b85d8297ae6ec13c6b7dff6bc9caa5c79d5aeabffce89f8f95bfa702134dab6e65c3a1255a2b86adcb8c
+  checksum: c11055f412c610ca8f6c624e5cb423c0f61752f0b73fbaeee7281336e86b0181e80ac4226623f6354bf87a1ea8ca7ee1986d92c5450636cf3e65721a0b753a4a
   languageName: node
   linkType: hard
 
-"@graphql-yoga/node@npm:2.7.0, @graphql-yoga/node@npm:^2.4.0":
-  version: 2.7.0
-  resolution: "@graphql-yoga/node@npm:2.7.0"
+"@graphql-yoga/node@npm:2.8.0, @graphql-yoga/node@npm:^2.4.0":
+  version: 2.8.0
+  resolution: "@graphql-yoga/node@npm:2.8.0"
   dependencies:
     "@envelop/core": "npm:^2.0.0"
     "@graphql-tools/utils": "npm:^8.6.0"
-    "@graphql-yoga/common": "npm:2.7.0"
+    "@graphql-yoga/common": "npm:2.8.0"
     "@graphql-yoga/subscription": "npm:2.0.0"
     cross-undici-fetch: "npm:^0.4.2"
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: bdbbcc52972c1db95ba7dc1dc99548da8e6c7a3d1b681bb04ecb54d989608466e524bf08182b7f59c4cd417558f1b7ee225a85317996837f11a85fc49cb77fa3
+  checksum: 2fc8bba45f86a59e698c1ee0eaef94efc88f9d65684a432c28ea8b27621141ffe43d56dfd742d55c9120fe30d29d281375af86702b210e16e967f37c2308d309
   languageName: node
   linkType: hard
 
@@ -4393,118 +4393,118 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next/bundle-analyzer@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/bundle-analyzer@npm:12.1.7-canary.18"
+"@next/bundle-analyzer@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/bundle-analyzer@npm:12.1.7-canary.19"
   dependencies:
     webpack-bundle-analyzer: "npm:4.3.0"
-  checksum: 258afe494f626a1ab8ef27b44aad2c7adbad3ba194afce0ea79c66e7050d47fe6453baf42eb1ea9f28cce7c5104ad07eac8fb75af0f2175cdfbaf1d581b652d7
+  checksum: 79f1869decf9637966160bfe9ce62a1c2f86c294e6ddcf4e0218260fadbfd87c8fd8d77745db659ed594f07e4aeb48f81a37ef2983f85b0ad3b65eccd0c76b43
   languageName: node
   linkType: hard
 
-"@next/env@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/env@npm:12.1.7-canary.18"
-  checksum: 0d70720e6ee04aac2cecd74b47f4d15b57712fd03434b2f3221cfc4153e2defa07e4fca2c6a7259acbf2fad08585faec19afd903090f3a25099fed8b3cb39f9a
+"@next/env@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/env@npm:12.1.7-canary.19"
+  checksum: 26902c27b17996ae01f9b73327ce6ba53cdc0499f03a7e0146a8d530ef178e6e0caef46a19b4714473e2c45b21fc81814ad077c0d35fa3aa9a04faa6b30c267c
   languageName: node
   linkType: hard
 
-"@next/eslint-plugin-next@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/eslint-plugin-next@npm:12.1.7-canary.18"
+"@next/eslint-plugin-next@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/eslint-plugin-next@npm:12.1.7-canary.19"
   dependencies:
     glob: "npm:7.1.7"
-  checksum: 3239651e0fcb855c7a1b6b8abbc22510436de4282b8d3e0b03d307fe9f701d49aca0f970211f49cfa6d926212b4e7c76afeae463ed4a8f0833fce29bb9058afe
+  checksum: d214b166b0a67b79ad46c4b9d67d64b7ce8a0e957f68bd30d0f21eff28850ddc98a143a55b3d091c64f2817fd7b2343bee0827a09f7ec00b7cdd7ce12f4d8053
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm-eabi@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-android-arm-eabi@npm:12.1.7-canary.18"
+"@next/swc-android-arm-eabi@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-android-arm-eabi@npm:12.1.7-canary.19"
   conditions: os=android & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-android-arm64@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-android-arm64@npm:12.1.7-canary.18"
+"@next/swc-android-arm64@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-android-arm64@npm:12.1.7-canary.19"
   conditions: os=android & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-arm64@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-darwin-arm64@npm:12.1.7-canary.18"
+"@next/swc-darwin-arm64@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-darwin-arm64@npm:12.1.7-canary.19"
   conditions: os=darwin & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-darwin-x64@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-darwin-x64@npm:12.1.7-canary.18"
+"@next/swc-darwin-x64@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-darwin-x64@npm:12.1.7-canary.19"
   conditions: os=darwin & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-freebsd-x64@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-freebsd-x64@npm:12.1.7-canary.18"
+"@next/swc-freebsd-x64@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-freebsd-x64@npm:12.1.7-canary.19"
   conditions: os=freebsd & cpu=x64
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm-gnueabihf@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.7-canary.18"
+"@next/swc-linux-arm-gnueabihf@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-linux-arm-gnueabihf@npm:12.1.7-canary.19"
   conditions: os=linux & cpu=arm
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-gnu@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.7-canary.18"
+"@next/swc-linux-arm64-gnu@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-linux-arm64-gnu@npm:12.1.7-canary.19"
   conditions: os=linux & cpu=arm64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-arm64-musl@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-linux-arm64-musl@npm:12.1.7-canary.18"
+"@next/swc-linux-arm64-musl@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-linux-arm64-musl@npm:12.1.7-canary.19"
   conditions: os=linux & cpu=arm64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-gnu@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-linux-x64-gnu@npm:12.1.7-canary.18"
+"@next/swc-linux-x64-gnu@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-linux-x64-gnu@npm:12.1.7-canary.19"
   conditions: os=linux & cpu=x64 & libc=glibc
   languageName: node
   linkType: hard
 
-"@next/swc-linux-x64-musl@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-linux-x64-musl@npm:12.1.7-canary.18"
+"@next/swc-linux-x64-musl@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-linux-x64-musl@npm:12.1.7-canary.19"
   conditions: os=linux & cpu=x64 & libc=musl
   languageName: node
   linkType: hard
 
-"@next/swc-win32-arm64-msvc@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.7-canary.18"
+"@next/swc-win32-arm64-msvc@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-win32-arm64-msvc@npm:12.1.7-canary.19"
   conditions: os=win32 & cpu=arm64
   languageName: node
   linkType: hard
 
-"@next/swc-win32-ia32-msvc@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.7-canary.18"
+"@next/swc-win32-ia32-msvc@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-win32-ia32-msvc@npm:12.1.7-canary.19"
   conditions: os=win32 & cpu=ia32
   languageName: node
   linkType: hard
 
-"@next/swc-win32-x64-msvc@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "@next/swc-win32-x64-msvc@npm:12.1.7-canary.18"
+"@next/swc-win32-x64-msvc@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "@next/swc-win32-x64-msvc@npm:12.1.7-canary.19"
   conditions: os=win32 & cpu=x64
   languageName: node
   linkType: hard
@@ -5293,15 +5293,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/browser@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/browser@npm:7.0.0-beta.1"
+"@sentry/browser@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/browser@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/core": "npm:7.0.0-beta.1"
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/core": "npm:7.0.0-rc.0"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     tslib: "npm:^1.9.3"
-  checksum: 8e6db4cb193c206953e8bc99107a256008bc764722bb825c87d1675c6e0869bbea25ccdf14f0960d0559ed3f8278597d68a4e8214dfb85720449513dfbd7a8fa
+  checksum: 229d65496ac02a0e23b5c8abeb2a35464128dc98463856f7c4f2325d951b018362dff789b04186a4aa07ced9c21d385c4aa3c9b3e282ed785fde279f5a56324d
   languageName: node
   linkType: hard
 
@@ -5322,53 +5322,53 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/core@npm:7.0.0-beta.1"
+"@sentry/core@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/core@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/hub": "npm:7.0.0-beta.1"
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/hub": "npm:7.0.0-rc.0"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     tslib: "npm:^1.9.3"
-  checksum: 3880e669821ce42fcd07a420f9e386d3cee1932b4a83c80eab71b6b2219e9d45458093d18dd9de5c0b9babd2977228822f4d68ef9072c1b4c732c84eab6da0e5
+  checksum: 0379cefade05737fafb114590a8b70988c996fba7dc9504b12a4c95d691a2e5b65fb8c5fed2ce6f48a2accc61c51ce0ade1770e129dfa5f20d47ea38a85ac83e
   languageName: node
   linkType: hard
 
-"@sentry/hub@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/hub@npm:7.0.0-beta.1"
+"@sentry/hub@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/hub@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     tslib: "npm:^1.9.3"
-  checksum: e19526a135179535a8a78843e1d75daa9cbfb56b3816f4ee1c969691a1ba185a92209381ba16a098423bb41b65aac5df88cb98910d739cc553f9d1cd28116f85
+  checksum: 62d0f0eaeff007539a3fc79ba160e987cef1dd8417097439d153c63b2addb96b58f775ed5c582efe332e1d74df88557723766fb3427bb22757096ffeebcc8313
   languageName: node
   linkType: hard
 
-"@sentry/integrations@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/integrations@npm:7.0.0-beta.1"
+"@sentry/integrations@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/integrations@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     localforage: "npm:^1.8.1"
     tslib: "npm:^1.9.3"
-  checksum: 2a1b7f5423ece01900912d5b1fbd10d5f9b1a46467a5fff11e4ac71c47f2a68f68cda614c5e3f1e1ac395f01c9f0c3b3ff18574474963f962fddacbda9c3c58d
+  checksum: e6e0e0033d5ef7205bc9f28d73a303892da663411edbd93ad20389d7d47bd71f5dd4e56b139c05c31f23c255a7d3c4ae0d4c787513787c752ced98a8e472a06d
   languageName: node
   linkType: hard
 
-"@sentry/nextjs@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/nextjs@npm:7.0.0-beta.1"
+"@sentry/nextjs@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/nextjs@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/core": "npm:7.0.0-beta.1"
-    "@sentry/hub": "npm:7.0.0-beta.1"
-    "@sentry/integrations": "npm:7.0.0-beta.1"
-    "@sentry/node": "npm:7.0.0-beta.1"
-    "@sentry/react": "npm:7.0.0-beta.1"
-    "@sentry/tracing": "npm:7.0.0-beta.1"
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/core": "npm:7.0.0-rc.0"
+    "@sentry/hub": "npm:7.0.0-rc.0"
+    "@sentry/integrations": "npm:7.0.0-rc.0"
+    "@sentry/node": "npm:7.0.0-rc.0"
+    "@sentry/react": "npm:7.0.0-rc.0"
+    "@sentry/tracing": "npm:7.0.0-rc.0"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     "@sentry/webpack-plugin": "npm:1.18.9"
     tslib: "npm:^1.9.3"
   peerDependencies:
@@ -5378,67 +5378,67 @@ __metadata:
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: 4fcb02ab27a1948d058bb880f165d08a66f53fa8f6f8e3046a5819eff5361fe07508eac653b549249cbabb6ce7f8a67844e03c4091e2e59511efd61761292900
+  checksum: 7f11d54c6c24ea1b5b8f4679a189e5595facbd0f65b38190bbbdd14858b79fef6156ecc18dc654b3a3581ff2ab9a673cc5a5c9015140db6bfa6fc435d93b3070
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/node@npm:7.0.0-beta.1"
+"@sentry/node@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/node@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/core": "npm:7.0.0-beta.1"
-    "@sentry/hub": "npm:7.0.0-beta.1"
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/core": "npm:7.0.0-rc.0"
+    "@sentry/hub": "npm:7.0.0-rc.0"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     cookie: "npm:^0.4.1"
     https-proxy-agent: "npm:^5.0.0"
     lru_map: "npm:^0.3.3"
     tslib: "npm:^1.9.3"
-  checksum: f2d13d3060287f51a88e140a8d5f7f035619c336ab3cac681fa726ed91d4fc4e4a2907941e3e4f04944d76b6f09b1ec22dd388ecfe4429aa51b82245a08ecc3c
+  checksum: d6359520ba4bdc4c0d226c139ee71616c8d84aff0a4ed39a833bde65d0106d3de68678253946dc3cbf11d544702c488e7d1ba255822316d7129d88700caf69f4
   languageName: node
   linkType: hard
 
-"@sentry/react@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/react@npm:7.0.0-beta.1"
+"@sentry/react@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/react@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/browser": "npm:7.0.0-beta.1"
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/browser": "npm:7.0.0-rc.0"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     hoist-non-react-statics: "npm:^3.3.2"
     tslib: "npm:^1.9.3"
   peerDependencies:
     react: 15.x || 16.x || 17.x || 18.x
-  checksum: 627450d888c5234c96e68518e5eea103e95119a2ce30cf1800d2789ceb3af1801b84e604e29cf191a3408675ca0f6776688c6b6bf706fa3c54a25a674ac94877
+  checksum: 5ff8536738227660e2972689ca2c7ce533070e936bf18c6030927bdbaa4ae134aa3fd8b846d43328ba7184b8389f2fdbdb67fef1d78eb1dcee7ee7f61d707e9b
   languageName: node
   linkType: hard
 
-"@sentry/tracing@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/tracing@npm:7.0.0-beta.1"
+"@sentry/tracing@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/tracing@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/hub": "npm:7.0.0-beta.1"
-    "@sentry/types": "npm:7.0.0-beta.1"
-    "@sentry/utils": "npm:7.0.0-beta.1"
+    "@sentry/hub": "npm:7.0.0-rc.0"
+    "@sentry/types": "npm:7.0.0-rc.0"
+    "@sentry/utils": "npm:7.0.0-rc.0"
     tslib: "npm:^1.9.3"
-  checksum: a8ce9bf5eeaf9eaa529227e01b290e81f5731702b054f29adc2992918aae44c929714d60484bd1d850f62614d0a1c20d1d30562567cf0349edb1aaa247c2bd4d
+  checksum: f50c10f9fbd066db529c0e30bf88989b2363eb5619875a4b0a653f22ef4a874bac83cf15d097cd865ab87b51bb8b35e817344eb152993cc81ba21849ada39e4a
   languageName: node
   linkType: hard
 
-"@sentry/types@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/types@npm:7.0.0-beta.1"
-  checksum: 81c4bb5b281d60d9abfbfefb6f386646071514410feb8303be408d8376c1a85e7fd1e7051aaacba06d73d027860733c6659f9623ff33c6fd2626315fc4c36603
+"@sentry/types@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/types@npm:7.0.0-rc.0"
+  checksum: f9183f8d013e9316c0096c1e06f000fd1e6ea0b38e3b4c92925f617a1bda6807fb6ca02cd00b64109a48951706fbff4c424ed2f0034ebe7555dc098904a0960c
   languageName: node
   linkType: hard
 
-"@sentry/utils@npm:7.0.0-beta.1":
-  version: 7.0.0-beta.1
-  resolution: "@sentry/utils@npm:7.0.0-beta.1"
+"@sentry/utils@npm:7.0.0-rc.0":
+  version: 7.0.0-rc.0
+  resolution: "@sentry/utils@npm:7.0.0-rc.0"
   dependencies:
-    "@sentry/types": "npm:7.0.0-beta.1"
+    "@sentry/types": "npm:7.0.0-rc.0"
     tslib: "npm:^1.9.3"
-  checksum: e02a9dfe5fb814d8749c71147e706b75c8184f8fe52ec8c2fd72fdf406f38af308b72f27dd917fcb002707471b33777adf2fbaa3523d310510f76116f3d4eb07
+  checksum: 67c792f89754608e9248f140b7f75e01ddf12ef274a4559402735c36c573ef94c082f64baaee0d56006bcf49c94881001e58bff4c52f7d1684eddfc3fd4f62a4
   languageName: node
   linkType: hard
 
@@ -5798,9 +5798,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/react@npm:13.2.0":
-  version: 13.2.0
-  resolution: "@testing-library/react@npm:13.2.0"
+"@testing-library/react@npm:13.3.0":
+  version: 13.3.0
+  resolution: "@testing-library/react@npm:13.3.0"
   dependencies:
     "@babel/runtime": "npm:^7.12.5"
     "@testing-library/dom": "npm:^8.5.0"
@@ -5808,7 +5808,7 @@ __metadata:
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
-  checksum: 538e6481e8dd8660b96eb738f9e76481d02698197bb5b656c60097021dee1bd3671eccf46b1dc7d6a4774c6489574a82ff0924f81bafeffe2b7098894e4745b2
+  checksum: a29c3335cb23ee30c945bca3c79904c441d506152c83cd814cfc009571df31c32cdf300369d6c070f99f92610441e69ce232ca3761a1fbac12dfb1f5bffa8597
   languageName: node
   linkType: hard
 
@@ -5863,14 +5863,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsed/exceptions@npm:6.114.13":
-  version: 6.114.13
-  resolution: "@tsed/exceptions@npm:6.114.13"
+"@tsed/exceptions@npm:6.114.14":
+  version: 6.114.14
+  resolution: "@tsed/exceptions@npm:6.114.14"
   dependencies:
     change-case: "npm:4.1.2"
     statuses: "npm:>=2.0.1"
     tslib: "npm:2.3.1"
-  checksum: 47bab4a8982f88f3767c43a978174b0d4259e07a41e55faf399360f3510e0b43db382bfe8d99eb7f9870b91cdb065a936ce1ba048634f01f77aff0cbe22fe112
+  checksum: e32430d8f2aeff90b784015c273de3a345a5a2cf65785aa38b7b3b48605fd2495a951df48a7647f99340a04ae6a521cae656e5f39d1fdd47903632882e74d84e
   languageName: node
   linkType: hard
 
@@ -6226,10 +6226,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.35, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 17.0.35
-  resolution: "@types/node@npm:17.0.35"
-  checksum: 89b978da7d7926f71b241a54a020b2981cc50312d481f3c22fc6aac31f2db7405a1cfce5727b2b16741f7f6553716ed52053f9510971ce26b247fe4d123adc51
+"@types/node@npm:*, @types/node@npm:17.0.36, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
+  version: 17.0.36
+  resolution: "@types/node@npm:17.0.36"
+  checksum: 2f7b53130e92a3375188e775faa50e36592f3554a73fd19a12c6820cb63da9d48c65040fd6d38107ac3b766656313b29de36f9100dc423feb6bef81f4531ea2c
   languageName: node
   linkType: hard
 
@@ -6282,10 +6282,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:2.6.1, @types/prettier@npm:^2.1.5":
-  version: 2.6.1
-  resolution: "@types/prettier@npm:2.6.1"
-  checksum: 88f8324f32e7bfe02736988a38e4108183884831dd42ac881590a53432c0fa4f08a79b207c76c6f2fa9a49b1139de6ef70c006144323fb352a447c762d66c21d
+"@types/prettier@npm:2.6.3, @types/prettier@npm:^2.1.5":
+  version: 2.6.3
+  resolution: "@types/prettier@npm:2.6.3"
+  checksum: 8a25ff9ebd6e2d2614cc351894c332b01d306ddb7363e0b1fa56ae5ff5b5639ae58905e213608dff311ef987d6834f532c92964860272e4fc3e95b4824d76e58
   languageName: node
   linkType: hard
 
@@ -6628,12 +6628,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/ui@npm:0.12.9":
-  version: 0.12.9
-  resolution: "@vitest/ui@npm:0.12.9"
+"@vitest/ui@npm:0.13.0":
+  version: 0.13.0
+  resolution: "@vitest/ui@npm:0.13.0"
   dependencies:
     sirv: "npm:^2.0.2"
-  checksum: 251f08445033816b3c19d2149dd25599d6cad241bc839b0e36821a374227b1812cae052148f039d8f288dda9c90e3b24129dcab690015762785ce65bc8cd7d38
+  checksum: fed6d72f9be4f6965d528d2e5e9e1d51a13dc419485b980b3f303d4b7ca94de7be4fadbc1e20e8138c392031117c16e0a1f1833c21981bbc7f5e941dd1a7bd8f
   languageName: node
   linkType: hard
 
@@ -7478,7 +7478,7 @@ __metadata:
     "@changesets/cli": "npm:2.22.0"
     "@commitlint/cli": "npm:17.0.1"
     "@commitlint/config-conventional": "npm:17.0.0"
-    "@types/prettier": "npm:2.6.1"
+    "@types/prettier": "npm:2.6.3"
     "@types/shell-quote": "npm:1.7.1"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.16.0"
@@ -10214,11 +10214,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-config-next@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "eslint-config-next@npm:12.1.7-canary.18"
+"eslint-config-next@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "eslint-config-next@npm:12.1.7-canary.19"
   dependencies:
-    "@next/eslint-plugin-next": "npm:12.1.7-canary.18"
+    "@next/eslint-plugin-next": "npm:12.1.7-canary.19"
     "@rushstack/eslint-patch": "npm:^1.1.3"
     "@typescript-eslint/parser": "npm:^5.21.0"
     eslint-import-resolver-node: "npm:^0.3.6"
@@ -10234,7 +10234,7 @@ __metadata:
   peerDependenciesMeta:
     typescript:
       optional: true
-  checksum: e02967c3754bd6f686f360316136255beebd7c0bfe33aed936d28511197213687bbb3136e2f28b6acf4aba1ae326d3056999108b0ebb5d9f7cf1d7d2a4d5ad61
+  checksum: b2ca283299f1adb08ed1da157855d3da35c937fd68fe67149934dd73783c2fe75a80315d5f1c017048cc216f984feb0e815db8eae95b1b85a51c7ed90ec67b98
   languageName: node
   linkType: hard
 
@@ -10317,9 +10317,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-jest@npm:26.2.2":
-  version: 26.2.2
-  resolution: "eslint-plugin-jest@npm:26.2.2"
+"eslint-plugin-jest@npm:26.4.2":
+  version: 26.4.2
+  resolution: "eslint-plugin-jest@npm:26.4.2"
   dependencies:
     "@typescript-eslint/utils": "npm:^5.10.0"
   peerDependencies:
@@ -10330,7 +10330,7 @@ __metadata:
       optional: true
     jest:
       optional: true
-  checksum: b1d7d803c8f911ce1b07912c116d8e1d3ffcbe9f3565d440b59bcf3eca9fb8a8f4f153560eb729b53146bf9089d7e043d1a9832b318f8da551871b3d72a8533f
+  checksum: 0015ebbffb80fed56b9077ce5305619c633dfb60ca7a31160939ada29a164b51aadf685b9e3715e33a02876d8243b807631908ffc784e105caee033aa8eccb8b
   languageName: node
   linkType: hard
 
@@ -12388,12 +12388,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.4, i18next@npm:^21.6.14":
-  version: 21.8.4
-  resolution: "i18next@npm:21.8.4"
+"i18next@npm:21.8.5, i18next@npm:^21.6.14":
+  version: 21.8.5
+  resolution: "i18next@npm:21.8.5"
   dependencies:
     "@babel/runtime": "npm:^7.17.2"
-  checksum: 16262cf8106a5c8d0615c43be7cb19df3f85508a2155f7919f0e0bdc8c4c2c2d5ddce3a6a8dfd7cc18ef7480407d5d68b8ecaebd22f7e21c0f5c513d3a3e8d07
+  checksum: 112886fbcac6c38f9df843feeb070cee8712aa2d2f3a4c438230e5f5e078fab580a22b936bd0b64e9c9a98bcc92d638b4259e78718944647dfbcb7f790957ba8
   languageName: node
   linkType: hard
 
@@ -16217,24 +16217,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next@npm:12.1.7-canary.18":
-  version: 12.1.7-canary.18
-  resolution: "next@npm:12.1.7-canary.18"
+"next@npm:12.1.7-canary.19":
+  version: 12.1.7-canary.19
+  resolution: "next@npm:12.1.7-canary.19"
   dependencies:
-    "@next/env": "npm:12.1.7-canary.18"
-    "@next/swc-android-arm-eabi": "npm:12.1.7-canary.18"
-    "@next/swc-android-arm64": "npm:12.1.7-canary.18"
-    "@next/swc-darwin-arm64": "npm:12.1.7-canary.18"
-    "@next/swc-darwin-x64": "npm:12.1.7-canary.18"
-    "@next/swc-freebsd-x64": "npm:12.1.7-canary.18"
-    "@next/swc-linux-arm-gnueabihf": "npm:12.1.7-canary.18"
-    "@next/swc-linux-arm64-gnu": "npm:12.1.7-canary.18"
-    "@next/swc-linux-arm64-musl": "npm:12.1.7-canary.18"
-    "@next/swc-linux-x64-gnu": "npm:12.1.7-canary.18"
-    "@next/swc-linux-x64-musl": "npm:12.1.7-canary.18"
-    "@next/swc-win32-arm64-msvc": "npm:12.1.7-canary.18"
-    "@next/swc-win32-ia32-msvc": "npm:12.1.7-canary.18"
-    "@next/swc-win32-x64-msvc": "npm:12.1.7-canary.18"
+    "@next/env": "npm:12.1.7-canary.19"
+    "@next/swc-android-arm-eabi": "npm:12.1.7-canary.19"
+    "@next/swc-android-arm64": "npm:12.1.7-canary.19"
+    "@next/swc-darwin-arm64": "npm:12.1.7-canary.19"
+    "@next/swc-darwin-x64": "npm:12.1.7-canary.19"
+    "@next/swc-freebsd-x64": "npm:12.1.7-canary.19"
+    "@next/swc-linux-arm-gnueabihf": "npm:12.1.7-canary.19"
+    "@next/swc-linux-arm64-gnu": "npm:12.1.7-canary.19"
+    "@next/swc-linux-arm64-musl": "npm:12.1.7-canary.19"
+    "@next/swc-linux-x64-gnu": "npm:12.1.7-canary.19"
+    "@next/swc-linux-x64-musl": "npm:12.1.7-canary.19"
+    "@next/swc-win32-arm64-msvc": "npm:12.1.7-canary.19"
+    "@next/swc-win32-ia32-msvc": "npm:12.1.7-canary.19"
+    "@next/swc-win32-x64-msvc": "npm:12.1.7-canary.19"
     caniuse-lite: "npm:^1.0.30001332"
     postcss: "npm:8.4.5"
     styled-jsx: "npm:5.0.2"
@@ -16281,7 +16281,7 @@ __metadata:
       optional: true
   bin:
     next: dist/bin/next
-  checksum: 5786c3273b3eed4b1cab4c6cddee7a1aa12db8dd3414465991103b347945c318e4a1f8c63a3e0bd90f888879142e3aac8f3fef89baffc0cbe2f313475a7c6584
+  checksum: 0cfc64c4af61d87edd9b3bec59d6f48e0d3d915d29aac37113d3e321f2035f3e28c64e0f9f67f4a72223429137efc42d53c0da5b44b855717f56410796833b26
   languageName: node
   linkType: hard
 
@@ -22200,7 +22200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:2.9.9, vite@npm:^2.9.8":
+"vite@npm:2.9.9, vite@npm:^2.9.9":
   version: 2.9.9
   resolution: "vite@npm:2.9.9"
   dependencies:
@@ -22229,9 +22229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:0.12.9":
-  version: 0.12.9
-  resolution: "vitest@npm:0.12.9"
+"vitest@npm:0.13.0":
+  version: 0.13.0
+  resolution: "vitest@npm:0.13.0"
   dependencies:
     "@types/chai": "npm:^4.3.1"
     "@types/chai-subset": "npm:^1.3.3"
@@ -22240,7 +22240,7 @@ __metadata:
     local-pkg: "npm:^0.4.1"
     tinypool: "npm:^0.1.3"
     tinyspy: "npm:^0.3.2"
-    vite: "npm:^2.9.8"
+    vite: "npm:^2.9.9"
   peerDependencies:
     "@vitest/ui": "*"
     c8: "*"
@@ -22257,7 +22257,7 @@ __metadata:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: 8f4df4fbe6bd0ad555a077ae8060db9a14c806a1bf7779c0953cdc3f44d0d20eada90f8e37a00f1a444eeec59c25e0161e6d1577a9475cad6a0457ee1df86010
+  checksum: 9189de4fdce7794ebbfc4572714f5ce78bba41b413ff392a243dc4fe1cc432df9ddf7ee52891030ee237f84d2ef9bc29f6061cad6e2ecbf031a94a5d2417f515
   languageName: node
   linkType: hard
 
@@ -22384,10 +22384,10 @@ __metadata:
   resolution: "website@workspace:apps/website"
   dependencies:
     "@babel/core": "npm:7.18.2"
+    "@belgattitude/api-gateway": "workspace:^"
     "@belgattitude/common-i18n": "workspace:^"
     "@belgattitude/db-main": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@belgattitude/graphql-mesh": "workspace:^"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.9.2"
     "@emotion/cache": "npm:11.7.1"
@@ -22401,12 +22401,12 @@ __metadata:
     "@graphql-codegen/typescript": "npm:2.4.11"
     "@graphql-codegen/typescript-operations": "npm:2.4.0"
     "@graphql-codegen/typescript-resolvers": "npm:2.6.4"
-    "@graphql-yoga/node": "npm:2.7.0"
+    "@graphql-yoga/node": "npm:2.8.0"
     "@headlessui/react": "npm:1.6.3"
     "@jitsi/react-sdk": "npm:1.0.1"
     "@mdx-js/react": "npm:2.1.1"
-    "@next/bundle-analyzer": "npm:12.1.7-canary.18"
-    "@next/env": "npm:12.1.7-canary.18"
+    "@next/bundle-analyzer": "npm:12.1.7-canary.19"
+    "@next/env": "npm:12.1.7-canary.19"
     "@octokit/graphql": "npm:4.8.0"
     "@octokit/graphql-schema": "npm:10.73.0"
     "@playwright/test": "npm:1.22.2"
@@ -22416,8 +22416,8 @@ __metadata:
     "@prisma/client": "npm:3.14.0"
     "@react-three/drei": "npm:9.11.3"
     "@react-three/fiber": "npm:8.0.19"
-    "@sentry/nextjs": "npm:7.0.0-beta.1"
-    "@sentry/react": "npm:7.0.0-beta.1"
+    "@sentry/nextjs": "npm:7.0.0-rc.0"
+    "@sentry/react": "npm:7.0.0-rc.0"
     "@sindresorhus/is": "npm:4.6.0"
     "@size-limit/file": "npm:7.0.8"
     "@soluble/cache-interop": "npm:0.9.1"
@@ -22428,19 +22428,19 @@ __metadata:
     "@tailwindcss/line-clamp": "npm:0.4.0"
     "@tailwindcss/typography": "npm:0.5.2"
     "@testing-library/jest-dom": "npm:5.16.4"
-    "@testing-library/react": "npm:13.2.0"
+    "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.0"
     "@testing-library/user-event": "npm:14.2.0"
-    "@tsed/exceptions": "npm:6.114.13"
+    "@tsed/exceptions": "npm:6.114.14"
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     "@types/react": "npm:18.0.9"
     "@types/react-dom": "npm:18.0.5"
     "@types/three": "npm:0.140.0"
     "@vitejs/plugin-react": "npm:1.3.2"
-    "@vitest/ui": "npm:0.12.9"
+    "@vitest/ui": "npm:0.13.0"
     autoprefixer: "npm:10.4.7"
     axios: "npm:0.27.2"
     c8: "npm:7.11.3"
@@ -22452,13 +22452,13 @@ __metadata:
     dotenv-flow-cli: "npm:1.0.0"
     es-check: "npm:6.2.1"
     eslint: "npm:8.16.0"
-    eslint-config-next: "npm:12.1.7-canary.18"
+    eslint-config-next: "npm:12.1.7-canary.19"
     flowbite: "npm:1.4.7"
     flowbite-react: "npm:0.0.25"
     framer-motion: "npm:6.3.4"
     graphql: "npm:16.5.0"
     happy-dom: "npm:4.1.0"
-    i18next: "npm:21.8.4"
+    i18next: "npm:21.8.5"
     ioredis: "npm:5.0.5"
     jest: "npm:28.1.0"
     jest-css-modules-transform: "npm:4.4.2"
@@ -22467,7 +22467,7 @@ __metadata:
     mdast-util-mdx: "npm:2.0.0"
     mdast-util-to-markdown: "npm:1.3.0"
     nanoid: "npm:3.3.4"
-    next: "npm:12.1.7-canary.18"
+    next: "npm:12.1.7-canary.19"
     next-auth: "npm:4.3.4"
     next-connect: "npm:0.12.2"
     next-contentlayer: "npm:0.2.5"
@@ -22518,7 +22518,7 @@ __metadata:
     vite: "npm:2.9.9"
     vite-plugin-svgr: "npm:2.1.0"
     vite-tsconfig-paths: "npm:3.5.0"
-    vitest: "npm:0.12.9"
+    vitest: "npm:0.13.0"
     zustand: "npm:4.0.0-rc.1"
   languageName: unknown
   linkType: soft

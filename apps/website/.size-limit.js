@@ -11,18 +11,19 @@ try {
 const pages = manifest.pages;
 
 const limitCfg = {
-  defaultSize: '120kb',
+  defaultSize: '100kb',
   pages: {
-    // Customize specific page limits if needed
-    '/_app': '150kb',
-    '/_error': '100kb',
+    '/': '100kb',
     '/404': '80kb',
-    // includes react-three
-    '/': '280kb',
-    // includes framer-motion
-    '/about/resume': '160kb',
-    '/about/opensource': '160kb',
+    '/_app': '150kb',
+    '/_error': '80kb',
+    '/_monitor/sentry/csr-page': '75kb',
+    '/_monitor/sentry/ssr-page': '75kb',
+    '/about/opensource': '160kb', // includes framer-motion
+    '/about/resume': '160kb', // includes framer-motion
     '/meet/[meetingSlug]': '310kb',
+    '/meet/_log/[meetingSlug]': '120kb',
+    '/meet/j/[meetingSlug]': '120kb',
   },
 };
 const getPageLimits = () => {

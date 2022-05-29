@@ -16,7 +16,7 @@ export type MeetLogEvent = {
   browserString?: string;
 };
 
-export interface MeetLoggerInterface {
+export interface IMeetLogger {
   /**
    * Capture a meeting event to the backend service.
    */

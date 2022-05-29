@@ -3,10 +3,10 @@ import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
 import { logMeetEvent } from '@/features/meet/api/logMeetEvent';
+import type { MeetEventAction } from '@/features/meet/backend/logger';
 import { Header } from '@/features/meet/components/Header';
 import { ProviderSelectionCard } from '@/features/meet/components/ProviderSelection';
 import { createMeetLogEvent } from '@/features/meet/lib/helper';
-import type { MeetEventAction } from '@/features/meet/lib/logger';
 import { useStore } from '../stores';
 
 type Props = {

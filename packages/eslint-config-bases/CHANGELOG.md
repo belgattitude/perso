@@ -1,5 +1,11 @@
 # @your-org/eslint-config-bases
 
+## 1.3.0
+
+### Minor Changes
+
+- [`757076d`](https://github.com/belgattitude/perso/commit/757076dd851310e7b2b2e47d91175bb0c6afc4a7) Thanks [@belgattitude](https://github.com/belgattitude)! - Improved eslint bases for typescript and jest
+
 ## 1.2.0
 
 ### Minor Changes
