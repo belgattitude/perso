@@ -43,6 +43,7 @@
     "check-size-limit": "size-limit --highlight-less",
     "test": "yarn test-unit",
     "test-unit": "vitest run",
+    "test-unit-jest": "jest --config ./jest.config.js --runInBand",
     "test-unit-watch": "vitest watch --ui",
     "test-e2e-local": "cross-env E2E_WEBSERVER_MODE=BUILD_AND_START playwright test",
     "test-e2e": "playwright test",

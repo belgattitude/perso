@@ -1,22 +1,26 @@
-import type { UnPromisify } from '@belgattitude/ts-utils';
 import { graphql } from '@octokit/graphql';
 import type { Repository } from '@octokit/graphql-schema';
-import type { SearchQuery } from '@/backend/lib/query';
+import { AbstractCacheableSearchQuery } from '@/backend/lib/query';
+import type { CacheKeyGenParams } from '@/backend/lib/query/ICacheableSearchQuery';
 
-export type ListGithubRepos = UnPromisify<
-  ReturnType<ListGithubReposQuery['execute']>
->;
+export type ListGithubRepos = ReturnType<ListGithubReposQuery['mapToApi']>;
 
-export type GraphqlGetGithubRepos = UnPromisify<
+export type GraphqlGetGithubRepos = Awaited<
   ReturnType<ListGithubReposQuery['getGithubRepos']>
 >;
 
-export class ListGithubReposQuery
-  implements SearchQuery<never, ListGithubRepos>
-{
-  readonly queryName = 'ListGithubReposQuery';
+export class ListGithubReposQuery extends AbstractCacheableSearchQuery<undefined> {
+  readonly queryName = 'ListGithubRepos';
+  cacheParams: CacheKeyGenParams = {
+    version: '1.0.0',
+  };
 
-  constructor(private readonly githubToken: string) {}
+  constructor(private readonly githubToken: string) {
+    super();
+    this.cacheParams.extraKeys = {
+      githubToken: this.cacheKeyGenerator.createHash(this.githubToken),
+    };
+  }
 
   execute = async () => {
     return this.mapToApi(await this.getGithubRepos()).filter(
@@ -62,7 +66,6 @@ export class ListGithubReposQuery
                 nameWithOwner
                 url
                 description
-
                 homepageUrl
                 stargazerCount
                 forkCount

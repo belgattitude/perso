@@ -10,18 +10,18 @@ export default async function apiGithubProjectsRoute(
     res.status(405).end(`Method ${req.method} Not Allowed`);
     return;
   }
-  const { _cache = null } = req.query;
+  const { _cache: cacheParam = '' } = req.query;
 
   const query = new ListGithubReposQuery(
     process.env.GITHUB_GRAPHQL_TOKEN as unknown as string
   );
 
   const { data, error, isHit, isSuccess } = await appCache.getOrSet(
-    'ListGithubRepos',
+    query.getCacheKey(undefined),
     query.execute,
     {
       ttl: 3_600,
-      disableCache: _cache === 'app-cache:off',
+      disableCache: cacheParam.includes('app-cache:off'),
     }
   );
 
