@@ -111,8 +111,8 @@ jobs:
           NEXT_DISABLE_SOURCEMAPS: true
           # Don't send telemetry for ci
           NEXT_TELEMETRY_DISABLED: true
-          # Fully disable sentry
-          NEXTJS_DISABLE_SENTRY: true
+          # To account sentry in check-size-limit
+          NEXTJS_DISABLE_SENTRY: false
           NEXT_PUBLIC_PUSHER_CLUSTER: eu
           NEXT_PUBLIC_PUSHER_KEY: blah
           PUSHER_APP_ID: 111
@@ -123,7 +123,7 @@ jobs:
         run: |
           yarn check-dist
 
-      - name: Check bundle size
+      - name: Check browser bundle size
         working-directory: apps/website
         run: |
-          yarn check-build-size
+          yarn check-size-limit

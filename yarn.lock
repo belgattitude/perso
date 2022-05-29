@@ -1462,12 +1462,39 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@belgattitude/api-gateway@workspace:^, @belgattitude/api-gateway@workspace:packages/api-gateway":
+  version: 0.0.0-use.local
+  resolution: "@belgattitude/api-gateway@workspace:packages/api-gateway"
+  dependencies:
+    "@belgattitude/eslint-config-bases": "workspace:^"
+    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
+    "@graphql-mesh/cli": "npm:0.71.0"
+    "@graphql-mesh/config": "npm:0.37.0"
+    "@graphql-mesh/graphql": "npm:0.26.0"
+    "@graphql-mesh/new-openapi": "npm:0.4.21"
+    "@graphql-mesh/runtime": "npm:0.35.0"
+    "@types/jest": "npm:27.5.1"
+    "@types/node": "npm:17.0.36"
+    cross-env: "npm:7.0.3"
+    eslint: "npm:8.16.0"
+    graphql: "npm:16.5.0"
+    jest: "npm:28.1.0"
+    npm-run-all: "npm:4.1.5"
+    prettier: "npm:2.6.2"
+    rimraf: "npm:3.0.2"
+    ts-jest: "npm:28.0.3"
+    typescript: "npm:4.7.2"
+  peerDependencies:
+    graphql: ^16.4.0
+  languageName: unknown
+  linkType: soft
+
 "@belgattitude/common-i18n@workspace:^, @belgattitude/common-i18n@workspace:packages/common-i18n":
   version: 0.0.0-use.local
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.16.0"
     prettier: "npm:2.6.2"
@@ -1486,7 +1513,7 @@ __metadata:
     "@prisma/client": "npm:3.14.0"
     "@soluble/dsn-parser": "npm:1.4.1"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     camelcase: "npm:6.3.0"
     cross-env: "npm:7.0.3"
     dotenv-flow: "npm:3.2.0"
@@ -1521,7 +1548,7 @@ __metadata:
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.0"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     "@types/prettier": "npm:2.6.3"
     "@types/react": "npm:18.0.9"
     "@types/react-dom": "npm:18.0.5"
@@ -1566,40 +1593,13 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@belgattitude/graphql-mesh@workspace:^, @belgattitude/graphql-mesh@workspace:packages/graphql-mesh":
-  version: 0.0.0-use.local
-  resolution: "@belgattitude/graphql-mesh@workspace:packages/graphql-mesh"
-  dependencies:
-    "@belgattitude/eslint-config-bases": "workspace:^"
-    "@graphql-mesh/cache-inmemory-lru": "npm:0.6.18"
-    "@graphql-mesh/cli": "npm:0.71.0"
-    "@graphql-mesh/config": "npm:0.37.0"
-    "@graphql-mesh/graphql": "npm:0.26.0"
-    "@graphql-mesh/new-openapi": "npm:0.4.21"
-    "@graphql-mesh/runtime": "npm:0.35.0"
-    "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
-    cross-env: "npm:7.0.3"
-    eslint: "npm:8.16.0"
-    graphql: "npm:16.5.0"
-    jest: "npm:28.1.0"
-    npm-run-all: "npm:4.1.5"
-    prettier: "npm:2.6.2"
-    rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.3"
-    typescript: "npm:4.7.2"
-  peerDependencies:
-    graphql: ^16.4.0
-  languageName: unknown
-  linkType: soft
-
 "@belgattitude/ts-utils@workspace:^, @belgattitude/ts-utils@workspace:packages/ts-utils":
   version: 0.0.0-use.local
   resolution: "@belgattitude/ts-utils@workspace:packages/ts-utils"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.16.0"
     jest: "npm:28.1.0"
@@ -6226,10 +6226,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.35, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 17.0.35
-  resolution: "@types/node@npm:17.0.35"
-  checksum: 89b978da7d7926f71b241a54a020b2981cc50312d481f3c22fc6aac31f2db7405a1cfce5727b2b16741f7f6553716ed52053f9510971ce26b247fe4d123adc51
+"@types/node@npm:*, @types/node@npm:17.0.36, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
+  version: 17.0.36
+  resolution: "@types/node@npm:17.0.36"
+  checksum: 2f7b53130e92a3375188e775faa50e36592f3554a73fd19a12c6820cb63da9d48c65040fd6d38107ac3b766656313b29de36f9100dc423feb6bef81f4531ea2c
   languageName: node
   linkType: hard
 
@@ -6628,12 +6628,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/ui@npm:0.12.9":
-  version: 0.12.9
-  resolution: "@vitest/ui@npm:0.12.9"
+"@vitest/ui@npm:0.13.0":
+  version: 0.13.0
+  resolution: "@vitest/ui@npm:0.13.0"
   dependencies:
     sirv: "npm:^2.0.2"
-  checksum: 251f08445033816b3c19d2149dd25599d6cad241bc839b0e36821a374227b1812cae052148f039d8f288dda9c90e3b24129dcab690015762785ce65bc8cd7d38
+  checksum: fed6d72f9be4f6965d528d2e5e9e1d51a13dc419485b980b3f303d4b7ca94de7be4fadbc1e20e8138c392031117c16e0a1f1833c21981bbc7f5e941dd1a7bd8f
   languageName: node
   linkType: hard
 
@@ -12388,12 +12388,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.4, i18next@npm:^21.6.14":
-  version: 21.8.4
-  resolution: "i18next@npm:21.8.4"
+"i18next@npm:21.8.5, i18next@npm:^21.6.14":
+  version: 21.8.5
+  resolution: "i18next@npm:21.8.5"
   dependencies:
     "@babel/runtime": "npm:^7.17.2"
-  checksum: 16262cf8106a5c8d0615c43be7cb19df3f85508a2155f7919f0e0bdc8c4c2c2d5ddce3a6a8dfd7cc18ef7480407d5d68b8ecaebd22f7e21c0f5c513d3a3e8d07
+  checksum: 112886fbcac6c38f9df843feeb070cee8712aa2d2f3a4c438230e5f5e078fab580a22b936bd0b64e9c9a98bcc92d638b4259e78718944647dfbcb7f790957ba8
   languageName: node
   linkType: hard
 
@@ -22200,7 +22200,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:2.9.9, vite@npm:^2.9.8":
+"vite@npm:2.9.9, vite@npm:^2.9.9":
   version: 2.9.9
   resolution: "vite@npm:2.9.9"
   dependencies:
@@ -22229,9 +22229,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vitest@npm:0.12.9":
-  version: 0.12.9
-  resolution: "vitest@npm:0.12.9"
+"vitest@npm:0.13.0":
+  version: 0.13.0
+  resolution: "vitest@npm:0.13.0"
   dependencies:
     "@types/chai": "npm:^4.3.1"
     "@types/chai-subset": "npm:^1.3.3"
@@ -22240,7 +22240,7 @@ __metadata:
     local-pkg: "npm:^0.4.1"
     tinypool: "npm:^0.1.3"
     tinyspy: "npm:^0.3.2"
-    vite: "npm:^2.9.8"
+    vite: "npm:^2.9.9"
   peerDependencies:
     "@vitest/ui": "*"
     c8: "*"
@@ -22257,7 +22257,7 @@ __metadata:
       optional: true
   bin:
     vitest: vitest.mjs
-  checksum: 8f4df4fbe6bd0ad555a077ae8060db9a14c806a1bf7779c0953cdc3f44d0d20eada90f8e37a00f1a444eeec59c25e0161e6d1577a9475cad6a0457ee1df86010
+  checksum: 9189de4fdce7794ebbfc4572714f5ce78bba41b413ff392a243dc4fe1cc432df9ddf7ee52891030ee237f84d2ef9bc29f6061cad6e2ecbf031a94a5d2417f515
   languageName: node
   linkType: hard
 
@@ -22384,10 +22384,10 @@ __metadata:
   resolution: "website@workspace:apps/website"
   dependencies:
     "@babel/core": "npm:7.18.2"
+    "@belgattitude/api-gateway": "workspace:^"
     "@belgattitude/common-i18n": "workspace:^"
     "@belgattitude/db-main": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@belgattitude/graphql-mesh": "workspace:^"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.9.2"
     "@emotion/cache": "npm:11.7.1"
@@ -22435,12 +22435,12 @@ __metadata:
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:27.5.1"
-    "@types/node": "npm:17.0.35"
+    "@types/node": "npm:17.0.36"
     "@types/react": "npm:18.0.9"
     "@types/react-dom": "npm:18.0.5"
     "@types/three": "npm:0.140.0"
     "@vitejs/plugin-react": "npm:1.3.2"
-    "@vitest/ui": "npm:0.12.9"
+    "@vitest/ui": "npm:0.13.0"
     autoprefixer: "npm:10.4.7"
     axios: "npm:0.27.2"
     c8: "npm:7.11.3"
@@ -22458,7 +22458,7 @@ __metadata:
     framer-motion: "npm:6.3.4"
     graphql: "npm:16.5.0"
     happy-dom: "npm:4.1.0"
-    i18next: "npm:21.8.4"
+    i18next: "npm:21.8.5"
     ioredis: "npm:5.0.5"
     jest: "npm:28.1.0"
     jest-css-modules-transform: "npm:4.4.2"
@@ -22518,7 +22518,7 @@ __metadata:
     vite: "npm:2.9.9"
     vite-plugin-svgr: "npm:2.1.0"
     vite-tsconfig-paths: "npm:3.5.0"
-    vitest: "npm:0.12.9"
+    vitest: "npm:0.13.0"
     zustand: "npm:4.0.0-rc.1"
   languageName: unknown
   linkType: soft
