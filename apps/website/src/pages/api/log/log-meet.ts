@@ -3,8 +3,8 @@ import type { NextApiRequest, NextApiResponse } from 'next';
 import nc from 'next-connect';
 import { getPusherServerSide } from '@/backend/config/pusher-node';
 import { getCorsMiddleware } from '@/backend/lib/middlewares/cors/getCorsMiddleware';
-import type { MeetEventAction } from '@/features/meet/lib/logger';
-import { PusherServerSideMeetingLogger } from '@/features/meet/lib/logger';
+import type { MeetEventAction } from '@/features/meet/backend/logger';
+import { PusherServerSideMeetingLogger } from '@/features/meet/backend/logger';
 
 async function apiLogMeetRoute(req: NextApiRequest, res: NextApiResponse) {
   const { meetingSlug, action, role } = req.body;

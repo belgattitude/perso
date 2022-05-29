@@ -4,7 +4,8 @@ import type { Channel } from 'pusher-js';
 import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import { getLazyPusher } from '@/config';
-import type { MeetLogEvent } from '@/features/meet/lib/logger';
+import type { MeetLogEvent } from '@/features/meet/backend/logger';
+import { meetLogChannel } from '@/features/meet/config';
 
 export type LoggerPanelProps = {
   meetingSlug: string;
@@ -12,7 +13,7 @@ export type LoggerPanelProps = {
 
 type LogPayload = MeetLogEvent;
 
-const channelName = 'log';
+const channelName = meetLogChannel;
 
 export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
   const { meetingSlug } = props;
