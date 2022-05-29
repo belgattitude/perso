@@ -14,9 +14,11 @@ export type CacheKeyGenParams = {
    * Optional environment
    */
   env?: 'development' | 'production' | 'staging';
+
+  extraKeys?: Record<string, string>;
 };
 
-export interface ICacheableSearchQuery<TRequestDto extends IDTO>
+export interface ICacheableSearchQuery<TRequestDto extends IDTO | undefined>
   extends IQuery<TRequestDto> {
   readonly queryName: string;
   readonly cacheParams: CacheKeyGenParams;

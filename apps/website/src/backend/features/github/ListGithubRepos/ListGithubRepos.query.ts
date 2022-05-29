@@ -1,6 +1,7 @@
 import { graphql } from '@octokit/graphql';
 import type { Repository } from '@octokit/graphql-schema';
 import { AbstractCacheableSearchQuery } from '@/backend/lib/query';
+import type { CacheKeyGenParams } from '@/backend/lib/query/ICacheableSearchQuery';
 
 export type ListGithubRepos = ReturnType<ListGithubReposQuery['mapToApi']>;
 
@@ -8,14 +9,17 @@ export type GraphqlGetGithubRepos = Awaited<
   ReturnType<ListGithubReposQuery['getGithubRepos']>
 >;
 
-export class ListGithubReposQuery extends AbstractCacheableSearchQuery<never> {
+export class ListGithubReposQuery extends AbstractCacheableSearchQuery<undefined> {
   readonly queryName = 'ListGithubRepos';
-  readonly cacheParams = {
+  cacheParams: CacheKeyGenParams = {
     version: '1.0.0',
   };
 
   constructor(private readonly githubToken: string) {
     super();
+    this.cacheParams.extraKeys = {
+      githubToken: this.cacheKeyGenerator.createHash(this.githubToken),
+    };
   }
 
   execute = async () => {

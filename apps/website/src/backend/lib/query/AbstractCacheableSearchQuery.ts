@@ -8,11 +8,15 @@ import type {
 } from '@/backend/lib/query/ICacheableSearchQuery';
 import type { ResponseDto } from '@/backend/lib/query/IQuery';
 
-export abstract class AbstractCacheableSearchQuery<TRequestDto extends IDTO>
-  implements ICacheableSearchQuery<TRequestDto>
+export abstract class AbstractCacheableSearchQuery<
+  TRequestDto extends IDTO | undefined
+> implements ICacheableSearchQuery<TRequestDto>
 {
-  cacheKeyGenerator: ICacheKeyGenerator;
-  dtoSerializer: DTOSerializer;
+  abstract readonly queryName: string;
+  abstract readonly cacheParams: CacheKeyGenParams;
+
+  protected cacheKeyGenerator: ICacheKeyGenerator;
+  protected dtoSerializer: DTOSerializer;
 
   constructor() {
     this.cacheKeyGenerator = new ShaCacheKeyGenerator({
@@ -21,23 +25,31 @@ export abstract class AbstractCacheableSearchQuery<TRequestDto extends IDTO>
     this.dtoSerializer = new DTOSerializer();
   }
 
-  abstract readonly queryName: string;
-  abstract readonly cacheParams: CacheKeyGenParams;
   abstract execute(params: TRequestDto): Promise<unknown>;
 
-  getCacheKey = (requestDTO: TRequestDto | undefined): string => {
+  getCacheKey = <T extends TRequestDto = TRequestDto>(
+    requestDTO: T,
+    extras?: Record<string, string>
+  ): string => {
     const {
       env = undefined,
       commitRef = undefined,
       version,
+      extraKeys = undefined,
     } = this.cacheParams;
 
     const hash = this.cacheKeyGenerator.createHash(
       this.dtoSerializer.stringify({
         ...(requestDTO ?? {}),
+        ...(extras ?? {}),
         __cacheVersion__: version,
         ...(env ? { __cacheEnv__: env } : {}),
         ...(commitRef ? { __cacheCommitRef__: commitRef } : {}),
+        ...(extraKeys
+          ? {
+              __extraKeys__: extraKeys,
+            }
+          : {}),
       })
     );
 

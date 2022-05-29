@@ -3,7 +3,7 @@ import type { IDTO } from '@/backend/lib/dto';
 export type RequestDto = IDTO;
 export type ResponseDto = unknown;
 
-export interface IQuery<TRequestDto extends RequestDto> {
+export interface IQuery<TRequestDto extends RequestDto | undefined> {
   execute(params: TRequestDto): Promise<unknown>;
 }
 /*
