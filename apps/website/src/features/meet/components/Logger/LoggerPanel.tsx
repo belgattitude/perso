@@ -84,22 +84,4 @@ export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
       </div>
     </div>
   );
-
-  return (
-    <div
-      css={css`
-        overflow: auto;
-        height: 300px;
-      `}
-    >
-      <h1>Meeting: {meetingSlug}</h1>
-      <ul>
-        {messages.map((message) => (
-          <li key={message.date}>
-            {message.date}-{message.meetingSlug}-{message.browserString}
-          </li>
-        ))}
-      </ul>
-    </div>
-  );
 };
