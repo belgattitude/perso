@@ -1,10 +1,10 @@
 import { css } from '@emotion/react';
+import type Pusher from 'pusher-js';
+import type { Channel } from 'pusher-js';
 import type { FC } from 'react';
-import { useEffect, useState } from 'react';
-import { getPusher } from '@/config';
+import { useEffect, useRef, useState } from 'react';
+import { getLazyPusher } from '@/config';
 import type { MeetLogEvent } from '@/features/meet/lib/logger';
-
-const pusher = getPusher();
 
 export type LoggerPanelProps = {
   meetingSlug: string;
@@ -12,17 +12,25 @@ export type LoggerPanelProps = {
 
 type LogPayload = MeetLogEvent;
 
+const channelName = 'log';
+
 export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
   const { meetingSlug } = props;
+  const channelRef = useRef<Channel | null>(null);
+  const pusherRef = useRef<Pusher | null>(null);
+
   const [messages, setMessages] = useState<LogPayload[]>([]);
   useEffect(() => {
-    const channel = pusher.subscribe(meetingSlug);
-    channel.bind('log', function (data: LogPayload) {
-      setMessages((prev) => [...prev, data]);
+    getLazyPusher().then((pusher) => {
+      pusherRef.current = pusher;
+      channelRef.current = pusher.subscribe(meetingSlug);
+      channelRef.current.bind(channelName, function (data: LogPayload) {
+        setMessages((prev) => [...prev, data]);
+      });
     });
     return () => {
-      channel.unbind('log');
-      pusher.unsubscribe(meetingSlug);
+      channelRef.current?.unbind(channelName);
+      pusherRef.current?.unsubscribe(meetingSlug);
     };
   }, [meetingSlug]);
 
