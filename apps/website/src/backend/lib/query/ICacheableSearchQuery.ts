@@ -1,3 +1,4 @@
+import type { IDTO } from '@/backend/lib/dto';
 import type { IQuery } from './IQuery';
 
 export type CacheKeyGenParams = {
@@ -15,8 +16,8 @@ export type CacheKeyGenParams = {
   env?: 'development' | 'production' | 'staging';
 };
 
-export interface ICacheableSearchQuery<TRequestDto, TResponseDto>
-  extends IQuery<TRequestDto, TResponseDto> {
+export interface ICacheableSearchQuery<TRequestDto extends IDTO>
+  extends IQuery<TRequestDto> {
   readonly queryName: string;
   readonly cacheParams: CacheKeyGenParams;
 

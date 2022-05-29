@@ -17,8 +17,8 @@ export default async function apiGithubProjectsRoute(
   );
 
   const { data, error, isHit, isSuccess } = await appCache.getOrSet(
-    query.,
-    query.execute,
+    query.getCacheKey(undefined),
+    () => query.execute(),
     {
       ttl: 3_600,
       disableCache: cacheParam.includes('app-cache:off'),
