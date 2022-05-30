@@ -118,7 +118,7 @@ const secureHeaders = createSecureHeaders({
 });
 
 /**
- * @type {Partial<import('next').NextConfig>}
+ * @type {import('next').NextConfig}
  */
 const nextConfig = {
   reactStrictMode: true,
@@ -143,8 +143,7 @@ const nextConfig = {
   compiler: {
     // emotion via swc will increase browser bundle as there's not
     // yet support for browserlist (in other words, complied js will be es5)
-    /**
-     emotion: {
+    emotion: {
       sourceMap: process.env.NODE_ENV === 'development',
       autoLabel: 'dev-only',
       // Allowed values: `[local]` `[filename]` and `[dirname]`
@@ -154,10 +153,11 @@ const nextConfig = {
       // For example labelFormat: "my-classname--[local]", where [local] will be replaced with the name of the variable the result is assigned to.
       labelFormat: '[local]',
     },
-     */
   },
 
   experimental: {
+    browsersListForSwc: true,
+    forceSwcTransforms: false,
     images: {
       layoutRaw: true,
       remotePatterns: [
@@ -201,11 +201,12 @@ const nextConfig = {
     // https://nextjs.org/docs/api-reference/next/image#caching-behavior
     minimumCacheTTL: 60,
     // Allowed domains for next/image
-    domains: ['pbs.twimg.com', 'avatars.githubusercontent.com', 'i.imgur.com'],
+    domains: ['avatars.githubusercontent.com'],
   },
 
   typescript: {
     ignoreBuildErrors: NEXTJS_IGNORE_TYPECHECK,
+    tsconfigPath: './tsconfig.json',
   },
 
   eslint: {

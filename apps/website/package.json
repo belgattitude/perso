@@ -30,6 +30,7 @@
     "clean": "rimraf --no-glob ./.next ./out ./coverage ./tsconfig.tsbuildinfo",
     "?dev": "Link https://github.com/contentlayerdev/contentlayer/issues/104#issuecomment-1026697771",
     "dev": "INIT_CWD=$PWD npm-run-all --parallel --print-label contentlayer-watch nextjs-dev",
+    "dev-fast": "NEXTJS_IGNORE_TYPECHECK=1 NEXTJS_IGNORE_ESLINT=1 yarn dev",
     "nextjs-dev": "next",
     "contentlayer-watch": "contentlayer dev --clearCache",
     "contentlayer-build": "contentlayer build",
