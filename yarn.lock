@@ -6428,10 +6428,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/three@npm:0.140.0":
-  version: 0.140.0
-  resolution: "@types/three@npm:0.140.0"
-  checksum: 5e882ff1da5b203cbf2f449529e021aa9753d6ee038d25766804bce70696119642edbff92357c7b087f79dee66d2c8dd81c9d3f779063e3300b56f06fdde7ffd
+"@types/three@npm:0.141.0":
+  version: 0.141.0
+  resolution: "@types/three@npm:0.141.0"
+  dependencies:
+    "@types/webxr": "npm:*"
+  checksum: 095eaf8789db1e2131a80a72085b73112cdac5c406a18a6fdfcc9ce49e08409e51307a40cea3811f6a2f7937a912a0721ff19983cbddcaf9985eee2567cde0c7
   languageName: node
   linkType: hard
 
@@ -6453,6 +6455,13 @@ __metadata:
   version: 0.0.3
   resolution: "@types/use-sync-external-store@npm:0.0.3"
   checksum: 803c4a8f739c2131e0fc8f73db317513627d7d14532bf674273048ccbf875603a06957a0bca4a154faa59ba4979c08afde38bc8c2e7d2c3e21bf8c57a4be229d
+  languageName: node
+  linkType: hard
+
+"@types/webxr@npm:*":
+  version: 0.4.0
+  resolution: "@types/webxr@npm:0.4.0"
+  checksum: 4652eab3f804247258723b9f9745a22996d5219208a7db37b4bfd604cccd8219cac16f0596e21be67e711509f48a2635930c49d21e3b79d09f4b30cdd6aec029
   languageName: node
   linkType: hard
 
@@ -22443,7 +22452,7 @@ __metadata:
     "@types/node": "npm:17.0.36"
     "@types/react": "npm:18.0.10"
     "@types/react-dom": "npm:18.0.5"
-    "@types/three": "npm:0.140.0"
+    "@types/three": "npm:0.141.0"
     "@vitejs/plugin-react": "npm:1.3.2"
     "@vitest/ui": "npm:0.13.0"
     autoprefixer: "npm:10.4.7"
