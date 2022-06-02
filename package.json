@@ -63,8 +63,7 @@
     "postinstall": "is-ci || yarn husky install"
   },
   "dependencies": {
-    "cross-env": "7.0.3",
-    "pusher-js": "7.1.0-beta"
+    "cross-env": "7.0.3"
   },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
