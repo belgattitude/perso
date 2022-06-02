@@ -1,18 +1,27 @@
 {
   "extends": "nx/presets/npm.json",
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".github/workflows/ci-packages.yml": "*",
+    ".github/workflows/ci-website.yml": "*"
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
+        "accessToken": "Y2YzMDJkZWQtMWUxNi00Y2I5LTgzYWItMjcxZTQ4MTcwMGRmfHJlYWQtd3JpdGU=",
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true,
         "cacheableOperations": [
           "build",
           "typecheck",
           "test",
           "test-unit",
           "lint",
-          "lint-styles",
-          "package",
-          "prepare"
+          "lint-styles"
         ]
       }
     }
@@ -21,18 +30,6 @@
     "build": [
       {
         "target": "build",
-        "projects": "dependencies"
-      }
-    ],
-    "prepare": [
-      {
-        "target": "prepare",
-        "projects": "dependencies"
-      }
-    ],
-    "package": [
-      {
-        "target": "package",
         "projects": "dependencies"
       }
     ]
