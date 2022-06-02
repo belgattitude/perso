@@ -1,5 +1,13 @@
 {
   "extends": "nx/presets/npm.json",
+  "implicitDependencies": {
+    "package.json": {
+      "dependencies": "*",
+      "devDependencies": "*"
+    },
+    ".github/workflows/ci-packages.yml": "*",
+    ".github/workflows/ci-website.yml": "*"
+  },
   "tasksRunnerOptions": {
     "default": {
       "runner": "@nrwl/nx-cloud",
@@ -19,6 +27,12 @@
   },
   "targetDependencies": {
     "build": [
+      {
+        "target": "build",
+        "projects": "dependencies"
+      }
+    ],
+    "typecheck": [
       {
         "target": "build",
         "projects": "dependencies"
