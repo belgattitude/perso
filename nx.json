@@ -4,15 +4,15 @@
     "default": {
       "runner": "@nrwl/nx-cloud",
       "options": {
+        "canTrackAnalytics": false,
+        "showUsageWarnings": true,
         "cacheableOperations": [
           "build",
           "typecheck",
           "test",
           "test-unit",
           "lint",
-          "lint-styles",
-          "package",
-          "prepare"
+          "lint-styles"
         ]
       }
     }
@@ -21,18 +21,6 @@
     "build": [
       {
         "target": "build",
-        "projects": "dependencies"
-      }
-    ],
-    "prepare": [
-      {
-        "target": "prepare",
-        "projects": "dependencies"
-      }
-    ],
-    "package": [
-      {
-        "target": "package",
         "projects": "dependencies"
       }
     ]
