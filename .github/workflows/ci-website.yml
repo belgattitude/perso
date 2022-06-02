@@ -84,19 +84,16 @@ jobs:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
 
       - name: Typecheck
-        working-directory: apps/website
         run: |
-          yarn typecheck
+          yarn g:nx run website:typecheck
 
       - name: Linter
-        working-directory: apps/website
         run: |
-          yarn lint
+          yarn g:nx run website:lint
 
       - name: Unit tests
-        working-directory: apps/website
         run: |
-          yarn test-unit
+          yarn g:nx run website:test-unit
 
       - name: Build web-app
         working-directory: apps/website
