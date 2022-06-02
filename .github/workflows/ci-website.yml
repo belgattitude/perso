@@ -85,15 +85,15 @@ jobs:
 
       - name: Typecheck
         run: |
-          yarn g:nx website:typecheck
+          yarn g:nx run website:typecheck
 
       - name: Linter
         run: |
-          yarn g:nx website:lint
+          yarn g:nx run website:lint
 
       - name: Unit tests
         run: |
-          yarn g:nx website:test-unit
+          yarn g:nx run website:test-unit
 
       - name: Build web-app
         working-directory: apps/website
