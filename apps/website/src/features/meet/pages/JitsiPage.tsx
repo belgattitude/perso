@@ -1,6 +1,5 @@
 import { nanoid } from 'nanoid';
 import { NextSeo } from 'next-seo';
-
 import type { FC } from 'react';
 import { useLayoutEffect } from 'react';
 import { Header } from '@/features/meet/components/Header';

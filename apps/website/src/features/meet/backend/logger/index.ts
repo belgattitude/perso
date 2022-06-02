@@ -3,7 +3,7 @@ export type {
   MeetEventAction,
   MeetAttendeeRole,
   MeetAttendee,
-  MeetLoggerInterface,
-} from './MeetLogger.interface';
+  IMeetLogger,
+} from './IMeetLogger';
 
 export { PusherServerSideMeetingLogger } from './pusher/PusherServerSideMeetingLogger';

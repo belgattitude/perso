@@ -145,10 +145,11 @@ const nextConfig = {
   // Sometimes buggy so enable/disable when debugging.
   swcMinify: true,
 
-  experimental: {
-    /*
-    // Still buggy as of nextjs 12.1.5
-    emotion: {
+  compiler: {
+    // emotion via swc will increase browser bundle as there's not
+    // yet support for browserlist (in other words, complied js will be es5)
+    /**
+     emotion: {
       sourceMap: process.env.NODE_ENV === 'development',
       autoLabel: 'dev-only',
       // Allowed values: `[local]` `[filename]` and `[dirname]`
@@ -158,7 +159,10 @@ const nextConfig = {
       // For example labelFormat: "my-classname--[local]", where [local] will be replaced with the name of the variable the result is assigned to.
       labelFormat: '[local]',
     },
-    */
+     */
+  },
+
+  experimental: {
     images: {
       layoutRaw: true,
       remotePatterns: [

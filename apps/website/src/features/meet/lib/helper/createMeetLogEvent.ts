@@ -2,7 +2,7 @@ import type {
   MeetAttendeeRole,
   MeetEventAction,
   MeetLogEvent,
-} from '@/features/meet/lib/logger';
+} from '@/features/meet/backend/logger';
 
 export type CreateMeetLogEventParams = {
   meetingSlug: string;
