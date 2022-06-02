@@ -1,8 +1,9 @@
 # See https://help.github.com/articles/ignoring-files/ for more about ignoring files.
 # and https://github.com/github/gitignore for examples
 
-# local env files (followinf dotenv-flow / nextjs convention)
+# local env files (following dotenv-flow / nextjs convention)
 
+.env
 .env.local
 .env.*.local
 
