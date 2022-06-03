@@ -1,4 +1,4 @@
-import { RandomUtils } from '@belgattitude/ts-utils';
+import { getRandomInt } from '@belgattitude/ts-utils';
 import { MeshWobbleMaterial } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import type { FC } from 'react';
@@ -30,9 +30,9 @@ export const AnimatedThing: FC = () => {
         ref={meshRef}
         onClick={() =>
           setArgs((_prevArgs) => {
-            const x = RandomUtils.getRandomInt(1, 5);
-            const y = RandomUtils.getRandomInt(x, x + 5);
-            const z = RandomUtils.getRandomInt(1, 5);
+            const x = getRandomInt(1, 5);
+            const y = getRandomInt(x, x + 5);
+            const z = getRandomInt(1, 5);
             return [x, y, z];
           })
         }

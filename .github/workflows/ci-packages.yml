@@ -7,6 +7,7 @@ on:
       - main
     paths:
       - 'packages/**'
+      - 'yarn.lock'
       - '.yarnrc.yml'
       - '.prettier*.*'
       - '*.base.json'
@@ -21,6 +22,7 @@ on:
       - reopened
     paths:
       - 'packages/**'
+      - 'yarn.lock'
       - '.yarnrc.yml'
       - '*.base.json'
       - '*.base.js'
@@ -75,30 +77,23 @@ jobs:
         run: |
           yarn install --immutable
 
-      # Typecheck packages that have changed + packages and apps that depends on them (--from & --since)
-      # That allows to see if we're introducing "surface" regressions (just the types)
       - name: Typecheck
         run: |
-          yarn workspaces foreach -tv --from '@belgattitude/*' --since=origin/main --recursive run typecheck
+          yarn g:nx run-many --target=typecheck --all --exclude=website
 
-      # Lint packages that have changed (--include & --since)
       - name: Linter
         run: |
-          yarn workspaces foreach -tv --include '@belgattitude/*' --since=origin/main --recursive run lint
-          yarn workspaces foreach -tv --include '@belgattitude/*' --since=origin/main --recursive run lint-styles
+          yarn g:nx run-many --target=lint --all --exclude=website
+          yarn g:nx run-many --target=lint-styles --all --exclude=website
 
-      # Test packages that have changed (--include & --since)
       - name: Unit tests changed packages
         run: |
-          yarn workspaces foreach -tv --include '@belgattitude/*' --since=origin/main --recursive run test-unit --runInBand --colors
-      # to debug cache issues: ls ${{ github.workspace }}/.cache
-      # Build packages that have changed (--include & --since), assuming that
-      # apps build are done already. Otherwise --from & --since
+          yarn g:nx run-many --target=test-unit --all --exclude=website
+
       - name: Run build for changed packages
         run: |
-          yarn workspaces foreach -tv --include '@belgattitude/*' --since=origin/main run build
+          yarn g:nx run-many --target=build --all --exclude=website
 
-      # Test storybook build on packages that have changed (--include & --since)
       - name: Run storybook build for changed packages
         run: |
-          yarn workspaces foreach -tv --since=origin/main run build-storybook
+          yarn g:nx run-many --target=build-storybook --all --exclude=website
