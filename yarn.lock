@@ -1482,7 +1482,7 @@ __metadata:
     npm-run-all: "npm:4.1.5"
     prettier: "npm:2.6.2"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.3"
+    ts-jest: "npm:28.0.4"
     typescript: "npm:4.7.2"
   peerDependencies:
     graphql: ^16.4.0
@@ -1530,7 +1530,7 @@ __metadata:
     prisma: "npm:3.14.0"
     rimraf: "npm:3.0.2"
     transliteration: "npm:2.2.0"
-    ts-jest: "npm:28.0.3"
+    ts-jest: "npm:28.0.4"
     ts-node: "npm:10.8.0"
     typescript: "npm:4.7.2"
   peerDependencies:
@@ -1607,7 +1607,7 @@ __metadata:
     npm-run-all: "npm:4.1.5"
     prettier: "npm:2.6.2"
     rimraf: "npm:3.0.2"
-    ts-jest: "npm:28.0.3"
+    ts-jest: "npm:28.0.4"
     typescript: "npm:4.7.2"
   languageName: unknown
   linkType: soft
@@ -22656,9 +22656,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ts-jest@npm:28.0.3":
-  version: 28.0.3
-  resolution: "ts-jest@npm:28.0.3"
+"ts-jest@npm:28.0.4":
+  version: 28.0.4
+  resolution: "ts-jest@npm:28.0.4"
   dependencies:
     bs-logger: "npm:0.x"
     fast-json-stable-stringify: "npm:2.x"
@@ -22670,14 +22670,11 @@ __metadata:
     yargs-parser: "npm:^20.x"
   peerDependencies:
     "@babel/core": ">=7.0.0-beta.0 <8"
-    "@types/jest": ^27.0.0
     babel-jest: ^28.0.0
     jest: ^28.0.0
     typescript: ">=4.3"
   peerDependenciesMeta:
     "@babel/core":
-      optional: true
-    "@types/jest":
       optional: true
     babel-jest:
       optional: true
@@ -22685,7 +22682,7 @@ __metadata:
       optional: true
   bin:
     ts-jest: cli.js
-  checksum: a5193930d05552ebaf80541917bf92a397c696aa23eeac0d526d434e89d4b6a05f9ad9694f6fe672d4a3b737e36dba487d790ddeb8b3f6ef638379311e69858a
+  checksum: 69cbc575b11614aaf678e62de1c0a679b7d57658c66bfa684e4ec300d31b6aba0c2663c4af02ce12639f87f9172a6076648431dd0fe93c4d3ebcdf376ba2e53e
   languageName: node
   linkType: hard
 
@@ -23849,7 +23846,7 @@ __metadata:
     tailwindcss: "npm:3.0.24"
     three: "npm:0.141.0"
     three-stdlib: "npm:2.10.1"
-    ts-jest: "npm:28.0.3"
+    ts-jest: "npm:28.0.4"
     ts-node: "npm:10.8.0"
     type-fest: "npm:2.13.0"
     typescript: "npm:4.7.2"
