@@ -5455,9 +5455,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.0.21":
-  version: 8.0.21
-  resolution: "@react-three/fiber@npm:8.0.21"
+"@react-three/fiber@npm:8.0.22":
+  version: 8.0.22
+  resolution: "@react-three/fiber@npm:8.0.22"
   dependencies:
     "@babel/runtime": "npm:^7.17.8"
     "@types/react-reconciler": "npm:^0.26.7"
@@ -5485,7 +5485,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 1ac18cac7d933cf2cb90561a1a5140fccd9c16b8763b463586ba4297a3736477a1a475ea7acf434ed8e79b406ab4c55eb0078a456adae81787d404068028a663
+  checksum: 7a4249ce6443535d5e1e32440c3047cd5387ef1098cd827b834e6ffe4b32bb1b991cfdc7b14408be342314cb11d5584dbb2c5860b1b92bbea5411edb2be4caa8
   languageName: node
   linkType: hard
 
@@ -6373,14 +6373,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tsed/exceptions@npm:6.114.15":
-  version: 6.114.15
-  resolution: "@tsed/exceptions@npm:6.114.15"
+"@tsed/exceptions@npm:6.114.16":
+  version: 6.114.16
+  resolution: "@tsed/exceptions@npm:6.114.16"
   dependencies:
     change-case: "npm:4.1.2"
     statuses: "npm:>=2.0.1"
-    tslib: "npm:2.3.1"
-  checksum: 004a0c3cebb65115e31225dec613574fa2f943fd53cd258e3887610a076e70716baf7636c5ffd97639f582115597c2d1be67d1bca2f0518587f8fcdb83aeb591
+    tslib: "npm:2.4.0"
+  checksum: 03fffdef4b22d20f7294687f8a5fd4ae27f6622d662f2c0dea0c149c16fda2bff80b11f6ea921406362c5ff1f65f7d1e7540c853364780fb9b98924b1846bf06
   languageName: node
   linkType: hard
 
@@ -20934,16 +20934,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sass@npm:1.52.1":
-  version: 1.52.1
-  resolution: "sass@npm:1.52.1"
+"sass@npm:1.52.2":
+  version: 1.52.2
+  resolution: "sass@npm:1.52.2"
   dependencies:
     chokidar: "npm:>=3.0.0 <4.0.0"
     immutable: "npm:^4.0.0"
     source-map-js: "npm:>=0.6.2 <2.0.0"
   bin:
     sass: sass.js
-  checksum: 0506e372384ac134a37be0c20e6cc6565770f13db1ca506c7dda0bf8e59cfd5c78155ac1655c50f4025cb5a34e8fbf62659a3bb75fa2cd0caa52bce6cd9e7bba
+  checksum: 687f05b6cbcd4505219679d566ef150e46014a1ce48c6fafcd16573f1b97e48534670dc67b8df4d7ce9465ca76e71b84f8f2c5a796adb1bfc8ba86f157d293b3
   languageName: node
   linkType: hard
 
@@ -22789,10 +22789,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:2.3.1, tslib@npm:~2.3.0":
-  version: 2.3.1
-  resolution: "tslib@npm:2.3.1"
-  checksum: 78b00432027abb82405d5986a091fa593c6ef6589d0104d20ecdcaf24f2b02be428d9a38e7cd5304e5d64544cddb83210e326dac4fea9b2b83128a869c825d19
+"tslib@npm:2.4.0, tslib@npm:^2, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:~2.4.0":
+  version: 2.4.0
+  resolution: "tslib@npm:2.4.0"
+  checksum: 022a70708abbc3491734959effd9a87e6e0af5932b61d0c9f1d07b8b80cabbbfc9fc9e9c0fe86e5ab2d32d766ae30117edf00b02d170ff255ab7e60361a4b711
   languageName: node
   linkType: hard
 
@@ -22803,10 +22803,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tslib@npm:^2, tslib@npm:^2.0.0, tslib@npm:^2.0.3, tslib@npm:^2.1.0, tslib@npm:^2.3.0, tslib@npm:^2.3.1, tslib@npm:^2.4.0, tslib@npm:~2.4.0":
-  version: 2.4.0
-  resolution: "tslib@npm:2.4.0"
-  checksum: 022a70708abbc3491734959effd9a87e6e0af5932b61d0c9f1d07b8b80cabbbfc9fc9e9c0fe86e5ab2d32d766ae30117edf00b02d170ff255ab7e60361a4b711
+"tslib@npm:~2.3.0":
+  version: 2.3.1
+  resolution: "tslib@npm:2.3.1"
+  checksum: 78b00432027abb82405d5986a091fa593c6ef6589d0104d20ecdcaf24f2b02be428d9a38e7cd5304e5d64544cddb83210e326dac4fea9b2b83128a869c825d19
   languageName: node
   linkType: hard
 
@@ -23751,7 +23751,7 @@ __metadata:
     "@pothos/plugin-prisma": "npm:3.8.0"
     "@prisma/client": "npm:3.14.0"
     "@react-three/drei": "npm:9.11.3"
-    "@react-three/fiber": "npm:8.0.21"
+    "@react-three/fiber": "npm:8.0.22"
     "@sentry/nextjs": "npm:7.0.0"
     "@sentry/react": "npm:7.0.0"
     "@sindresorhus/is": "npm:4.6.0"
@@ -23767,7 +23767,7 @@ __metadata:
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.0"
     "@testing-library/user-event": "npm:14.2.0"
-    "@tsed/exceptions": "npm:6.114.15"
+    "@tsed/exceptions": "npm:6.114.16"
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:28.1.0"
@@ -23837,7 +23837,7 @@ __metadata:
     remark-rehype: "npm:10.1.0"
     rimraf: "npm:3.0.2"
     rooks: "npm:5.11.2"
-    sass: "npm:1.52.1"
+    sass: "npm:1.52.2"
     sharp: "npm:0.30.6"
     size-limit: "npm:7.0.8"
     superjson: "npm:1.9.1"
