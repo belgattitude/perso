@@ -20,21 +20,21 @@ module.exports = {
   ],
   parserOptions: {
     tsconfigRootDir: __dirname,
-    project: null,
+    project: 'tsconfig.json',
   },
   extends: [
     '@belgattitude/eslint-config-bases/typescript',
-    // '@belgattitude/eslint-config-bases/sonar',
-    // '@belgattitude/eslint-config-bases/regexp',
-    // '@belgattitude/eslint-config-bases/jest',
-    // '@belgattitude/eslint-config-bases/react',
-    // '@belgattitude/eslint-config-bases/tailwind',
-    // '@belgattitude/eslint-config-bases/rtl',
-    // '@belgattitude/eslint-config-bases/graphql-schema',
+    '@belgattitude/eslint-config-bases/sonar',
+    '@belgattitude/eslint-config-bases/regexp',
+    '@belgattitude/eslint-config-bases/jest',
+    '@belgattitude/eslint-config-bases/react',
+    '@belgattitude/eslint-config-bases/tailwind',
+    '@belgattitude/eslint-config-bases/rtl',
+    '@belgattitude/eslint-config-bases/graphql-schema',
     // Add specific rules for nextjs
-    // 'plugin:@next/next/core-web-vitals',
+    'plugin:@next/next/core-web-vitals',
     // Apply prettier and disable incompatible rules
-    // '@belgattitude/eslint-config-bases/prettier',
+    '@belgattitude/eslint-config-bases/prettier',
   ],
   rules: {
     // https://github.com/vercel/next.js/discussions/16832
