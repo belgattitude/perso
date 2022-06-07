@@ -3,14 +3,16 @@
  * @see https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-linters.md
  */
 
-require('@rushstack/eslint-patch/modern-module-resolution');
-
 const {
   getDefaultIgnorePatterns,
 } = require('@belgattitude/eslint-config-bases/helpers');
 
 module.exports = {
   root: true,
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: 'tsconfig.json',
+  },
   ignorePatterns: [
     ...getDefaultIgnorePatterns(),
     '.mesh',
@@ -18,10 +20,6 @@ module.exports = {
     '.next',
     '.out',
   ],
-  parserOptions: {
-    tsconfigRootDir: __dirname,
-    project: 'tsconfig.json',
-  },
   extends: [
     '@belgattitude/eslint-config-bases/typescript',
     '@belgattitude/eslint-config-bases/sonar',
