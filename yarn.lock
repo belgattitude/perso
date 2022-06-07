@@ -3965,26 +3965,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-yoga/common@npm:2.8.1":
-  version: 2.8.1
-  resolution: "@graphql-yoga/common@npm:2.8.1"
-  dependencies:
-    "@envelop/core": "npm:^2.0.0"
-    "@envelop/parser-cache": "npm:^4.0.0"
-    "@envelop/validation-cache": "npm:^4.0.0"
-    "@graphql-tools/schema": "npm:^8.3.1"
-    "@graphql-tools/utils": "npm:^8.6.0"
-    "@graphql-typed-document-node/core": "npm:^3.1.1"
-    "@graphql-yoga/subscription": "npm:2.0.0"
-    cross-undici-fetch: "npm:^0.4.2"
-    dset: "npm:^3.1.1"
-    tslib: "npm:^2.3.1"
-  peerDependencies:
-    graphql: ^15.2.0 || ^16.0.0
-  checksum: da443949f78d13957635dbeee43de4d901534ff757ff87dbfdfdb9fe3cb8d8151e8de282c55bca365e320845d640366a1b6210717a1f5a2396a6bc325473b19a
-  languageName: node
-  linkType: hard
-
 "@graphql-yoga/common@npm:2.8.2":
   version: 2.8.2
   resolution: "@graphql-yoga/common@npm:2.8.2"
@@ -4005,7 +3985,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-yoga/node@npm:2.9.1":
+"@graphql-yoga/node@npm:2.9.1, @graphql-yoga/node@npm:^2.4.0":
   version: 2.9.1
   resolution: "@graphql-yoga/node@npm:2.9.1"
   dependencies:
@@ -4018,22 +3998,6 @@ __metadata:
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
   checksum: 52822d4a3506400e9354c869fc98cbceb249b28e7a0e30b5fe8b34c732c9fb4c2ebbcd8dfab6df736ad14e96bb0b6587de902aaf431b7fd075cbde844cea37d1
-  languageName: node
-  linkType: hard
-
-"@graphql-yoga/node@npm:^2.4.0":
-  version: 2.9.0
-  resolution: "@graphql-yoga/node@npm:2.9.0"
-  dependencies:
-    "@envelop/core": "npm:^2.0.0"
-    "@graphql-tools/utils": "npm:^8.6.0"
-    "@graphql-yoga/common": "npm:2.8.1"
-    "@graphql-yoga/subscription": "npm:2.0.0"
-    cross-undici-fetch: "npm:^0.4.2"
-    tslib: "npm:^2.3.1"
-  peerDependencies:
-    graphql: ^15.2.0 || ^16.0.0
-  checksum: f2ceb04023a2783a1bd7162a73384cb85fd57b0f5afcdab5222c0c8301cac46b584566d6f773b2b04b55a97806ce19c31d27e31b0f6300592255b82a015c8938
   languageName: node
   linkType: hard
 
@@ -6702,10 +6666,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 17.0.36
-  resolution: "@types/node@npm:17.0.36"
-  checksum: 2f7b53130e92a3375188e775faa50e36592f3554a73fd19a12c6820cb63da9d48c65040fd6d38107ac3b766656313b29de36f9100dc423feb6bef81f4531ea2c
+"@types/node@npm:*, @types/node@npm:17.0.40, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
+  version: 17.0.40
+  resolution: "@types/node@npm:17.0.40"
+  checksum: 1204f5cae9be50ee8230e2b6a95c7836060a3c1411470e03b66772d840137c2ee65357c59f1f559205a3f3137d036df3fdf1a741d92caea175447cdf40409bc9
   languageName: node
   linkType: hard
 
@@ -6713,13 +6677,6 @@ __metadata:
   version: 13.9.3
   resolution: "@types/node@npm:13.9.3"
   checksum: c3f6cf7bd43bc735e83741c56431e89285f05a9ee0219f79de8b4b6326eae315516d945acbe6a670a700c63aeaf9ee96eda27fd89db5062d9a193608077be555
-  languageName: node
-  linkType: hard
-
-"@types/node@npm:17.0.40":
-  version: 17.0.40
-  resolution: "@types/node@npm:17.0.40"
-  checksum: 1204f5cae9be50ee8230e2b6a95c7836060a3c1411470e03b66772d840137c2ee65357c59f1f559205a3f3137d036df3fdf1a741d92caea175447cdf40409bc9
   languageName: node
   linkType: hard
 
