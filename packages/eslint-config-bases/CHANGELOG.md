@@ -1,4 +1,4 @@
-# @your-org/eslint-config-bases
+# @belgattitude/eslint-config-bases
 
 ## 1.3.0
 
