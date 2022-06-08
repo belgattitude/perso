@@ -17,8 +17,8 @@ const limitCfg = {
     '/404': '80kb',
     '/_app': '150kb',
     '/_error': '80kb',
-    '/_monitor/sentry/csr-page': '75kb',
-    '/_monitor/sentry/ssr-page': '75kb',
+    '/_monitor/sentry/csr-page': '80kb',
+    '/_monitor/sentry/ssr-page': '80kb',
     '/about/opensource': '160kb', // includes framer-motion
     '/about/resume': '160kb', // includes framer-motion
     '/meet/[meetingSlug]': '310kb',

@@ -10,16 +10,5 @@
     "paths": {}
   },
   "exclude": ["**/node_modules", "**/.*/"],
-  // Prisma seed requires to use commonjs
-  // @link https://github.com/TypeStrong/ts-node#via-tsconfigjson-recommended
-  "ts-node": {
-    "transpileOnly": true,
-    "files": true,
-    "compilerOptions": {
-      "module": "commonjs",
-      "esModuleInterop": true,
-      "skipLibCheck": true,
-      "allowJs": true
-    }
-  }
+  "include": ["**/*.ts", "**/*.js", "**/*.cjs", "**/*.mjs", "**/*.json"]
 }

@@ -44,6 +44,16 @@ const Post = defineDocumentType(() => ({
       description: 'The date of the post',
       required: true,
     },
+    summary: {
+      type: 'string',
+      description: 'Post summary',
+      required: false,
+    },
+    image: {
+      type: 'string',
+      description: 'Main picture',
+      required: false,
+    },
   },
   computedFields: computedFields,
 }));
