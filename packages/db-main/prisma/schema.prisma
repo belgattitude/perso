@@ -1,5 +1,6 @@
 generator client {
-  provider = "prisma-client-js"
+  provider        = "prisma-client-js"
+  previewFeatures = ["fullTextSearch"]
   // output = "../src/generated"
 }
 
@@ -12,6 +13,7 @@ generator pothos {
 datasource db {
   provider = "postgresql"
   url      = env("PRISMA_DATABASE_URL")
+
 }
 
 model Company {
@@ -105,16 +107,16 @@ enum MeetingAttendeeRole {
 }
 
 model MeetingAttendee {
-  id          String    @id @default(cuid())
+  id          String              @id @default(cuid())
   meetingId   String
   role        MeetingAttendeeRole
-  Meeting     Meeting   @relation(fields: [meetingId], references: [id])
+  Meeting     Meeting             @relation(fields: [meetingId], references: [id])
   contactId   String
-  Contact     Contact   @relation(fields: [contactId], references: [id])
+  Contact     Contact             @relation(fields: [contactId], references: [id])
   connectedAt DateTime?
   endedAt     DateTime?
-  createdAt   DateTime  @default(now())
-  updatedAt   DateTime  @updatedAt
+  createdAt   DateTime            @default(now())
+  updatedAt   DateTime            @updatedAt
 
   @@unique([meetingId, contactId])
   @@map(name: "meeting_attendees")
@@ -132,6 +134,7 @@ model Post {
   publishedAt DateTime?
   createdAt   DateTime  @default(now())
   updatedAt   DateTime  @updatedAt
+  deletedAt   DateTime?
 
   @@map(name: "post")
 }
