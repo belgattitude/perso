@@ -1,9 +1,12 @@
 {
   "extends": "./tsconfig.json",
   "compilerOptions": {
-    "rootDir": "./src",
-    "target": "esnext",
-    "module": "esnext"
+    "baseUrl": "./src",
+    "target": "ESNext",
+    "module": "ESNext",
+    "declarationDir": "./dist"
   },
+  "incremental": true, // cause bugs in rollup
+  "include": ["src/**/*"], // https://github.com/developit/microbundle/issues/854
   "exclude": ["dist", "**/__tests__/*"]
 }

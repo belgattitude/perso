@@ -1,14 +1,18 @@
 {
   "extends": "../../tsconfig.base.json",
   "compilerOptions": {
+    "module": "ESNext",
+    "moduleResolution": "node",
+    "target": "ESNext",
+    "lib": ["ESNext"],
+    "esModuleInterop": true,
+    "allowSyntheticDefaultImports": true,
     "baseUrl": "./src",
-    "target": "esnext",
-    "lib": ["dom", "dom.iterable", "esnext"],
-    "module": "esnext",
     "noEmit": false,
     "incremental": true,
+    "resolveJsonModule": true,
     "paths": {}
   },
-  "exclude": ["**/node_modules", "**/.*/", "dist", "build"],
+  "exclude": ["**/node_modules", "**/.*/", "./dist", "./coverage"],
   "include": ["**/*.ts", "**/*.js", "**/.cjs", "**/*.mjs", "**/*.json"]
 }
