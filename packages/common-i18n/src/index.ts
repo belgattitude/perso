@@ -6,10 +6,10 @@ import type navigation from './locales/en/navigation.json';
 import type system from './locales/en/system.json';
 
 export interface I18nNamespaces {
-  home: typeof home;
-  blog: typeof blog;
   about: typeof about;
+  blog: typeof blog;
   common: typeof common;
-  system: typeof system;
+  home: typeof home;
   navigation: typeof navigation;
+  system: typeof system;
 }
