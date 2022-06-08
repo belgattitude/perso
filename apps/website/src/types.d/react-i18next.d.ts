@@ -10,13 +10,6 @@ import type { I18nNamespaces } from '@belgattitude/common-i18n';
 declare module 'react-i18next' {
   interface CustomTypeOptions {
     defaultNS: 'common';
-    resources: {
-      blog: I18nNamespaces['blog'];
-      common: I18nNamespaces['common'];
-      home: I18nNamespaces['home'];
-      about: I18nNamespaces['about'];
-      system: I18nNamespaces['system'];
-      navigation: I18nNamespaces['navigation'];
-    };
+    resources: I18nNamespaces;
   }
 }
