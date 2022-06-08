@@ -25,12 +25,14 @@ export default async function apiBlogSearchRoute(
   );
 
   if (isSuccess) {
+    /*
     const oneMinute = 60;
     res.setHeader(
       'Cache-Control',
       `public,max-age=${oneMinute * 10},s-maxage=${oneMinute * 30}`
     );
     res.setHeader('Content-Type', 'application/json');
+    */
     res.status(200).send(
       JSON.stringify({
         success: true,

@@ -11,6 +11,7 @@ declare module 'react-i18next' {
   interface CustomTypeOptions {
     defaultNS: 'common';
     resources: {
+      blog: I18nNamespaces['blog'];
       common: I18nNamespaces['common'];
       home: I18nNamespaces['home'];
       about: I18nNamespaces['about'];
