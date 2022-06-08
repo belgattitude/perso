@@ -22,11 +22,11 @@
     "build": "rimraf --no-glob ./dist && cross-env NODE_ENV=production microbundle --tsconfig ./tsconfig.build.json -f es --no-compress",
     "dev": "microbundle watch",
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo ./.eslintcache && jest --clear-cache",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
     "test": "run-s test-unit",
     "test-unit": "jest --config jest.config.js",
-    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx --fix"
+    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
   },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",

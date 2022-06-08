@@ -3,10 +3,10 @@
   "version": "1.0.1",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/belgattitude/profile",
+  "homepage": "https://github.com/belgattitude/perso",
   "repository": {
     "type": "git",
-    "url": "https://github.com/belgattitude/profile",
+    "url": "https://github.com/belgattitude/perso",
     "directory": "apps/website"
   },
   "author": {
@@ -48,13 +48,14 @@
     "test-e2e-local": "cross-env E2E_WEBSERVER_MODE=BUILD_AND_START playwright test",
     "test-e2e": "playwright test",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --cache --cache-location ../../.cache/eslint/website.eslintcache",
-    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx --fix",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/website.eslintcache",
+    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
     "postinstall": "yarn contentlayer-build && yarn workspace @belgattitude/db-main run prisma generate"
   },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
     "@emotion/babel-plugin": "11.9.2",
+    "@fontsource/inter": "4.5.11",
     "@fontsource/rubik": "4.5.10",
     "@graphql-codegen/cli": "2.6.2",
     "@graphql-codegen/typed-document-node": "2.2.12",
@@ -138,7 +139,6 @@
     "@emotion/react": "11.9.0",
     "@emotion/server": "11.4.0",
     "@emotion/styled": "11.8.1",
-    "@fontsource/inter": "4.5.11",
     "@graphql-yoga/node": "2.9.1",
     "@headlessui/react": "1.6.4",
     "@jitsi/react-sdk": "1.0.1",

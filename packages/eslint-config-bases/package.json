@@ -3,10 +3,10 @@
   "version": "1.3.0",
   "license": "MIT",
   "private": true,
-  "homepage": "https://github.com/belgattitude/profile",
+  "homepage": "https://github.com/belgattitude/perso",
   "repository": {
     "type": "git",
-    "url": "https://github.com/belgattitude/profile",
+    "url": "https://github.com/belgattitude/perso",
     "directory": "packages/eslint-config-bases"
   },
   "author": {
@@ -58,9 +58,9 @@
   },
   "scripts": {
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx --cache --cache-location ../../.cache/eslint/eslint-config-bases.eslintcache",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/eslint-config-bases.eslintcache",
     "typecheck": "tsc --project tsconfig.json --noEmit",
-    "fix-all-files": "eslint  --ext .ts,.tsx,.js,.jsx --fix"
+    "fix-all-files": "eslint  --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
   },
   "dependencies": {
     "@graphql-eslint/eslint-plugin": "3.10.4",
