@@ -6,10 +6,10 @@ Custom opinionated & composable eslint config for [my personal playgrounds](http
 
 ## Features
 
-- **Customizable:** Simply extends the bases and fine-tune them.
-- **Composable:** Add only what you need. Less unwanted side effects, increase perf.
+- **Customizable:** Simply extends the bases and fine-tune them if needed.
+- **Composable:** Add only what you need (prevent unwanted side effects, increase perf).
 - **Conventions:** Plugins enabled on file conventions patterns to increase perf.
-- **Ease:** No need to install all the plugins in consuming apps/packages.
+- **Ease:** Plugins does not need to be installed per workspace.
 - **Monorepo:** Change detection aware.
 
 ## Install
