@@ -22,12 +22,16 @@ $ yarn add --dev eslint @belgattitude/eslint-config-bases:"workspace:^"
 
 ## Usage
 
-In your app or package, create an `./apps/my-app/.eslintrc.js` file that extends any of the
-existing base configs. For example:
+In your app or package, create an `./apps/my-app/.eslintrc.js` (or `./apps/my-app/.eslintrc.cjs` in esm workspaces)
+file that extends any of the existing base configs. For example:
 
 ```javascript
 module.exports = {
-  root: true, // Be sure to set root to true in monorepo.
+  root: true,
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: "tsconfig.json",
+  },
   ignorePatterns: ["**/node_modules", "**/.cache", "build", ".next"],
   extends: [
     "@your-org/eslint-config-bases/typescript",
@@ -95,7 +99,9 @@ You can find the bases in [./src/bases](./src/bases).
 To prevent conflicts between prettier and eslint, you must re-export the prettier base from `@your-org/eslint-config-bases`.
 
 ```javascript
-const { getPrettierConfig } = require("@belgattitude/eslint-config-bases/helpers");
+const {
+  getPrettierConfig,
+} = require("@belgattitude/eslint-config-bases/helpers");
 module.exports = {
   ...prettierConfig,
   overrides: [
