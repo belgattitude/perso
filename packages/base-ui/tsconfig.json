@@ -13,7 +13,7 @@
       "@belgattitude/common-i18n": ["../../../packages/common-i18n/src/index"]
     }
   },
-  "exclude": ["**/node_modules"],
+  "exclude": ["**/node_modules", "**/.*/", "./dist", "./coverage"],
   "include": [
     "**/*.ts",
     "**/*.tsx",

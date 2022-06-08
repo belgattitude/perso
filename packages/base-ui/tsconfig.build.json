@@ -1,0 +1,12 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "esnext",
+    "module": "esnext",
+    "declarationDir": "./dist"
+  },
+  "incremental": true,
+  "include": ["src/**/*"], // https://github.com/developit/microbundle/issues/854
+  "exclude": ["dist", "**/__tests__/*"]
+}
