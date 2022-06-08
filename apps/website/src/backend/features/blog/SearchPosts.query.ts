@@ -7,6 +7,8 @@ type SearchParams = {
   ftQuery?: string;
 };
 
+export type SearchPosts = Awaited<ReturnType<SearchPostsQuery['execute']>>;
+
 export class SearchPostsQuery extends AbstractCacheableSearchQuery<SearchParams> {
   readonly queryName = 'SearchPostsQuery';
   cacheParams: CacheKeyGenParams = {
