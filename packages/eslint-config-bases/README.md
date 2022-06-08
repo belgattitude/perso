@@ -2,7 +2,7 @@
 
 # About
 
-Custom opionionated & composable eslint config for [my personal playgrounds](https://github.com/belgattitude/perso).
+Custom opinionated & composable eslint config for [my personal playgrounds](https://github.com/belgattitude/perso).
 
 ## Features
 
