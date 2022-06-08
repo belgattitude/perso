@@ -14,9 +14,6 @@ const getTsConfigBasePaths = (tsConfigFile) => {
   if (parsedTsConfig === null) {
     throw new Error(`Cannot find tsconfig file: ${tsConfigFile}`);
   }
-  /**
-   * @type {import('typescript').MapLike<string[]>|false}
-   */
   const tsPaths = parsedTsConfig.config.compilerOptions?.paths ?? {};
 
   return Object.entries(tsPaths).length > 0
