@@ -367,7 +367,7 @@ const cache = new (MeshCache as any)({
       pubsub,
     } as any)
 const sourcesStore = rootStore.child('sources');
-const logger = new DefaultLogger('🕸️  Mesh');
+const logger = new DefaultLogger("🕸️  Mesh");
 const sources = [];
 const transforms = [];
 const additionalEnvelopPlugins = [];

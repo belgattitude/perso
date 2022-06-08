@@ -1,0 +1,45 @@
+/**
+ * Specific eslint rules for this app/package, extends the base rules
+ * @see https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-linters.md
+ */
+
+const {
+  getDefaultIgnorePatterns,
+} = require('@belgattitude/eslint-config-bases/helpers');
+
+module.exports = {
+  root: true,
+  parserOptions: {
+    tsconfigRootDir: __dirname,
+    project: 'tsconfig.json',
+  },
+  ignorePatterns: [...getDefaultIgnorePatterns(), 'dist'],
+  extends: [
+    '@belgattitude/eslint-config-bases/typescript',
+    '@belgattitude/eslint-config-bases/sonar',
+    '@belgattitude/eslint-config-bases/regexp',
+    '@belgattitude/eslint-config-bases/jest',
+    '@belgattitude/eslint-config-bases/react',
+    // '@belgattitude/eslint-config-bases/tailwind',
+    '@belgattitude/eslint-config-bases/rtl',
+    // Apply prettier and disable incompatible rules
+    '@belgattitude/eslint-config-bases/prettier',
+  ],
+  rules: {
+    // For the sake of example
+    // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
+    'jsx-a11y/anchor-is-valid': 'off',
+    'jsx-a11y/click-events-have-key-events': 'off',
+    'jsx-a11y/interactive-supports-focus': 'off',
+  },
+  overrides: [
+    {
+      files: ['src/types.d/**/*.d.ts'],
+      rules: {
+        'react/display-name': 'off',
+        '@typescript-eslint/naming-convention': 'off',
+        '@typescript-eslint/no-explicit-any': 'off',
+      },
+    },
+  ],
+};

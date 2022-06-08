@@ -5,12 +5,14 @@
 Start the database with `docker-compose up database` then run
 
 ```bash
-cd packages/db-main
 yarn prisma-db-push
 yarn prisma-db-seed
+yarn prisma-migrate dev
+yarn prisma-migrate-reset
 ```
 
-> See the .env(.local|.production|.development) file to edit the connection.
+> By convention prisma scripts will override the PRISMA_DATABASE_URL from .env.local if present.
+> See [dotenv-flow](https://github.com/kerimdzhanov/dotenv-flow)
 
 ## Install
 
