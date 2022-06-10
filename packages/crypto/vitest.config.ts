@@ -9,8 +9,9 @@ export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {
     globals: true,
-    environment: 'node',
+    // environment: 'happy-dom',
     passWithNoTests: false,
     exclude: ['**/e2e/**'],
+    // setupFiles: './config/tests/setupVitest.ts',
   },
 });
