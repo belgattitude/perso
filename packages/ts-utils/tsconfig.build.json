@@ -4,9 +4,9 @@
     "baseUrl": "./src",
     "target": "ESNext",
     "module": "ESNext",
-    "declarationDir": "./dist"
+    "declarationDir": "./dist",
+    "incremental": true // set to false if bugs in the build
   },
-  "incremental": true, // set to false if bugs in the build
   "include": ["src/**/*"], // https://github.com/developit/microbundle/issues/854
   "exclude": ["dist", "**/__tests__/*"]
 }

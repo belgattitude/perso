@@ -19,8 +19,6 @@ module.exports = {
     '@belgattitude/eslint-config-bases/sonar',
     '@belgattitude/eslint-config-bases/regexp',
     '@belgattitude/eslint-config-bases/jest',
-    '@belgattitude/eslint-config-bases/rtl',
-    '@belgattitude/eslint-config-bases/react',
     // Apply prettier and disable incompatible rules
     '@belgattitude/eslint-config-bases/prettier',
   ],
