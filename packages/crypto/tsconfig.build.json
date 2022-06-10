@@ -1,0 +1,14 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "ESNext",
+    "module": "ESNext",
+    "declarationDir": "./dist",
+    "emitDeclarationOnly": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./rpout"
+  },
+  //"include": ["src/**/*"], // https://github.com/developit/microbundle/issues/854
+  "exclude": ["dist", "**/__tests__/*"]
+}
