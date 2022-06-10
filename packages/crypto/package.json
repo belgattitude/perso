@@ -24,7 +24,7 @@
     }
   },
   "scripts": {
-    "build": "rimraf --no-glob ./dist && tsup --format esm",
+    "build": "tsup --format esm",
     "dev": "tsup --watch",
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
