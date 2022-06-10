@@ -23,25 +23,22 @@
       "import": {
         "types": "./dist/index.d.ts",
         "default": "./dist/index.js"
-      },
-      "require": {
-        "types": "./dist/index.d.cts",
-        "default": "./dist/index.cjs"
       }
     }
   },
   "scripts": {
-    "build": "rimraf --no-glob ./dist && cross-env NODE_ENV=production microbundle --tsconfig ./tsconfig.build.json -f es,cjs --no-compress",
-    "dev": "microbundle watch",
+    "build": "tsup --format esm",
+    "dev": "tsup --watch",
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
-    "test": "run-s test-unit",
+    "check-dist": "es-check -v",
+    "check-size": "size-limit",
+    "test": "vitest run",
     "test-unit": "vitest run",
     "test-unit-jest": "jest --config ./jest.config.js --runInBand",
     "test-unit-watch": "vitest watch --ui",
-    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
-    "check-size": "size-limit"
+    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
   },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
@@ -51,19 +48,22 @@
     "@vitest/ui": "0.14.2",
     "c8": "7.11.3",
     "cross-env": "7.0.3",
+    "es-check": "6.2.1",
     "eslint": "8.17.0",
-    "get-tsconfig": "3.2.0",
+    "get-tsconfig": "4.0.0",
     "jest": "28.1.1",
-    "microbundle": "0.15.0",
-    "npm-run-all": "4.1.5",
     "prettier": "2.6.2",
     "rimraf": "3.0.2",
     "size-limit": "7.0.8",
     "ts-jest": "28.0.4",
     "tslib": "2.4.0",
+    "tsup": "6.1.2",
     "typescript": "4.7.3",
     "vite": "2.9.12",
     "vite-tsconfig-paths": "3.5.0",
     "vitest": "0.14.2"
+  },
+  "engines": {
+    "node": ">=14.16"
   }
 }

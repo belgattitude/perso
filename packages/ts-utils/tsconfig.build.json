@@ -5,8 +5,8 @@
     "target": "ESNext",
     "module": "ESNext",
     "declarationDir": "./dist",
-    "incremental": true // set to false if bugs in the build
+    "incremental": true,
+    "tsBuildInfoFile": "./tsconfig.build.tsbuildinfo" // // for tsup rollup dts tsBuildInfoFile is required when using incremental
   },
-  "include": ["src/**/*"], // https://github.com/developit/microbundle/issues/854
   "exclude": ["dist", "**/__tests__/*"]
 }

@@ -1,6 +1,6 @@
 // @ts-check
 import { pathsToModuleNameMapper } from 'ts-jest';
-import getTsconfig from 'get-tsconfig';
+import { getTsconfig } from 'get-tsconfig';
 import { getJestCachePath } from '../../cache.config.js';
 
 const tsConfigFile = new URL('./tsconfig.json', import.meta.url).pathname;
@@ -30,7 +30,7 @@ const config = {
   preset: 'ts-jest/presets/default-esm',
   cacheDirectory: getJestCachePath('@belgattitude/ts-utils'),
   testEnvironment: 'node',
-  extensionsToTreatAsEsm: ['.ts'],
+  extensionsToTreatAsEsm: ['.ts', '.js'],
   verbose: true,
   rootDir: './src',
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],

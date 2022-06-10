@@ -1596,13 +1596,10 @@ __metadata:
     "@types/node": "npm:17.0.41"
     "@vitest/ui": "npm:0.14.2"
     c8: "npm:7.11.3"
-    cross-env: "npm:7.0.3"
+    es-check: "npm:6.2.1"
     eslint: "npm:8.17.0"
-    get-tsconfig: "npm:3.2.0"
+    get-tsconfig: "npm:4.0.0"
     jest: "npm:28.1.1"
-    microbundle: "npm:0.15.0"
-    npm-run-all: "npm:4.1.5"
-    prettier: "npm:2.6.2"
     rimraf: "npm:3.0.2"
     size-limit: "npm:7.0.8"
     ts-jest: "npm:28.0.4"
@@ -1716,16 +1713,16 @@ __metadata:
     "@vitest/ui": "npm:0.14.2"
     c8: "npm:7.11.3"
     cross-env: "npm:7.0.3"
+    es-check: "npm:6.2.1"
     eslint: "npm:8.17.0"
-    get-tsconfig: "npm:3.2.0"
+    get-tsconfig: "npm:4.0.0"
     jest: "npm:28.1.1"
-    microbundle: "npm:0.15.0"
-    npm-run-all: "npm:4.1.5"
     prettier: "npm:2.6.2"
     rimraf: "npm:3.0.2"
     size-limit: "npm:7.0.8"
     ts-jest: "npm:28.0.4"
     tslib: "npm:2.4.0"
+    tsup: "npm:6.1.2"
     typescript: "npm:4.7.3"
     vite: "npm:2.9.12"
     vite-tsconfig-paths: "npm:3.5.0"
@@ -12638,7 +12635,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:3.2.0, get-tsconfig@npm:^3.0.1":
+"get-tsconfig@npm:4.0.0":
+  version: 4.0.0
+  resolution: "get-tsconfig@npm:4.0.0"
+  checksum: d1118e5fa36368a47748a7146146b4f0383f144f0927fca8b99c6e5d20d539b41742d81b38c91532985c9ca73646608279e0a0ced206f84db28ed31ffbac148d
+  languageName: node
+  linkType: hard
+
+"get-tsconfig@npm:^3.0.1":
   version: 3.2.0
   resolution: "get-tsconfig@npm:3.2.0"
   checksum: 9f5c5751572eca03375e83723f243b9ea49139e288a40ce3a4f15b545466d94277691a1bd778e614630ed55d965643a2cdd8854c6f8f17cf9675cec122e7ab8e
