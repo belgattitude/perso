@@ -6,8 +6,6 @@ import {
   scryptSync,
 } from 'node:crypto';
 
-const ALGO_AES_256_CBC = {} as const;
-
 type EncryptedResult = {
   iv: string;
   encrypted: string;
