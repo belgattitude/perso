@@ -1,7 +1,7 @@
 module.exports = [
   {
     name: 'JS',
-    path: ['dist/index.esm.js'],
-    limit: '5KB',
+    path: ['dist/index.js'],
+    limit: '10KB',
   },
 ];
