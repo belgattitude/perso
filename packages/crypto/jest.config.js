@@ -26,11 +26,11 @@ const getTsConfigBasePaths = (tsConfigFile) => {
 
 /** @type {import('ts-jest/dist').InitialOptionsTsJest} */
 const config = {
-  displayName: `ts-utils:unit`,
+  displayName: `crypto:unit`,
   preset: 'ts-jest/presets/default-esm',
   cacheDirectory: getJestCachePath('@belgattitude/ts-utils'),
   testEnvironment: 'node',
-  extensionsToTreatAsEsm: ['.ts', '.js'],
+  extensionsToTreatAsEsm: ['.ts'],
   verbose: true,
   rootDir: './src',
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],

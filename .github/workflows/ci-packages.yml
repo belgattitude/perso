@@ -94,9 +94,13 @@ jobs:
         run: |
           yarn g:nx run-many --target=build --all --exclude=website
 
-      - name: Run build for changed packages
+      - name: Check build for size-limits
         run: |
           yarn g:nx run-many --target=check-size --all --exclude=website
+
+      - name: Check build ecmascript compliance
+        run: |
+          yarn g:nx run-many --target=check-dist --all --exclude=website
 
       - name: Run storybook build for changed packages
         run: |
