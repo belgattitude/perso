@@ -1636,7 +1636,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     transliteration: "npm:2.2.0"
     ts-jest: "npm:28.0.5"
-    tsx: "npm:3.4.2"
+    tsx: "npm:3.4.3"
     typescript: "npm:4.7.3"
   peerDependencies:
     "@pothos/plugin-prisma": ^3.6.1
@@ -2807,17 +2807,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild-kit/cjs-loader@npm:^2.0.1":
-  version: 2.0.1
-  resolution: "@esbuild-kit/cjs-loader@npm:2.0.1"
+"@esbuild-kit/cjs-loader@npm:^2.1.0":
+  version: 2.1.0
+  resolution: "@esbuild-kit/cjs-loader@npm:2.1.0"
   dependencies:
-    "@esbuild-kit/core-utils": "npm:^1.2.0"
-    get-tsconfig: "npm:^3.0.1"
-  checksum: 89b44246ae2c8d0a51c4c8fe8c324370bf44a3d3afe2208b7c70947f07120d2ca60e016cb27a5e9e3376e7c73c12bad99c7f4254fa9df5b98bad3ea6639a185e
+    "@esbuild-kit/core-utils": "npm:^1.3.0"
+    get-tsconfig: "npm:^4.0.0"
+  checksum: 4fe94beae19fd4c1b4ccc8bbfa523e6ff8dc348ebfc755c35e53cbe99687167edfb2b8d479f4463826556e3733c934fd13940b626fc10db8e5fe404f524eea24
   languageName: node
   linkType: hard
 
-"@esbuild-kit/core-utils@npm:^1.2.0, @esbuild-kit/core-utils@npm:^1.3.1":
+"@esbuild-kit/core-utils@npm:^1.3.0, @esbuild-kit/core-utils@npm:^1.3.1":
   version: 1.3.1
   resolution: "@esbuild-kit/core-utils@npm:1.3.1"
   dependencies:
@@ -2827,13 +2827,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@esbuild-kit/esm-loader@npm:^2.1.3":
-  version: 2.1.5
-  resolution: "@esbuild-kit/esm-loader@npm:2.1.5"
+"@esbuild-kit/esm-loader@npm:^2.2.0":
+  version: 2.2.0
+  resolution: "@esbuild-kit/esm-loader@npm:2.2.0"
   dependencies:
     "@esbuild-kit/core-utils": "npm:^1.3.1"
-    get-tsconfig: "npm:^3.0.1"
-  checksum: 10c1a2ec5f9756e76a4f59eb5df9be80d20121d65914a7d189071fd277b5466678a7a579ca6e3df888d95dd49eaad3e4c4f01077586bd57570f073ced1926bd4
+    get-tsconfig: "npm:^4.0.0"
+  checksum: c6b5fdd671851cf5eb73e921ac728c1db7e8d6b29020abee391ba4bcf75a427d50a61f1ee9670313e6ac7477a6acbd069bf1bbe543918943f183d81d27788c1e
   languageName: node
   linkType: hard
 
@@ -12636,17 +12636,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:4.0.2":
+"get-tsconfig@npm:4.0.2, get-tsconfig@npm:^4.0.0":
   version: 4.0.2
   resolution: "get-tsconfig@npm:4.0.2"
   checksum: 2d9b40463a7279e1105790b3c71f1e9b28824818af751853691539ee07fd01dd7c55ffd77a9360f7ec9bf63fda5f669bb4308b22cf2cfb32ad3a8752697421e5
-  languageName: node
-  linkType: hard
-
-"get-tsconfig@npm:^3.0.1":
-  version: 3.2.0
-  resolution: "get-tsconfig@npm:3.2.0"
-  checksum: 9f5c5751572eca03375e83723f243b9ea49139e288a40ce3a4f15b545466d94277691a1bd778e614630ed55d965643a2cdd8854c6f8f17cf9675cec122e7ab8e
   languageName: node
   linkType: hard
 
@@ -23471,20 +23464,20 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsx@npm:3.4.2":
-  version: 3.4.2
-  resolution: "tsx@npm:3.4.2"
+"tsx@npm:3.4.3":
+  version: 3.4.3
+  resolution: "tsx@npm:3.4.3"
   dependencies:
-    "@esbuild-kit/cjs-loader": "npm:^2.0.1"
-    "@esbuild-kit/core-utils": "npm:^1.2.0"
-    "@esbuild-kit/esm-loader": "npm:^2.1.3"
+    "@esbuild-kit/cjs-loader": "npm:^2.1.0"
+    "@esbuild-kit/core-utils": "npm:^1.3.1"
+    "@esbuild-kit/esm-loader": "npm:^2.2.0"
     fsevents: "npm:~2.3.2"
   dependenciesMeta:
     fsevents:
       optional: true
   bin:
     tsx: dist/cli.js
-  checksum: d80b676e8a5c0fb3016675f366c9310e9ae47923269fd75d660f046f9c6e8a2fc37e07b5b0bf1085df705f77d51fb0d57503f61872a101985fdbcb6b9be9ab58
+  checksum: d050062973ba09325b67f0f4513cffa16294af361f145ef8c8dede5657b6a570a9ae05ab900e2b0c4c18e0bd854bb7e7f33c7a141334d378716cc032dd30f7df
   languageName: node
   linkType: hard
 
