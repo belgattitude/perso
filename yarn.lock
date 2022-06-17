@@ -1543,6 +1543,7 @@ __metadata:
     cross-env: "npm:7.0.3"
     es-check: "npm:6.2.1"
     eslint: "npm:8.17.0"
+    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
     happy-dom: "npm:5.3.1"
     i18next: "npm:^21.8.9"
     jest: "npm:28.1.1"
@@ -1595,7 +1596,7 @@ __metadata:
     c8: "npm:7.11.3"
     es-check: "npm:6.2.1"
     eslint: "npm:8.17.0"
-    get-tsconfig: "npm:4.0.3"
+    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
     jest: "npm:28.1.1"
     rimraf: "npm:3.0.2"
     size-limit: "npm:7.0.8"
@@ -1710,13 +1711,14 @@ __metadata:
     cross-env: "npm:7.0.3"
     es-check: "npm:6.2.1"
     eslint: "npm:8.17.0"
-    get-tsconfig: "npm:4.0.3"
+    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
     jest: "npm:28.1.1"
     rimraf: "npm:3.0.2"
     size-limit: "npm:7.0.8"
     ts-jest: "npm:28.0.5"
     tslib: "npm:2.4.0"
     tsup: "npm:6.1.2"
+    type-fest: "npm:2.13.1"
     typescript: "npm:4.7.3"
     vite: "npm:2.9.12"
     vite-tsconfig-paths: "npm:3.5.0"
@@ -12636,10 +12638,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:4.0.3, get-tsconfig@npm:^4.0.0":
+"get-tsconfig@npm:4.0.3":
   version: 4.0.3
   resolution: "get-tsconfig@npm:4.0.3"
   checksum: 93f3571f1643b2fe380c051c122bed7a7cb10f3d06e1d4467c833b924028077ba4c06168719ed2984d27266f6b1a4987d67eea19c4ab3b4859bccd88168b83c5
+  languageName: node
+  linkType: hard
+
+"get-tsconfig@patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch":
+  version: 4.0.3
+  resolution: "get-tsconfig@patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch::version=4.0.3&hash=a47b52"
+  checksum: f165e27c748deb186afcd2b2e741e08f31be085fbcfe7a82b4d3dfb90bfbe0945e54025d8013ba99a422ca00aaa7aa5da14935734e8aceeb77c5487db88fbf77
   languageName: node
   linkType: hard
 
@@ -24455,6 +24464,7 @@ __metadata:
     flowbite: "npm:1.4.7"
     flowbite-react: "npm:0.0.26"
     framer-motion: "npm:6.3.11"
+    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
     got: "npm:12.1.0"
     graphql: "npm:16.5.0"
     happy-dom: "npm:5.3.1"

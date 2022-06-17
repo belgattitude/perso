@@ -6,7 +6,8 @@ import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
-// https://vitejs.dev/config/
+const testFiles = ['./src/**/*.test.{js,ts}'];
+
 export default defineConfig({
   plugins: [
     react({
@@ -28,7 +29,11 @@ export default defineConfig({
     globals: true,
     environment: 'happy-dom',
     passWithNoTests: false,
-    exclude: ['**/e2e/**'],
     setupFiles: './config/tests/setupVitest.ts',
+    include: testFiles,
+    coverage: {
+      reporter: ['text', 'clover'],
+      extension: ['js', 'jsx', 'ts', 'tsx'],
+    },
   },
 });
