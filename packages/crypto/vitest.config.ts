@@ -4,14 +4,19 @@
 import tsconfigPaths from 'vite-tsconfig-paths';
 import { defineConfig } from 'vitest/config';
 
-// https://vitejs.dev/config/
+const testFiles = ['./src/**/*.test.{js,ts}'];
+
 export default defineConfig({
   plugins: [tsconfigPaths()],
   test: {
     globals: true,
-    // environment: 'happy-dom',
+    environment: 'node',
     passWithNoTests: false,
-    exclude: ['**/e2e/**'],
+    include: testFiles,
     // setupFiles: './config/tests/setupVitest.ts',
+    coverage: {
+      reporter: ['text', 'clover'],
+      extension: ['js', 'jsx', 'ts', 'tsx'],
+    },
   },
 });

@@ -1,0 +1,13 @@
+diff --git a/dist/index.d.ts b/dist/index.d.ts
+index b6c59a23b88cafc2934b5b97c2fb9257f77ac5fc..2760d26ba17d682ac903414b61b24d9c08124ef1 100644
+--- a/dist/index.d.ts
++++ b/dist/index.d.ts
+@@ -787,7 +787,7 @@ declare namespace TsConfigJson {
+ 		/**
+ 		Specify path mapping to be computed relative to baseUrl option.
+ 		*/
+-		paths?: Partial<Record<string, string[]>>;
++		paths?: Record<string, string[]>;
+ 
+ 		/**
+ 		List of TypeScript language server plugins to load.
