@@ -1502,8 +1502,8 @@ __metadata:
     "@graphql-mesh/graphql": "npm:0.27.2"
     "@graphql-mesh/new-openapi": "npm:0.4.27"
     "@graphql-mesh/runtime": "npm:0.37.1"
-    "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:17.0.42"
+    "@types/jest": "npm:28.1.2"
+    "@types/node": "npm:18.0.0"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.17.0"
     graphql: "npm:16.5.0"
@@ -1523,17 +1523,15 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@emotion/babel-plugin": "npm:11.9.2"
-    "@emotion/cache": "npm:^11.7.1"
-    "@emotion/react": "npm:^11.9.0"
-    "@emotion/server": "npm:^11.4.0"
-    "@emotion/styled": "npm:^11.8.1"
+    "@emotion/react": "npm:^11.9.3"
+    "@emotion/styled": "npm:^11.9.3"
     "@size-limit/file": "npm:7.0.8"
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.0"
-    "@testing-library/user-event": "npm:14.2.0"
-    "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:17.0.42"
+    "@testing-library/user-event": "npm:14.2.1"
+    "@types/jest": "npm:28.1.2"
+    "@types/node": "npm:18.0.0"
     "@types/react": "npm:18.0.14"
     "@types/react-dom": "npm:18.0.5"
     "@vitejs/plugin-react": "npm:1.3.2"
@@ -1545,29 +1543,33 @@ __metadata:
     eslint: "npm:8.17.0"
     get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
     happy-dom: "npm:5.3.1"
-    i18next: "npm:^21.8.9"
     jest: "npm:28.1.1"
     jest-css-modules-transform: "npm:4.4.2"
     jest-environment-jsdom: "npm:28.1.1"
     microbundle: "npm:0.15.0"
     npm-run-all: "npm:4.1.5"
-    picocolors: "npm:^1.0.0"
     postcss: "npm:8.4.14"
     postcss-flexbugs-fixes: "npm:5.0.2"
     postcss-preset-env: "npm:7.7.1"
-    react: "npm:^18.1.0"
-    react-dom: "npm:^18.1.0"
-    react-i18next: "npm:^11.17.1"
+    react: "npm:^18.2.0"
+    react-dom: "npm:^18.2.0"
     rimraf: "npm:3.0.2"
     size-limit: "npm:7.0.8"
     ts-jest: "npm:28.0.5"
     ts-node: "npm:10.8.1"
-    type-fest: "npm:^2.13.0"
     typescript: "npm:4.7.3"
     vite: "npm:2.9.12"
     vite-plugin-svgr: "npm:2.1.0"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.15.1"
+  peerDependencies:
+    "@emotion/react": ^11.9.3
+    "@emotion/styled": ^11.3.0
+  peerDependenciesMeta:
+    "@emotion/react":
+      optional: false
+    "@emotion/styled":
+      optional: false
   languageName: unknown
   linkType: soft
 
@@ -1576,7 +1578,7 @@ __metadata:
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@types/node": "npm:17.0.42"
+    "@types/node": "npm:18.0.0"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.17.0"
     rimraf: "npm:3.0.2"
@@ -1590,8 +1592,8 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:7.0.8"
-    "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:17.0.42"
+    "@types/jest": "npm:28.1.2"
+    "@types/node": "npm:18.0.0"
     "@vitest/ui": "npm:0.15.1"
     c8: "npm:7.11.3"
     es-check: "npm:6.2.1"
@@ -1619,8 +1621,8 @@ __metadata:
     "@pothos/plugin-prisma": "npm:3.10.0"
     "@prisma/client": "npm:3.15.2"
     "@soluble/dsn-parser": "npm:1.4.1"
-    "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:17.0.42"
+    "@types/jest": "npm:28.1.2"
+    "@types/node": "npm:18.0.0"
     camelcase: "npm:7.0.0"
     cross-env: "npm:7.0.3"
     dotenv-flow: "npm:3.2.0"
@@ -1653,8 +1655,8 @@ __metadata:
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.0"
-    "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:17.0.42"
+    "@types/jest": "npm:28.1.2"
+    "@types/node": "npm:18.0.0"
     "@types/prettier": "npm:2.6.3"
     "@types/react": "npm:18.0.14"
     "@types/react-dom": "npm:18.0.5"
@@ -1704,8 +1706,8 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:7.0.8"
-    "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:17.0.42"
+    "@types/jest": "npm:28.1.2"
+    "@types/node": "npm:18.0.0"
     "@vitest/ui": "npm:0.15.1"
     c8: "npm:7.11.3"
     cross-env: "npm:7.0.3"
@@ -2584,7 +2586,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/cache@npm:11.9.3, @emotion/cache@npm:^11.7.1, @emotion/cache@npm:^11.9.3":
+"@emotion/cache@npm:11.9.3, @emotion/cache@npm:^11.9.3":
   version: 11.9.3
   resolution: "@emotion/cache@npm:11.9.3"
   dependencies:
@@ -2636,7 +2638,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/react@npm:11.9.3, @emotion/react@npm:^11.9.0":
+"@emotion/react@npm:11.9.3, @emotion/react@npm:^11.9.3":
   version: 11.9.3
   resolution: "@emotion/react@npm:11.9.3"
   dependencies:
@@ -2672,7 +2674,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/server@npm:11.4.0, @emotion/server@npm:^11.4.0":
+"@emotion/server@npm:11.4.0":
   version: 11.4.0
   resolution: "@emotion/server@npm:11.4.0"
   dependencies:
@@ -2696,7 +2698,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@emotion/styled@npm:11.9.3, @emotion/styled@npm:^11.8.1":
+"@emotion/styled@npm:11.9.3, @emotion/styled@npm:^11.9.3":
   version: 11.9.3
   resolution: "@emotion/styled@npm:11.9.3"
   dependencies:
@@ -5836,15 +5838,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/browser@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/browser@npm:7.1.1"
+"@sentry/browser@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/browser@npm:7.2.0"
   dependencies:
-    "@sentry/core": "npm:7.1.1"
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/core": "npm:7.2.0"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     tslib: "npm:^1.9.3"
-  checksum: d918f7d789c4af5db5f6a99f3f08d05cd8363e90e4dba814df467c0e96edf754577f84df2083db4057549f68ab82ccc0d02013ce2007c752e8a9bce44e4baa93
+  checksum: 0f17c2215790a1607d9f2745bbdb26c3711f34357ac0a2505928b6f1f777f54b577edbd23dcbb5f88c5aac0c1cbe4b42fbf2eb658ec10e9229445fae0d55d96a
   languageName: node
   linkType: hard
 
@@ -5865,53 +5867,53 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@sentry/core@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/core@npm:7.1.1"
+"@sentry/core@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/core@npm:7.2.0"
   dependencies:
-    "@sentry/hub": "npm:7.1.1"
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/hub": "npm:7.2.0"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     tslib: "npm:^1.9.3"
-  checksum: 6efd4e33805ac7427ca05411644613ce08d8d2e50b526cc5c16cbfe5d13ce32f35b5755e23cea9a4b8b578849865f86d2c5e87edf139be543a10dcade97b8775
+  checksum: 138b8074a684efb8b984b122304d0d78c60a21dfb6f7efcc44a21225f59d6d841514e5ab560bdf6919ee2c486cb7e79f45b31a568b174972b8037b59bb8feb16
   languageName: node
   linkType: hard
 
-"@sentry/hub@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/hub@npm:7.1.1"
+"@sentry/hub@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/hub@npm:7.2.0"
   dependencies:
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     tslib: "npm:^1.9.3"
-  checksum: 680ae0b9e0b828ad969510db1fb5a109fa8ed4d0dd536b641e098c7d0079d55eb12ff3b6676fa56fc2c3319046fc4f672095c5cc8f9c296a8f7eb4b614fd0b85
+  checksum: e151a5ff4bafcb7d8f13d25c93f0aedb7e1821613c45dea264f6917f4ef7168ad6965e3384242de8730fc4a23aa3bb34d6ca5ec94d2f44e8f01fb5b9a0d12dd7
   languageName: node
   linkType: hard
 
-"@sentry/integrations@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/integrations@npm:7.1.1"
+"@sentry/integrations@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/integrations@npm:7.2.0"
   dependencies:
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     localforage: "npm:^1.8.1"
     tslib: "npm:^1.9.3"
-  checksum: 470da352ce3f56592f25c46f15e679f540137fddcdb2adc3ae0bc377439bf9285c607e11bf50848eecce592fec412442e62cfe95190f7b13eae310f8b5078d5d
+  checksum: 4f87448daff839a787156cbb8dd219923bee7a587eb75093e5bd72a85b4b2117458477e28015e90c31225cddad1e94c93c6b4a53e152915b624937a149166634
   languageName: node
   linkType: hard
 
-"@sentry/nextjs@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/nextjs@npm:7.1.1"
+"@sentry/nextjs@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/nextjs@npm:7.2.0"
   dependencies:
-    "@sentry/core": "npm:7.1.1"
-    "@sentry/hub": "npm:7.1.1"
-    "@sentry/integrations": "npm:7.1.1"
-    "@sentry/node": "npm:7.1.1"
-    "@sentry/react": "npm:7.1.1"
-    "@sentry/tracing": "npm:7.1.1"
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/core": "npm:7.2.0"
+    "@sentry/hub": "npm:7.2.0"
+    "@sentry/integrations": "npm:7.2.0"
+    "@sentry/node": "npm:7.2.0"
+    "@sentry/react": "npm:7.2.0"
+    "@sentry/tracing": "npm:7.2.0"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     "@sentry/webpack-plugin": "npm:1.18.9"
     tslib: "npm:^1.9.3"
   peerDependencies:
@@ -5921,67 +5923,67 @@ __metadata:
   peerDependenciesMeta:
     webpack:
       optional: true
-  checksum: 3f8da00af6e7643949869c4af4826efea1693026f88da788cf800b51912df02cc619f4a252dddaf8eb819945bbc989262c35b631a9255486d0d485943a87f6cb
+  checksum: 6da07a09f0d997dead668636a609bfd176599595ce0aeb0767a8f063cd9657fafaa4ec7abb0fdc16dd28a10d97e170afae525b6171640c55fb017301ec7822c0
   languageName: node
   linkType: hard
 
-"@sentry/node@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/node@npm:7.1.1"
+"@sentry/node@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/node@npm:7.2.0"
   dependencies:
-    "@sentry/core": "npm:7.1.1"
-    "@sentry/hub": "npm:7.1.1"
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/core": "npm:7.2.0"
+    "@sentry/hub": "npm:7.2.0"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     cookie: "npm:^0.4.1"
     https-proxy-agent: "npm:^5.0.0"
     lru_map: "npm:^0.3.3"
     tslib: "npm:^1.9.3"
-  checksum: 95a21b0935f093a1c06279c82e620e17fe0c24b94dc14543aeaf8e5718ab3a49c203d9c18338085b08028afdb9fc9273c04f007db010af04e3c6dd4df6ddd444
+  checksum: 539ab5eddb230121f8dd3abdbc0e4ea2ff2320a3814a360345dbe4e2ed32af4d50c7e466dcdf7992f9f8bb321dbc33fb3a04ccff8bb5adf6a0368abc6cceae0e
   languageName: node
   linkType: hard
 
-"@sentry/react@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/react@npm:7.1.1"
+"@sentry/react@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/react@npm:7.2.0"
   dependencies:
-    "@sentry/browser": "npm:7.1.1"
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/browser": "npm:7.2.0"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     hoist-non-react-statics: "npm:^3.3.2"
     tslib: "npm:^1.9.3"
   peerDependencies:
     react: 15.x || 16.x || 17.x || 18.x
-  checksum: a0d48eb892177e5ea5369c1c49df627698b92813adf5dd20d72f9d43d0bb3f509a46831646f388aec2412dc4ad6f759ceb0ac28ecf65b50b19ade9a07c9fdc93
+  checksum: 87e1011d67b3e67c2bc870de5329e30a16a70deec39447efe4e5136118aa55661a36a8489414104c8a5084a99571d82d2a8101766af903d1d6589cde0e50dd6f
   languageName: node
   linkType: hard
 
-"@sentry/tracing@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/tracing@npm:7.1.1"
+"@sentry/tracing@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/tracing@npm:7.2.0"
   dependencies:
-    "@sentry/hub": "npm:7.1.1"
-    "@sentry/types": "npm:7.1.1"
-    "@sentry/utils": "npm:7.1.1"
+    "@sentry/hub": "npm:7.2.0"
+    "@sentry/types": "npm:7.2.0"
+    "@sentry/utils": "npm:7.2.0"
     tslib: "npm:^1.9.3"
-  checksum: 83019bf71a0d4bec702494a501df732083537a0cf3e54b9f60c189c4c8f4cf8c13190d48af88efa41f6c9a71c7a4787d732110c4fa01805f7f235020e90f3045
+  checksum: 208e6b70663d8a7642bfc8383f8d994c7f93b6c219dcebeb4339b2d30bd280823df240b38806748be4571bf90eb8f247c05786bb9c3fc0257b762cb0d06dfc7b
   languageName: node
   linkType: hard
 
-"@sentry/types@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/types@npm:7.1.1"
-  checksum: 932e5ae9c7ad329d6c35677e96677d6fa70d38224adc5ef2746d9291d2e08162bb732b8898dd7762e86b9040c6e728e773cb352e6fcf3b09c8d934f483e6e559
+"@sentry/types@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/types@npm:7.2.0"
+  checksum: 07b9cdb47578d30e32387e168b4c083850d522cf436fca2c4ad4fac3dcc1efa242c4269f962439cab540918caeb4104a2fb9ec531e674aaa9049b15d3a85f92d
   languageName: node
   linkType: hard
 
-"@sentry/utils@npm:7.1.1":
-  version: 7.1.1
-  resolution: "@sentry/utils@npm:7.1.1"
+"@sentry/utils@npm:7.2.0":
+  version: 7.2.0
+  resolution: "@sentry/utils@npm:7.2.0"
   dependencies:
-    "@sentry/types": "npm:7.1.1"
+    "@sentry/types": "npm:7.2.0"
     tslib: "npm:^1.9.3"
-  checksum: 246fcab29cc179c29875fead203cd840ed906ce1ec94cf3e7b600a416ce35a9aaa14b862c7acb53778836ff7edf372d1e1050beefa278a46e8cb147ba7d7d048
+  checksum: 78ea8ef72803264839b40acb68fb4be3a8cf7d66fdf0ab331a6155157647c874237e97cd97d9bc8a1bfc3a9df8138bc56a7abd5433673d6091f3256383b7081e
   languageName: node
   linkType: hard
 
@@ -6389,12 +6391,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:14.2.0":
-  version: 14.2.0
-  resolution: "@testing-library/user-event@npm:14.2.0"
+"@testing-library/user-event@npm:14.2.1":
+  version: 14.2.1
+  resolution: "@testing-library/user-event@npm:14.2.1"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: 44d9a781a5c44ab9c3e0c356bcb87eaab6d8425b9ad03800e620a6ad8ea7ebe5ecd7ee03006dc09ce1b04fac31c10ed747de1d40cea36836c25b8642c532addf
+  checksum: e1e450670867c2f4812bc0d4c6fe71e501ca00469dcf59dea5f337b97cb1870ee528ed86d26446574f8a41cfeb9cd30e892bdebc778d00146506504ce8b19ea6
   languageName: node
   linkType: hard
 
@@ -6704,13 +6706,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/jest@npm:*, @types/jest@npm:28.1.1":
-  version: 28.1.1
-  resolution: "@types/jest@npm:28.1.1"
+"@types/jest@npm:*, @types/jest@npm:28.1.2":
+  version: 28.1.2
+  resolution: "@types/jest@npm:28.1.2"
   dependencies:
-    jest-matcher-utils: "npm:^27.0.0"
-    pretty-format: "npm:^27.0.0"
-  checksum: f6b9625a7669dc53164a805f0b788bc2cf9f3ab35e38d2d445b4b642127e0f2d54c50ada2370409caf088001f98ceaf1571bac62cf3c13551e0a65ecd175c0c2
+    jest-matcher-utils: "npm:^28.0.0"
+    pretty-format: "npm:^28.0.0"
+  checksum: 7a6c210c88f264c2d3974dc6899afaa4648f9e722183b3430ffcf1ad9ab92d2939932ddbc6d1b2f2dfb84e2f0ed154b2b33cbacb41c24edc2c55285f15b6f485
   languageName: node
   linkType: hard
 
@@ -6836,10 +6838,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:17.0.42, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
-  version: 17.0.42
-  resolution: "@types/node@npm:17.0.42"
-  checksum: 1acc211c79de75174bf7fa2b6ac71dcef5896f99a28d434077f47e5f47a3dd37f169665aac70e0b73c81743cb8eb48dc4f47290646bbb5dee0c948c56ee224f4
+"@types/node@npm:*, @types/node@npm:18.0.0, @types/node@npm:>=12, @types/node@npm:>=12.12.47, @types/node@npm:>=13.7.0":
+  version: 18.0.0
+  resolution: "@types/node@npm:18.0.0"
+  checksum: 5d902615a9732fe86ff71edc04b6d35599b447a6fe3b572b12ea002a3460572f8e4d8990bf3983c2890e2335ea8625b78bc51ab542df492ef12e6dcd0da0865a
   languageName: node
   linkType: hard
 
@@ -13573,7 +13575,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"i18next@npm:21.8.10, i18next@npm:^21.6.14, i18next@npm:^21.8.9":
+"i18next@npm:21.8.10, i18next@npm:^21.6.14":
   version: 21.8.10
   resolution: "i18next@npm:21.8.10"
   dependencies:
@@ -14895,7 +14897,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-matcher-utils@npm:^27.0.0, jest-matcher-utils@npm:^27.5.1":
+"jest-matcher-utils@npm:^27.5.1":
   version: 27.5.1
   resolution: "jest-matcher-utils@npm:27.5.1"
   dependencies:
@@ -14907,7 +14909,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jest-matcher-utils@npm:^28.1.1":
+"jest-matcher-utils@npm:^28.0.0, jest-matcher-utils@npm:^28.1.1":
   version: 28.1.1
   resolution: "jest-matcher-utils@npm:28.1.1"
   dependencies:
@@ -20031,7 +20033,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^27.0.0, pretty-format@npm:^27.0.2, pretty-format@npm:^27.5.1":
+"pretty-format@npm:^27.0.2, pretty-format@npm:^27.5.1":
   version: 27.5.1
   resolution: "pretty-format@npm:27.5.1"
   dependencies:
@@ -20042,7 +20044,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pretty-format@npm:^28.1.1":
+"pretty-format@npm:^28.0.0, pretty-format@npm:^28.1.1":
   version: 28.1.1
   resolution: "pretty-format@npm:28.1.1"
   dependencies:
@@ -20359,7 +20361,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-dom@npm:18.2.0, react-dom@npm:^18.1.0":
+"react-dom@npm:18.2.0, react-dom@npm:^18.2.0":
   version: 18.2.0
   resolution: "react-dom@npm:18.2.0"
   dependencies:
@@ -20382,7 +20384,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-i18next@npm:11.17.2, react-i18next@npm:^11.16.2, react-i18next@npm:^11.17.1":
+"react-i18next@npm:11.17.2, react-i18next@npm:^11.16.2":
   version: 11.17.2
   resolution: "react-i18next@npm:11.17.2"
   dependencies:
@@ -20566,7 +20568,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react@npm:18.2.0, react@npm:^18.1.0":
+"react@npm:18.2.0, react@npm:^18.2.0":
   version: 18.2.0
   resolution: "react@npm:18.2.0"
   dependencies:
@@ -23562,7 +23564,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"type-fest@npm:2.13.1, type-fest@npm:^2.12.2, type-fest@npm:^2.13.0":
+"type-fest@npm:2.13.1, type-fest@npm:^2.12.2":
   version: 2.13.1
   resolution: "type-fest@npm:2.13.1"
   checksum: dfef43cdb344f5d9317aa20ca14c57eb24565a8a725fb5fa0a69b3062b1639c10d104757c5da64666a0154d24e38173c1b6e1d478ae37a2ab19591f0cfeedbcc
@@ -24424,8 +24426,8 @@ __metadata:
     "@prisma/client": "npm:3.15.2"
     "@react-three/drei": "npm:9.13.2"
     "@react-three/fiber": "npm:8.0.26"
-    "@sentry/nextjs": "npm:7.1.1"
-    "@sentry/react": "npm:7.1.1"
+    "@sentry/nextjs": "npm:7.2.0"
+    "@sentry/react": "npm:7.2.0"
     "@sindresorhus/is": "npm:5.1.0"
     "@size-limit/file": "npm:7.0.8"
     "@soluble/cache-interop": "npm:0.9.1"
@@ -24438,12 +24440,12 @@ __metadata:
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.0"
-    "@testing-library/user-event": "npm:14.2.0"
+    "@testing-library/user-event": "npm:14.2.1"
     "@tsed/exceptions": "npm:6.114.17"
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
-    "@types/jest": "npm:28.1.1"
-    "@types/node": "npm:17.0.42"
+    "@types/jest": "npm:28.1.2"
+    "@types/node": "npm:18.0.0"
     "@types/react": "npm:18.0.14"
     "@types/react-dom": "npm:18.0.5"
     "@types/three": "npm:0.141.0"
