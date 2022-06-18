@@ -90,8 +90,13 @@ const secureHeaders = createSecureHeaders({
             'https://unpkg.com/@graphql-yoga/graphiql',
             'https://meet.jit.si/external_api.js',
             'https://8x8.vc/external_api.js',
+            'https://static.hsappstatic.net/MeetingsEmbed/ex/MeetingsEmbedCode.js',
           ],
-          frameSrc: ['https://meet.jit.si', 'https://8x8.vc'],
+          frameSrc: [
+            'https://meet.jit.si',
+            'https://8x8.vc',
+            'https://meetings.hubspot.com',
+          ],
           connectSrc: [
             "'self'",
             'https://vitals.vercel-insights.com',
