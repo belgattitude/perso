@@ -6,13 +6,22 @@ const { pathsToModuleNameMapper } = require('ts-jest');
 const { getJestCachePath } = require('../../cache.config');
 
 const packageJson = require('./package.json');
-const { compilerOptions: baseTsConfig } = require('./tsconfig.json');
+const { getTsconfig } = require('get-tsconfig');
 
-// Take the paths from tsconfig automatically from base tsconfig.json
-// @link https://kulshekhar.github.io/ts-jest/docs/paths-mapping
-const getTsConfigBasePaths = () => {
-  return baseTsConfig.paths
-    ? pathsToModuleNameMapper(baseTsConfig.paths, {
+const tsConfigFile = './tsconfig.json';
+
+/**
+ * Transform the tsconfig paths into jest compatible one (support extends)
+ * @param {string} tsConfigFile
+ */
+const getTsConfigBasePaths = (tsConfigFile) => {
+  const parsedTsConfig = getTsconfig(tsConfigFile);
+  if (parsedTsConfig === null) {
+    throw new Error(`Cannot find tsconfig file: ${tsConfigFile}`);
+  }
+  const tsPaths = parsedTsConfig.config.compilerOptions?.paths;
+  return tsPaths
+    ? pathsToModuleNameMapper(tsPaths, {
         prefix: '<rootDir>/',
       })
     : {};
@@ -33,16 +42,20 @@ const config = {
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
     '\\.svg$': '<rootDir>/../config/tests/ReactSvgrMock.tsx',
-    ...getTsConfigBasePaths(),
+    ...getTsConfigBasePaths(tsConfigFile),
   },
   // false by default, overrides in cli, ie: yarn test:unit --collect-coverage=true
   collectCoverage: false,
   coverageDirectory: '<rootDir>/../coverage',
-  collectCoverageFrom: ['<rootDir>/**/*.{ts,tsx,js,jsx}', '!**/*.test.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/**/*.{ts,tsx,js,jsx}',
+    '!**/*.test.{js,ts}',
+    '!**/__mock__/*',
+  ],
   globals: {
     'ts-jest': {
       diagnostics: false,
-      tsconfig: './tsconfig.json',
+      tsconfig: tsConfigFile,
     },
   },
 };

@@ -38,7 +38,11 @@ const config = {
   // false by default, overrides in cli, ie: yarn test:unit --collect-coverage=true
   collectCoverage: false,
   coverageDirectory: '<rootDir>/../coverage',
-  collectCoverageFrom: ['<rootDir>/**/*.{ts,tsx,js,jsx}', '!**/*.test.ts'],
+  collectCoverageFrom: [
+    '<rootDir>/**/*.{ts,tsx,js,jsx}',
+    '!**/*.test.{js,ts}',
+    '!**/__mock__/*',
+  ],
   globals: {
     'ts-jest': {
       diagnostics: false,
