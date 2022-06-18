@@ -90,6 +90,7 @@ jobs:
 
       - name: Linter
         run: |
+          yarn g:nx run website:format --check
           yarn g:nx run website:lint
 
       - name: Unit tests

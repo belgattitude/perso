@@ -6,6 +6,7 @@
 module.exports = {
   env: {
     es6: true,
+    browser: true,
     node: true,
   },
   parser: '@typescript-eslint/parser',
@@ -19,6 +20,9 @@ module.exports = {
     sourceType: 'module',
   },
   settings: {
+    'import/parsers': {
+      '@typescript-eslint/parser': ['.ts', '.tsx', 'mts'],
+    },
     'import/resolver': {
       typescript: {},
     },
@@ -51,6 +55,7 @@ module.exports = {
     'import/no-duplicates': ['error', { considerQueryString: true }],
     'import/no-named-as-default-member': 'off',
     'import/no-named-as-default': 'off',
+    'import/namespace': 'off', // very slow. https://github.com/import-js/eslint-plugin-import/blob/main/docs/rules/namespace.md
     'import/order': [
       'error',
       {

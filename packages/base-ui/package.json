@@ -54,6 +54,7 @@
     "test-unit-jest": "jest --config ./jest.config.js --runInBand",
     "test-unit-watch": "vitest watch --ui",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
+    "format": "yarn run --top-level prettier --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/base-ui.eslintcache",
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
   },
