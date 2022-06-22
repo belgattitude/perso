@@ -1541,7 +1541,7 @@ __metadata:
     cross-env: "npm:7.0.3"
     es-check: "npm:6.2.1"
     eslint: "npm:8.18.0"
-    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
+    get-tsconfig: "npm:4.0.5"
     happy-dom: "npm:5.3.1"
     jest: "npm:28.1.1"
     jest-css-modules-transform: "npm:4.4.2"
@@ -1598,7 +1598,7 @@ __metadata:
     c8: "npm:7.11.3"
     es-check: "npm:6.2.1"
     eslint: "npm:8.18.0"
-    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
+    get-tsconfig: "npm:4.0.5"
     jest: "npm:28.1.1"
     rimraf: "npm:3.0.2"
     size-limit: "npm:7.0.8"
@@ -1712,7 +1712,7 @@ __metadata:
     cross-env: "npm:7.0.3"
     es-check: "npm:6.2.1"
     eslint: "npm:8.18.0"
-    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
+    get-tsconfig: "npm:4.0.5"
     jest: "npm:28.1.1"
     rimraf: "npm:3.0.2"
     size-limit: "npm:7.0.8"
@@ -12325,17 +12325,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"get-tsconfig@npm:4.0.3":
-  version: 4.0.3
-  resolution: "get-tsconfig@npm:4.0.3"
-  checksum: 93f3571f1643b2fe380c051c122bed7a7cb10f3d06e1d4467c833b924028077ba4c06168719ed2984d27266f6b1a4987d67eea19c4ab3b4859bccd88168b83c5
-  languageName: node
-  linkType: hard
-
-"get-tsconfig@patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch":
-  version: 4.0.3
-  resolution: "get-tsconfig@patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch::version=4.0.3&hash=a47b52"
-  checksum: f165e27c748deb186afcd2b2e741e08f31be085fbcfe7a82b4d3dfb90bfbe0945e54025d8013ba99a422ca00aaa7aa5da14935734e8aceeb77c5487db88fbf77
+"get-tsconfig@npm:4.0.5, get-tsconfig@npm:^4.0.0":
+  version: 4.0.5
+  resolution: "get-tsconfig@npm:4.0.5"
+  checksum: d7a3102dded015f663dbc0de8df2dcda9170b486a0417a303be60506c52c4685d93709e84f9cdbe71d53ef6d507a08a7e38eaed0fa631241c83cb0e5ddc9e472
   languageName: node
   linkType: hard
 
@@ -24142,7 +24135,7 @@ __metadata:
     flowbite: "npm:1.4.7"
     flowbite-react: "npm:0.0.27"
     framer-motion: "npm:6.3.12"
-    get-tsconfig: "patch:get-tsconfig@npm%3A4.0.3#~/.yarn/patches/get-tsconfig-npm-4.0.3-3ca65a6ddd.patch"
+    get-tsconfig: "npm:4.0.5"
     got: "npm:12.1.0"
     graphql: "npm:16.5.0"
     happy-dom: "npm:5.3.1"
