@@ -5,9 +5,8 @@ import {
   LazyMotion,
   domAnimation,
 } from 'framer-motion';
-import type { AnimatePresenceProps } from 'framer-motion/types/components/AnimatePresence/types';
 import Image from 'next/image';
-import type { FC, ReactNode } from 'react';
+import type { FC } from 'react';
 import { useState } from 'react';
 import type { skillType } from '@/features/about/config';
 import { skillSections } from '@/features/about/config';
@@ -46,10 +45,6 @@ export type SkillsPanelProps = {
   className?: string;
 };
 
-const HackyAnimatePresence = AnimatePresence as unknown as FC<
-  AnimatePresenceProps & { children: ReactNode }
->;
-
 const UnstyledSkillsPanel: FC<SkillsPanelProps> = (props) => {
   const { className, skills, defaultSection } = props;
   const [activeSections, setActiveSections] = useState<SkillSections[]>([
@@ -81,7 +76,7 @@ const UnstyledSkillsPanel: FC<SkillsPanelProps> = (props) => {
           })}
         </div>
         <div className="card-container">
-          <HackyAnimatePresence initial={true}>
+          <AnimatePresence initial={true}>
             <motion.div
               className="animation-container"
               key={`${activeSections.join(',')}`}
@@ -122,7 +117,7 @@ const UnstyledSkillsPanel: FC<SkillsPanelProps> = (props) => {
                 );
               })}
             </motion.div>
-          </HackyAnimatePresence>
+          </AnimatePresence>
         </div>
       </div>
     </LazyMotion>
