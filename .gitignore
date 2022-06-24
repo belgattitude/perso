@@ -15,7 +15,7 @@ nx-cloud.env
 **/.netrc
 
 # dependencies
-node_modules
+**/node_modules
 .yarn/*
 !.yarn/patches
 !.yarn/releases
@@ -25,13 +25,13 @@ node_modules
 .pnp.*
 
 # testing
-/coverage
-.out/
+**/coverage
+**/.out/
 
-# Build directories (next.js...)
-/.next/
-/out/
-/build
+# Build directories
+**/.next
+**/dist
+**/build
 
 # Cache
 **/tsconfig.tsbuildinfo
