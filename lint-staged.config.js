@@ -9,7 +9,9 @@
  * {@link https://github.com/belgattitude/nextjs-monorepo-example/blob/main/docs/about-lint-staged.md}
  */
 
-const { concatFilesForPrettier } = require('./lint-staged.common.js');
+const {
+  concatFilesForPrettier,
+} = require('./packages/internal-dx/src/lint-staged/lint-staged.common.js');
 
 /**
  * @type {Record<string, (filenames: string[]) => string | string[] | Promise<string | string[]>>}

@@ -10,7 +10,7 @@
 const {
   concatFilesForPrettier,
   getEslintFixCmd,
-} = require('../../lint-staged.common.js');
+} = require('../../packages/internal-dx/src/lint-staged/lint-staged.common.js');
 
 /**
  * @type {Record<string, (filenames: string[]) => string | string[] | Promise<string | string[]>>}

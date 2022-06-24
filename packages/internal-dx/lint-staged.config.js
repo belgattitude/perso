@@ -10,7 +10,7 @@
 const {
   concatFilesForPrettier,
   getEslintFixCmd,
-} = require('../../packages/internal-dx/src/lint-staged/lint-staged.common.js');
+} = require('./src/lint-staged/lint-staged.common.js');
 
 /**
  * @type {Record<string, (filenames: string[]) => string | string[] | Promise<string | string[]>>}
@@ -21,6 +21,9 @@ const rules = {
       cwd: __dirname,
       fix: true,
       cache: true,
+      // when autofixing staged-files a good tip is to disable react-hooks/exhaustive-deps, cause
+      // a change here can potentially break things without proper visibility.
+      rules: ['react-hooks/exhaustive-deps: off'],
       maxWarnings: 25,
       files: filenames,
     });

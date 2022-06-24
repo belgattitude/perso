@@ -1,0 +1,35 @@
+{
+  "name": "internal-dx",
+  "description": "Monorepo internal tools, scripts and base configs",
+  "version": "1.0.0",
+  "private": true,
+  "license": "MIT",
+  "homepage": "https://github.com/soluble-io/internal-dx/tree/main/packages/dsn-parser",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/soluble-io/cache-interop.git",
+    "directory": "packages/internal-dx"
+  },
+  "author": {
+    "name": "Vanvelthem Sébastien",
+    "url": "https://github.com/belgattitude"
+  },
+  "exports": {
+    ".": {
+      "require": "./src/index.js"
+    }
+  },
+  "scripts": {
+    "typecheck": "tsc --project tsconfig.json --noEmit",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/internal-dx.eslintcache",
+    "fix-staged": "lint-staged --allow-empty"
+  },
+  "devDependencies": {
+    "cross-env": "7.0.3",
+    "tsx": "3.6.0",
+    "vitest": "0.15.2"
+  },
+  "engines": {
+    "node": "^14.14.1 || >=16"
+  }
+}

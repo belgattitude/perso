@@ -11,14 +11,14 @@ try {
 const pages = manifest.pages;
 
 const limitCfg = {
-  defaultSize: '100kb',
+  defaultSize: '120kb',
   pages: {
     '/': '100kb',
-    '/404': '80kb',
-    '/_app': '150kb',
-    '/_error': '80kb',
-    '/_monitor/sentry/csr-page': '80kb',
-    '/_monitor/sentry/ssr-page': '80kb',
+    '/404': '90kb',
+    '/_app': '160kb',
+    '/_error': '90kb',
+    '/_monitor/sentry/csr-page': '90kb',
+    '/_monitor/sentry/ssr-page': '90kb',
     '/about/opensource': '160kb', // includes framer-motion
     '/about/resume': '160kb', // includes framer-motion
     '/meet/[meetingSlug]': '310kb',
