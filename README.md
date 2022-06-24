@@ -10,8 +10,10 @@ My personal website and playgrounds.
     ├── api-gateway
     ├── base-ui
     ├── common-i18n
+    ├── crypto
     ├── db-main
     ├── eslint-config-bases
+    ├── internal-dx
     └── ts-utils
 ```
 
