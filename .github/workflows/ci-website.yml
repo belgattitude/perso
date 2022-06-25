@@ -83,7 +83,7 @@ jobs:
           yarn install --immutable
         env:
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
-          YARN_COMPRESSION_LEVEL: 0
+          YARN_COMPRESSION_LEVEL: 0 # Speed up install by not compressing the local cache. action/cache will do that (zstd).
 
       - name: Typecheck
         run: |
