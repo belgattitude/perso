@@ -5,7 +5,7 @@ import {
   LazyMotion,
   domAnimation,
 } from 'framer-motion';
-import Image from 'next/image';
+import Image from 'next/future/image';
 import type { FC } from 'react';
 import { useState } from 'react';
 import type { skillType } from '@/features/about/config';
