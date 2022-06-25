@@ -31,6 +31,13 @@ const NEXTJS_DISABLE_SENTRY = trueEnv.includes(
   process.env?.NEXTJS_DISABLE_SENTRY ?? 'false'
 );
 
+const NEXTJS_SENTRY_DEBUG = trueEnv.includes(
+  process.env?.NEXTJS_SENTRY_DEBUG ?? 'false'
+);
+const NEXTJS_SENTRY_TRACING = trueEnv.includes(
+  process.env?.NEXTJS_SENTRY_TRACING ?? 'false'
+);
+
 /**
  * A way to allow CI optimization when the build done there is not used
  * to deliver an image or deploy the files.
@@ -245,12 +252,20 @@ const nextConfig = {
     ];
   },
 
-  webpack: (config, { isServer }) => {
+  webpack: (config, { webpack, isServer }) => {
     if (!isServer) {
       // Fixes npm packages that depend on `fs` module
       // @link https://github.com/vercel/next.js/issues/36514#issuecomment-1112074589
       config.resolve.fallback = { ...config.resolve.fallback, fs: false };
     }
+
+    // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/tree-shaking/
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        __SENTRY_DEBUG__: NEXTJS_SENTRY_DEBUG,
+        __SENTRY_TRACING__: NEXTJS_SENTRY_TRACING,
+      })
+    );
 
     config.module.rules.push({
       test: /\.svg$/,
