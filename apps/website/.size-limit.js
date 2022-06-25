@@ -15,13 +15,13 @@ const limitCfg = {
   pages: {
     '/': '100kb',
     '/404': '90kb',
-    '/_app': '160kb',
-    '/_error': '90kb',
+    '/_app': '140kb',
+    '/_error': '100kb',
     '/_monitor/sentry/csr-page': '90kb',
     '/_monitor/sentry/ssr-page': '90kb',
-    '/about/opensource': '160kb', // includes framer-motion
-    '/about/resume': '160kb', // includes framer-motion
-    '/meet/[meetingSlug]': '310kb',
+    '/about/opensource': '150kb', // includes framer-motion
+    '/about/resume': '150kb', // includes framer-motion
+    '/meet/[meetingSlug]': '120kb',
     '/meet/_log/[meetingSlug]': '120kb',
     '/meet/j/[meetingSlug]': '120kb',
   },
