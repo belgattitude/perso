@@ -164,9 +164,7 @@ const nextConfig = {
 
   // Standalone build
   // @link https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files-experimental
-  outputStandalone: false,
-  // @link https://nextjs.org/docs/advanced-features/output-file-tracing#caveats
-  outputFileTracingRoot: undefined, // ,path.join(__dirname, '../../'),
+  output: 'standalone',
 
   // @link https://nextjs.org/docs/basic-features/image-optimization
   images: {
@@ -194,6 +192,10 @@ const nextConfig = {
       ],
       unoptimized: false,
     },
+
+    // @link https://nextjs.org/docs/advanced-features/output-file-tracing#caveats
+    outputFileTracingRoot: undefined, // ,path.join(__dirname, '../../'),
+
     // React 18 server components
     // @link https://nextjs.org/docs/advanced-features/react-18/server-components
     serverComponents: false,
