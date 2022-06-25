@@ -2,12 +2,7 @@
 // The config you add here will be used whenever a page is visited.
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 
-// Bundle size optimization
-//  - To avoid bundling @sentry/tracing (17Kb), it's possible to
-//    import '@sentry/react' rather than '@sentry/nextjs'.
-//
-// import { init as sentryInit } from '@sentry/nextjs';
-import { init as sentryInit } from '@sentry/react';
+import { init as sentryInit } from '@sentry/nextjs';
 
 sentryInit({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,

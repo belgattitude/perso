@@ -31,6 +31,13 @@ const NEXTJS_DISABLE_SENTRY = trueEnv.includes(
   process.env?.NEXTJS_DISABLE_SENTRY ?? 'false'
 );
 
+const NEXTJS_SENTRY_DEBUG = trueEnv.includes(
+  process.env?.NEXTJS_SENTRY_DEBUG ?? 'false'
+);
+const NEXTJS_SENTRY_TRACING = trueEnv.includes(
+  process.env?.NEXTJS_SENTRY_TRACING ?? 'false'
+);
+
 /**
  * A way to allow CI optimization when the build done there is not used
  * to deliver an image or deploy the files.
@@ -162,24 +169,43 @@ const nextConfig = {
      */
   },
 
+  // Standalone build
+  // @link https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files-experimental
+  output: 'standalone',
+
+  // @link https://nextjs.org/docs/basic-features/image-optimization
+  images: {
+    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
+    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    domains: ['avatars.githubusercontent.com'],
+    path: '/_next/image',
+    loader: 'default',
+    disableStaticImages: false,
+    minimumCacheTTL: 60,
+    formats: ['image/webp'],
+    dangerouslyAllowSVG: false,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+  },
+
   experimental: {
     images: {
+      allowFutureImage: true,
       layoutRaw: true,
       remotePatterns: [
         {
           protocol: 'https',
-          hostname: '**.githubusercontent.com',
+          hostname: 'avatars.githubusercontent.com',
         },
       ],
+      unoptimized: false,
     },
+
+    // @link https://nextjs.org/docs/advanced-features/output-file-tracing#caveats
+    outputFileTracingRoot: undefined, // ,path.join(__dirname, '../../'),
+
     // React 18 server components
     // @link https://nextjs.org/docs/advanced-features/react-18/server-components
     serverComponents: false,
-    // Standalone build
-    // @link https://nextjs.org/docs/advanced-features/output-file-tracing#automatically-copying-traced-files-experimental
-    outputStandalone: false,
-    // @link https://nextjs.org/docs/advanced-features/output-file-tracing#caveats
-    outputFileTracingRoot: undefined, // ,path.join(__dirname, '../../'),
     // Prefer loading of ES Modules over CommonJS
     // @link {https://nextjs.org/blog/next-11-1#es-modules-support|Blog 11.1.0}
     // @link {https://github.com/vercel/next.js/discussions/27876|Discussion}
@@ -188,18 +214,6 @@ const nextConfig = {
     // @link {https://github.com/vercel/next.js/pull/22867|Original PR}
     // @link {https://github.com/vercel/next.js/discussions/26420|Discussion}
     externalDir: true,
-  },
-
-  // @link https://nextjs.org/docs/basic-features/image-optimization
-  images: {
-    loader: 'default',
-    deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
-    imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    disableStaticImages: false,
-    // https://nextjs.org/docs/api-reference/next/image#caching-behavior
-    minimumCacheTTL: 60,
-    // Allowed domains for next/image
-    domains: ['pbs.twimg.com', 'avatars.githubusercontent.com', 'i.imgur.com'],
   },
 
   typescript: {
@@ -238,12 +252,20 @@ const nextConfig = {
     ];
   },
 
-  webpack: (config, { isServer }) => {
+  webpack: (config, { webpack, isServer }) => {
     if (!isServer) {
       // Fixes npm packages that depend on `fs` module
       // @link https://github.com/vercel/next.js/issues/36514#issuecomment-1112074589
       config.resolve.fallback = { ...config.resolve.fallback, fs: false };
     }
+
+    // https://docs.sentry.io/platforms/javascript/guides/nextjs/configuration/tree-shaking/
+    config.plugins.push(
+      new webpack.DefinePlugin({
+        __SENTRY_DEBUG__: NEXTJS_SENTRY_DEBUG,
+        __SENTRY_TRACING__: NEXTJS_SENTRY_TRACING,
+      })
+    );
 
     config.module.rules.push({
       test: /\.svg$/,
