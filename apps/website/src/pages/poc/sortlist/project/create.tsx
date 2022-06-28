@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function ProjectRoute(
-  props: InferGetServerSidePropsType<typeof getStaticProps>
+  props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
   return <CreateProjectPage />;
 }
@@ -22,7 +22,9 @@ ProjectRoute.getLayout = function getLayout(page: ReactElement) {
 
 const i18nNamespaces = ['common'];
 
-export const getStaticProps: GetServerSideProps<Props> = async (context) => {
+export const getServerSideProps: GetServerSideProps<Props> = async (
+  context
+) => {
   const { slug = '' } = context.params ?? {};
   const { locale } = context;
 
