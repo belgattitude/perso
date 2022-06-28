@@ -17,7 +17,7 @@ export const getWithTrpcConfig = (): WithTrpcConfig => {
     if (localDevUrl) {
       url = `${localDevUrl}${url}`;
     } else {
-      url = `${vercelUrl}/${url}`;
+      url = `${vercelUrl}${url}`;
     }
   }
 
