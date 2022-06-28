@@ -1,6 +1,6 @@
 import Script from 'next/script';
 import type { FC } from 'react';
-import type { HubspotContact } from '@/features/meet/api/hubspot/getHubspotContacts';
+import type { HubspotContact } from '../api/hubspot/getHubspotContacts';
 
 type Props = {
   user: string;

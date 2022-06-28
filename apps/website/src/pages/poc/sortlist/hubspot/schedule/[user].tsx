@@ -1,9 +1,9 @@
 import { Asserts } from '@belgattitude/ts-utils';
 import { BadRequest } from '@tsed/exceptions';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
-import type { HubspotContact } from '@/features/meet/api/hubspot/getHubspotContacts';
-import { getHubspotContacts } from '@/features/meet/api/hubspot/getHubspotContacts';
-import { HubspotSchedulePage } from '@/features/meet/pages/HubspotSchedulePage';
+import type { HubspotContact } from '@/features/poc/api/hubspot/getHubspotContacts';
+import { getHubspotContacts } from '@/features/poc/api/hubspot/getHubspotContacts';
+import { HubspotSchedulePage } from '@/features/poc/pages/HubspotSchedulePage';
 
 type Props = {
   user: string;

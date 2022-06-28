@@ -227,10 +227,11 @@ const nextConfig = {
 
   async headers() {
     return [
-      { source: '/(.*)', headers: secureHeaders },
       {
-        source: '/:path*',
+        // All page routes, not the api ones
+        source: '/:path((?!api).*)*',
         headers: [
+          ...secureHeaders,
           { key: 'Cross-Origin-Opener-Policy', value: 'same-origin' },
           { key: 'Cross-Origin-Embedder-Policy', value: 'same-origin' },
         ],

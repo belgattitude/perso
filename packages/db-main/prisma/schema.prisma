@@ -27,6 +27,23 @@ model Company {
   @@map(name: "company")
 }
 
+model PocProject {
+  id          String   @id @default(cuid())
+  slug        String   @unique
+  title       String
+  description String
+  service     String
+  firstName   String?
+  lastName    String?
+  gsm         String?
+  email       String?
+  createdAt   DateTime @default(now())
+  updatedAt   DateTime @updatedAt
+
+  @@map(name: "poc_project")
+  Contact Contact[]
+}
+
 model Contact {
   id            String    @id @default(cuid())
   firstName     String?   @db.VarChar(80)
@@ -42,6 +59,8 @@ model Contact {
 
   MeetingAttendees MeetingAttendee[]
   MeetingReview    MeetingReview[]
+  PocProject       PocProject?       @relation(fields: [pocProjectId], references: [id])
+  pocProjectId     String?
   @@unique([companyId, email])
   @@map(name: "contact")
 }
