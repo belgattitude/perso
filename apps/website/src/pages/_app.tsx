@@ -3,10 +3,10 @@ import type { NextPage } from 'next';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps as NextAppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
+import { getWithTrpcConfig } from '@/config/trpc-config';
 import { MainLayout } from '@/layouts/main';
 import { AppProviders } from '../app-providers';
 import type { AppRouter } from './api/trpc/[...trpc]';
-
 /**
  * Import global styles for tailwind compatibility
  */
@@ -41,28 +41,12 @@ const MyApp = (appProps: AppProps) => {
   );
 };
 
-type WithTrpcConfig = Parameters<typeof withTRPC>[0];
-const trpcConfig: WithTrpcConfig = {
-  config({ ctx }) {
-    const url = process.env.VERCEL_URL
-      ? `https://${process.env.VERCEL_URL}/api/trpc`
-      : 'http://localhost:3000/api/trpc';
-
-    // const url = '/api/trpc';
-    return {
-      url,
-      // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
-    };
-  },
-  // disabled because of incompatibilities with react-i18next
-  // https://github.com/trpc/trpc/issues/1507
-  ssr: false,
-};
-
 /*
 export default appWithTranslation(
   withTRPC<AppRouter>(trpcConfig)(MyApp) as unknown as any // eslint-disable-line @typescript-eslint/no-explicit-any
 );
 */
 
-export default withTRPC<AppRouter>(trpcConfig)(appWithTranslation(MyApp));
+export default withTRPC<AppRouter>(getWithTrpcConfig())(
+  appWithTranslation(MyApp)
+);

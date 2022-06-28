@@ -1,4 +1,4 @@
-import { Asserts, isNonEmptyString } from '@belgattitude/ts-utils';
+import { isNonEmptyString } from '@belgattitude/ts-utils';
 import { zodResolver } from '@hookform/resolvers/zod';
 import { useRouter } from 'next/router';
 import type { FC } from 'react';
@@ -17,14 +17,16 @@ const schema = getProjectFormSchema();
 export const ProjectForm: FC = (props) => {
   const router = useRouter();
   const mutation = trpc.useMutation(['poc/create_project'], {
-    onSettled: (data) => {
-      console.log('poc request resolved');
-      const { slug } = data ?? {};
+    onSuccess: (data) => {
+      const { slug } = data;
       if (!isNonEmptyString(slug)) {
         console.error("Error: can't acquire the project slug");
+      } else {
+        router.push(`/poc/sortlist/project/${slug}`);
       }
-      console.log('Going to new route', `/poc/sortlist/project/${slug}`);
-      router.push(`/poc/sortlist/project/${slug}`);
+    },
+    onError: (error) => {
+      console.error('Could not create project', error.message);
     },
   });
 
