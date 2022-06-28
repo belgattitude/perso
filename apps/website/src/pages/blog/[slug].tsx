@@ -1,9 +1,15 @@
+import { Asserts } from '@belgattitude/ts-utils';
+import { BadRequest } from '@tsed/exceptions';
 import { format, parseISO } from 'date-fns';
 import type { GetStaticPaths, GetStaticProps } from 'next';
+import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import Head from 'next/head';
 import type { FC } from 'react';
+import { blogConfig } from '@/features/blog/blog.config';
 import type { Post } from 'contentlayer/generated';
 import { allPosts } from 'contentlayer/generated';
+
+const i18nNamespaces = blogConfig.i18nNamespaces.slice();
 
 export const getStaticPaths: GetStaticPaths = async () => {
   const paths: string[] = allPosts.map((post) => post.url);
@@ -18,7 +24,10 @@ type Props = {
 };
 
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
-  const { params } = context;
+  const { locale, params } = context;
+  Asserts.nonEmptyString(locale, () => {
+    throw new BadRequest('Locale is missing');
+  });
   const post: Post | undefined = allPosts.find((post) => {
     return post._raw.flattenedPath === params?.slug;
   });
@@ -30,12 +39,16 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   return {
     props: {
       post: post,
+      ...(await serverSideTranslations(locale, i18nNamespaces)),
     },
   };
 };
 
 const PostLayout: FC<Props> = (props) => {
   const { post } = props;
+  if (!post) {
+    return <div>No post</div>;
+  }
   return (
     <>
       <Head>
