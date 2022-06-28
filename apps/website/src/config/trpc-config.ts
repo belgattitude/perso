@@ -8,6 +8,8 @@ export const getWithTrpcConfig = (): WithTrpcConfig => {
     url = 'http://localhost:3000/api/trpc';
   } else if (process.env.VERCEL_URL) {
     url = `https://${process.env.VERCEL_URL}/api/trpc`;
+  } else if (process.env.NEXT_PUBLIC_VERCEL_URL) {
+    url = `https://${process.env.NEXT_PUBLIC_VERCEL_URL}/api/trpc`;
   } else {
     throw new Error('Cannot get vercel url');
   }
