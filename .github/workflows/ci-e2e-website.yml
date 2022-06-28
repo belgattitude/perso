@@ -131,6 +131,7 @@ jobs:
         id: playwright-version
         shell: bash
         run: |
+          npm -v
           playwright_version=$(npm info @playwright/test version)
           echo "::set-output name=version::${playwright_version}"
 
