@@ -53,7 +53,9 @@ const trpcConfig: WithTrpcConfig = {
       // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
     };
   },
-  ssr: true,
+  // disabled because of incompatibilities with react-i18next
+  // https://github.com/trpc/trpc/issues/1507
+  ssr: false,
 };
 
 /*
