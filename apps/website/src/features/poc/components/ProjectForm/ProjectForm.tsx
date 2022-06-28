@@ -18,11 +18,12 @@ export const ProjectForm: FC = (props) => {
   const router = useRouter();
   const mutation = trpc.useMutation(['poc/create_project'], {
     ssr: false,
-    onSettled: (data: ProjectFormValues & { slug: string }) => {
-      if (!isNonEmptyString(data?.slug)) {
+    onSettled: (data) => {
+      const { slug } = data ?? {};
+      if (!isNonEmptyString(slug)) {
         console.error("Error: can't acquire the project slug");
       }
-      router.push(`/poc/sortlist/project/${data.slug}`);
+      router.push(`/poc/sortlist/project/${slug}`);
     },
   });
 
