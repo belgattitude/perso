@@ -23,7 +23,6 @@ export const getWithTrpcConfig = (): WithTrpcConfig => {
 
   return {
     config({ ctx }) {
-      // const url = '/api/trpc';
       return {
         url,
         // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
