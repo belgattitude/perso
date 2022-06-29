@@ -30365,16 +30365,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typewriter-effect@npm:2.18.2":
-  version: 2.18.2
-  resolution: "typewriter-effect@npm:2.18.2"
+"typewriter-effect@npm:2.19.0":
+  version: 2.19.0
+  resolution: "typewriter-effect@npm:2.19.0"
   dependencies:
     prop-types: "npm:^15.6.2"
     raf: "npm:^3.4.0"
   peerDependencies:
-    react: 17.x
-    react-dom: 17.x
-  checksum: 22e5662de96a80f5a38b4ca7c2d985add913028e163a1543db396429a10d4ca0ad684cfb5ca07170c34582ccfee32234aa6ec9c84da51c1f5588bdeaacac107a
+    react: ^17.x || ^18.x
+    react-dom: ^17.x || ^18.x
+  checksum: ae2a6ae9f400bb218ffb35c3fd1aa53587f85547b9e7f80b598677e39cea20677cb95a4f24f071bb3e1cdb0eb65af43ae2ccf8764cc28c0c10ef3abad6d17a6b
   languageName: node
   linkType: hard
 
@@ -31726,7 +31726,7 @@ __metadata:
     ts-node: "npm:10.8.1"
     type-fest: "npm:2.14.0"
     typescript: "npm:4.7.4"
-    typewriter-effect: "npm:2.18.2"
+    typewriter-effect: "npm:2.19.0"
     vite: "npm:2.9.13"
     vite-plugin-svgr: "npm:2.2.0"
     vite-tsconfig-paths: "npm:3.5.0"
