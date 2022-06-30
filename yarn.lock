@@ -4297,9 +4297,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-yoga/common@npm:^2.9.0":
-  version: 2.9.0
-  resolution: "@graphql-yoga/common@npm:2.9.0"
+"@graphql-yoga/common@npm:^2.10.0":
+  version: 2.10.0
+  resolution: "@graphql-yoga/common@npm:2.10.0"
   dependencies:
     "@envelop/core": "npm:^2.4.0"
     "@envelop/parser-cache": "npm:^4.4.0"
@@ -4313,23 +4313,23 @@ __metadata:
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: 8676a68dd671dc58e43fce35bc14defbd5ef4b9ff81a81280087056eb0e7f6d19caab787aafa3fa1bcb5f435bea2806b9e9315c02a04bd97aa9ae3c2c70377ab
+  checksum: 6ffb20a35f6322b892a828193f94e188d2cc20dd833c3be1034711511cee55cdccf2c5363622234978054bf482bb0a9e69283974ace9fb82b7a71d26a9dc0bf5
   languageName: node
   linkType: hard
 
-"@graphql-yoga/node@npm:2.10.0, @graphql-yoga/node@npm:^2.4.0":
-  version: 2.10.0
-  resolution: "@graphql-yoga/node@npm:2.10.0"
+"@graphql-yoga/node@npm:2.11.1, @graphql-yoga/node@npm:^2.4.0":
+  version: 2.11.1
+  resolution: "@graphql-yoga/node@npm:2.11.1"
   dependencies:
     "@envelop/core": "npm:^2.4.0"
     "@graphql-tools/utils": "npm:^8.8.0"
-    "@graphql-yoga/common": "npm:^2.9.0"
+    "@graphql-yoga/common": "npm:^2.10.0"
     "@graphql-yoga/subscription": "npm:^2.1.0"
     cross-undici-fetch: "npm:^0.4.2"
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: 295a399063841b2fee6e0e6006d8286376bfd648499e51515c20330fa9cda2a13d7ef1aa3341c16132a20c3edaf7965970c21674d41856db49e2f32a8ca841ed
+  checksum: f29ce86ebf5800b827b197c0b02a88e0531d10c13a5c551e8430cdc8637562a30d1235c784c706b6aa68f193ed22785fceb0227e2753f6806bf598013da371a8
   languageName: node
   linkType: hard
 
@@ -31644,7 +31644,7 @@ __metadata:
     "@graphql-codegen/typescript": "npm:2.5.1"
     "@graphql-codegen/typescript-operations": "npm:2.4.2"
     "@graphql-codegen/typescript-resolvers": "npm:2.6.6"
-    "@graphql-yoga/node": "npm:2.10.0"
+    "@graphql-yoga/node": "npm:2.11.1"
     "@headlessui/react": "npm:1.6.5"
     "@jitsi/react-sdk": "npm:1.0.1"
     "@mdx-js/react": "npm:2.1.2"
