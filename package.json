@@ -62,7 +62,7 @@
     "deps:update": "yarn dlx npm-check-updates@latest --configFileName ncurc.yml -u --deep",
     "check:install": "yarn dlx @yarnpkg/doctor@3.1 .",
     "check:renovate:config": "docker run -v renovate.json5:/usr/src/app/renovate.json5 -it renovate/renovate renovate-config-validator",
-    "install:playwright": "npx playwright install",
+    "install:playwright": "playwright install --deps",
     "postinstall": "is-ci || yarn husky install",
     "format": "prettier --config .prettierrc.js --ignore-path .prettierignore \"./*.{js,cjs,mjs,ts,mts,md,mdx,json}\""
   },
@@ -77,6 +77,7 @@
     "@commitlint/config-conventional": "17.0.3",
     "@nrwl/nx-cloud": "latest",
     "@nrwl/workspace": "14.3.6",
+    "@playwright/test": "1.23.1",
     "@types/prettier": "2.6.3",
     "@types/shell-quote": "1.7.1",
     "eslint": "8.18.0",

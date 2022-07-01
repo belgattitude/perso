@@ -33,8 +33,8 @@ export const SearchPage: FC = () => {
   return (
     <>
       <NextSeo title={t('blog:page.title')} />
-      <div className="flex justify-center items-center h-screen">
-        <div className="w-3/5 h-full">
+      <div className="flex h-screen items-center justify-center">
+        <div className="h-full w-3/5">
           <BlogPosts />
         </div>
       </div>
