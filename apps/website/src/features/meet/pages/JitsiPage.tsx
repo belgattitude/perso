@@ -46,7 +46,7 @@ export const JitsiPage: FC<Props> = (props) => {
     <>
       <NextSeo nofollow={true} noindex={true} />
       <Header meetingSlug={meetingSlug} inMeeting={true} />
-      <div className="container px-4 mx-auto">
+      <div className="container mx-auto px-4">
         <Jitsi {...props} />
       </div>
     </>

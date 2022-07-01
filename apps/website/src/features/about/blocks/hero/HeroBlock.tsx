@@ -78,7 +78,7 @@ export const HeroBlock: FC<HeroProps> = (props) => {
 
   const img = '/images/unsplash-bigrock.jpg';
   return (
-    <div className="z-50 w-full bg-white border-b border-gray-200">
+    <div className="z-50 w-full border-b border-gray-200 bg-white">
       <LazyMotion strict features={domAnimation}>
         <S.ProfileHeroCtn
           ref={measuredRef}

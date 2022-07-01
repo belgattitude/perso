@@ -20,7 +20,7 @@ export const MainLayout: FC<Props> = (props) => {
         <MainLayoutFonts />
       </Head>
       <TopNav navLinks={navLinks} iconLinks={iconLinks} />
-      <div className="flex flex-col justify-between min-h-screen">
+      <div className="flex min-h-screen flex-col justify-between">
         <main className="relative pt-16">{children}</main>
       </div>
     </>
