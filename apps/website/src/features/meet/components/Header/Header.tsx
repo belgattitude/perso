@@ -33,10 +33,10 @@ export const Header: FC<HeaderProps> = (props) => {
   };
 
   return (
-    <nav className="py-5 px-2 bg-white rounded border-gray-200 sm:px-4">
-      <div className="container flex flex-wrap justify-between items-center mx-auto">
+    <nav className="rounded border-gray-200 bg-white py-5 px-2 sm:px-4">
+      <div className="container mx-auto flex flex-wrap items-center justify-between">
         <Link href="/" className="flex items-center">
-          <span className="self-center text-xl font-semibold dark:text-white whitespace-nowrap">
+          <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             {/* TITLE */}
           </span>
         </Link>
@@ -45,7 +45,7 @@ export const Header: FC<HeaderProps> = (props) => {
             <button
               onClick={() => returnToMain(meetingSlug)}
               type="button"
-              className="py-2.5 px-5 mr-2 mb-2 text-sm font-medium text-white bg-blue-700 hover:bg-blue-800 dark:bg-blue-600 dark:hover:bg-blue-700 rounded-lg focus:outline-none focus:ring-4 focus:ring-blue-300 dark:focus:ring-blue-800"
+              className="mr-2 mb-2 rounded-lg bg-blue-700 py-2.5 px-5 text-sm font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
             >
               Close video embed
             </button>

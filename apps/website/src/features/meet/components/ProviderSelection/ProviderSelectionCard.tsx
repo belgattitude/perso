@@ -44,7 +44,7 @@ export const ProviderSelectionCard: FC<ProviderSelectionCardProps> = (
 ) => {
   const { providers } = { ...defaultProps, ...props };
   return (
-    <div className="p-4 max-w-sm bg-white dark:bg-gray-800 rounded-lg border dark:border-gray-700 shadow-md sm:p-6">
+    <div className="max-w-sm rounded-lg border bg-white p-4 shadow-md dark:border-gray-700 dark:bg-gray-800 sm:p-6">
       <h5 className="mb-3 text-base font-semibold text-gray-900 dark:text-white lg:text-xl">
         Embed exploration
       </h5>
@@ -58,12 +58,12 @@ export const ProviderSelectionCard: FC<ProviderSelectionCardProps> = (
             <li key={id}>
               <a
                 href="#"
-                className="group flex items-center p-3 text-base font-bold text-gray-900 dark:text-white bg-gray-50 hover:bg-gray-100 dark:bg-gray-600 dark:hover:bg-gray-500 rounded-lg hover:shadow"
+                className="group flex items-center rounded-lg bg-gray-50 p-3 text-base font-bold text-gray-900 hover:bg-gray-100 hover:shadow dark:bg-gray-600 dark:text-white dark:hover:bg-gray-500"
               >
                 {Icon && <Icon width={20} />}
-                <span className="flex-1 ml-3 whitespace-nowrap">{name}</span>
+                <span className="ml-3 flex-1 whitespace-nowrap">{name}</span>
                 {tag && (
-                  <span className="inline-flex justify-center items-center py-0.5 px-2 ml-3 text-xs font-medium text-gray-500 dark:text-gray-400 bg-gray-200 dark:bg-gray-700 rounded">
+                  <span className="ml-3 inline-flex items-center justify-center rounded bg-gray-200 py-0.5 px-2 text-xs font-medium text-gray-500 dark:bg-gray-700 dark:text-gray-400">
                     {tag}
                   </span>
                 )}
@@ -75,10 +75,10 @@ export const ProviderSelectionCard: FC<ProviderSelectionCardProps> = (
       <div>
         <a
           href="#"
-          className="inline-flex items-center text-xs font-normal text-gray-500 dark:text-gray-400 hover:underline"
+          className="inline-flex items-center text-xs font-normal text-gray-500 hover:underline dark:text-gray-400"
         >
           <svg
-            className="mr-2 w-3 h-3"
+            className="mr-2 h-3 w-3"
             aria-hidden="true"
             focusable="false"
             data-prefix="far"
