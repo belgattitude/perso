@@ -153,20 +153,7 @@ const nextConfig = {
   swcMinify: true,
 
   compiler: {
-    // emotion via swc will increase browser bundle as there's not
-    // yet support for browserlist (in other words, complied js will be es5)
-    /**
-     emotion: {
-      sourceMap: process.env.NODE_ENV === 'development',
-      autoLabel: 'dev-only',
-      // Allowed values: `[local]` `[filename]` and `[dirname]`
-      // This option only works when autoLabel is set to 'dev-only' or 'always'.
-      // It allows you to define the format of the resulting label.
-      // The format is defined via string where variable parts are enclosed in square brackets [].
-      // For example labelFormat: "my-classname--[local]", where [local] will be replaced with the name of the variable the result is assigned to.
-      labelFormat: '[local]',
-    },
-     */
+    // emotion: true,
   },
 
   // Standalone build
@@ -188,6 +175,8 @@ const nextConfig = {
   },
 
   experimental: {
+    browsersListForSwc: true,
+    legacyBrowsers: false,
     images: {
       allowFutureImage: true,
       layoutRaw: true,
