@@ -41,7 +41,7 @@ const PostLayout: FC<Props> = (props) => {
       <Head>
         <title>{post.title}</title>
       </Head>
-      <article className="py-8 mx-auto max-w-xl">
+      <article className="mx-auto max-w-xl py-8">
         <div className="mb-8 text-center">
           <time dateTime={post.date} className="mb-1 text-xs text-gray-600">
             {format(parseISO(post.date), 'LLLL d, yyyy')}
