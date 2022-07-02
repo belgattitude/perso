@@ -22,8 +22,7 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const { i18nNamespaces } = aboutConfig;
   return {
     props: {
-      // i18nNamespaces.slice() is needed here to get rid off readonly
-      ...(await serverSideTranslations(locale, i18nNamespaces.slice())),
+      ...(await serverSideTranslations(locale, i18nNamespaces)),
     },
     // revalidate: 60,
   };
