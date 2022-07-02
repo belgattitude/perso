@@ -4,10 +4,6 @@
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
 const { withSentryConfig } = require('@sentry/nextjs');
 
-// Till it works with next-transpile-modules
-// eslint-disable-next-line @typescript-eslint/no-unused-vars
-const { withContentlayer } = require('next-contentlayer');
-
 const pc = require('picocolors');
 const packageJson = require('./package.json');
 const { i18n } = require('./next-i18next.config');
@@ -323,10 +319,6 @@ if (tmModules.length > 0) {
   );
   config = withNextTranspileModules(config);
 }
-
-// withContentLayer does not play well with next-transpile-modules right now
-// @todo find why
-// config = withContentlayer(nextConfig);
 
 if (process.env.ANALYZE === 'true') {
   // @ts-ignore

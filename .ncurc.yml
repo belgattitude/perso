@@ -8,6 +8,4 @@ reject: [
     'execa',
     # Too early cause in esm
     'is-port-reachable',
-    # V3 needs some work
-    'eslint-import-resolver-typescript',
   ]
