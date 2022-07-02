@@ -46,7 +46,7 @@ const config = {
   globals: {
     'ts-jest': {
       diagnostics: false,
-      tsconfig: './tsconfig.jest.json',
+      tsconfig: './tsconfig.json',
     },
   },
 };
