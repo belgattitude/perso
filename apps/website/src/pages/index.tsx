@@ -19,11 +19,9 @@ export const getStaticProps: GetStaticProps<Props> = async (context) => {
   if (locale === undefined) {
     throw new BadRequest('locale is missing');
   }
-  const { i18nNamespaces } = homeConfig;
   return {
     props: {
-      // i18nNamespaces.slice() is needed here to get rid off readonly
-      ...(await serverSideTranslations(locale, i18nNamespaces.slice())),
+      ...(await serverSideTranslations(locale, homeConfig.i18nNamespaces)),
     },
   };
 };

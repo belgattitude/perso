@@ -1,6 +1,7 @@
 import i18n from 'i18next';
 import type { FC, ReactNode } from 'react';
 import { initReactI18next, I18nextProvider } from 'react-i18next';
+import type { I18nNamespace } from '@/lib/i18n';
 
 /**
  * Fully wrapped strategy for i18next, you can use stub/mocks as well
@@ -15,8 +16,16 @@ i18n.use(initReactI18next).init({
   interpolation: {
     escapeValue: false, // not needed for react!!
   },
-  // Let empty so you can test on translation keys rather than translated strings
-  resources: { en: { common: {} } },
+  resources: {
+    en: {
+      common: {},
+      about: {},
+      blog: {},
+      home: {},
+      navigation: {},
+      system: {},
+    } as Record<I18nNamespace, Record<string, never>>,
+  },
 });
 
 export const I18nextTestStubProvider: FC<{ children: ReactNode }> = ({
