@@ -32,7 +32,7 @@
     "build": "next build",
     "build-graphql-codegen": "graphql-codegen",
     "build-fast": "cross-env NEXTJS_IGNORE_TYPECHECK=1 NEXTJS_IGNORE_ESLINT=1 NEXTJS_DISABLE_SENTRY=1 NEXTJS_SENTRY_UPLOAD_DRY_RUN=1 next build",
-    "vercel-build": "cross-env NEXTJS_IGNORE_TYPECHECK=1 NEXTJS_IGNORE_ESLINT=1 next build",
+    "vercel-build": "next build",
     "start": "next start",
     "analyze": "cross-env ANALYZE=true NEXTJS_IGNORE_TYPECHECK=1 NEXTJS_IGNORE_ESLINT=1 NEXTJS_SENTRY_UPLOAD_DRY_RUN=1 yarn build",
     "check-dist": "es-check -v",
