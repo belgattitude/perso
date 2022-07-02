@@ -1,6 +1,6 @@
-import { PrismaManager, PrismaClientDbMain } from '@belgattitude/db-main';
 import execa from 'execa';
 import type { Options as ExecaOptions } from 'execa';
+import { PrismaManager, PrismaClientDbMain } from '@belgattitude/db-main';
 import { getAndCheckDatabaseDsn } from '../e2e-dsn-services.util';
 
 describe('prisma cli commands', () => {
