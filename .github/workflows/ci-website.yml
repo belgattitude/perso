@@ -88,9 +88,12 @@ jobs:
         run: |
           yarn g:nx run website:typecheck
 
-      - name: Linter
+      - name: Prettier checks
         run: |
-          yarn g:nx run website:format --check
+          yarn g:nx run website:prettier-check
+
+      - name: Eslint checks
+        run: |        
           yarn g:nx run website:lint
 
       - name: Unit tests

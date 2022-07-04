@@ -81,10 +81,16 @@ jobs:
         run: |
           yarn g:nx run-many --target=typecheck --all --exclude=website
 
-      - name: Linter
+      - name: Prettier checks
         run: |
-          yarn g:nx run-many --target=format --all --exclude=website --check
-          yarn g:nx run-many --target=lint --all --exclude=website
+          yarn g:nx run-many --target=prettier-check --all --exclude=website
+
+      - name: Eslint checks
+        run: |
+          yarn g:nx run-many --target=lint --all --exclude=website        
+
+      - name: Stylelint checks
+        run: |
           yarn g:nx run-many --target=lint-styles --all --exclude=website
 
       - name: Unit tests changed packages

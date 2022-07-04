@@ -23,7 +23,8 @@ My personal website and playgrounds.
 | ---------------------------- | ------------------------------------------------------------------------------------------------------------------------------------ |
 | `yarn g:changeset`           | Add a changeset to declare a new version                                                                                             |
 | `yarn g:typecheck`           | Run typechecks in all workspaces                                                                                                     |
-| `yarn g:format`              | Run prettier (add --check or --write)                                                                                                |
+| `yarn g:prettier-check`      | Run prettier checks                                                                                                                  |
+| `yarn g:prettier-fix`        | Fix all prettier errors                                                                                                              |
 | `yarn g:lint`                | Display linter issues in all workspaces                                                                                              |
 | `yarn g:lint --fix`          | Attempt to run linter auto-fix in all workspaces                                                                                     |
 | `yarn g:lint-styles`         | Display css stylelint issues in all workspaces                                                                                       |
