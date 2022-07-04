@@ -22,8 +22,7 @@
   },
   "scripts": {
     "g:clean": "yarn clean:global-cache && yarn workspaces foreach -ptv run clean",
-    "g:build": "yarn workspaces foreach -p --topological-dev -v run build",
-    "g:build-changed": "yarn workspaces foreach --topological-dev --no-private -v --since=origin/main run build",
+    "g:build": "nx run-many --target=build --all",
     "g:test-unit": "nx run-many --target=test-unit --all",
     "g:test-e2e": "nx run-many --target=test-e2e --all",
     "g:prettier-check": "nx run-many --target=prettier-check --all",
