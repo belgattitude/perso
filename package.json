@@ -2,6 +2,7 @@
   "name": "belgattitude-perso",
   "license": "MIT",
   "private": true,
+  "packageManager": "yarn@4.0.0-rc.11",
   "homepage": "https://github.com/belgattitude/perso",
   "repository": {
     "type": "git",
@@ -15,6 +16,10 @@
     "apps/*",
     "packages/*"
   ],
+  "resolutions": {
+    "?vite": "0.17.0 introduced multirange for vite 2 and 3 as dep (not peer-dep). Till vite 3 is in beta, force v2",
+    "vite": "2.9.13"
+  },
   "scripts": {
     "g:clean": "yarn clean:global-cache && yarn workspaces foreach -ptv run clean",
     "g:build": "yarn workspaces foreach -p --topological-dev -v run build",
@@ -75,7 +80,7 @@
     "@changesets/cli": "2.23.0",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@nrwl/nx-cloud": "latest",
+    "@nrwl/nx-cloud": "14.2.0",
     "@nrwl/workspace": "14.4.0",
     "@playwright/test": "1.23.1",
     "@types/prettier": "2.6.3",
@@ -95,6 +100,5 @@
     "node": "16.x",
     "yarn": ">=1.22.0",
     "npm": "please-use-yarn"
-  },
-  "packageManager": "yarn@4.0.0-rc.11"
+  }
 }
