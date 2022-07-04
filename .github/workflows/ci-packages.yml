@@ -87,8 +87,7 @@ jobs:
 
       - name: Eslint checks
         run: |
-          yarn g:nx run-many --target=lint --all --exclude=website
-          yarn g:nx run-many --target=lint-styles --all --exclude=website
+          yarn g:nx run-many --target=lint --all --exclude=website        
 
       - name: Stylelint checks
         run: |
