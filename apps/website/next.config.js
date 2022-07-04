@@ -175,7 +175,6 @@ const nextConfig = {
     legacyBrowsers: false,
     images: {
       allowFutureImage: true,
-      layoutRaw: true,
       remotePatterns: [
         {
           protocol: 'https',
