@@ -83,7 +83,7 @@ jobs:
 
       - name: Prettier checks
         run: |
-          yarn g:nx run-many --target=prettier-check --all --exclude=website --check
+          yarn g:nx run-many --target=prettier-check --all --exclude=website
 
       - name: Eslint checks
         run: |
