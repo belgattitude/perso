@@ -33,7 +33,8 @@
     "test-unit": "echo \"No unit tests yet\"",
     "test-e2e": "jest --config e2e/jest.config.js --maxWorkers=50% --color $@",
     "debug-test-e2e": "cross-env DEBUG=testcontainers jest --config e2e/jest.config.js --maxWorkers=50% --color $@",
-    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
+    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
+    "postinstall": "prisma generate"
   },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
