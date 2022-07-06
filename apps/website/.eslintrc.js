@@ -13,13 +13,14 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: 'tsconfig.json',
   },
-  ignorePatterns: [
-    ...getDefaultIgnorePatterns(),
-    '.mesh',
-    '**/generated',
-    '.next',
-    '.out',
-  ],
+  /** Seems not necessary in nextjs 12 with yarn 3+
+  settings: {
+    next: {
+      rootDir: __dirname,
+    },
+  },
+  */
+  ignorePatterns: [...getDefaultIgnorePatterns(), '.next', '.out'],
   extends: [
     '@belgattitude/eslint-config-bases/typescript',
     '@belgattitude/eslint-config-bases/sonar',
@@ -30,13 +31,18 @@ module.exports = {
     '@belgattitude/eslint-config-bases/rtl',
     '@belgattitude/eslint-config-bases/graphql-schema',
     // Add specific rules for nextjs
-    'plugin:@next/next/core-web-vitals',
+    'next/core-web-vitals',
     // Apply prettier and disable incompatible rules
     '@belgattitude/eslint-config-bases/prettier',
   ],
   rules: {
-    // https://github.com/vercel/next.js/discussions/16832
+    // Seems not necessary in nextjs 12 with yarn 3+
+    // https://nextjs.org/docs/messages/no-html-link-for-pages#pagesdir
+    // '@next/next/no-html-link-for-pages': ['error', `${__dirname}/src/pages`],
+
+    // Disabled: https://github.com/vercel/next.js/discussions/16832
     '@next/next/no-img-element': 'off',
+
     // For the sake of example
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
     'jsx-a11y/anchor-is-valid': 'off',
@@ -50,19 +56,11 @@ module.exports = {
         'sonarjs/no-duplicate-string': 'off',
       },
     },
-
     {
-      files: ['src/types.d/**/*.d.ts'],
+      files: ['src/**/*.d.ts'],
       rules: {
-        'react/display-name': 'off',
         '@typescript-eslint/naming-convention': 'off',
         '@typescript-eslint/no-explicit-any': 'off',
-      },
-    },
-    {
-      files: ['src/pages/\\_*.{ts,tsx}'],
-      rules: {
-        'react/display-name': 'off',
       },
     },
     {

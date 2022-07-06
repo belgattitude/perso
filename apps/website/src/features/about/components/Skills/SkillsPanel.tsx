@@ -101,7 +101,7 @@ const UnstyledSkillsPanel: FC<SkillsPanelProps> = (props) => {
                   >
                     <div className={'card-picture'}>
                       <a href={homepage} target="_blank" rel="noreferrer">
-                        <Image src={logo} width={60} height={60} />
+                        <Image alt={name} src={logo} width={60} height={60} />
                       </a>
                     </div>
                     <motion.div

@@ -7,7 +7,7 @@ import type { MeetEventAction } from '@/features/meet/backend/logger';
 import { Header } from '@/features/meet/components/Header';
 import { ProviderSelectionCard } from '@/features/meet/components/ProviderSelection';
 import { createMeetLogEvent } from '@/features/meet/lib/helper';
-import { useStore } from '../stores';
+// import { useStore } from '../stores';
 
 type Props = {
   meetingSlug: string;

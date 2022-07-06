@@ -1,9 +1,2 @@
-import create from 'zustand';
-
-export interface UiState {
-  wirefame: boolean;
-}
-
-export const useStore = create<UiState>()((set) => ({
-  wirefame: false,
-}));
+export { useUiStateStore } from './useUiStateStore';
+export type { UiState } from './useUiStateStore';

@@ -48,10 +48,10 @@ export const getListVariants = (type: AnimationType = 'none'): Variants => {
 
 export const getItemVariants = (type: AnimationType = 'none'): Variants => {
   const vw = window !== undefined ? Math.ceil(window.innerWidth / 1.9) : 800;
-  const vh = window !== undefined ? Math.ceil(window.innerWidth / 1.9) : 800;
+  // const vh = window !== undefined ? Math.ceil(window.innerWidth / 1.9) : 800;
 
   const initialX = Math.random() > 0.5 ? vw : -vw;
-  const initialY = Math.random() > 0.5 ? vh : -vh;
+  // const initialY = Math.random() > 0.5 ? vh : -vh;
 
   switch (type) {
     case 'soft':
