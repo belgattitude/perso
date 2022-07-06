@@ -47,8 +47,7 @@
     "prettier-check": "yarn run --top-level prettier --check --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "prettier-fix": "yarn run --top-level prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/website.eslintcache",
-    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix",
-    "postinstall": "yarn workspace @belgattitude/db-main run prisma generate"
+    "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
   },
   "devDependencies": {
     "@belgattitude/crypto": "workspace:^",
