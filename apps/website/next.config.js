@@ -206,7 +206,7 @@ const nextConfig = {
 
   eslint: {
     ignoreDuringBuilds: NEXTJS_IGNORE_ESLINT,
-    dirs: ['src'],
+    // dirs: [`${__dirname}/src`],
   },
 
   async headers() {

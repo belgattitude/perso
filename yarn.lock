@@ -1674,7 +1674,7 @@ __metadata:
     npm-run-all: "npm:4.1.5"
     rimraf: "npm:3.0.2"
     ts-jest: "npm:28.0.5"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
   peerDependencies:
     graphql: ^16.4.0
   languageName: unknown
@@ -1738,7 +1738,7 @@ __metadata:
     ts-jest: "npm:28.0.5"
     tsconfig-paths-webpack-plugin: "npm:3.5.2"
     tsup: "npm:6.1.3"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
     vite-plugin-svgr: "npm:2.2.0"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.17.0"
@@ -1763,7 +1763,7 @@ __metadata:
     cross-env: "npm:7.0.3"
     eslint: "npm:8.19.0"
     rimraf: "npm:3.0.2"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
   languageName: unknown
   linkType: soft
 
@@ -1786,7 +1786,7 @@ __metadata:
     ts-jest: "npm:28.0.5"
     tslib: "npm:2.4.0"
     tsup: "npm:6.1.3"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
     vite: "npm:2.9.13"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.17.0"
@@ -1821,7 +1821,7 @@ __metadata:
     transliteration: "npm:2.3.5"
     ts-jest: "npm:28.0.5"
     tsx: "npm:3.7.1"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
   peerDependencies:
     "@pothos/plugin-prisma": ^3.6.1
     "@prisma/client": ^3.13.0 || ^4.0.0
@@ -1861,7 +1861,7 @@ __metadata:
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
     rimraf: "npm:3.0.2"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
   peerDependencies:
     eslint: ^8.0.0
     graphql: ^16.4.0
@@ -1901,7 +1901,7 @@ __metadata:
     tslib: "npm:2.4.0"
     tsup: "npm:6.1.3"
     type-fest: "npm:2.16.0"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
     vite: "npm:2.9.13"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.17.0"
@@ -10646,7 +10646,7 @@ __metadata:
     prettier: "npm:2.7.1"
     rimraf: "npm:3.0.2"
     shell-quote: "npm:1.7.3"
-    typescript: "npm:4.8.0-beta"
+    typescript: "npm:4.7.4"
   languageName: unknown
   linkType: soft
 
@@ -30308,16 +30308,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"typescript@npm:4.8.0-beta":
-  version: 4.8.0-beta
-  resolution: "typescript@npm:4.8.0-beta"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 7b366952201d8b74349cc6513bbc0eb9f705f3cdef7a62215335b886a28cf15bcf968babb3e9b7605319c9a1b4ddb5255190b7f0d3e362b9ad44b5627587d45f
-  languageName: node
-  linkType: hard
-
 "typescript@patch:typescript@npm%3A4.7.4#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^4.1.3#optional!builtin<compat/typescript>, typescript@patch:typescript@npm%3A^4.6.4#optional!builtin<compat/typescript>":
   version: 4.7.4
   resolution: "typescript@patch:typescript@npm%3A4.7.4#optional!builtin<compat/typescript>::version=4.7.4&hash=f456af"
@@ -30325,16 +30315,6 @@ __metadata:
     tsc: bin/tsc
     tsserver: bin/tsserver
   checksum: 19bcd9153bbacaabed753b39fbd6adb5417690230b07db63f02e22588865b444b7504da9b9fcdcca5b4ac34be19904271a266bfa54d75fcfb0f5d699cb1e2314
-  languageName: node
-  linkType: hard
-
-"typescript@patch:typescript@npm%3A4.8.0-beta#optional!builtin<compat/typescript>":
-  version: 4.8.0-beta
-  resolution: "typescript@patch:typescript@npm%3A4.8.0-beta#optional!builtin<compat/typescript>::version=4.8.0-beta&hash=f456af"
-  bin:
-    tsc: bin/tsc
-    tsserver: bin/tsserver
-  checksum: 6cb92f6feac50e05db09266c31ff0a8c08617b266a352e10129d253ce11de18e9f3d733c95fd5efb9c37f3ff5c2e3afc4756ae73646423d91dc2b6181ffc6fd6
   languageName: node
   linkType: hard
 

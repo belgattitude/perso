@@ -6,8 +6,8 @@ import { searchBlog } from '@/features/blog/api';
 import { blogConfig } from '@/features/blog/blog.config';
 
 const BlogPosts: FC = () => {
-  const { t } = useTranslation(blogConfig.i18nNamespaces);
-  const { isError, isLoading, data } = useQuery(['searchBlog'], searchBlog);
+  // const { t } = useTranslation(blogConfig.i18nNamespaces);
+  const { data } = useQuery(['searchBlog'], searchBlog);
   return (
     <>
       {data &&

@@ -4,7 +4,7 @@ import type { FC } from 'react';
 import { useEffect, useRef, useState } from 'react';
 import type { Mesh } from 'three';
 import { Vector2 } from 'three';
-import { useStore } from '@/features/home/stores';
+import { useUiStateStore } from '@/features/home/stores';
 
 export type WobbleProps = {
   wireframe?: boolean;
@@ -14,7 +14,7 @@ export type WobbleProps = {
 export const Wobble: FC<WobbleProps> = (props) => {
   const { videoUrl } = props;
 
-  const w = useStore((state) => state.wirefame);
+  const w = useUiStateStore((state) => state.wirefame);
 
   const meshRef = useRef<Mesh>(null);
   const [wireframe, setWireframe] = useState(props.wireframe ?? w);
