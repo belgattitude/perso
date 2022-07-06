@@ -14,7 +14,7 @@ import { ErrorPage } from '@/features/system/pages/ErrorPage';
 
 const sentryIgnoredStatusCodes: number[] = [404, 410];
 
-// Adds HttpException to the list of possible error types.
+// Allow to add custom HttpException to the list of possible error types.
 type AugmentedError = NonNullable<NextPageContext['err']> | null;
 type CustomErrorProps = {
   err?: AugmentedError;

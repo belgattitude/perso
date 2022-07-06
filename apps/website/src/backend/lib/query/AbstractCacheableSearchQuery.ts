@@ -6,7 +6,6 @@ import type {
   CacheKeyGenParams,
   ICacheableSearchQuery,
 } from '@/backend/lib/query/ICacheableSearchQuery';
-import type { ResponseDto } from '@/backend/lib/query/IQuery';
 
 export abstract class AbstractCacheableSearchQuery<
   TRequestDto extends IDTO | undefined

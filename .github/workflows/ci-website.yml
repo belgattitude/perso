@@ -80,17 +80,22 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install --immutable
+          yarn install --immutable --inline-builds
         env:
+          PRISMA_SKIP_POSTINSTALL_GENERATE: true
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+          HUSKY: 0
 
       - name: Typecheck
         run: |
           yarn g:nx run website:typecheck
 
-      - name: Linter
+      - name: Prettier checks
         run: |
-          yarn g:nx run website:format --check
+          yarn g:nx run website:prettier-check
+
+      - name: Eslint checks
+        run: |        
           yarn g:nx run website:lint
 
       - name: Unit tests

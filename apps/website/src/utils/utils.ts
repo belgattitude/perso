@@ -6,10 +6,10 @@ export function truncateText(
   if (text.length <= max) {
     return text;
   }
-  const subString = text.substr(0, max - 1);
+  const subString = text.substring(0, max - 1);
   return (
     (useWordBoundary
-      ? subString.substr(0, subString.lastIndexOf(' '))
+      ? subString.substring(0, subString.lastIndexOf(' '))
       : subString) + ' …'
   );
 }

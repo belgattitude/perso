@@ -22,8 +22,8 @@ export const HomePage: FC = () => {
         title={t('home:page.title')}
         description={t('home:page.description')}
       />
-      <div className="flex justify-center items-center h-screen">
-        <div className="w-3/5 h-full">
+      <div className="flex h-screen items-center justify-center">
+        <div className="h-full w-3/5">
           <WobbleCanvas
             wobbleProps={{
               wireframe: false,

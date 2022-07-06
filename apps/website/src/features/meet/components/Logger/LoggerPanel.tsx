@@ -35,8 +35,8 @@ export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
   }, [meetingSlug]);
 
   return (
-    <div className="container px-4 mx-auto">
-      <div className="container p-5 px-4 mx-auto">
+    <div className="container mx-auto px-4">
+      <div className="container mx-auto p-5 px-4">
         <p className="mb-6 text-xl dark:text-white">
           Logs for meeting {meetingSlug}
         </p>
@@ -44,7 +44,7 @@ export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
           {messages.reverse().map((message) => {
             return (
               <li key={message.date} className="mb-10 ml-4">
-                <div className="absolute -left-1.5 mt-1.5 w-3 h-3 bg-gray-200 dark:bg-gray-700 rounded-full border border-white dark:border-gray-900"></div>
+                <div className="absolute -left-1.5 mt-1.5 h-3 w-3 rounded-full border border-white bg-gray-200 dark:border-gray-900 dark:bg-gray-700"></div>
                 <time className="mb-1 text-sm font-normal leading-none text-gray-400 dark:text-gray-500">
                   {message.date}
                 </time>
@@ -60,11 +60,11 @@ export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
                   href={'https://github.com/sortlist/sortlist/issues/18768'}
                   target={'_blank'}
                   rel={'noreferrer'}
-                  className="inline-flex focus:z-10 items-center py-2 px-4 text-sm font-medium text-gray-900 hover:text-blue-700 focus:text-blue-700 dark:text-gray-400 dark:hover:text-white bg-white hover:bg-gray-100 dark:bg-gray-800 dark:hover:bg-gray-700 rounded-lg border border-gray-200 dark:border-gray-600 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:focus:ring-gray-700"
+                  className="inline-flex items-center rounded-lg border border-gray-200 bg-white py-2 px-4 text-sm font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:text-blue-700 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
                 >
                   Learn more{' '}
                   <svg
-                    className="ml-2 w-3 h-3"
+                    className="ml-2 h-3 w-3"
                     fill="currentColor"
                     viewBox="0 0 20 20"
                     xmlns="http://www.w3.org/2000/svg"

@@ -3,7 +3,7 @@ import { appWithTranslation } from 'next-i18next';
 import type { AppProps as NextAppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import { MainLayout } from '@/layouts/main';
-import { AppProviders } from '../app-providers';
+import { AppProviders } from '../AppProviders';
 
 /**
  * Import global styles for tailwind compatibility

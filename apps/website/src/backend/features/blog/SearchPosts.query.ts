@@ -20,7 +20,7 @@ export class SearchPostsQuery extends AbstractCacheableSearchQuery<SearchParams>
   }
 
   execute = async (params: SearchParams) => {
-    const { ftQuery: _ftQuery } = params;
+    const { ftQuery } = params; // eslint-disable-line @typescript-eslint/no-unused-vars
     return this.prisma.post.findMany({
       where: {
         deletedAt: null,
