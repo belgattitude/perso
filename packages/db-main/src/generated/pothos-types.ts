@@ -1,4 +1,4 @@
-import type { Prisma, Company, Contact, Project, Meeting, MeetingReview, MeetingAttendee, Post, User, Account, Session, VerificationToken } from "@prisma/client";
+import type { Prisma, Company, PocProject, Contact, Project, Meeting, MeetingReview, MeetingAttendee, Post, User, Account, Session, VerificationToken } from "@prisma/client";
 export default interface PrismaTypes {
     Company: {
         Name: "Company";
@@ -16,14 +16,30 @@ export default interface PrismaTypes {
             };
         };
     };
+    PocProject: {
+        Name: "PocProject";
+        Shape: PocProject;
+        Include: Prisma.PocProjectInclude;
+        Select: Prisma.PocProjectSelect;
+        Where: Prisma.PocProjectWhereUniqueInput;
+        Fields: "Contact";
+        RelationName: "Contact";
+        ListRelations: "Contact";
+        Relations: {
+            Contact: {
+                Shape: Contact[];
+                Types: PrismaTypes["Contact"];
+            };
+        };
+    };
     Contact: {
         Name: "Contact";
         Shape: Contact;
         Include: Prisma.ContactInclude;
         Select: Prisma.ContactSelect;
         Where: Prisma.ContactWhereUniqueInput;
-        Fields: "company" | "MeetingAttendees" | "MeetingReview";
-        RelationName: "company" | "MeetingAttendees" | "MeetingReview";
+        Fields: "company" | "MeetingAttendees" | "MeetingReview" | "PocProject";
+        RelationName: "company" | "MeetingAttendees" | "MeetingReview" | "PocProject";
         ListRelations: "MeetingAttendees" | "MeetingReview";
         Relations: {
             company: {
@@ -37,6 +53,10 @@ export default interface PrismaTypes {
             MeetingReview: {
                 Shape: MeetingReview[];
                 Types: PrismaTypes["MeetingReview"];
+            };
+            PocProject: {
+                Shape: PocProject | null;
+                Types: PrismaTypes["PocProject"];
             };
         };
     };

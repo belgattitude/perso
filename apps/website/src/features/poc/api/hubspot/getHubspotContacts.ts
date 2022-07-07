@@ -29,6 +29,6 @@ export const getHubspotContacts = async (): Promise<HubspotContact[]> => {
     )
     .then((resp) => resp.data)
     .catch((e) => {
-      console.log('Error');
+      console.log('Error', e);
     });
 };
