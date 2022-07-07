@@ -1,4 +1,3 @@
-import { Asserts } from '@belgattitude/ts-utils';
 import { BadRequest } from '@tsed/exceptions';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
@@ -15,17 +14,14 @@ export default function HomePageRoute(
   return <HomePage />;
 }
 
-const { i18nNamespaces } = homeConfig;
-
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const { locale } = context;
-  Asserts.nonEmptyString(locale, () => {
-    throw new BadRequest('Locale is missing');
-  });
+  if (locale === undefined) {
+    throw new BadRequest('locale is missing');
+  }
   return {
     props: {
-      // i18nNamespaces.slice() is needed here to get rid off readonly
-      ...(await serverSideTranslations(locale, i18nNamespaces.slice())),
+      ...(await serverSideTranslations(locale, homeConfig.i18nNamespaces)),
     },
   };
 };

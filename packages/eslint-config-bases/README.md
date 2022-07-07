@@ -32,6 +32,13 @@ module.exports = {
     tsconfigRootDir: __dirname,
     project: "tsconfig.json",
   },
+  /** Might help if nextjs plugin does not locate roor directory.    
+  settings: {
+    next: {
+      rootDir: __dirname,
+    },
+  }, 
+  */
   ignorePatterns: ["**/node_modules", "**/.cache", "build", ".next"],
   extends: [
     "@your-org/eslint-config-bases/typescript",
@@ -46,7 +53,7 @@ module.exports = {
 
     // Add specific rules for your framework if needed.
     // ie:
-    // - nextjs: 'plugin:@next/next/core-web-vitals',
+    // - nextjs: 'next/core-web-vitals',
     // - remix:  '@remix-run/eslint-config',
     // ...
 
@@ -56,6 +63,9 @@ module.exports = {
   ],
   rules: {
     // Specific global rules for your app or package
+    // Might help is next eslint plugin does not locate pages
+    // https://nextjs.org/docs/messages/no-html-link-for-pages#pagesdir
+    // '@next/next/no-html-link-for-pages': ['error', `${__dirname}/src/pages`],
   },
   overrides: [
     // Specific file rules for your app or package

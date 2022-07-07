@@ -1,6 +1,5 @@
 import { createHash } from 'node:crypto';
 import type { ICacheKeyGenerator } from '@/backend/lib/cache/ICacheKeyGenerator';
-import type { IDTO } from '@/backend/lib/dto';
 import { DTOSerializer } from '@/backend/lib/dto';
 
 export type ShaCacheKeyGenerateOptions = {

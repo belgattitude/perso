@@ -22,13 +22,15 @@
   "scripts": {
     "typecheck": "tsc --project tsconfig.json --noEmit",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/internal-dx.eslintcache",
+    "prettier-check": "yarn run --top-level prettier --check --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
+    "prettier-fix": "yarn run --top-level prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "fix-staged": "lint-staged --allow-empty"
   },
   "devDependencies": {
-    "@vitest/ui": "0.16.0",
+    "@vitest/ui": "0.17.1",
     "cross-env": "7.0.3",
-    "tsx": "3.6.0",
-    "vitest": "0.16.0"
+    "tsx": "3.7.1",
+    "vitest": "0.17.1"
   },
   "engines": {
     "node": "^14.14.1 || >=16"

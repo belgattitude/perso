@@ -2,6 +2,7 @@
   "name": "belgattitude-perso",
   "license": "MIT",
   "private": true,
+  "packageManager": "yarn@4.0.0-rc.11",
   "homepage": "https://github.com/belgattitude/perso",
   "repository": {
     "type": "git",
@@ -15,13 +16,17 @@
     "apps/*",
     "packages/*"
   ],
+  "resolutions": {
+    "?vite": "0.17.0 introduced multirange for vite 2 and 3 as dep (not peer-dep). Till vite 3 is in beta, force v2",
+    "vite": "2.9.13"
+  },
   "scripts": {
-    "g:clean": "yarn clean:global-cache && yarn workspaces foreach -ptv run clean",
-    "g:build": "yarn workspaces foreach -p --topological-dev -v run build",
-    "g:build-changed": "yarn workspaces foreach --topological-dev --no-private -v --since=origin/main run build",
+    "g:clean": "yarn clean:global-cache && yarn workspaces foreach -pv run clean",
+    "g:build": "nx run-many --target=build --all",
     "g:test-unit": "nx run-many --target=test-unit --all",
     "g:test-e2e": "nx run-many --target=test-e2e --all",
-    "g:format": "yarn workspaces foreach -ptv run format",
+    "g:prettier-check": "nx run-many --target=prettier-check --all",
+    "g:prettier-fix": "nx run-many --target=prettier-fix --all",
     "g:lint": "nx run-many --target=lint --all",
     "g:lint-styles": "nx run-many --target=lint-styles --all",
     "g:typecheck": "nx run-many --target=typecheck --all",
@@ -34,6 +39,7 @@
     "g:nx": "yarn nx",
     "g:share-static-symlink": "yarn workspaces foreach -pv --include '*-app' run share-static-symlink",
     "g:share-static-hardlink": "yarn workspaces foreach -pv --include '*-app' run share-static-hardlink",
+    "clean:lint": "rimraf --no-glob ./.cache/eslint",
     "clean:global-cache": "rimraf --no-glob ./.cache",
     "apps:build": "yarn workspaces foreach -ptv --include '*-app' run build",
     "apps:clean": "yarn workspaces foreach -ptv --include '*-app' run clean",
@@ -75,17 +81,17 @@
     "@changesets/cli": "2.23.0",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
-    "@nrwl/nx-cloud": "latest",
-    "@nrwl/workspace": "14.3.6",
+    "@nrwl/nx-cloud": "14.2.0",
+    "@nrwl/workspace": "14.4.2",
     "@playwright/test": "1.23.1",
     "@types/prettier": "2.6.3",
     "@types/shell-quote": "1.7.1",
-    "eslint": "8.18.0",
+    "eslint": "8.19.0",
     "husky": "8.0.1",
     "is-ci": "3.0.1",
     "lint-staged": "13.0.3",
     "npm-run-all": "4.1.5",
-    "nx": "14.3.6",
+    "nx": "14.4.2",
     "prettier": "2.7.1",
     "rimraf": "3.0.2",
     "shell-quote": "1.7.3",
@@ -95,6 +101,5 @@
     "node": "16.x",
     "yarn": ">=1.22.0",
     "npm": "please-use-yarn"
-  },
-  "packageManager": "yarn@4.0.0-rc.10"
+  }
 }

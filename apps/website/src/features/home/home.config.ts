@@ -1,8 +1,7 @@
 import type { I18nActiveNamespaces } from '@/lib/i18n';
 
 export type HomeConfig = {
-  // Define installed namespaces in the type here
-  // to allow full typechecking of your translation keys.
+  // Define namespaces in use in both the type and the config.
   i18nNamespaces: I18nActiveNamespaces<'common' | 'home' | 'navigation'>;
 };
 
