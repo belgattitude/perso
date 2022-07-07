@@ -14,7 +14,7 @@ export type ProjectFormValues = z.infer<
 
 const schema = getProjectFormSchema();
 
-export const ProjectForm: FC = (props) => {
+export const ProjectForm: FC = (_props) => {
   const router = useRouter();
   const mutation = trpc.useMutation(['poc/create_project'], {
     onSuccess: (data) => {
@@ -59,7 +59,7 @@ export const ProjectForm: FC = (props) => {
           </div>
           <div className="mt-5 md:col-span-2 md:mt-0">
             <div className="shadow sm:overflow-hidden sm:rounded-md">
-              <div className="py-5 px-4 space-y-6 bg-white sm:p-6">
+              <div className="space-y-6 bg-white py-5 px-4 sm:p-6">
                 <div className="col-span-6 sm:col-span-3">
                   <label
                     htmlFor="title"
@@ -76,7 +76,7 @@ export const ProjectForm: FC = (props) => {
                     })}
                     placeholder="ie: Looking for a new website..."
                     autoComplete="off"
-                    className="block mt-1 w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
+                    className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                   />
                   {errors?.title && (
                     <p className={'bg-amber-600'}>{errors.title.message}</p>
@@ -92,7 +92,7 @@ export const ProjectForm: FC = (props) => {
                   <select
                     {...register('service')}
                     autoComplete="service-name"
-                    className="block py-2 px-3 mt-1 w-full bg-white rounded-md border border-gray-300 focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 shadow-sm sm:text-sm"
+                    className="mt-1 block w-full rounded-md border border-gray-300 bg-white py-2 px-3 shadow-sm focus:border-indigo-500 focus:outline-none focus:ring-indigo-500 sm:text-sm"
                   >
                     <option>Advertising</option>
                   </select>
@@ -109,7 +109,7 @@ export const ProjectForm: FC = (props) => {
                     <textarea
                       {...register('description')}
                       rows={3}
-                      className="block mt-1 w-full rounded-md border border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
+                      className="mt-1 block w-full rounded-md border border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       placeholder=""
                       defaultValue={''}
                     />
@@ -142,7 +142,7 @@ export const ProjectForm: FC = (props) => {
             </div>
             <div className="mt-5 md:col-span-2 md:mt-0">
               <div className="overflow-hidden shadow sm:rounded-md">
-                <div className="py-5 px-4 bg-white sm:p-6">
+                <div className="bg-white py-5 px-4 sm:p-6">
                   <div className="grid grid-cols-6 gap-6">
                     <div className="col-span-6 sm:col-span-3">
                       <label
@@ -155,7 +155,7 @@ export const ProjectForm: FC = (props) => {
                         type="text"
                         {...register('firstName')}
                         autoComplete="given-name"
-                        className="block mt-1 w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -170,7 +170,7 @@ export const ProjectForm: FC = (props) => {
                         type="text"
                         {...register('lastName')}
                         autoComplete="family-name"
-                        className="block mt-1 w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
 
@@ -185,7 +185,7 @@ export const ProjectForm: FC = (props) => {
                         type="text"
                         {...register('email')}
                         autoComplete="email"
-                        className="block mt-1 w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
                     <div className="col-span-6 sm:col-span-4">
@@ -199,15 +199,15 @@ export const ProjectForm: FC = (props) => {
                         type="text"
                         {...register('gsm')}
                         autoComplete="tel"
-                        className="block mt-1 w-full rounded-md border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 shadow-sm sm:text-sm"
+                        className="mt-1 block w-full rounded-md border-gray-300 shadow-sm focus:border-indigo-500 focus:ring-indigo-500 sm:text-sm"
                       />
                     </div>
                   </div>
                 </div>
-                <div className="py-3 px-4 text-right bg-gray-50 sm:px-6">
+                <div className="bg-gray-50 py-3 px-4 text-right sm:px-6">
                   <button
                     type="submit"
-                    className="inline-flex justify-center py-2 px-4 text-sm font-medium text-white bg-indigo-600 hover:bg-indigo-700 rounded-md border border-transparent focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2 shadow-sm"
+                    className="inline-flex justify-center rounded-md border border-transparent bg-indigo-600 py-2 px-4 text-sm font-medium text-white shadow-sm hover:bg-indigo-700 focus:outline-none focus:ring-2 focus:ring-indigo-500 focus:ring-offset-2"
                   >
                     Submit project
                   </button>

@@ -11,7 +11,7 @@ type Props = {
 };
 
 export default function ProjectRoute(
-  props: InferGetServerSidePropsType<typeof getServerSideProps>
+  _props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
   return <CreateProjectPage />;
 }

@@ -7,7 +7,7 @@ type Props = {
 
 const HeaderBox: FC = () => {
   return (
-    <div className="p-5 w-full text-white bg-blue-800 rounded-xl drop-shadow-md">
+    <div className="w-full rounded-xl bg-blue-800 p-5 text-white drop-shadow-md">
       <p className="mb-5 text-2xl font-bold">Just a Poc</p>
       <p>Add some test data here, submit and try hubspot integration</p>
     </div>
@@ -16,7 +16,7 @@ const HeaderBox: FC = () => {
 
 const ProjectInfoBox: FC = () => {
   return (
-    <div className="p-5 bg-white rounded-sm drop-shadow-md">
+    <div className="rounded-sm bg-white p-5 drop-shadow-md">
       <ProjectForm />
     </div>
   );
@@ -24,20 +24,20 @@ const ProjectInfoBox: FC = () => {
 
 const BookingBox: FC = () => {
   return (
-    <div className="p-5 bg-white rounded-sm drop-shadow-md">
+    <div className="rounded-sm bg-white p-5 drop-shadow-md">
       <p className="mb-5 text-2xl font-bold">Some help ?</p>
     </div>
   );
 };
 
-export const CreateProjectPage: FC<Props> = (props) => {
+export const CreateProjectPage: FC<Props> = (_props) => {
   return (
     <div className="bg-gray-50">
-      <div className="flex m-5">
+      <div className="m-5 flex">
         <HeaderBox />
       </div>
 
-      <div className="flex flex-row m-5 space-x-4 h-full">
+      <div className="m-5 flex h-full flex-row space-x-4">
         <div className="basis-2/3">
           <ProjectInfoBox />
         </div>

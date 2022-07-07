@@ -5,8 +5,9 @@ import type { AppProps as NextAppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import { getWithTrpcConfig } from '@/config/trpc-config';
 import { MainLayout } from '@/layouts/main';
-import { AppProviders } from '../app-providers';
+import { AppProviders } from '../AppProviders';
 import type { AppRouter } from './api/trpc/[...trpc]';
+
 /**
  * Import global styles for tailwind compatibility
  */

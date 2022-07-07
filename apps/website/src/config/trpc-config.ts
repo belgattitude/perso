@@ -22,7 +22,7 @@ export const getWithTrpcConfig = (): WithTrpcConfig => {
   }
 
   return {
-    config({ ctx }) {
+    config({ ctx: _ctx }) {
       return {
         url,
         // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
