@@ -44,8 +44,6 @@ jobs:
       matrix:
         node-version:
           - 16
-        database:
-          - e2e-postgres
         os:
           - ubuntu-latest
         include:
@@ -92,7 +90,7 @@ jobs:
 
       - name: Start database
         working-directory: packages/db-main
-        run: docker-compose -f docker-compose.e2e.yml up --detach ${{ matrix.database }}
+        run: docker-compose -f docker-compose.e2e.yml up --detach
 
       - name: Install dependencies
         run: |
