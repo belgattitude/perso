@@ -1,7 +1,7 @@
 version: '3.8'
 
 services:
-  e2e-postgres:
+  e2e_postgres:
     container_name: db-main-e2e-postgresql
     image: postgres:14-alpine
     ports:
@@ -20,10 +20,10 @@ services:
     volumes:
       - e2e_db_data:/var/lib/postgresql/data:rw
 
-  postgres_is_ready:
+  e2e_postgres_ready:
     image: postgres
     depends_on:
-      postgres:
+      e2e_postgres:
         condition: service_healthy
 
 volumes:
