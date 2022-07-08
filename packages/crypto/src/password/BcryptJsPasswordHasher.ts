@@ -7,11 +7,11 @@ type Params = {
 
 export class BcryptJsPasswordHasher implements IPasswordHasher {
   constructor(public readonly params: Params) {}
-  hash = (password: string): string => {
+  hash(password: string): string {
     const salt = genSaltSync(this.params.rounds);
     return hashSync(password, salt);
-  };
-  verify = (password: string, hash: string): boolean => {
+  }
+  verify(password: string, hash: string): boolean {
     return compareSync(password, hash);
-  };
+  }
 }
