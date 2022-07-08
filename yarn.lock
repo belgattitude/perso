@@ -5394,14 +5394,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/endpoint@npm:^6.0.1":
-  version: 6.0.12
-  resolution: "@octokit/endpoint@npm:6.0.12"
+"@octokit/endpoint@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "@octokit/endpoint@npm:7.0.0"
   dependencies:
     "@octokit/types": "npm:^6.0.3"
     is-plain-object: "npm:^5.0.0"
     universal-user-agent: "npm:^6.0.0"
-  checksum: c0a7abd87243b7f5f22d6cee3e309952d08d1808c94dd7e60d40aa91111098b9b1c8e2f927bc85b831d6853fa215cbbdbbf807976dc2f40e83605ca1afea5e23
+  checksum: d96ed80eeeba0f48c5ae0b19e959b5f2e199c577a0f2c9028d5255987254f58106a3874c4ad87d61b377e2840419eb20a34bc8c392af468551ef8da8c99497b2
   languageName: node
   linkType: hard
 
@@ -5415,14 +5415,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/graphql@npm:4.8.0":
-  version: 4.8.0
-  resolution: "@octokit/graphql@npm:4.8.0"
+"@octokit/graphql@npm:5.0.0":
+  version: 5.0.0
+  resolution: "@octokit/graphql@npm:5.0.0"
   dependencies:
-    "@octokit/request": "npm:^5.6.0"
+    "@octokit/request": "npm:^6.0.0"
     "@octokit/types": "npm:^6.0.3"
     universal-user-agent: "npm:^6.0.0"
-  checksum: 2b5b402af70cefd29bf16bc971cc8a345587dcfa92aa39df798042e968a34a5350cf7a96b24ab74a82eb1be5b6f9e38fd3213a58b564c6acedd39272522e394c
+  checksum: 4c7be2495ec9dc1c6a7ccbdd0612bc12402915315bcad95f5dc7012a88fda1ffe45d2cb51f44f8e4cffa1a94d0ae5a7bb0e19ac2db00499622bdecec8e0dbdcb
   languageName: node
   linkType: hard
 
@@ -5433,28 +5433,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/request-error@npm:^2.1.0":
-  version: 2.1.0
-  resolution: "@octokit/request-error@npm:2.1.0"
+"@octokit/request-error@npm:^3.0.0":
+  version: 3.0.0
+  resolution: "@octokit/request-error@npm:3.0.0"
   dependencies:
     "@octokit/types": "npm:^6.0.3"
     deprecation: "npm:^2.0.0"
     once: "npm:^1.4.0"
-  checksum: 47264d6e03aff8e5c6773c7ba3151f0765dd852b0479582d07e4acf2ec7761b3de49f8ca2fef3b9c68b44d64d197b4d0c080840969ab2a00eaade38fbb5616d4
+  checksum: 618f227f04c4c0e08d4409223d206a47ded955cd8f19bfb32613f1b7e868a5d55ffbc8be922c6d4c964e39b035b2e67725c98284215d2637b22924e3a9cb7458
   languageName: node
   linkType: hard
 
-"@octokit/request@npm:^5.6.0":
-  version: 5.6.3
-  resolution: "@octokit/request@npm:5.6.3"
+"@octokit/request@npm:^6.0.0":
+  version: 6.0.2
+  resolution: "@octokit/request@npm:6.0.2"
   dependencies:
-    "@octokit/endpoint": "npm:^6.0.1"
-    "@octokit/request-error": "npm:^2.1.0"
+    "@octokit/endpoint": "npm:^7.0.0"
+    "@octokit/request-error": "npm:^3.0.0"
     "@octokit/types": "npm:^6.16.1"
     is-plain-object: "npm:^5.0.0"
     node-fetch: "npm:^2.6.7"
     universal-user-agent: "npm:^6.0.0"
-  checksum: 05c73ff2386cefee5359cba80eb12c55936260629de8da5c7359d2fe2928a5bfc198f69c54bc705e53814471c66712a6ae33dbb6d5069deb2f5d31757e85f8cf
+  checksum: c3bc04205eb22f7ecb085c0b92813bf90d3c6590e4463e07e83b2b275ee8bc146b2cfe9fdbb99ea078853a66134a6e1da923d473d8d39e95d5b9f3ccc0dcb7f5
   languageName: node
   linkType: hard
 
@@ -31525,7 +31525,7 @@ __metadata:
     "@next-auth/prisma-adapter": "npm:1.0.3"
     "@next/bundle-analyzer": "npm:12.2.1"
     "@next/env": "npm:12.2.1"
-    "@octokit/graphql": "npm:4.8.0"
+    "@octokit/graphql": "npm:5.0.0"
     "@octokit/graphql-schema": "npm:10.74.1"
     "@playwright/test": "npm:1.23.2"
     "@pothos/core": "npm:3.12.2"
