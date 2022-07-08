@@ -27,8 +27,6 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        database:
-          - e2e-postgres
         node-version: [16.X]
 
     steps:
@@ -56,7 +54,7 @@ jobs:
 
       - name: Start postgresql
         working-directory: packages/db-main
-        run: docker-compose -f docker-compose.e2e.yml up --detach ${{ matrix.database }}
+        run: docker-compose -f docker-compose.e2e.yml up --detach
 
       - name: Install dependencies
         run: |
