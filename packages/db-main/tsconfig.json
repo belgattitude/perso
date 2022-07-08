@@ -9,7 +9,9 @@
     "module": "ES2020",
     "noEmit": false,
     "incremental": true,
-    "paths": {}
+    "paths": {
+      "@belgattitude/crypto": ["../../../packages/crypto/src/index"]
+    }
   },
   "exclude": ["**/node_modules", "**/.*/"],
   "include": ["**/*.ts", "**/*.js", "**/*.cjs", "**/*.mjs", "**/*.json"]

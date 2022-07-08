@@ -4,6 +4,13 @@ import Document, { Html, Main, Head, NextScript } from 'next/document';
 type Props = DocumentProps;
 
 class MyDocument extends Document<Props> {
+  /**
+  static async getInitialProps(
+    ctx: DocumentContext
+  ): Promise<DocumentInitialProps> {
+    return await Document.getInitialProps(ctx);
+  }
+  */
   render() {
     const { locale } = this.props.__NEXT_DATA__;
     return (

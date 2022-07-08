@@ -29,11 +29,11 @@ model Company {
 
 model Contact {
   id            String    @id @default(cuid())
-  firstName     String?   @db.VarChar(80)
-  lastName      String?   @db.VarChar(80)
-  email         String    @unique @db.VarChar(150)
+  firstName     String?   @db.Text
+  lastName      String?   @db.Text
+  email         String    @unique @db.Text
   emailVerified DateTime?
-  gsm           String?   @db.VarChar(20)
+  gsm           String?   @db.Text
 
   companyId String
   company   Company  @relation(fields: [companyId], references: [id])
@@ -125,10 +125,10 @@ model MeetingAttendee {
 model Post {
   id          Int       @id @default(autoincrement())
   slug        String    @unique
-  title       String    @db.VarChar(300)
+  title       String    @db.Text
   content     String    @db.Text
-  link        String?   @db.VarChar(300)
-  image       String?   @db.VarChar(300)
+  link        String?   @db.Text
+  image       String?   @db.Text
   author      User?     @relation(fields: [authorId], references: [id])
   authorId    Int?
   publishedAt DateTime?
@@ -139,19 +139,26 @@ model Post {
   @@map(name: "post")
 }
 
+enum UserPermissionRole {
+  ADMIN   @map("admin")
+  USER    @map("user")
+}
+
 model User {
   id            Int       @id @default(autoincrement())
-  firstName     String?   @db.VarChar(80)
-  lastName      String?   @db.VarChar(80)
-  nickname      String    @unique @db.VarChar(64)
-  email         String    @unique @db.VarChar(150)
+  username      String    @unique @db.Text
+  firstName     String?   @db.Text
+  lastName      String?   @db.Text
+  email         String    @unique @db.Text
   emailVerified DateTime?
-  password      String?   @db.VarChar(255)
-  avatarUrl     String?   @db.VarChar(255)
+  role          UserPermissionRole   @default(USER)
+  password      String?   @db.Text
+  avatarUrl     String?   @db.Text
   createdAt     DateTime  @default(now())
   updatedAt     DateTime  @updatedAt
   accounts      Account[]
   sessions      Session[]
+
 
   Post    Post[]
   Meeting Meeting[]
@@ -180,7 +187,7 @@ model Account {
 
 model Session {
   id           String   @id @default(cuid())
-  sessionToken String   @unique
+  sessionToken String   @unique @db.Text
   userId       Int
   expires      DateTime
   user         User     @relation(fields: [userId], references: [id], onDelete: Cascade)
@@ -189,8 +196,9 @@ model Session {
 }
 
 model VerificationToken {
-  identifier String   @db.VarChar(255)
-  token      String   @unique @db.VarChar(255)
+  id         Int      @id @default(autoincrement())
+  identifier String   @db.Text
+  token      String   @unique @db.Text
   expires    DateTime
 
   @@unique([identifier, token])

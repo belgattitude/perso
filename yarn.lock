@@ -1666,7 +1666,7 @@ __metadata:
     "@graphql-mesh/new-openapi": "npm:0.5.3"
     "@graphql-mesh/runtime": "npm:0.41.0"
     "@types/jest": "npm:28.1.4"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.19.0"
     graphql: "npm:16.5.0"
@@ -1708,7 +1708,7 @@ __metadata:
     "@testing-library/react-hooks": "npm:8.0.1"
     "@testing-library/user-event": "npm:14.2.1"
     "@types/jest": "npm:28.1.4"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     "@types/react": "npm:18.0.15"
     "@types/react-dom": "npm:18.0.6"
     "@vitejs/plugin-react": "npm:1.3.2"
@@ -1759,7 +1759,7 @@ __metadata:
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.19.0"
     rimraf: "npm:3.0.2"
@@ -1773,9 +1773,11 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:7.0.8"
+    "@types/bcryptjs": "npm:2.4.2"
     "@types/jest": "npm:28.1.4"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     "@vitest/ui": "npm:0.17.1"
+    bcryptjs: "npm:^2.4.3"
     c8: "npm:7.11.3"
     es-check: "npm:6.2.1"
     eslint: "npm:8.19.0"
@@ -1787,7 +1789,7 @@ __metadata:
     tslib: "npm:2.4.0"
     tsup: "npm:6.1.3"
     typescript: "npm:4.7.4"
-    vite: "npm:2.9.13"
+    vite: "npm:2.9.14"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.17.1"
   languageName: unknown
@@ -1797,13 +1799,14 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/db-main@workspace:packages/db-main"
   dependencies:
+    "@belgattitude/crypto": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@pothos/core": "npm:3.12.2"
     "@pothos/plugin-prisma": "npm:3.13.1"
     "@prisma/client": "npm:4.0.0"
     "@soluble/dsn-parser": "npm:1.4.1"
     "@types/jest": "npm:28.1.4"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     camelcase: "npm:7.0.0"
     cross-env: "npm:7.0.3"
     dotenv-flow: "npm:3.2.0"
@@ -1837,7 +1840,7 @@ __metadata:
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.1"
     "@types/jest": "npm:28.1.4"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     "@types/prettier": "npm:2.6.3"
     "@types/react": "npm:18.0.15"
     "@types/react-dom": "npm:18.0.6"
@@ -1887,7 +1890,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:7.0.8"
     "@types/jest": "npm:28.1.4"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     "@vitest/ui": "npm:0.17.1"
     c8: "npm:7.11.3"
     cross-env: "npm:7.0.3"
@@ -1902,7 +1905,7 @@ __metadata:
     tsup: "npm:6.1.3"
     type-fest: "npm:2.16.0"
     typescript: "npm:4.7.4"
-    vite: "npm:2.9.13"
+    vite: "npm:2.9.14"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.17.1"
   languageName: unknown
@@ -4151,12 +4154,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@hookform/resolvers@npm:2.9.4":
-  version: 2.9.4
-  resolution: "@hookform/resolvers@npm:2.9.4"
+"@hookform/resolvers@npm:2.9.5":
+  version: 2.9.5
+  resolution: "@hookform/resolvers@npm:2.9.5"
   peerDependencies:
     react-hook-form: ^7.0.0
-  checksum: 55c051348acd1891f545489f4227de9c001825741611c269e120816453eb72dac8f5c0f0916026a241071b0542d1261e9ef5565b8e4f2aa4b690cefc84d8c237
+  checksum: 75c49ce3870895593ca5fbde01c804bc99f00cf9f49c78b2a6b150e59c467996570e95d0719d281901d24548571fbfc5d6e25f064a264a32f15a5ad16355b8f6
   languageName: node
   linkType: hard
 
@@ -5773,9 +5776,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.16.1":
-  version: 9.16.1
-  resolution: "@react-three/drei@npm:9.16.1"
+"@react-three/drei@npm:9.17.0":
+  version: 9.17.0
+  resolution: "@react-three/drei@npm:9.17.0"
   dependencies:
     "@babel/runtime": "npm:^7.11.2"
     "@react-spring/three": "npm:^9.3.1"
@@ -5802,7 +5805,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 4c49878aa65620cbaa4aead4a19e94a9e0bc99bc38e77653aca0b8b6f1c8ae112ac7b7d26c40537deba5db64d0246b7f838bb1222b2e3455f42090dd2ddb01e0
+  checksum: b8fadec5c2d729de17cbedc4944d1777568504952f89cd21b65c12ac2a2f957ec1816e70ba737d7a4bffba9c08791fbbb6cdd91267d876bdb6a74cbef1c26452
   languageName: node
   linkType: hard
 
@@ -8015,6 +8018,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/bcryptjs@npm:2.4.2":
+  version: 2.4.2
+  resolution: "@types/bcryptjs@npm:2.4.2"
+  checksum: b9b3ee4f89720ba9c61f69a14fdcdec39ed56ecba99b632be3454acaaa8a168690e6b875d61919f19987d524cf16124de685dec820b2f470e8032e137a1f7006
+  languageName: node
+  linkType: hard
+
 "@types/cacheable-request@npm:^6.0.2":
   version: 6.0.2
   resolution: "@types/cacheable-request@npm:6.0.2"
@@ -8387,10 +8397,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.0.1, @types/node@npm:>=12":
-  version: 18.0.1
-  resolution: "@types/node@npm:18.0.1"
-  checksum: c937f8fc6826f6fae7117b4b02b93caa06338e20325a469bd525e5c393592f4d0607f33ec33820c6d655eb00c1d0abffff74d8913b37a3fc72f5d6cc342df4d8
+"@types/node@npm:*, @types/node@npm:18.0.3, @types/node@npm:>=12":
+  version: 18.0.3
+  resolution: "@types/node@npm:18.0.3"
+  checksum: 2b50e8bd0208dc099424eb1192415b76a6530b24bf7d28344f4be8f59ad1c45bd8788db15ef6e67873bd9e499f2ff235c698f33c5a6d1465012e620580085064
   languageName: node
   linkType: hard
 
@@ -10524,6 +10534,13 @@ __metadata:
     mixin-deep: "npm:^1.2.0"
     pascalcase: "npm:^0.1.1"
   checksum: f474b90436bf31d42a4d7cdb46f7bbe63d89173013003f9a4f7f60c8de5b7a3c0a824aeb46557925aa5b854f9d8367c9f8f443db5a57786f16bdee4259ab5f86
+  languageName: node
+  linkType: hard
+
+"bcryptjs@npm:^2.4.3":
+  version: 2.4.3
+  resolution: "bcryptjs@npm:2.4.3"
+  checksum: bf6a43e9c45ce8e93bd0d5a5c229acabdb632db08a027e986757524cac1d7f0e6e4c3b733637729d3c287df7500911fbfb4a99931014f05d51ee36ad52784e73
   languageName: node
   linkType: hard
 
@@ -15888,9 +15905,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:6.4.2":
-  version: 6.4.2
-  resolution: "framer-motion@npm:6.4.2"
+"framer-motion@npm:6.4.3":
+  version: 6.4.3
+  resolution: "framer-motion@npm:6.4.3"
   dependencies:
     "@emotion/is-prop-valid": "npm:^0.8.2"
     "@motionone/dom": "npm:^10.11.1"
@@ -15905,7 +15922,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 230991edb43079be62f411021d7f88b2acb9c44b1520e3a5f75a19508e22b6af560d9094a5ffbdeca79d5869d402c581d5b6c081117ee34f122128d18e5525e0
+  checksum: c8547e07a578d43d32db4c5a784a5a2c0ba9d77d124412df25f5c1478fbda74fa469c61277ea9fd517c56e3421e4e41a56fb8ea801cdf0cdf7ecf05c7306204c
   languageName: node
   linkType: hard
 
@@ -31502,7 +31519,7 @@ __metadata:
     "@graphql-codegen/typescript-resolvers": "npm:2.6.7"
     "@graphql-yoga/node": "npm:2.12.0"
     "@headlessui/react": "npm:1.6.6"
-    "@hookform/resolvers": "npm:2.9.4"
+    "@hookform/resolvers": "npm:2.9.5"
     "@jitsi/react-sdk": "npm:1.0.1"
     "@mdx-js/react": "npm:2.1.2"
     "@next-auth/prisma-adapter": "npm:1.0.3"
@@ -31515,7 +31532,7 @@ __metadata:
     "@pothos/plugin-errors": "npm:3.4.2"
     "@pothos/plugin-prisma": "npm:3.13.1"
     "@prisma/client": "npm:4.0.0"
-    "@react-three/drei": "npm:9.16.1"
+    "@react-three/drei": "npm:9.17.0"
     "@react-three/fiber": "npm:8.0.27"
     "@sentry/nextjs": "npm:7.5.1"
     "@sindresorhus/is": "npm:5.2.0"
@@ -31539,7 +31556,7 @@ __metadata:
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:28.1.4"
-    "@types/node": "npm:18.0.1"
+    "@types/node": "npm:18.0.3"
     "@types/react": "npm:18.0.15"
     "@types/react-dom": "npm:18.0.6"
     "@types/three": "npm:0.141.0"
@@ -31558,7 +31575,7 @@ __metadata:
     eslint-config-next: "npm:12.2.1"
     flowbite: "npm:1.4.7"
     flowbite-react: "npm:0.1.3"
-    framer-motion: "npm:6.4.2"
+    framer-motion: "npm:6.4.3"
     get-tsconfig: "npm:4.1.0"
     got: "npm:12.1.0"
     graphql: "npm:16.5.0"
@@ -31620,7 +31637,7 @@ __metadata:
     type-fest: "npm:2.16.0"
     typescript: "npm:4.7.4"
     typewriter-effect: "npm:2.19.0"
-    vite: "npm:2.9.13"
+    vite: "npm:2.9.14"
     vite-plugin-svgr: "npm:2.2.0"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.17.1"
