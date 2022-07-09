@@ -2,43 +2,41 @@
 
 # About
 
-Custom opinionated & composable eslint config for [my personal playgrounds](https://github.com/belgattitude/perso).
+Composable eslint config bases for [my personal projects](https://github.com/belgattitude).
 
 ## Features
 
-- **Customizable:** Simply extends the bases and fine-tune them if needed.
-- **Composable:** Add only what you need (prevent unwanted side effects, increase perf).
-- **Conventions:** Plugins enabled on file conventions patterns to increase perf.
-- **Ease:** Plugins does not need to be installed per workspace.
-- **Monorepo:** Change detection aware.
+- **Monorepo friendly:** Each workspace can have its own config.
+- **Composable:** Compose your workspace eslint config from pre-defined bases.
+- **Peace of mind:** Plugins does not need to be installed per workspaces, thx to [@rushstack/eslint-patch](https://www.npmjs.com/package/@rushstack/eslint-patch).
+- **Performance!:** Plugins enabled on file conventions patterns to increase perf.
 
 ## Install
 
+Add the following devDependencies to workspace (apps/packages in monorepo) or main project package.json.
+
 ```bash
-$ yarn add --dev eslint @belgattitude/eslint-config-bases:"workspace:^"
+$ yarn add --dev eslint
+$ yarn add --dev @belgattitude/eslint-config-bases:"workspace:^"
 ```
 
-> **Tip** the [workspace:^](https://yarnpkg.com/features/workspaces#workspace-ranges-workspace) is supported by yarn and pnpm.
+> **Tip:** inside the monorepo, you can use `workspace:^` to reference the config in the workspace.
+> For example: `yarn add --dev @belgattitude/eslint-config-bases:"workspace:^"`
 
 ## Usage
 
-In your app or package, create an `./apps/my-app/.eslintrc.js` (or `./apps/my-app/.eslintrc.cjs` in esm workspaces)
+Create an `./apps/my-app/.eslintrc.js` or `./apps/my-app/.eslintrc.cjs` )
 file that extends any of the existing base configs. For example:
 
 ```javascript
+require("@belgattitude/eslint-config-bases/patch/modern-module-resolution");
+
 module.exports = {
   root: true,
   parserOptions: {
     tsconfigRootDir: __dirname,
     project: "tsconfig.json",
   },
-  /** Might help if nextjs plugin does not locate roor directory.    
-  settings: {
-    next: {
-      rootDir: __dirname,
-    },
-  }, 
-  */
   ignorePatterns: ["**/node_modules", "**/.cache", "build", ".next"],
   extends: [
     "@your-org/eslint-config-bases/typescript",
