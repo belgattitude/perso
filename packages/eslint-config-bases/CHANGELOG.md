@@ -1,5 +1,11 @@
 # @belgattitude/eslint-config-bases
 
+## 1.4.0
+
+### Minor Changes
+
+- [#552](https://github.com/belgattitude/perso/pull/552) [`d856606`](https://github.com/belgattitude/perso/commit/d856606941dc3a09c7d8d1e36ab02e476f50bf9f) Thanks [@belgattitude](https://github.com/belgattitude)! - Export '/patch/modern-module-resolution' based on @rushstack/eslint-patch
+
 ## 1.3.0
 
 ### Minor Changes
