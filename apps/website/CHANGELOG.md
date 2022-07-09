@@ -1,5 +1,16 @@
 # website
 
+## 1.0.3
+
+### Patch Changes
+
+- Updated dependencies []:
+  - @belgattitude/api-gateway@1.0.0
+  - @belgattitude/base-ui@1.0.0
+  - @belgattitude/common-i18n@1.0.0
+  - @belgattitude/db-main@1.1.0
+  - @belgattitude/ts-utils@1.0.0
+
 ## 1.0.2
 
 ### Patch Changes
