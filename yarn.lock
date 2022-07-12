@@ -5472,13 +5472,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/graphql-schema@npm:10.74.1":
-  version: 10.74.1
-  resolution: "@octokit/graphql-schema@npm:10.74.1"
+"@octokit/graphql-schema@npm:10.74.2":
+  version: 10.74.2
+  resolution: "@octokit/graphql-schema@npm:10.74.2"
   dependencies:
-    graphql: "npm:^15.0.0"
+    graphql: "npm:^16.0.0"
     graphql-tag: "npm:^2.10.3"
-  checksum: 0708a1c146275070a150b8ccda1fb623f4b01abd60573eea39fed25c3f9015d86ccaf23b85ef40b6211c42d818dd9c9343a482707728eea030656d447cabebcd
+  checksum: d47b80bb34a05c0a600ebd28a468204e62ac2d4752173636065c85cb520b811e0ced1a849c7d5d4f39f505d24e1a4220163d87dcd33971903f71b2a9341e7a8c
   languageName: node
   linkType: hard
 
@@ -16690,17 +16690,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"graphql@npm:16.5.0":
+"graphql@npm:16.5.0, graphql@npm:^16.0.0":
   version: 16.5.0
   resolution: "graphql@npm:16.5.0"
   checksum: 6fca73c872bb4e5ffe9417f4e4bb53baa5c8a5f1fc9ac190e7eb211f55d6b505088e4efb5b10ffce75421ada42b49a49dacf82be6cc39128bee8f1b6cba434b3
-  languageName: node
-  linkType: hard
-
-"graphql@npm:^15.0.0":
-  version: 15.8.0
-  resolution: "graphql@npm:15.8.0"
-  checksum: e09073b981965b99d22717ed219c55086375075db0870a5a934e1d777d645a155f10141dfe1d0d9713b35765790fb257d6d198d75a53e02ba0126f16befc899c
   languageName: node
   linkType: hard
 
@@ -31205,7 +31198,7 @@ __metadata:
     "@next/bundle-analyzer": "npm:12.2.2"
     "@next/env": "npm:12.2.2"
     "@octokit/graphql": "npm:5.0.0"
-    "@octokit/graphql-schema": "npm:10.74.1"
+    "@octokit/graphql-schema": "npm:10.74.2"
     "@playwright/test": "npm:1.23.2"
     "@pothos/core": "npm:3.12.2"
     "@pothos/plugin-errors": "npm:3.4.2"
