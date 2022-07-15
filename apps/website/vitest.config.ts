@@ -1,6 +1,3 @@
-/// <reference types="vitest" />
-/// <reference types="vite/client" />
-
 import react from '@vitejs/plugin-react';
 import svgr from 'vite-plugin-svgr';
 import tsconfigPaths from 'vite-tsconfig-paths';
@@ -10,13 +7,13 @@ const testFiles = ['./src/**/*.test.{js,jsx,ts,tsx}'];
 
 export default defineConfig({
   plugins: [
+    tsconfigPaths(),
     react({
       jsxImportSource: '@emotion/react',
       babel: {
         plugins: ['@emotion/babel-plugin'],
       },
     }),
-    tsconfigPaths(),
     svgr({
       // Set it to `true` to export React component as default.
       // Notice that it will override the default behavior of Vite.
