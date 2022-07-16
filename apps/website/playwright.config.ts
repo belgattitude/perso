@@ -68,7 +68,7 @@ const config: PlaywrightTestConfig = {
   preserveOutput: 'always',
   reporter: [
     isCI ? ['github'] : ['list'],
-    ['json', { outputFile: `${outputDir}/test-results.json` }],
+    ['json', { outputFile: `${outputDir}/json/test-results.json` }],
     [
       'html',
       {
