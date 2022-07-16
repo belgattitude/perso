@@ -6,6 +6,7 @@ import { defineConfig } from 'vitest/config';
 const testFiles = ['./src/**/*.test.{js,jsx,ts,tsx}'];
 
 export default defineConfig({
+  base: '.',
   plugins: [
     react({
       jsxImportSource: '@emotion/react',
