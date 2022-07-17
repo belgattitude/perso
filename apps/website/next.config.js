@@ -145,7 +145,7 @@ const nextConfig = {
 
   // @link https://nextjs.org/docs/advanced-features/compiler#minification
   // Sometimes buggy so enable/disable when debugging.
-  swcMinify: true,
+  swcMinify: false,
 
   compiler: {
     // emotion: true,

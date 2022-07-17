@@ -3,16 +3,16 @@ import type { FC } from 'react';
 import { Header } from '@/features/meet/components/Header';
 
 type Props = {
-  meetingSlug: string;
+  room: string;
 };
 
 export const AdminMonitorPage: FC<Props> = (props) => {
-  const { meetingSlug } = props;
+  const { room } = props;
   return (
     <>
       <NextSeo nofollow={true} noindex={true} />
-      <Header meetingSlug={meetingSlug} />
-      <h1>Hello {meetingSlug}</h1>
+      <Header room={room} />
+      <h1>Hello {room}</h1>
     </>
   );
 };
