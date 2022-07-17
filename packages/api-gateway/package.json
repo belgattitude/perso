@@ -23,7 +23,7 @@
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo ./.eslintcache && jest --clear-cache",
     "prettier-check": "yarn run --top-level prettier --check --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "prettier-fix": "yarn run --top-level prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/api-gateway.eslintcache",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
     "test": "jest --config jest.config.js --passWithNoTests",
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
@@ -42,7 +42,7 @@
     "@belgattitude/eslint-config-bases": "workspace:^",
     "@graphql-mesh/cli": "0.74.1",
     "@types/jest": "28.1.6",
-    "@types/node": "18.0.5",
+    "@types/node": "18.0.6",
     "cross-env": "7.0.3",
     "eslint": "8.20.0",
     "graphql": "16.5.0",

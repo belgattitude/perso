@@ -31,12 +31,7 @@ const MyApp = (appProps: AppProps) => {
   const getLayout =
     Component.getLayout ?? ((page) => <MainLayout>{page}</MainLayout>);
 
-  return (
-    <AppProviders>
-      {/* Workaround for https://github.com/vercel/next.js/issues/8592 */}
-      {getLayout(<Component {...pageProps} err={err} />)}
-    </AppProviders>
-  );
+  return <AppProviders>{getLayout(<Component {...pageProps} />)}</AppProviders>;
 };
 
 export default appWithTranslation(MyApp);

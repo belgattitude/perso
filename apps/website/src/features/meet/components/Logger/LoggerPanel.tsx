@@ -7,7 +7,7 @@ import type { MeetLogEvent } from '@/features/meet/backend/logger';
 import { meetLogChannel } from '@/features/meet/config';
 
 export type LoggerPanelProps = {
-  meetingSlug: string;
+  room: string;
 };
 
 type LogPayload = MeetLogEvent;
@@ -15,7 +15,7 @@ type LogPayload = MeetLogEvent;
 const channelName = meetLogChannel;
 
 export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
-  const { meetingSlug } = props;
+  const { room } = props;
   const channelRef = useRef<Channel | null>(null);
   const pusherRef = useRef<Pusher | null>(null);
 
@@ -23,23 +23,21 @@ export const LoggerPanel: FC<LoggerPanelProps> = (props) => {
   useEffect(() => {
     getLazyPusher().then((pusher) => {
       pusherRef.current = pusher;
-      channelRef.current = pusher.subscribe(meetingSlug);
+      channelRef.current = pusher.subscribe(room);
       channelRef.current.bind(channelName, function (data: LogPayload) {
         setMessages((prev) => [...prev, data]);
       });
     });
     return () => {
       channelRef.current?.unbind(channelName);
-      pusherRef.current?.unsubscribe(meetingSlug);
+      pusherRef.current?.unsubscribe(room);
     };
-  }, [meetingSlug]);
+  }, [room]);
 
   return (
     <div className="container mx-auto px-4">
       <div className="container mx-auto p-5 px-4">
-        <p className="mb-6 text-xl dark:text-white">
-          Logs for meeting {meetingSlug}
-        </p>
+        <p className="mb-6 text-xl dark:text-white">Logs for meeting {room}</p>
         <ol className="relative border-l border-gray-200 dark:border-gray-700">
           {messages.reverse().map((message) => {
             return (

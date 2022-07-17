@@ -3,6 +3,8 @@
  * @link https://nextjs.org/docs/advanced-features/custom-error-page
  */
 
+import { isHttpError } from '@belgattitude/errorh';
+
 import {
   captureException as sentryCaptureException,
   flush as sentryFlush,
@@ -10,6 +12,7 @@ import {
 import type { NextPage, NextPageContext } from 'next';
 import NextErrorComponent from 'next/error';
 import type { ErrorProps } from 'next/error';
+import type { ErrorDetails } from '@/features/system/pages/ErrorPage';
 import { ErrorPage } from '@/features/system/pages/ErrorPage';
 
 const sentryIgnoredStatusCodes: number[] = [404, 410];
@@ -18,6 +21,7 @@ const sentryIgnoredStatusCodes: number[] = [404, 410];
 type AugmentedError = NonNullable<NextPageContext['err']> | null;
 type CustomErrorProps = {
   err?: AugmentedError;
+  errorDetails: ErrorDetails | null;
   message?: string;
   sentryErrorId?: string;
   hasGetInitialPropsRun?: boolean;
@@ -65,8 +69,14 @@ const sentryFlushServerSide = async (flushAfter: number) => {
 };
 
 const CustomError: NextPage<CustomErrorProps> = (props) => {
-  const { statusCode, err, hasGetInitialPropsRun, sentryErrorId, message } =
-    props;
+  const {
+    statusCode,
+    errorDetails,
+    err,
+    hasGetInitialPropsRun,
+    sentryErrorId,
+    message,
+  } = props;
 
   let browserSentryErrorId: string | undefined;
 
@@ -79,6 +89,7 @@ const CustomError: NextPage<CustomErrorProps> = (props) => {
   return (
     <ErrorPage
       error={err ?? undefined}
+      errorDetails={errorDetails ?? undefined}
       message={message}
       errorId={sentryErrorId ?? browserSentryErrorId}
       statusCode={statusCode}
@@ -96,14 +107,28 @@ CustomError.getInitialProps = async ({
     err,
   } as NextPageContext)) as CustomErrorProps;
 
+  let errorDetails: ErrorDetails | null = null;
+
+  if (isHttpError(err)) {
+    errorDetails = {
+      origin: {
+        statusCode: err.statusCode,
+        message: err.message,
+      },
+    };
+  }
+
+  const statusCode = err?.statusCode ?? errorInitialProps.statusCode;
+
   // Workaround for https://github.com/vercel/next.js/issues/8592, mark when
   // getInitialProps has run
   errorInitialProps.hasGetInitialPropsRun = true;
+  errorInitialProps.errorDetails = errorDetails;
 
   // Returning early because we don't want to log ignored errors to Sentry.
   if (
-    typeof res?.statusCode === 'number' &&
-    sentryIgnoredStatusCodes.includes(res.statusCode)
+    typeof statusCode === 'number' &&
+    sentryIgnoredStatusCodes.includes(statusCode)
   ) {
     return errorInitialProps;
   }

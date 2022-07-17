@@ -1,15 +1,23 @@
 import Head from 'next/head';
 import type { FC } from 'react';
 
+export type ErrorDetails = {
+  origin?: {
+    statusCode: number;
+    message: string;
+  };
+};
+
 type Props = {
   statusCode?: number | null;
   error?: Error;
   message?: string;
   errorId?: string;
+  errorDetails?: ErrorDetails;
 };
 
 export const ErrorPage: FC<Props> = (props) => {
-  const { error, errorId, message, statusCode } = props;
+  const { error, errorId, message, errorDetails, statusCode } = props;
 
   return (
     <>
@@ -27,7 +35,7 @@ export const ErrorPage: FC<Props> = (props) => {
           <p data-testid="error-status-code">Code: {statusCode}</p>
           <p>Message: {message}</p>
           <p>Error id: {errorId}</p>
-          <p>ErrorMessage: {error?.message}</p>
+          <p>ErrorMessage: {errorDetails?.origin?.message ?? error?.message}</p>
         </div>
       </div>
     </>

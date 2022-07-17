@@ -1,16 +1,16 @@
-import { Asserts } from '../asserts';
+import { assertNonEmptyString } from '../asserts';
 
 describe('Asserts test', () => {
-  describe('Asserts.nonEmptyString', () => {
+  describe('assertNonEmptyString', () => {
     it('should work as expected', () => {
       expect(() => {
-        Asserts.nonEmptyString('cool');
+        assertNonEmptyString('cool');
       }).not.toThrowError('');
       expect(() => {
-        Asserts.nonEmptyString(' ', 'message');
+        assertNonEmptyString(' ', 'message');
       }).toThrow('message');
       expect(() => {
-        Asserts.nonEmptyString(true, () => {
+        assertNonEmptyString(true, () => {
           return new Error('message2');
         });
       }).toThrowError('message2');

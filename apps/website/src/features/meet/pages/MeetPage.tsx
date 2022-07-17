@@ -10,12 +10,12 @@ import { createMeetLogEvent } from '@/features/meet/lib/helper';
 // import { useStore } from '../stores';
 
 type Props = {
-  meetingSlug: string;
+  room: string;
 };
 
 export const Welcome: FC<Props> = (props) => {
   const router = useRouter();
-  const { meetingSlug } = props;
+  const { room } = props;
   // const openVideoEmbed = useStore((state) => state.openVideoEmbed);
 
   const connect = (action: MeetEventAction, meetingSlug: string) => {
@@ -32,9 +32,9 @@ export const Welcome: FC<Props> = (props) => {
     }, 200);
   };
 
-  const openLogWindow = (meetingSlug: string) => {
+  const openLogWindow = (room: string) => {
     window.open(
-      `/meet/_log/${encodeURIComponent(meetingSlug)}`,
+      `/meet/_log/${encodeURIComponent(room)}`,
       '_blank',
       'width=400,height=800,scrollbars=no,toolbar=no,screenx=0,screeny=0,location=no,titlebar=no,directories=no,status=no,menubar=no'
     );
@@ -45,13 +45,13 @@ export const Welcome: FC<Props> = (props) => {
       <div className="container mx-auto p-5 px-4">
         <div className={'mb-5 pt-5'}>
           Welcome to this experiment, you've joined the project{' '}
-          <span className="font-bold text-cyan-700">{meetingSlug}</span> Next
-          meeting is wednesday at 10:00 AM.
+          <span className="font-bold text-cyan-700">{room}</span> Next meeting
+          is wednesday at 10:00 AM.
         </div>
         <div className="flex flex-wrap gap-2">
           <button
             onClick={() => {
-              connect('JOIN', meetingSlug);
+              connect('JOIN', room);
             }}
             type="button"
             className="mr-2 mb-2 rounded-lg bg-blue-700 py-2.5 px-5 text-lg font-medium text-white hover:bg-blue-800 focus:outline-none focus:ring-4 focus:ring-blue-300 dark:bg-blue-600 dark:hover:bg-blue-700 dark:focus:ring-blue-800"
@@ -79,7 +79,7 @@ export const Welcome: FC<Props> = (props) => {
       >
         <button
           onClick={() => {
-            openLogWindow(meetingSlug);
+            openLogWindow(room);
           }}
           type="button"
           className="mr-2 mb-2 rounded-lg border border-gray-200 bg-white py-2.5 px-5 text-lg font-medium text-gray-900 hover:bg-gray-100 hover:text-blue-700 focus:z-10 focus:outline-none focus:ring-4 focus:ring-gray-200 dark:border-gray-600 dark:bg-gray-800 dark:text-gray-400 dark:hover:bg-gray-700 dark:hover:text-white dark:focus:ring-gray-700"
@@ -92,13 +92,13 @@ export const Welcome: FC<Props> = (props) => {
 };
 
 export const MeetPage: FC<Props> = (props) => {
-  const { meetingSlug } = props;
+  const { room } = props;
   // const videoEmbedStatus = useStore((state) => state.videoEmbedStatus);
 
   return (
     <>
       <NextSeo nofollow={true} noindex={true} />
-      <Header meetingSlug={meetingSlug} />
+      <Header room={room} />
       <div className="container mx-auto px-4">
         <Welcome {...props} />
       </div>
