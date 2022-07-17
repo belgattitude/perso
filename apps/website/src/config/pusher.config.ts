@@ -1,4 +1,4 @@
-import { Asserts } from '@belgattitude/ts-utils';
+import { assertNonEmptyString } from '@belgattitude/ts-utils';
 import type Pusher from 'pusher-js';
 
 let pusher: Pusher | null = null;
@@ -9,11 +9,11 @@ let pusher: Pusher | null = null;
  */
 export const getLazyPusher = async (): Promise<Pusher> => {
   if (!pusher) {
-    Asserts.nonEmptyString(
+    assertNonEmptyString(
       process.env.NEXT_PUBLIC_PUSHER_KEY,
       `Missing NEXT_PUBLIC_PUSHER_KEY`
     );
-    Asserts.nonEmptyString(
+    assertNonEmptyString(
       process.env.NEXT_PUBLIC_PUSHER_CLUSTER,
       `Missing NEXT_PUBLIC_PUSHER_CLUSTER`
     );

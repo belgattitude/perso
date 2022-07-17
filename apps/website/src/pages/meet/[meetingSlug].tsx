@@ -1,4 +1,4 @@
-import { Asserts } from '@belgattitude/ts-utils';
+import { assertNonEmptyString } from '@belgattitude/ts-utils';
 import { BadRequest } from '@tsed/exceptions';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import type { ReactElement } from 'react';
@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
 ) => {
   const { meetingSlug = '' } = context.params ?? {};
   const { redirect } = context.query ?? {};
-  Asserts.nonEmptyString(meetingSlug, () => {
+  assertNonEmptyString(meetingSlug, () => {
     throw new BadRequest('Meeting slug is required');
   });
   if (redirect === 'google-meet') {
