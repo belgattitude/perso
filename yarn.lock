@@ -1706,7 +1706,7 @@ __metadata:
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.1"
-    "@testing-library/user-event": "npm:14.2.5"
+    "@testing-library/user-event": "npm:14.2.6"
     "@types/jest": "npm:28.1.6"
     "@types/node": "npm:18.0.6"
     "@types/react": "npm:18.0.15"
@@ -7908,12 +7908,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/user-event@npm:14.2.5":
-  version: 14.2.5
-  resolution: "@testing-library/user-event@npm:14.2.5"
+"@testing-library/user-event@npm:14.2.6":
+  version: 14.2.6
+  resolution: "@testing-library/user-event@npm:14.2.6"
   peerDependencies:
     "@testing-library/dom": ">=7.21.4"
-  checksum: cab206cd60e700148dcc6db91cbf30bdb6f26671dee595c4ed1e54432a462bbcbd88252da5f361e81f75edb78a8305418840f8ec1baac1d03fdd5f9b4b3b34c1
+  checksum: 83e8cde4e6db31d4858abe552efedf46b7a76c91578d70e8ac7dbdcf0a33b53efd168b1e2a0c4a84f290c822a8fe7047b14c38774226fa03c2f5cec8e3e853cb
   languageName: node
   linkType: hard
 
@@ -7942,54 +7942,54 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trpc/client@npm:9.26.1":
-  version: 9.26.1
-  resolution: "@trpc/client@npm:9.26.1"
+"@trpc/client@npm:9.26.2":
+  version: 9.26.2
+  resolution: "@trpc/client@npm:9.26.2"
   dependencies:
     "@babel/runtime": "npm:^7.9.0"
   peerDependencies:
-    "@trpc/server": 9.26.1
-  checksum: ef92dbd001f405a50ba7a5c0660a90ca11de5f31ceb5ad7d16ddfa2abc54a2db7c7ca85c1c3e7184a54daa7532b97fbc6ce6637f68ef9e5d5e175eb7596b74a2
+    "@trpc/server": 9.26.2
+  checksum: c263ad92b031ed7a6d560a5c4187a4b216c0af4f844b3ad9802cd421d54bbbaa2b9a292f92ab94b09c4adc292bf1e1357dd5684a779640d6fe3dea2beb01c505
   languageName: node
   linkType: hard
 
-"@trpc/next@npm:9.26.1":
-  version: 9.26.1
-  resolution: "@trpc/next@npm:9.26.1"
+"@trpc/next@npm:9.26.2":
+  version: 9.26.2
+  resolution: "@trpc/next@npm:9.26.2"
   dependencies:
     "@babel/runtime": "npm:^7.9.0"
     react-ssr-prepass: "npm:^1.5.0"
   peerDependencies:
-    "@trpc/client": 9.26.1
-    "@trpc/react": 9.26.1
-    "@trpc/server": 9.26.1
+    "@trpc/client": 9.26.2
+    "@trpc/react": 9.26.2
+    "@trpc/server": 9.26.2
     next: "*"
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-    react-query: ^3.37.0 || ^4.0.0-alpha.4
-  checksum: 1dbf6338d8bdc81b6dd4e13da46b786f6b5c813c16e99403ec16f17e4092dfea99996b2f54b9130423431f7e63976bbca1da5e3ae02239cc528a10d718e17604
+    react-query: ^3.37.0
+  checksum: 0002d9013b03ec13f41610ffc77e838222267df6a4a75a8ae44cc1c59fc8cf39275084cb8dea51ecd931934912eeb975d7c71a53b9cfa693f8b86e103f7ffb54
   languageName: node
   linkType: hard
 
-"@trpc/react@npm:9.26.1":
-  version: 9.26.1
-  resolution: "@trpc/react@npm:9.26.1"
+"@trpc/react@npm:9.26.2":
+  version: 9.26.2
+  resolution: "@trpc/react@npm:9.26.2"
   dependencies:
     "@babel/runtime": "npm:^7.9.0"
   peerDependencies:
-    "@trpc/client": 9.26.1
-    "@trpc/server": 9.26.1
+    "@trpc/client": 9.26.2
+    "@trpc/server": 9.26.2
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-    react-query: ^3.37.0 || ^4.0.0-alpha.4
-  checksum: b35399cee7beef1b55deb821719e28133a302012f79eb3b616a7833cbf95177ba2bec7ca28335fcd8c48f36754b13d6e2495f9ebdc3620ba480abd8ec49f28ef
+    react-query: ^3.37.0
+  checksum: a1015a9826c886c95e6c3f938b09e49cfec727813173212f35046dbefc6d184eb73f0d8209628074c2f09897a76b90b7aff6981c52156469167c0d88d54ba48e
   languageName: node
   linkType: hard
 
-"@trpc/server@npm:9.26.1":
-  version: 9.26.1
-  resolution: "@trpc/server@npm:9.26.1"
-  checksum: fd74fa4e9d811b7762fdfd03d8865e9bb2a3138532678113a24adb2e17a9db3e12a6a47ea280c0b1fb69c7b8ff17c680bda823407e7e3a8c8d5a1ff2c6e5f7f8
+"@trpc/server@npm:9.26.2":
+  version: 9.26.2
+  resolution: "@trpc/server@npm:9.26.2"
+  checksum: fac82daa16446f532a519a0fac76cf1b7bfbd49ccd24584b8b12c9ac1552cf64c0d445faf74fed2aa14e110194cf909e2f19dacd04dad9573fbce0bfba540749
   languageName: node
   linkType: hard
 
@@ -11900,7 +11900,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"clsx@npm:^1.0.4, clsx@npm:^1.2.1":
+"clsx@npm:1.2.1, clsx@npm:^1.0.4, clsx@npm:^1.2.1":
   version: 1.2.1
   resolution: "clsx@npm:1.2.1"
   checksum: cae17fd0fd5ea449d000c681169a8a6f7add4929b369cae3e2d5b604fba2798b39334121e467dbf6ac752562c28a6894a443f30761b004317c0668eb031af52d
@@ -31452,11 +31452,11 @@ __metadata:
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.1"
-    "@testing-library/user-event": "npm:14.2.5"
-    "@trpc/client": "npm:9.26.1"
-    "@trpc/next": "npm:9.26.1"
-    "@trpc/react": "npm:9.26.1"
-    "@trpc/server": "npm:9.26.1"
+    "@testing-library/user-event": "npm:14.2.6"
+    "@trpc/client": "npm:9.26.2"
+    "@trpc/next": "npm:9.26.2"
+    "@trpc/react": "npm:9.26.2"
+    "@trpc/server": "npm:9.26.2"
     "@tsed/exceptions": "npm:6.117.1"
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
@@ -31470,6 +31470,7 @@ __metadata:
     autoprefixer: "npm:10.4.7"
     axios: "npm:0.27.2"
     c8: "npm:7.11.3"
+    clsx: "npm:1.2.1"
     cors: "npm:2.8.5"
     cross-env: "npm:7.0.3"
     date-fns: "npm:2.28.0"

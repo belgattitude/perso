@@ -2,6 +2,7 @@ import { PrismaAdapter } from '@next-auth/prisma-adapter';
 import type { NextAuthOptions, User, Awaitable, Session } from 'next-auth';
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
+import { match } from 'ts-pattern';
 import { prismaDbMain } from '@/backend/config';
 import { LoginCommand } from '@/backend/features/auth/login/login.command';
 import { LoginUseCase } from '@/backend/features/auth/login/login.usecase';
@@ -22,10 +23,7 @@ export const authOptions: NextAuthOptions = {
         username: { label: 'Username', type: 'text', placeholder: 'jsmith' },
         password: { label: 'Password', type: 'password' },
       },
-      async authorize(
-        credentials,
-        req
-      ): Promise<(User & { role: string; id: string }) | null> {
+      async authorize(credentials, req) {
         const login = new LoginUseCase(prismaDbMain);
         const cmd = LoginCommand.create(
           credentials?.username ?? '',
@@ -33,20 +31,20 @@ export const authOptions: NextAuthOptions = {
         );
         const result = await login.execute(cmd);
         console.log('result', result);
-        if (result) {
-          return {
-            id: result.id.toString(),
-            name: result.username,
-            email: result.email,
-            role: result.role,
-            image: undefined,
-          } as User & { role: string; id: string };
-        } else {
-          // If you return null then an error will be displayed advising the user to check their details.
-          return null;
-
-          // You can also Reject this callback with an Error thus the user will be sent to the error page with the error message as a query parameter
-        }
+        return match(result)
+          .with({ type: 'error' }, ({ error }) => {
+            throw new Error(error);
+          })
+          .with({ type: 'ok' }, ({ user }) => {
+            return {
+              id: user.id.toString(),
+              name: user.username,
+              email: user.email,
+              role: user.role,
+              image: undefined,
+            } as User & { role: string; id: string };
+          })
+          .exhaustive();
       },
     }),
   ],
