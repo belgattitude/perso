@@ -53,7 +53,9 @@ export const authOptions: NextAuthOptions = {
   theme: {
     colorScheme: 'light',
   },
-  session: {},
+  session: {
+    strategy: 'jwt',
+  },
   /**
   session: {
     // When using `"database"`, the session cookie will only contain a `sessionToken` value,
