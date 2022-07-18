@@ -1,11 +1,11 @@
 import { PrismaManager, PrismaClientDbMain } from '@belgattitude/db-main';
-import { Asserts } from '@belgattitude/ts-utils';
+import { assertNonEmptyString } from '@belgattitude/ts-utils';
 
 const isDev = process.env?.NODE_ENV === 'development';
 
 export const getPrismaClientDbMain: () => PrismaClientDbMain = () => {
   const url = process.env?.PRISMA_DATABASE_URL ?? null;
-  Asserts.nonEmptyString(
+  assertNonEmptyString(
     url,
     () =>
       new Error(

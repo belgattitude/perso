@@ -67,7 +67,6 @@ const tmModules = [
   // @link https://github.com/vercel/next.js/issues/23725
   // @link https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
   ...[
-    '@jitsi/react-sdk',
     // ie: newer versions of https://github.com/sindresorhus packages
   ],
 ];

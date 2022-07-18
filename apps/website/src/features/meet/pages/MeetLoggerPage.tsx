@@ -3,16 +3,16 @@ import type { FC } from 'react';
 import { LoggerPanel } from '@/features/meet/components/Logger';
 
 export type MeetLoggerPageProps = {
-  meetingSlug: string;
+  room: string;
 };
 
 export const MeetLoggerPage: FC<MeetLoggerPageProps> = (props) => {
-  const { meetingSlug } = props;
+  const { room } = props;
 
   return (
     <>
       <NextSeo nofollow={true} noindex={true} />
-      <LoggerPanel meetingSlug={meetingSlug} />
+      <LoggerPanel room={room} />
     </>
   );
 };

@@ -1,11 +1,11 @@
 import { css } from '@emotion/react';
 import {
   m as motion,
-  useViewportScroll,
   useTransform,
   useSpring,
   LazyMotion,
   domAnimation,
+  useScroll,
 } from 'framer-motion';
 import { backOut } from 'popmotion';
 import type { FC } from 'react';
@@ -21,7 +21,7 @@ type HeroProps = {
 
 export const HeroBlock: FC<HeroProps> = (props) => {
   const { className } = props;
-  const { scrollY } = useViewportScroll();
+  const { scrollY } = useScroll();
 
   const [elementRect, setElementRect] = useState<DOMRect | null>(null);
 

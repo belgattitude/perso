@@ -6,15 +6,15 @@ import { Header } from '@/features/meet/components/Header';
 import { JitsiEmbed } from '../components/Jitsi';
 
 type Props = {
-  meetingSlug: string;
+  room: string;
 };
 
 const Jitsi: FC<Props> = (props) => {
-  const { meetingSlug } = props;
+  const { room } = props;
 
   useLayoutEffect(() => {
-    console.log(`recreated jitsi embed for ${meetingSlug}`);
-  }, [meetingSlug]);
+    console.log(`recreated jitsi embed for ${room}`);
+  }, [room]);
 
   return (
     <JitsiEmbed
@@ -26,7 +26,7 @@ const Jitsi: FC<Props> = (props) => {
           disableThirdPartyRequests: true,
           hiddenPremeetingButtons: ['microphone'],
         },
-        roomName: meetingSlug,
+        roomName: room,
         getIFrameRef: (node) => (node.style.height = '800px'),
         // getIFrameRef: (node) => (iframeRef.current = node),
       }}
@@ -40,12 +40,12 @@ const Jitsi: FC<Props> = (props) => {
 };
 
 export const JitsiPage: FC<Props> = (props) => {
-  const { meetingSlug } = props;
+  const { room } = props;
 
   return (
     <>
       <NextSeo nofollow={true} noindex={true} />
-      <Header meetingSlug={meetingSlug} inMeeting={true} />
+      <Header room={room} inMeeting={true} />
       <div className="container mx-auto px-4">
         <Jitsi {...props} />
       </div>
