@@ -1,25 +1,32 @@
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import type { FC } from 'react';
-import { useQuery } from 'react-query';
-import { searchBlog } from '@/features/blog/api';
 import { blogConfig } from '@/features/blog/blog.config';
+import { trpc } from '@/utils/trpc';
 
 const BlogPosts: FC = () => {
   // const { t } = useTranslation(blogConfig.i18nNamespaces);
-  const { data } = useQuery(['searchBlog'], searchBlog);
+  const { data, error } = trpc.useQuery(['blog/test'], {
+    retry: false,
+  });
+
+  if (error) {
+    return (
+      <div>
+        <h1>Error</h1>
+        <p>{error.message}</p>
+        <pre>{JSON.stringify(error.data, null, 2)}</pre>
+      </div>
+    );
+  }
+
   return (
     <>
       {data &&
         data.map((post) => {
           return (
             <div key={post.slug}>
-              <>
-                <h1>{post.title}</h1>
-                <div>
-                  {post.image && <img alt={post.title} src={post.image} />}
-                </div>
-              </>
+              <pre>{JSON.stringify(post, null, 2)}</pre>
             </div>
           );
         })}

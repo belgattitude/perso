@@ -1,5 +1,5 @@
 import { PrismaAdapter } from '@next-auth/prisma-adapter';
-import type { NextAuthOptions, User, Awaitable, Session } from 'next-auth';
+import type { NextAuthOptions, User, Session } from 'next-auth';
 import NextAuth from 'next-auth';
 import CredentialsProvider from 'next-auth/providers/credentials';
 import { match } from 'ts-pattern';
@@ -93,10 +93,6 @@ export const authOptions: NextAuthOptions = {
       return sess;
     },
     async jwt({ token, user, account, profile, isNewUser }) {
-      console.log('##########################################################');
-      console.log('token', token);
-      console.log('token', user);
-      console.log('##########################################################');
       if (user) {
         token.id = user.id;
         token.role = user.role;
