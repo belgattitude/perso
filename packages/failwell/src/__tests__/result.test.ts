@@ -1,4 +1,4 @@
-import type { FailPayload, OkPayload } from '../result';
+import type { FailPayload } from '../result';
 import { Result } from '../result';
 
 describe('Result tests', () => {
