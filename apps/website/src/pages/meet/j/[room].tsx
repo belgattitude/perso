@@ -5,20 +5,20 @@ import { z } from 'zod';
 import { logger } from '@/config/logger.config';
 import { MeetLayout } from '@/features/meet/layouts/MeetLayout';
 import { roomSchema } from '@/features/meet/lib/validateRoom';
-import { MeetPage } from '@/features/meet/pages';
+import { JitsiPage } from '@/features/meet/pages';
 
 type Props = {
   room: string;
 };
 
-export default function MeetRoute(
+export default function MeetJitsiRoute(
   props: InferGetServerSidePropsType<typeof getServerSideProps>
 ) {
   const { room } = props;
-  return <MeetPage room={room} />;
+  return <JitsiPage room={room} />;
 }
 
-MeetRoute.getLayout = function getLayout(page: ReactElement) {
+MeetJitsiRoute.getLayout = function getLayout(page: ReactElement) {
   return <MeetLayout>{page}</MeetLayout>;
 };
 
