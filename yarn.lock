@@ -1930,7 +1930,7 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@belgattitude/failwell@workspace:packages/failwell":
+"@belgattitude/failwell@workspace:^, @belgattitude/failwell@workspace:packages/failwell":
   version: 0.0.0-use.local
   resolution: "@belgattitude/failwell@workspace:packages/failwell"
   dependencies:
@@ -31470,6 +31470,7 @@ __metadata:
     "@belgattitude/db-main": "workspace:^"
     "@belgattitude/errorh": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
+    "@belgattitude/failwell": "workspace:^"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.9.2"
     "@emotion/cache": "npm:11.9.3"

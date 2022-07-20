@@ -29,18 +29,17 @@ export const authOptions: NextAuthOptions = {
           credentials?.username ?? '',
           credentials?.password ?? ''
         );
-        const result = await login.execute(cmd);
-        console.log('result', result);
-        return match(result)
-          .with({ type: 'error' }, ({ error }) => {
-            throw new Error(error);
+        const r = await login.execute(cmd);
+        return match(r.payload)
+          .with({ isError: true }, ({ error }) => {
+            throw error;
           })
-          .with({ type: 'ok' }, ({ user }) => {
+          .with({ isError: false }, ({ value }) => {
             return {
-              id: user.id.toString(),
-              name: user.username,
-              email: user.email,
-              role: user.role,
+              id: value.id.toString(),
+              name: value.username,
+              email: value.email,
+              role: value.role,
               image: undefined,
             } as User & { role: string; id: string };
           })
