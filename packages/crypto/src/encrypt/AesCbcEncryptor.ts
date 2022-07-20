@@ -60,9 +60,8 @@ export class AesCbcEncryptor implements IEncryptor<AesEncryptedResult> {
     try {
       const key = scryptSync(this.#password, this.#salt, 32);
       const decipher = createDecipheriv(this.#algorithm, key, iv);
-      let decrypted = decipher.update(encryptedText);
-      decrypted = Buffer.concat([decrypted, decipher.final()]);
-      return decrypted.toString();
+      const decrypted = decipher.update(encryptedText);
+      return Buffer.concat([decrypted, decipher.final()]).toString('utf-8');
     } catch (e: unknown) {
       throw new DecryptError(
         `Decryption error: ${
