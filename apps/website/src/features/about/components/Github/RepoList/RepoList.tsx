@@ -1,5 +1,5 @@
+import { useQuery } from '@tanstack/react-query';
 import type { FC } from 'react';
-import { useQuery } from 'react-query';
 import { getGithubRepos } from '@/features/about/api/getGithubRepos';
 import { RepoItem } from '../RepoItem';
 import { RepoListCtn } from './styles';
