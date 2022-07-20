@@ -1,9 +1,12 @@
+import { withTRPC } from '@trpc/next';
 import type { NextPage } from 'next';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps as NextAppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
+import { getWithTrpcConfig } from '@/config/trpc.config';
 import { MainLayout } from '@/layouts/main';
 import { AppProviders } from '../AppProviders';
+import type { AppRouter } from './api/trpc/[...trpc]';
 
 /**
  * Import global styles for tailwind compatibility
@@ -26,12 +29,18 @@ type NextPageWithLayout = NextPage & {
  * @link https://nextjs.org/docs/advanced-features/custom-app
  */
 const MyApp = (appProps: AppProps) => {
-  const { Component, pageProps, err } = appProps;
+  const { Component, pageProps } = appProps;
 
   const getLayout =
     Component.getLayout ?? ((page) => <MainLayout>{page}</MainLayout>);
 
-  return <AppProviders>{getLayout(<Component {...pageProps} />)}</AppProviders>;
+  return (
+    <AppProviders session={pageProps.session}>
+      {getLayout(<Component {...pageProps} />)}
+    </AppProviders>
+  );
 };
 
-export default appWithTranslation(MyApp);
+export default withTRPC<AppRouter>(getWithTrpcConfig())(
+  appWithTranslation(MyApp)
+);

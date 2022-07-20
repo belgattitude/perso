@@ -1,7 +1,7 @@
 ---
-title: "Hello this is my first post"
-createdAt: "2015-12-13"
-updatedAt: "2015-12-13"
+title: "Hello this is my second post"
+createdAt: "2020-12-13"
+updatedAt: "2020-12-13"
 author: "Sébastien Vanvelthem"
 summary: "Using data to determine where to drink."
 image: "https://placekitten.com/g/800/600"
