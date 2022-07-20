@@ -97,7 +97,7 @@ export const MeetPage: FC<Props> = (props) => {
 
   return (
     <>
-      <NextSeo nofollow={true} noindex={true} />
+      <NextSeo nofollow={true} noindex={true} title={`Meet ${room}`} />
       <Header room={room} />
       <div className="container mx-auto px-4">
         <Welcome {...props} />
