@@ -5113,13 +5113,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@next-auth/prisma-adapter@npm:1.0.3":
-  version: 1.0.3
-  resolution: "@next-auth/prisma-adapter@npm:1.0.3"
+"@next-auth/prisma-adapter@npm:1.0.4":
+  version: 1.0.4
+  resolution: "@next-auth/prisma-adapter@npm:1.0.4"
   peerDependencies:
     "@prisma/client": ">=2.26.0 || >=3"
-    next-auth: ^4.0.1
-  checksum: ed8061d95b47d3daa4b075c903743636885898b9c6a597c71a39ba51008e6e4fe987eadbca30ca6c834da4fab9310f17110a9300f162bbccea5a334e7c9e6d92
+    next-auth: ^4
+  checksum: 168cffca57bd1cb5645a90eb1fa0c26ee14518a3ee1a448b9aa8057069ba14afe52b9b0f6c32050ac3344f2fda43dab2db76b079c7abb1c65fed79623ccd3430
   languageName: node
   linkType: hard
 
@@ -31249,7 +31249,7 @@ __metadata:
     "@hookform/resolvers": "npm:2.9.6"
     "@jitsi/react-sdk": "npm:1.0.2"
     "@mdx-js/react": "npm:2.1.2"
-    "@next-auth/prisma-adapter": "npm:1.0.3"
+    "@next-auth/prisma-adapter": "npm:1.0.4"
     "@next/bundle-analyzer": "npm:12.2.2"
     "@next/env": "npm:12.2.2"
     "@octokit/graphql": "npm:5.0.0"
