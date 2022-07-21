@@ -1601,12 +1601,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.16.7, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.17.9, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.5.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.0, @babel/runtime@npm:^7.9.2":
-  version: 7.18.6
-  resolution: "@babel/runtime@npm:7.18.6"
+"@babel/runtime@npm:^7.0.0, @babel/runtime@npm:^7.10.2, @babel/runtime@npm:^7.10.4, @babel/runtime@npm:^7.11.2, @babel/runtime@npm:^7.12.5, @babel/runtime@npm:^7.13.10, @babel/runtime@npm:^7.14.5, @babel/runtime@npm:^7.16.3, @babel/runtime@npm:^7.16.7, @babel/runtime@npm:^7.17.2, @babel/runtime@npm:^7.17.8, @babel/runtime@npm:^7.18.3, @babel/runtime@npm:^7.18.6, @babel/runtime@npm:^7.3.1, @babel/runtime@npm:^7.5.0, @babel/runtime@npm:^7.5.5, @babel/runtime@npm:^7.6.2, @babel/runtime@npm:^7.7.2, @babel/runtime@npm:^7.7.6, @babel/runtime@npm:^7.8.4, @babel/runtime@npm:^7.9.0, @babel/runtime@npm:^7.9.2":
+  version: 7.18.9
+  resolution: "@babel/runtime@npm:7.18.9"
   dependencies:
     regenerator-runtime: "npm:^0.13.4"
-  checksum: 50682cdc5c7ae692c38d1705490153c34d2d160f984c338c3bfa3bc549fee77cc4db776ae106ee39d5d20c1e02e630b534997f4c898178501f496a93229e00b9
+  checksum: 1581271f6f303662c74e992fc52aaaaa6119eb74ebff5328ff6998a7058795d442d19a5585faa43e344c4e7d48677faf94184a139b5941254069bc0ee579e467
   languageName: node
   linkType: hard
 
@@ -7775,6 +7775,33 @@ __metadata:
   peerDependencies:
     tailwindcss: "*"
   checksum: df5cd337cf4a9684b683f407b74ff0296691dc0fdbd367efa26ba1fe83e1da989334d36fe5993006a9b4563f62a2702b76132be3f55c72859c4862cd74bf588a
+  languageName: node
+  linkType: hard
+
+"@tanstack/query-core@npm:^4.0.0-beta.1":
+  version: 4.0.5
+  resolution: "@tanstack/query-core@npm:4.0.5"
+  checksum: 9cf586c64e3f23cdaabfc7d7db6536394991813c1509e5b0fc02f0444f8e8a1462edf93f5fe5584ac0b692d28a48b8d6ff2ecf657d3ee27496e9df1d51eb0694
+  languageName: node
+  linkType: hard
+
+"@tanstack/react-query@npm:4.0.10":
+  version: 4.0.10
+  resolution: "@tanstack/react-query@npm:4.0.10"
+  dependencies:
+    "@tanstack/query-core": "npm:^4.0.0-beta.1"
+    "@types/use-sync-external-store": "npm:^0.0.3"
+    use-sync-external-store: "npm:^1.2.0"
+  peerDependencies:
+    react: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-dom: ^16.8.0 || ^17.0.0 || ^18.0.0
+    react-native: "*"
+  peerDependenciesMeta:
+    react-dom:
+      optional: true
+    react-native:
+      optional: true
+  checksum: 281b6ae95af74714ce9a1909ff62cc737687fe5bf2d4dd3240f59b29aa70628264a9261c82e0cdd4cdaa28c579223df973c8f26002963bf7cc3d4339fe3314a8
   languageName: node
   linkType: hard
 
@@ -25898,15 +25925,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-query@npm:4.0.0-beta.23":
-  version: 4.0.0-beta.23
-  resolution: "react-query@npm:4.0.0-beta.23"
+"react-query@npm:3.39.2":
+  version: 3.39.2
+  resolution: "react-query@npm:3.39.2"
   dependencies:
-    "@babel/runtime": "npm:^7.17.9"
-    "@types/use-sync-external-store": "npm:^0.0.3"
+    "@babel/runtime": "npm:^7.5.5"
     broadcast-channel: "npm:^3.4.1"
     match-sorter: "npm:^6.0.2"
-    use-sync-external-store: "npm:^1.1.0"
   peerDependencies:
     react: ^16.8.0 || ^17.0.0 || ^18.0.0
   peerDependenciesMeta:
@@ -25914,7 +25939,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 4de020a7d011180b565bc14cc8abfc80443fc54284529699fd2260d2cfd8c0fe7f288c91adba8af9af40ab8b254059100a657a55efb78590c5c60a5b3b758974
+  checksum: f85095805845cf98e5f8ee8b3777f98863cc5ef18ce1725da577ccd2fa52b0bed16c8a5b461915db21affbaa9fa432b5a8ce6db4a175eb30c67abe391a0cd2b8
   languageName: node
   linkType: hard
 
@@ -30512,7 +30537,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"use-sync-external-store@npm:1.2.0, use-sync-external-store@npm:^1.1.0":
+"use-sync-external-store@npm:1.2.0, use-sync-external-store@npm:^1.2.0":
   version: 1.2.0
   resolution: "use-sync-external-store@npm:1.2.0"
   peerDependencies:
@@ -31271,6 +31296,7 @@ __metadata:
     "@tailwindcss/forms": "npm:0.5.2"
     "@tailwindcss/line-clamp": "npm:0.4.0"
     "@tailwindcss/typography": "npm:0.5.4"
+    "@tanstack/react-query": "npm:4.0.10"
     "@testing-library/jest-dom": "npm:5.16.4"
     "@testing-library/react": "npm:13.3.0"
     "@testing-library/react-hooks": "npm:8.0.1"
@@ -31341,7 +31367,7 @@ __metadata:
     react-dom: "npm:18.2.0"
     react-hook-form: "npm:7.33.1"
     react-i18next: "npm:11.18.1"
-    react-query: "npm:4.0.0-beta.23"
+    react-query: "npm:3.39.2"
     react-router-dom: "npm:6.3.0"
     reading-time: "npm:1.5.0"
     rehype-autolink-headings: "npm:6.1.1"
