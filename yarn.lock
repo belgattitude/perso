@@ -24070,9 +24070,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino@npm:8.2.0":
-  version: 8.2.0
-  resolution: "pino@npm:8.2.0"
+"pino@npm:8.3.0":
+  version: 8.3.0
+  resolution: "pino@npm:8.3.0"
   dependencies:
     atomic-sleep: "npm:^1.0.0"
     fast-redact: "npm:^3.1.1"
@@ -24083,11 +24083,11 @@ __metadata:
     quick-format-unescaped: "npm:^4.0.3"
     real-require: "npm:^0.1.0"
     safe-stable-stringify: "npm:^2.3.1"
-    sonic-boom: "npm:^3.0.0"
+    sonic-boom: "npm:^3.1.0"
     thread-stream: "npm:^2.0.0"
   bin:
     pino: bin.js
-  checksum: 066fccbde12e59b7c796acab12d323b73d8c748db7d031011bb5fa52b29e38281a18698c30274b1d65bd33eb3be47f4189c646d41d1028a8468145d8f3994386
+  checksum: 5e51784ec4023d6e70ffe1490fa3af16a1dbef675b44bc6e22b70ad06bb51b49052a098c48411fa61395a39176e4aa600f8be932a75ef33e4eb8fe4325f04d13
   languageName: node
   linkType: hard
 
@@ -27830,12 +27830,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"sonic-boom@npm:^3.0.0":
-  version: 3.0.0
-  resolution: "sonic-boom@npm:3.0.0"
+"sonic-boom@npm:^3.0.0, sonic-boom@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "sonic-boom@npm:3.1.0"
   dependencies:
     atomic-sleep: "npm:^1.0.0"
-  checksum: b5bab7a09067c8e216f2a0a618b512409c21a912be4f5b3d35091effa9767769813c827e7f3c9c4a8d508a175d60306ad430df3af7d4a7ff4e12a9c6b5a12312
+  checksum: 7498a0fe9c1b443bdcafbf2d95397cff99be9e8a80df82318e0647574801b29a02539706fc075546cadc85cbd3b6047948513f5e7dde8e8ed9d6064de6f436e5
   languageName: node
   linkType: hard
 
@@ -31328,7 +31328,7 @@ __metadata:
     next-transpile-modules: "npm:9.0.0"
     npm-run-all: "npm:4.1.5"
     picocolors: "npm:1.0.0"
-    pino: "npm:8.2.0"
+    pino: "npm:8.3.0"
     pino-pretty: "npm:8.1.0"
     popmotion: "npm:11.0.3"
     postcss: "npm:8.4.14"
