@@ -134,12 +134,19 @@ jobs:
           playwright_version=$(npm info @playwright/test version)
           echo "::set-output name=version::${playwright_version}"
 
+      - name: Get playwright cache-key
+        id: playwright-cache-key
+        shell: bash
+        run: |
+          playwright-cache-key=${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}-1
+          echo "::set-output name=key::${playwright-cache-key}"      
+
       - name: Cache Playwright binaries
         uses: actions/cache@v3
         id: playwright-cache
         with:
           path: ${{ matrix.playwright_binary_path }}
-          key: ${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}-${{ hashFiles("${{ matrix.playwright_binary_path }}/.links/*") }}
+          key: ${{ steps.playwright-cache-key.outputs.key }}
 
       - name: Playwright debug
         shell: bash
@@ -147,12 +154,8 @@ jobs:
           echo "OS: ${{ matrix.os }}"
           echo "Playwright version: ${{ steps.playwright-version.outputs.version }}"
           echo "Playwright install dir: ${{ matrix.playwright_binary_path }}"        
-          echo "Cache key: ${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}-${{ hashFiles("${{ matrix.playwright_binary_path }}/.links/*") }}"
+          echo "Cache key: ${{ steps.playwright-cache-key.outputs.key }}
           echo "Cache hit: ${{ steps.playwright-cache.outputs.cache-hit == 'true' }}"
-
-      - name: Playwright debug
-        shell: bash
-        run: ls -laR ~/.cache/ms-playwright
 
       - name: Install Playwright
         if: steps.playwright-cache.outputs.cache-hit != 'true'
