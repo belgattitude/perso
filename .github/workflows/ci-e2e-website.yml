@@ -149,7 +149,10 @@ jobs:
           echo "Playwright install dir: ${{ matrix.playwright_binary_path }}"        
           echo "Cache key: ${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}
           echo "Cache hit: ${{ steps.playwright-cache.outputs.cache-hit == 'true' }}"
-          ls -laR ${{ matrix.playwright_binary_path }}
+
+      - name: Playwright debug
+        shell: bash
+        run: ls -laR ~/.cache/ms-playwright
 
       - name: Install Playwright
         if: steps.playwright-cache.outputs.cache-hit != 'true'
