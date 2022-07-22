@@ -139,7 +139,7 @@ jobs:
         id: playwright-cache
         with:
           path: ${{ matrix.playwright_binary_path }}
-          key: ${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}
+          key: ${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}-${{ hashFiles("${{ matrix.playwright_binary_path }}/.links/*") }}
 
       - name: Playwright debug
         shell: bash
@@ -147,7 +147,7 @@ jobs:
           echo "OS: ${{ matrix.os }}"
           echo "Playwright version: ${{ steps.playwright-version.outputs.version }}"
           echo "Playwright install dir: ${{ matrix.playwright_binary_path }}"        
-          echo "Cache key: ${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}"
+          echo "Cache key: ${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}-${{ hashFiles("${{ matrix.playwright_binary_path }}/.links/*") }}"
           echo "Cache hit: ${{ steps.playwright-cache.outputs.cache-hit == 'true' }}"
 
       - name: Playwright debug
