@@ -231,7 +231,7 @@ export type Scalars = {
   Int: number;
   Float: number;
   /** The `BigInt` scalar type represents non-fractional signed whole numeric values. */
-  BigInt: bigint;
+  BigInt: any;
 };
 
 export type Query = {
@@ -356,7 +356,7 @@ import { PubSub } from '@graphql-mesh/utils';
 import { DefaultLogger } from '@graphql-mesh/utils';
 import MeshCache from "@graphql-mesh/cache-localforage";
 import { fetchFactory } from 'fetchache';
-import { fetch, Request, Response } from 'cross-undici-fetch';
+import { fetch, Request, Response } from '@whatwg-node/fetch';
 
 import NewOpenapiHandler from "@graphql-mesh/new-openapi"
 import BareMerger from "@graphql-mesh/merger-bare";
@@ -395,13 +395,13 @@ sources[0] = {
           handler: catFactsHandler,
           transforms: catFactsTransforms
         }
+const additionalResolvers = [] as any[]
 const merger = new(BareMerger as any)({
         cache,
         pubsub,
         logger: logger.child('bareMerger'),
         store: rootStore.child('bareMerger')
       })
-const additionalResolvers = [] as any[]
 
   return {
     sources,
