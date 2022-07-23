@@ -1,8 +1,9 @@
-import pino from 'pino';
+import { pino } from 'pino';
 import pretty from 'pino-pretty';
 import packageJson from '../../package.json';
 
 export const logger = pino({
+  name: 'website-log',
   browser: {
     asObject: true,
   },
