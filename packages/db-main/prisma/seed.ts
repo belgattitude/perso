@@ -1,4 +1,4 @@
-import { PrismaClientDbMain } from '@belgattitude/db-main';
+import { PrismaClientDbMain } from '../src';
 import { CompanySeeds, ProjectSeeds, UserSeeds } from '../src/seeds';
 
 const prisma = new PrismaClientDbMain();

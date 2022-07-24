@@ -24,6 +24,7 @@
     "**.*.cjs",
     "**/*.mjs",
     "**/*.json"
-  ]
-  // "types": ["vitest/globals"]
+  ],
+  "types": ["vitest/globals", "jest", "@testing-library/jest-dom"]
+  //"types": ["vitest/globals", "jest", "@testing-library/jest-dom"]
 }
