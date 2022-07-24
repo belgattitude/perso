@@ -45,25 +45,15 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2.2.2
+        with:
+          version: 7
+
       - name: Use Node.js ${{ matrix.node-version }}
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v2
         with:
           node-version: ${{ matrix.node-version }}
-
-      # Why not using setup-node 2.2+ cache option (yet) ?
-      # see https://github.com/belgattitude/nextjs-monorepo-example/pull/369
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Restore yarn cache
-        uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
-          restore-keys: |
-            yarn-cache-folder-
+          cache: 'pnpm'
 
       # see https://github.com/vercel/next.js/pull/27362
       - name: Restore nextjs build website from cache
@@ -80,7 +70,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install --immutable --inline-builds
+          pnpm install
         env:
           PRISMA_SKIP_POSTINSTALL_GENERATE: true
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
@@ -92,20 +82,20 @@ jobs:
 
       - name: Prettier checks
         run: |
-          yarn g:nx run website:prettier-check
+          pnpm nx run website:prettier-check
 
       - name: Eslint checks
-        run: |        
-          yarn g:nx run website:lint
+        run: |
+          pnpm nx run website:lint
 
       - name: Unit tests
         run: |
-          yarn g:nx run website:test-unit
+          pnpm nx run website:test-unit
 
       - name: Build web-app
         working-directory: apps/website
         run: |
-          yarn build
+          pnpm run build
         env:
           # Speed up build: they are linted in a previous step
           NEXTJS_IGNORE_ESLINT: true
@@ -125,9 +115,9 @@ jobs:
       - name: Check ecmascript checks for build files
         working-directory: apps/website
         run: |
-          yarn check-dist
+          pnpm run check-dist
 
       - name: Check browser bundle size
         working-directory: apps/website
         run: |
-          yarn check-size
+          pnpm run check-size

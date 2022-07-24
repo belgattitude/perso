@@ -37,7 +37,8 @@
       "@belgattitude/failwell": ["../../../packages/failwell/src/index"],
       "@belgattitude/ts-utils": ["../../../packages/ts-utils/src/index"],
       "@belgattitude/crypto": ["../../../packages/crypto/src/index"]
-    }
+    },
+    "types": ["vitest/globals", "node", "jest", "@testing-library/jest-dom"]
   },
   "exclude": ["**/node_modules", ".next"],
   "include": [
