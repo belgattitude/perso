@@ -13,7 +13,8 @@
     "paths": {
       "@belgattitude/common-i18n/*": ["../../../packages/common-i18n/src/*"],
       "@belgattitude/common-i18n": ["../../../packages/common-i18n/src/index"]
-    }
+    },
+    "types": ["vitest/globals", "node", "jest", "@testing-library/jest-dom"]
   },
   "exclude": ["**/node_modules", "**/.*/", "./dist", "./coverage"],
   "include": [
@@ -24,7 +25,5 @@
     "**.*.cjs",
     "**/*.mjs",
     "**/*.json"
-  ],
-  "types": ["vitest/globals", "jest", "@testing-library/jest-dom"]
-  //"types": ["vitest/globals", "jest", "@testing-library/jest-dom"]
+  ]
 }
