@@ -16,10 +16,6 @@
     "apps/*",
     "packages/*"
   ],
-  "resolutions": {
-    "?vite": "0.17.0 introduced multirange for vite 2 and 3 as dep (not peer-dep). Till vite 3 is in beta, force v2",
-    "vite": "2.9.14"
-  },
   "scripts": {
     "g:clean": "yarn clean:global-cache && yarn workspaces foreach -pv run clean",
     "g:build": "nx run-many --target=build --all",
