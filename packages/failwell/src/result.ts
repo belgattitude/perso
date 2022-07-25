@@ -1,11 +1,11 @@
 type ErrorType = Error;
 
-type OkPayload<T> = {
+export type OkPayload<T> = {
   isError: false;
   value: T;
 };
 
-type FailPayload<E extends ErrorType = Error> = {
+export type FailPayload<E extends ErrorType = Error> = {
   isError: true;
   error: E;
 };
@@ -50,9 +50,7 @@ export class Result<T, E extends ErrorType = Error> {
    * @param error - An Error object or string (Error object is recommended to keep trace)
    * @throws Error if runtime validation of the payload failed
    */
-  static fail<U = unknown, E extends ErrorType = Error>(
-    error: E | string
-  ): Result<U, E> {
+  static fail<E extends ErrorType>(error: E | string): Result<never, E> {
     return new Result({
       isError: true,
       error: typeof error === 'string' ? new Error(error) : error,
@@ -87,8 +85,11 @@ export class Result<T, E extends ErrorType = Error> {
           throw new Error('Cannot return an error from a asyncMap function');
         }
         return Result.ok(newInner);
-      } catch (e) {
-        return Result.fail(e as unknown as E);
+      } catch (e: unknown) {
+        return new Result({
+          isError: true,
+          error: e,
+        } as FailPayload<E>);
       }
     }
   }

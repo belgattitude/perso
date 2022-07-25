@@ -1,5 +1,6 @@
 import { BcryptJsPasswordHasher } from '@belgattitude/crypto';
 import type { PrismaClientDbMain } from '@belgattitude/db-main';
+import { Result } from '@belgattitude/failwell';
 import { isNonEmptyString } from '@belgattitude/ts-utils';
 import type { LoginCommand } from '@/backend/features/auth/login/login.command';
 
@@ -16,11 +17,9 @@ type User = {
   role: string;
 };
 
-type Result = { type: 'ok'; user: User } | { type: 'error'; error: string };
-
 export class LoginUseCase implements IUseCase<LoginCommand> {
   constructor(private readonly prisma: PrismaClientDbMain) {}
-  async execute(command: LoginCommand): Promise<Result> {
+  async execute(command: LoginCommand): Promise<Result<User>> {
     const { usernameOrEmail, password } = command;
     const user = await this.prisma.user.findUnique({
       select: {
@@ -37,32 +36,20 @@ export class LoginUseCase implements IUseCase<LoginCommand> {
       },
     });
     if (!user) {
-      return {
-        type: 'error',
-        error: 'User not found',
-      };
+      return Result.fail('User not found');
     }
     if (!isNonEmptyString(user.password)) {
-      return {
-        type: 'error',
-        error: 'No password set',
-      };
+      return Result.fail('Not password set');
     }
     const isValid = passwordHasher.verify(password, user.password);
     if (!isValid) {
-      return {
-        type: 'error',
-        error: 'Wrong password',
-      };
+      return Result.fail('Wrong password');
     }
-    return {
-      type: 'ok',
-      user: {
-        id: user.id,
-        username: user.username,
-        email: user.email,
-        role: user.role.toLowerCase(),
-      },
-    };
+    return Result.ok({
+      id: user.id,
+      username: user.username,
+      email: user.email,
+      role: user.role.toLowerCase(),
+    });
   }
 }

@@ -3,7 +3,7 @@ import { pathsToModuleNameMapper } from 'ts-jest';
 import { getTsconfig } from 'get-tsconfig';
 import { getJestCachePath } from '../../cache.config.js';
 
-const tsConfigFile = new URL('./tsconfig.json', import.meta.url).pathname;
+const tsConfigFile = new URL('./tsconfig.jest.json', import.meta.url).pathname;
 
 /**
  * Transform the tsconfig paths into jest compatible one (support extends)
@@ -24,9 +24,9 @@ const getTsConfigBasePaths = (tsConfigFile) => {
 
 /** @type {import('ts-jest/dist').InitialOptionsTsJest} */
 const config = {
-  displayName: `crypto:unit`,
+  displayName: `failwell:unit`,
   preset: 'ts-jest/presets/default-esm',
-  cacheDirectory: getJestCachePath('@belgattitude/ts-utils'),
+  cacheDirectory: getJestCachePath('@belgattitude/failwell'),
   testEnvironment: 'node',
   extensionsToTreatAsEsm: ['.ts'],
   verbose: true,

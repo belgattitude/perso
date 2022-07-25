@@ -1,5 +1,15 @@
 # @belgattitude/crypto
 
+## 1.2.0
+
+### Minor Changes
+
+- [#624](https://github.com/belgattitude/perso/pull/624) [`b60943a`](https://github.com/belgattitude/perso/commit/b60943a02a4bc3c047b55729277eca8eaf02ac7e) Thanks [@belgattitude](https://github.com/belgattitude)! - Ensure encrypt/decrypt passes utf-8 strings
+
+### Patch Changes
+
+- [#624](https://github.com/belgattitude/perso/pull/624) [`b60943a`](https://github.com/belgattitude/perso/commit/b60943a02a4bc3c047b55729277eca8eaf02ac7e) Thanks [@belgattitude](https://github.com/belgattitude)! - Fix flacky test for decrypt error
+
 ## 1.1.0
 
 ### Minor Changes

@@ -2,7 +2,7 @@
   "name": "belgattitude-perso",
   "license": "MIT",
   "private": true,
-  "packageManager": "yarn@4.0.0-rc.12",
+  "packageManager": "yarn@4.0.0-rc.14",
   "homepage": "https://github.com/belgattitude/perso",
   "repository": {
     "type": "git",
@@ -64,7 +64,7 @@
     "deps:update": "yarn dlx npm-check-updates@latest --configFileName ncurc.yml -u --deep",
     "check:install": "yarn dlx @yarnpkg/doctor@3.1 .",
     "check:renovate:config": "docker run -v renovate.json5:/usr/src/app/renovate.json5 -it renovate/renovate renovate-config-validator",
-    "install:playwright": "playwright install --deps",
+    "install:playwright": "playwright install",
     "postinstall": "is-ci || yarn husky install",
     "format": "prettier --config .prettierrc.js --ignore-path .prettierignore \"./*.{js,cjs,mjs,ts,mts,md,mdx,json}\""
   },
@@ -73,13 +73,13 @@
   },
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
-    "@changesets/changelog-github": "0.4.5",
-    "@changesets/cli": "2.23.2",
+    "@changesets/changelog-github": "0.4.6",
+    "@changesets/cli": "2.24.1",
     "@commitlint/cli": "17.0.3",
     "@commitlint/config-conventional": "17.0.3",
     "@nrwl/nx-cloud": "14.2.0",
     "@nrwl/workspace": "14.4.3",
-    "@playwright/test": "1.23.4",
+    "@playwright/test": "1.24.0",
     "@types/prettier": "2.6.3",
     "@types/shell-quote": "1.7.1",
     "eslint": "8.20.0",
@@ -94,8 +94,6 @@
     "typescript": "4.7.4"
   },
   "engines": {
-    "node": "16.x",
-    "yarn": ">=1.22.0",
-    "npm": "please-use-yarn"
+    "node": "16.x"
   }
 }

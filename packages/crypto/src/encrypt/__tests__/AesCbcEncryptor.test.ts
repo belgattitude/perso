@@ -7,16 +7,17 @@ describe('AesCbcEncryptor tests', () => {
       expect(() => new AesCbcEncryptor('')).toThrowError(WeakPasswordError);
     });
   });
+
   describe('decrypt', () => {
     it('should decrypt encrypted data', () => {
       const password = 'password used to generate key';
-      const data = 'a string that is supposed to be encrypted and decrypted';
+      const data = 'something-utf8-é😀';
       const encryptor = new AesCbcEncryptor(password);
       expect(encryptor.decrypt(encryptor.encrypt(data))).toStrictEqual(data);
     });
 
     it('should throw DecryptError if the password is invalid', () => {
-      const data = 'something';
+      const data = 'something-utf8-é😀';
       const encryptor1 = new AesCbcEncryptor('password1');
       const encryptor2 = new AesCbcEncryptor('password2');
       expect(() => encryptor2.decrypt(encryptor1.encrypt(data))).toThrow(
@@ -26,11 +27,11 @@ describe('AesCbcEncryptor tests', () => {
 
     it('should throw DecryptError if the iv is invalid', () => {
       const password = 'password used to generate key';
-      const data = 'something';
+      const data = 'something-utf8-é😀';
       const encryptor = new AesCbcEncryptor(password);
       const result = encryptor.encrypt(data);
       const { encrypted } = result;
-      const invalidInitializationVector = 'aebabc91b92d5a06';
+      const invalidInitializationVector = '95e8';
       expect(() =>
         encryptor.decrypt({ encrypted, iv: invalidInitializationVector })
       ).toThrow(DecryptError);
