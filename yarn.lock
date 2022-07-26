@@ -3111,9 +3111,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.9.1":
-  version: 2.9.1
-  resolution: "@graphql-codegen/cli@npm:2.9.1"
+"@graphql-codegen/cli@npm:2.10.0":
+  version: 2.10.0
+  resolution: "@graphql-codegen/cli@npm:2.10.0"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.0"
     "@graphql-codegen/plugin-helpers": "npm:^2.6.0"
@@ -3127,11 +3127,11 @@ __metadata:
     "@graphql-tools/prisma-loader": "npm:^7.2.2"
     "@graphql-tools/url-loader": "npm:^7.12.1"
     "@graphql-tools/utils": "npm:^8.8.0"
+    "@whatwg-node/fetch": "npm:^0.0.2"
     ansi-escapes: "npm:^4.3.1"
     chalk: "npm:^4.1.0"
     chokidar: "npm:^3.5.2"
     cosmiconfig: "npm:^7.0.0"
-    cross-undici-fetch: "npm:^0.4.11"
     debounce: "npm:^1.2.0"
     detect-indent: "npm:^6.0.0"
     graphql-config: "npm:^4.3.1"
@@ -3153,7 +3153,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: 48cb433bb4d1e3314e4d299965b5bdd4ad13b0dacaa250227684d291fa855725114edef423f17aa4229184594b34aba30b42a92847fee7a4d605da51b6c81c21
+  checksum: b7c2487d32a73e876f44689a8ccd0752ab2c6a6ad603b64d4dbbd4ec3f54b43dee66865f84419c2cf4fcc5a948403acf75f196eac9a508967b0a7596e39486e5
   languageName: node
   linkType: hard
 
@@ -31342,7 +31342,7 @@ __metadata:
     "@emotion/styled": "npm:11.9.3"
     "@fontsource/inter": "npm:4.5.11"
     "@fontsource/rubik": "npm:4.5.10"
-    "@graphql-codegen/cli": "npm:2.9.1"
+    "@graphql-codegen/cli": "npm:2.10.0"
     "@graphql-codegen/typed-document-node": "npm:2.3.2"
     "@graphql-codegen/typescript": "npm:2.7.2"
     "@graphql-codegen/typescript-operations": "npm:2.5.2"
