@@ -3111,12 +3111,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.10.0":
-  version: 2.10.0
-  resolution: "@graphql-codegen/cli@npm:2.10.0"
+"@graphql-codegen/cli@npm:2.11.0":
+  version: 2.11.0
+  resolution: "@graphql-codegen/cli@npm:2.11.0"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.0"
-    "@graphql-codegen/plugin-helpers": "npm:^2.6.0"
+    "@graphql-codegen/plugin-helpers": "npm:^2.6.1"
     "@graphql-tools/apollo-engine-loader": "npm:^7.3.1"
     "@graphql-tools/code-file-loader": "npm:^7.3.0"
     "@graphql-tools/git-loader": "npm:^7.2.0"
@@ -3153,7 +3153,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: b7c2487d32a73e876f44689a8ccd0752ab2c6a6ad603b64d4dbbd4ec3f54b43dee66865f84419c2cf4fcc5a948403acf75f196eac9a508967b0a7596e39486e5
+  checksum: c9a4845ebefc92a559bf4b4106c892e625860d65a7541c04d2a28509d6852d2b0e00a1a6da1f050d9576e6a4b1a0204207d74e41429ea074f3260b710f07c1ff
   languageName: node
   linkType: hard
 
@@ -3171,9 +3171,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/plugin-helpers@npm:^2.5.0, @graphql-codegen/plugin-helpers@npm:^2.6.0":
-  version: 2.6.0
-  resolution: "@graphql-codegen/plugin-helpers@npm:2.6.0"
+"@graphql-codegen/plugin-helpers@npm:^2.5.0, @graphql-codegen/plugin-helpers@npm:^2.6.0, @graphql-codegen/plugin-helpers@npm:^2.6.1":
+  version: 2.6.1
+  resolution: "@graphql-codegen/plugin-helpers@npm:2.6.1"
   dependencies:
     "@graphql-tools/utils": "npm:^8.8.0"
     change-case-all: "npm:1.0.14"
@@ -3183,7 +3183,7 @@ __metadata:
     tslib: "npm:~2.4.0"
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 67e8cd0562cf418de3103a32a8fdbf65f9929948e59975e90eaeaf6ce0395b7f628bbefb36c57691d8799996676670abb3c41055fe1437f7868828e62c83eccd
+  checksum: 198e6da2879817d34711b41fbecc4c17b20fd701ea02acf25ec35fe56744378548ccad4a7bcca9118d8aa7c0b84f34a31cee56f3973cd16082d509d3fd1c2ac2
   languageName: node
   linkType: hard
 
@@ -31332,7 +31332,7 @@ __metadata:
     "@emotion/styled": "npm:11.9.3"
     "@fontsource/inter": "npm:4.5.11"
     "@fontsource/rubik": "npm:4.5.10"
-    "@graphql-codegen/cli": "npm:2.10.0"
+    "@graphql-codegen/cli": "npm:2.11.0"
     "@graphql-codegen/typed-document-node": "npm:2.3.2"
     "@graphql-codegen/typescript": "npm:2.7.2"
     "@graphql-codegen/typescript-operations": "npm:2.5.2"
