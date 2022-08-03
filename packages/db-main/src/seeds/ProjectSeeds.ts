@@ -1,5 +1,5 @@
-import { MeetingStatus, UserPermissionRole } from '@prisma/client';
-import type { PrismaDbMain as Prisma } from '@belgattitude/db-main';
+import { MeetingStatus } from '@prisma/client';
+import type { PrismaDbMain as Prisma } from '../';
 import { AbstractSeed } from '../lib/AbstractSeed';
 
 const projectSeed: Prisma.ProjectCreateInput[] = [
