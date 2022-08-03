@@ -1,4 +1,4 @@
-import type { PrismaDbMain as Prisma } from '@belgattitude/db-main';
+import type { PrismaDbMain as Prisma } from '../';
 import { AbstractSeed } from '../lib/AbstractSeed';
 
 const companySeed: Prisma.CompanyCreateInput[] = [

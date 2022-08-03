@@ -9,6 +9,6 @@ export class HttpBadRequest extends HttpError {
       statusCode: HttpBadRequest.STATUS,
     });
     Object.setPrototypeOf(this, HttpBadRequest.prototype);
-    this.name = HttpBadRequest.prototype.constructor.name;
+    this.name = 'HttpBadRequest';
   }
 }
