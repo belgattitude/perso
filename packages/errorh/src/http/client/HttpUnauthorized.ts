@@ -1,14 +1,14 @@
 import type { HttpErrorOptions } from '../base/HttpError';
 import { HttpError } from '../base/HttpError';
 
-export class HttpBadRequest extends HttpError {
-  static readonly STATUS = 400;
+export class HttpUnauthorized extends HttpError {
+  static readonly STATUS = 401;
   constructor(message: string, options?: HttpErrorOptions) {
     super(message, {
       cause: options?.cause,
-      statusCode: HttpBadRequest.STATUS,
+      statusCode: HttpUnauthorized.STATUS,
     });
-    Object.setPrototypeOf(this, HttpBadRequest.prototype);
-    this.name = 'HttpBadRequest';
+    Object.setPrototypeOf(this, HttpUnauthorized.prototype);
+    this.name = 'HttpUnauthorized';
   }
 }

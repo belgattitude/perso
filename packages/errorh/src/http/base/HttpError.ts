@@ -1,5 +1,7 @@
+import type { HttpStatusCode } from '../types';
+
 export type HttpErrorOptions = {
-  statusCode: number;
+  statusCode: HttpStatusCode;
   cause?: Error;
 };
 
@@ -9,6 +11,9 @@ export class HttpError extends Error {
     super(message, { cause: options.cause });
     this.statusCode = options.statusCode;
     Object.setPrototypeOf(this, HttpError.prototype);
-    this.name = HttpError.prototype.constructor.name;
+    this.name = 'HttpError';
+  }
+  public getStatusCode(): HttpStatusCode {
+    return this.statusCode;
   }
 }

@@ -1,14 +1,14 @@
 import type { HttpErrorOptions } from '../base/HttpError';
 import { HttpError } from '../base/HttpError';
 
-export class HttpBadRequest extends HttpError {
-  static readonly STATUS = 400;
+export class HttpBadMapping extends HttpError {
+  static readonly STATUS = 421;
   constructor(message: string, options?: HttpErrorOptions) {
     super(message, {
       cause: options?.cause,
-      statusCode: HttpBadRequest.STATUS,
+      statusCode: HttpBadMapping.STATUS,
     });
-    Object.setPrototypeOf(this, HttpBadRequest.prototype);
-    this.name = 'HttpBadRequest';
+    Object.setPrototypeOf(this, HttpBadMapping.prototype);
+    this.name = 'HttpBadMapping';
   }
 }
