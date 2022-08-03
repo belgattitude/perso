@@ -1839,7 +1839,7 @@ __metadata:
     "@pothos/core": "npm:3.13.0"
     "@pothos/plugin-prisma": "npm:3.17.0"
     "@prisma/client": "npm:4.1.1"
-    "@soluble/dsn-parser": "npm:1.4.2"
+    "@soluble/dsn-parser": "npm:1.5.0"
     "@types/jest": "npm:28.1.6"
     "@types/node": "npm:18.6.3"
     camelcase: "npm:7.0.0"
@@ -6477,28 +6477,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@soluble/cache-interop@npm:0.10.0, @soluble/cache-interop@npm:^0.10.0":
-  version: 0.10.0
-  resolution: "@soluble/cache-interop@npm:0.10.0"
-  checksum: 6084d166c356d3a78c47ea11c93e63287f1f64ff92e23df6098e6c1814784512aee8b2356aa8eb7d2a39a6fb894a0f9b134c6b0f8f4144992ba60e89c36ce3f6
-  languageName: node
-  linkType: hard
-
-"@soluble/cache-ioredis@npm:0.11.0":
+"@soluble/cache-interop@npm:0.11.0, @soluble/cache-interop@npm:^0.11.0":
   version: 0.11.0
-  resolution: "@soluble/cache-ioredis@npm:0.11.0"
-  dependencies:
-    "@soluble/cache-interop": "npm:^0.10.0"
-    "@soluble/dsn-parser": "npm:^1.4.2"
-    ioredis: "npm:^5.0.6"
-  checksum: 74aa02d8842c4c2140ec213ce5d830474ec3fc86946808e484986e4efd4f07fa20ddfe47fc8e75fa345e5c5fcb7153a47210c80a909b8c57592070c2e5059f71
+  resolution: "@soluble/cache-interop@npm:0.11.0"
+  checksum: bc59e8f5b3de3164be653a90cd4a17a56d3fde1af877ca6760ff8fa939e416dca754548e3c414e5a9a80223a9ac96cfd2865bc5c616cc6d188593dad30346663
   languageName: node
   linkType: hard
 
-"@soluble/dsn-parser@npm:1.4.2, @soluble/dsn-parser@npm:^1.4.2":
-  version: 1.4.2
-  resolution: "@soluble/dsn-parser@npm:1.4.2"
-  checksum: 611859990fb4167cdfc0216d8bd9bf0d6b25b554f371a92b813fc1d4ef8b3ae230bfad9185edc65fcca6936b9913ec21c872334093fa7f1aa0a265b383cf41ec
+"@soluble/cache-ioredis@npm:0.12.0":
+  version: 0.12.0
+  resolution: "@soluble/cache-ioredis@npm:0.12.0"
+  dependencies:
+    "@soluble/cache-interop": "npm:^0.11.0"
+    "@soluble/dsn-parser": "npm:^1.5.0"
+    ioredis: "npm:^5.0.6"
+  checksum: 1c7fa7f2debe4404fee2d874c2bf6beb048b3e9eca1cc5165d694d4e8838a3fcc2640af14fcaae49e8e233385214b18930e3232e871419122af5d711e4af1326
+  languageName: node
+  linkType: hard
+
+"@soluble/dsn-parser@npm:1.5.0, @soluble/dsn-parser@npm:^1.5.0":
+  version: 1.5.0
+  resolution: "@soluble/dsn-parser@npm:1.5.0"
+  checksum: 703776815462437d6896df015cf9a9f034857ffd4bb305cb38657344b46097f3b8f3c60fa9712325cbd6810c7b29473f93f7ab0e2a6dfaf03075ac2c2c5efa08
   languageName: node
   linkType: hard
 
@@ -31723,8 +31723,8 @@ __metadata:
     "@sentry/nextjs": "npm:7.8.1"
     "@sindresorhus/is": "npm:5.3.0"
     "@size-limit/file": "npm:8.0.0"
-    "@soluble/cache-interop": "npm:0.10.0"
-    "@soluble/cache-ioredis": "npm:0.11.0"
+    "@soluble/cache-interop": "npm:0.11.0"
+    "@soluble/cache-ioredis": "npm:0.12.0"
     "@svgr/webpack": "npm:6.3.1"
     "@tailwindcss/aspect-ratio": "npm:0.4.0"
     "@tailwindcss/forms": "npm:0.5.2"
