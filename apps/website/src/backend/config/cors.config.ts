@@ -14,7 +14,7 @@ export const corsAllowedOrigins = [
 
 const regexpString = `^https?://(([^/])+\\.)?(${corsAllowedOrigins.join(
   '|'
-)})(\\:\\d+)?(/.*)?$`;
+)})(\\:\\d+)?$`;
 
 export const corsWhilelistedOriginsRegexp = new RegExp(regexpString);
 
