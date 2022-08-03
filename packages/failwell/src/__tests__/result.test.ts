@@ -48,9 +48,7 @@ describe('Result tests', () => {
   });
 
   it('should allow to map over a successful result', () => {
-    // Arrange
     const success = Result.ok<User>({ username: 'Jest' });
-    // Act
     const result = success
       .map<string>((r) => {
         return `Username is ${r.username}`;
@@ -62,7 +60,6 @@ describe('Result tests', () => {
         throw new Error(`This cannot happen: ${e.message}`);
       })
       .unwrap();
-    // Assert
     expect(result).toStrictEqual(['username', 'is', 'jest']);
   });
 
@@ -78,6 +75,7 @@ describe('Result tests', () => {
         throw new Error(`This cannot happen: ${r}`);
       })
       .mapErr((e) => {
+        // eslint-disable-next-line jest/no-conditional-in-test
         if (e instanceof ExampleError) {
           mockCallback();
           return new Error('cool');
@@ -96,15 +94,12 @@ describe('Result tests', () => {
   });
 
   it('should allow to asyncMap over a successful result', async () => {
-    // Arrange
     const success = Result.ok<User>({ username: 'Jest' });
-    // Act
     const result = (
       await success.asyncMap(async (r) => {
         return `Username is ${r.username}`;
       })
     ).unwrap();
-    // Assert
     expect(result).toStrictEqual('Username is Jest');
   });
 });
