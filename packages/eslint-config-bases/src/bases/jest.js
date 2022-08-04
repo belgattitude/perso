@@ -25,8 +25,12 @@ module.exports = {
       // @see https://github.com/jest-community/eslint-plugin-jest
       extends: ['plugin:jest/recommended'],
       rules: {
+        'jest/no-focused-tests': 'error',
+        'jest/prefer-mock-promise-shorthand': 'error',
+        'jest/no-commented-out-tests': 'error',
         'jest/prefer-hooks-in-order': 'error',
         'jest/prefer-hooks-on-top': 'error',
+        'jest/no-conditional-in-test': 'error',
         'jest/no-duplicate-hooks': 'error',
         'jest/no-test-return-statement': 'error',
         'jest/prefer-strict-equal': 'error',
