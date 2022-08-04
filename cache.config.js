@@ -26,7 +26,7 @@ function sanitize(packageName) {
  * @returns string
  */
 function getEslintCachePath(packageName) {
-  return `${globalCachePath}/${sanitize(packageName)}/eslint`;
+  return `${globalCachePath}/eslint/${sanitize(packageName)}`;
 }
 
 /**
@@ -34,7 +34,7 @@ function getEslintCachePath(packageName) {
  * @returns string
  */
 function getJestCachePath(packageName) {
-  return `${globalCachePath}/${sanitize(packageName)}/jest`;
+  return `${globalCachePath}/jest/${sanitize(packageName)}`;
 }
 
 module.exports = {

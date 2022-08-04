@@ -1,3 +1,4 @@
+import { describe, expect, it, vi } from 'vitest';
 import type { FailPayload } from '../result';
 import { Result } from '../result';
 

@@ -31,7 +31,7 @@ const blogFrontMatterSchema = z.object({
 
 type BlogFrontMatter = z.infer<typeof blogFrontMatterSchema>;
 
-type MarkdownFile = {
+export type MarkdownFile = {
   path: string;
   slug: string;
   data: BlogFrontMatter | Error;
