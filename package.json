@@ -20,6 +20,7 @@
     "g:clean": "yarn clean:global-cache && yarn workspaces foreach -pv run clean",
     "g:build": "nx run-many --target=build --all",
     "g:test-unit": "nx run-many --target=test-unit --all",
+    "g:test-unit-jest": "nx run-many --target=test-unit-jest --all",
     "g:test-e2e": "nx run-many --target=test-e2e --all",
     "g:prettier-check": "nx run-many --target=prettier-check --all",
     "g:prettier-fix": "nx run-many --target=prettier-fix --all",
