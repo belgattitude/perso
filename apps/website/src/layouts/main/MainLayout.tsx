@@ -1,16 +1,12 @@
 import Head from 'next/head';
-import type { FC, ReactNode } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import { TopNav } from '@/components/nav/topnav';
 import { siteConfig } from '@/config';
 import { MainLayoutFavicon, MainLayoutFonts, MainLayoutMeta } from './head';
 
-type Props = {
-  children: ReactNode;
-};
-
 const { navLinks, iconLinks } = siteConfig.topNav;
 
-export const MainLayout: FC<Props> = (props) => {
+export const MainLayout: FC<PropsWithChildren> = (props) => {
   const { children } = props;
   return (
     <>
