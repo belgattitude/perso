@@ -1,1 +1,1 @@
-export {createPostSlug} from './createPostSlug';
+export { createPostSlug } from './createPostSlug';
