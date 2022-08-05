@@ -28,13 +28,18 @@ export default defineConfig({
     passWithNoTests: false,
     setupFiles: './config/tests/setupVitest.ts',
     cache: {
-      dir: '../../.cache/vitest/website'
+      dir: '../../.cache/vitest/website',
     },
     coverage: {
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },
     include: testFiles,
-    exclude: ['**/node_modules/**', '**/dist/**', '**/.next/**', '**/.{idea,git,cache,output,temp}/**'],
+    exclude: [
+      '**/node_modules/**',
+      '**/dist/**',
+      '**/.next/**',
+      '**/.{idea,git,cache,output,temp}/**',
+    ],
   },
 });
