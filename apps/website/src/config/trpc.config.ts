@@ -25,6 +25,7 @@ export const getWithTrpcConfig = (): WithTrpcConfig => {
     config({ ctx: _ctx }) {
       return {
         url,
+        // transformer: superjson,
         // queryClientConfig: { defaultOptions: { queries: { staleTime: 60 } } },
       };
     },

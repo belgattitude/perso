@@ -1,6 +1,7 @@
 import path from 'node:path';
 import * as trpc from '@trpc/server';
 import * as trpcNext from '@trpc/server/adapters/next';
+import superjson from 'superjson';
 import { z } from 'zod';
 import { prismaDbMain } from '@/backend/config';
 import {

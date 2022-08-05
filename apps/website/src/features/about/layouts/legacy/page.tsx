@@ -1,6 +1,6 @@
 import Head from 'next/head';
-import type { FC, ReactNode } from 'react';
-export const Page: FC<{ children: ReactNode }> = ({ children }) => (
+import type { FC, PropsWithChildren } from 'react';
+export const Page: FC<PropsWithChildren> = ({ children }) => (
   <div className="resume-page">
     <div className="resume-layout">
       <Head>

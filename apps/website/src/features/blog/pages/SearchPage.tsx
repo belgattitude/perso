@@ -2,7 +2,7 @@ import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import type { FC } from 'react';
 import { blogConfig } from '@/features/blog/blog.config';
-import { PostCard } from '@/features/blog/components';
+import { BlogContainer, PostCard } from '@/features/blog/components';
 import { trpc } from '@/utils/trpc';
 
 const BlogPosts: FC = () => {
@@ -22,7 +22,7 @@ const BlogPosts: FC = () => {
   }
 
   return (
-    <div>
+    <BlogContainer>
       <div className="grid gap-10 md:grid-cols-2 lg:gap-10">
         {data &&
           data
@@ -44,7 +44,7 @@ const BlogPosts: FC = () => {
               <PostCard key={post.slug} post={post} aspect="square" />
             ))}
       </div>
-    </div>
+    </BlogContainer>
   );
 };
 

@@ -24,6 +24,15 @@ export const PostCard: FC<Props> = (props) => {
     return <div>Error in post</div>;
   }
 
+  const createdAt =
+    typeof data.createdAt === 'string'
+      ? parseISO(data.createdAt)
+      : data.createdAt;
+  const updatedAt =
+    typeof data.updatedAt === 'string'
+      ? parseISO(data.updatedAt)
+      : data.updatedAt;
+
   // const img = data.image;
   const img = 'https://source.unsplash.com/random/640x480';
 
@@ -77,8 +86,8 @@ export const PostCard: FC<Props> = (props) => {
           <span className="text-xs text-gray-300 dark:text-gray-600">
             &bull;
           </span>
-          <time className="text-sm" dateTime={formatRFC3339(new Date())}>
-            {format(data.updatedAt ?? data.createdAt, 'MMMM dd, yyyy')}
+          <time className="text-sm" dateTime={formatRFC3339(createdAt)}>
+            {format(createdAt, 'MMMM dd, yyyy')}
           </time>
         </div>
 
