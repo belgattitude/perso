@@ -9,10 +9,19 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     passWithNoTests: false,
-    include: testFiles,
+    cache: {
+      dir: '../../.cache/vitest/errorh',
+    },
     coverage: {
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },
+    include: testFiles,
+    exclude: [
+      '**/node_modules/**',
+      'dist/**',
+      '**/coverage/**',
+      '**/.{idea,git,cache,output,temp}/**',
+    ],
   },
 });

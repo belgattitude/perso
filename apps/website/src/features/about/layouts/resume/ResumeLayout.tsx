@@ -1,13 +1,11 @@
 import Head from 'next/head';
-import type { FC, ReactNode } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import { TopNav } from '@/components/nav/topnav';
 import { navConfig } from '@/features/about/config';
 import { MainLayoutFavicon } from '@/layouts/main/head';
 import { ResumeLayoutFonts, ResumeLayoutMeta } from './Head';
 
-type Props = {
-  children: ReactNode;
-};
+type Props = PropsWithChildren;
 
 const { navLinks, iconLinks } = navConfig.topNav;
 

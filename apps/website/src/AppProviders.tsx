@@ -1,14 +1,13 @@
 import type { Session } from 'next-auth';
 import { SessionProvider } from 'next-auth/react';
-import type { FC, ReactNode } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import { QueryClient, QueryClientProvider } from 'react-query';
 
 const queryClient = new QueryClient({});
 
-type Props = {
+type Props = PropsWithChildren<{
   session: Session | null;
-  children: ReactNode;
-};
+}>;
 
 export const AppProviders: FC<Props> = (props) => {
   const { children, session } = props;

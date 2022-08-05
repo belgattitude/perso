@@ -6,7 +6,7 @@ module.exports = {
     locales: ['en', 'fr'],
   },
   react: {
-    useSuspense: true,
+    useSuspense: false,
   },
   localePath: path.resolve('../../packages/common-i18n/src/locales'),
 };
