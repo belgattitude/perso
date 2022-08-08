@@ -3,7 +3,7 @@
  * @link https://nextjs.org/docs/advanced-features/custom-error-page
  */
 
-import { isHttpError } from '@belgattitude/errorh';
+import { isHttpException } from '@belgattitude/errorh';
 
 import {
   captureException as sentryCaptureException,
@@ -109,7 +109,7 @@ CustomError.getInitialProps = async ({
 
   let errorDetails: ErrorDetails | null = null;
 
-  if (isHttpError(err)) {
+  if (isHttpException(err)) {
     errorDetails = {
       origin: {
         statusCode: err.statusCode,
