@@ -1,1 +1,1 @@
-export { FileS3Service } from './services/FileS3Service';
+export { FileS3BucketService } from './services/FileS3BucketService';
