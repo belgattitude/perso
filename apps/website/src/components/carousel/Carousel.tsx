@@ -16,10 +16,10 @@ export const Carousel: FC<Props> = (props) => {
   });
   const [prevBtnEnabled, setPrevBtnEnabled] = useState(false);
   const [nextBtnEnabled, setNextBtnEnabled] = useState(false);
-  const [parallaxValues, setParallaxValues] = useState([]);
+  const [parallaxValues, setParallaxValues] = useState<number[]>([]);
 
-  const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
-  const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
+  // const scrollPrev = useCallback(() => embla && embla.scrollPrev(), [embla]);
+  // const scrollNext = useCallback(() => embla && embla.scrollNext(), [embla]);
 
   const onSelect = useCallback(() => {
     if (!embla) return;
@@ -40,6 +40,8 @@ export const Carousel: FC<Props> = (props) => {
 
       if (engine.options.loop) {
         engine.slideLooper.loopPoints.forEach((loopItem) => {
+          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
+          // @ts-ignore
           const target = loopItem.getTarget();
           if (index === loopItem.index && target !== 0) {
             const sign = Math.sign(target);
