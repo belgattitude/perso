@@ -2,7 +2,7 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./src",
-    "target": "ESNext",
+    "target": "ES2020", // node 14
     "module": "ESNext",
     "declarationDir": "./dist",
     "emitDeclarationOnly": true,
