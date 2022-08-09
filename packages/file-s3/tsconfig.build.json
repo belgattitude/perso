@@ -1,0 +1,13 @@
+{
+  "extends": "./tsconfig.json",
+  "compilerOptions": {
+    "baseUrl": "./src",
+    "target": "ESNext",
+    "module": "ESNext",
+    "declarationDir": "./dist",
+    "emitDeclarationOnly": true,
+    "incremental": true,
+    "tsBuildInfoFile": "./tsconfig.build.tsbuildinfo" // for tsup rollup dts tsBuildInfoFile is required when using incremental
+  },
+  "exclude": ["dist", "**/__tests__/*"]
+}
