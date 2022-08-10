@@ -24642,13 +24642,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"on-exit-leak-free@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "on-exit-leak-free@npm:1.0.0"
-  checksum: 627b70e3f1af8c207ce25919e55c9ddaa5cfb4c0fcf59eae8719380ad034bc8c1252c52f0acbfcc2edf73f6e052dd976ca9e01435ca413d76624ec9cb0626ef7
-  languageName: node
-  linkType: hard
-
 "on-exit-leak-free@npm:^2.1.0":
   version: 2.1.0
   resolution: "on-exit-leak-free@npm:2.1.0"
@@ -25472,9 +25465,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pino-pretty@npm:8.1.0":
-  version: 8.1.0
-  resolution: "pino-pretty@npm:8.1.0"
+"pino-pretty@npm:9.0.0":
+  version: 9.0.0
+  resolution: "pino-pretty@npm:9.0.0"
   dependencies:
     colorette: "npm:^2.0.7"
     dateformat: "npm:^4.6.3"
@@ -25483,7 +25476,7 @@ __metadata:
     help-me: "npm:^4.0.1"
     joycon: "npm:^3.1.1"
     minimist: "npm:^1.2.6"
-    on-exit-leak-free: "npm:^1.0.0"
+    on-exit-leak-free: "npm:^2.1.0"
     pino-abstract-transport: "npm:^1.0.0"
     pump: "npm:^3.0.0"
     readable-stream: "npm:^4.0.0"
@@ -25492,7 +25485,7 @@ __metadata:
     strip-json-comments: "npm:^3.1.1"
   bin:
     pino-pretty: bin.js
-  checksum: 5dd869b7ad3dac9dd35646aedc1dd37dfc95f88f4fc36059b44d4b16b1690b6739f1e06038c4e4517eb024ec79c55ad72477d71c18e32d3fa7a74a6c7ce308b4
+  checksum: 51bb75fd4f3d15e01ab0f9b8186c24acddc4beb06ff3b26313c21c4af7733cf3cf605909614674a489bdd06fe7c86877b963310e6277a5e5a3ef39623ff8c470
   languageName: node
   linkType: hard
 
@@ -32785,7 +32778,7 @@ __metadata:
     npm-run-all: "npm:4.1.5"
     picocolors: "npm:1.0.0"
     pino: "npm:8.4.0"
-    pino-pretty: "npm:8.1.0"
+    pino-pretty: "npm:9.0.0"
     popmotion: "npm:11.0.3"
     postcss: "npm:8.4.16"
     postcss-flexbugs-fixes: "npm:5.0.2"
