@@ -17218,6 +17218,15 @@ __metadata:
   languageName: node
   linkType: hard
 
+"framesync@npm:6.1.1":
+  version: 6.1.1
+  resolution: "framesync@npm:6.1.1"
+  dependencies:
+    tslib: "npm:^2.3.1"
+  checksum: cfa382d96966d3800ea2c5ef69c4bd1f49c9ad6c508f2bb093cd7894ac6ad9d31a102563a1fb9020f890900824fcad22094a334b95783d76e17db6a20fe52d5d
+  languageName: node
+  linkType: hard
+
 "fresh@npm:0.5.2":
   version: 0.5.2
   resolution: "fresh@npm:0.5.2"
@@ -25590,6 +25599,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"popmotion@npm:11.0.4":
+  version: 11.0.4
+  resolution: "popmotion@npm:11.0.4"
+  dependencies:
+    framesync: "npm:6.1.1"
+    hey-listen: "npm:^1.0.8"
+    style-value-types: "npm:5.1.1"
+    tslib: "npm:^2.1.0"
+  checksum: 02b6ee81ebd01d2464b65762d02fd788a99b4d3cd38fd4c6ee3e72fcd1175a9e85c14f6714e56ba7ea70361a8acd16c085700925fc6a99fc5ddb35f94ff5cd28
+  languageName: node
+  linkType: hard
+
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
@@ -30018,6 +30039,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"style-value-types@npm:5.1.1":
+  version: 5.1.1
+  resolution: "style-value-types@npm:5.1.1"
+  dependencies:
+    hey-listen: "npm:^1.0.8"
+    tslib: "npm:^2.3.1"
+  checksum: 77be4574930dad4ba692b4d1a0c94aa0cacd5ff072a929ade6a62171c5d7dff5fcbc2b6f956668f26040d5b3ad1b076c9bc3eeeef5f8babb96e7d13c38928700
+  languageName: node
+  linkType: hard
+
 "stylehacks@npm:^5.1.0":
   version: 5.1.0
   resolution: "stylehacks@npm:5.1.0"
@@ -32779,7 +32810,7 @@ __metadata:
     picocolors: "npm:1.0.0"
     pino: "npm:8.4.0"
     pino-pretty: "npm:9.0.0"
-    popmotion: "npm:11.0.3"
+    popmotion: "npm:11.0.4"
     postcss: "npm:8.4.16"
     postcss-flexbugs-fixes: "npm:5.0.2"
     postcss-preset-env: "npm:7.7.2"
