@@ -2894,7 +2894,7 @@ __metadata:
     tslib: "npm:2.4.0"
     tsup: "npm:6.2.1"
     typescript: "npm:4.7.4"
-    vite: "npm:3.0.5"
+    vite: "npm:3.0.6"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.21.1"
   languageName: unknown
@@ -2960,7 +2960,7 @@ __metadata:
     typedoc: "npm:0.23.10"
     typedoc-plugin-markdown: "npm:3.13.4"
     typescript: "npm:4.7.4"
-    vite: "npm:3.0.5"
+    vite: "npm:3.0.6"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.21.1"
   languageName: unknown
@@ -3042,7 +3042,7 @@ __metadata:
     tslib: "npm:2.4.0"
     tsup: "npm:6.2.1"
     typescript: "npm:4.7.4"
-    vite: "npm:3.0.5"
+    vite: "npm:3.0.6"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.21.1"
   languageName: unknown
@@ -3069,7 +3069,7 @@ __metadata:
     tslib: "npm:2.4.0"
     tsup: "npm:6.2.1"
     typescript: "npm:4.7.4"
-    vite: "npm:3.0.5"
+    vite: "npm:3.0.6"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.21.1"
   peerDependencies:
@@ -3099,7 +3099,7 @@ __metadata:
     tsup: "npm:6.2.1"
     type-fest: "npm:2.18.0"
     typescript: "npm:4.7.4"
-    vite: "npm:3.0.5"
+    vite: "npm:3.0.6"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.21.1"
   languageName: unknown
@@ -28426,9 +28426,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.35.1, rollup@npm:^2.74.1, rollup@npm:^2.75.6":
-  version: 2.77.2
-  resolution: "rollup@npm:2.77.2"
+"rollup@npm:>=2.75.6 <2.77.0 || ~2.77.0, rollup@npm:^2.35.1, rollup@npm:^2.74.1":
+  version: 2.77.3
+  resolution: "rollup@npm:2.77.3"
   dependencies:
     fsevents: "npm:~2.3.2"
   dependenciesMeta:
@@ -28436,7 +28436,7 @@ __metadata:
       optional: true
   bin:
     rollup: dist/bin/rollup
-  checksum: 98bbbb1f2a6e140238ce3a21748182a4220c115bc43ae15051bfe9ce18d716f1f274bc5f476586b624c7339d3d0ee27d8436bce5d4ca1e5e854a207a41ac2e39
+  checksum: 7f869c91638cd3e2d36c4d1ec337900e4fd14285d4fd1e6ebfc2c532abc17b69bffdb8e48682b5237a3ec303fcb2e3b878864f8d5c5e51e05b28dd3d980a5cd7
   languageName: node
   linkType: hard
 
@@ -32129,15 +32129,15 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite@npm:3.0.5, vite@npm:^2.9.12 || ^3.0.0-0":
-  version: 3.0.5
-  resolution: "vite@npm:3.0.5"
+"vite@npm:3.0.6, vite@npm:^2.9.12 || ^3.0.0-0":
+  version: 3.0.6
+  resolution: "vite@npm:3.0.6"
   dependencies:
     esbuild: "npm:^0.14.47"
     fsevents: "npm:~2.3.2"
     postcss: "npm:^8.4.16"
     resolve: "npm:^1.22.1"
-    rollup: "npm:^2.75.6"
+    rollup: "npm:>=2.75.6 <2.77.0 || ~2.77.0"
   peerDependencies:
     less: "*"
     sass: "*"
@@ -32157,7 +32157,7 @@ __metadata:
       optional: true
   bin:
     vite: bin/vite.js
-  checksum: 1e411e404959a6e544277154e5141d065423a73551f7826b6ca453c478b39df5234a5b67cb5e2372e416b44f5810d155f09e8957174d253d61c2da27807d9bcd
+  checksum: 0a139c60ce1180df99feccd8c6164104d4936fbe60104ec445287180c8906d7799fe3d988888df5796a586753e81c2d2578b201532621cf584845ce12d44140d
   languageName: node
   linkType: hard
 
@@ -32758,7 +32758,7 @@ __metadata:
     type-fest: "npm:2.18.0"
     typescript: "npm:4.7.4"
     typewriter-effect: "npm:2.19.0"
-    vite: "npm:3.0.5"
+    vite: "npm:3.0.6"
     vite-plugin-svgr: "npm:2.2.1"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.21.1"
