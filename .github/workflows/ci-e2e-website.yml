@@ -137,7 +137,7 @@ jobs:
       - name: Get playwright cache-key
         id: playwright-cache-key
         run: |
-          playwright_cache_key="${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}-1"
+          playwright_cache_key="PL1-${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}"
           echo "::set-output name=key::${playwright_cache_key}"      
 
       - name: Cache Playwright binaries
