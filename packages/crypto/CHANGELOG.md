@@ -1,5 +1,14 @@
 # @belgattitude/crypto
 
+## 1.3.0
+
+### Minor Changes
+
+- [#845](https://github.com/belgattitude/perso/pull/845) [`8601589`](https://github.com/belgattitude/perso/commit/86015898cd452cf2ab416b611f4d8582dda622e2) Thanks [@belgattitude](https://github.com/belgattitude)! - Compatibility fix, remove named imports for bcryptjs
+
+  Fix the `SyntaxError: The requested module 'bcryptjs' does not provide an export named 'compareSync'` when used in
+  conjunction with tsx from an esm package.
+
 ## 1.2.0
 
 ### Minor Changes
