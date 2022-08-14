@@ -1,6 +1,6 @@
-import execa from 'execa';
+import { execaCommand } from 'execa';
 import type { Options as ExecaOptions } from 'execa';
-import { PrismaManager, PrismaClientDbMain } from '@belgattitude/db-main';
+import { PrismaManager, PrismaClientDbMain } from '../../src';
 import { getAndCheckDatabaseDsn } from '../e2e-dsn-services.util';
 
 describe('prisma cli commands', () => {
@@ -21,12 +21,12 @@ describe('prisma cli commands', () => {
         },
       };
 
-      const createResult = await execa('yarn prisma db push', options);
+      const createResult = await execaCommand('yarn prisma db push', options);
 
       expect(createResult.exitCode).toStrictEqual(0);
       expect(createResult.stdout).toMatch(/your database is now in sync/i);
 
-      const seedResult = await execa('yarn prisma db seed', options);
+      const seedResult = await execaCommand('yarn prisma db seed', options);
 
       expect(seedResult.exitCode).toStrictEqual(0);
       expect(seedResult.stdout).toMatch(/seeding finished/i);
