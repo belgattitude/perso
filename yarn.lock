@@ -2771,7 +2771,7 @@ __metadata:
     "@graphql-mesh/new-openapi": "npm:0.6.1"
     "@graphql-mesh/runtime": "npm:0.41.8"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.22.0"
     graphql: "npm:16.5.0"
@@ -2813,7 +2813,7 @@ __metadata:
     "@testing-library/react-hooks": "npm:8.0.1"
     "@testing-library/user-event": "npm:14.4.3"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@types/react": "npm:18.0.17"
     "@types/react-dom": "npm:18.0.6"
     "@vitejs/plugin-react": "npm:2.0.1"
@@ -2864,7 +2864,7 @@ __metadata:
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.22.0"
     rimraf: "npm:3.0.2"
@@ -2879,18 +2879,15 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.0.1"
     "@types/bcryptjs": "npm:2.4.2"
-    "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@vitest/ui": "npm:0.21.1"
     bcryptjs: "npm:^2.4.3"
     c8: "npm:7.12.0"
     es-check: "npm:7.0.0"
     eslint: "npm:8.22.0"
     get-tsconfig: "npm:4.2.0"
-    jest: "npm:28.1.3"
     rimraf: "npm:3.0.2"
     size-limit: "npm:8.0.1"
-    ts-jest: "npm:28.0.7"
     tslib: "npm:2.4.0"
     tsup: "npm:6.2.2"
     typescript: "npm:4.7.4"
@@ -2911,15 +2908,16 @@ __metadata:
     "@prisma/client": "npm:4.2.1"
     "@soluble/dsn-parser": "npm:1.6.0"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
+    "@vitest/ui": "npm:0.21.1"
     camelcase: "npm:7.0.0"
     cross-env: "npm:7.0.3"
     dotenv-flow: "npm:3.2.0"
     dotenv-flow-cli: "npm:1.0.0"
     eslint: "npm:8.22.0"
-    execa: "npm:5.1.1"
+    execa: "npm:6.1.0"
     graphql: "npm:16.5.0"
-    is-port-reachable: "npm:3.1.0"
+    is-port-reachable: "npm:4.0.0"
     jest: "npm:28.1.3"
     keyword-extractor: "npm:0.0.23"
     npm-run-all: "npm:4.1.5"
@@ -2928,11 +2926,15 @@ __metadata:
     rimraf: "npm:3.0.2"
     transliteration: "npm:2.3.5"
     ts-jest: "npm:28.0.7"
+    tsup: "npm:6.2.2"
     tsx: "npm:3.8.2"
     typescript: "npm:4.7.4"
+    vite: "npm:3.0.7"
+    vite-tsconfig-paths: "npm:3.5.0"
+    vitest: "npm:0.21.1"
   peerDependencies:
     "@pothos/plugin-prisma": ^3.6.1
-    "@prisma/client": ^3.13.0 || ^4.0.0
+    "@prisma/client": ^4.0.0
   languageName: unknown
   linkType: soft
 
@@ -2943,7 +2945,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.0.1"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@vitest/ui": "npm:0.21.1"
     c8: "npm:7.12.0"
     cross-env: "npm:7.0.3"
@@ -2976,7 +2978,7 @@ __metadata:
     "@testing-library/react": "npm:^13.3.0"
     "@testing-library/react-hooks": "npm:^8.0.1"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@types/prettier": "npm:2.7.0"
     "@types/react": "npm:18.0.17"
     "@types/react-dom": "npm:18.0.6"
@@ -2984,7 +2986,7 @@ __metadata:
     "@typescript-eslint/parser": "npm:^5.33.0"
     eslint: "npm:8.22.0"
     eslint-config-prettier: "npm:^8.5.0"
-    eslint-import-resolver-typescript: "npm:^3.4.0"
+    eslint-import-resolver-typescript: "npm:^3.4.1"
     eslint-plugin-import: "npm:^2.26.0"
     eslint-plugin-jest: "npm:^26.8.2"
     eslint-plugin-jest-formatting: "npm:^3.1.0"
@@ -3028,7 +3030,7 @@ __metadata:
     "@size-limit/file": "npm:8.0.1"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@vitest/ui": "npm:0.21.1"
     bcryptjs: "npm:^2.4.3"
     c8: "npm:7.12.0"
@@ -3056,7 +3058,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.0.1"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@vitest/ui": "npm:0.21.1"
     c8: "npm:7.12.0"
     es-check: "npm:7.0.0"
@@ -3084,7 +3086,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.0.1"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@vitest/ui": "npm:0.21.1"
     c8: "npm:7.12.0"
     cross-env: "npm:7.0.3"
@@ -9776,10 +9778,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.6.5, @types/node@npm:>=12":
-  version: 18.6.5
-  resolution: "@types/node@npm:18.6.5"
-  checksum: c3ab2fe90e95ea345ff53b8a336a6b9cd5a542fe98e3a066eb9be3a353bd394ab480898d31d003cec224fa9d49b6f5499b1a006e3d0b54c1ced313a6de668f35
+"@types/node@npm:*, @types/node@npm:18.7.3, @types/node@npm:>=12":
+  version: 18.7.3
+  resolution: "@types/node@npm:18.7.3"
+  checksum: bc1a5f35a09c73438dd6d501fd9aa4c30db09aedd8a27904a552d0668846aa7f1fca86b84d475617528a4a48d4761f26c08c18cc4f9a3cf58a52877f544c72e4
   languageName: node
   linkType: hard
 
@@ -15974,9 +15976,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-import-resolver-typescript@npm:^3.4.0":
-  version: 3.4.0
-  resolution: "eslint-import-resolver-typescript@npm:3.4.0"
+"eslint-import-resolver-typescript@npm:^3.4.1":
+  version: 3.4.1
+  resolution: "eslint-import-resolver-typescript@npm:3.4.1"
   dependencies:
     debug: "npm:^4.3.4"
     enhanced-resolve: "npm:^5.10.0"
@@ -15988,7 +15990,7 @@ __metadata:
   peerDependencies:
     eslint: "*"
     eslint-plugin-import: "*"
-  checksum: 97b751b91ea4364a620cc4284c266ed3ba0a046dca172bd006b491dacc174ca7dfb2c86bcf8ee4395207d1e49c22aa2f0cbc20305142773bb17c230f4197d084
+  checksum: 773553a7aa2f4508302d3a8d8dd2f85361658ea51e8b4e8e00e144ab58273b7d55500a360614530ac024528ca8ba2db0add61ec86f1b32d68cc093ecb8830415
   languageName: node
   linkType: hard
 
@@ -16518,22 +16520,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"execa@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "execa@npm:1.0.0"
-  dependencies:
-    cross-spawn: "npm:^6.0.0"
-    get-stream: "npm:^4.0.0"
-    is-stream: "npm:^1.1.0"
-    npm-run-path: "npm:^2.0.0"
-    p-finally: "npm:^1.0.0"
-    signal-exit: "npm:^3.0.0"
-    strip-eof: "npm:^1.0.0"
-  checksum: ef5d4a6502fe236441b417ba6ebebf88c992064eddf891cfa50c801868f06e0039708a077b1601f517180cc67c482c878ea857f444d50349b94d71a26faa5db7
-  languageName: node
-  linkType: hard
-
-"execa@npm:^6.1.0":
+"execa@npm:6.1.0, execa@npm:^6.1.0":
   version: 6.1.0
   resolution: "execa@npm:6.1.0"
   dependencies:
@@ -16547,6 +16534,21 @@ __metadata:
     signal-exit: "npm:^3.0.7"
     strip-final-newline: "npm:^3.0.0"
   checksum: ebe384facfb5c4e7007828a518fedb2d7704bd10e69d4584de4427d47ceadf1e9377203f4ca754c17e1a82a492b5eefad64dda65fa473bf756ab6de62124651e
+  languageName: node
+  linkType: hard
+
+"execa@npm:^1.0.0":
+  version: 1.0.0
+  resolution: "execa@npm:1.0.0"
+  dependencies:
+    cross-spawn: "npm:^6.0.0"
+    get-stream: "npm:^4.0.0"
+    is-stream: "npm:^1.1.0"
+    npm-run-path: "npm:^2.0.0"
+    p-finally: "npm:^1.0.0"
+    signal-exit: "npm:^3.0.0"
+    strip-eof: "npm:^1.0.0"
+  checksum: ef5d4a6502fe236441b417ba6ebebf88c992064eddf891cfa50c801868f06e0039708a077b1601f517180cc67c482c878ea857f444d50349b94d71a26faa5db7
   languageName: node
   linkType: hard
 
@@ -19908,10 +19910,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-port-reachable@npm:3.1.0":
-  version: 3.1.0
-  resolution: "is-port-reachable@npm:3.1.0"
-  checksum: 2678ae5e719e4c32e18817e92a6ae7e776ab37a634f1043e207fe2d2042aa5bbccfbfd3cbf74158b078ea3311813553b459d95772bf75a1771ea380b200bfb98
+"is-port-reachable@npm:4.0.0":
+  version: 4.0.0
+  resolution: "is-port-reachable@npm:4.0.0"
+  checksum: f524da494a003fc6c3aeef8322285f8d067f85dc1bef11f0dbfece5bfd4ea81dd16dae74d3ba43067fa9015057985379dacc03873506adec6956b85014fd07e6
   languageName: node
   linkType: hard
 
@@ -32880,7 +32882,7 @@ __metadata:
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:28.1.6"
-    "@types/node": "npm:18.6.5"
+    "@types/node": "npm:18.7.3"
     "@types/react": "npm:18.0.17"
     "@types/react-dom": "npm:18.0.6"
     "@types/three": "npm:0.143.0"
