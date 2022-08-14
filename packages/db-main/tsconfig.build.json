@@ -3,11 +3,12 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "target": "ES2020",
+    "module": "ES2020",
     "noEmit": false,
     "declaration": true,
     "declarationMap": false,
     "declarationDir": "./dist",
     "tsBuildInfoFile": "./tsconfig.build.tsbuildinfo" // for tsup rollup dts tsBuildInfoFile is required when using incremental
   },
-  "exclude": ["*.test.ts"]
+  "exclude": ["*.test.ts", "**/node_modules", "**/.*/"]
 }
