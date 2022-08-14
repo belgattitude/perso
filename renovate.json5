@@ -15,10 +15,10 @@
   ],
   "packageRules": [
     {
+      // Exclusions
       "matchPackageNames": [
-        // see why in .ncurc.yml
-        "is-port-reachable",
-        "execa"
+        // keep this inline with .ncurc.yml
+        // ie: "is-port-reachable",
       ],
       "enabled": false
     },
