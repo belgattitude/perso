@@ -17377,24 +17377,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.1.0":
-  version: 7.1.0
-  resolution: "framer-motion@npm:7.1.0"
+"framer-motion@npm:7.1.1":
+  version: 7.1.1
+  resolution: "framer-motion@npm:7.1.1"
   dependencies:
     "@emotion/is-prop-valid": "npm:^0.8.2"
     "@motionone/dom": "npm:10.13.1"
-    framesync: "npm:6.1.1"
+    framesync: "npm:6.1.2"
     hey-listen: "npm:^1.0.8"
-    popmotion: "npm:11.0.4"
-    style-value-types: "npm:5.1.1"
-    tslib: "npm:^2.1.0"
+    popmotion: "npm:11.0.5"
+    style-value-types: "npm:5.1.2"
+    tslib: "npm:2.4.0"
   peerDependencies:
     react: ^18.0.0
     react-dom: ^18.0.0
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: ed954e29dbb34bd38c0186a537d51d2c87cedc08f284dccf5f61e4ceb9a9e93ab95c201bc871a5fdc5298700bc5560fb719d5c00458ee393493f3ac1ad616dbb
+  checksum: cd1e7f0101d0e2927c32528be6a427769bb95adc104b8c05b4f49c06bb801ab651987e23272733317a4a1af50cb5473e01e23bfeab9d7f29244c5234d6693aea
   languageName: node
   linkType: hard
 
@@ -17404,6 +17404,15 @@ __metadata:
   dependencies:
     tslib: "npm:^2.3.1"
   checksum: cfa382d96966d3800ea2c5ef69c4bd1f49c9ad6c508f2bb093cd7894ac6ad9d31a102563a1fb9020f890900824fcad22094a334b95783d76e17db6a20fe52d5d
+  languageName: node
+  linkType: hard
+
+"framesync@npm:6.1.2":
+  version: 6.1.2
+  resolution: "framesync@npm:6.1.2"
+  dependencies:
+    tslib: "npm:2.4.0"
+  checksum: 9c1ca27d12c64c4031cf7fce61d12090e044eaf36f9554594c2c79fd7fdc7490ec42fee082ca75deb483383ef94e5518b87a4311ea95ab7ecc21b8472546fe17
   languageName: node
   linkType: hard
 
@@ -25753,6 +25762,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"popmotion@npm:11.0.5":
+  version: 11.0.5
+  resolution: "popmotion@npm:11.0.5"
+  dependencies:
+    framesync: "npm:6.1.2"
+    hey-listen: "npm:^1.0.8"
+    style-value-types: "npm:5.1.2"
+    tslib: "npm:2.4.0"
+  checksum: b68e204972f79d49e47e10220e89466bbcd57ce93b3f2a34eb50283dcb16bc8b0f10333277a8912ffc1e8ace4e31a22c77cd18a5b91b856bf3c6f7d82f5b767d
+  languageName: node
+  linkType: hard
+
 "posix-character-classes@npm:^0.1.0":
   version: 0.1.1
   resolution: "posix-character-classes@npm:0.1.1"
@@ -30131,6 +30152,16 @@ __metadata:
   languageName: node
   linkType: hard
 
+"style-value-types@npm:5.1.2":
+  version: 5.1.2
+  resolution: "style-value-types@npm:5.1.2"
+  dependencies:
+    hey-listen: "npm:^1.0.8"
+    tslib: "npm:2.4.0"
+  checksum: b97e2226987cc8df51c933b7c1724e2d67c3c9d6747993d31a6fcab75a5230412d30cd3eb0d231e270c609f8ef2bde7fcbdff206ba4a5d58afd4472689e76b58
+  languageName: node
+  linkType: hard
+
 "styled-jsx@npm:5.0.4":
   version: 5.0.4
   resolution: "styled-jsx@npm:5.0.4"
@@ -32870,7 +32901,7 @@ __metadata:
     fast-glob: "npm:3.2.11"
     flowbite: "npm:1.5.2"
     flowbite-react: "npm:0.1.6"
-    framer-motion: "npm:7.1.0"
+    framer-motion: "npm:7.1.1"
     get-tsconfig: "npm:4.2.0"
     got: "npm:12.3.1"
     graphql: "npm:16.5.0"
