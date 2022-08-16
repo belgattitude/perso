@@ -13,6 +13,7 @@ export default defineConfig({
       dir: '../../.cache/vitest/errorh',
     },
     coverage: {
+      provider: 'istanbul',
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },

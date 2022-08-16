@@ -14,6 +14,7 @@ export default defineConfig({
     },
     setupFiles: './config/test/setupVitest.ts',
     coverage: {
+      provider: 'istanbul',
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },
