@@ -14,6 +14,7 @@ export default defineConfig({
       dir: '../../.cache/vitest/file-s3',
     },
     coverage: {
+      provider: 'istanbul',
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },
