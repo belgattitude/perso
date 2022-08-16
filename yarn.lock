@@ -6663,18 +6663,19 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/nx-cloud@npm:14.3.0":
-  version: 14.3.0
-  resolution: "@nrwl/nx-cloud@npm:14.3.0"
+"@nrwl/nx-cloud@npm:14.4.0":
+  version: 14.4.0
+  resolution: "@nrwl/nx-cloud@npm:14.4.0"
   dependencies:
     axios: "npm:^0.21.1"
     chalk: "npm:4.1.0"
+    dotenv: "npm:~10.0.0"
     node-machine-id: "npm:^1.1.12"
     strip-json-comments: "npm:^3.1.1"
     tar: "npm:6.1.11"
   bin:
     nx-cloud: bin/nx-cloud.js
-  checksum: 24f153f423afcfca320bd780ca0b0323a59ed88a0ea2b8a4ec2457fb02c64a2b0714335626b66b8feec0ed06e5986a692ae98c1e4733e35f96b1fcbc4431e9e1
+  checksum: b25b359ab31e7fad4137ad61d7cb2b240506c767dc13f3a1252946f335618e02d7381ce4e7ba828c1551f04bbd8e9968f4dd64db680610d47499478046e3752e
   languageName: node
   linkType: hard
 
@@ -11916,7 +11917,7 @@ __metadata:
     "@changesets/cli": "npm:2.24.3"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@nrwl/nx-cloud": "npm:14.3.0"
+    "@nrwl/nx-cloud": "npm:14.4.0"
     "@nrwl/workspace": "npm:14.5.6"
     "@playwright/test": "npm:1.25.0"
     "@types/prettier": "npm:2.7.0"
