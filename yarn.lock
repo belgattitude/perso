@@ -9773,6 +9773,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/node@npm:^14.14.31":
+  version: 14.18.24
+  resolution: "@types/node@npm:14.18.24"
+  checksum: 98a43ea044b5298591cab9f0ed91af0f1a375147a75d18eb51b4958c6df73dcfa7eea222c97781b471dc831472b5de612faa219a2ff427946bd87c51ba58dea9
+  languageName: node
+  linkType: hard
+
 "@types/node@npm:^8.0.0":
   version: 8.10.66
   resolution: "@types/node@npm:8.10.66"
@@ -27084,12 +27091,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"pusher-js@npm:7.3.0":
-  version: 7.3.0
-  resolution: "pusher-js@npm:7.3.0"
+"pusher-js@npm:7.4.0":
+  version: 7.4.0
+  resolution: "pusher-js@npm:7.4.0"
   dependencies:
+    "@types/node": "npm:^14.14.31"
     tweetnacl: "npm:^1.0.3"
-  checksum: 71b535d2d8356cd7d94dbb38b0bcec7a9b450b77d3dd5acc6d9e8b5e47d79ee241b54a65cee8e2bb285d17917ac4924b722bfaab876b5b4319a15f9b04c63fd9
+  checksum: 65c8aa8b08d909efb9608e25f5292e991d8b0f81151a3921f7663204fa4d4e75a3e71e088d0f9700ced94135f6a14139db01bed04bb41244e89cfe7652d278a1
   languageName: node
   linkType: hard
 
@@ -32899,7 +32907,7 @@ __metadata:
     postcss-flexbugs-fixes: "npm:5.0.2"
     postcss-preset-env: "npm:7.7.2"
     pusher: "npm:5.1.1-beta"
-    pusher-js: "npm:7.3.0"
+    pusher-js: "npm:7.4.0"
     random-word-slugs: "npm:0.1.6"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
