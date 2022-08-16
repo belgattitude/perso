@@ -6696,9 +6696,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/nx-cloud@npm:14.4.0":
-  version: 14.4.0
-  resolution: "@nrwl/nx-cloud@npm:14.4.0"
+"@nrwl/nx-cloud@npm:14.4.1":
+  version: 14.4.1
+  resolution: "@nrwl/nx-cloud@npm:14.4.1"
   dependencies:
     axios: "npm:^0.21.1"
     chalk: "npm:4.1.0"
@@ -6706,9 +6706,10 @@ __metadata:
     node-machine-id: "npm:^1.1.12"
     strip-json-comments: "npm:^3.1.1"
     tar: "npm:6.1.11"
+    yargs-parser: "npm:>=21.0.1"
   bin:
     nx-cloud: bin/nx-cloud.js
-  checksum: b25b359ab31e7fad4137ad61d7cb2b240506c767dc13f3a1252946f335618e02d7381ce4e7ba828c1551f04bbd8e9968f4dd64db680610d47499478046e3752e
+  checksum: 763a1de7a2bebbeb1a3eb539f672499aa8fb0ecc0898d7e00f445b67d75eaa24d5b876f3e01e7f69c2c342b198bd4b42c3ecb5eeb94cfd39c3b98d4445e2e262
   languageName: node
   linkType: hard
 
@@ -11972,7 +11973,7 @@ __metadata:
     "@changesets/cli": "npm:2.24.3"
     "@commitlint/cli": "npm:17.0.3"
     "@commitlint/config-conventional": "npm:17.0.3"
-    "@nrwl/nx-cloud": "npm:14.4.0"
+    "@nrwl/nx-cloud": "npm:14.4.1"
     "@nrwl/workspace": "npm:14.5.6"
     "@playwright/test": "npm:1.25.0"
     "@types/prettier": "npm:2.7.0"
@@ -33419,10 +33420,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"yargs-parser@npm:21.0.1, yargs-parser@npm:^21.0.0, yargs-parser@npm:^21.0.1":
+"yargs-parser@npm:21.0.1":
   version: 21.0.1
   resolution: "yargs-parser@npm:21.0.1"
   checksum: acaedd6c21306da55dfabb5ea5967012a322bb103eab6034cee3ace61cefda1faaac89ea10bdee3bdfed2904f43cf71f346ccecf72e85b5005e6b2b2d17201d5
+  languageName: node
+  linkType: hard
+
+"yargs-parser@npm:>=21.0.1, yargs-parser@npm:^21.0.0, yargs-parser@npm:^21.0.1":
+  version: 21.1.1
+  resolution: "yargs-parser@npm:21.1.1"
+  checksum: fc4457cf1e4d7d41e5b3a1d62e86b3934af704dd8777979a3c4c573e08eea437801444622cd68607c0266d53b90d84e8e79fd4f5ff170d1be8860064111bbad6
   languageName: node
   linkType: hard
 
