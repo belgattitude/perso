@@ -6629,15 +6629,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:14.5.6":
-  version: 14.5.6
-  resolution: "@nrwl/cli@npm:14.5.6"
-  dependencies:
-    nx: "npm:14.5.6"
-  checksum: 82e4a0f817963c00379f86128bcc040d96ff4a4c6190496983e9a98607c77118a256b11b4a38e669db0a8e5772fdc5a7d6579d268644f2bfa08c4dc3447e25ae
-  languageName: node
-  linkType: hard
-
 "@nrwl/cli@npm:14.5.7":
   version: 14.5.7
   resolution: "@nrwl/cli@npm:14.5.7"
@@ -6716,17 +6707,6 @@ __metadata:
   bin:
     nx-cloud: bin/nx-cloud.js
   checksum: 763a1de7a2bebbeb1a3eb539f672499aa8fb0ecc0898d7e00f445b67d75eaa24d5b876f3e01e7f69c2c342b198bd4b42c3ecb5eeb94cfd39c3b98d4445e2e262
-  languageName: node
-  linkType: hard
-
-"@nrwl/tao@npm:14.5.6":
-  version: 14.5.6
-  resolution: "@nrwl/tao@npm:14.5.6"
-  dependencies:
-    nx: "npm:14.5.6"
-  bin:
-    tao: index.js
-  checksum: 43eeda414ac32e9abed19ac542e54f99cdd54f18290da9f6220335dad8ca466e842b7072c2e41b64968e87f62ad82ee2771ea64e293db79a5464960d85becafd
   languageName: node
   linkType: hard
 
@@ -12001,7 +11981,7 @@ __metadata:
     is-ci: "npm:3.0.1"
     lint-staged: "npm:13.0.3"
     npm-run-all: "npm:4.1.5"
-    nx: "npm:14.5.6"
+    nx: "npm:14.5.7"
     prettier: "npm:2.7.1"
     rimraf: "npm:3.0.2"
     shell-quote: "npm:1.7.3"
@@ -24664,54 +24644,6 @@ __metadata:
   version: 2.2.0
   resolution: "nwsapi@npm:2.2.0"
   checksum: c94b3d50dfa7a98ebcf182216ec4de45bfe023734da3d2cd3f0d13bb7b338e1f728c2a11109dd31eeabf611429d6805ba38bfb8b2deb7589d63a25f02d9e57dd
-  languageName: node
-  linkType: hard
-
-"nx@npm:14.5.6":
-  version: 14.5.6
-  resolution: "nx@npm:14.5.6"
-  dependencies:
-    "@nrwl/cli": "npm:14.5.6"
-    "@nrwl/tao": "npm:14.5.6"
-    "@parcel/watcher": "npm:2.0.4"
-    chalk: "npm:4.1.0"
-    chokidar: "npm:^3.5.1"
-    cli-cursor: "npm:3.1.0"
-    cli-spinners: "npm:2.6.1"
-    cliui: "npm:^7.0.2"
-    dotenv: "npm:~10.0.0"
-    enquirer: "npm:~2.3.6"
-    fast-glob: "npm:3.2.7"
-    figures: "npm:3.2.0"
-    flat: "npm:^5.0.2"
-    fs-extra: "npm:^10.1.0"
-    glob: "npm:7.1.4"
-    ignore: "npm:^5.0.4"
-    js-yaml: "npm:4.1.0"
-    jsonc-parser: "npm:3.0.0"
-    minimatch: "npm:3.0.5"
-    npm-run-path: "npm:^4.0.1"
-    open: "npm:^8.4.0"
-    semver: "npm:7.3.4"
-    string-width: "npm:^4.2.3"
-    tar-stream: "npm:~2.2.0"
-    tmp: "npm:~0.2.1"
-    tsconfig-paths: "npm:^3.9.0"
-    tslib: "npm:^2.3.0"
-    v8-compile-cache: "npm:2.3.0"
-    yargs: "npm:^17.4.0"
-    yargs-parser: "npm:21.0.1"
-  peerDependencies:
-    "@swc-node/register": ^1.4.2
-    "@swc/core": ^1.2.173
-  peerDependenciesMeta:
-    "@swc-node/register":
-      optional: true
-    "@swc/core":
-      optional: true
-  bin:
-    nx: bin/nx.js
-  checksum: d0e313c338aeb08a27dbe4e8749e25ab017f70a1d0de6c94a1cb35583565459ebc5a1e76d20ba27d024ee6e447e7a3548cdc8c6b7460fda07130117cdad7b0e2
   languageName: node
   linkType: hard
 
