@@ -2817,7 +2817,7 @@ __metadata:
     "@types/react": "npm:18.0.17"
     "@types/react-dom": "npm:18.0.6"
     "@vitejs/plugin-react": "npm:2.0.1"
-    "@vitest/coverage-istanbul": "npm:0.22.0"
+    "@vitest/coverage-istanbul": "npm:0.22.1"
     "@vitest/ui": "npm:0.22.1"
     autoprefixer: "npm:10.4.8"
     babel-loader: "npm:8.2.5"
@@ -2880,7 +2880,7 @@ __metadata:
     "@size-limit/file": "npm:8.0.1"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/node": "npm:18.7.3"
-    "@vitest/coverage-istanbul": "npm:0.22.0"
+    "@vitest/coverage-istanbul": "npm:0.22.1"
     "@vitest/ui": "npm:0.22.1"
     bcryptjs: "npm:^2.4.3"
     es-check: "npm:7.0.0"
@@ -2909,7 +2909,7 @@ __metadata:
     "@soluble/dsn-parser": "npm:1.6.0"
     "@types/jest": "npm:28.1.7"
     "@types/node": "npm:18.7.3"
-    "@vitest/coverage-istanbul": "npm:0.22.0"
+    "@vitest/coverage-istanbul": "npm:0.22.1"
     "@vitest/ui": "npm:0.22.1"
     camelcase: "npm:7.0.0"
     cross-env: "npm:7.0.3"
@@ -2947,7 +2947,7 @@ __metadata:
     "@size-limit/file": "npm:8.0.1"
     "@types/jest": "npm:28.1.7"
     "@types/node": "npm:18.7.3"
-    "@vitest/coverage-istanbul": "npm:0.22.0"
+    "@vitest/coverage-istanbul": "npm:0.22.1"
     "@vitest/ui": "npm:0.22.1"
     cross-env: "npm:7.0.3"
     es-check: "npm:7.0.0"
@@ -3032,7 +3032,7 @@ __metadata:
     "@types/bcryptjs": "npm:2.4.2"
     "@types/jest": "npm:28.1.7"
     "@types/node": "npm:18.7.3"
-    "@vitest/coverage-istanbul": "npm:0.22.0"
+    "@vitest/coverage-istanbul": "npm:0.22.1"
     "@vitest/ui": "npm:0.22.1"
     bcryptjs: "npm:^2.4.3"
     es-check: "npm:7.0.0"
@@ -3088,7 +3088,7 @@ __metadata:
     "@size-limit/file": "npm:8.0.1"
     "@types/jest": "npm:28.1.7"
     "@types/node": "npm:18.7.3"
-    "@vitest/coverage-istanbul": "npm:0.22.0"
+    "@vitest/coverage-istanbul": "npm:0.22.1"
     "@vitest/ui": "npm:0.22.1"
     cross-env: "npm:7.0.3"
     es-check: "npm:7.0.0"
@@ -10334,9 +10334,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@vitest/coverage-istanbul@npm:0.22.0":
-  version: 0.22.0
-  resolution: "@vitest/coverage-istanbul@npm:0.22.0"
+"@vitest/coverage-istanbul@npm:0.22.1":
+  version: 0.22.1
+  resolution: "@vitest/coverage-istanbul@npm:0.22.1"
   dependencies:
     istanbul-lib-coverage: "npm:^3.2.0"
     istanbul-lib-instrument: "npm:^5.2.0"
@@ -10344,8 +10344,8 @@ __metadata:
     istanbul-lib-source-maps: "npm:^4.0.1"
     istanbul-reports: "npm:^3.1.5"
     test-exclude: "npm:^6.0.0"
-    vitest: "npm:0.22.0"
-  checksum: d537818c9329b9fba47f23e41b79861c498ef77272fa641610e2e8e4037ccce7de1feb6a01837f02cc62c531929c73c2f99d4a95bd583c0df14bd672b4d07676
+    vitest: "npm:0.22.1"
+  checksum: d0d07fd92165efd6eaca62a1e9a34ec0ffac6c0a0b9b009fee3ca1cb2f259b9172e9612884269a039dd64ce0842590986bc6166aaad502a0e546f2d943421b77
   languageName: node
   linkType: hard
 
@@ -30854,10 +30854,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tinyspy@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "tinyspy@npm:1.0.0"
-  checksum: 01317a2859bd94f6a58f7c524b532789812e16c8fbc9847187cac22a48bd960f7d2846252e57af10070fd67fe4fa26a78ed4b60a487224457d91f29a018dc972
+"tinyspy@npm:^1.0.0, tinyspy@npm:^1.0.2":
+  version: 1.0.2
+  resolution: "tinyspy@npm:1.0.2"
+  checksum: ee528f34ff63b3209881233401d1048b69565f917772d4f899b814a2a700be1039047c3149e98a6d6a64b94055defd46256025b205969d4059c61c4ad22697c4
   languageName: node
   linkType: hard
 
@@ -32430,6 +32430,42 @@ __metadata:
   languageName: node
   linkType: hard
 
+"vitest@npm:0.22.1":
+  version: 0.22.1
+  resolution: "vitest@npm:0.22.1"
+  dependencies:
+    "@types/chai": "npm:^4.3.3"
+    "@types/chai-subset": "npm:^1.3.3"
+    "@types/node": "npm:*"
+    chai: "npm:^4.3.6"
+    debug: "npm:^4.3.4"
+    local-pkg: "npm:^0.4.2"
+    tinypool: "npm:^0.2.4"
+    tinyspy: "npm:^1.0.2"
+    vite: "npm:^2.9.12 || ^3.0.0-0"
+  peerDependencies:
+    "@edge-runtime/vm": "*"
+    "@vitest/browser": "*"
+    "@vitest/ui": "*"
+    happy-dom: "*"
+    jsdom: "*"
+  peerDependenciesMeta:
+    "@edge-runtime/vm":
+      optional: true
+    "@vitest/browser":
+      optional: true
+    "@vitest/ui":
+      optional: true
+    happy-dom:
+      optional: true
+    jsdom:
+      optional: true
+  bin:
+    vitest: vitest.mjs
+  checksum: 7c628faeca3ba67cb61ca85d81d3c96c591a3fce6de43d83124c54aa1c1787bee9825429b65eb3f8bda8fb3236f45094a6078c12a6e6b54f5160c581b2e0aba5
+  languageName: node
+  linkType: hard
+
 "vm-browserify@npm:^1.0.1":
   version: 1.1.2
   resolution: "vm-browserify@npm:1.1.2"
@@ -32903,7 +32939,7 @@ __metadata:
     "@types/react-dom": "npm:18.0.6"
     "@types/three": "npm:0.143.1"
     "@vitejs/plugin-react": "npm:2.0.1"
-    "@vitest/coverage-istanbul": "npm:0.22.0"
+    "@vitest/coverage-istanbul": "npm:0.22.1"
     "@vitest/ui": "npm:0.22.1"
     autoprefixer: "npm:10.4.8"
     axios: "npm:0.27.2"
