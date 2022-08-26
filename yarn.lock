@@ -2842,7 +2842,7 @@ __metadata:
     size-limit: "npm:8.0.1"
     ts-jest: "npm:28.0.8"
     tsconfig-paths-webpack-plugin: "npm:4.0.0"
-    tsup: "npm:6.2.2"
+    tsup: "npm:6.2.3"
     typescript: "npm:4.7.4"
     vite-plugin-svgr: "npm:2.2.1"
     vite-tsconfig-paths: "npm:3.5.0"
@@ -2889,7 +2889,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     size-limit: "npm:8.0.1"
     tslib: "npm:2.4.0"
-    tsup: "npm:6.2.2"
+    tsup: "npm:6.2.3"
     typescript: "npm:4.7.4"
     vite: "npm:3.0.9"
     vite-tsconfig-paths: "npm:3.5.0"
@@ -2927,7 +2927,7 @@ __metadata:
     rimraf: "npm:3.0.2"
     transliteration: "npm:2.3.5"
     ts-jest: "npm:28.0.8"
-    tsup: "npm:6.2.2"
+    tsup: "npm:6.2.3"
     tsx: "npm:3.8.2"
     typescript: "npm:4.7.4"
     vite: "npm:3.0.9"
@@ -2958,7 +2958,7 @@ __metadata:
     size-limit: "npm:8.0.1"
     ts-jest: "npm:28.0.8"
     tslib: "npm:2.4.0"
-    tsup: "npm:6.2.2"
+    tsup: "npm:6.2.3"
     type-fest: "npm:2.19.0"
     typedoc: "npm:0.23.11"
     typedoc-plugin-markdown: "npm:3.13.4"
@@ -3043,7 +3043,7 @@ __metadata:
     size-limit: "npm:8.0.1"
     ts-jest: "npm:28.0.8"
     tslib: "npm:2.4.0"
-    tsup: "npm:6.2.2"
+    tsup: "npm:6.2.3"
     typescript: "npm:4.7.4"
     vite: "npm:3.0.9"
     vite-tsconfig-paths: "npm:3.5.0"
@@ -3070,7 +3070,7 @@ __metadata:
     size-limit: "npm:8.0.1"
     ts-jest: "npm:28.0.8"
     tslib: "npm:2.4.0"
-    tsup: "npm:6.2.2"
+    tsup: "npm:6.2.3"
     typescript: "npm:4.7.4"
     vite: "npm:3.0.9"
     vite-tsconfig-paths: "npm:3.5.0"
@@ -3099,7 +3099,7 @@ __metadata:
     size-limit: "npm:8.0.1"
     ts-jest: "npm:28.0.8"
     tslib: "npm:2.4.0"
-    tsup: "npm:6.2.2"
+    tsup: "npm:6.2.3"
     type-fest: "npm:2.19.0"
     typescript: "npm:4.7.4"
     vite: "npm:3.0.9"
@@ -12486,14 +12486,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"bundle-require@npm:^3.0.2":
-  version: 3.0.4
-  resolution: "bundle-require@npm:3.0.4"
+"bundle-require@npm:^3.1.0":
+  version: 3.1.0
+  resolution: "bundle-require@npm:3.1.0"
   dependencies:
     load-tsconfig: "npm:^0.2.0"
   peerDependencies:
     esbuild: ">=0.13"
-  checksum: 516014362bfe2d58c1d57f46a6d055ae01fd8fc6d86219d476947ac74f821cdd9dcc949478f1be305728598213a880239f99b190ce64fb3be042d769a84abea6
+  checksum: 6d8dd83591b1ffb09242aa3635e094d061ecac4bf7c042c99cb373ecadecfc3ad7357edbd2b876bdbb7fc01063eb9df59eb78cf7d44b7d1f251139f186d98acf
   languageName: node
   linkType: hard
 
@@ -31395,11 +31395,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"tsup@npm:6.2.2":
-  version: 6.2.2
-  resolution: "tsup@npm:6.2.2"
+"tsup@npm:6.2.3":
+  version: 6.2.3
+  resolution: "tsup@npm:6.2.3"
   dependencies:
-    bundle-require: "npm:^3.0.2"
+    bundle-require: "npm:^3.1.0"
     cac: "npm:^6.7.12"
     chokidar: "npm:^3.5.1"
     debug: "npm:^4.3.1"
@@ -31427,7 +31427,7 @@ __metadata:
   bin:
     tsup: dist/cli-default.js
     tsup-node: dist/cli-node.js
-  checksum: 4c7179c2d70e2ffc12e3bb181a62cbe835340869a5bdcbbf57b120f3d30fac317d59aade862e7193a45ec9b3f9e096c62fdcedc8ed5684aa17beb7dadf05790d
+  checksum: 00ebdf18cb3f41362d35a492aee0d18cd66e82c0b8c41cc07d57942778b3bddd7c63270d43d5dd2ffef00151c4b65aea8c14e5c7d5483c04f1af5ec08433185b
   languageName: node
   linkType: hard
 
