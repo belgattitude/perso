@@ -5465,9 +5465,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-yoga/common@npm:^2.12.8":
-  version: 2.12.8
-  resolution: "@graphql-yoga/common@npm:2.12.8"
+"@graphql-yoga/common@npm:^2.12.9":
+  version: 2.12.9
+  resolution: "@graphql-yoga/common@npm:2.12.9"
   dependencies:
     "@envelop/core": "npm:^2.5.0"
     "@envelop/parser-cache": "npm:^4.6.0"
@@ -5476,28 +5476,28 @@ __metadata:
     "@graphql-tools/utils": "npm:^8.8.0"
     "@graphql-typed-document-node/core": "npm:^3.1.1"
     "@graphql-yoga/subscription": "npm:^2.2.3"
-    "@whatwg-node/fetch": "npm:^0.2.6"
+    "@whatwg-node/fetch": "npm:^0.3.0"
     dset: "npm:^3.1.1"
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: 78c34b4d760511282fb6393c4811b87e34fcb5c8e36930ca1dab6ff0415cd0e53932ef607c8cf85f620a280fcd5f0f21321b2b4f2600fe589eba0898b6dcb191
+  checksum: 8f62a90e151ff171c2bf3a81c29796540e715f783e6859e91bea0faa0f76088b5390ae01f4b75e075c6734a27a4511b1c672d7d2aea1b215119fe8c3e7f76dd5
   languageName: node
   linkType: hard
 
-"@graphql-yoga/node@npm:2.13.9, @graphql-yoga/node@npm:^2.4.0":
-  version: 2.13.9
-  resolution: "@graphql-yoga/node@npm:2.13.9"
+"@graphql-yoga/node@npm:2.13.10, @graphql-yoga/node@npm:^2.4.0":
+  version: 2.13.10
+  resolution: "@graphql-yoga/node@npm:2.13.10"
   dependencies:
     "@envelop/core": "npm:^2.5.0"
     "@graphql-tools/utils": "npm:^8.8.0"
-    "@graphql-yoga/common": "npm:^2.12.8"
+    "@graphql-yoga/common": "npm:^2.12.9"
     "@graphql-yoga/subscription": "npm:^2.2.3"
-    "@whatwg-node/fetch": "npm:^0.2.6"
+    "@whatwg-node/fetch": "npm:^0.3.0"
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: 99df2299784c6f586545d3c625f5e3ba270dcb1cde2df11ae8047e8e56703a72d803170cbadf91d96bca56c73047604141f88387bf2b7380e5313b810c2d8cc5
+  checksum: 8dd3806d80d0113437f1ff626e97d210889040dac4f0db0cd7df94d6004bb86168adab946f6578855ba36fa180a2eb92f010b864849049f1e905b499a46de9a8
   languageName: node
   linkType: hard
 
@@ -10769,7 +10769,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@whatwg-node/fetch@npm:^0.2.4, @whatwg-node/fetch@npm:^0.2.6, @whatwg-node/fetch@npm:^0.2.9":
+"@whatwg-node/fetch@npm:^0.2.4, @whatwg-node/fetch@npm:^0.2.9":
   version: 0.2.9
   resolution: "@whatwg-node/fetch@npm:0.2.9"
   dependencies:
@@ -32931,7 +32931,7 @@ __metadata:
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-operations": "npm:2.5.3"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.3"
-    "@graphql-yoga/node": "npm:2.13.9"
+    "@graphql-yoga/node": "npm:2.13.10"
     "@headlessui/react": "npm:1.6.6"
     "@hookform/resolvers": "npm:2.9.7"
     "@jitsi/react-sdk": "npm:1.0.2"
