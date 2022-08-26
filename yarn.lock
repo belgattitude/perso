@@ -7246,14 +7246,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.22.7":
-  version: 9.22.7
-  resolution: "@react-three/drei@npm:9.22.7"
+"@react-three/drei@npm:9.23.8":
+  version: 9.23.8
+  resolution: "@react-three/drei@npm:9.23.8"
   dependencies:
     "@babel/runtime": "npm:^7.11.2"
     "@react-spring/three": "npm:^9.3.1"
     "@use-gesture/react": "npm:^10.2.0"
-    detect-gpu: "npm:^4.0.19"
+    detect-gpu: "npm:^4.0.36"
     glsl-noise: "npm:^0.0.0"
     lodash.omit: "npm:^4.5.0"
     lodash.pick: "npm:^4.4.0"
@@ -7262,8 +7262,8 @@ __metadata:
     react-merge-refs: "npm:^1.1.0"
     stats.js: "npm:^0.17.0"
     suspend-react: "npm:^0.0.8"
-    three-mesh-bvh: "npm:^0.5.10"
-    three-stdlib: "npm:^2.13.0"
+    three-mesh-bvh: "npm:^0.5.15"
+    three-stdlib: "npm:^2.14.3"
     troika-three-text: "npm:^0.46.4"
     utility-types: "npm:^3.10.0"
     zustand: "npm:^3.5.13"
@@ -7275,7 +7275,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 46ffe70074ab64dd533039483438fb12d43cc66a37ff33e1d6df90ab3a9aaecc643d19e4f58574d9f58165f9eb430998bef6e5aa386ee4f4c4b0e5d93a9a2972
+  checksum: 2799c031595b3290731ffb066e87c769ed5371bba271791b016fef6bfeeaca543afce42aa06b91719f66fb2df6def1e2d1141a60ae0ea226e7a5d78cac053799
   languageName: node
   linkType: hard
 
@@ -14782,12 +14782,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"detect-gpu@npm:^4.0.19":
-  version: 4.0.19
-  resolution: "detect-gpu@npm:4.0.19"
+"detect-gpu@npm:^4.0.36":
+  version: 4.0.36
+  resolution: "detect-gpu@npm:4.0.36"
   dependencies:
     webgl-constants: "npm:^1.1.1"
-  checksum: f144729ebd3573768436125086b9bd8c224b956482b882da1bcf6164ac284688e4db19ce386cd028a8b722a9b77a79c1250cd643620c19773e1a681b65d54692
+  checksum: 831e775af0eb7f04a7b6adbd779c2429cfc10a02ab3a322e3e5ba52e7c1ae9791a43227cb87bcaf1bb6a32d6e97916bc80c5a1e681e566db5da9a8216108193a
   languageName: node
   linkType: hard
 
@@ -21852,6 +21852,13 @@ __metadata:
   version: 0.2.2
   resolution: "ktx-parse@npm:0.2.2"
   checksum: 16be55a433bf428f0af4fbe9cc19972ebba3391cb0b4477098d10140708bb195c8f78802e6037ec12dc6da80d8fe42b4d32a253f30785b283a491184a7088915
+  languageName: node
+  linkType: hard
+
+"ktx-parse@npm:^0.4.5":
+  version: 0.4.5
+  resolution: "ktx-parse@npm:0.4.5"
+  checksum: 7fb4c029aedfd675f7a247b5e43d708a0c45863b69c74e5a7df0fe994d5c4a99e2d8caeeacca5304aeb09091594bb853de76dc4566c11158ade64072770ef72d
   languageName: node
   linkType: hard
 
@@ -30800,16 +30807,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three-mesh-bvh@npm:^0.5.10":
-  version: 0.5.10
-  resolution: "three-mesh-bvh@npm:0.5.10"
+"three-mesh-bvh@npm:^0.5.15":
+  version: 0.5.15
+  resolution: "three-mesh-bvh@npm:0.5.15"
   peerDependencies:
     three: ">= 0.123.0"
-  checksum: b80ebe7919ba8ca6f5dbb8761e16e4bcf4bcf4356e1baa37fdcd4ef1ff4ef6c7cef7809f7076c1e412ba51e2ab33c2afce5f9aaa7379373bf70aa5bf9d2cd953
+  checksum: faccad3a9e35efbc4fed2f2f92a7602e44cfd9ebf33d8c618801097cccb87e1835636fa6c3226113793b274a99685671166a8bc1f0142507c2eb620be7277f64
   languageName: node
   linkType: hard
 
-"three-stdlib@npm:2.13.1, three-stdlib@npm:^2.13.0":
+"three-stdlib@npm:2.13.1":
   version: 2.13.1
   resolution: "three-stdlib@npm:2.13.1"
   dependencies:
@@ -30826,6 +30833,26 @@ __metadata:
   peerDependencies:
     three: ">=0.122.0"
   checksum: 7289ddc0b08fca7eb57afdc24eb1b543448be1d972be11958884dbf7701fa17add2e6e54127016fd714e7adb17e7c88a9aebe3f1e6352e65ca351067fcd208d1
+  languageName: node
+  linkType: hard
+
+"three-stdlib@npm:^2.14.3":
+  version: 2.14.3
+  resolution: "three-stdlib@npm:2.14.3"
+  dependencies:
+    "@babel/runtime": "npm:^7.16.7"
+    "@webgpu/glslang": "npm:^0.0.15"
+    chevrotain: "npm:^10.1.2"
+    draco3d: "npm:^1.4.1"
+    fflate: "npm:^0.6.9"
+    ktx-parse: "npm:^0.4.5"
+    mmd-parser: "npm:^1.0.4"
+    opentype.js: "npm:^1.3.3"
+    potpack: "npm:^1.0.1"
+    zstddec: "npm:^0.0.2"
+  peerDependencies:
+    three: ">=0.122.0"
+  checksum: e295364d3f97b761add9cf88f82578d71ace30f75ec73e8b5076fb111cff51fc5ebb830065f2afd03e55241416e63ada7f3bdb3a0717ed1593ddb1e35bf22f14
   languageName: node
   linkType: hard
 
@@ -32946,7 +32973,7 @@ __metadata:
     "@pothos/plugin-errors": "npm:3.6.0"
     "@pothos/plugin-prisma": "npm:3.28.0"
     "@prisma/client": "npm:4.2.1"
-    "@react-three/drei": "npm:9.22.7"
+    "@react-three/drei": "npm:9.23.8"
     "@react-three/fiber": "npm:8.6.0"
     "@sentry/nextjs": "npm:7.11.1"
     "@sindresorhus/is": "npm:5.3.0"
