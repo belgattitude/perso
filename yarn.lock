@@ -3418,13 +3418,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/cli@npm:17.1.0":
-  version: 17.1.0
-  resolution: "@commitlint/cli@npm:17.1.0"
+"@commitlint/cli@npm:17.1.1":
+  version: 17.1.1
+  resolution: "@commitlint/cli@npm:17.1.1"
   dependencies:
     "@commitlint/format": "npm:^17.0.0"
     "@commitlint/lint": "npm:^17.1.0"
-    "@commitlint/load": "npm:^17.1.0"
+    "@commitlint/load": "npm:^17.1.1"
     "@commitlint/read": "npm:^17.1.0"
     "@commitlint/types": "npm:^17.0.0"
     execa: "npm:^5.0.0"
@@ -3434,7 +3434,7 @@ __metadata:
     yargs: "npm:^17.0.0"
   bin:
     commitlint: cli.js
-  checksum: 8f2b6cb2bd22f72f91b7681283fe34d06227c3c7a49de90e85982f366e4fa42471999ba48c1a2f2d94f77c4a96f03b67aa585523560589f6acaf7a22ed78573a
+  checksum: 656bf34b31fcaa303dcb302fbb45399b74f2bb3531a9c36f18d99f42c070c6862e752d2c4eb7b38f848a52b1ffce438f8d1f9c841f9569faf913d5c1f866e38f
   languageName: node
   linkType: hard
 
@@ -3506,9 +3506,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@commitlint/load@npm:>6.1.1, @commitlint/load@npm:^17.1.0":
-  version: 17.1.0
-  resolution: "@commitlint/load@npm:17.1.0"
+"@commitlint/load@npm:>6.1.1, @commitlint/load@npm:^17.1.1":
+  version: 17.1.1
+  resolution: "@commitlint/load@npm:17.1.1"
   dependencies:
     "@commitlint/config-validator": "npm:^17.1.0"
     "@commitlint/execute-rule": "npm:^17.0.0"
@@ -3522,8 +3522,8 @@ __metadata:
     resolve-from: "npm:^5.0.0"
     typescript: "npm:^4.6.4"
   peerDependencies:
-    ts-node: "*"
-  checksum: b959f4c44edeceffb6471340bbe7132b9ddbee8e4766c503a2a5e3b6652dc708b1bf97ad1fa5b89e0a507e9136ef713dbcad4b7d1415fd0aabee7566caa5543f
+    ts-node: ">=10"
+  checksum: cb1fc0f78fc2023681509c6fa138693b6e26ad5bcda46c9fa7047b5c47a7d9356c54b733bbd64a8c8db71ef0c05590090f0b8ccf5a6e30fab49f47a0fd5c3125
   languageName: node
   linkType: hard
 
@@ -12069,7 +12069,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@changesets/changelog-github": "npm:0.4.6"
     "@changesets/cli": "npm:2.24.3"
-    "@commitlint/cli": "npm:17.1.0"
+    "@commitlint/cli": "npm:17.1.1"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@nrwl/nx-cloud": "npm:14.5.4"
     "@nrwl/workspace": "npm:14.5.10"
