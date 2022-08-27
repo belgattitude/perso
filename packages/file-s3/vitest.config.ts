@@ -8,9 +8,10 @@ export default defineConfig({
   test: {
     globals: true,
     environment: 'node',
-    passWithNoTests: false,
+    passWithNoTests: true,
+    // setupFiles: './config/tests/setupVitest.ts',
     cache: {
-      dir: '../../.cache/vitest/ts-utils',
+      dir: '../../.cache/vitest/file-s3',
     },
     coverage: {
       provider: 'istanbul',

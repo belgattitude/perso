@@ -1,4 +1,4 @@
-import { compareSync, genSaltSync, hashSync } from 'bcryptjs';
+import bcrypt from 'bcryptjs';
 import type { IPasswordHasher } from './IPasswordHasher';
 
 type Params = {
@@ -8,10 +8,10 @@ type Params = {
 export class BcryptJsPasswordHasher implements IPasswordHasher {
   constructor(public readonly params: Params) {}
   hash(password: string): string {
-    const salt = genSaltSync(this.params.rounds);
-    return hashSync(password, salt);
+    const salt = bcrypt.genSaltSync(this.params.rounds);
+    return bcrypt.hashSync(password, salt);
   }
   verify(password: string, hash: string): boolean {
-    return compareSync(password, hash);
+    return bcrypt.compareSync(password, hash);
   }
 }

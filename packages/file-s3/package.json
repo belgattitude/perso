@@ -1,13 +1,13 @@
 {
-  "name": "@belgattitude/ts-utils",
-  "version": "1.0.0",
+  "name": "@belgattitude/file-s3",
+  "version": "1.1.0",
   "license": "MIT",
   "private": true,
   "homepage": "https://github.com/belgattitude/perso",
   "repository": {
     "type": "git",
     "url": "https://github.com/belgattitude/perso",
-    "directory": "packages/ts-utils"
+    "directory": "packages/file-s3"
   },
   "author": {
     "name": "Vanvelthem Sébastien",
@@ -17,10 +17,11 @@
   "type": "module",
   "exports": {
     ".": {
-      "types": "./dist/index.d.ts",
-      "default": "./dist/index.js"
-    },
-    "./package.json": "./package.json"
+      "import": {
+        "types": "./dist/index.d.ts",
+        "default": "./dist/index.js"
+      }
+    }
   },
   "scripts": {
     "build": "tsup",
@@ -28,7 +29,7 @@
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
     "prettier-check": "yarn run --top-level prettier --check --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "prettier-fix": "yarn run --top-level prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
-    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/ts-utils.eslintcache",
+    "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/file-s3.eslintcache",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
     "check-dist": "es-check -v",
     "check-size": "size-limit",
@@ -38,14 +39,17 @@
     "test-unit-watch": "vitest watch --ui",
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
   },
+  "peerDependencies": {
+    "@aws-sdk/client-s3": "^3.145.0"
+  },
   "devDependencies": {
+    "@aws-sdk/client-s3": "3.159.0",
     "@belgattitude/eslint-config-bases": "workspace:^",
     "@size-limit/file": "8.0.1",
     "@types/jest": "28.1.8",
     "@types/node": "18.7.3",
-    "@vitest/coverage-istanbul": "0.22.1",
     "@vitest/ui": "0.22.1",
-    "cross-env": "7.0.3",
+    "c8": "7.12.0",
     "es-check": "7.0.0",
     "eslint": "8.23.0",
     "get-tsconfig": "4.2.0",
@@ -55,7 +59,6 @@
     "ts-jest": "28.0.8",
     "tslib": "2.4.0",
     "tsup": "6.2.3",
-    "type-fest": "2.19.0",
     "typescript": "4.7.4",
     "vite": "3.0.9",
     "vite-tsconfig-paths": "3.5.0",
