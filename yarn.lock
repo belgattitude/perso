@@ -5451,9 +5451,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-yoga/common@npm:^2.12.9":
-  version: 2.12.9
-  resolution: "@graphql-yoga/common@npm:2.12.9"
+"@graphql-yoga/common@npm:^2.12.10":
+  version: 2.12.10
+  resolution: "@graphql-yoga/common@npm:2.12.10"
   dependencies:
     "@envelop/core": "npm:^2.5.0"
     "@envelop/parser-cache": "npm:^4.6.0"
@@ -5467,23 +5467,23 @@ __metadata:
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: 8f62a90e151ff171c2bf3a81c29796540e715f783e6859e91bea0faa0f76088b5390ae01f4b75e075c6734a27a4511b1c672d7d2aea1b215119fe8c3e7f76dd5
+  checksum: 770cd2c565bc003d3a6f34eebaea7ec62d1223c01b2e76efd1f185c3d24887ee95eecff017b9200d041c7125deeed5057fe5b4e3f4a4ac84f884d7104b611f4b
   languageName: node
   linkType: hard
 
-"@graphql-yoga/node@npm:2.13.10, @graphql-yoga/node@npm:^2.4.0":
-  version: 2.13.10
-  resolution: "@graphql-yoga/node@npm:2.13.10"
+"@graphql-yoga/node@npm:2.13.11, @graphql-yoga/node@npm:^2.4.0":
+  version: 2.13.11
+  resolution: "@graphql-yoga/node@npm:2.13.11"
   dependencies:
     "@envelop/core": "npm:^2.5.0"
     "@graphql-tools/utils": "npm:^8.8.0"
-    "@graphql-yoga/common": "npm:^2.12.9"
+    "@graphql-yoga/common": "npm:^2.12.10"
     "@graphql-yoga/subscription": "npm:^2.2.3"
     "@whatwg-node/fetch": "npm:^0.3.0"
     tslib: "npm:^2.3.1"
   peerDependencies:
     graphql: ^15.2.0 || ^16.0.0
-  checksum: 8dd3806d80d0113437f1ff626e97d210889040dac4f0db0cd7df94d6004bb86168adab946f6578855ba36fa180a2eb92f010b864849049f1e905b499a46de9a8
+  checksum: 3ac85cdc3ee93c1218190c1d3bde483e95fb176d8890dce9634023f8f527d5333a66dca9db8ce788f2b4b0943bddfcad3b4728c6a29b551be109720a3b79f95d
   languageName: node
   linkType: hard
 
@@ -32937,7 +32937,7 @@ __metadata:
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-operations": "npm:2.5.3"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.3"
-    "@graphql-yoga/node": "npm:2.13.10"
+    "@graphql-yoga/node": "npm:2.13.11"
     "@headlessui/react": "npm:1.6.6"
     "@hookform/resolvers": "npm:2.9.7"
     "@jitsi/react-sdk": "npm:1.0.2"
