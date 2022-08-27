@@ -21848,13 +21848,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"ktx-parse@npm:^0.2.1":
-  version: 0.2.2
-  resolution: "ktx-parse@npm:0.2.2"
-  checksum: 16be55a433bf428f0af4fbe9cc19972ebba3391cb0b4477098d10140708bb195c8f78802e6037ec12dc6da80d8fe42b4d32a253f30785b283a491184a7088915
-  languageName: node
-  linkType: hard
-
 "ktx-parse@npm:^0.4.5":
   version: 0.4.5
   resolution: "ktx-parse@npm:0.4.5"
@@ -30816,27 +30809,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three-stdlib@npm:2.13.1":
-  version: 2.13.1
-  resolution: "three-stdlib@npm:2.13.1"
-  dependencies:
-    "@babel/runtime": "npm:^7.16.7"
-    "@webgpu/glslang": "npm:^0.0.15"
-    chevrotain: "npm:^10.1.2"
-    draco3d: "npm:^1.4.1"
-    fflate: "npm:^0.6.9"
-    ktx-parse: "npm:^0.2.1"
-    mmd-parser: "npm:^1.0.4"
-    opentype.js: "npm:^1.3.3"
-    potpack: "npm:^1.0.1"
-    zstddec: "npm:^0.0.2"
-  peerDependencies:
-    three: ">=0.122.0"
-  checksum: 7289ddc0b08fca7eb57afdc24eb1b543448be1d972be11958884dbf7701fa17add2e6e54127016fd714e7adb17e7c88a9aebe3f1e6352e65ca351067fcd208d1
-  languageName: node
-  linkType: hard
-
-"three-stdlib@npm:^2.14.3":
+"three-stdlib@npm:2.14.3, three-stdlib@npm:^2.14.3":
   version: 2.14.3
   resolution: "three-stdlib@npm:2.14.3"
   dependencies:
@@ -33060,7 +33033,7 @@ __metadata:
     tailwind-merge: "npm:1.6.0"
     tailwindcss: "npm:3.1.8"
     three: "npm:0.143.0"
-    three-stdlib: "npm:2.13.1"
+    three-stdlib: "npm:2.14.3"
     ts-jest: "npm:28.0.8"
     ts-pattern: "npm:4.0.5"
     type-fest: "npm:2.19.0"
