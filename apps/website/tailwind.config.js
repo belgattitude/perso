@@ -1,9 +1,11 @@
-const defaultTheme = require('tailwindcss/defaultTheme');
-const sharedTheme = require('./src/themes/tailwind/tailwind.theme');
-const { tailwindV3Colors } = require('./src/themes/shared/colors');
+// @ts-check
+
+import defaultTheme from 'tailwindcss/defaultTheme';
+import sharedTheme from './src/themes/tailwind/tailwind.theme';
+import { tailwindV3Colors } from './src/themes/shared/colors';
 
 /** @type {import('tailwindcss').Config} */
-module.exports = {
+export default {
   content: [
     './src/**/*.{js,ts,jsx,tsx}',
     '../../node_modules/flowbite-react/**/*.js}',

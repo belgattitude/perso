@@ -26,6 +26,7 @@
       "last 1 safari version"
     ]
   },
+  "type": "module",
   "scripts": {
     "clean": "rimraf --no-glob ./.next ./out ./coverage ./tsconfig.tsbuildinfo",
     "dev": "next",
@@ -62,8 +63,8 @@
     "@graphql-codegen/typescript": "2.7.3",
     "@graphql-codegen/typescript-operations": "2.5.3",
     "@graphql-codegen/typescript-resolvers": "2.7.3",
-    "@next/bundle-analyzer": "12.2.5",
-    "@next/env": "12.2.5",
+    "@next/bundle-analyzer": "12.2.6-canary.5",
+    "@next/env": "12.2.6-canary.5",
     "@playwright/test": "1.25.1",
     "@size-limit/file": "8.0.1",
     "@soluble/cache-interop": "0.11.1",
@@ -177,7 +178,7 @@
     "ioredis": "5.2.3",
     "markdown-to-jsx": "7.1.7",
     "nanoid": "4.0.0",
-    "next": "12.2.5",
+    "next": "12.2.6-canary.5",
     "next-auth": "4.10.3",
     "next-connect": "0.13.0",
     "next-i18next": "12.0.0",

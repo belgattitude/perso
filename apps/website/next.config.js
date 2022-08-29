@@ -2,11 +2,13 @@
 
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
-const { withSentryConfig } = require('@sentry/nextjs');
+import { withSentryConfig } from '@sentry/nextjs';
 
-const pc = require('picocolors');
-const packageJson = require('./package.json');
-const { i18n } = require('./next-i18next.config');
+import pc from 'picocolors';
+import packageJson from './package.json' assert { type: 'json' };
+import nextI18nConfig from './next-i18next.config.js';
+import withNextTranspileModules from 'next-transpile-modules';
+import withBundleAnalyzer from '@next/bundle-analyzer';
 
 const trueEnv = ['true', '1', 'yes'];
 
@@ -72,7 +74,7 @@ const tmModules = [
 ];
 
 // @link https://github.com/jagaapple/next-secure-headers
-const { createSecureHeaders } = require('next-secure-headers');
+import { createSecureHeaders } from 'next-secure-headers';
 const secureHeaders = createSecureHeaders({
   contentSecurityPolicy: {
     directives: enableCSP
@@ -130,7 +132,7 @@ const secureHeaders = createSecureHeaders({
 const nextConfig = {
   reactStrictMode: true,
   productionBrowserSourceMaps: !disableSourceMaps,
-  i18n,
+  i18n: nextI18nConfig.i18n,
   optimizeFonts: true,
 
   httpAgentOptions: {
@@ -305,21 +307,16 @@ if (tmModules.length > 0) {
     `${pc.green('notice')}- Will transpile [${tmModules.join(',')}]`
   );
 
-  const withNextTranspileModules = require('next-transpile-modules')(
-    tmModules,
-    {
-      resolveSymlinks: true,
-      debug: false,
-    }
-  );
-  config = withNextTranspileModules(config);
+  config = withNextTranspileModules(tmModules, {
+    resolveSymlinks: true,
+    debug: false,
+  })(config);
 }
 
 if (process.env.ANALYZE === 'true') {
-  // @ts-ignore
-  const withBundleAnalyzer = require('@next/bundle-analyzer')({
+  config = withBundleAnalyzer({
     enabled: true,
-  });
-  config = withBundleAnalyzer(config);
+  })(config);
 }
-module.exports = config;
+
+export default config;
