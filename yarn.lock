@@ -2904,7 +2904,7 @@ __metadata:
     "@belgattitude/crypto": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@pothos/core": "npm:3.19.0"
-    "@pothos/plugin-prisma": "npm:3.28.0"
+    "@pothos/plugin-prisma": "npm:3.29.0"
     "@prisma/client": "npm:4.2.1"
     "@soluble/dsn-parser": "npm:1.6.0"
     "@types/jest": "npm:28.1.8"
@@ -7138,9 +7138,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pothos/plugin-prisma@npm:3.28.0":
-  version: 3.28.0
-  resolution: "@pothos/plugin-prisma@npm:3.28.0"
+"@pothos/plugin-prisma@npm:3.29.0":
+  version: 3.29.0
+  resolution: "@pothos/plugin-prisma@npm:3.29.0"
   dependencies:
     "@prisma/generator-helper": "npm:^4.2.1"
   peerDependencies:
@@ -7150,7 +7150,7 @@ __metadata:
     typescript: ">=4.7.2"
   bin:
     prisma-pothos-types: bin/generator.js
-  checksum: 512af1f0f2626d43b659d4ef559687b49d628e8bae4cad32da3d58c4ad9eb753be36161d74ea4bf491a5d29982ce7bce8c80672fafcbaeedb74ca51cabafe108
+  checksum: e97964186320829fa4eaf3e37242c471c5c1107665b72733eb14fae0e81f99b979000ec72f2605a2badfaa77d7fb0e1aa14b3afc908f4ffdf7988683491fae74
   languageName: node
   linkType: hard
 
@@ -33094,7 +33094,7 @@ __metadata:
     "@playwright/test": "npm:1.25.1"
     "@pothos/core": "npm:3.19.0"
     "@pothos/plugin-errors": "npm:3.6.0"
-    "@pothos/plugin-prisma": "npm:3.28.0"
+    "@pothos/plugin-prisma": "npm:3.29.0"
     "@prisma/client": "npm:4.2.1"
     "@react-three/drei": "npm:9.24.4"
     "@react-three/fiber": "npm:8.6.0"
