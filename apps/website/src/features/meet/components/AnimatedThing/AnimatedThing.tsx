@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unknown-property */
 import { getRandomInt } from '@belgattitude/ts-utils';
 import { MeshWobbleMaterial } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
