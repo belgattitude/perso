@@ -3618,6 +3618,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@corex/deepmerge@npm:^4.0.29":
+  version: 4.0.29
+  resolution: "@corex/deepmerge@npm:4.0.29"
+  checksum: fbe14b855c14f618cc0d1afee143f56215315f04ea024440bb3811496a3779ef41d3e445f38dd8bdfc2f2f864d80edf6283d75e23159e31ae790fa4c45156ffa
+  languageName: node
+  linkType: hard
+
 "@cspotcode/source-map-support@npm:^0.8.0":
   version: 0.8.1
   resolution: "@cspotcode/source-map-support@npm:0.8.1"
@@ -24294,6 +24301,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-sitemap@npm:3.1.21":
+  version: 3.1.21
+  resolution: "next-sitemap@npm:3.1.21"
+  dependencies:
+    "@corex/deepmerge": "npm:^4.0.29"
+    minimist: "npm:^1.2.6"
+  peerDependencies:
+    "@next/env": "*"
+    next: "*"
+  bin:
+    next-sitemap: bin/next-sitemap.mjs
+    next-sitemap-cjs: bin/next-sitemap.cjs
+  checksum: 4c0108e0a6c03e56fd097509119171229c1c7231844aa5789d761a5368664cc1b37f85142d4de8eb537beccb702b3189f3103b6e6237610b48863eef2d299849
+  languageName: node
+  linkType: hard
+
 "next-transpile-modules@npm:9.0.0":
   version: 9.0.0
   resolution: "next-transpile-modules@npm:9.0.0"
@@ -24301,6 +24324,16 @@ __metadata:
     enhanced-resolve: "npm:^5.7.0"
     escalade: "npm:^3.1.1"
   checksum: 03a47a6c7c520a739e2dfe4a2a820b2678c376a8eba6c3d68c631df739c6158c8be8c0720348f736f1768936cd319653cffa91c3d2518aee88313c2a56570569
+  languageName: node
+  linkType: hard
+
+"next-transpile-modules@patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch":
+  version: 9.0.0
+  resolution: "next-transpile-modules@patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch::version=9.0.0&hash=5e03e6"
+  dependencies:
+    enhanced-resolve: "npm:^5.7.0"
+    escalade: "npm:^3.1.1"
+  checksum: 2890c8b2fe834a7fa29d6729aab999c639bdf307d768bc21a49566b5a8add1336679317f98b3d99fdcbb3e8bc89bef89d3432c53bf0a71cff89de47223b2d45c
   languageName: node
   linkType: hard
 
@@ -33006,7 +33039,8 @@ __metadata:
     next-i18next: "npm:12.0.1"
     next-secure-headers: "npm:2.2.0"
     next-seo: "npm:5.5.0"
-    next-transpile-modules: "npm:9.0.0"
+    next-sitemap: "npm:3.1.21"
+    next-transpile-modules: "patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch"
     npm-run-all: "npm:4.1.5"
     picocolors: "npm:1.0.0"
     pino: "npm:8.5.0"
