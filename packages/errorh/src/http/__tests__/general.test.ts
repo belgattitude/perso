@@ -5,7 +5,7 @@ describe('test', () => {
     expect(new HttpBadGateway()).toBeInstanceOf(Error);
     expect(new HttpBadGateway()).toBeInstanceOf(HttpBadGateway);
     expect(new HttpBadGateway().statusCode).toStrictEqual(502);
-    expect(new HttpBadGateway().message).toStrictEqual('Bad Gateway');
+    expect(new HttpBadGateway().message).toStrictEqual('Http Bad Gateway');
     expect(new HttpBadGateway().name).toStrictEqual('HttpBadGateway');
   });
 });
