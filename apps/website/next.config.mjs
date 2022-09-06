@@ -165,29 +165,24 @@ const nextConfig = {
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
-    domains: ['avatars.githubusercontent.com'],
-    path: '/_next/image',
-    loader: 'default',
-    disableStaticImages: false,
     minimumCacheTTL: 60,
     formats: ['image/webp'],
+    loader: 'default',
     dangerouslyAllowSVG: false,
+    disableStaticImages: false,
     contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
+    remotePatterns: [
+      {
+        protocol: 'https',
+        hostname: 'avatars.githubusercontent.com',
+      },
+    ],
+    unoptimized: false,
   },
 
   experimental: {
     browsersListForSwc: true,
     legacyBrowsers: false,
-    images: {
-      allowFutureImage: true,
-      remotePatterns: [
-        {
-          protocol: 'https',
-          hostname: 'avatars.githubusercontent.com',
-        },
-      ],
-      unoptimized: false,
-    },
 
     // @link https://nextjs.org/docs/advanced-features/output-file-tracing#caveats
     outputFileTracingRoot: undefined, // ,path.join(__dirname, '../../'),
