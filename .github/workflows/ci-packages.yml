@@ -83,27 +83,27 @@ jobs:
 
       - name: Typecheck
         run: |
-          yarn g:nx run-many --target=typecheck --all --exclude=website
+          yarn g:nx run-many --target=typecheck --all --exclude=website --parallel=2
 
       - name: Prettier checks
         run: |
-          yarn g:nx run-many --target=prettier-check --all --exclude=website
+          yarn g:nx run-many --target=prettier-check --all --exclude=website --parallel=2
 
       - name: Eslint checks
         run: |
-          yarn g:nx run-many --target=lint --all --exclude=website        
+          yarn g:nx run-many --target=lint --all --exclude=website  --parallel=2
 
       - name: Stylelint checks
         run: |
-          yarn g:nx run-many --target=lint-styles --all --exclude=website
+          yarn g:nx run-many --target=lint-styles --all --exclude=website --parallel=2
 
       - name: Unit tests changed packages
         run: |
-          yarn g:nx run-many --target=test-unit --all --exclude=website
+          yarn g:nx run-many --target=test-unit --all --exclude=website --parallel=2
 
       - name: Run build for changed packages
         run: |
-          yarn g:nx run-many --target=build --all --exclude=website
+          yarn g:nx run-many --target=build --all --exclude=website --parallel=2
 
       - name: Check build for size-limits
         run: |
