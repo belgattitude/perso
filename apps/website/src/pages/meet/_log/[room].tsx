@@ -1,5 +1,5 @@
+import { HttpBadRequest } from '@belgattitude/errorh';
 import { assertNonEmptyString } from '@belgattitude/ts-utils';
-import { BadRequest } from '@tsed/exceptions';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import type { ReactElement } from 'react';
 import { MeetLayout } from '@/features/meet/layouts/MeetLayout';
@@ -25,7 +25,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
 ) => {
   const { room = '' } = context.params ?? {};
   assertNonEmptyString(room, () => {
-    throw new BadRequest('Meeting slug is required');
+    throw new HttpBadRequest('Meeting slug is required');
   });
   return {
     props: {
