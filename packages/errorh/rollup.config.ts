@@ -1,12 +1,13 @@
+import { createRequire } from 'node:module';
 import { nodeResolve } from '@rollup/plugin-node-resolve';
 import dts from 'rollup-plugin-dts';
 import esbuild from 'rollup-plugin-esbuild';
-import pkg from './package.json';
+const require = createRequire(import.meta.url);
+
+const pkg = require('./package.json');
 
 const external = [
-  // @ts-ignore
-  ...Object.keys(pkg?.dependencies ?? {}),
-  // @ts-ignore
+  ...Object.keys(pkg.dependencies ?? {}),
   ...Object.keys(pkg?.peerDependencies ?? {}),
 ];
 
