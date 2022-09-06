@@ -50,6 +50,7 @@
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
   },
   "devDependencies": {
+    "@babel/preset-env": "7.19.0",
     "@belgattitude/crypto": "workspace:^",
     "@belgattitude/errorh": "workspace:^",
     "@belgattitude/eslint-config-bases": "workspace:^",
@@ -72,6 +73,7 @@
     "@tailwindcss/forms": "0.5.3",
     "@tailwindcss/line-clamp": "0.4.2",
     "@tailwindcss/typography": "0.5.7",
+    "@testing-library/dom": "8.17.1",
     "@testing-library/jest-dom": "5.16.5",
     "@testing-library/react": "13.4.0",
     "@testing-library/react-hooks": "8.0.1",
@@ -122,6 +124,7 @@
     "sync-directory": "5.1.7",
     "tailwindcss": "3.1.8",
     "ts-jest": "28.0.8",
+    "ts-node": "10.9.1",
     "typescript": "4.8.2",
     "vite": "3.1.0",
     "vite-plugin-svgr": "2.2.1",
