@@ -60,8 +60,6 @@ export const PostCard: FC<Props> = (props) => {
           bg-no-repeat
           transition-[background-size]
           duration-500
-          hover:bg-[length:100%_3px]
-          group-hover:bg-[length:100%_10px]
           dark:from-purple-800 dark:to-purple-900"
             >
               {data.title}

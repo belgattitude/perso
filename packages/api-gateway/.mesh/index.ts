@@ -10,6 +10,7 @@ import { fetch as fetchFn } from '@whatwg-node/fetch';
 import OpenapiHandler from "@graphql-mesh/openapi"
 import BareMerger from "@graphql-mesh/merger-bare";
 import { printWithCache } from '@graphql-mesh/utils';
+import { createMeshHTTPHandler } from '@graphql-mesh/http';
 import { getMesh, ExecuteMeshFn, SubscribeMeshFn, MeshContext as BaseMeshContext, MeshInstance } from '@graphql-mesh/runtime';
 import { MeshStore, FsStoreStorageAdapter } from '@graphql-mesh/store';
 import { path as pathModule } from '@graphql-mesh/cross-helpers';
@@ -290,6 +291,15 @@ const merger = new(BareMerger as any)({
     fetchFn,
   };
 }
+
+export function createBuiltMeshHTTPHandler() {
+  return createMeshHTTPHandler({
+    baseDir,
+    getBuiltMesh,
+    rawServeConfig: undefined,
+  })
+}
+
 
 let meshInstance$: Promise<MeshInstance<MeshContext>>;
 
