@@ -5,8 +5,9 @@ export default interface PrismaTypes {
         Shape: Company;
         Include: Prisma.CompanyInclude;
         Select: Prisma.CompanySelect;
-        Where: Prisma.CompanyWhereUniqueInput;
-        Fields: "Contact";
+        OrderBy: Prisma.CompanyOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.CompanyWhereUniqueInput;
+        Where: Prisma.CompanyWhereInput;
         RelationName: "Contact";
         ListRelations: "Contact";
         Relations: {
@@ -21,8 +22,9 @@ export default interface PrismaTypes {
         Shape: Contact;
         Include: Prisma.ContactInclude;
         Select: Prisma.ContactSelect;
-        Where: Prisma.ContactWhereUniqueInput;
-        Fields: "company" | "MeetingAttendees" | "MeetingReview";
+        OrderBy: Prisma.ContactOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.ContactWhereUniqueInput;
+        Where: Prisma.ContactWhereInput;
         RelationName: "company" | "MeetingAttendees" | "MeetingReview";
         ListRelations: "MeetingAttendees" | "MeetingReview";
         Relations: {
@@ -45,8 +47,9 @@ export default interface PrismaTypes {
         Shape: Project;
         Include: Prisma.ProjectInclude;
         Select: Prisma.ProjectSelect;
-        Where: Prisma.ProjectWhereUniqueInput;
-        Fields: "Meetings";
+        OrderBy: Prisma.ProjectOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.ProjectWhereUniqueInput;
+        Where: Prisma.ProjectWhereInput;
         RelationName: "Meetings";
         ListRelations: "Meetings";
         Relations: {
@@ -61,8 +64,9 @@ export default interface PrismaTypes {
         Shape: Meeting;
         Include: Prisma.MeetingInclude;
         Select: Prisma.MeetingSelect;
-        Where: Prisma.MeetingWhereUniqueInput;
-        Fields: "User" | "Project" | "MeetingReview" | "MeetingAttendees";
+        OrderBy: Prisma.MeetingOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.MeetingWhereUniqueInput;
+        Where: Prisma.MeetingWhereInput;
         RelationName: "User" | "Project" | "MeetingReview" | "MeetingAttendees";
         ListRelations: "MeetingReview" | "MeetingAttendees";
         Relations: {
@@ -89,8 +93,9 @@ export default interface PrismaTypes {
         Shape: MeetingReview;
         Include: Prisma.MeetingReviewInclude;
         Select: Prisma.MeetingReviewSelect;
-        Where: Prisma.MeetingReviewWhereUniqueInput;
-        Fields: "Meeting" | "Contact";
+        OrderBy: Prisma.MeetingReviewOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.MeetingReviewWhereUniqueInput;
+        Where: Prisma.MeetingReviewWhereInput;
         RelationName: "Meeting" | "Contact";
         ListRelations: never;
         Relations: {
@@ -109,8 +114,9 @@ export default interface PrismaTypes {
         Shape: MeetingAttendee;
         Include: Prisma.MeetingAttendeeInclude;
         Select: Prisma.MeetingAttendeeSelect;
-        Where: Prisma.MeetingAttendeeWhereUniqueInput;
-        Fields: "Meeting" | "Contact";
+        OrderBy: Prisma.MeetingAttendeeOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.MeetingAttendeeWhereUniqueInput;
+        Where: Prisma.MeetingAttendeeWhereInput;
         RelationName: "Meeting" | "Contact";
         ListRelations: never;
         Relations: {
@@ -129,8 +135,9 @@ export default interface PrismaTypes {
         Shape: Post;
         Include: Prisma.PostInclude;
         Select: Prisma.PostSelect;
-        Where: Prisma.PostWhereUniqueInput;
-        Fields: "author";
+        OrderBy: Prisma.PostOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.PostWhereUniqueInput;
+        Where: Prisma.PostWhereInput;
         RelationName: "author";
         ListRelations: never;
         Relations: {
@@ -145,8 +152,9 @@ export default interface PrismaTypes {
         Shape: User;
         Include: Prisma.UserInclude;
         Select: Prisma.UserSelect;
-        Where: Prisma.UserWhereUniqueInput;
-        Fields: "accounts" | "sessions" | "Post" | "Meeting";
+        OrderBy: Prisma.UserOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.UserWhereUniqueInput;
+        Where: Prisma.UserWhereInput;
         RelationName: "accounts" | "sessions" | "Post" | "Meeting";
         ListRelations: "accounts" | "sessions" | "Post" | "Meeting";
         Relations: {
@@ -173,8 +181,9 @@ export default interface PrismaTypes {
         Shape: Account;
         Include: Prisma.AccountInclude;
         Select: Prisma.AccountSelect;
-        Where: Prisma.AccountWhereUniqueInput;
-        Fields: "user";
+        OrderBy: Prisma.AccountOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.AccountWhereUniqueInput;
+        Where: Prisma.AccountWhereInput;
         RelationName: "user";
         ListRelations: never;
         Relations: {
@@ -189,8 +198,9 @@ export default interface PrismaTypes {
         Shape: Session;
         Include: Prisma.SessionInclude;
         Select: Prisma.SessionSelect;
-        Where: Prisma.SessionWhereUniqueInput;
-        Fields: "user";
+        OrderBy: Prisma.SessionOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.SessionWhereUniqueInput;
+        Where: Prisma.SessionWhereInput;
         RelationName: "user";
         ListRelations: never;
         Relations: {
@@ -205,8 +215,9 @@ export default interface PrismaTypes {
         Shape: VerificationToken;
         Include: never;
         Select: Prisma.VerificationTokenSelect;
-        Where: Prisma.VerificationTokenWhereUniqueInput;
-        Fields: never;
+        OrderBy: Prisma.VerificationTokenOrderByWithRelationAndSearchRelevanceInput;
+        WhereUnique: Prisma.VerificationTokenWhereUniqueInput;
+        Where: Prisma.VerificationTokenWhereInput;
         RelationName: never;
         ListRelations: never;
         Relations: {};

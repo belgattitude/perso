@@ -1,5 +1,7 @@
 import { withTRPC } from '@trpc/next';
-import type { NextPage } from 'next';
+import type { NextComponentType, NextPageContext } from 'next';
+import type { Session } from 'next-auth';
+import type { SSRConfig } from 'next-i18next';
 import { appWithTranslation } from 'next-i18next';
 import type { AppProps as NextAppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
@@ -13,16 +15,21 @@ import type { AppRouter } from './api/trpc/[...trpc]';
  */
 import '../styles/global.css';
 
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
+type NextPageWithLayout = NextComponentType<NextPageContext, any, any> & {
+  getLayout?: (page: ReactElement) => ReactNode;
+};
+
 // Workaround for https://github.com/zeit/next.js/issues/8592
-export type AppProps = NextAppProps & {
+export type AppProps = NextAppProps<
+  {
+    session?: Session;
+  } & SSRConfig
+> & {
   /** Will be defined only is there was an error */
   err?: Error;
 } & {
   Component: NextPageWithLayout;
-};
-
-type NextPageWithLayout = NextPage & {
-  getLayout?: (page: ReactElement) => ReactNode;
 };
 
 /**
@@ -42,5 +49,5 @@ const MyApp = (appProps: AppProps) => {
 };
 
 export default withTRPC<AppRouter>(getWithTrpcConfig())(
-  appWithTranslation(MyApp)
+  appWithTranslation<AppProps>(MyApp)
 );

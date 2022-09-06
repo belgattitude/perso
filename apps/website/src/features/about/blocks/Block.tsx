@@ -1,11 +1,10 @@
 import styled from '@emotion/styled';
-import type { FC, ReactNode } from 'react';
+import type { FC, PropsWithChildren } from 'react';
 import { breakpoints } from '@/features/about/config';
 
-type BlockProps = {
+type BlockProps = PropsWithChildren<{
   className?: string;
-  children: ReactNode;
-};
+}>;
 
 export const UnstyledBlock: FC<BlockProps> = (props) => {
   const { children, className } = props;

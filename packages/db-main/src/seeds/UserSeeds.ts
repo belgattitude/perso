@@ -1,6 +1,6 @@
 import { BcryptJsPasswordHasher } from '@belgattitude/crypto';
 import { UserPermissionRole } from '@prisma/client';
-import type { PrismaDbMain as Prisma } from '../../';
+import type { PrismaDbMain as Prisma } from '../';
 import { AbstractSeed } from '../lib/AbstractSeed';
 
 const passwordHasher = new BcryptJsPasswordHasher({ rounds: 12 });

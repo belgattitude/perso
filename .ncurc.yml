@@ -4,11 +4,6 @@
 
 # Add here exclusions on packages if any
 reject: [
-    # execa (6.0.0 is esm and does not work with ts-jest)
-    'execa',
-    # Too early cause in esm
-    'is-port-reachable',
-    # Still issues with vitest and vite 3
-    'vite',
-    '@vitejs/plugin-react'
+    # example execa
+    # 'execa',
   ]

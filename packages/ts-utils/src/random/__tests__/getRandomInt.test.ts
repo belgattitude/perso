@@ -7,13 +7,11 @@ describe('getRandomInt tests', () => {
   });
 
   it('should throw if not a number', () => {
-    expect(() => getRandomInt(NaN, 100)).toThrowError(/min/i);
-    expect(() => getRandomInt(10, {} as unknown as number)).toThrowError(
-      /max/i
-    );
+    expect(() => getRandomInt(NaN, 100)).toThrow(/min/i);
+    expect(() => getRandomInt(10, {} as unknown as number)).toThrow(/max/i);
   });
 
   it('should throw if min > max', () => {
-    expect(() => getRandomInt(100, 10)).toThrowError(/greater/i);
+    expect(() => getRandomInt(100, 10)).toThrow(/greater/i);
   });
 });

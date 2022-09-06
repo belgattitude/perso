@@ -4,7 +4,7 @@ import { DecryptError, WeakPasswordError } from '../exception';
 describe('AesCbcEncryptor tests', () => {
   describe('constructor', () => {
     it('should throw WeakPasswordError when empty password', () => {
-      expect(() => new AesCbcEncryptor('')).toThrowError(WeakPasswordError);
+      expect(() => new AesCbcEncryptor('')).toThrow(WeakPasswordError);
     });
   });
 

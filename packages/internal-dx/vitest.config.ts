@@ -11,6 +11,7 @@ export default defineConfig({
     passWithNoTests: false,
     include: testFiles,
     coverage: {
+      provider: 'istanbul',
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },

@@ -9,11 +9,21 @@ export default defineConfig({
     globals: true,
     environment: 'node',
     passWithNoTests: false,
-    include: testFiles,
-    // setupFiles: './config/tests/setupVitest.ts',
+    cache: {
+      dir: '../../.cache/vitest/failwell',
+    },
+    setupFiles: './config/test/setupVitest.ts',
     coverage: {
+      provider: 'istanbul',
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },
+    include: testFiles,
+    exclude: [
+      '**/node_modules/**',
+      'dist/**',
+      '**/coverage/**',
+      '**/.{idea,git,cache,output,temp}/**',
+    ],
   },
 });

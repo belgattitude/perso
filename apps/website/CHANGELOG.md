@@ -1,5 +1,12 @@
 # website
 
+## 1.0.5
+
+### Patch Changes
+
+- Updated dependencies [[`712ec31`](https://github.com/belgattitude/perso/commit/712ec31ebd116c38fa654a06f0220d4179b348af)]:
+  - @belgattitude/db-main@1.2.0
+
 ## 1.0.4
 
 ### Patch Changes

@@ -1,4 +1,4 @@
-import { BadRequest } from '@tsed/exceptions';
+import { HttpBadRequest } from '@belgattitude/errorh';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import type { ReactElement } from 'react';
@@ -17,7 +17,7 @@ ResumeRoute.getLayout = function getLayout(page: ReactElement) {
 export const getStaticProps: GetStaticProps<Props> = async (context) => {
   const { locale } = context;
   if (locale === undefined) {
-    throw new BadRequest('locale is missing');
+    throw new HttpBadRequest('locale is missing');
   }
   const { i18nNamespaces } = aboutConfig;
   return {

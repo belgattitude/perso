@@ -29,10 +29,20 @@ export default defineConfig({
     environment: 'happy-dom',
     passWithNoTests: false,
     setupFiles: './config/tests/setupVitest.ts',
-    include: testFiles,
+    cache: {
+      dir: '../../.cache/vitest/base-ui',
+    },
     coverage: {
+      provider: 'istanbul',
       reporter: ['text', 'clover'],
       extension: ['js', 'jsx', 'ts', 'tsx'],
     },
+    include: testFiles,
+    exclude: [
+      '**/node_modules/**',
+      'dist/**',
+      '**/coverage/**',
+      '**/.{idea,git,cache,output,temp}/**',
+    ],
   },
 });

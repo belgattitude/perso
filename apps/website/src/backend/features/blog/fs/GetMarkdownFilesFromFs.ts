@@ -1,9 +1,11 @@
 import { realpathSync } from 'fs';
 import { readFileSync } from 'node:fs';
+import { parseISO as parseISODate } from 'date-fns';
 import fg from 'fast-glob';
 import graymatter from 'gray-matter';
 import { match } from 'ts-pattern';
 import { z } from 'zod';
+import { createPostSlug } from '@/backend/features/blog/lib';
 
 interface IUseCase<C, R = unknown> {
   execute(command: C): Promise<R>;
@@ -17,7 +19,8 @@ export class GetMarkdownFilesFromFsCommand {
 }
 
 const dateSchema = z.preprocess((arg) => {
-  if (typeof arg == 'string' || arg instanceof Date) return new Date(arg);
+  if (typeof arg === 'string') return parseISODate(arg);
+  return arg;
 }, z.date());
 
 const blogFrontMatterSchema = z.object({
@@ -31,7 +34,7 @@ const blogFrontMatterSchema = z.object({
 
 type BlogFrontMatter = z.infer<typeof blogFrontMatterSchema>;
 
-type MarkdownFile = {
+export type MarkdownFile = {
   path: string;
   slug: string;
   data: BlogFrontMatter | Error;
@@ -74,7 +77,9 @@ export class GetMarkdownFilesFromFs
 
       files.push({
         path: relativeFile.toString(),
-        slug: 'hello',
+        slug: createPostSlug(
+          data instanceof Error ? relativeFile.toString() : data.title
+        ),
         data: data,
         content,
       });

@@ -1,5 +1,11 @@
 # @belgattitude/db-main
 
+## 1.2.0
+
+### Minor Changes
+
+- [#845](https://github.com/belgattitude/perso/pull/845) [`712ec31`](https://github.com/belgattitude/perso/commit/712ec31ebd116c38fa654a06f0220d4179b348af) Thanks [@belgattitude](https://github.com/belgattitude)! - Move to esm and use vitest for e2e
+
 ## 1.1.0
 
 ### Minor Changes
