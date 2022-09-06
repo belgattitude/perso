@@ -99,7 +99,7 @@ ENV NODE_ENV production
 
 RUN addgroup --system --gid 1001 nodejs && adduser --system --uid 1001 nextjs
 
-COPY --from=builder /app/apps/website/next.config.js \
+COPY --from=builder /app/apps/website/next.config.mjs \
                     /app/apps/website/next-i18next.config.js \
                     /app/apps/website/package.json \
                     ./apps/website/

@@ -21,7 +21,7 @@ module.exports = {
   },
   settings: {
     'import/parsers': {
-      '@typescript-eslint/parser': ['.ts', '.tsx', 'mts'],
+      '@typescript-eslint/parser': ['.ts', '.tsx', '.mts'],
     },
     'import/resolver': {
       typescript: {},
@@ -158,8 +158,8 @@ module.exports = {
   },
   overrides: [
     {
-      // commonjs or assumed
-      files: ['*.js', '*.cjs'],
+      // javascript commonjs or module
+      files: ['*.js', '*.cjs', '*.mjs'],
       parser: 'espree',
       parserOptions: {
         ecmaVersion: 2020,
@@ -172,7 +172,6 @@ module.exports = {
         '@typescript-eslint/explicit-module-boundary-types': 'off',
         '@typescript-eslint/consistent-type-exports': 'off',
         '@typescript-eslint/consistent-type-imports': 'off',
-        'import/order': 'off',
       },
     },
   ],
