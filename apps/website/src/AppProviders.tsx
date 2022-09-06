@@ -6,7 +6,7 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 const queryClient = new QueryClient({});
 
 type Props = PropsWithChildren<{
-  session: Session | null;
+  session?: Session | null;
 }>;
 
 export const AppProviders: FC<Props> = (props) => {
