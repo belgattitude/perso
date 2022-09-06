@@ -4,12 +4,6 @@
 
 import { init as sentryInit } from '@sentry/nextjs';
 
-function test(bool: boolean): <T>(config: T) => T | undefined {
-  return (config) => config;
-}
-
-const a = test(true)({ cool: 'hello' });
-
 sentryInit({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
 
