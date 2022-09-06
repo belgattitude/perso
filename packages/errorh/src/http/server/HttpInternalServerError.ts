@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpInternalServerError extends HttpException {
+export class HttpInternalServerError extends HttpServerException {
   static readonly STATUS = 500;
   static readonly REASON = 'Internal Server Error';
   constructor(params?: HttpErrorParams) {

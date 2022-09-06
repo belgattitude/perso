@@ -45,6 +45,8 @@ describe('HttpException', () => {
       });
     }
     expect(exception.cause).toStrictEqual(errorCause);
-    expect(exception.cause?.message).toStrictEqual('Origin error');
+    expect((exception.cause as unknown as Error).message).toStrictEqual(
+      'Origin error'
+    );
   });
 });

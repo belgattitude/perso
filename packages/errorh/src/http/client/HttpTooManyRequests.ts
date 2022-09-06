@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpTooManyRequests extends HttpException {
+export class HttpTooManyRequests extends HttpClientException {
   static readonly STATUS = 429;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpTooManyRequests.STATUS,
-    });
+  static readonly REASON = 'Too Many Requests';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpTooManyRequests.REASON, url, cause } = params ?? {};
+    const statusCode = HttpTooManyRequests.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpTooManyRequests.prototype);
     this.name = 'HttpTooManyRequests';
   }

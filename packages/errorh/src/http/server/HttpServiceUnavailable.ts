@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpServiceUnavailable extends HttpException {
+export class HttpServiceUnavailable extends HttpServerException {
   static readonly STATUS = 503;
   static readonly REASON = 'Service Unavailable';
   constructor(params?: HttpErrorParams) {

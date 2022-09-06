@@ -1,2 +1,2 @@
-export { isHttpException } from './isHttpError';
+export { isHttpException } from './isHttpException';
 export { isHttpStatusCode } from './isHttpStatusCode';

@@ -1,13 +1,17 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpRequestHeaderFieldsTooLarge extends HttpException {
+export class HttpRequestHeaderFieldsTooLarge extends HttpClientException {
   static readonly STATUS = 431;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpRequestHeaderFieldsTooLarge.STATUS,
-    });
+  static readonly REASON = 'Request Header Fields Too Large';
+  constructor(params?: HttpErrorParams) {
+    const {
+      message = HttpRequestHeaderFieldsTooLarge.REASON,
+      url,
+      cause,
+    } = params ?? {};
+    const statusCode = HttpRequestHeaderFieldsTooLarge.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpRequestHeaderFieldsTooLarge.prototype);
     this.name = 'HttpRequestHeaderFieldsTooLarge';
   }

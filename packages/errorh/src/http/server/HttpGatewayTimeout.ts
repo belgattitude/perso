@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpGatewayTimeout extends HttpException {
+export class HttpGatewayTimeout extends HttpServerException {
   static readonly STATUS = 504;
   static readonly REASON = 'Gateway Timeout';
   constructor(params?: HttpErrorParams) {

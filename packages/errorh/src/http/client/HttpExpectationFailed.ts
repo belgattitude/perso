@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpExpectationFailed extends HttpException {
+export class HttpExpectationFailed extends HttpClientException {
   static readonly STATUS = 417;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpExpectationFailed.STATUS,
-    });
+  static readonly REASON = 'Expectation Failed';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpExpectationFailed.REASON, url, cause } = params ?? {};
+    const statusCode = HttpExpectationFailed.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpExpectationFailed.prototype);
     this.name = 'HttpExpectationFailed';
   }

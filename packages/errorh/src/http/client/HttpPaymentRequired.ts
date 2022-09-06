@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpPaymentRequired extends HttpException {
+export class HttpPaymentRequired extends HttpClientException {
   static readonly STATUS = 402;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpPaymentRequired.STATUS,
-    });
+  static readonly REASON = 'Payment Required';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpPaymentRequired.REASON, url, cause } = params ?? {};
+    const statusCode = HttpPaymentRequired.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpPaymentRequired.prototype);
     this.name = 'HttpPaymentRequired';
   }

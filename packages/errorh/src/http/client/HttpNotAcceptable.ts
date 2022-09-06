@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpNotAcceptable extends HttpException {
+export class HttpNotAcceptable extends HttpClientException {
   static readonly STATUS = 406;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpNotAcceptable.STATUS,
-    });
+  static readonly REASON = 'Not Acceptable';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpNotAcceptable.REASON, url, cause } = params ?? {};
+    const statusCode = HttpNotAcceptable.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpNotAcceptable.prototype);
     this.name = 'HttpNotAcceptable';
   }

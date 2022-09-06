@@ -3,7 +3,9 @@ import { isHttpException } from '../isHttpException';
 
 describe('isHttpException', () => {
   it('should return true if error is instance of HttpError', () => {
-    const error = new HttpBadRequest('Bad request');
+    const error = new HttpBadRequest({
+      message: 'Bad request',
+    });
     expect(isHttpException(error)).toBe(true);
   });
 

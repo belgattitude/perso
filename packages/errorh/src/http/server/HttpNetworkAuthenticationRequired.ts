@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpNetworkAuthenticationRequired extends HttpException {
+export class HttpNetworkAuthenticationRequired extends HttpServerException {
   static readonly STATUS = 511;
   static readonly REASON = 'Network Authentication Required';
   constructor(params?: HttpErrorParams) {

@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpNotFound extends HttpException {
+export class HttpNotFound extends HttpClientException {
   static readonly STATUS = 404;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpNotFound.STATUS,
-    });
+  static readonly REASON = 'Not Found';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpNotFound.REASON, url, cause } = params ?? {};
+    const statusCode = HttpNotFound.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpNotFound.prototype);
     this.name = 'HttpNotFound';
   }

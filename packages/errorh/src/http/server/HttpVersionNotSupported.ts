@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpVersionNotSupported extends HttpException {
+export class HttpVersionNotSupported extends HttpServerException {
   static readonly STATUS = 505;
   static readonly REASON = 'Http Version Not Supported';
   constructor(params?: HttpErrorParams) {

@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpBandwidthLimitExceeded extends HttpException {
+export class HttpBandwidthLimitExceeded extends HttpServerException {
   static readonly STATUS = 509;
   static readonly REASON = 'Bandwidth Limit Exceeded';
   constructor(params?: HttpErrorParams) {

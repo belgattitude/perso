@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpBadRequest extends HttpException {
+export class HttpBadRequest extends HttpClientException {
   static readonly STATUS = 400;
-  constructor(message?: string, options?: HttpErrorOptions) {
-    super(message ?? 'Bad Request', {
-      cause: options?.cause,
-      statusCode: HttpBadRequest.STATUS,
-    });
+  static readonly REASON = 'Bad Request';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpBadRequest.REASON, url, cause } = params ?? {};
+    const statusCode = HttpBadRequest.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpBadRequest.prototype);
     this.name = 'HttpBadRequest';
   }

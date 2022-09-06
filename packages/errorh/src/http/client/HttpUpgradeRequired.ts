@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpUpgradeRequired extends HttpException {
+export class HttpUpgradeRequired extends HttpClientException {
   static readonly STATUS = 426;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpUpgradeRequired.STATUS,
-    });
+  static readonly REASON = 'Upgrade Required';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpUpgradeRequired.REASON, url, cause } = params ?? {};
+    const statusCode = HttpUpgradeRequired.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpUpgradeRequired.prototype);
     this.name = 'HttpUpgradeRequired';
   }

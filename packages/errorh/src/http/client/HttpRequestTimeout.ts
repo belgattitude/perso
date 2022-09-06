@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpRequestTimeout extends HttpException {
+export class HttpRequestTimeout extends HttpClientException {
   static readonly STATUS = 408;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpRequestTimeout.STATUS,
-    });
+  static readonly REASON = 'Request Timeout';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpRequestTimeout.REASON, url, cause } = params ?? {};
+    const statusCode = HttpRequestTimeout.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpRequestTimeout.prototype);
     this.name = 'HttpRequestTimeout';
   }

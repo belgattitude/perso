@@ -1,14 +1,15 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpPayloadTooLarge extends HttpException {
+export class HttpPayloadTooLarge extends HttpClientException {
   static readonly STATUS = 413;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpPayloadTooLarge.STATUS,
-    });
+  static readonly REASON = 'Payload Too Large';
+  constructor(params?: HttpErrorParams) {
+    const { message = HttpPayloadTooLarge.REASON, url, cause } = params ?? {};
+    const statusCode = HttpPayloadTooLarge.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpPayloadTooLarge.prototype);
-    this.name = 'HttpEntityTooLarge';
+
+    this.name = 'HttpPayloadTooLarge';
   }
 }

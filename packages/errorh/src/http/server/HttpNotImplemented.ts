@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpNotImplemented extends HttpException {
+export class HttpNotImplemented extends HttpServerException {
   static readonly STATUS = 501;
   static readonly REASON = 'Not Implemented';
   constructor(params?: HttpErrorParams) {

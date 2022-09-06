@@ -1,7 +1,7 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
-export class HttpBadGateway extends HttpException {
+export class HttpBadGateway extends HttpServerException {
   static readonly STATUS = 502;
   static readonly REASON = 'Bad Gateway';
   constructor(params?: HttpErrorParams) {

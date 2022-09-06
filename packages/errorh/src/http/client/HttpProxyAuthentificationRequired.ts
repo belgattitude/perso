@@ -1,13 +1,17 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpException } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import { HttpErrorParams } from '../types';
 
-export class HttpProxyAuthentificationRequired extends HttpException {
+export class HttpProxyAuthentificationRequired extends HttpClientException {
   static readonly STATUS = 407;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpProxyAuthentificationRequired.STATUS,
-    });
+  static readonly REASON = 'Proxy Authentification Required';
+  constructor(params?: HttpErrorParams) {
+    const {
+      message = HttpProxyAuthentificationRequired.REASON,
+      url,
+      cause,
+    } = params ?? {};
+    const statusCode = HttpProxyAuthentificationRequired.STATUS;
+    super({ message, statusCode, url, cause });
     Object.setPrototypeOf(this, HttpProxyAuthentificationRequired.prototype);
     this.name = 'HttpProxyAuthentificationRequired';
   }

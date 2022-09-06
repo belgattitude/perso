@@ -1,10 +1,10 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
 /**
  * LoopDetected is specific to webdav.
  */
-export class HttpLoopDetected extends HttpException {
+export class HttpLoopDetected extends HttpServerException {
   static readonly STATUS = 508;
   static readonly REASON = 'Loop Detected';
   constructor(params?: HttpErrorParams) {

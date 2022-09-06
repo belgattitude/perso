@@ -1,10 +1,10 @@
-import { HttpException } from '../base';
+import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
 
 /**
  * InsufficientStorage is specific to webdav.
  */
-export class HttpInsufficientStorage extends HttpException {
+export class HttpInsufficientStorage extends HttpServerException {
   static readonly STATUS = 507;
   static readonly REASON = 'Insufficient Storage';
   constructor(params?: HttpErrorParams) {
