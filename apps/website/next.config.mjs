@@ -9,7 +9,7 @@ import { createSecureHeaders } from 'next-secure-headers';
 import withNextTranspileModules from 'next-transpile-modules';
 import pc from 'picocolors';
 import nextI18nConfig from './next-i18next.config.js';
-import packageJson from './package.json' assert { type: 'json' };
+import packageJson from './package.json'; //  assert { type: 'json' };
 
 const trueEnv = ['true', '1', 'yes'];
 

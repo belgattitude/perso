@@ -49,6 +49,7 @@ export const PostCard: FC<Props> = (props) => {
             <img
               loading={preloadImage ? 'eager' : 'lazy'}
               src={img}
+              alt={'poster'}
               className="transition-all"
             />
           </a>
@@ -77,7 +78,12 @@ export const PostCard: FC<Props> = (props) => {
           <div className="flex items-center gap-3">
             <div className="relative h-5 w-5 shrink-0">
               {/** author image */}
-              <img loading={'lazy'} src={img} className="transition-all" />
+              <img
+                loading={'lazy'}
+                alt="Img"
+                src={img}
+                className="transition-all"
+              />
             </div>
             <span className="text-sm">{data.author}</span>
           </div>

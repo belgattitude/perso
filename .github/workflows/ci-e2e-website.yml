@@ -55,25 +55,13 @@ jobs:
     steps:
       - uses: actions/checkout@v3
 
+      - uses: pnpm/action-setup@v2.2.2
+
       - name: Use Node.js ${{ matrix.node-version }}
         uses: actions/setup-node@v3
         with:
           node-version: ${{ matrix.node-version }}
-
-      # Why not using setup-node 2.2+ cache option (yet) ?
-      # see https://github.com/belgattitude/nextjs-monorepo-example/pull/369
-      - name: Get yarn cache directory path
-        id: yarn-cache-dir-path
-        run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
-
-      - name: Restore yarn cache
-        uses: actions/cache@v3
-        id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
-        with:
-          path: ${{ steps.yarn-cache-dir-path.outputs.dir }}
-          key: yarn-cache-folder-${{ hashFiles('**/yarn.lock', '.yarnrc.yml') }}
-          restore-keys: |
-            yarn-cache-folder-
+          cache: 'pnpm'
 
       # see https://github.com/vercel/next.js/pull/27362
       - name: Restore nextjs build website from cache
@@ -94,7 +82,7 @@ jobs:
 
       - name: Install dependencies
         run: |
-          yarn install --immutable --inline-builds
+          pnpm install
         env:
           PRISMA_SKIP_POSTINSTALL_GENERATE: true
           PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
@@ -103,15 +91,15 @@ jobs:
       - name: Create and seed test database
         working-directory: packages/db-main
         run: |
-          yarn prisma db push
-          yarn prisma db seed
+          pnpm prisma db push
+          pnpm prisma db seed
         env:
           PRISMA_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/webapp-e2e?schema=public
 
       - name: Build website
         working-directory: apps/website
         run: |
-          yarn build
+          pnpm run build
         env:
           PRISMA_DATABASE_URL: postgresql://postgres:postgres@localhost:5432/webapp-e2e?schema=public
           # Don't need to lint / typecheck for e2e, they're done in another workflow
@@ -157,16 +145,16 @@ jobs:
           echo "Cache hit: ${{ steps.playwright-cache.outputs.cache-hit == 'true' }}"
 
       - name: Install Playwright OS deps
-        run: yarn playwright install-deps
+        run: pnpm playwright install-deps
 
       - name: Install Playwright Browsers
         if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: yarn playwright install chromium webkit
+        run: pnpm playwright install chromium webkit
 
       - name: E2E run website playwright tests
         working-directory: apps/website
         run: |
-          xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- yarn test-e2e
+          xvfb-run --auto-servernum --server-args="-screen 0 1280x960x24" -- pnpm run test-e2e
         env:
           E2E_WEBSERVER_MODE: START
           CI: 1
