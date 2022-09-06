@@ -2,13 +2,14 @@
 
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
+import withBundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
 
-import pc from 'picocolors';
-import packageJson from './package.json' assert { type: 'json' };
-import nextI18nConfig from './next-i18next.config.js';
+import { createSecureHeaders } from 'next-secure-headers';
 import withNextTranspileModules from 'next-transpile-modules';
-import withBundleAnalyzer from '@next/bundle-analyzer';
+import pc from 'picocolors';
+import nextI18nConfig from './next-i18next.config.js';
+import packageJson from './package.json' assert { type: 'json' };
 
 const trueEnv = ['true', '1', 'yes'];
 
@@ -74,7 +75,6 @@ const tmModules = [
 ];
 
 // @link https://github.com/jagaapple/next-secure-headers
-import { createSecureHeaders } from 'next-secure-headers';
 const secureHeaders = createSecureHeaders({
   contentSecurityPolicy: {
     directives: enableCSP

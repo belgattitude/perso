@@ -1,12 +1,12 @@
 // @ts-check
 
-const { defaults: tsPreset } = require('ts-jest/presets');
+const { getTsconfig } = require('get-tsconfig');
 const { pathsToModuleNameMapper } = require('ts-jest');
+const { defaults: tsPreset } = require('ts-jest/presets');
 
 const { getJestCachePath } = require('../../cache.config');
 
 const packageJson = require('./package.json');
-const { getTsconfig } = require('get-tsconfig');
 
 const tsConfigFile = './tsconfig.jest.json';
 
