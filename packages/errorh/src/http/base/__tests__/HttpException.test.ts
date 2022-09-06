@@ -30,7 +30,7 @@ describe('HttpException', () => {
     });
     expect(() => {
       throw exception;
-    }).toThrowError(HttpException);
+    }).toThrow(HttpException);
   });
   it('should support sending a cause', () => {
     let exception: HttpException;

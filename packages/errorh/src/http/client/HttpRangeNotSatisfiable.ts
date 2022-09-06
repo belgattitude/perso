@@ -1,18 +1,14 @@
 import { HttpClientException } from '../base';
-import { HttpErrorParams } from '../types';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpRangeNotSatisfiable';
 
 export class HttpRangeNotSatisfiable extends HttpClientException {
   static readonly STATUS = 416;
-  static readonly REASON = 'Range Not Satisfiable';
-  constructor(params?: HttpErrorParams) {
-    const {
-      message = HttpRangeNotSatisfiable.REASON,
-      url,
-      cause,
-    } = params ?? {};
-    const statusCode = HttpRangeNotSatisfiable.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 416, params));
     Object.setPrototypeOf(this, HttpRangeNotSatisfiable.prototype);
-    this.name = 'HttpRangeNotSatisfiable';
+    this.name = className;
   }
 }

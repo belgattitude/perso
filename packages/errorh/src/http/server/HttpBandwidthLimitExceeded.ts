@@ -1,18 +1,14 @@
 import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpBandwidthLimitExceeded';
 
 export class HttpBandwidthLimitExceeded extends HttpServerException {
   static readonly STATUS = 509;
-  static readonly REASON = 'Bandwidth Limit Exceeded';
-  constructor(params?: HttpErrorParams) {
-    const {
-      message = HttpBandwidthLimitExceeded.REASON,
-      url,
-      cause,
-    } = params ?? {};
-    const statusCode = HttpBandwidthLimitExceeded.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 509, params));
     Object.setPrototypeOf(this, HttpBandwidthLimitExceeded.prototype);
-    this.name = 'HttpBandwidthLimitExceeded';
+    this.name = className;
   }
 }

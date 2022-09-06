@@ -1,14 +1,14 @@
 import { HttpClientException } from '../base';
-import { HttpErrorParams } from '../types';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpExpectationFailed';
 
 export class HttpExpectationFailed extends HttpClientException {
   static readonly STATUS = 417;
-  static readonly REASON = 'Expectation Failed';
-  constructor(params?: HttpErrorParams) {
-    const { message = HttpExpectationFailed.REASON, url, cause } = params ?? {};
-    const statusCode = HttpExpectationFailed.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 417, params));
     Object.setPrototypeOf(this, HttpExpectationFailed.prototype);
-    this.name = 'HttpExpectationFailed';
+    this.name = className;
   }
 }

@@ -1,14 +1,14 @@
 import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpGone';
 
 export class HttpGone extends HttpServerException {
   static readonly STATUS = 410;
-  static readonly REASON = 'Gone';
-  constructor(params?: HttpErrorParams) {
-    const { message = HttpGone.REASON, url, cause } = params ?? {};
-    const statusCode = HttpGone.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 410, params));
     Object.setPrototypeOf(this, HttpGone.prototype);
-    this.name = 'HttpGone';
+    this.name = className;
   }
 }

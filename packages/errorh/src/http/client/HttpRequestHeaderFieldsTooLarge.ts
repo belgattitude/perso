@@ -1,18 +1,14 @@
 import { HttpClientException } from '../base';
-import { HttpErrorParams } from '../types';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpRequestHeaderFieldsTooLarge';
 
 export class HttpRequestHeaderFieldsTooLarge extends HttpClientException {
   static readonly STATUS = 431;
-  static readonly REASON = 'Request Header Fields Too Large';
-  constructor(params?: HttpErrorParams) {
-    const {
-      message = HttpRequestHeaderFieldsTooLarge.REASON,
-      url,
-      cause,
-    } = params ?? {};
-    const statusCode = HttpRequestHeaderFieldsTooLarge.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 431, params));
     Object.setPrototypeOf(this, HttpRequestHeaderFieldsTooLarge.prototype);
-    this.name = 'HttpRequestHeaderFieldsTooLarge';
+    this.name = className;
   }
 }

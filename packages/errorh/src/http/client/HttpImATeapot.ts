@@ -1,13 +1,13 @@
 import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpImATeapot';
 
 export class HttpImATeapot extends HttpServerException {
   static readonly STATUS = 418;
-  static readonly REASON = 'Im A Teapot';
-  constructor(params?: HttpErrorParams) {
-    const { message = HttpImATeapot.REASON, url, cause } = params ?? {};
-    const statusCode = HttpImATeapot.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 418, params));
     Object.setPrototypeOf(this, HttpImATeapot.prototype);
     this.name = 'HttpImATeapot';
   }

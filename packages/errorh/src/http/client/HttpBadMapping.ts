@@ -1,14 +1,14 @@
 import { HttpClientException } from '../base';
-import { HttpErrorParams } from '../types';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpBadMapping';
 
 export class HttpBadMapping extends HttpClientException {
   static readonly STATUS = 421;
-  static readonly REASON = 'Bad Mapping';
-  constructor(params?: HttpErrorParams) {
-    const { message = HttpBadMapping.REASON, url, cause } = params ?? {};
-    const statusCode = HttpBadMapping.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 421, params));
     Object.setPrototypeOf(this, HttpBadMapping.prototype);
-    this.name = 'HttpBadMapping';
+    this.name = className;
   }
 }

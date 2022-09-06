@@ -1,14 +1,14 @@
 import { HttpClientException } from '../base';
-import { HttpErrorParams } from '../types';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpPaymentRequired';
 
 export class HttpPaymentRequired extends HttpClientException {
   static readonly STATUS = 402;
-  static readonly REASON = 'Payment Required';
-  constructor(params?: HttpErrorParams) {
-    const { message = HttpPaymentRequired.REASON, url, cause } = params ?? {};
-    const statusCode = HttpPaymentRequired.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 402, params));
     Object.setPrototypeOf(this, HttpPaymentRequired.prototype);
-    this.name = 'HttpPaymentRequired';
+    this.name = className;
   }
 }

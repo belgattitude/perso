@@ -1,14 +1,14 @@
 import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpMethodNotAllowed';
 
 export class HttpMethodNotAllowed extends HttpServerException {
   static readonly STATUS = 405;
-  static readonly REASON = 'Method Not Allowed';
-  constructor(params?: HttpErrorParams) {
-    const { message = HttpMethodNotAllowed.REASON, url, cause } = params ?? {};
-    const statusCode = HttpMethodNotAllowed.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 405, params));
     Object.setPrototypeOf(this, HttpMethodNotAllowed.prototype);
-    this.name = 'HttpMethodNotAllowed';
+    this.name = className;
   }
 }

@@ -1,18 +1,14 @@
 import { HttpClientException } from '../base';
-import { HttpErrorParams } from '../types';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpUnprocessableEntity';
 
 export class HttpUnprocessableEntity extends HttpClientException {
   static readonly STATUS = 422;
-  static readonly REASON = 'Unprocessable Entity';
-  constructor(params?: HttpErrorParams) {
-    const {
-      message = HttpUnprocessableEntity.REASON,
-      url,
-      cause,
-    } = params ?? {};
-    const statusCode = HttpUnprocessableEntity.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 422, params));
     Object.setPrototypeOf(this, HttpUnprocessableEntity.prototype);
-    this.name = 'HttpUnprocessableEntity';
+    this.name = className;
   }
 }

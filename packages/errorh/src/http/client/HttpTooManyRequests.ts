@@ -1,14 +1,14 @@
 import { HttpClientException } from '../base';
-import { HttpErrorParams } from '../types';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
+
+const className = 'HttpTooManyRequests';
 
 export class HttpTooManyRequests extends HttpClientException {
   static readonly STATUS = 429;
-  static readonly REASON = 'Too Many Requests';
-  constructor(params?: HttpErrorParams) {
-    const { message = HttpTooManyRequests.REASON, url, cause } = params ?? {};
-    const statusCode = HttpTooManyRequests.STATUS;
-    super({ message, statusCode, url, cause });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 429, params));
     Object.setPrototypeOf(this, HttpTooManyRequests.prototype);
-    this.name = 'HttpTooManyRequests';
+    this.name = className;
   }
 }
