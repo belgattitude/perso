@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpGatewayTimeout extends HttpError {
+const className = 'HttpGatewayTimeout';
+
+export class HttpGatewayTimeout extends HttpServerException {
   static readonly STATUS = 504;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpGatewayTimeout.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 504, params));
     Object.setPrototypeOf(this, HttpGatewayTimeout.prototype);
-    this.name = 'HttpGatewayTimeout';
+    this.name = className;
   }
 }

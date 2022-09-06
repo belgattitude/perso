@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpUpgradeRequired extends HttpError {
+const className = 'HttpUpgradeRequired';
+
+export class HttpUpgradeRequired extends HttpClientException {
   static readonly STATUS = 426;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpUpgradeRequired.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 426, params));
     Object.setPrototypeOf(this, HttpUpgradeRequired.prototype);
-    this.name = 'HttpUpgradeRequired';
+    this.name = className;
   }
 }

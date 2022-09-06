@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpRangeNotSatisfiable extends HttpError {
+const className = 'HttpRangeNotSatisfiable';
+
+export class HttpRangeNotSatisfiable extends HttpClientException {
   static readonly STATUS = 416;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpRangeNotSatisfiable.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 416, params));
     Object.setPrototypeOf(this, HttpRangeNotSatisfiable.prototype);
-    this.name = 'HttpRangeNotSatisfiable';
+    this.name = className;
   }
 }

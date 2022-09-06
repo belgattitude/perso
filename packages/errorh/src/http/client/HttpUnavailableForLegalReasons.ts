@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpUnavailableForLegalReasons extends HttpError {
+const className = 'HttpUnavailableForLegalReasons';
+
+export class HttpUnavailableForLegalReasons extends HttpClientException {
   static readonly STATUS = 451;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpUnavailableForLegalReasons.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 451, params));
     Object.setPrototypeOf(this, HttpUnavailableForLegalReasons.prototype);
-    this.name = 'HttpUnavailableForLegalReasons';
+    this.name = className;
   }
 }

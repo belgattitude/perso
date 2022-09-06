@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpUnauthorized extends HttpError {
+const className = 'HttpUnauthorized';
+
+export class HttpUnauthorized extends HttpClientException {
   static readonly STATUS = 401;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpUnauthorized.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 401, params));
     Object.setPrototypeOf(this, HttpUnauthorized.prototype);
-    this.name = 'HttpUnauthorized';
+    this.name = className;
   }
 }

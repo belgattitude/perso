@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpVariantAlsoNegociates extends HttpError {
+const className = 'HttpVariantAlsoNegociates';
+
+export class HttpVariantAlsoNegociates extends HttpServerException {
   static readonly STATUS = 506;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpVariantAlsoNegociates.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 506, params));
     Object.setPrototypeOf(this, HttpVariantAlsoNegociates.prototype);
-    this.name = 'HttpVariantAlsoNegociates';
+    this.name = className;
   }
 }
