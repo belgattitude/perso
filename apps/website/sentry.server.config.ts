@@ -7,11 +7,16 @@ import { init as sentryInit } from '@sentry/nextjs';
 sentryInit({
   dsn: process.env.NEXT_PUBLIC_SENTRY_DSN,
 
-  // Adjust this value in production, or use tracesSampler for greater control
+  // Adjust the tracesSampleRate value in production, or use tracesSampler for greater control
   // @see https://develop.sentry.dev/sdk/performance/
-  // To turn it off, remove the line
+  // Don't add tracesSampleRate to avoid 30kb (gzip) js in the client bundle (staring nextjs 12).
   // @see https://github.com/getsentry/sentry-javascript/discussions/4503#discussioncomment-2143116
-  tracesSampleRate: 0.05,
+  tracesSampleRate: ['true', '1'].includes(
+    process.env.NEXTJS_SENTRY_TRACING ?? ''
+  )
+    ? 0.005
+    : undefined,
+
   // ...
   // Note: if you want to override the automatic release value, do not set a
   // `release` value here - use the environment variable `SENTRY_RELEASE`, so

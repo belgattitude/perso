@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpForbidden extends HttpError {
+const className = 'HttpForbidden';
+
+export class HttpForbidden extends HttpClientException {
   static readonly STATUS = 403;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpForbidden.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 403, params));
     Object.setPrototypeOf(this, HttpForbidden.prototype);
-    this.name = 'HttpForbidden';
+    this.name = className;
   }
 }

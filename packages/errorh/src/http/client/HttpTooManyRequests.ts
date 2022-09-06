@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpTooManyRequests extends HttpError {
+const className = 'HttpTooManyRequests';
+
+export class HttpTooManyRequests extends HttpClientException {
   static readonly STATUS = 429;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpTooManyRequests.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 429, params));
     Object.setPrototypeOf(this, HttpTooManyRequests.prototype);
-    this.name = 'HttpTooManyRequests';
+    this.name = className;
   }
 }

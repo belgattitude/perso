@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpPreconditionFailed extends HttpError {
+const className = 'HttpPreconditionFailed';
+
+export class HttpPreconditionFailed extends HttpClientException {
   static readonly STATUS = 412;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpPreconditionFailed.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 412, params));
     Object.setPrototypeOf(this, HttpPreconditionFailed.prototype);
-    this.name = 'HttpPreconditionFailed';
+    this.name = className;
   }
 }

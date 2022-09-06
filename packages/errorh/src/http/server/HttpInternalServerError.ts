@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpInternalServerError extends HttpError {
+const className = 'HttpInternalServerError';
+
+export class HttpInternalServerError extends HttpServerException {
   static readonly STATUS = 500;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpInternalServerError.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 500, params));
     Object.setPrototypeOf(this, HttpInternalServerError.prototype);
-    this.name = 'HttpInternalServerError';
+    this.name = className;
   }
 }

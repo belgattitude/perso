@@ -3,10 +3,11 @@
   "extends": "./tsconfig.json",
   "compilerOptions": {
     "baseUrl": "./src",
-    "target": "ESNext",
+    "target": "es2017",
     "module": "ESNext",
     "declarationDir": "./dist",
     "incremental": true,
+    "sourceMap": false,
     "tsBuildInfoFile": "./tsconfig.build.tsbuildinfo" // for tsup rollup dts tsBuildInfoFile is required when using incremental
   },
   "exclude": ["dist", "**/__tests__/*"]

@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpUriTooLong extends HttpError {
+const className = 'HttpUriTooLong';
+
+export class HttpUriTooLong extends HttpClientException {
   static readonly STATUS = 414;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpUriTooLong.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 414, params));
     Object.setPrototypeOf(this, HttpUriTooLong.prototype);
-    this.name = 'HttpUriTooLong';
+    this.name = className;
   }
 }

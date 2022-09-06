@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpNetworkAuthenticationRequired extends HttpError {
+const className = 'HttpNetworkAuthenticationRequired';
+
+export class HttpNetworkAuthenticationRequired extends HttpServerException {
   static readonly STATUS = 511;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpNetworkAuthenticationRequired.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 511, params));
     Object.setPrototypeOf(this, HttpNetworkAuthenticationRequired.prototype);
-    this.name = 'HttpNetworkAuthenticationRequired';
+    this.name = className;
   }
 }

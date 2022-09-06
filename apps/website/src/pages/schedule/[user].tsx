@@ -1,5 +1,5 @@
+import { HttpBadRequest } from '@belgattitude/errorh';
 import { assertNonEmptyString } from '@belgattitude/ts-utils';
-import { BadRequest } from '@tsed/exceptions';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import type { HubspotContact } from '@/features/meet/api/hubspot/getHubspotContacts';
 import { getHubspotContacts } from '@/features/meet/api/hubspot/getHubspotContacts';
@@ -27,7 +27,7 @@ export const getServerSideProps: GetServerSideProps<Props> = async (
 ) => {
   const { user = '' } = context.params ?? {};
   assertNonEmptyString(user, () => {
-    throw new BadRequest('User slug is required');
+    throw new HttpBadRequest('User slug is required');
   });
 
   const contacts = await getHubspotContacts();

@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpNotExtended extends HttpError {
+const className = 'HttpNotExtended';
+
+export class HttpNotExtended extends HttpServerException {
   static readonly STATUS = 510;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpNotExtended.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 510, params));
     Object.setPrototypeOf(this, HttpNotExtended.prototype);
-    this.name = 'HttpNotExtended';
+    this.name = className;
   }
 }

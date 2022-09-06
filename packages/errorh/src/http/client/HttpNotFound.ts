@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpClientException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpNotFound extends HttpError {
+const className = 'HttpNotFound';
+
+export class HttpNotFound extends HttpClientException {
   static readonly STATUS = 404;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpNotFound.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 404, params));
     Object.setPrototypeOf(this, HttpNotFound.prototype);
-    this.name = 'HttpNotFound';
+    this.name = className;
   }
 }

@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpBadGateway extends HttpError {
+const className = 'HttpBadGateway';
+
+export class HttpBadGateway extends HttpServerException {
   static readonly STATUS = 502;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpBadGateway.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 502, params));
     Object.setPrototypeOf(this, HttpBadGateway.prototype);
-    this.name = 'HttpBadGateway';
+    this.name = className;
   }
 }

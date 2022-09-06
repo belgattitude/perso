@@ -1,13 +1,13 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpImATeapot extends HttpError {
+const className = 'HttpImATeapot';
+
+export class HttpImATeapot extends HttpServerException {
   static readonly STATUS = 418;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpImATeapot.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 418, params));
     Object.setPrototypeOf(this, HttpImATeapot.prototype);
     this.name = 'HttpImATeapot';
   }

@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpServiceUnavailable extends HttpError {
+const className = 'HttpServiceUnavailable';
+
+export class HttpServiceUnavailable extends HttpServerException {
   static readonly STATUS = 503;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpServiceUnavailable.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 503, params));
     Object.setPrototypeOf(this, HttpServiceUnavailable.prototype);
-    this.name = 'HttpServiceUnavailable';
+    this.name = className;
   }
 }

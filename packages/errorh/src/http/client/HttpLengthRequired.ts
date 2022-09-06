@@ -1,14 +1,14 @@
-import type { HttpErrorOptions } from '../base/HttpError';
-import { HttpError } from '../base/HttpError';
+import { HttpServerException } from '../base';
+import type { HttpErrorParams } from '../types';
+import { getSuperParams } from '../utils';
 
-export class HttpLengthRequired extends HttpError {
+const className = 'HttpLengthRequired';
+
+export class HttpLengthRequired extends HttpServerException {
   static readonly STATUS = 411;
-  constructor(message: string, options?: HttpErrorOptions) {
-    super(message, {
-      cause: options?.cause,
-      statusCode: HttpLengthRequired.STATUS,
-    });
+  constructor(params?: HttpErrorParams | string) {
+    super(getSuperParams(className, 411, params));
     Object.setPrototypeOf(this, HttpLengthRequired.prototype);
-    this.name = 'HttpLengthRequired';
+    this.name = className;
   }
 }
