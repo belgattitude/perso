@@ -25,8 +25,7 @@
     "./package.json": "./package.json"
   },
   "scripts": {
-    "build": "rollup -c rollup.config.ts",
-    "dev": "tsup --watch",
+    "build": "rollup -c rollup.config.js",
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
     "build-doc": "rimraf --no-glob ./docs/api && typedoc --githubPages false --plugin typedoc-plugin-markdown",
     "prettier-check": "yarn run --top-level prettier --check --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
@@ -44,7 +43,6 @@
   "devDependencies": {
     "@belgattitude/eslint-config-bases": "workspace:^",
     "@rollup/plugin-commonjs": "22.0.2",
-    "@rollup/plugin-node-resolve": "14.0.0",
     "@size-limit/file": "8.0.1",
     "@size-limit/webpack": "8.0.1",
     "@size-limit/webpack-why": "8.0.1",
@@ -61,8 +59,10 @@
     "rimraf": "3.0.2",
     "rollup-plugin-dts": "4.2.2",
     "rollup-plugin-esbuild": "4.10.1",
+    "rollup-plugin-terser": "7.0.2",
     "rollup-plugin-typescript": "1.0.1",
     "size-limit": "8.0.1",
+    "terser": "5.15.0",
     "ts-jest": "28.0.8",
     "typedoc": "0.23.14",
     "typedoc-plugin-markdown": "3.13.6",

@@ -2944,7 +2944,6 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@rollup/plugin-commonjs": "npm:22.0.2"
-    "@rollup/plugin-node-resolve": "npm:14.0.0"
     "@size-limit/file": "npm:8.0.1"
     "@size-limit/webpack": "npm:8.0.1"
     "@size-limit/webpack-why": "npm:8.0.1"
@@ -2961,8 +2960,10 @@ __metadata:
     rimraf: "npm:3.0.2"
     rollup-plugin-dts: "npm:4.2.2"
     rollup-plugin-esbuild: "npm:4.10.1"
+    rollup-plugin-terser: "npm:7.0.2"
     rollup-plugin-typescript: "npm:1.0.1"
     size-limit: "npm:8.0.1"
+    terser: "npm:5.15.0"
     ts-jest: "npm:28.0.8"
     typedoc: "npm:0.23.14"
     typedoc-plugin-markdown: "npm:3.13.6"
@@ -7276,22 +7277,6 @@ __metadata:
   peerDependencies:
     rollup: ^1.20.0 || ^2.0.0
   checksum: 8235df2e909e55e946aea7b99cc4c6d8e9d1d1ce29b83eef35f1b888caac71e390f94843802216ad1917c7d0e2a17c5b70839515dc6d7f3e9ee0f50872997dac
-  languageName: node
-  linkType: hard
-
-"@rollup/plugin-node-resolve@npm:14.0.0":
-  version: 14.0.0
-  resolution: "@rollup/plugin-node-resolve@npm:14.0.0"
-  dependencies:
-    "@rollup/pluginutils": "npm:^3.1.0"
-    "@types/resolve": "npm:1.17.1"
-    deepmerge: "npm:^4.2.2"
-    is-builtin-module: "npm:^3.1.0"
-    is-module: "npm:^1.0.0"
-    resolve: "npm:^1.19.0"
-  peerDependencies:
-    rollup: ^2.78.0
-  checksum: c1100724e5d75c6b1b7a53928f9253094b78c805dedc28d4a63dc92278067f5090025aa4254cb4d949dcba7780e7681f4799b4aba6cf146d4827df214460968b
   languageName: node
   linkType: hard
 
@@ -12605,7 +12590,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"builtin-modules@npm:^3.1.0, builtin-modules@npm:^3.3.0":
+"builtin-modules@npm:^3.1.0":
   version: 3.3.0
   resolution: "builtin-modules@npm:3.3.0"
   checksum: 69bd2a742dc2aa7e69fc39b3289123e642c693705b8532ceab120e66496ec7cc599e3bd1352c09b45571910fa923c101abe8e1e36e0bc652e4397b19e6efb0e6
@@ -19681,15 +19666,6 @@ __metadata:
   version: 2.0.5
   resolution: "is-buffer@npm:2.0.5"
   checksum: e3ca83ee43ce9d896ab8389d74b0e5870c960ea06fdbd1e793b4347631038ef12e5494c339fb2645fc3cb18c0e61dda5bb67b2edea2163b20a6b502500c44601
-  languageName: node
-  linkType: hard
-
-"is-builtin-module@npm:^3.1.0":
-  version: 3.2.0
-  resolution: "is-builtin-module@npm:3.2.0"
-  dependencies:
-    builtin-modules: "npm:^3.3.0"
-  checksum: 5b26848b69b4bfe4d78599fe5ffc60257c039c0908d7e491f1680c7a1f2d74e74e3ce86f44ea772f788a6e49cc4645f47029d0a8136a5281bf10652d2e1fbb1d
   languageName: node
   linkType: hard
 
@@ -28719,7 +28695,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-terser@npm:^7.0.2":
+"rollup-plugin-terser@npm:7.0.2, rollup-plugin-terser@npm:^7.0.2":
   version: 7.0.2
   resolution: "rollup-plugin-terser@npm:7.0.2"
   dependencies:
@@ -30767,6 +30743,20 @@ __metadata:
   languageName: node
   linkType: hard
 
+"terser@npm:5.15.0, terser@npm:^5.0.0, terser@npm:^5.10.0, terser@npm:^5.3.4, terser@npm:^5.7.0, terser@npm:^5.7.2":
+  version: 5.15.0
+  resolution: "terser@npm:5.15.0"
+  dependencies:
+    "@jridgewell/source-map": "npm:^0.3.2"
+    acorn: "npm:^8.5.0"
+    commander: "npm:^2.20.0"
+    source-map-support: "npm:~0.5.20"
+  bin:
+    terser: bin/terser
+  checksum: f051544d6ce1673e2755345e3cd846994afcedf3bbb634bc364a01e183a9a9d2236f94e742ef524615da67b545cd4327f2f11e8aafbebd11fda9458428aa3e23
+  languageName: node
+  linkType: hard
+
 "terser@npm:^4.1.2, terser@npm:^4.6.3":
   version: 4.8.0
   resolution: "terser@npm:4.8.0"
@@ -30777,20 +30767,6 @@ __metadata:
   bin:
     terser: bin/terser
   checksum: f201bb717bce77a073337498b6fb3b66a3b3039a384dcf3e8d4eab5f1d411ed3f29f334165479c1c7e22a28e1e2837466b5127bc1e713c2fc57a468d9c91f95f
-  languageName: node
-  linkType: hard
-
-"terser@npm:^5.0.0, terser@npm:^5.10.0, terser@npm:^5.3.4, terser@npm:^5.7.0, terser@npm:^5.7.2":
-  version: 5.14.1
-  resolution: "terser@npm:5.14.1"
-  dependencies:
-    "@jridgewell/source-map": "npm:^0.3.2"
-    acorn: "npm:^8.5.0"
-    commander: "npm:^2.20.0"
-    source-map-support: "npm:~0.5.20"
-  bin:
-    terser: bin/terser
-  checksum: 185362fbbd6d7c0fa556e843d1678dd25b2f46891d75e9bd2147e6c60ca8464c2b88c02a1fbf77fe9149a9198e19050a16ca1031ff842af494c55cc0c475795d
   languageName: node
   linkType: hard
 
