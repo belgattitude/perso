@@ -2958,6 +2958,7 @@ __metadata:
     get-tsconfig: "npm:4.2.0"
     jest: "npm:29.0.2"
     rimraf: "npm:3.0.2"
+    rollup: "npm:2.79.0"
     rollup-plugin-dts: "npm:4.2.2"
     rollup-plugin-esbuild: "npm:4.10.1"
     rollup-plugin-terser: "npm:7.0.2"
@@ -28777,7 +28778,21 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup@npm:^2.35.1, rollup@npm:^2.74.1, rollup@npm:~2.78.0":
+"rollup@npm:2.79.0, rollup@npm:^2.35.1, rollup@npm:^2.74.1":
+  version: 2.79.0
+  resolution: "rollup@npm:2.79.0"
+  dependencies:
+    fsevents: "npm:~2.3.2"
+  dependenciesMeta:
+    fsevents:
+      optional: true
+  bin:
+    rollup: dist/bin/rollup
+  checksum: 9b7ff7bf3233597b9dc76bd37024227231699971cc01273ffbeff87023076ef412fd2d93134052d49e3c8402a0381b408a8b00a1357b45206f5036a8756588f2
+  languageName: node
+  linkType: hard
+
+"rollup@npm:~2.78.0":
   version: 2.78.1
   resolution: "rollup@npm:2.78.1"
   dependencies:
