@@ -1,6 +1,6 @@
 const defaultTheme = require('tailwindcss/defaultTheme');
-const sharedTheme = require('./src/themes/tailwind/tailwind.theme');
 const { tailwindV3Colors } = require('./src/themes/shared/colors');
+const sharedTheme = require('./src/themes/tailwind/tailwind.theme');
 
 /** @type {import('tailwindcss').Config} */
 export default {

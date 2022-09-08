@@ -2,13 +2,14 @@
 
 // https://nextjs.org/docs/api-reference/next.config.js/introduction
 // https://docs.sentry.io/platforms/javascript/guides/nextjs/
+import withBundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
 
-import pc from 'picocolors';
-import packageJson from './package.json' assert { type: 'json' };
-import nextI18nConfig from './next-i18next.config.js';
+import { createSecureHeaders } from 'next-secure-headers';
 import withNextTranspileModules from 'next-transpile-modules';
-import withBundleAnalyzer from '@next/bundle-analyzer';
+import pc from 'picocolors';
+import nextI18nConfig from './next-i18next.config.js';
+import packageJson from './package.json' assert { type: 'json' };
 
 const trueEnv = ['true', '1', 'yes'];
 
@@ -74,7 +75,6 @@ const tmModules = [
 ];
 
 // @link https://github.com/jagaapple/next-secure-headers
-import { createSecureHeaders } from 'next-secure-headers';
 const secureHeaders = createSecureHeaders({
   contentSecurityPolicy: {
     directives: enableCSP
@@ -127,7 +127,7 @@ const secureHeaders = createSecureHeaders({
 });
 
 /**
- * @type {Partial<import('next').NextConfig>}
+ * @type {import('next').NextConfig}
  */
 const nextConfig = {
   reactStrictMode: true,
@@ -165,6 +165,12 @@ const nextConfig = {
   images: {
     deviceSizes: [640, 750, 828, 1080, 1200, 1920, 2048, 3840],
     imageSizes: [16, 32, 48, 64, 96, 128, 256, 384],
+    minimumCacheTTL: 60,
+    formats: ['image/webp'],
+    loader: 'default',
+    dangerouslyAllowSVG: false,
+    disableStaticImages: false,
+    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
     remotePatterns: [
       {
         protocol: 'https',
@@ -172,13 +178,6 @@ const nextConfig = {
       },
     ],
     unoptimized: false,
-    path: '/_next/image',
-    loader: 'default',
-    disableStaticImages: false,
-    minimumCacheTTL: 60,
-    formats: ['image/webp'],
-    dangerouslyAllowSVG: false,
-    contentSecurityPolicy: "default-src 'self'; script-src 'none'; sandbox;",
   },
 
   experimental: {

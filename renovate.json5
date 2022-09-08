@@ -23,7 +23,7 @@
       "enabled": false
     },
     {
-      "groupName": "Remix packages",
+      "groupName": "remix monorepo",
       "groupSlug": "remix",
       "matchPackageNames": [
         "remix",
@@ -33,28 +33,31 @@
       ]
     },
     {
-      "groupName": "Pothos graphql",
+      "groupName": "pothos monorepo",
       "groupSlug": "pothos",
       "matchPackagePrefixes": [
         "@pothos/"
       ]
     },
     {
-      "groupName": "Tailwind",
+      "groupName": "tailwind monorepo",
       "groupSlug": "tailwind",
+      "matchPackageNames": [
+        "remix",
+      ],
       "matchPackagePrefixes": [
         "@tailwindcss/"
       ]
     },
     {
-      "groupName": "Graphql mesh",
+      "groupName": "graphql-mesh monorepo",
       "groupSlug": "graphql-mesh",
       "matchPackagePrefixes": [
         "@graphql-mesh/"
       ]
     },
     {
-      "groupName": "Soluble cache-interop",
+      "groupName": "cache-interop monorepo",
       "groupSlug": "soluble-cache-interop",
       "matchPackageNames": [
         "@soluble/dsn-parser",
