@@ -18,7 +18,7 @@ export type Scalars = {
   Int: number;
   Float: number;
   /** The `BigInt` scalar type represents non-fractional signed whole numeric values. */
-  BigInt: any;
+  BigInt: bigint;
 };
 
 export type Query = {
