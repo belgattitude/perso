@@ -2807,6 +2807,7 @@ __metadata:
     "@storybook/mdx2-csf": "npm:0.0.3"
     "@storybook/react": "npm:6.5.10"
     "@storybook/testing-library": "npm:0.0.13"
+    "@testing-library/dom": "npm:8.17.1"
     "@testing-library/jest-dom": "npm:5.16.5"
     "@testing-library/react": "npm:13.4.0"
     "@testing-library/react-hooks": "npm:8.0.1"
@@ -2835,6 +2836,7 @@ __metadata:
     postcss-preset-env: "npm:7.8.1"
     react: "npm:^18.2.0"
     react-dom: "npm:^18.2.0"
+    require-from-string: "npm:2.0.2"
     rimraf: "npm:3.0.2"
     sirv: "npm:2.0.2"
     sirv-cli: "npm:2.0.2"
@@ -2843,6 +2845,7 @@ __metadata:
     tsconfig-paths-webpack-plugin: "npm:4.0.0"
     tsup: "npm:6.2.3"
     typescript: "npm:4.8.3"
+    vite: "npm:3.1.0"
     vite-plugin-svgr: "npm:2.2.1"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.23.1"
@@ -2962,7 +2965,6 @@ __metadata:
     rollup-plugin-dts: "npm:4.2.2"
     rollup-plugin-esbuild: "npm:4.10.1"
     rollup-plugin-terser: "npm:7.0.2"
-    rollup-plugin-typescript: "npm:1.0.1"
     size-limit: "npm:8.1.0"
     terser: "npm:5.15.0"
     ts-jest: "npm:28.0.8"
@@ -2972,6 +2974,7 @@ __metadata:
     vite: "npm:3.1.0"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.23.1"
+    webpack: "npm:5.74.0"
   languageName: unknown
   linkType: soft
 
@@ -3612,6 +3615,13 @@ __metadata:
   dependencies:
     chalk: "npm:^4.1.0"
   checksum: 4ffe839678f415425b5218128fd666de42d6ebc9a7437cc6aa959bfaf98ef3a975b6d8907d7f168303c84f2c1d7db418946c97e885dd4f273da0fae066be2daa
+  languageName: node
+  linkType: hard
+
+"@corex/deepmerge@npm:^4.0.29":
+  version: 4.0.29
+  resolution: "@corex/deepmerge@npm:4.0.29"
+  checksum: fbe14b855c14f618cc0d1afee143f56215315f04ea024440bb3811496a3779ef41d3e445f38dd8bdfc2f2f864d80edf6283d75e23159e31ae790fa4c45156ffa
   languageName: node
   linkType: hard
 
@@ -9302,9 +9312,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@testing-library/dom@npm:^8.3.0, @testing-library/dom@npm:^8.5.0":
-  version: 8.14.0
-  resolution: "@testing-library/dom@npm:8.14.0"
+"@testing-library/dom@npm:8.17.1, @testing-library/dom@npm:^8.3.0, @testing-library/dom@npm:^8.5.0":
+  version: 8.17.1
+  resolution: "@testing-library/dom@npm:8.17.1"
   dependencies:
     "@babel/code-frame": "npm:^7.10.4"
     "@babel/runtime": "npm:^7.12.5"
@@ -9314,7 +9324,7 @@ __metadata:
     dom-accessibility-api: "npm:^0.5.9"
     lz-string: "npm:^1.4.4"
     pretty-format: "npm:^27.0.2"
-  checksum: bee19ee0aa05cd670e4a78020196235673018178a3aa9d254294036a4cb8f8aa2f3b8e2ce9649bfe3b90769de28d6df29a2883f8f1539f854bde1b5c674f6c4a
+  checksum: 984e419ecf3963bf4608e3ea36d055f622fba1e25605e63a41721eafe6e922535079d921853e1e40953eb31a3b47d9c4e3727083f962462172c7642cc3e1ebf0
   languageName: node
   linkType: hard
 
@@ -19449,6 +19459,7 @@ __metadata:
     "@vitest/ui": "npm:0.23.1"
     cross-env: "npm:7.0.3"
     tsx: "npm:3.9.0"
+    vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.23.1"
   languageName: unknown
   linkType: soft
@@ -24291,6 +24302,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"next-sitemap@npm:3.1.21":
+  version: 3.1.21
+  resolution: "next-sitemap@npm:3.1.21"
+  dependencies:
+    "@corex/deepmerge": "npm:^4.0.29"
+    minimist: "npm:^1.2.6"
+  peerDependencies:
+    "@next/env": "*"
+    next: "*"
+  bin:
+    next-sitemap: bin/next-sitemap.mjs
+    next-sitemap-cjs: bin/next-sitemap.cjs
+  checksum: 4c0108e0a6c03e56fd097509119171229c1c7231844aa5789d761a5368664cc1b37f85142d4de8eb537beccb702b3189f3103b6e6237610b48863eef2d299849
+  languageName: node
+  linkType: hard
+
 "next-transpile-modules@npm:9.0.0":
   version: 9.0.0
   resolution: "next-transpile-modules@npm:9.0.0"
@@ -24298,6 +24325,16 @@ __metadata:
     enhanced-resolve: "npm:^5.7.0"
     escalade: "npm:^3.1.1"
   checksum: 03a47a6c7c520a739e2dfe4a2a820b2678c376a8eba6c3d68c631df739c6158c8be8c0720348f736f1768936cd319653cffa91c3d2518aee88313c2a56570569
+  languageName: node
+  linkType: hard
+
+"next-transpile-modules@patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch":
+  version: 9.0.0
+  resolution: "next-transpile-modules@patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch::version=9.0.0&hash=5e03e6"
+  dependencies:
+    enhanced-resolve: "npm:^5.7.0"
+    escalade: "npm:^3.1.1"
+  checksum: 2890c8b2fe834a7fa29d6729aab999c639bdf307d768bc21a49566b5a8add1336679317f98b3d99fdcbb3e8bc89bef89d3432c53bf0a71cff89de47223b2d45c
   languageName: node
   linkType: hard
 
@@ -28411,7 +28448,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"require-from-string@npm:^2.0.2":
+"require-from-string@npm:2.0.2, require-from-string@npm:^2.0.2":
   version: 2.0.2
   resolution: "require-from-string@npm:2.0.2"
   checksum: 3cd7be0f2b19d49ef2ec59c27cc9dbd64343c950c744651d8e31651026585d5da581df35be7a9b825f00921bf134d619fea292360dabbae11da2c211f2b601f2
@@ -28735,19 +28772,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-typescript@npm:1.0.1":
-  version: 1.0.1
-  resolution: "rollup-plugin-typescript@npm:1.0.1"
-  dependencies:
-    resolve: "npm:^1.10.0"
-    rollup-pluginutils: "npm:^2.5.0"
-  peerDependencies:
-    tslib: "*"
-    typescript: ">=2.1.0"
-  checksum: 96cc96b934b057b6d0818c3ab88b53d6d02204dc463744e2b0fd64345ee8cc52f7b269fef0829a39e0ce970a80eecb996ef799b8d3c21a826aaa596a133f70d6
-  languageName: node
-  linkType: hard
-
 "rollup-plugin-visualizer@npm:^5.6.0":
   version: 5.6.0
   resolution: "rollup-plugin-visualizer@npm:5.6.0"
@@ -28764,7 +28788,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-pluginutils@npm:^2.5.0, rollup-pluginutils@npm:^2.8.2":
+"rollup-pluginutils@npm:^2.8.2":
   version: 2.8.2
   resolution: "rollup-pluginutils@npm:2.8.2"
   dependencies:
@@ -33036,7 +33060,8 @@ __metadata:
     next-i18next: "npm:12.0.1"
     next-secure-headers: "npm:2.2.0"
     next-seo: "npm:5.5.0"
-    next-transpile-modules: "npm:9.0.0"
+    next-sitemap: "npm:3.1.21"
+    next-transpile-modules: "patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch"
     npm-run-all: "npm:4.1.5"
     picocolors: "npm:1.0.0"
     pino: "npm:8.5.0"
