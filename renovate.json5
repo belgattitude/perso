@@ -23,6 +23,16 @@
       "enabled": false
     },
     {
+      "groupName": "vitest monorepo",
+      "groupSlug": "vitest",
+      "matchPackageNames": [
+        "vitest",
+      ],
+      "matchPackagePrefixes": [
+        "@vitest/"
+      ]
+    },
+    {
       "groupName": "remix monorepo",
       "groupSlug": "remix",
       "matchPackageNames": [

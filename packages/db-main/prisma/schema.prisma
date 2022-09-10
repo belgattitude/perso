@@ -13,7 +13,6 @@ generator pothos {
 datasource db {
   provider = "postgresql"
   url      = env("PRISMA_DATABASE_URL")
-
 }
 
 model Company {
@@ -24,6 +23,7 @@ model Company {
   updatedAt DateTime @updatedAt
 
   Contact Contact[]
+
   @@map(name: "company")
 }
 
@@ -42,6 +42,7 @@ model Contact {
 
   MeetingAttendees MeetingAttendee[]
   MeetingReview    MeetingReview[]
+
   @@unique([companyId, email])
   @@map(name: "contact")
 }
@@ -54,14 +55,15 @@ model Project {
   updatedAt DateTime @updatedAt
 
   Meetings Meeting[]
+
   @@map(name: "project")
 }
 
 enum MeetingStatus {
-  PENDING    @map("pending")
-  CONFIRMED  @map("confirmed")
-  CANCELLED  @map("cancelled")
-  COMPLETED  @map("completed")
+  PENDING   @map("pending")
+  CONFIRMED @map("confirmed")
+  CANCELLED @map("cancelled")
+  COMPLETED @map("completed")
 }
 
 model Meeting {
@@ -101,9 +103,9 @@ model MeetingReview {
 }
 
 enum MeetingAttendeeRole {
-  OWNER   @map("owner")
-  AGENCY  @map("agency")
-  CLIENT  @map("client")
+  OWNER  @map("owner")
+  AGENCY @map("agency")
+  CLIENT @map("client")
 }
 
 model MeetingAttendee {
@@ -140,27 +142,28 @@ model Post {
 }
 
 enum UserPermissionRole {
-  ADMIN   @map("admin")
-  USER    @map("user")
+  ADMIN @map("admin")
+  USER  @map("user")
 }
 
 model User {
-  id            Int       @id @default(autoincrement())
-  username      String    @unique @db.Text
-  firstName     String?   @db.Text
-  lastName      String?   @db.Text
-  email         String    @unique @db.Text
+  id            Int                @id @default(autoincrement())
+  username      String             @unique @db.Text
+  firstName     String?            @db.Text
+  lastName      String?            @db.Text
+  email         String             @unique @db.Text
   emailVerified DateTime?
-  role          UserPermissionRole   @default(USER)
-  password      String?   @db.Text
-  avatarUrl     String?   @db.Text
-  createdAt     DateTime  @default(now())
-  updatedAt     DateTime  @updatedAt
+  role          UserPermissionRole @default(USER)
+  password      String?            @db.Text
+  avatarUrl     String?            @db.Text
+  createdAt     DateTime           @default(now())
+  updatedAt     DateTime           @updatedAt
   accounts      Account[]
   sessions      Session[]
 
   Post    Post[]
   Meeting Meeting[]
+
   @@map("users")
 }
 

@@ -102,16 +102,12 @@ builder.queryType({
         slug: t.arg.string({ required: true }),
       },
       resolve: async (query, root, args, _ctx, _info) => {
-        // @todo await here is a hack for typescript 4.8
-        // return directly when pothos has updated their support for
-        // MaybePromise
-        // eslint-disable-next-line sonarjs/prefer-immediate-return
-        const meeting = await prismaDbMain.meeting.findUnique({
+        return prismaDbMain.meeting.findUniqueOrThrow({
+          // the `query` argument will add in `include`s or `select`s to
+          // resolve as much of the request in a single query as possible
           ...query,
-          rejectOnNotFound: true,
           where: { slug: args.slug },
         });
-        return meeting;
       },
     }),
     me: t.prismaField({
@@ -120,18 +116,12 @@ builder.queryType({
         id: t.arg.int({ required: true }),
       },
       resolve: async (query, root, args, _ctx, _info) => {
-        // @todo await here is a hack for typescript 4.8
-        // return directly when pothos has updated their support for
-        // MaybePromise
-        // eslint-disable-next-line sonarjs/prefer-immediate-return
-        const user = await prismaDbMain.user.findUnique({
+        return prismaDbMain.user.findUniqueOrThrow({
           // the `query` argument will add in `include`s or `select`s to
           // resolve as much of the request in a single query as possible
           ...query,
-          rejectOnNotFound: true,
           where: { id: args.id },
         });
-        return user;
       },
     }),
   }),
