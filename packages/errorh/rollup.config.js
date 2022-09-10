@@ -16,13 +16,6 @@ const distDir = './dist';
 
 const ecmascriptLevel = 'es2017';
 
-const getTerserPlugin = (format) => {
-  return terser({
-    compress: true,
-    format,
-  });
-};
-
 /**
  *
  * @param format
@@ -36,8 +29,7 @@ const getEsbuildPlugin = (format, minify) => {
     sourceMap: false,
     treeShaking: true,
     platform: 'neutral',
-    //target: [ecmascriptLevel],
-    target: 'es2017',
+    target: [ecmascriptLevel],
     minify: minify,
     minifyWhitespace: minify, // setting to false allows to create patches
     minifyIdentifiers: minify,
