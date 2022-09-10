@@ -2947,9 +2947,8 @@ __metadata:
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@rollup/plugin-commonjs": "npm:22.0.2"
+    "@size-limit/esbuild": "npm:8.1.0"
     "@size-limit/file": "npm:8.1.0"
-    "@size-limit/webpack": "npm:8.1.0"
-    "@size-limit/webpack-why": "npm:8.1.0"
     "@types/jest": "npm:29.0.0"
     "@types/node": "npm:18.7.16"
     "@vitest/coverage-istanbul": "npm:0.23.2"
@@ -2964,9 +2963,7 @@ __metadata:
     rollup: "npm:2.79.0"
     rollup-plugin-dts: "npm:4.2.2"
     rollup-plugin-esbuild: "npm:4.10.1"
-    rollup-plugin-terser: "npm:7.0.2"
     size-limit: "npm:8.1.0"
-    terser: "npm:5.15.0"
     ts-jest: "npm:28.0.8"
     typedoc: "npm:0.23.14"
     typedoc-plugin-markdown: "npm:3.13.6"
@@ -2974,7 +2971,6 @@ __metadata:
     vite: "npm:3.1.0"
     vite-tsconfig-paths: "npm:3.5.0"
     vitest: "npm:0.23.2"
-    webpack: "npm:5.74.0"
   languageName: unknown
   linkType: soft
 
@@ -3885,17 +3881,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@discoveryjs/json-ext@npm:^0.5.3, @discoveryjs/json-ext@npm:^0.5.7":
+"@discoveryjs/json-ext@npm:^0.5.3":
   version: 0.5.7
   resolution: "@discoveryjs/json-ext@npm:0.5.7"
   checksum: b6e8ff9be2e0b505f3e06379743f55d04028adbb0170dc191ff020f6e43f86f712e6cceb8a95db7e2c13a7dc6d7419f6b65af353ce662bf520e065b69e232ef7
-  languageName: node
-  linkType: hard
-
-"@discoveryjs/natural-compare@npm:^1.0.0":
-  version: 1.0.0
-  resolution: "@discoveryjs/natural-compare@npm:1.0.0"
-  checksum: 1e7a79e783a502b8466d74dc01abef18b87d14fad354bead26fb3e6d44d8c4727bf85eb686cf3d5dd1dd26c90b5db8bcefc764421370b506e6de135e0a35a115
   languageName: node
   linkType: hard
 
@@ -7584,6 +7573,18 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@size-limit/esbuild@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@size-limit/esbuild@npm:8.1.0"
+  dependencies:
+    esbuild: "npm:^0.15.7"
+    nanoid: "npm:^3.3.4"
+  peerDependencies:
+    size-limit: 8.1.0
+  checksum: c0a34fe5e7c4242fd1dac34d1c9b096c61f544e6eedce6008c03ec91290a88103462ff421aab9e1ca7f7fa9b9762562f7acb5d107a06f2bbe8a512d91052fdf6
+  languageName: node
+  linkType: hard
+
 "@size-limit/file@npm:8.1.0":
   version: 8.1.0
   resolution: "@size-limit/file@npm:8.1.0"
@@ -7592,30 +7593,6 @@ __metadata:
   peerDependencies:
     size-limit: 8.1.0
   checksum: b76742ca805c09f6907b5cb3fb328226e3c1108890e077276c9c0938ccc14233f272255c7552f8223741e45e507017cc6725a7e40cee063ee1b506aacc02a3b0
-  languageName: node
-  linkType: hard
-
-"@size-limit/webpack-why@npm:8.1.0":
-  version: 8.1.0
-  resolution: "@size-limit/webpack-why@npm:8.1.0"
-  dependencies:
-    "@statoscope/webpack-plugin": "npm:^5.24.0"
-  peerDependencies:
-    size-limit: 8.1.0
-  checksum: fe2e999b87ce5fb9b7ef40b28a965e3d2b50fff1743b30cabc72e45cb3914101eb0461598c3bae3d3e568f5b5305739469d183826e91a7844bc1b1bf9fb0d4c7
-  languageName: node
-  linkType: hard
-
-"@size-limit/webpack@npm:8.1.0":
-  version: 8.1.0
-  resolution: "@size-limit/webpack@npm:8.1.0"
-  dependencies:
-    escape-string-regexp: "npm:^4.0.0"
-    nanoid: "npm:^3.3.4"
-    webpack: "npm:^5.74.0"
-  peerDependencies:
-    size-limit: 8.1.0
-  checksum: e12f2fd21932a078d4d98f1ab34026bd11ae240eba71a65a6b6173802cbc35750e8da98b9d15d4c2569bcfec1fa226b0d32c366db47a9bf3e90b58f94bd8e30f
   languageName: node
   linkType: hard
 
@@ -7641,167 +7618,6 @@ __metadata:
   version: 1.6.0
   resolution: "@soluble/dsn-parser@npm:1.6.0"
   checksum: 23ba2e7f228c3e8706703e9d188a0cb9b41b5124b877941e16e3cf054fed451e8397b22826140b65df8bf4be1f1328c09dd0fd586f49e105656fcf806dbe274e
-  languageName: node
-  linkType: hard
-
-"@statoscope/extensions@npm:5.14.1":
-  version: 5.14.1
-  resolution: "@statoscope/extensions@npm:5.14.1"
-  checksum: b7ebe5008cbe3ee6b49f9b9fa8b40b7611fc1e208d17256a0332aca8788bf527d9cfcabab22570c1dffa8c9fd707b2ecfb9600c4fec52809e01aec850c21984f
-  languageName: node
-  linkType: hard
-
-"@statoscope/helpers@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/helpers@npm:5.24.0"
-  dependencies:
-    "@types/archy": "npm:^0.0.32"
-    "@types/semver": "npm:^7.3.10"
-    archy: "npm:~1.0.0"
-    jora: "npm:^1.0.0-beta.7"
-    semver: "npm:^7.3.7"
-  checksum: 778cd5beaa7553f420321f42a7af9d9f99e10806a85f23bf0af437cca4ebff9885d7e6abef3248e64cafef2d8be37b672945441ff3f45e0899df9282bf11a264
-  languageName: node
-  linkType: hard
-
-"@statoscope/report-writer@npm:5.22.0":
-  version: 5.22.0
-  resolution: "@statoscope/report-writer@npm:5.22.0"
-  dependencies:
-    "@discoveryjs/json-ext": "npm:^0.5.7"
-  checksum: 519c788e8de83963ae1af2bc259a47e4cbd9355e93fe8eb0a690a95cd96e01e898f769acec1930d7ddcfd7e1a40152338ec3b9cc6fe9dcb5c89bf9eb317e6ddf
-  languageName: node
-  linkType: hard
-
-"@statoscope/stats-extension-compressed@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/stats-extension-compressed@npm:5.24.0"
-  dependencies:
-    "@statoscope/helpers": "npm:5.24.0"
-    gzip-size: "npm:^6.0.0"
-  checksum: d59720829333cf5f7bd8a9f1990ff3bafa4c7f3eea9ed97e93efff85ef94b82c2beea84c67e4c4102b67b9465a6e55da03aab2232f06944e77148610f0e8b7d9
-  languageName: node
-  linkType: hard
-
-"@statoscope/stats-extension-custom-reports@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/stats-extension-custom-reports@npm:5.24.0"
-  dependencies:
-    "@statoscope/extensions": "npm:5.14.1"
-    "@statoscope/helpers": "npm:5.24.0"
-    "@statoscope/stats": "npm:5.14.1"
-    "@statoscope/types": "npm:5.22.0"
-  checksum: cec06517ca861b0fd45a56870194df12a7be02f2425a2f7dcfd93bc45abfd727968bab4ac17ce0bd8f44792dd1a0972cf6d84f541bb1193e8d4a7971acaf92e2
-  languageName: node
-  linkType: hard
-
-"@statoscope/stats-extension-package-info@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/stats-extension-package-info@npm:5.24.0"
-  dependencies:
-    "@statoscope/helpers": "npm:5.24.0"
-  checksum: 0c7e5f08fc4cc51c965e81c4c4b1cbc6c10fe827adaa53f7b2aa7fa62d025f75efec9668effc86eeb5762a39d68fc35a64c0c11f787d1c06fc3d3b5d477d2ac3
-  languageName: node
-  linkType: hard
-
-"@statoscope/stats-extension-stats-validation-result@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/stats-extension-stats-validation-result@npm:5.24.0"
-  dependencies:
-    "@statoscope/extensions": "npm:5.14.1"
-    "@statoscope/helpers": "npm:5.24.0"
-    "@statoscope/stats": "npm:5.14.1"
-    "@statoscope/types": "npm:5.22.0"
-  checksum: bf2bb093fce9fe5e4f646104641fbdea87cdcc627554278bd9f855390e9d144ddddf83c9ec40a4d7bf659bda37f626f858f8129897d0db1664fe1688c14cd0dc
-  languageName: node
-  linkType: hard
-
-"@statoscope/stats@npm:5.14.1":
-  version: 5.14.1
-  resolution: "@statoscope/stats@npm:5.14.1"
-  checksum: 49984645e94ffcf50d3f5fabd38b1e11952aecd55bbba3587035c0afb05702042cca3f7b7f0256dbbac11a436ab5522f17726fc1d99d89fcb913398bafa146ac
-  languageName: node
-  linkType: hard
-
-"@statoscope/types@npm:5.22.0":
-  version: 5.22.0
-  resolution: "@statoscope/types@npm:5.22.0"
-  dependencies:
-    "@statoscope/stats": "npm:5.14.1"
-  checksum: 78bfba47aff7c9ac6351cb0e057d26ded9ddba48e9eac402820f6651179e47d7032010f1730b0c119783607b78758f781db98bb16d6fb14541b09c5905d054b4
-  languageName: node
-  linkType: hard
-
-"@statoscope/webpack-model@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/webpack-model@npm:5.24.0"
-  dependencies:
-    "@statoscope/extensions": "npm:5.14.1"
-    "@statoscope/helpers": "npm:5.24.0"
-    "@statoscope/stats": "npm:5.14.1"
-    "@statoscope/stats-extension-compressed": "npm:5.24.0"
-    "@statoscope/stats-extension-custom-reports": "npm:5.24.0"
-    "@statoscope/stats-extension-package-info": "npm:5.24.0"
-    "@statoscope/stats-extension-stats-validation-result": "npm:5.24.0"
-    "@statoscope/types": "npm:5.22.0"
-    md5: "npm:^2.3.0"
-  checksum: 54be92ea1694e3f2843aff032d60ec94efd73d77a03a922f2bc916db54f2f0eec231e9a25478fbf7dec044219c03bd08848540848e99cbdec321924706394a6f
-  languageName: node
-  linkType: hard
-
-"@statoscope/webpack-plugin@npm:^5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/webpack-plugin@npm:5.24.0"
-  dependencies:
-    "@discoveryjs/json-ext": "npm:^0.5.7"
-    "@statoscope/report-writer": "npm:5.22.0"
-    "@statoscope/stats": "npm:5.14.1"
-    "@statoscope/stats-extension-compressed": "npm:5.24.0"
-    "@statoscope/stats-extension-custom-reports": "npm:5.24.0"
-    "@statoscope/types": "npm:5.22.0"
-    "@statoscope/webpack-model": "npm:5.24.0"
-    "@statoscope/webpack-stats-extension-compressed": "npm:5.24.0"
-    "@statoscope/webpack-stats-extension-package-info": "npm:5.24.0"
-    "@statoscope/webpack-ui": "npm:5.24.0"
-    open: "npm:^8.4.0"
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 87dc7b0acb52335fa76057ff531993ee41b5540d10776a722248cdfdbe7053a50d5f01121b89a26255c24698c3468314b2c90b420571a8411da637a88c1201c1
-  languageName: node
-  linkType: hard
-
-"@statoscope/webpack-stats-extension-compressed@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/webpack-stats-extension-compressed@npm:5.24.0"
-  dependencies:
-    "@statoscope/stats": "npm:5.14.1"
-    "@statoscope/stats-extension-compressed": "npm:5.24.0"
-    "@statoscope/webpack-model": "npm:5.24.0"
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: f54c455bcf1328123c143c72fdd0b0798d1e58c19f4fbd0c9ee09cc76cf68474c45b0a9c6848e2c3ee74f7d95d72fce264c1539ef8b59fcbec2ec628cec4ef84
-  languageName: node
-  linkType: hard
-
-"@statoscope/webpack-stats-extension-package-info@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/webpack-stats-extension-package-info@npm:5.24.0"
-  dependencies:
-    "@statoscope/stats": "npm:5.14.1"
-    "@statoscope/stats-extension-package-info": "npm:5.24.0"
-    "@statoscope/webpack-model": "npm:5.24.0"
-  peerDependencies:
-    webpack: ^4.0.0 || ^5.0.0
-  checksum: 3272832a1b93468f22a2fbe21fdb57e82e9e100bfb5c99a36c37ce99000fd4afa57a94868f790bda4462e33e66f811a9f3220bc3a26e9650c00035c1c967655b
-  languageName: node
-  linkType: hard
-
-"@statoscope/webpack-ui@npm:5.24.0":
-  version: 5.24.0
-  resolution: "@statoscope/webpack-ui@npm:5.24.0"
-  dependencies:
-    "@statoscope/types": "npm:5.22.0"
-  checksum: 4a532a8491a15e0b4ddece92382f695cfdc6a1f0d0993870e8eed087d58c012701781a57475cba79290738cc3407c5f17db2b209de62bed49e59c6927e13b1cd
   languageName: node
   linkType: hard
 
@@ -9518,13 +9334,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/archy@npm:^0.0.32":
-  version: 0.0.32
-  resolution: "@types/archy@npm:0.0.32"
-  checksum: 545fc9a0214a12d904c8552fdf879d70fd99f68ef0d8d3ca26d501c6fcccf24ad5d0ab31f3efb89f568fb2c4e92bea3950bbb02f47e7a73a9d2b8460d8f16515
-  languageName: node
-  linkType: hard
-
 "@types/aria-query@npm:^4.2.0":
   version: 4.2.2
   resolution: "@types/aria-query@npm:4.2.2"
@@ -10131,13 +9940,6 @@ __metadata:
   version: 6.2.3
   resolution: "@types/semver@npm:6.2.3"
   checksum: b9809e31140fe49ac3aed9d49b14691d59ed9ee077f5c680704dc7033236df45c3353c221077894b2c95f83531b3d92ac2f8ebb91910c4f74a0911c2cc4368d9
-  languageName: node
-  linkType: hard
-
-"@types/semver@npm:^7.3.10":
-  version: 7.3.12
-  resolution: "@types/semver@npm:7.3.12"
-  checksum: 35ae8150669b266e91d64c514415e69eabedb4d969aa61056b21028d9f35fdb856d745274d163a8c3a72650cd9abbfd78e878a28b79f41894da585a7d7c8229c
   languageName: node
   linkType: hard
 
@@ -11378,13 +11180,6 @@ __metadata:
   version: 1.2.0
   resolution: "aproba@npm:1.2.0"
   checksum: 57bbff1b287201cb850e405ee5a494ba1e9e0d4064c21a454d7643863b3f2228d654c4e463841aef9273d7398b9b779d86e2239f11381a1bb5aa7055d03f3d3d
-  languageName: node
-  linkType: hard
-
-"archy@npm:~1.0.0":
-  version: 1.0.0
-  resolution: "archy@npm:1.0.0"
-  checksum: 68f2a06546740392b40920ffc97362f22cf26fee02cb448a875c28ae916ac4017169d08ce40ad12fa2d11ea1dc2d32c35fad4219f7f3b14a642497719ce4de83
   languageName: node
   linkType: hard
 
@@ -13186,13 +12981,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"charenc@npm:0.0.2":
-  version: 0.0.2
-  resolution: "charenc@npm:0.0.2"
-  checksum: f823489c8dee45b979f011c2f90b433b5497249fccd6dcda57e7b892ba07ea7772ebd5f65b595596c16a8b1aa5c01bbc194f10c7c14593211adadc7f0d999f9d
-  languageName: node
-  linkType: hard
-
 "check-error@npm:^1.0.2":
   version: 1.0.2
   resolution: "check-error@npm:1.0.2"
@@ -14210,13 +13998,6 @@ __metadata:
     shebang-command: "npm:^1.2.0"
     which: "npm:^1.2.9"
   checksum: 8a530666300ebbe1f1a1cd08221923443ecee36e2f0dc881099013db42922cf9605efac8364563497402a9ab947cf7785c5cd8cb70c5efa1b992a00007cb2189
-  languageName: node
-  linkType: hard
-
-"crypt@npm:0.0.2":
-  version: 0.0.2
-  resolution: "crypt@npm:0.0.2"
-  checksum: 241cef46f6ea8512c79ab35812fcc9ee45cd433b516271c1ff8321cd1f1e4d8cfd1b5b68bc9271cc66c8a948e1808ba6aed25c4d2bdefa3a9142ba88b48703fe
   languageName: node
   linkType: hard
 
@@ -15915,7 +15696,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"esbuild@npm:0.15.7, esbuild@npm:^0.15.1, esbuild@npm:^0.15.6":
+"esbuild@npm:0.15.7, esbuild@npm:^0.15.1, esbuild@npm:^0.15.6, esbuild@npm:^0.15.7":
   version: 0.15.7
   resolution: "esbuild@npm:0.15.7"
   dependencies:
@@ -19706,7 +19487,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"is-buffer@npm:^1.1.5, is-buffer@npm:~1.1.6":
+"is-buffer@npm:^1.1.5":
   version: 1.1.6
   resolution: "is-buffer@npm:1.1.6"
   checksum: a3857c313fad2bc168a0e0af61d9e8149fe1aa251bc1bb717cf309f8fc3266c2701f82cdf8b224f24e916e32c248da4ead85151ad43c2787090c57b3469f9af7
@@ -21419,15 +21200,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jora@npm:^1.0.0-beta.7":
-  version: 1.0.0-beta.7
-  resolution: "jora@npm:1.0.0-beta.7"
-  dependencies:
-    "@discoveryjs/natural-compare": "npm:^1.0.0"
-  checksum: 483fd6a6c704dd4d61eca2541818ab2bdce7d5f4d27690463847135aa19b8ada125fa3967e07661195ca5ca85d7215f26f43e90ba70df6d94f3196ad7a1035ca
-  languageName: node
-  linkType: hard
-
 "jose@npm:^4.1.4, jose@npm:^4.3.7":
   version: 4.8.0
   resolution: "jose@npm:4.8.0"
@@ -22773,17 +22545,6 @@ __metadata:
     inherits: "npm:^2.0.1"
     safe-buffer: "npm:^5.1.2"
   checksum: 8ef352bbd030e0c1332da88131232adedf908e9fa5b3de383acc8e6e56f92e98fdb53e2903497e0c89e501a5b3838db0fb29ac1f54b389155b394e7feb06dace
-  languageName: node
-  linkType: hard
-
-"md5@npm:^2.3.0":
-  version: 2.3.0
-  resolution: "md5@npm:2.3.0"
-  dependencies:
-    charenc: "npm:0.0.2"
-    crypt: "npm:0.0.2"
-    is-buffer: "npm:~1.1.6"
-  checksum: 9c439bada6744e9f1dd3f3fe4bf996b4382b49acb193f2014c30887213ba9e68a8370bcd077a211ee843310fb9cc5ba5463c0c3a53408c4760ba10e894f19276
   languageName: node
   linkType: hard
 
@@ -28779,7 +28540,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"rollup-plugin-terser@npm:7.0.2, rollup-plugin-terser@npm:^7.0.2":
+"rollup-plugin-terser@npm:^7.0.2":
   version: 7.0.2
   resolution: "rollup-plugin-terser@npm:7.0.2"
   dependencies:
@@ -30828,20 +30589,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"terser@npm:5.15.0, terser@npm:^5.0.0, terser@npm:^5.10.0, terser@npm:^5.3.4, terser@npm:^5.7.0, terser@npm:^5.7.2":
-  version: 5.15.0
-  resolution: "terser@npm:5.15.0"
-  dependencies:
-    "@jridgewell/source-map": "npm:^0.3.2"
-    acorn: "npm:^8.5.0"
-    commander: "npm:^2.20.0"
-    source-map-support: "npm:~0.5.20"
-  bin:
-    terser: bin/terser
-  checksum: f051544d6ce1673e2755345e3cd846994afcedf3bbb634bc364a01e183a9a9d2236f94e742ef524615da67b545cd4327f2f11e8aafbebd11fda9458428aa3e23
-  languageName: node
-  linkType: hard
-
 "terser@npm:^4.1.2, terser@npm:^4.6.3":
   version: 4.8.0
   resolution: "terser@npm:4.8.0"
@@ -30852,6 +30599,20 @@ __metadata:
   bin:
     terser: bin/terser
   checksum: f201bb717bce77a073337498b6fb3b66a3b3039a384dcf3e8d4eab5f1d411ed3f29f334165479c1c7e22a28e1e2837466b5127bc1e713c2fc57a468d9c91f95f
+  languageName: node
+  linkType: hard
+
+"terser@npm:^5.0.0, terser@npm:^5.10.0, terser@npm:^5.3.4, terser@npm:^5.7.0, terser@npm:^5.7.2":
+  version: 5.15.0
+  resolution: "terser@npm:5.15.0"
+  dependencies:
+    "@jridgewell/source-map": "npm:^0.3.2"
+    acorn: "npm:^8.5.0"
+    commander: "npm:^2.20.0"
+    source-map-support: "npm:~0.5.20"
+  bin:
+    terser: bin/terser
+  checksum: f051544d6ce1673e2755345e3cd846994afcedf3bbb634bc364a01e183a9a9d2236f94e742ef524615da67b545cd4327f2f11e8aafbebd11fda9458428aa3e23
   languageName: node
   linkType: hard
 
@@ -32966,7 +32727,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.74.0, webpack@npm:>=4.43.0 <6.0.0, webpack@npm:^5.74.0, webpack@npm:^5.9.0":
+"webpack@npm:5.74.0, webpack@npm:>=4.43.0 <6.0.0, webpack@npm:^5.9.0":
   version: 5.74.0
   resolution: "webpack@npm:5.74.0"
   dependencies:
