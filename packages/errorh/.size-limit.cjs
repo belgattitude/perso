@@ -14,25 +14,25 @@ module.exports = [
   // ESM full bundle and individual imports
   // ###################################################
   {
-    name: "ESM Webpack (*)",
+    name: "ESM (import everything *)",
     path: ["dist/esm/index.js"],
     import: "*",
     limit: fullBundleMaxSize,
   },
   {
-    name: "ESM Webpack (one client exception)",
+    name: "ESM (only HttpNotFound exception)",
     path: ["dist/esm/index.js"],
-    import: "{ HttpBadMapping }",
+    import: "{ HttpNotFound }",
     limit: "400B",
   },
   {
-    name: "ESM Webpack (one server exception)",
+    name: "ESM (only HttpInternalServerError)",
     path: ["dist/esm/index.js"],
     import: "{ HttpInternalServerError }",
     limit: "400B",
   },
   {
-    name: "ESM Webpack (one typeguard)",
+    name: "ESM (only isHttpException typeguard)",
     path: ["dist/esm/index.js"],
     import: "{ isHttpException }",
     limit: "400B",
@@ -41,7 +41,7 @@ module.exports = [
   // Commonjs full bundle
   // ###################################################
   {
-    name: "CJS Webpack (*)",
+    name: "CJS (require everything *)",
     path: ["dist/cjs/index.js"],
     limit: fullBundleMaxSize,
   }
