@@ -25,6 +25,12 @@ module.exports = {
       // @see https://github.com/jest-community/eslint-plugin-jest
       extends: ['plugin:jest/recommended'],
       rules: {
+        // Relax typescript
+        '@typescript-eslint/no-explicit-any': 'warn',
+        '@typescript-eslint/no-non-null-assertion': 'off',
+        '@typescript-eslint/no-object-literal-type-assertion': 'off',
+        '@typescript-eslint/no-empty-function': 'off',
+        // Enable Jest rules
         'jest/no-focused-tests': 'error',
         'jest/prefer-mock-promise-shorthand': 'error',
         'jest/no-commented-out-tests': 'error',
@@ -36,9 +42,6 @@ module.exports = {
         'jest/prefer-strict-equal': 'error',
         'jest/prefer-to-have-length': 'error',
         'jest/consistent-test-it': ['error', { fn: 'it' }],
-        '@typescript-eslint/no-non-null-assertion': 'off',
-        '@typescript-eslint/no-object-literal-type-assertion': 'off',
-        '@typescript-eslint/no-empty-function': 'off',
       },
     },
   ],
