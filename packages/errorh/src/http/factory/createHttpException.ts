@@ -15,10 +15,12 @@ export const createHttpException = (
     if (statusCode < 500) {
       return new HttpClientException({
         statusCode,
+        message: params,
       });
     }
     return new HttpServerException({
       statusCode,
+      message: params,
     });
   }
   return null;

@@ -23,13 +23,19 @@ module.exports = [
     name: "ESM (only HttpNotFound exception)",
     path: ["dist/esm/index.js"],
     import: "{ HttpNotFound }",
-    limit: "400B",
+    limit: "325B",
   },
   {
     name: "ESM (only HttpInternalServerError)",
     path: ["dist/esm/index.js"],
     import: "{ HttpInternalServerError }",
-    limit: "400B",
+    limit: "325B",
+  },
+  {
+    name: "ESM (two exceptions: HttpNotFound HttpInternalServerError)",
+    path: ["dist/esm/index.js"],
+    import: "{ HttpNotFound, HttpInternalServerError }",
+    limit: "375B",
   },
   {
     name: "ESM (only isHttpException)",
@@ -50,7 +56,7 @@ module.exports = [
   {
     name: "CJS (require everything *)",
     path: ["dist/cjs/index.js"],
-    webpack: false,
+    webpack: true,
     limit: fullBundleMaxSize,
   }
 ];
