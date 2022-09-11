@@ -1,25 +1,23 @@
-import type { HttpException } from '../../base';
-import { statusMap } from '../../status';
-import { createHttpException } from '../createHttpException';
 import { HttpClientException, HttpServerException } from '../../base';
+import { statusMap } from '../../status';
+import type { HttpErrorParams } from '../../types';
+import { createHttpException } from '../createHttpException';
 
 describe('createHttpException tests', () => {
   describe('when error status has a concrete class', () => {
     const all = Object.entries(statusMap).map(([code, cls]) => {
       const obj = new cls();
-      return [
-        obj.name,
-        Number.parseInt(code, 10),
-        cls as unknown as HttpException,
-      ];
-    }) as [className: string, status: number, cls: HttpException][];
+      return [obj.name, Number.parseInt(code, 10), cls];
+    });
 
     it.each(all)(
       'should return %p from status %p',
-      (className, status, cls) => {
+      (_className, status, cls) => {
         const params = 'msg';
-        const error = createHttpException(status, params);
-        const expected = new (cls as any)(params);
+        const error = createHttpException(status as number, params);
+        const expected = new (cls as {
+          new <T>(params: HttpErrorParams | string): T;
+        })(params);
         expect(error).toStrictEqual(expected);
       }
     );
