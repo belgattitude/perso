@@ -10,8 +10,8 @@ const className = 'HttpForbidden';
  */
 export class HttpForbidden extends HttpClientException {
   static readonly STATUS = 403;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 403, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 403, msgOrParams));
     Object.setPrototypeOf(this, HttpForbidden.prototype);
     this.name = className;
   }

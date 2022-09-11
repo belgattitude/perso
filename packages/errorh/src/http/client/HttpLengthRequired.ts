@@ -10,8 +10,8 @@ const className = 'HttpLengthRequired';
  */
 export class HttpLengthRequired extends HttpClientException {
   static readonly STATUS = 411;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 411, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 411, msgOrParams));
     Object.setPrototypeOf(this, HttpLengthRequired.prototype);
     this.name = className;
   }

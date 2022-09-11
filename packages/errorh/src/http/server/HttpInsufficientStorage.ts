@@ -5,12 +5,13 @@ import { getSuper } from '../utils';
 const className = 'HttpInsufficientStorage';
 
 /**
- * InsufficientStorage is specific to webdav.
+ * Server status 507 - webdav specific
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/507
  */
 export class HttpInsufficientStorage extends HttpServerException {
   static readonly STATUS = 507;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 507, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 507, msgOrParams));
     Object.setPrototypeOf(this, HttpInsufficientStorage.prototype);
     this.name = className;
   }

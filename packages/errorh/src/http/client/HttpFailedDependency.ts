@@ -10,8 +10,8 @@ const className = 'HttpFailedDependency';
  */
 export class HttpFailedDependency extends HttpClientException {
   static readonly STATUS = 424;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 424, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 424, msgOrParams));
     Object.setPrototypeOf(this, HttpFailedDependency.prototype);
     this.name = className;
   }

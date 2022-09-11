@@ -43,7 +43,7 @@ export const statusMap = {
   509: Server.HttpBandwidthLimitExceeded,
   510: Server.HttpNotExtended,
   511: Server.HttpNetworkAuthenticationRequired,
-  // Cloudflare related
+  // Well-known Cloudflare (unassigned)
   /*
   520: 'Unknown Error',
   521: 'Web Server Is Down',

@@ -10,8 +10,8 @@ const className = 'HttpImATeapot';
  */
 export class HttpImATeapot extends HttpClientException {
   static readonly STATUS = 418;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 418, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 418, msgOrParams));
     Object.setPrototypeOf(this, HttpImATeapot.prototype);
     this.name = 'HttpImATeapot';
   }
