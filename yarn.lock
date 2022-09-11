@@ -2948,6 +2948,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/esbuild": "npm:8.1.0"
     "@size-limit/file": "npm:8.1.0"
+    "@size-limit/webpack": "npm:8.1.0"
     "@types/node": "npm:18.7.16"
     "@vitest/coverage-istanbul": "npm:0.23.2"
     "@vitest/ui": "npm:0.23.2"
@@ -7572,6 +7573,19 @@ __metadata:
   peerDependencies:
     size-limit: 8.1.0
   checksum: b76742ca805c09f6907b5cb3fb328226e3c1108890e077276c9c0938ccc14233f272255c7552f8223741e45e507017cc6725a7e40cee063ee1b506aacc02a3b0
+  languageName: node
+  linkType: hard
+
+"@size-limit/webpack@npm:8.1.0":
+  version: 8.1.0
+  resolution: "@size-limit/webpack@npm:8.1.0"
+  dependencies:
+    escape-string-regexp: "npm:^4.0.0"
+    nanoid: "npm:^3.3.4"
+    webpack: "npm:^5.74.0"
+  peerDependencies:
+    size-limit: 8.1.0
+  checksum: e12f2fd21932a078d4d98f1ab34026bd11ae240eba71a65a6b6173802cbc35750e8da98b9d15d4c2569bcfec1fa226b0d32c366db47a9bf3e90b58f94bd8e30f
   languageName: node
   linkType: hard
 
@@ -32706,7 +32720,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"webpack@npm:5.74.0, webpack@npm:>=4.43.0 <6.0.0, webpack@npm:^5.9.0":
+"webpack@npm:5.74.0, webpack@npm:>=4.43.0 <6.0.0, webpack@npm:^5.74.0, webpack@npm:^5.9.0":
   version: 5.74.0
   resolution: "webpack@npm:5.74.0"
   dependencies:
