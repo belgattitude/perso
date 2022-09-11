@@ -4,6 +4,10 @@ import { getSuperParams } from '../utils';
 
 const className = 'HttpExpectationFailed';
 
+/**
+ * Client status 417
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/417
+ */
 export class HttpExpectationFailed extends HttpClientException {
   static readonly STATUS = 417;
   constructor(params?: HttpErrorParams | string) {

@@ -4,6 +4,10 @@ import { getSuperParams } from '../utils';
 
 const className = 'HttpBadRequest';
 
+/**
+ * Client status 400
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+ */
 export class HttpBadRequest extends HttpClientException {
   static readonly STATUS = 400;
   constructor(params?: HttpErrorParams | string) {

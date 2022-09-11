@@ -2,7 +2,7 @@ import type { HttpStatusCode } from '../types';
 
 export type HttpExceptionParams = {
   statusCode: HttpStatusCode;
-  message: string;
+  message?: string;
   url?: string;
   cause?: Error;
 };
