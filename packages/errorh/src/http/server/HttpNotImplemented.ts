@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpNotImplemented';
 
+/**
+ * Server status 501
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/501
+ */
 export class HttpNotImplemented extends HttpServerException {
   static readonly STATUS = 501;
   constructor(params?: HttpErrorParams | string) {

@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpNotAcceptable';
 
+/**
+ * Client status 406
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/406
+ */
 export class HttpNotAcceptable extends HttpClientException {
   static readonly STATUS = 406;
   constructor(params?: HttpErrorParams | string) {

@@ -5,7 +5,8 @@ import { getSuper } from '../utils';
 const className = 'HttpInsufficientStorage';
 
 /**
- * InsufficientStorage is specific to webdav.
+ * Server status 507 - webdav specific
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/507
  */
 export class HttpInsufficientStorage extends HttpServerException {
   static readonly STATUS = 507;

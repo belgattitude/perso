@@ -1,7 +1,7 @@
 // @ts-check
 
 // Regularly update this max size when new legit code is added (keep a threshold)
-const fullBundleMaxSize = "2800B";
+const fullBundleMaxSize = "3200B";
 
 /**
  * Will ensure esm tree-shakeability and total size are within expectations.
@@ -47,9 +47,14 @@ module.exports = [
     name: "ESM (only createHttpException)",
     path: ["dist/esm/index.js"],
     import: "{ createHttpException }",
-    limit: "2100B", // Will import all server/client exceptions
+    limit: "2300B", // Will import all server/client exceptions
   },
-
+  {
+    name: "ESM (only httpException helper)",
+    path: ["dist/esm/index.js"],
+    import: "{ httpException }",
+    limit: "2300B", // Will import all server/client exceptions
+  },
   // ###################################################
   // Commonjs full bundle
   // ###################################################

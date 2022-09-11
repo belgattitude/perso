@@ -48,10 +48,10 @@ describe('createHttpException tests', () => {
   });
 
   describe('when client status does not have a concrete class', () => {
-    const unlistedClientErrors = [['Arbitrary number 499', 499]] as [
-      msg: string,
-      status: number
-    ][];
+    const unlistedClientErrors = [
+      ['Arbitrary number 499', 499],
+      ['Unassigned 427', 427],
+    ] as [msg: string, status: number][];
 
     it.each(unlistedClientErrors)(
       'should return HttpClientException',

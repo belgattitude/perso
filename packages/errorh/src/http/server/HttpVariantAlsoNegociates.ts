@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpVariantAlsoNegociates';
 
+/**
+ * Server status 506
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/506
+ */
 export class HttpVariantAlsoNegociates extends HttpServerException {
   static readonly STATUS = 506;
   constructor(params?: HttpErrorParams | string) {

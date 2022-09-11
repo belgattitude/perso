@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpServiceUnavailable';
 
+/**
+ * Server status 503
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/503
+ */
 export class HttpServiceUnavailable extends HttpServerException {
   static readonly STATUS = 503;
   constructor(params?: HttpErrorParams | string) {

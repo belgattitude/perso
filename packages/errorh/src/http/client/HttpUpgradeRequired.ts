@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpUpgradeRequired';
 
+/**
+ * Client status 426
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/426
+ */
 export class HttpUpgradeRequired extends HttpClientException {
   static readonly STATUS = 426;
   constructor(params?: HttpErrorParams | string) {

@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpUnprocessableEntity';
 
+/**
+ * Client status 422
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/422
+ */
 export class HttpUnprocessableEntity extends HttpClientException {
   static readonly STATUS = 422;
   constructor(params?: HttpErrorParams | string) {

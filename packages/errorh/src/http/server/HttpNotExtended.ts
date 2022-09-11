@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpNotExtended';
 
+/**
+ * Server status 510
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/510
+ */
 export class HttpNotExtended extends HttpServerException {
   static readonly STATUS = 510;
   constructor(params?: HttpErrorParams | string) {

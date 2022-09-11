@@ -4,6 +4,10 @@ import { getSuper } from '../utils';
 
 const className = 'HttpPayloadTooLarge';
 
+/**
+ * Client status 413
+ * @link https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/413
+ */
 export class HttpPayloadTooLarge extends HttpClientException {
   static readonly STATUS = 413;
   constructor(params?: HttpErrorParams | string) {
