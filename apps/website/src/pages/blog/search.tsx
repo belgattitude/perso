@@ -1,4 +1,4 @@
-import { HttpBadRequest } from '@belgattitude/errorh';
+import { HttpBadRequest } from '@belgattitude/http-exception';
 import type { GetStaticProps, InferGetStaticPropsType } from 'next';
 import { serverSideTranslations } from 'next-i18next/serverSideTranslations';
 import { blogConfig } from '@/features/blog/blog.config';

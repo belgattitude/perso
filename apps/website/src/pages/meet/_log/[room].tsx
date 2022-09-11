@@ -1,4 +1,4 @@
-import { HttpBadRequest } from '@belgattitude/errorh';
+import { HttpBadRequest } from '@belgattitude/http-exception';
 import { assertNonEmptyString } from '@belgattitude/ts-utils';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import type { ReactElement } from 'react';

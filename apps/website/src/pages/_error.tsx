@@ -3,7 +3,7 @@
  * @link https://nextjs.org/docs/advanced-features/custom-error-page
  */
 
-import { isHttpException } from '@belgattitude/errorh';
+import { isHttpException } from '@belgattitude/http-exception';
 
 import {
   captureException as sentryCaptureException,
