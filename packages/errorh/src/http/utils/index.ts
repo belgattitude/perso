@@ -1,2 +1,2 @@
-export { getMsgFromName } from './getMsgFromName';
-export { getSuperParams } from './getSuperParams';
+export { getSuper } from './getSuper';
+export { getMsgFromCls } from './getMsgFromCls';

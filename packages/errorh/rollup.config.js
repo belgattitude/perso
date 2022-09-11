@@ -28,7 +28,7 @@ const getEsbuildPlugin = (format, minify) => {
     tsconfig: './tsconfig.build.json',
     sourceMap: false,
     treeShaking: true,
-    platform: 'neutral',
+    platform: 'browser',
     target: [ecmascriptLevel],
     minify: minify,
     minifyWhitespace: minify, // setting to false allows to create patches

@@ -1,6 +1,6 @@
 import { HttpServerException } from '../base';
 import type { HttpErrorParams } from '../types';
-import { getSuperParams } from '../utils';
+import { getSuper } from '../utils';
 
 const className = 'HttpInsufficientStorage';
 
@@ -10,7 +10,7 @@ const className = 'HttpInsufficientStorage';
 export class HttpInsufficientStorage extends HttpServerException {
   static readonly STATUS = 507;
   constructor(params?: HttpErrorParams | string) {
-    super(getSuperParams(className, 507, params));
+    super(getSuper(className, 507, params));
     Object.setPrototypeOf(this, HttpInsufficientStorage.prototype);
     this.name = className;
   }
