@@ -4,6 +4,12 @@
 
 [client](../modules/client.md).HttpBadRequest
 
+Client status 400
+
+**`Link`**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/400
+
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)

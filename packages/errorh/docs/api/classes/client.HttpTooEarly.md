@@ -1,32 +1,34 @@
-[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpBadMapping
+[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpTooEarly
 
-# Class: HttpBadMapping
+# Class: HttpTooEarly
 
-[client](../modules/client.md).HttpBadMapping
+[client](../modules/client.md).HttpTooEarly
+
+Experimental: expect this behaviour to change in the future
 
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)
 
-  ↳ **`HttpBadMapping`**
+  ↳ **`HttpTooEarly`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](client.HttpBadMapping.md#constructor)
+- [constructor](client.HttpTooEarly.md#constructor)
 
 ### Properties
 
-- [statusCode](client.HttpBadMapping.md#statuscode)
-- [url](client.HttpBadMapping.md#url)
-- [STATUS](client.HttpBadMapping.md#status)
+- [statusCode](client.HttpTooEarly.md#statuscode)
+- [url](client.HttpTooEarly.md#url)
+- [STATUS](client.HttpTooEarly.md#status)
 
 ## Constructors
 
 ### constructor
 
-• **new HttpBadMapping**(`params?`)
+• **new HttpTooEarly**(`params?`)
 
 #### Parameters
 
@@ -66,4 +68,4 @@ Optional url that caused the error
 
 ### STATUS
 
-▪ `Static` `Readonly` **STATUS**: `421`
+▪ `Static` `Readonly` **STATUS**: `425`

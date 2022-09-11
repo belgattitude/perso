@@ -10,15 +10,27 @@
 
   ↳ **`HttpClientException`**
 
-  ↳↳ [`HttpBadMapping`](client.HttpBadMapping.md)
-
   ↳↳ [`HttpBadRequest`](client.HttpBadRequest.md)
 
   ↳↳ [`HttpConflict`](client.HttpConflict.md)
 
   ↳↳ [`HttpExpectationFailed`](client.HttpExpectationFailed.md)
 
+  ↳↳ [`HttpFailedDependency`](client.HttpFailedDependency.md)
+
   ↳↳ [`HttpForbidden`](client.HttpForbidden.md)
+
+  ↳↳ [`HttpGone`](client.HttpGone.md)
+
+  ↳↳ [`HttpImATeapot`](client.HttpImATeapot.md)
+
+  ↳↳ [`HttpLengthRequired`](client.HttpLengthRequired.md)
+
+  ↳↳ [`HttpLocked`](client.HttpLocked.md)
+
+  ↳↳ [`HttpMisredirectedRequest`](client.HttpMisredirectedRequest.md)
+
+  ↳↳ [`HttpMethodNotAllowed`](client.HttpMethodNotAllowed.md)
 
   ↳↳ [`HttpNotAcceptable`](client.HttpNotAcceptable.md)
 
@@ -32,13 +44,15 @@
 
   ↳↳ [`HttpPreconditionRequired`](client.HttpPreconditionRequired.md)
 
-  ↳↳ [`HttpProxyAuthentificationRequired`](client.HttpProxyAuthentificationRequired.md)
+  ↳↳ [`HttpProxyAuthenticationRequired`](client.HttpProxyAuthenticationRequired.md)
 
   ↳↳ [`HttpRangeNotSatisfiable`](client.HttpRangeNotSatisfiable.md)
 
   ↳↳ [`HttpRequestHeaderFieldsTooLarge`](client.HttpRequestHeaderFieldsTooLarge.md)
 
   ↳↳ [`HttpRequestTimeout`](client.HttpRequestTimeout.md)
+
+  ↳↳ [`HttpTooEarly`](client.HttpTooEarly.md)
 
   ↳↳ [`HttpTooManyRequests`](client.HttpTooManyRequests.md)
 

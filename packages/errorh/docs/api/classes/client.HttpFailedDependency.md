@@ -1,38 +1,38 @@
-[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpMethodNotAllowed
+[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpFailedDependency
 
-# Class: HttpMethodNotAllowed
+# Class: HttpFailedDependency
 
-[client](../modules/client.md).HttpMethodNotAllowed
+[client](../modules/client.md).HttpFailedDependency
 
-Client status 405
+Http client status 424 (webdav specific)
 
 **`Link`**
 
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
 
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)
 
-  ↳ **`HttpMethodNotAllowed`**
+  ↳ **`HttpFailedDependency`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](client.HttpMethodNotAllowed.md#constructor)
+- [constructor](client.HttpFailedDependency.md#constructor)
 
 ### Properties
 
-- [statusCode](client.HttpMethodNotAllowed.md#statuscode)
-- [url](client.HttpMethodNotAllowed.md#url)
-- [STATUS](client.HttpMethodNotAllowed.md#status)
+- [statusCode](client.HttpFailedDependency.md#statuscode)
+- [url](client.HttpFailedDependency.md#url)
+- [STATUS](client.HttpFailedDependency.md#status)
 
 ## Constructors
 
 ### constructor
 
-• **new HttpMethodNotAllowed**(`params?`)
+• **new HttpFailedDependency**(`params?`)
 
 #### Parameters
 
@@ -72,4 +72,4 @@ Optional url that caused the error
 
 ### STATUS
 
-▪ `Static` `Readonly` **STATUS**: `405`
+▪ `Static` `Readonly` **STATUS**: `424`

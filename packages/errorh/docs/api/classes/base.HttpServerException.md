@@ -10,14 +10,6 @@
 
   ↳ **`HttpServerException`**
 
-  ↳↳ [`HttpGone`](client.HttpGone.md)
-
-  ↳↳ [`HttpImATeapot`](client.HttpImATeapot.md)
-
-  ↳↳ [`HttpLengthRequired`](client.HttpLengthRequired.md)
-
-  ↳↳ [`HttpMethodNotAllowed`](client.HttpMethodNotAllowed.md)
-
   ↳↳ [`HttpBadGateway`](server.HttpBadGateway.md)
 
   ↳↳ [`HttpBandwidthLimitExceeded`](server.HttpBandwidthLimitExceeded.md)
@@ -33,8 +25,6 @@
   ↳↳ [`HttpNotExtended`](server.HttpNotExtended.md)
 
   ↳↳ [`HttpNotImplemented`](server.HttpNotImplemented.md)
-
-  ↳↳ [`HttpProxyError`](server.HttpProxyError.md)
 
   ↳↳ [`HttpServiceUnavailable`](server.HttpServiceUnavailable.md)
 

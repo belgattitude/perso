@@ -1,32 +1,38 @@
-[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpProxyAuthentificationRequired
+[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpLocked
 
-# Class: HttpProxyAuthentificationRequired
+# Class: HttpLocked
 
-[client](../modules/client.md).HttpProxyAuthentificationRequired
+[client](../modules/client.md).HttpLocked
+
+Client status 423 (webdav specific)
+
+**`Link`**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status#client_error_responses
 
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)
 
-  ↳ **`HttpProxyAuthentificationRequired`**
+  ↳ **`HttpLocked`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](client.HttpProxyAuthentificationRequired.md#constructor)
+- [constructor](client.HttpLocked.md#constructor)
 
 ### Properties
 
-- [statusCode](client.HttpProxyAuthentificationRequired.md#statuscode)
-- [url](client.HttpProxyAuthentificationRequired.md#url)
-- [STATUS](client.HttpProxyAuthentificationRequired.md#status)
+- [statusCode](client.HttpLocked.md#statuscode)
+- [url](client.HttpLocked.md#url)
+- [STATUS](client.HttpLocked.md#status)
 
 ## Constructors
 
 ### constructor
 
-• **new HttpProxyAuthentificationRequired**(`params?`)
+• **new HttpLocked**(`params?`)
 
 #### Parameters
 
@@ -66,4 +72,4 @@ Optional url that caused the error
 
 ### STATUS
 
-▪ `Static` `Readonly` **STATUS**: `407`
+▪ `Static` `Readonly` **STATUS**: `423`

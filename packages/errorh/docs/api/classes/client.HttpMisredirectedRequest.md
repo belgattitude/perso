@@ -1,38 +1,32 @@
-[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpMethodNotAllowed
+[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpMisredirectedRequest
 
-# Class: HttpMethodNotAllowed
+# Class: HttpMisredirectedRequest
 
-[client](../modules/client.md).HttpMethodNotAllowed
-
-Client status 405
-
-**`Link`**
-
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
+[client](../modules/client.md).HttpMisredirectedRequest
 
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)
 
-  ↳ **`HttpMethodNotAllowed`**
+  ↳ **`HttpMisredirectedRequest`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](client.HttpMethodNotAllowed.md#constructor)
+- [constructor](client.HttpMisredirectedRequest.md#constructor)
 
 ### Properties
 
-- [statusCode](client.HttpMethodNotAllowed.md#statuscode)
-- [url](client.HttpMethodNotAllowed.md#url)
-- [STATUS](client.HttpMethodNotAllowed.md#status)
+- [statusCode](client.HttpMisredirectedRequest.md#statuscode)
+- [url](client.HttpMisredirectedRequest.md#url)
+- [STATUS](client.HttpMisredirectedRequest.md#status)
 
 ## Constructors
 
 ### constructor
 
-• **new HttpMethodNotAllowed**(`params?`)
+• **new HttpMisredirectedRequest**(`params?`)
 
 #### Parameters
 
@@ -72,4 +66,4 @@ Optional url that caused the error
 
 ### STATUS
 
-▪ `Static` `Readonly` **STATUS**: `405`
+▪ `Static` `Readonly` **STATUS**: `421`

@@ -4,6 +4,12 @@
 
 [client](../modules/client.md).HttpConflict
 
+Client status 409
+
+**`Link`**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/409
+
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)

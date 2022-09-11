@@ -4,9 +4,15 @@
 
 [client](../modules/client.md).HttpLengthRequired
 
+Client status 411
+
+**`Link`**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/411
+
 ## Hierarchy
 
-- [`HttpServerException`](base.HttpServerException.md)
+- [`HttpClientException`](base.HttpClientException.md)
 
   ↳ **`HttpLengthRequired`**
 
@@ -36,7 +42,7 @@
 
 #### Overrides
 
-[HttpServerException](base.HttpServerException.md).[constructor](base.HttpServerException.md#constructor)
+[HttpClientException](base.HttpClientException.md).[constructor](base.HttpClientException.md#constructor)
 
 ## Properties
 
@@ -48,7 +54,7 @@ Http error status code
 
 #### Inherited from
 
-[HttpServerException](base.HttpServerException.md).[statusCode](base.HttpServerException.md#statuscode)
+[HttpClientException](base.HttpClientException.md).[statusCode](base.HttpClientException.md#statuscode)
 
 ---
 
@@ -60,7 +66,7 @@ Optional url that caused the error
 
 #### Inherited from
 
-[HttpServerException](base.HttpServerException.md).[url](base.HttpServerException.md#url)
+[HttpClientException](base.HttpClientException.md).[url](base.HttpClientException.md#url)
 
 ---
 

@@ -4,6 +4,12 @@
 
 [client](../modules/client.md).HttpForbidden
 
+Client status 403
+
+**`Link`**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/403
+
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)

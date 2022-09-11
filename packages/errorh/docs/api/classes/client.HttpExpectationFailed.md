@@ -4,6 +4,12 @@
 
 [client](../modules/client.md).HttpExpectationFailed
 
+Client status 417
+
+**`Link`**
+
+https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/417
+
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)

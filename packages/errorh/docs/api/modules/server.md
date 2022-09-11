@@ -15,7 +15,6 @@
 - [HttpNetworkAuthenticationRequired](../classes/server.HttpNetworkAuthenticationRequired.md)
 - [HttpNotExtended](../classes/server.HttpNotExtended.md)
 - [HttpNotImplemented](../classes/server.HttpNotImplemented.md)
-- [HttpProxyError](../classes/server.HttpProxyError.md)
 - [HttpServiceUnavailable](../classes/server.HttpServiceUnavailable.md)
 - [HttpVariantAlsoNegociates](../classes/server.HttpVariantAlsoNegociates.md)
 - [HttpVersionNotSupported](../classes/server.HttpVersionNotSupported.md)

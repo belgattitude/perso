@@ -1,38 +1,32 @@
-[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpMethodNotAllowed
+[@belgattitude/errorh - v0.1.0](../README.md) / [client](../modules/client.md) / HttpProxyAuthenticationRequired
 
-# Class: HttpMethodNotAllowed
+# Class: HttpProxyAuthenticationRequired
 
-[client](../modules/client.md).HttpMethodNotAllowed
-
-Client status 405
-
-**`Link`**
-
-https://developer.mozilla.org/en-US/docs/Web/HTTP/Status/405
+[client](../modules/client.md).HttpProxyAuthenticationRequired
 
 ## Hierarchy
 
 - [`HttpClientException`](base.HttpClientException.md)
 
-  ↳ **`HttpMethodNotAllowed`**
+  ↳ **`HttpProxyAuthenticationRequired`**
 
 ## Table of contents
 
 ### Constructors
 
-- [constructor](client.HttpMethodNotAllowed.md#constructor)
+- [constructor](client.HttpProxyAuthenticationRequired.md#constructor)
 
 ### Properties
 
-- [statusCode](client.HttpMethodNotAllowed.md#statuscode)
-- [url](client.HttpMethodNotAllowed.md#url)
-- [STATUS](client.HttpMethodNotAllowed.md#status)
+- [statusCode](client.HttpProxyAuthenticationRequired.md#statuscode)
+- [url](client.HttpProxyAuthenticationRequired.md#url)
+- [STATUS](client.HttpProxyAuthenticationRequired.md#status)
 
 ## Constructors
 
 ### constructor
 
-• **new HttpMethodNotAllowed**(`params?`)
+• **new HttpProxyAuthenticationRequired**(`params?`)
 
 #### Parameters
 
@@ -72,4 +66,4 @@ Optional url that caused the error
 
 ### STATUS
 
-▪ `Static` `Readonly` **STATUS**: `405`
+▪ `Static` `Readonly` **STATUS**: `407`
