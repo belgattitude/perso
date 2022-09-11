@@ -10,8 +10,8 @@ const className = 'HttpRangeNotSatisfiable';
  */
 export class HttpRangeNotSatisfiable extends HttpClientException {
   static readonly STATUS = 416;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 416, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 416, msgOrParams));
     Object.setPrototypeOf(this, HttpRangeNotSatisfiable.prototype);
     this.name = className;
   }

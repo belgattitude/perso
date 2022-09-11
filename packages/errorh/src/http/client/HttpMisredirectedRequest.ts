@@ -10,8 +10,8 @@ const className = 'HttpMisredirectedRequest';
  */
 export class HttpMisredirectedRequest extends HttpClientException {
   static readonly STATUS = 421;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 421, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 421, msgOrParams));
     Object.setPrototypeOf(this, HttpMisredirectedRequest.prototype);
     this.name = className;
   }

@@ -10,8 +10,8 @@ const className = 'HttpMethodNotAllowed';
  */
 export class HttpMethodNotAllowed extends HttpClientException {
   static readonly STATUS = 405;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 405, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 405, msgOrParams));
     Object.setPrototypeOf(this, HttpMethodNotAllowed.prototype);
     this.name = className;
   }

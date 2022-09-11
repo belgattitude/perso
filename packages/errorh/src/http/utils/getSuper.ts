@@ -10,9 +10,10 @@ import { getMsgFromCls } from './getMsgFromCls';
 export const getSuper = (
   className: string,
   statusCode: number,
-  params?: HttpErrorParams | string
+  msgOrParams?: HttpErrorParams | string
 ): HttpExceptionParams => {
-  const p = typeof params === 'string' ? { message: params } : params;
+  const p =
+    typeof msgOrParams === 'string' ? { message: msgOrParams } : msgOrParams;
   const { message = getMsgFromCls(className), url, cause } = p ?? {};
   return { statusCode, message, url, cause };
 };

@@ -10,8 +10,8 @@ const className = 'HttpInternalServerError';
  */
 export class HttpInternalServerError extends HttpServerException {
   static readonly STATUS = 500;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 500, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 500, msgOrParams));
     Object.setPrototypeOf(this, HttpInternalServerError.prototype);
     this.name = className;
   }

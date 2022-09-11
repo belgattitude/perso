@@ -10,8 +10,8 @@ const className = 'HttpGatewayTimeout';
  */
 export class HttpGatewayTimeout extends HttpServerException {
   static readonly STATUS = 504;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 504, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 504, msgOrParams));
     Object.setPrototypeOf(this, HttpGatewayTimeout.prototype);
     this.name = className;
   }

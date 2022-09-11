@@ -10,8 +10,8 @@ const className = 'HttpBandwidthLimitExceeded';
  */
 export class HttpBandwidthLimitExceeded extends HttpServerException {
   static readonly STATUS = 509;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 509, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 509, msgOrParams));
     Object.setPrototypeOf(this, HttpBandwidthLimitExceeded.prototype);
     this.name = className;
   }

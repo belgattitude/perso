@@ -10,8 +10,8 @@ const className = 'HttpLocked';
  */
 export class HttpLocked extends HttpClientException {
   static readonly STATUS = 423;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 423, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 423, msgOrParams));
     Object.setPrototypeOf(this, HttpLocked.prototype);
     this.name = className;
   }

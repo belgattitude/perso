@@ -10,8 +10,8 @@ const className = 'HttpInsufficientStorage';
  */
 export class HttpInsufficientStorage extends HttpServerException {
   static readonly STATUS = 507;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 507, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 507, msgOrParams));
     Object.setPrototypeOf(this, HttpInsufficientStorage.prototype);
     this.name = className;
   }

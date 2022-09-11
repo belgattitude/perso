@@ -10,8 +10,8 @@ const className = 'HttpConflict';
  */
 export class HttpConflict extends HttpClientException {
   static readonly STATUS = 409;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 409, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 409, msgOrParams));
     Object.setPrototypeOf(this, HttpConflict.prototype);
     this.name = className;
   }

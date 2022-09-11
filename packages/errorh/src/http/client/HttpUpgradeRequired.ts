@@ -10,8 +10,8 @@ const className = 'HttpUpgradeRequired';
  */
 export class HttpUpgradeRequired extends HttpClientException {
   static readonly STATUS = 426;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 426, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 426, msgOrParams));
     Object.setPrototypeOf(this, HttpUpgradeRequired.prototype);
     this.name = className;
   }

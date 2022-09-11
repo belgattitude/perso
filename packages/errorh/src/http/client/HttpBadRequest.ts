@@ -10,8 +10,8 @@ const className = 'HttpBadRequest';
  */
 export class HttpBadRequest extends HttpClientException {
   static readonly STATUS = 400;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 400, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 400, msgOrParams));
     Object.setPrototypeOf(this, HttpBadRequest.prototype);
     this.name = className;
   }

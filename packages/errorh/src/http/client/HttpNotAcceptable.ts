@@ -10,8 +10,8 @@ const className = 'HttpNotAcceptable';
  */
 export class HttpNotAcceptable extends HttpClientException {
   static readonly STATUS = 406;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 406, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 406, msgOrParams));
     Object.setPrototypeOf(this, HttpNotAcceptable.prototype);
     this.name = className;
   }

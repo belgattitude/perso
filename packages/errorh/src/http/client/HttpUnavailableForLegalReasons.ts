@@ -10,8 +10,8 @@ const className = 'HttpUnavailableForLegalReasons';
  */
 export class HttpUnavailableForLegalReasons extends HttpClientException {
   static readonly STATUS = 451;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 451, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 451, msgOrParams));
     Object.setPrototypeOf(this, HttpUnavailableForLegalReasons.prototype);
     this.name = className;
   }

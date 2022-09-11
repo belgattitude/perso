@@ -10,8 +10,8 @@ const className = 'HttpPreconditionFailed';
  */
 export class HttpPreconditionFailed extends HttpClientException {
   static readonly STATUS = 412;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 412, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 412, msgOrParams));
     Object.setPrototypeOf(this, HttpPreconditionFailed.prototype);
     this.name = className;
   }

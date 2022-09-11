@@ -10,8 +10,8 @@ const className = 'HttpVariantAlsoNegociates';
  */
 export class HttpVariantAlsoNegociates extends HttpServerException {
   static readonly STATUS = 506;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 506, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 506, msgOrParams));
     Object.setPrototypeOf(this, HttpVariantAlsoNegociates.prototype);
     this.name = className;
   }

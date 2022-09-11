@@ -10,8 +10,8 @@ const className = 'HttpPayloadTooLarge';
  */
 export class HttpPayloadTooLarge extends HttpClientException {
   static readonly STATUS = 413;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 413, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 413, msgOrParams));
     Object.setPrototypeOf(this, HttpPayloadTooLarge.prototype);
     this.name = className;
   }

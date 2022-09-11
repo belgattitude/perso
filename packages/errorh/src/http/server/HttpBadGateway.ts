@@ -10,8 +10,8 @@ const className = 'HttpBadGateway';
  */
 export class HttpBadGateway extends HttpServerException {
   static readonly STATUS = 502;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 502, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 502, msgOrParams));
     Object.setPrototypeOf(this, HttpBadGateway.prototype);
     this.name = className;
   }

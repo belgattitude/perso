@@ -10,8 +10,8 @@ const className = 'HttpLoopDetected';
  */
 export class HttpLoopDetected extends HttpServerException {
   static readonly STATUS = 508;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 508, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 508, msgOrParams));
     Object.setPrototypeOf(this, HttpLoopDetected.prototype);
     this.name = className;
   }

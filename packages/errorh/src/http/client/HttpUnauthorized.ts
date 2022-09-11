@@ -10,8 +10,8 @@ const className = 'HttpUnauthorized';
  */
 export class HttpUnauthorized extends HttpClientException {
   static readonly STATUS = 401;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 401, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 401, msgOrParams));
     Object.setPrototypeOf(this, HttpUnauthorized.prototype);
     this.name = className;
   }

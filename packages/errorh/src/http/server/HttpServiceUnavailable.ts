@@ -10,8 +10,8 @@ const className = 'HttpServiceUnavailable';
  */
 export class HttpServiceUnavailable extends HttpServerException {
   static readonly STATUS = 503;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 503, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 503, msgOrParams));
     Object.setPrototypeOf(this, HttpServiceUnavailable.prototype);
     this.name = className;
   }

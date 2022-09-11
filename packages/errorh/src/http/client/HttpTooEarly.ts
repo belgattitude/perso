@@ -11,8 +11,8 @@ const className = 'HttpTooEarly';
  */
 export class HttpTooEarly extends HttpClientException {
   static readonly STATUS = 425;
-  constructor(params?: HttpErrorParams | string) {
-    super(getSuper(className, 425, params));
+  constructor(msgOrParams?: HttpErrorParams | string) {
+    super(getSuper(className, 425, msgOrParams));
     Object.setPrototypeOf(this, HttpTooEarly.prototype);
     this.name = className;
   }
