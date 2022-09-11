@@ -1,5 +1,11 @@
 {
-  "entryPoints": ["src/index.ts"],
+  "entryPoints": [
+    "src/http/base/index.ts",
+    "src/http/client/index.ts",
+    "src/http/server/index.ts",
+    "src/http/typeguards/index.ts",
+    "src/http/types/index.ts"
+  ],
   "out": "./docs/api",
   "excludePrivate": true,
   "excludeProtected": true,
