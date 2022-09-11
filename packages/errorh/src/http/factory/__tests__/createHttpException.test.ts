@@ -5,19 +5,21 @@ import { createHttpException } from '../createHttpException';
 
 describe('createHttpException tests', () => {
   describe('when error status has a concrete class', () => {
+    type AnyExceptionClass = {
+      new <T>(params: HttpErrorParams | string): T;
+    };
+
     const all = Object.entries(statusMap).map(([code, cls]) => {
       const obj = new cls();
       return [obj.name, Number.parseInt(code, 10), cls];
-    });
+    }) as [className: string, status: number, cls: AnyExceptionClass][];
 
     it.each(all)(
       'should return %p from status %p',
-      (_className, status, cls) => {
+      (className, status, cls) => {
         const params = 'msg';
-        const error = createHttpException(status as number, params);
-        const expected = new (cls as {
-          new <T>(params: HttpErrorParams | string): T;
-        })(params);
+        const error = createHttpException(status, params);
+        const expected = new cls(params);
         expect(error).toStrictEqual(expected);
       }
     );
