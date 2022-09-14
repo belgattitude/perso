@@ -1,4 +1,3 @@
-export * from './github.config';
 export { getLazyPusher } from './pusher.config';
 export * from './styles.config';
 export * from './mdx.config';

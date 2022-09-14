@@ -1,10 +1,7 @@
-/**
- * @link GithubRepoList
- */
-
 export const filteredRepos = [
   ['nextjs-monorepo-example', ['typescript', 'react']],
   ['cache-interop', ['typescript', 'node']],
+  ['http-exception', ['typescript', 'node', 'npm']],
   ['soluble-japha', ['php7.1']],
   ['soluble-mediatools', ['php7.1', 'ffmpeg']],
   ['perso', ['typescript', 'react']],
