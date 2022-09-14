@@ -16,6 +16,9 @@
     "apps/*",
     "packages/*"
   ],
+  "resolutions": {
+    "@graphql-inspector/core": "3.3.0"
+  },
   "scripts": {
     "g:clean": "yarn clean:global-cache && yarn workspaces foreach -pv run clean",
     "g:build": "nx run-many --target=build --all",
