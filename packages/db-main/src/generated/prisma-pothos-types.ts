@@ -1,3 +1,4 @@
+/* eslint-disable */
 import type { Prisma, Company, Contact, Project, Meeting, MeetingReview, MeetingAttendee, Post, User, Account, Session, VerificationToken } from "@prisma/client";
 export default interface PrismaTypes {
     Company: {
