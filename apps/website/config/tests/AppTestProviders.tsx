@@ -6,6 +6,7 @@ import { I18nextTestStubProvider } from './I18nextTestStubProvider';
 const fakeNextAuthSession: Session = {
   user: {
     email: 'test@example.com',
+    role: 'guest',
     name: 'AppTestProvider',
   },
   expires: '2050-01-01T00:00:00.000Z',

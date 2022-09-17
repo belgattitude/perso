@@ -36,7 +36,9 @@
       "@belgattitude/failwell": ["../../../packages/failwell/src/index"],
       "@belgattitude/ts-utils": ["../../../packages/ts-utils/src/index"],
       "@belgattitude/crypto": ["../../../packages/crypto/src/index"]
-    }
+    },
+    "typeRoots": ["./", "./src/types.d"],
+    "types": ["vitest/globals"]
   },
   "exclude": ["**/node_modules", ".next"],
   "include": [
@@ -49,5 +51,4 @@
     "**/*.mjs",
     "**/*.json"
   ]
-  // "types": ["vitest/globals"]
 }

@@ -19,8 +19,15 @@
     "./locales/*.json": {
       "require": "./src/locales/*.json",
       "import": "./src/locales/*.json"
-    }
+    },
+    "./package.json": "./package.json"
   },
+  "files": [
+    "./src/locales",
+    "package.json",
+    "README.md",
+    "LICENSE"
+  ],
   "scripts": {
     "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
     "prettier-check": "yarn run --top-level prettier --check --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",

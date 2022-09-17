@@ -1,8 +1,6 @@
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
 import type { FC } from 'react';
-import { useQuery } from 'react-query';
-import { searchBlog } from '@/features/blog/api';
 import { blogConfig } from '@/features/blog/blog.config';
 
 export const AdminPage: FC = () => {
