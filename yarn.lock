@@ -7211,10 +7211,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@remix-run/router@npm:1.0.0":
-  version: 1.0.0
-  resolution: "@remix-run/router@npm:1.0.0"
-  checksum: a43b25809f2cb9bbf19418f0e2f60b167f0ecec86754c9cdefdb82127f1f146462fe262f79d853127d1e2aa66e353acf5cb27476b365a5c4f0f6f18943bf6d77
+"@remix-run/router@npm:1.0.1":
+  version: 1.0.1
+  resolution: "@remix-run/router@npm:1.0.1"
+  checksum: bd0f52ada18d8170961bf6339f6850d92c58560a1a87917fa5bb890e763423c839dd78264395f513ec07615caa4e5f26cbfea645db568b95a4d1005cd926a0f5
   languageName: node
   linkType: hard
 
@@ -27374,26 +27374,27 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-router-dom@npm:6.4.0":
-  version: 6.4.0
-  resolution: "react-router-dom@npm:6.4.0"
+"react-router-dom@npm:6.4.1":
+  version: 6.4.1
+  resolution: "react-router-dom@npm:6.4.1"
   dependencies:
-    react-router: "npm:6.4.0"
+    "@remix-run/router": "npm:1.0.1"
+    react-router: "npm:6.4.1"
   peerDependencies:
     react: ">=16.8"
     react-dom: ">=16.8"
-  checksum: 5d9576c785e93a8f6f7a9890b24795eb00ec54ee8dc2b53822dc0e4108df31bfb937c0e950e02882e159fda15cad047bd3939222abe066843758f9579afbe49b
+  checksum: 9a9c8a83484beb086f2830ed9c3f8d385c2172963de8adf38fd0269613230c1f2dd9e70f051313873d6f491d8a6a6acc1ff44e0dbfb4d9be19c76b3f6b10cc46
   languageName: node
   linkType: hard
 
-"react-router@npm:6.4.0":
-  version: 6.4.0
-  resolution: "react-router@npm:6.4.0"
+"react-router@npm:6.4.1":
+  version: 6.4.1
+  resolution: "react-router@npm:6.4.1"
   dependencies:
-    "@remix-run/router": "npm:1.0.0"
+    "@remix-run/router": "npm:1.0.1"
   peerDependencies:
     react: ">=16.8"
-  checksum: 51db516722767adea584b24b967c6744f423f7e0885930fb0d9ce4eb0ae722757e7b19c7d842a084806653e5dcb51f14d7e198db3f450f10eecbf1184a36373c
+  checksum: cb3b8e3285fd04a3557eb41502aa0352eb36b333d1ed203e780bae899cb554e16af5fe86f3bea8861b32fae72b668311356b1ac6c407fe763218bcc44e711e81
   languageName: node
   linkType: hard
 
@@ -32629,7 +32630,7 @@ __metadata:
     react-hook-form: "npm:7.36.0"
     react-i18next: "npm:11.18.6"
     react-query: "npm:3.39.2"
-    react-router-dom: "npm:6.4.0"
+    react-router-dom: "npm:6.4.1"
     reading-time: "npm:1.5.0"
     rehype-autolink-headings: "npm:6.1.1"
     rehype-code-titles: "npm:1.1.0"
