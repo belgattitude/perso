@@ -1,3 +1,4 @@
+import { isHttpException } from '@belgattitude/http-exception';
 import type { FC } from 'react';
 import { useQuery } from 'react-query';
 import { getGithubRepos } from '@/features/about/api/getGithubRepos';
@@ -10,7 +11,7 @@ export type RepoListProps = {
 
 export const RepoList: FC<RepoListProps> = (props) => {
   const { className } = props;
-  const { isError, isLoading, data } = useQuery(
+  const { isError, isLoading, data, error } = useQuery(
     ['getGithubRepos'],
     getGithubRepos
   );
@@ -20,7 +21,16 @@ export const RepoList: FC<RepoListProps> = (props) => {
   }
 
   if (isError) {
-    return <div className={className}>Cannot reach github, please retry.</div>;
+    return (
+      <div className={className}>
+        <div>Cannot reach github, please retry.</div>
+        {isHttpException(error) && (
+          <p>
+            <em>{`${error.statusCode} ${error.message}`}</em>
+          </p>
+        )}
+      </div>
+    );
   }
 
   return (

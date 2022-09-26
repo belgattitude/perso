@@ -1,4 +1,4 @@
-import { assertNonEmptyString } from '../asserts';
+import { assertIncludes, assertNonEmptyString } from '../asserts';
 
 describe('Asserts test', () => {
   describe('assertNonEmptyString', () => {
@@ -14,6 +14,16 @@ describe('Asserts test', () => {
           return new Error('message2');
         });
       }).toThrow('message2');
+    });
+  });
+  describe('assertIncludes', () => {
+    it('should work as expected', () => {
+      expect(() => {
+        assertIncludes('cool', ['cool']);
+      }).not.toThrow();
+      expect(() => {
+        assertIncludes('cool', [], 'message');
+      }).toThrow('message');
     });
   });
 });
