@@ -1,4 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { withApiErrorHandler } from '@/backend/helpers';
+import { assertHttpMethod } from '@/backend/lib/utils';
 
 export type HealthCheckApiPayload = {
   status: 'ok' | 'error';
@@ -8,16 +10,11 @@ export type HealthCheckApiPayload = {
   timestamp: string;
 };
 
-export default async function healthCheckApiRoute(
+const healthcheckHandler = async (
   req: NextApiRequest,
   res: NextApiResponse
-) {
-  if (req.method !== 'GET') {
-    res.status(400).end();
-    return;
-  }
-
-  res.setHeader('Content-Type', 'application/json');
+) => {
+  assertHttpMethod(req, 'GET');
 
   const payload: HealthCheckApiPayload = {
     status: 'ok',
@@ -27,6 +24,9 @@ export default async function healthCheckApiRoute(
     timestamp: new Date().toISOString(),
   };
 
+  res.setHeader('Content-Type', 'application/json');
   res.status(200).send(JSON.stringify(payload, undefined, 2));
   res.end();
-}
+};
+
+export default withApiErrorHandler(healthcheckHandler);

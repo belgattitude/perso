@@ -6,14 +6,14 @@ import { appWithTranslation } from 'next-i18next';
 import type { AppProps as NextAppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import { getWithTrpcConfig } from '@/config/trpc.config';
-import { MainLayout } from '@/layouts/main';
+import { MainLayout } from '@/themes/layouts/main';
 import { AppProviders } from '../AppProviders';
 import type { AppRouter } from './api/trpc/[...trpc]';
 
 /**
  * Import global styles for tailwind compatibility
  */
-import '../styles/global.css';
+import '../themes/styles/global.css';
 
 // eslint-disable-next-line @typescript-eslint/no-explicit-any
 type NextPageWithLayout = NextComponentType<NextPageContext, any, any> & {

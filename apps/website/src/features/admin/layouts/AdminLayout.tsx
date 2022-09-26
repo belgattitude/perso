@@ -6,7 +6,7 @@ import {
   MainLayoutFavicon,
   MainLayoutFonts,
   MainLayoutMeta,
-} from '@/layouts/main/head';
+} from '@/themes/layouts/main/head';
 
 const { navLinks, iconLinks } = siteConfig.topNav;
 

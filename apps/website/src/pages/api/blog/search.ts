@@ -1,48 +1,60 @@
+import { HttpInternalServerError } from '@belgattitude/http-exception';
 import type { NextApiRequest, NextApiResponse } from 'next';
+import { z } from 'zod';
 import { prismaDbMain } from '@/backend/config';
 import { SearchPostsQuery } from '@/backend/features/blog/SearchPosts.query';
+import { withApiErrorHandler } from '@/backend/helpers';
+import { getSafeRequest } from '@/backend/lib';
+import { assertHttpMethod } from '@/backend/lib/utils';
 import { appCache } from '@/config/app-cache.config';
 
-export default async function apiBlogSearchRoute(
+const reqSchema = z.object({
+  // method: z.enum(['GET']),
+  query: z.object({
+    _cache: z.string().optional(),
+  }),
+});
+
+const apiBlogSearchHandler = async (
   req: NextApiRequest,
   res: NextApiResponse
-) {
-  if (req.method !== 'GET') {
-    res.status(405).end(`Method ${req.method} Not Allowed`);
-    return;
-  }
-  const { _cache: cacheParam = '' } = req.query;
+) => {
+  assertHttpMethod(req, 'GET');
 
-  const query = new SearchPostsQuery(prismaDbMain);
+  const { query } = getSafeRequest(req, reqSchema);
+
+  const { _cache: cacheParam = '' } = query;
+
+  const postsQuery = new SearchPostsQuery(prismaDbMain);
 
   const { data, error, isHit, isSuccess } = await appCache.getOrSet(
-    query.getCacheKey({}),
-    async () => query.execute({}),
+    postsQuery.getCacheKey({}),
+    async () => postsQuery.execute({}),
     {
       ttl: 3_600,
       disableCache: cacheParam.includes('app-cache:off'),
     }
   );
 
-  if (isSuccess) {
-    /*
-    const oneMinute = 60;
-    res.setHeader(
-      'Cache-Control',
-      `public,max-age=${oneMinute * 10},s-maxage=${oneMinute * 30}`
-    );
-    res.setHeader('Content-Type', 'application/json');
-    */
-    res.status(200).send(
-      JSON.stringify({
-        success: true,
-        data: data,
-        metadata: {
-          cacheHit: isHit,
-        },
-      })
-    );
-  } else {
-    res.status(500).send(error);
+  if (!isSuccess) {
+    throw new HttpInternalServerError({
+      message: [
+        "Can't retrieve posts",
+        error ? `(${error?.message})` : '',
+      ].join(','),
+      cause: error,
+    });
   }
-}
+
+  res.status(200).send(
+    JSON.stringify({
+      success: true,
+      data: data,
+      metadata: {
+        cacheHit: isHit,
+      },
+    })
+  );
+};
+
+export default withApiErrorHandler(apiBlogSearchHandler);

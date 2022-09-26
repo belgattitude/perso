@@ -2,7 +2,7 @@ import Head from 'next/head';
 import type { FC, PropsWithChildren } from 'react';
 import { TopNav } from '@/components/nav/topnav';
 import { navConfig } from '@/features/about/config';
-import { MainLayoutFavicon } from '@/layouts/main/head';
+import { MainLayoutFavicon } from '@/themes/layouts/main/head';
 import { ResumeLayoutFonts, ResumeLayoutMeta } from './Head';
 
 type Props = PropsWithChildren;

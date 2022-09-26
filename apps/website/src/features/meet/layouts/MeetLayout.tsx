@@ -1,6 +1,6 @@
 import Head from 'next/head';
 import type { FC, ReactNode } from 'react';
-import { MainLayoutFavicon } from '@/layouts/main/head';
+import { MainLayoutFavicon } from '@/themes/layouts/main/head';
 import { MeetLayoutFonts, MeetLayoutMeta } from './Head';
 
 type Props = {

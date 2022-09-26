@@ -1,5 +1,5 @@
 import { createServer } from '@graphql-yoga/node';
-import { graphqlSchema } from '@/graphql/graphqlSchema';
+import { graphqlSchema } from '@/backend/graphql/graphqlSchema';
 
 const server = createServer({
   schema: graphqlSchema,

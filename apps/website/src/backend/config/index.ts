@@ -5,3 +5,4 @@ export {
   corsWhilelistedOriginsRegexp,
   corsDefaultOptions,
 } from './cors.config';
+export * from './logger.config';
