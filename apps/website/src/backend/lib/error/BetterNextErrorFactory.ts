@@ -14,22 +14,25 @@ export class BetterNextErrorFactory {
         try {
           await handler(req, res);
         } catch (e) {
-          if (isHttpException(e)) {
-            const msg = [
-              `${e.statusCode} ${e.name}: ${e.message}`,
-              e.url ? `(on ${e.url}).` : '.',
-            ].join(',');
-            await this.logger.log('log', msg, e);
-            res.status(e.statusCode).json({
-              success: false,
-              error: {
-                // Choose what is useful to expose
+          await this.logger.log('error', `[api-error] ${req.url}`, e);
+          const payload = isHttpException(e)
+            ? {
+                // add anything that can be useful from HttpException
+                statusCode: e.statusCode,
                 message: e.message,
-              },
-            });
-          }
+                url: req.url,
+              }
+            : {
+                statusCode: 500,
+                message: e instanceof Error ? e.message : 'Unknown error',
+              };
+
+          res.status(payload.statusCode).json({
+            success: false,
+            error: payload,
+          });
         } finally {
-          // res.end();
+          // Do whatever, ie res.end();
         }
       };
   };
