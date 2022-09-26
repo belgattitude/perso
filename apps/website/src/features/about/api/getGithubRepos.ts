@@ -8,7 +8,7 @@ export type GetGithubRepos = UnPromisify<ReturnType<typeof getGithubRepos>>;
 
 export const getGithubRepos = async () => {
   const data = await safeAxios
-    .get<JsonApiResponse<ListGithubRepos>>('/api/github/prjects', {
+    .get<JsonApiResponse<ListGithubRepos>>('/api/github/projects', {
       responseType: 'json',
     })
     .then((res) => res.data.data);
