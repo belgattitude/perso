@@ -2770,9 +2770,9 @@ __metadata:
     "@graphql-mesh/openapi": "npm:0.33.19"
     "@graphql-mesh/runtime": "npm:0.44.13"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     cross-env: "npm:7.0.3"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     graphql: "npm:16.6.0"
     jest: "npm:29.0.3"
     npm-run-all: "npm:4.1.5"
@@ -2813,7 +2813,7 @@ __metadata:
     "@testing-library/react-hooks": "npm:8.0.1"
     "@testing-library/user-event": "npm:14.4.3"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:18.0.6"
     "@vitejs/plugin-react": "npm:2.1.0"
@@ -2823,7 +2823,7 @@ __metadata:
     babel-loader: "npm:8.2.5"
     cross-env: "npm:7.0.3"
     es-check: "npm:7.0.1"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     get-tsconfig: "npm:4.2.0"
     happy-dom: "npm:6.0.4"
     jest: "npm:29.0.3"
@@ -2847,7 +2847,7 @@ __metadata:
     typescript: "npm:4.8.3"
     vite: "npm:3.1.3"
     vite-plugin-svgr: "npm:2.2.1"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
     webpack: "npm:5.74.0"
   peerDependencies:
@@ -2866,9 +2866,9 @@ __metadata:
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     cross-env: "npm:7.0.3"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     rimraf: "npm:3.0.2"
     typescript: "npm:4.8.3"
   languageName: unknown
@@ -2881,12 +2881,12 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.1.0"
     "@types/bcryptjs": "npm:2.4.2"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     "@vitest/coverage-istanbul": "npm:0.23.4"
     "@vitest/ui": "npm:0.23.4"
     bcryptjs: "npm:^2.4.3"
     es-check: "npm:7.0.1"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     get-tsconfig: "npm:4.2.0"
     rimraf: "npm:3.0.2"
     size-limit: "npm:8.1.0"
@@ -2894,7 +2894,7 @@ __metadata:
     tsup: "npm:6.2.3"
     typescript: "npm:4.8.3"
     vite: "npm:3.1.3"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
   languageName: unknown
   linkType: soft
@@ -2910,14 +2910,14 @@ __metadata:
     "@prisma/client": "npm:4.3.1"
     "@soluble/dsn-parser": "npm:1.6.0"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     "@vitest/coverage-istanbul": "npm:0.23.4"
     "@vitest/ui": "npm:0.23.4"
     camelcase: "npm:7.0.0"
     cross-env: "npm:7.0.3"
     dotenv-flow: "npm:3.2.0"
     dotenv-flow-cli: "npm:1.0.0"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     execa: "npm:6.1.0"
     graphql: "npm:16.6.0"
     is-port-reachable: "npm:4.0.0"
@@ -2933,7 +2933,7 @@ __metadata:
     tsx: "npm:3.9.0"
     typescript: "npm:4.8.3"
     vite: "npm:3.1.3"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
   peerDependencies:
     "@pothos/plugin-prisma": ^3.6.1
@@ -2945,33 +2945,33 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/eslint-config-bases@workspace:packages/eslint-config-bases"
   dependencies:
-    "@graphql-eslint/eslint-plugin": "npm:^3.10.7"
+    "@graphql-eslint/eslint-plugin": "npm:^3.11.2"
     "@rushstack/eslint-patch": "npm:^1.2.0"
     "@testing-library/jest-dom": "npm:^5.16.5"
     "@testing-library/react": "npm:^13.4.0"
     "@testing-library/react-hooks": "npm:^8.0.1"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
-    "@types/prettier": "npm:2.7.0"
+    "@types/node": "npm:18.7.22"
+    "@types/prettier": "npm:2.7.1"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:18.0.6"
     "@typescript-eslint/eslint-plugin": "npm:^5.38.0"
     "@typescript-eslint/parser": "npm:^5.38.0"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     eslint-config-prettier: "npm:^8.5.0"
     eslint-import-resolver-typescript: "npm:^3.5.1"
     eslint-plugin-import: "npm:^2.26.0"
     eslint-plugin-jest: "npm:^27.0.4"
     eslint-plugin-jest-formatting: "npm:^3.1.0"
     eslint-plugin-jsx-a11y: "npm:^6.6.1"
-    eslint-plugin-playwright: "npm:^0.11.1"
+    eslint-plugin-playwright: "npm:^0.11.2"
     eslint-plugin-react: "npm:^7.31.8"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-regexp: "npm:^1.9.0"
     eslint-plugin-sonarjs: "npm:^0.15.0"
     eslint-plugin-storybook: "npm:^0.6.4"
     eslint-plugin-tailwindcss: "npm:^3.6.2"
-    eslint-plugin-testing-library: "npm:^5.6.4"
+    eslint-plugin-testing-library: "npm:^5.7.0"
     graphql: "npm:16.6.0"
     react: "npm:18.2.0"
     react-dom: "npm:18.2.0"
@@ -3003,12 +3003,12 @@ __metadata:
     "@size-limit/file": "npm:8.1.0"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     "@vitest/coverage-istanbul": "npm:0.23.4"
     "@vitest/ui": "npm:0.23.4"
     bcryptjs: "npm:^2.4.3"
     es-check: "npm:7.0.1"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     get-tsconfig: "npm:4.2.0"
     jest: "npm:29.0.3"
     rimraf: "npm:3.0.2"
@@ -3018,7 +3018,7 @@ __metadata:
     tsup: "npm:6.2.3"
     typescript: "npm:4.8.3"
     vite: "npm:3.1.3"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
   languageName: unknown
   linkType: soft
@@ -3031,11 +3031,11 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.1.0"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     "@vitest/ui": "npm:0.23.4"
     c8: "npm:7.12.0"
     es-check: "npm:7.0.1"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     get-tsconfig: "npm:4.2.0"
     jest: "npm:29.0.3"
     rimraf: "npm:3.0.2"
@@ -3045,17 +3045,17 @@ __metadata:
     tsup: "npm:6.2.3"
     typescript: "npm:4.8.3"
     vite: "npm:3.1.3"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
   peerDependencies:
     "@aws-sdk/client-s3": ^3.145.0
   languageName: unknown
   linkType: soft
 
-"@belgattitude/http-exception@npm:1.1.0":
-  version: 1.1.0
-  resolution: "@belgattitude/http-exception@npm:1.1.0"
-  checksum: 93be3d08f571afac27d8edfea24e690679293aec9f0ab96d5becaff73967b529768d2a521f444116816146f53f9321111ec184f5e58d0d6867c0b266b211b4c0
+"@belgattitude/http-exception@npm:1.2.0":
+  version: 1.2.0
+  resolution: "@belgattitude/http-exception@npm:1.2.0"
+  checksum: bb9e08258f595e4801a75b5aac5893ffc12bcbe2b6c35cc31fca92b01c4993c428d398f3208bfea4257061efb58e3c39468cb655f00fbb858c8317054650bda8
   languageName: node
   linkType: hard
 
@@ -3066,12 +3066,12 @@ __metadata:
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.1.0"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     "@vitest/coverage-istanbul": "npm:0.23.4"
     "@vitest/ui": "npm:0.23.4"
     cross-env: "npm:7.0.3"
     es-check: "npm:7.0.1"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     get-tsconfig: "npm:4.2.0"
     jest: "npm:29.0.3"
     rimraf: "npm:3.0.2"
@@ -3082,7 +3082,7 @@ __metadata:
     type-fest: "npm:3.0.0"
     typescript: "npm:4.8.3"
     vite: "npm:3.1.3"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
   languageName: unknown
   linkType: soft
@@ -4260,9 +4260,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.12.1":
-  version: 2.12.1
-  resolution: "@graphql-codegen/cli@npm:2.12.1"
+"@graphql-codegen/cli@npm:2.12.2":
+  version: 2.12.2
+  resolution: "@graphql-codegen/cli@npm:2.12.2"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.2"
     "@graphql-codegen/plugin-helpers": "npm:^2.7.1"
@@ -4303,7 +4303,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: b87e18e736a051db89e3b7c0585db99597bba29ac2271484492d501370a302450cc9b05f7bb81640ac3318d0cfc534650894ccf30069bd23ec1ac86476923300
+  checksum: 373b922f66312be21d44d2b45479adaa19b09ca90eaeb71ba16df77fbc880bd6de2917490a7dbf1025d1a37eebc27477b2f75c4b82d265489d754634d16d7103
   languageName: node
   linkType: hard
 
@@ -4446,9 +4446,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-eslint/eslint-plugin@npm:^3.10.7":
-  version: 3.10.7
-  resolution: "@graphql-eslint/eslint-plugin@npm:3.10.7"
+"@graphql-eslint/eslint-plugin@npm:^3.11.2":
+  version: 3.11.2
+  resolution: "@graphql-eslint/eslint-plugin@npm:3.11.2"
   dependencies:
     "@babel/code-frame": "npm:^7.16.7"
     "@graphql-tools/code-file-loader": "npm:^7.2.14"
@@ -4462,7 +4462,7 @@ __metadata:
     lodash.lowercase: "npm:^4.3.0"
   peerDependencies:
     graphql: ^0.8.0 || ^0.9.0 || ^0.10.0 || ^0.11.0 || ^0.12.0 || ^0.13.0 || ^14.0.0 || ^15.0.0 || ^16.0.0
-  checksum: 5a16b2dcf29772bcfd1cdaa1e1acdc6a275ea2ef7439598da06f1893939f3d78cdbbd1f156be522bcaa4a0e2d20b02cee90b509888a553665db1476905fb9903
+  checksum: c35216ac8eba48f6ce1cf92e69647a4c6dce3c73bf2bf199ce733a31a4e8eaa9556b75455dfad53ddb77f334b5ec8982d23a4774ca22b3acb9673d78a779207d
   languageName: node
   linkType: hard
 
@@ -5403,14 +5403,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@humanwhocodes/config-array@npm:^0.10.4":
-  version: 0.10.4
-  resolution: "@humanwhocodes/config-array@npm:0.10.4"
+"@humanwhocodes/config-array@npm:^0.10.5":
+  version: 0.10.5
+  resolution: "@humanwhocodes/config-array@npm:0.10.5"
   dependencies:
     "@humanwhocodes/object-schema": "npm:^1.2.1"
     debug: "npm:^4.1.1"
     minimatch: "npm:^3.0.4"
-  checksum: 1de59dbea29b5206781f4e4d283c81ae4470ccb0296f9f425aedf9e6f43b480f165da918da11f8f5fcd5152be47e609b006a418a51dc6857f04177e9f88efadc
+  checksum: 9bf08561df9fa3c97e8d031a0523ea85d5bd4bc39dbaaa612db527decef99d2b836a1561fc254c315615f7ef6e1695ac74c9b572812f3d78b1b726161ff455b1
   languageName: node
   linkType: hard
 
@@ -6583,18 +6583,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:14.7.11":
-  version: 14.7.11
-  resolution: "@nrwl/cli@npm:14.7.11"
+"@nrwl/cli@npm:14.7.13":
+  version: 14.7.13
+  resolution: "@nrwl/cli@npm:14.7.13"
   dependencies:
-    nx: "npm:14.7.11"
-  checksum: 5eb9e5e526dd3aab2a24a51a0e198254cf3fd43c88cb9188239145ddde2fb03f5711e972d85885290a4dca14cc18c55f7b7e31b6e009f2d5ce4cd3f0003060d2
+    nx: "npm:14.7.13"
+  checksum: 60c26bf96e3bf57073955fd9050289524db9765d8bced78edc143b8a96197517c85a0e9e90a2c916a282ef3ad1da02d8bb832ccb8dcb4b95ae162123c4ffe873
   languageName: node
   linkType: hard
 
-"@nrwl/devkit@npm:14.7.11":
-  version: 14.7.11
-  resolution: "@nrwl/devkit@npm:14.7.11"
+"@nrwl/devkit@npm:14.7.13":
+  version: 14.7.13
+  resolution: "@nrwl/devkit@npm:14.7.13"
   dependencies:
     "@phenomnomnominal/tsquery": "npm:4.1.1"
     ejs: "npm:^3.1.7"
@@ -6602,17 +6602,17 @@ __metadata:
     tslib: "npm:^2.3.0"
   peerDependencies:
     nx: ">= 13.10 <= 15"
-  checksum: 50748da80e1af307a0cf3c6470932c75abf9d7b47d22b09228e1804312ff6b7f008f7772dd545550c4c5de1ca12806fa4192e72d12f59b941d321b72dc4ebf41
+  checksum: 154a4c6f2a0494149fff97548a78a9b6341acfe345618b459358d6b8d62f897de502ee81f520e1622869c9f3663a877b2dac261db444e2ef53096f3fceae5fa2
   languageName: node
   linkType: hard
 
-"@nrwl/jest@npm:14.7.11":
-  version: 14.7.11
-  resolution: "@nrwl/jest@npm:14.7.11"
+"@nrwl/jest@npm:14.7.13":
+  version: 14.7.13
+  resolution: "@nrwl/jest@npm:14.7.13"
   dependencies:
     "@jest/reporters": "npm:28.1.1"
     "@jest/test-result": "npm:28.1.1"
-    "@nrwl/devkit": "npm:14.7.11"
+    "@nrwl/devkit": "npm:14.7.13"
     "@phenomnomnominal/tsquery": "npm:4.1.1"
     chalk: "npm:4.1.0"
     dotenv: "npm:~10.0.0"
@@ -6622,18 +6622,18 @@ __metadata:
     jest-util: "npm:28.1.1"
     resolve.exports: "npm:1.1.0"
     tslib: "npm:^2.3.0"
-  checksum: 22bcbcd74a70961cb23aa04cd027223ba39fbe22c0948ed532426f888a64952b5bfa60681659234934d9a6d53b47032ea172fc1954ee2d332b287a465ec0ac4f
+  checksum: 2e431f2e524c97697c964b190eef4ef0bef956a2112b86c8ceb9edefb70f85fae10b0929f57ac7410b2da6ffcfa31aaa96c70cd64c4ea98f5dfdd9cb8e5e38e8
   languageName: node
   linkType: hard
 
-"@nrwl/linter@npm:14.7.11":
-  version: 14.7.11
-  resolution: "@nrwl/linter@npm:14.7.11"
+"@nrwl/linter@npm:14.7.13":
+  version: 14.7.13
+  resolution: "@nrwl/linter@npm:14.7.13"
   dependencies:
-    "@nrwl/devkit": "npm:14.7.11"
-    "@nrwl/jest": "npm:14.7.11"
+    "@nrwl/devkit": "npm:14.7.13"
+    "@nrwl/jest": "npm:14.7.13"
     "@phenomnomnominal/tsquery": "npm:4.1.1"
-    nx: "npm:14.7.11"
+    nx: "npm:14.7.13"
     tmp: "npm:~0.2.1"
     tslib: "npm:^2.3.0"
   peerDependencies:
@@ -6641,7 +6641,7 @@ __metadata:
   peerDependenciesMeta:
     eslint:
       optional: true
-  checksum: 7a18e6005a3d6c2d86c8cfb7da840be33057bb2bc186342b7012b07024e51dbaf6b1d805503466e06729bd70a3a85d20847e7002ff5effd87d989c16cf3cddba
+  checksum: 47127128f99c91ec39b2120b99ed43c7738ffad81c7189c09530b57600ab8c10c701d5e0129da9b01974c9f2b71d2145b396c22caffc4718b9ef862c4c23849a
   languageName: node
   linkType: hard
 
@@ -6662,24 +6662,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/tao@npm:14.7.11":
-  version: 14.7.11
-  resolution: "@nrwl/tao@npm:14.7.11"
+"@nrwl/tao@npm:14.7.13":
+  version: 14.7.13
+  resolution: "@nrwl/tao@npm:14.7.13"
   dependencies:
-    nx: "npm:14.7.11"
+    nx: "npm:14.7.13"
   bin:
     tao: index.js
-  checksum: c6df20420372c1c96e2aea1ccc35d1c8def5c071d22074e4f9f2089019df77b356922cd10406aa1a087d9b270c11d9f7b756cbd74d3a6d93833b64205d5fdecd
+  checksum: 946fa2cfae06988b7ddf5ce700f31256608ebae0ccf181f72e0b0059c00fcc006b3ac9419e4152a24d24b6b165788f43166da7fc60b109e890589fc3844a54d6
   languageName: node
   linkType: hard
 
-"@nrwl/workspace@npm:14.7.11":
-  version: 14.7.11
-  resolution: "@nrwl/workspace@npm:14.7.11"
+"@nrwl/workspace@npm:14.7.13":
+  version: 14.7.13
+  resolution: "@nrwl/workspace@npm:14.7.13"
   dependencies:
-    "@nrwl/devkit": "npm:14.7.11"
-    "@nrwl/jest": "npm:14.7.11"
-    "@nrwl/linter": "npm:14.7.11"
+    "@nrwl/devkit": "npm:14.7.13"
+    "@nrwl/jest": "npm:14.7.13"
+    "@nrwl/linter": "npm:14.7.13"
     "@parcel/watcher": "npm:2.0.4"
     chalk: "npm:4.1.0"
     chokidar: "npm:^3.5.1"
@@ -6694,7 +6694,7 @@ __metadata:
     ignore: "npm:^5.0.4"
     minimatch: "npm:3.0.5"
     npm-run-path: "npm:^4.0.1"
-    nx: "npm:14.7.11"
+    nx: "npm:14.7.13"
     open: "npm:^8.4.0"
     rxjs: "npm:^6.5.4"
     semver: "npm:7.3.4"
@@ -6707,7 +6707,7 @@ __metadata:
   peerDependenciesMeta:
     prettier:
       optional: true
-  checksum: f69f523b053970b42ba7f5c97cda38dda517589c348ba276e7381531f3391d1d934d11cadbeede6d67867406d6846d28f3a25e85ca6fa18275610784667d9a16
+  checksum: cae65b1581741684784583af4011e269c420c8de6a644377b6cba53c0abd12c83aa6a9aa11fa0b6d99d0c65957f68eb3399f44ca4e206d771df0d3413e72f5f1
   languageName: node
   linkType: hard
 
@@ -7142,9 +7142,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.32.0":
-  version: 9.32.0
-  resolution: "@react-three/drei@npm:9.32.0"
+"@react-three/drei@npm:9.32.2":
+  version: 9.32.2
+  resolution: "@react-three/drei@npm:9.32.2"
   dependencies:
     "@babel/runtime": "npm:^7.11.2"
     "@react-spring/three": "npm:^9.3.1"
@@ -7160,7 +7160,7 @@ __metadata:
     stats.js: "npm:^0.17.0"
     suspend-react: "npm:^0.0.8"
     three-mesh-bvh: "npm:^0.5.15"
-    three-stdlib: "npm:^2.14.3"
+    three-stdlib: "npm:2.17.0"
     troika-three-text: "npm:^0.46.4"
     utility-types: "npm:^3.10.0"
     zustand: "npm:^3.5.13"
@@ -7172,13 +7172,13 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 6a385e8a5304e6d7a15bf0e5689ff5be8e0c3e6b9ccdefacb5f2814e4c9814c410628bc6e04767fdd343424addc368d2b9d5af341bece4288aed4d3b0e2145b6
+  checksum: 992f2d3a16dbbe418fc5118fd4993cfafb58ad4aacff7d1c45b2c361b0d5105b2735e8dd647d85f244522fbbafc4ed668748352a48e720e93d372bc831e7861e
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.8.2":
-  version: 8.8.2
-  resolution: "@react-three/fiber@npm:8.8.2"
+"@react-three/fiber@npm:8.8.3":
+  version: 8.8.3
+  resolution: "@react-three/fiber@npm:8.8.3"
   dependencies:
     "@babel/runtime": "npm:^7.17.8"
     "@types/react-reconciler": "npm:^0.26.7"
@@ -7207,7 +7207,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: 45ef59a43b2f7bfaed93c421fb7c9708ace8e6cdd54e55a505e5621038849242d74473ad5ede62ecb2ac1d5dcc24f5d512fae2e0612f7ee7f814dba83f92b8b0
+  checksum: 6ff5323754d6e37af7e9018c0c385446a2d451be1754ad12df158f84980bc8173eaa55d4855ce18447e1226256acc40e1952dabe02cf08ee4c008c830bf9aee3
   languageName: node
   linkType: hard
 
@@ -9732,10 +9732,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.7.18":
-  version: 18.7.18
-  resolution: "@types/node@npm:18.7.18"
-  checksum: 833883d724d9f980c6918f1a52f396cb351bf22e83b787481c992402e702e4a3658bd3ff5b561c878d3d9e253fb315eb6f7eb0db95804222669f18d3b54ea0f2
+"@types/node@npm:*, @types/node@npm:18.7.22":
+  version: 18.7.22
+  resolution: "@types/node@npm:18.7.22"
+  checksum: 6ad2ddf9e697936d16d90561019fe3b5f28d635f6140ba08d26a98395cfec255ea68116b15453933f16c39373a4319981d0b6ec4966279c4bfed4aaf675ff83b
   languageName: node
   linkType: hard
 
@@ -9816,10 +9816,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/prettier@npm:2.7.0, @types/prettier@npm:^2.1.5":
-  version: 2.7.0
-  resolution: "@types/prettier@npm:2.7.0"
-  checksum: ee4924676c522c0fcd10c7e03b225f09b420f5e2113cd70663539e963028bc6df3afe48055595398afeadb4871d23843d877822e673ffc62db17f23e455e0f29
+"@types/prettier@npm:2.7.1, @types/prettier@npm:^2.1.5":
+  version: 2.7.1
+  resolution: "@types/prettier@npm:2.7.1"
+  checksum: 7edc43b829b0047573c1328259a1ccfee3e0127b031b8e5a4b7115e9f375abed195d1f42ee350590372041cc0f0d5b529e2dbac1198989a050f38e1ec5e19760
   languageName: node
   linkType: hard
 
@@ -12004,17 +12004,17 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@nrwl/nx-cloud": "npm:14.6.2"
-    "@nrwl/workspace": "npm:14.7.11"
+    "@nrwl/workspace": "npm:14.7.13"
     "@playwright/test": "npm:1.26.0"
-    "@types/prettier": "npm:2.7.0"
+    "@types/prettier": "npm:2.7.1"
     "@types/shell-quote": "npm:1.7.1"
     cross-env: "npm:7.0.3"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     husky: "npm:8.0.1"
     is-ci: "npm:3.0.1"
     lint-staged: "npm:13.0.3"
     npm-run-all: "npm:4.1.5"
-    nx: "npm:14.7.11"
+    nx: "npm:14.7.13"
     prettier: "npm:2.7.1"
     rimraf: "npm:3.0.2"
     shell-quote: "npm:1.7.3"
@@ -13710,7 +13710,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cookie@npm:0.5.0":
+"cookie@npm:0.5.0, cookie@npm:^0.5.0":
   version: 0.5.0
   resolution: "cookie@npm:0.5.0"
   checksum: 23bd6dd64f025869373c6f3c72a870b9bd0e0e6a0ffe734229c032d7aca51972ba584b39100c09141b18043e790862425aae4a60d7449fca565b21cdae0cb3c3
@@ -16035,16 +16035,16 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-playwright@npm:^0.11.1":
-  version: 0.11.1
-  resolution: "eslint-plugin-playwright@npm:0.11.1"
+"eslint-plugin-playwright@npm:^0.11.2":
+  version: 0.11.2
+  resolution: "eslint-plugin-playwright@npm:0.11.2"
   peerDependencies:
     eslint: ">=7"
     eslint-plugin-jest: ">=24"
   peerDependenciesMeta:
     eslint-plugin-jest:
       optional: true
-  checksum: 5f30a198d359009704edb6d4be57500a175c98514b3569929682a2e8d918c6f8936e538eaa180b5be5b67d2facbc84963eb6a98b48b94a4a6111ccb82ff71adc
+  checksum: 1c221e4097686105aedee15c31fda8373c197b00accd476d357bad2aacd3bc3bcc9d7a24dec2ed792548d7fa929ce992154d56276ad264c5e3d849dffb9c8c00
   languageName: node
   linkType: hard
 
@@ -16133,14 +16133,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-testing-library@npm:^5.6.4":
-  version: 5.6.4
-  resolution: "eslint-plugin-testing-library@npm:5.6.4"
+"eslint-plugin-testing-library@npm:^5.7.0":
+  version: 5.7.0
+  resolution: "eslint-plugin-testing-library@npm:5.7.0"
   dependencies:
     "@typescript-eslint/utils": "npm:^5.13.0"
   peerDependencies:
     eslint: ^7.5.0 || ^8.0.0
-  checksum: 89fe9bfdbc169564d5e7202d1ea1f1772f5e2311c52590ac11f76b2c44ed01ae97da9d529a3950e31906b97560057dbb50f3e937fa41b048c5510e169d5a68de
+  checksum: 91e91355a93d7d39b8a5c33d69f6c5a355c84b093750affedadd650a6232c957e0d27cd4be84f4ed30d099884471e0e25f82ca81415f8d7af269cd806e5f77bb
   languageName: node
   linkType: hard
 
@@ -16199,12 +16199,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:8.23.1":
-  version: 8.23.1
-  resolution: "eslint@npm:8.23.1"
+"eslint@npm:8.24.0":
+  version: 8.24.0
+  resolution: "eslint@npm:8.24.0"
   dependencies:
     "@eslint/eslintrc": "npm:^1.3.2"
-    "@humanwhocodes/config-array": "npm:^0.10.4"
+    "@humanwhocodes/config-array": "npm:^0.10.5"
     "@humanwhocodes/gitignore-to-minimatch": "npm:^1.0.2"
     "@humanwhocodes/module-importer": "npm:^1.0.1"
     ajv: "npm:^6.10.0"
@@ -16244,7 +16244,7 @@ __metadata:
     text-table: "npm:^0.2.0"
   bin:
     eslint: bin/eslint.js
-  checksum: 06d584eb477cc577c39cb627f7099327b58b76979b275b3df9f1ee5eff36c68926231593b4ff0610ed8570a128b03c2c48c02c19421065a0333fdd17e0f44b2b
+  checksum: 7f4709c75bc7c7f844e8aa9cdc9404abbb31372b7db82d55bd865710f0e8c66dbbc7a0ea36e6089914e652e2538fe3016bb424cb6d3ccaf58e0e5a5cf5e78d33
   languageName: node
   linkType: hard
 
@@ -17339,9 +17339,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"framer-motion@npm:7.3.6":
-  version: 7.3.6
-  resolution: "framer-motion@npm:7.3.6"
+"framer-motion@npm:7.4.0":
+  version: 7.4.0
+  resolution: "framer-motion@npm:7.4.0"
   dependencies:
     "@emotion/is-prop-valid": "npm:^0.8.2"
     "@motionone/dom": "npm:10.13.1"
@@ -17356,7 +17356,7 @@ __metadata:
   dependenciesMeta:
     "@emotion/is-prop-valid":
       optional: true
-  checksum: 66b86062c6bc447c2d755620965a51c820ca5caa4b7dfb3a64e1ebf99d9b7b9f05d13ff67c3e1104faf09b895be872288b9da03d7db782ad8685fbd5a8a4ddae
+  checksum: b2a4990b7d1e3cf7494cdac8f875486b113a2bebf2d78e51991f192c1afbdacc0bb60f75777f4b49f61ae037f32f031bb440680653c23c4d706a35246d50fac7
   languageName: node
   linkType: hard
 
@@ -19213,7 +19213,7 @@ __metadata:
     "@vitest/ui": "npm:0.23.4"
     cross-env: "npm:7.0.3"
     tsx: "npm:3.9.0"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
   languageName: unknown
   linkType: soft
@@ -21147,7 +21147,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"jose@npm:4.9.3, jose@npm:^4.1.4, jose@npm:^4.3.7":
+"jose@npm:4.9.3, jose@npm:^4.1.4, jose@npm:^4.9.3":
   version: 4.9.3
   resolution: "jose@npm:4.9.3"
   checksum: d37fcba85447a42d4cdcac3b269d5ada3505afb6a966866963f34f54077269fe2957058e44f7798efbb002e4f2b1c9ed63c916f316434857e8c912bbc0353ec2
@@ -23930,27 +23930,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-auth@npm:4.10.3":
-  version: 4.10.3
-  resolution: "next-auth@npm:4.10.3"
+"next-auth@npm:4.12.0":
+  version: 4.12.0
+  resolution: "next-auth@npm:4.12.0"
   dependencies:
     "@babel/runtime": "npm:^7.16.3"
     "@panva/hkdf": "npm:^1.0.1"
-    cookie: "npm:^0.4.1"
-    jose: "npm:^4.3.7"
+    cookie: "npm:^0.5.0"
+    jose: "npm:^4.9.3"
     oauth: "npm:^0.9.15"
     openid-client: "npm:^5.1.0"
     preact: "npm:^10.6.3"
     preact-render-to-string: "npm:^5.1.19"
     uuid: "npm:^8.3.2"
   peerDependencies:
+    next: 12.2.5
     nodemailer: ^6.6.5
     react: ^17.0.2 || ^18
     react-dom: ^17.0.2 || ^18
   peerDependenciesMeta:
     nodemailer:
       optional: true
-  checksum: e76e309976efda7322951e4f6ec8cf578e765a6f1ded462e832aa49aab90047b333525fdce88ac4e1c6000d6c0d12c7333b82b3bfce65dbec4c608d111b0769c
+  checksum: d88fb927428ebb87f5f4d2c8e4393c07db1d8ea61721f43d74db2192aa8c30ca87b243da982d06a1f74167f6076daa043ce17e15e5330fd71ce477fff0e482ac
   languageName: node
   linkType: hard
 
@@ -24454,12 +24455,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:14.7.11":
-  version: 14.7.11
-  resolution: "nx@npm:14.7.11"
+"nx@npm:14.7.13":
+  version: 14.7.13
+  resolution: "nx@npm:14.7.13"
   dependencies:
-    "@nrwl/cli": "npm:14.7.11"
-    "@nrwl/tao": "npm:14.7.11"
+    "@nrwl/cli": "npm:14.7.13"
+    "@nrwl/tao": "npm:14.7.13"
     "@parcel/watcher": "npm:2.0.4"
     "@yarnpkg/lockfile": "npm:^1.1.0"
     "@yarnpkg/parsers": "npm:^3.0.0-rc.18"
@@ -24502,7 +24503,7 @@ __metadata:
       optional: true
   bin:
     nx: bin/nx.js
-  checksum: b16efebd010438d1cbfbf027a671637756d12a21d1bcb5521b42c9d6ba21b60f02e3b9ce59fee31e55a0a8eb0cb9b59eb39c8268013b01baeecfd13b39cdb7d1
+  checksum: 5b8b56826d9d49c36fd30405e187b38489d6521cb484a2b9c090fc14dfb459b10a60952e6fbe48cca355022c924625868da449af9a5ffa49e0b91f3c1c089deb
   languageName: node
   linkType: hard
 
@@ -30542,9 +30543,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three-stdlib@npm:2.16.1, three-stdlib@npm:^2.14.3":
-  version: 2.16.1
-  resolution: "three-stdlib@npm:2.16.1"
+"three-stdlib@npm:2.17.0":
+  version: 2.17.0
+  resolution: "three-stdlib@npm:2.17.0"
   dependencies:
     "@babel/runtime": "npm:^7.16.7"
     "@types/offscreencanvas": "npm:^2019.6.4"
@@ -30559,7 +30560,7 @@ __metadata:
     zstddec: "npm:^0.0.2"
   peerDependencies:
     three: ">=0.122.0"
-  checksum: 18b491f444c82dd13bf23afd640231c6c6d773fd7564d61a682ef274ee89fce4138e0d7a9c2fe0a70e6ac2f9153a6a64902b6916f216326b276a4460e827a769
+  checksum: 0d17ca3058df8b2cf7ce6ec6b9e60f7c1ec3661d9bc45b99a8fc573258e3e83a8a71b34c6b4edf7cde94e22476ac0f8c1978d6b8c180bc6c46f0329d72dd0a4f
   languageName: node
   linkType: hard
 
@@ -32088,9 +32089,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"vite-tsconfig-paths@npm:3.5.0":
-  version: 3.5.0
-  resolution: "vite-tsconfig-paths@npm:3.5.0"
+"vite-tsconfig-paths@npm:3.5.1":
+  version: 3.5.1
+  resolution: "vite-tsconfig-paths@npm:3.5.1"
   dependencies:
     debug: "npm:^4.1.1"
     globrex: "npm:^0.1.2"
@@ -32098,7 +32099,7 @@ __metadata:
     tsconfig-paths: "npm:^4.0.0"
   peerDependencies:
     vite: ">2.0.0-0"
-  checksum: d963387b16c377eae1f484e069a2b2a5e4e1e72a1986c5ef5cbab38115c587dd7a7e131789d8bcc72acf7bae0418e01fbcdf59883ac8ce61f8573eec9dc90ddb
+  checksum: dc06405ba8d25a23cc3959e143218f42f79d9c288831290fc8be750a4e9df1308f7f9ab8381aeb4ab9420e647552c1395a51374ecbb15bcc14acbcfc20b53181
   languageName: node
   linkType: hard
 
@@ -32550,7 +32551,7 @@ __metadata:
     "@belgattitude/db-main": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@belgattitude/failwell": "workspace:^"
-    "@belgattitude/http-exception": "npm:1.1.0"
+    "@belgattitude/http-exception": "npm:1.2.0"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.10.2"
     "@emotion/cache": "npm:11.10.3"
@@ -32559,7 +32560,7 @@ __metadata:
     "@emotion/styled": "npm:11.10.4"
     "@fontsource/inter": "npm:4.5.12"
     "@fontsource/rubik": "npm:4.5.11"
-    "@graphql-codegen/cli": "npm:2.12.1"
+    "@graphql-codegen/cli": "npm:2.12.2"
     "@graphql-codegen/typed-document-node": "npm:2.3.3"
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-operations": "npm:2.5.3"
@@ -32579,8 +32580,8 @@ __metadata:
     "@pothos/plugin-errors": "npm:3.7.0"
     "@pothos/plugin-prisma": "npm:3.34.0"
     "@prisma/client": "npm:4.3.1"
-    "@react-three/drei": "npm:9.32.0"
-    "@react-three/fiber": "npm:8.8.2"
+    "@react-three/drei": "npm:9.32.2"
+    "@react-three/fiber": "npm:8.8.3"
     "@sentry/nextjs": "npm:7.13.0"
     "@sindresorhus/is": "npm:5.3.0"
     "@size-limit/file": "npm:8.1.0"
@@ -32605,7 +32606,7 @@ __metadata:
     "@types/cors": "npm:2.8.12"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:29.0.3"
-    "@types/node": "npm:18.7.18"
+    "@types/node": "npm:18.7.22"
     "@types/react": "npm:18.0.21"
     "@types/react-dom": "npm:18.0.6"
     "@types/three": "npm:0.144.0"
@@ -32622,12 +32623,12 @@ __metadata:
     dotenv-flow-cli: "npm:1.0.0"
     embla-carousel-react: "npm:7.0.3"
     es-check: "npm:7.0.1"
-    eslint: "npm:8.23.1"
+    eslint: "npm:8.24.0"
     eslint-config-next: "npm:12.3.1"
     fast-glob: "npm:3.2.12"
     flowbite: "npm:1.5.3"
     flowbite-react: "npm:0.1.11"
-    framer-motion: "npm:7.3.6"
+    framer-motion: "npm:7.4.0"
     get-tsconfig: "npm:4.2.0"
     got: "npm:12.5.0"
     graphql: "npm:16.6.0"
@@ -32644,7 +32645,7 @@ __metadata:
     mdast-util-to-markdown: "npm:1.3.0"
     nanoid: "npm:4.0.0"
     next: "npm:12.3.1"
-    next-auth: "npm:4.10.3"
+    next-auth: "npm:4.12.0"
     next-connect: "npm:0.13.0"
     next-i18next: "npm:12.0.1"
     next-secure-headers: "npm:2.2.0"
@@ -32691,7 +32692,7 @@ __metadata:
     tailwind-merge: "npm:1.6.0"
     tailwindcss: "npm:3.1.8"
     three: "npm:0.144.0"
-    three-stdlib: "npm:2.16.1"
+    three-stdlib: "npm:2.17.0"
     ts-jest: "npm:29.0.2"
     ts-pattern: "npm:4.0.5"
     type-fest: "npm:3.0.0"
@@ -32700,7 +32701,7 @@ __metadata:
     uuid: "npm:9.0.0"
     vite: "npm:3.1.3"
     vite-plugin-svgr: "npm:2.2.1"
-    vite-tsconfig-paths: "npm:3.5.0"
+    vite-tsconfig-paths: "npm:3.5.1"
     vitest: "npm:0.23.4"
     zod: "npm:3.19.1"
     zustand: "npm:4.1.1"
