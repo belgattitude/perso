@@ -1,4 +1,3 @@
-/* eslint-disable react/no-unknown-property */
 import { MeshWobbleMaterial } from '@react-three/drei';
 import { useFrame } from '@react-three/fiber';
 import type { FC } from 'react';
