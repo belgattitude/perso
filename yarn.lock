@@ -9563,6 +9563,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@types/http-cache-semantics@npm:^4.0.1":
+  version: 4.0.1
+  resolution: "@types/http-cache-semantics@npm:4.0.1"
+  checksum: 04aacd353b3823dea511927aa0b0a519a16a876aab4f6cc545828cafcadebddc631dcb1e1a949a09f1c30d37c5512e60e69469e22a75213ff1abf349deaad433
+  languageName: node
+  linkType: hard
+
 "@types/ioredis@npm:4.28.10":
   version: 4.28.10
   resolution: "@types/ioredis@npm:4.28.10"
@@ -12599,24 +12606,25 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cacheable-lookup@npm:^6.0.4":
-  version: 6.0.4
-  resolution: "cacheable-lookup@npm:6.0.4"
-  checksum: e4cf06105ebb2ff7607d068caebc2c4ce756091caa808706940e38e421205d8698ce65e0dfb4a3772065e5a72b71d1a26dd24087f71abf4cfc6eaa20bb643719
+"cacheable-lookup@npm:^7.0.0":
+  version: 7.0.0
+  resolution: "cacheable-lookup@npm:7.0.0"
+  checksum: 2a7fcc7d20ccb54ed40934c9ffbe06b3b0864ec77d7c8a691e3598a175828b594175f1764816d6fff9dd2abfe3124090d07a1941fc5740e8ca42bf6b2bdd3ac7
   languageName: node
   linkType: hard
 
-"cacheable-request@npm:^10.1.2":
-  version: 10.1.2
-  resolution: "cacheable-request@npm:10.1.2"
+"cacheable-request@npm:^10.2.1":
+  version: 10.2.1
+  resolution: "cacheable-request@npm:10.2.1"
   dependencies:
+    "@types/http-cache-semantics": "npm:^4.0.1"
     get-stream: "npm:^6.0.1"
     http-cache-semantics: "npm:^4.1.0"
     keyv: "npm:^4.5.0"
     mimic-response: "npm:^4.0.0"
     normalize-url: "npm:^7.1.0"
     responselike: "npm:^3.0.0"
-  checksum: f8e2b02cf98c6db2a12b68b067e0a1ade2da7c3fbb877a3d0437b84fb9aa6568dc130dbd791ba6ab5dfc5d6ee2423d8d5f5cda2635b8f3a6d07e769c69e83f3e
+  checksum: de7bc93478b7b98a7272fdde1d82156eb030705f7c42cd961abb3dd461f8f64dd729f450143b2538e2f935b42d2066ee6967bcf70b48260a1ce70bc6adb0b47b
   languageName: node
   linkType: hard
 
@@ -17960,14 +17968,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"got@npm:12.5.0":
-  version: 12.5.0
-  resolution: "got@npm:12.5.0"
+"got@npm:12.5.1":
+  version: 12.5.1
+  resolution: "got@npm:12.5.1"
   dependencies:
     "@sindresorhus/is": "npm:^5.2.0"
     "@szmarczak/http-timer": "npm:^5.0.1"
-    cacheable-lookup: "npm:^6.0.4"
-    cacheable-request: "npm:^10.1.2"
+    cacheable-lookup: "npm:^7.0.0"
+    cacheable-request: "npm:^10.2.1"
     decompress-response: "npm:^6.0.0"
     form-data-encoder: "npm:^2.1.2"
     get-stream: "npm:^6.0.1"
@@ -17975,7 +17983,7 @@ __metadata:
     lowercase-keys: "npm:^3.0.0"
     p-cancelable: "npm:^3.0.0"
     responselike: "npm:^3.0.0"
-  checksum: 2258da1e6288da9b63fdbbdca8e6b5c83331827d269fef2801dd3beb12e089f3d277fe5a6d16ac79fcfd5210c4a3b0a25d39116164292b7196eee3508e95e849
+  checksum: c20361f42834c914911cd70fa5d8fc957a3c235dfa7c4bbf1338fa1bfebdb4471dc80f7c68933341143d0125fe7b790004026edc4827e6300f82e307b3c6fd13
   languageName: node
   linkType: hard
 
@@ -32591,7 +32599,7 @@ __metadata:
     flowbite-react: "npm:0.1.11"
     framer-motion: "npm:7.4.0"
     get-tsconfig: "npm:4.2.0"
-    got: "npm:12.5.0"
+    got: "npm:12.5.1"
     graphql: "npm:16.6.0"
     gray-matter: "npm:4.0.3"
     happy-dom: "npm:6.0.4"
