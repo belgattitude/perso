@@ -7177,12 +7177,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/fiber@npm:8.7.4":
-  version: 8.7.4
-  resolution: "@react-three/fiber@npm:8.7.4"
+"@react-three/fiber@npm:8.8.6":
+  version: 8.8.6
+  resolution: "@react-three/fiber@npm:8.8.6"
   dependencies:
     "@babel/runtime": "npm:^7.17.8"
     "@types/react-reconciler": "npm:^0.26.7"
+    its-fine: "npm:^1.0.4"
     react-reconciler: "npm:^0.27.0"
     react-use-measure: "npm:^2.1.1"
     scheduler: "npm:^0.21.0"
@@ -7207,7 +7208,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: cad11b6f73977a94db99fdf148c5639e9a9e4b0752e5f0cf93322f9d256a54d3c909a5e05eab502baf28ae6b6398d071c18ae12608e7ef3e667d4d4aa7e16443
+  checksum: 96ed81e255f2c33d22cfdaee962906832a6a6a12dae5c8cd7a380a8dafb9a13f127b83a28fbe1f6702174b757ebd5ad4414c65f1de1887c205be8c653b39211f
   languageName: node
   linkType: hard
 
@@ -9875,6 +9876,15 @@ __metadata:
   dependencies:
     "@types/react": "npm:*"
   checksum: 59ce0c7fa846041b3cb69b94e291dc6b66eace08a5f229c84902a481bc7e17293a441b0982fb993a51e6cdff44594927aaf2898dba17f05fdfe232d0f0ad2686
+  languageName: node
+  linkType: hard
+
+"@types/react-reconciler@npm:^0.28.0":
+  version: 0.28.0
+  resolution: "@types/react-reconciler@npm:0.28.0"
+  dependencies:
+    "@types/react": "npm:*"
+  checksum: e4c07dd1d0a3f0cecf3f41cad8564a2c8d00eed80184de6f962e537d983ec368f2804441ebc15f925cd598cdccc20ee0a276c9b97b317661a32e06531a4af224
   languageName: node
   linkType: hard
 
@@ -20118,6 +20128,17 @@ __metadata:
     es-get-iterator: "npm:^1.0.2"
     iterate-iterator: "npm:^1.0.1"
   checksum: 3aa4975cfd578efa26d4cbe4e4dee3ae761ec62f2f0a9f4ee625829b8509460bfbd6dae713ae9b70d2b9775605173e90b13c65afe0d114b00ecf5f9611b7584f
+  languageName: node
+  linkType: hard
+
+"its-fine@npm:^1.0.4":
+  version: 1.0.4
+  resolution: "its-fine@npm:1.0.4"
+  dependencies:
+    "@types/react-reconciler": "npm:^0.28.0"
+  peerDependencies:
+    react: ">=18.0"
+  checksum: cf3ef6b4904ec521f9ccfa782d7bdbb16113e38ed27eb565275d9361a4d81b05b105422c01c0fd4d59a311742761babc95eb6bbf40c8c366c074ae7b0a7c5c1a
   languageName: node
   linkType: hard
 
@@ -32543,7 +32564,7 @@ __metadata:
     "@pothos/plugin-prisma": "npm:3.34.0"
     "@prisma/client": "npm:4.3.1"
     "@react-three/drei": "npm:9.32.3"
-    "@react-three/fiber": "npm:8.7.4"
+    "@react-three/fiber": "npm:8.8.6"
     "@sentry/nextjs": "npm:7.13.0"
     "@sindresorhus/is": "npm:5.3.0"
     "@size-limit/file": "npm:8.1.0"
