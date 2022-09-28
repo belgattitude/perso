@@ -33,7 +33,7 @@ export class AesCbcEncryptor implements IEncryptor<AesEncryptedResult> {
   encrypt = (text: string): AesEncryptedResult => {
     try {
       const key = scryptSync(this.#password, this.#salt, 32);
-      const iv = randomBytes(8).toString('hex');
+      const iv = randomBytes(9).toString('hex');
       const cipher = createCipheriv(this.#algorithm, key, iv);
       let encrypted = cipher.update(text, 'utf-8', 'hex');
       encrypted += cipher.final('hex');
