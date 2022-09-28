@@ -6638,18 +6638,18 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/cli@npm:14.7.17":
-  version: 14.7.17
-  resolution: "@nrwl/cli@npm:14.7.17"
+"@nrwl/cli@npm:14.8.0":
+  version: 14.8.0
+  resolution: "@nrwl/cli@npm:14.8.0"
   dependencies:
-    nx: "npm:14.7.17"
-  checksum: 2e7cef41dc62a5ac62c767e013f7551b0013f28261e3f3b2683585f22c95f5de9b60fb735c145dfe921166a43dbdb783457c77d13006ef4f7c784bd28f329bc8
+    nx: "npm:14.8.0"
+  checksum: 0bf1313bd260c21918b1184df23d4eb0c85b889fd26a8f6b17b58861fd4753c76e33d73ffcf0214b0e9f8d2fb13b50b96e145171c22a9885aa1f84ae1303b26d
   languageName: node
   linkType: hard
 
-"@nrwl/devkit@npm:14.7.17":
-  version: 14.7.17
-  resolution: "@nrwl/devkit@npm:14.7.17"
+"@nrwl/devkit@npm:14.8.0":
+  version: 14.8.0
+  resolution: "@nrwl/devkit@npm:14.8.0"
   dependencies:
     "@phenomnomnominal/tsquery": "npm:4.1.1"
     ejs: "npm:^3.1.7"
@@ -6657,17 +6657,17 @@ __metadata:
     tslib: "npm:^2.3.0"
   peerDependencies:
     nx: ">= 13.10 <= 15"
-  checksum: 43a172cb41371459864285fea69cea5dca0b4ad61005ab329c19a7169b06a6e7a0627e1e0fee1ed39724d15143e6711867346fc92df492c0a0b1d61b19e2428b
+  checksum: 8eda47a14cc86d375c6a3a0f3a6157f073b9101f020f4637dc63e9a6ce8402b6588c8d20222d110e6eea9e3bfbfbb7b00d022cc83c02b9461fc13461f5299a80
   languageName: node
   linkType: hard
 
-"@nrwl/jest@npm:14.7.17":
-  version: 14.7.17
-  resolution: "@nrwl/jest@npm:14.7.17"
+"@nrwl/jest@npm:14.8.0":
+  version: 14.8.0
+  resolution: "@nrwl/jest@npm:14.8.0"
   dependencies:
     "@jest/reporters": "npm:28.1.1"
     "@jest/test-result": "npm:28.1.1"
-    "@nrwl/devkit": "npm:14.7.17"
+    "@nrwl/devkit": "npm:14.8.0"
     "@phenomnomnominal/tsquery": "npm:4.1.1"
     chalk: "npm:4.1.0"
     dotenv: "npm:~10.0.0"
@@ -6677,18 +6677,18 @@ __metadata:
     jest-util: "npm:28.1.1"
     resolve.exports: "npm:1.1.0"
     tslib: "npm:^2.3.0"
-  checksum: 65287c3fea5d70507745e9b90a094d9f1782b3727da88004993f43afdadff10041a7b2e5ea7c0a074c1ce27632580e18ee45daa72f05fb5e5a94f641892fa105
+  checksum: 84bfa4ee1aa61ab7a8da19afba40d39473d2d840b4f4a0f9838d276d5967f1858161652df00c651b822d45e7652b6a8c252f480534bc3a1135ee88aa4fc795cd
   languageName: node
   linkType: hard
 
-"@nrwl/linter@npm:14.7.17":
-  version: 14.7.17
-  resolution: "@nrwl/linter@npm:14.7.17"
+"@nrwl/linter@npm:14.8.0":
+  version: 14.8.0
+  resolution: "@nrwl/linter@npm:14.8.0"
   dependencies:
-    "@nrwl/devkit": "npm:14.7.17"
-    "@nrwl/jest": "npm:14.7.17"
+    "@nrwl/devkit": "npm:14.8.0"
+    "@nrwl/jest": "npm:14.8.0"
     "@phenomnomnominal/tsquery": "npm:4.1.1"
-    nx: "npm:14.7.17"
+    nx: "npm:14.8.0"
     tmp: "npm:~0.2.1"
     tslib: "npm:^2.3.0"
   peerDependencies:
@@ -6696,7 +6696,7 @@ __metadata:
   peerDependenciesMeta:
     eslint:
       optional: true
-  checksum: 383f82240631197054d3a857acd470a1c2174a5fa47e12261f6e978f48abe086f7845bb677047d9d52ee586237be714b43c097b5d13c2d080f17cb35b06ecccc
+  checksum: 1c607f5238bbcd8a562a153abcd1e15db4324e575247a0bf56781b95d22be1404ca2e71a51c1c56842229d268ffdb8916530154294a5dfa2e3ec42f35eee52e2
   languageName: node
   linkType: hard
 
@@ -6717,24 +6717,24 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/tao@npm:14.7.17":
-  version: 14.7.17
-  resolution: "@nrwl/tao@npm:14.7.17"
+"@nrwl/tao@npm:14.8.0":
+  version: 14.8.0
+  resolution: "@nrwl/tao@npm:14.8.0"
   dependencies:
-    nx: "npm:14.7.17"
+    nx: "npm:14.8.0"
   bin:
     tao: index.js
-  checksum: 740fc81c36559ae4e9214328c279042b8b76b8fd64a67e666c4ce5174fb4e42b2c8811ab6fd73d46b9af773f9de58a87517cacc66f0e6f194d8a6c57977ff763
+  checksum: c0030a0ad97e1f397e6b8ea8c4dfbe041c93c618b4d962427eb5ce616c213d1e8d688df778a2ec69bcc130b6140ba599c90887f1000ba9f13fce31e482a95e66
   languageName: node
   linkType: hard
 
-"@nrwl/workspace@npm:14.7.17":
-  version: 14.7.17
-  resolution: "@nrwl/workspace@npm:14.7.17"
+"@nrwl/workspace@npm:14.8.0":
+  version: 14.8.0
+  resolution: "@nrwl/workspace@npm:14.8.0"
   dependencies:
-    "@nrwl/devkit": "npm:14.7.17"
-    "@nrwl/jest": "npm:14.7.17"
-    "@nrwl/linter": "npm:14.7.17"
+    "@nrwl/devkit": "npm:14.8.0"
+    "@nrwl/jest": "npm:14.8.0"
+    "@nrwl/linter": "npm:14.8.0"
     "@parcel/watcher": "npm:2.0.4"
     chalk: "npm:4.1.0"
     chokidar: "npm:^3.5.1"
@@ -6749,7 +6749,7 @@ __metadata:
     ignore: "npm:^5.0.4"
     minimatch: "npm:3.0.5"
     npm-run-path: "npm:^4.0.1"
-    nx: "npm:14.7.17"
+    nx: "npm:14.8.0"
     open: "npm:^8.4.0"
     rxjs: "npm:^6.5.4"
     semver: "npm:7.3.4"
@@ -6762,7 +6762,7 @@ __metadata:
   peerDependenciesMeta:
     prettier:
       optional: true
-  checksum: 09d06b121949768a327ed954a80fa4e23291a5b866457b3dad40e644f889fc231f7b39ba7f03d83c63e636a0d5bf1a7b685787d4bcc893eb0d6fce4b867ccc81
+  checksum: f3cbc9f6ed559dab33f71a7cab119865d185a1d88bfd0a60a3add3d6643c5986f1e6c55cfffc4be4f1d6ea987a44fe86014554bd53ca8764893ebcaf1d3e324a
   languageName: node
   linkType: hard
 
@@ -12066,7 +12066,7 @@ __metadata:
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
     "@nrwl/nx-cloud": "npm:14.6.2"
-    "@nrwl/workspace": "npm:14.7.17"
+    "@nrwl/workspace": "npm:14.8.0"
     "@playwright/test": "npm:1.26.0"
     "@types/prettier": "npm:2.7.1"
     "@types/shell-quote": "npm:1.7.1"
@@ -12076,7 +12076,7 @@ __metadata:
     is-ci: "npm:3.0.1"
     lint-staged: "npm:13.0.3"
     npm-run-all: "npm:4.1.5"
-    nx: "npm:14.7.17"
+    nx: "npm:14.8.0"
     prettier: "npm:2.7.1"
     rimraf: "npm:3.0.2"
     shell-quote: "npm:1.7.3"
@@ -24501,12 +24501,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"nx@npm:14.7.17":
-  version: 14.7.17
-  resolution: "nx@npm:14.7.17"
+"nx@npm:14.8.0":
+  version: 14.8.0
+  resolution: "nx@npm:14.8.0"
   dependencies:
-    "@nrwl/cli": "npm:14.7.17"
-    "@nrwl/tao": "npm:14.7.17"
+    "@nrwl/cli": "npm:14.8.0"
+    "@nrwl/tao": "npm:14.8.0"
     "@parcel/watcher": "npm:2.0.4"
     "@yarnpkg/lockfile": "npm:^1.1.0"
     "@yarnpkg/parsers": "npm:^3.0.0-rc.18"
@@ -24549,7 +24549,7 @@ __metadata:
       optional: true
   bin:
     nx: bin/nx.js
-  checksum: a4e1c2680a4a3f8970a021155abbed19b682c460ce5554f9a3898b637fe40102b35eda6fd52647d25ffdc8343de7913554211f29270d1de79a539a22c61bb070
+  checksum: 7695d083099003e9a2a9f171eb241ecead8cc3fa549a07c7bfb8a810af01a160d533a36c410b640e23679d2897e0b670eace04f6463bfa087de928e1bf5d3236
   languageName: node
   linkType: hard
 
