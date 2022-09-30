@@ -2906,8 +2906,8 @@ __metadata:
   dependencies:
     "@belgattitude/crypto": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@pothos/core": "npm:3.22.0"
-    "@pothos/plugin-prisma": "npm:3.35.0"
+    "@pothos/core": "npm:3.22.5"
+    "@pothos/plugin-prisma": "npm:3.35.4"
     "@prisma/client": "npm:4.4.0"
     "@soluble/dsn-parser": "npm:1.6.0"
     "@types/jest": "npm:29.1.1"
@@ -6993,28 +6993,28 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pothos/core@npm:3.22.0":
-  version: 3.22.0
-  resolution: "@pothos/core@npm:3.22.0"
+"@pothos/core@npm:3.22.5":
+  version: 3.22.5
+  resolution: "@pothos/core@npm:3.22.5"
   peerDependencies:
     graphql: ">=15.1.0"
-  checksum: 391ce460682d333f1ba00b91faef430b5ad0402242be4dab2e6998e7ebd5e2a2e141285afabe33b27139c72eaa9d3b4ea221dc36af58351f98d9e20d5d5c422a
+  checksum: 82712725a710261271eb0d1aba81566af80c8cae0b823ee356c9c9f31e7f0aea9330b24f415c962a9c0326f6a9b579d8b6c3713b8964b927580cc1eb741cb645
   languageName: node
   linkType: hard
 
-"@pothos/plugin-errors@npm:3.8.0":
-  version: 3.8.0
-  resolution: "@pothos/plugin-errors@npm:3.8.0"
+"@pothos/plugin-errors@npm:3.8.4":
+  version: 3.8.4
+  resolution: "@pothos/plugin-errors@npm:3.8.4"
   peerDependencies:
     "@pothos/core": "*"
     graphql: ">=15.1.0"
-  checksum: f7e92b074a571e323521ecf358b48edff640894e2d937b15932c225dd94e15ad4b757fc79eec4a8efc5d34afb2dee1fc5abfd3bdd6c4572bc1842ab0b66614fc
+  checksum: 6c588f342f28f2827805fc1bd54dad414f98cd4953d256d1258402ef24f8645a8dc664fe01f6656c7d018cf74d9d69188c7313e1d6ba530b7724b5a1407bf13b
   languageName: node
   linkType: hard
 
-"@pothos/plugin-prisma@npm:3.35.0":
-  version: 3.35.0
-  resolution: "@pothos/plugin-prisma@npm:3.35.0"
+"@pothos/plugin-prisma@npm:3.35.4":
+  version: 3.35.4
+  resolution: "@pothos/plugin-prisma@npm:3.35.4"
   dependencies:
     "@prisma/generator-helper": "npm:^4.4.0"
   peerDependencies:
@@ -7024,7 +7024,7 @@ __metadata:
     typescript: ">=4.7.2"
   bin:
     prisma-pothos-types: bin/generator.js
-  checksum: 2ed9986faf60d7bb82744af760d40f2cd98c7ded91913a84b5169905f923407313eb2bc83617d7412c533ec45f4650f3ff6eb0a0f042d4d8dc4ec1c84bd02acf
+  checksum: 3e8001de3c0d3a7210855ff7710a68321b48c3fee0693c71c52d41643a075f7db1d1188e100cf73bb047794058a073ab4bf4aad57691a5cae3b16e9c48cb0406
   languageName: node
   linkType: hard
 
@@ -32574,9 +32574,9 @@ __metadata:
     "@octokit/graphql": "npm:5.0.1"
     "@octokit/graphql-schema": "npm:12.8.1"
     "@playwright/test": "npm:1.26.1"
-    "@pothos/core": "npm:3.22.0"
-    "@pothos/plugin-errors": "npm:3.8.0"
-    "@pothos/plugin-prisma": "npm:3.35.0"
+    "@pothos/core": "npm:3.22.5"
+    "@pothos/plugin-errors": "npm:3.8.4"
+    "@pothos/plugin-prisma": "npm:3.35.4"
     "@prisma/client": "npm:4.4.0"
     "@react-three/drei": "npm:9.32.4"
     "@react-three/fiber": "npm:8.8.7"
