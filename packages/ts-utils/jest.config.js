@@ -22,10 +22,9 @@ const getTsConfigBasePaths = (tsConfigFile) => {
     : {};
 };
 
-/** @type {import('ts-jest/dist').InitialOptionsTsJest} */
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   displayName: `ts-utils:unit`,
-  preset: 'ts-jest/presets/default-esm',
   cacheDirectory: getJestCachePath('@belgattitude/ts-utils'),
   testEnvironment: 'node',
   extensionsToTreatAsEsm: ['.ts'],
@@ -36,6 +35,15 @@ const config = {
   moduleNameMapper: {
     ...getTsConfigBasePaths(tsConfigFile),
   },
+  transform: {
+    '^.+\\.m?[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: tsConfigFile,
+      },
+    ],
+  },
+
   // false by default, overrides in cli, ie: yarn test:unit --collect-coverage=true
   collectCoverage: false,
   coverageDirectory: '<rootDir>/../coverage',
@@ -44,12 +52,6 @@ const config = {
     '!**/*.test.{js,ts}',
     '!**/__mock__/*',
   ],
-  globals: {
-    'ts-jest': {
-      useESM: true,
-      tsconfig: tsConfigFile,
-    },
-  },
 };
 
 export default config;

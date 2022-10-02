@@ -22,18 +22,26 @@ const getTsConfigBasePaths = (tsConfigFile) => {
     : {};
 };
 
-/** @type {import('ts-jest/dist').InitialOptionsTsJest} */
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   displayName: `failwell:unit`,
-  preset: 'ts-jest/presets/default-esm',
   cacheDirectory: getJestCachePath('@belgattitude/failwell'),
   testEnvironment: 'node',
   extensionsToTreatAsEsm: ['.ts'],
   verbose: true,
   rootDir: './src',
+  // setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
     ...getTsConfigBasePaths(tsConfigFile),
+  },
+  transform: {
+    '^.+\\.m?[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: tsConfigFile,
+      },
+    ],
   },
   // false by default, overrides in cli, ie: yarn test:unit --collect-coverage=true
   collectCoverage: false,
@@ -43,12 +51,6 @@ const config = {
     '!**/*.test.{js,ts}',
     '!**/__mock__/*',
   ],
-  globals: {
-    'ts-jest': {
-      useESM: true,
-      tsconfig: tsConfigFile,
-    },
-  },
 };
 
 export default config;

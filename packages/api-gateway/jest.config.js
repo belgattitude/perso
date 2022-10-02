@@ -26,7 +26,7 @@ const getTsConfigBasePaths = (tsConfigFile) => {
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   displayName: `api-gateway:unit`,
-  cacheDirectory: getJestCachePath('api-gateway'),
+  cacheDirectory: getJestCachePath('@belgattitude/api-gateway'),
   testEnvironment: 'jsdom',
   verbose: true,
   rootDir: './src',
@@ -52,12 +52,6 @@ const config = {
     '!**/*.test.{js,ts}',
     '!**/__mock__/*',
   ],
-  globals: {
-    'ts-jest': {
-      diagnostics: false,
-      tsconfig: './tsconfig.json',
-    },
-  },
 };
 
 module.exports = config;
