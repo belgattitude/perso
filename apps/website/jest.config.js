@@ -2,7 +2,6 @@
 
 const { getTsconfig } = require('get-tsconfig');
 const { pathsToModuleNameMapper } = require('ts-jest');
-const { defaults: tsPreset } = require('ts-jest/presets');
 
 const { getJestCachePath } = require('../../cache.config');
 
@@ -27,18 +26,23 @@ const getTsConfigBasePaths = (tsConfigFile) => {
     : {};
 };
 
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   displayName: `${packageJson.name}:unit`,
   cacheDirectory: getJestCachePath(packageJson.name),
   testEnvironment: 'jsdom',
   verbose: true,
   rootDir: './src',
-  transform: {
-    ...tsPreset.transform,
-  },
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
+  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  transform: {
+    '^.+\\.m?[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: tsConfigFile,
+      },
+    ],
+  },
   moduleNameMapper: {
     '.+\\.(css|styl|less|sass|scss)$': 'jest-css-modules-transform',
     '\\.svg$': '<rootDir>/../config/tests/ReactSvgrMock.tsx',
@@ -52,12 +56,6 @@ const config = {
     '!**/*.test.{js,ts}',
     '!**/__mock__/*',
   ],
-  globals: {
-    'ts-jest': {
-      diagnostics: false,
-      tsconfig: tsConfigFile,
-    },
-  },
 };
 
 module.exports = config;

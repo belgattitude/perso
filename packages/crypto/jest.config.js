@@ -22,15 +22,22 @@ const getTsConfigBasePaths = (tsConfigFile) => {
     : {};
 };
 
-/** @type {import('ts-jest/dist').InitialOptionsTsJest} */
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
   displayName: `crypto:unit`,
-  preset: 'ts-jest/presets/default-esm',
   cacheDirectory: getJestCachePath('@belgattitude/ts-utils'),
   testEnvironment: 'node',
   extensionsToTreatAsEsm: ['.ts'],
   verbose: true,
   rootDir: './src',
+  transform: {
+    '^.+\\.m?[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: tsConfigFile,
+      },
+    ],
+  },
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
     ...getTsConfigBasePaths(tsConfigFile),
@@ -43,12 +50,6 @@ const config = {
     '!**/*.test.{js,ts}',
     '!**/__mock__/*',
   ],
-  globals: {
-    'ts-jest': {
-      useESM: true,
-      tsconfig: tsConfigFile,
-    },
-  },
 };
 
 export default config;

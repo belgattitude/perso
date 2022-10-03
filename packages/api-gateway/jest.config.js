@@ -1,40 +1,49 @@
 // @ts-check
 
-const { pathsToModuleNameMapper } = require('ts-jest');
-const { defaults: tsjPreset } = require('ts-jest/presets');
+import { getTsconfig } from 'get-tsconfig';
+import { pathsToModuleNameMapper } from 'ts-jest';
+import { getJestCachePath } from '../../cache.config.js';
 
-const { getJestCachePath } = require('../../cache.config');
+const tsConfigFile = new URL('./tsconfig.json', import.meta.url).pathname;
 
-const packageJson = require('./package.json');
-const { compilerOptions: baseTsConfig } = require('./tsconfig.json');
-
-// Take the paths from tsconfig automatically from base tsconfig.json
-// @link https://kulshekhar.github.io/ts-jest/docs/paths-mapping
-const getTsConfigBasePaths = () => {
-  return baseTsConfig.paths
-    ? pathsToModuleNameMapper(baseTsConfig.paths, {
+/**
+ * Transform the tsconfig paths into jest compatible one (support extends)
+ * @param {string} tsConfigFile
+ */
+const getTsConfigBasePaths = (tsConfigFile) => {
+  const parsedTsConfig = getTsconfig(tsConfigFile);
+  if (parsedTsConfig === null) {
+    throw new Error(`Cannot find tsconfig file: ${tsConfigFile}`);
+  }
+  const tsPaths = parsedTsConfig.config.compilerOptions?.paths;
+  return tsPaths
+    ? pathsToModuleNameMapper(tsPaths, {
         prefix: '<rootDir>/',
       })
     : {};
 };
 
-/** @type {import('ts-jest/dist/types').InitialOptionsTsJest} */
+/** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
-  displayName: `${packageJson.name}:unit`,
-  cacheDirectory: getJestCachePath(packageJson.name),
+  displayName: `api-gateway:unit`,
+  cacheDirectory: getJestCachePath('@belgattitude/api-gateway'),
   testEnvironment: 'jsdom',
   verbose: true,
   rootDir: './src',
-  transform: {
-    ...tsjPreset.transform,
-  },
   setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
-    // For @testing-library/react
-    '^@/test-utils$': '<rootDir>/../config/jest/test-utils',
-    ...getTsConfigBasePaths(),
+    ...getTsConfigBasePaths(tsConfigFile),
   },
+  transform: {
+    '^.+\\.m?[tj]sx?$': [
+      'ts-jest',
+      {
+        tsconfig: tsConfigFile,
+      },
+    ],
+  },
+
   // false by default, overrides in cli, ie: yarn test:unit --collect-coverage=true
   collectCoverage: false,
   coverageDirectory: '<rootDir>/../coverage',
@@ -43,12 +52,6 @@ const config = {
     '!**/*.test.{js,ts}',
     '!**/__mock__/*',
   ],
-  globals: {
-    'ts-jest': {
-      diagnostics: false,
-      tsconfig: './tsconfig.json',
-    },
-  },
 };
 
 module.exports = config;
