@@ -1,5 +1,16 @@
 # This action installs the monorepo deps with yarn. It can be reused across the different workflows.
 name: "Monorepo install (yarn)"
+description: "Installs the monorepo with yarn (cache)"
+inputs:
+  skip-prisma-postinstall-generate:
+    description: "Avoid prisma to automatically generate schema on postinstall"
+    required: false
+    default: "true"
+  playwright-skip-browser-download:
+    description: "Avoid playwright to download browsers automatically"
+    required: false
+    default: 1
+
 runs:
   using: "composite"
   steps:
@@ -15,7 +26,6 @@ runs:
       shell: bash
       run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
 
-
     - name: Restore yarn cache
       uses: actions/cache@v3
       id: yarn-cache # use this to check for `cache-hit` (`steps.yarn-cache.outputs.cache-hit != 'true'`)
@@ -30,7 +40,7 @@ runs:
       run: |
         yarn install --immutable --inline-builds
       env:
-        PRISMA_SKIP_POSTINSTALL_GENERATE: true
-        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
+        PRISMA_SKIP_POSTINSTALL_GENERATE: ${{ inputs.skip-prisma-postinstall-generate }}
+        PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: ${{ inputs.playwright-skip-browser-download }}
         HUSKY: 0
 
