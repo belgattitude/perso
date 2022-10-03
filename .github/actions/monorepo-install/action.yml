@@ -1,12 +1,12 @@
 # This action installs the monorepo deps with yarn. It can be reused across the different workflows.
-name: "CI monorepo install (yarn)"
+name: "Monorepo install (yarn)"
 runs:
   using: "composite"
   steps:
     # Yarn 2+ is able to prune its cache which allows to re-use it even
     # when the yarn.lock is modified. This allows to download only changed
     # packages from the npm repo. Gives slightly faster installs but more importantly
-    # in most situations the installation becomes resilient to npm downtimes.
+    # the installation becomes resilient to npm downtimes (in most situations).
     #
     # @see https://github.com/actions/setup-node/issues/325
     #
