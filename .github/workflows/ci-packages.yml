@@ -47,7 +47,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: ./.github/actions/monorepo-install
+      - name: 📥 Monorepo install
+        uses: ./.github/actions/monorepo-install
 
       - name: Restore packages cache
         uses: actions/cache@v3

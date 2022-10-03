@@ -37,7 +37,8 @@ jobs:
         with:
           node-version: ${{ matrix.node-version }}
 
-      - uses: ./.github/actions/monorepo-install
+      - name: 📥 Monorepo install
+        uses: ./.github/actions/monorepo-install
 
       - name: Start postgresql
         working-directory: packages/db-main

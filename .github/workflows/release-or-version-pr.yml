@@ -24,7 +24,8 @@ jobs:
         with:
           node-version: 16.x
 
-      - uses: ./.github/actions/monorepo-install
+      - name: 📥 Monorepo install
+        uses: ./.github/actions/monorepo-install
 
       # @link https://github.com/changesets/action
       - name: Create Release Pull Request
