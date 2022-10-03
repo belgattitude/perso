@@ -18,10 +18,11 @@ runs:
           yarn-cache-folder-
 
     - name: Install dependencies
+      shell: bash
       run: |
         yarn install --immutable --inline-builds
       env:
         PRISMA_SKIP_POSTINSTALL_GENERATE: true
         PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: 1
         HUSKY: 0
-      shell: bash
+
