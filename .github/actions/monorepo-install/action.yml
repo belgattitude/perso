@@ -1,9 +1,15 @@
+# This action installs the monorepo deps with yarn. It can be reused across the different workflows.
 name: "CI monorepo install (yarn)"
 runs:
   using: "composite"
   steps:
-    # Why not using setup-node 2.2+ cache option (yet) ?
-    # see https://github.com/belgattitude/nextjs-monorepo-example/pull/369
+    # Yarn 2+ is able to prune its cache which allows to re-use it even
+    # when the yarn.lock is modified. This allows to download only changed
+    # packages from the npm repo. Gives slightly faster installs but more importantly
+    # in most situations the installation becomes resilient to npm downtimes.
+    #
+    # @see https://github.com/actions/setup-node/issues/325
+    #
     - name: Get yarn cache directory path
       id: yarn-cache-dir-path
       run: echo "::set-output name=dir::$(yarn config get cacheFolder)"
