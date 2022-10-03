@@ -7,7 +7,8 @@ on:
 
 jobs:
   release:
-    if: github.repository == 'belgattitude/perso'
+    # Ensure this workflow is never run outside this repo and limit release to main branch (not from a remote branch)
+    if: ${{ github.repository == 'belgattitude/perso' && contains('refs/heads/main',github.ref)}}
     name: Release and changelog
     runs-on: ubuntu-latest
     steps:
