@@ -4268,9 +4268,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-codegen/cli@npm:2.13.2":
-  version: 2.13.2
-  resolution: "@graphql-codegen/cli@npm:2.13.2"
+"@graphql-codegen/cli@npm:2.13.3":
+  version: 2.13.3
+  resolution: "@graphql-codegen/cli@npm:2.13.3"
   dependencies:
     "@babel/generator": "npm:^7.18.13"
     "@babel/template": "npm:^7.18.10"
@@ -4292,7 +4292,7 @@ __metadata:
     chalk: "npm:^4.1.0"
     chokidar: "npm:^3.5.2"
     cosmiconfig: "npm:^7.0.0"
-    cosmiconfig-typescript-loader: "npm:4.0.0"
+    cosmiconfig-typescript-swc-loader: "npm:0.0.2"
     debounce: "npm:^1.2.0"
     detect-indent: "npm:^6.0.0"
     graphql-config: "npm:^4.3.5"
@@ -4314,7 +4314,7 @@ __metadata:
     graphql-code-generator: cjs/bin.js
     graphql-codegen: cjs/bin.js
     graphql-codegen-esm: esm/bin.js
-  checksum: 3af3cc11e08119c96a9ede3472da029d679a44a94bbc6cb795273ff9a5f97dd8cafd3fa73553a4411fefdb102178ce6a4e20fe8c3694a210333edf7e5c455b01
+  checksum: 8b37fa111aa427bdfb1088c7915d83811e59efbcc07ca5ea2ec90a68e2fc5d61a4b8aff3a7c092e4315c0df8de76967071012d1d49f5f304da3da2b28a596c6d
   languageName: node
   linkType: hard
 
@@ -9065,12 +9065,179 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@swc/core-android-arm-eabi@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-android-arm-eabi@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": "npm:1.2.122"
+  conditions: os=android & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-android-arm64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-android-arm64@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": "npm:1.2.130"
+  conditions: os=android & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-arm64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-darwin-arm64@npm:1.3.4"
+  conditions: os=darwin & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-darwin-x64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-darwin-x64@npm:1.3.4"
+  conditions: os=darwin & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-freebsd-x64@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-freebsd-x64@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": "npm:1.2.130"
+  conditions: os=freebsd & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm-gnueabihf@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-arm-gnueabihf@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": "npm:1.2.130"
+  conditions: os=linux & cpu=arm
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-gnu@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-arm64-gnu@npm:1.3.4"
+  conditions: os=linux & cpu=arm64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-arm64-musl@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-arm64-musl@npm:1.3.4"
+  conditions: os=linux & cpu=arm64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-gnu@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-x64-gnu@npm:1.3.4"
+  conditions: os=linux & cpu=x64 & libc=glibc
+  languageName: node
+  linkType: hard
+
+"@swc/core-linux-x64-musl@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-linux-x64-musl@npm:1.3.4"
+  conditions: os=linux & cpu=x64 & libc=musl
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-arm64-msvc@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-win32-arm64-msvc@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": "npm:1.2.130"
+  conditions: os=win32 & cpu=arm64
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-ia32-msvc@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-win32-ia32-msvc@npm:1.3.4"
+  dependencies:
+    "@swc/wasm": "npm:1.2.130"
+  conditions: os=win32 & cpu=ia32
+  languageName: node
+  linkType: hard
+
+"@swc/core-win32-x64-msvc@npm:1.3.4":
+  version: 1.3.4
+  resolution: "@swc/core-win32-x64-msvc@npm:1.3.4"
+  conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@swc/core@npm:^1.3.3":
+  version: 1.3.4
+  resolution: "@swc/core@npm:1.3.4"
+  dependencies:
+    "@swc/core-android-arm-eabi": "npm:1.3.4"
+    "@swc/core-android-arm64": "npm:1.3.4"
+    "@swc/core-darwin-arm64": "npm:1.3.4"
+    "@swc/core-darwin-x64": "npm:1.3.4"
+    "@swc/core-freebsd-x64": "npm:1.3.4"
+    "@swc/core-linux-arm-gnueabihf": "npm:1.3.4"
+    "@swc/core-linux-arm64-gnu": "npm:1.3.4"
+    "@swc/core-linux-arm64-musl": "npm:1.3.4"
+    "@swc/core-linux-x64-gnu": "npm:1.3.4"
+    "@swc/core-linux-x64-musl": "npm:1.3.4"
+    "@swc/core-win32-arm64-msvc": "npm:1.3.4"
+    "@swc/core-win32-ia32-msvc": "npm:1.3.4"
+    "@swc/core-win32-x64-msvc": "npm:1.3.4"
+  dependenciesMeta:
+    "@swc/core-android-arm-eabi":
+      optional: true
+    "@swc/core-android-arm64":
+      optional: true
+    "@swc/core-darwin-arm64":
+      optional: true
+    "@swc/core-darwin-x64":
+      optional: true
+    "@swc/core-freebsd-x64":
+      optional: true
+    "@swc/core-linux-arm-gnueabihf":
+      optional: true
+    "@swc/core-linux-arm64-gnu":
+      optional: true
+    "@swc/core-linux-arm64-musl":
+      optional: true
+    "@swc/core-linux-x64-gnu":
+      optional: true
+    "@swc/core-linux-x64-musl":
+      optional: true
+    "@swc/core-win32-arm64-msvc":
+      optional: true
+    "@swc/core-win32-ia32-msvc":
+      optional: true
+    "@swc/core-win32-x64-msvc":
+      optional: true
+  bin:
+    swcx: run_swcx.js
+  checksum: 14d9c0f885c19cbac3e58148f22623e96c0255be2175433e99f7ca2ed94df2b2477afd5f9d076dc026795d0b6065558814fd09bfffc75f39603cecacc916225c
+  languageName: node
+  linkType: hard
+
 "@swc/helpers@npm:0.4.11":
   version: 0.4.11
   resolution: "@swc/helpers@npm:0.4.11"
   dependencies:
     tslib: "npm:^2.4.0"
   checksum: beb0124de3b8e1108325e81f46d85b987118a804e7fb347d6fdc28a4be0df80dff57e7031ce75cc8ac0411644ffd93d352cb73ed9c32ec057438c06cf2d98e9b
+  languageName: node
+  linkType: hard
+
+"@swc/wasm@npm:1.2.122":
+  version: 1.2.122
+  resolution: "@swc/wasm@npm:1.2.122"
+  checksum: 9c9896e62921925d469d9a7ec01331f2e11c452d56b080a1dd0b4569dcd69a5ba244b0a21c5688b71dfd3de780a1cbb3b204144026954fa55a4c451a29e2b18a
+  languageName: node
+  linkType: hard
+
+"@swc/wasm@npm:1.2.130":
+  version: 1.2.130
+  resolution: "@swc/wasm@npm:1.2.130"
+  checksum: ff270fbb0a77d1e697a98209f180cea0c85c6c6e91df20361d8318d9d13749a0f2c23d0a20e78079e7d721ce7e203e91f2fff62f614d1635a73c5fb0f2ad897e
   languageName: node
   linkType: hard
 
@@ -13845,7 +14012,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"cosmiconfig-typescript-loader@npm:4.0.0, cosmiconfig-typescript-loader@npm:^4.0.0":
+"cosmiconfig-typescript-loader@npm:^4.0.0":
   version: 4.0.0
   resolution: "cosmiconfig-typescript-loader@npm:4.0.0"
   peerDependencies:
@@ -13854,6 +14021,16 @@ __metadata:
     ts-node: ">=10"
     typescript: ">=3"
   checksum: 435a4bdfa3c8282edc5190eb96712d5b02f0e24c752f279026eff2903f960fa151e421a21c9272d34425c3dab4e5e2b76392ce4110160c28de1846870cd69453
+  languageName: node
+  linkType: hard
+
+"cosmiconfig-typescript-swc-loader@npm:0.0.2":
+  version: 0.0.2
+  resolution: "cosmiconfig-typescript-swc-loader@npm:0.0.2"
+  dependencies:
+    "@swc/core": "npm:^1.3.3"
+    cosmiconfig: "npm:^7.0.1"
+  checksum: bab33e76d04f82373f63a9901d9ee24b02c76e126b66e5438348ab5ce3ea5c14ff0f50b23daefb5d483e14121dabeb49a0b36c144a7db980774a4ef97b2caf8a
   languageName: node
   linkType: hard
 
@@ -32589,7 +32766,7 @@ __metadata:
     "@emotion/styled": "npm:11.10.4"
     "@fontsource/inter": "npm:4.5.13"
     "@fontsource/rubik": "npm:4.5.11"
-    "@graphql-codegen/cli": "npm:2.13.2"
+    "@graphql-codegen/cli": "npm:2.13.3"
     "@graphql-codegen/typed-document-node": "npm:2.3.3"
     "@graphql-codegen/typescript": "npm:2.7.3"
     "@graphql-codegen/typescript-operations": "npm:2.5.3"
