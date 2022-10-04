@@ -38,7 +38,7 @@ export function assertIsPresent<T>(
   v: T,
   msgOrErrorFactory?: MsgOrErrorFactory
 ): asserts v is NonNullable<T> {
-  if (v === null || v == undefined) {
+  if (v === null || v === undefined) {
     throw createAssertException(
       msgOrErrorFactory,
       'Value is null or undefined.'

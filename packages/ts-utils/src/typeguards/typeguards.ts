@@ -56,7 +56,7 @@ export const isHttpStatusCode = (v: unknown): v is number => {
 };
 
 /**
- * Check whether a variable is non null or non undefined
+ * Check whether a variable is not null and not undefined
  */
 export function isPresent<T>(v: T): v is NonNullable<T> {
   return v !== undefined && v !== null;
