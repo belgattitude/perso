@@ -30382,6 +30382,27 @@ __metadata:
   languageName: node
   linkType: hard
 
+"three-stdlib@npm:2.17.2":
+  version: 2.17.2
+  resolution: "three-stdlib@npm:2.17.2"
+  dependencies:
+    "@babel/runtime": "npm:^7.16.7"
+    "@types/offscreencanvas": "npm:^2019.6.4"
+    "@webgpu/glslang": "npm:^0.0.15"
+    chevrotain: "npm:^10.1.2"
+    draco3d: "npm:^1.4.1"
+    fflate: "npm:^0.6.9"
+    ktx-parse: "npm:^0.4.5"
+    mmd-parser: "npm:^1.0.4"
+    opentype.js: "npm:^1.3.3"
+    potpack: "npm:^1.0.1"
+    zstddec: "npm:^0.0.2"
+  peerDependencies:
+    three: ">=0.122.0"
+  checksum: 7969e77b41c97a9f21af3525461ff27949083e641fc781ca56153a9c818a89847fc4415a0caffa9da103cdf1c3a2d65641188833b03b00e9f84cb27a32dd87a9
+  languageName: node
+  linkType: hard
+
 "three@npm:0.145.0":
   version: 0.145.0
   resolution: "three@npm:0.145.0"
@@ -32509,7 +32530,7 @@ __metadata:
     tailwind-merge: "npm:1.6.1"
     tailwindcss: "npm:3.1.8"
     three: "npm:0.145.0"
-    three-stdlib: "npm:2.17.0"
+    three-stdlib: "npm:2.17.2"
     ts-jest: "npm:29.0.3"
     ts-pattern: "npm:4.0.5"
     type-fest: "npm:3.0.0"
