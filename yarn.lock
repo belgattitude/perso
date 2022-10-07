@@ -2766,8 +2766,8 @@ __metadata:
   resolution: "@belgattitude/api-gateway@workspace:packages/api-gateway"
   dependencies:
     "@belgattitude/eslint-config-bases": "workspace:^"
-    "@graphql-mesh/cli": "npm:0.78.30"
-    "@graphql-mesh/config": "npm:8.0.18"
+    "@graphql-mesh/cli": "npm:0.78.31"
+    "@graphql-mesh/config": "npm:8.0.19"
     "@graphql-mesh/graphql": "npm:0.31.22"
     "@graphql-mesh/openapi": "npm:0.33.24"
     "@graphql-mesh/runtime": "npm:0.44.19"
@@ -4511,9 +4511,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@graphql-mesh/cli@npm:0.78.30":
-  version: 0.78.30
-  resolution: "@graphql-mesh/cli@npm:0.78.30"
+"@graphql-mesh/cli@npm:0.78.31":
+  version: 0.78.31
+  resolution: "@graphql-mesh/cli@npm:0.78.31"
   dependencies:
     "@graphql-codegen/core": "npm:2.6.2"
     "@graphql-codegen/typed-document-node": "npm:2.3.3"
@@ -4521,7 +4521,7 @@ __metadata:
     "@graphql-codegen/typescript-generic-sdk": "npm:3.0.1"
     "@graphql-codegen/typescript-operations": "npm:2.5.3"
     "@graphql-codegen/typescript-resolvers": "npm:2.7.3"
-    "@graphql-mesh/config": "npm:8.0.18"
+    "@graphql-mesh/config": "npm:8.0.19"
     "@graphql-mesh/cross-helpers": "npm:0.2.6"
     "@graphql-mesh/http": "npm:0.1.27"
     "@graphql-mesh/runtime": "npm:0.44.19"
@@ -4554,13 +4554,13 @@ __metadata:
     gql-mesh: bin.js
     graphql-mesh: bin.js
     mesh: bin.js
-  checksum: ae119e46c2b2e2a27e86324ae74318f5f739f4796d8f018038fdebca82e5cd92047a14d84b5880d3d05aabf0409228235da20bf619de3de5d1402acff21be2ed
+  checksum: 9f1539dc78f255ebf992d03b38e6776aff744481b8911946fdaf0f1dc26ab4b16b4dcee904754fb0bebb27fdfe396769d58a7844e6086c9d458347764c11f787
   languageName: node
   linkType: hard
 
-"@graphql-mesh/config@npm:8.0.18":
-  version: 8.0.18
-  resolution: "@graphql-mesh/config@npm:8.0.18"
+"@graphql-mesh/config@npm:8.0.19":
+  version: 8.0.19
+  resolution: "@graphql-mesh/config@npm:8.0.19"
   dependencies:
     "@envelop/core": "npm:2.6.0"
     "@graphql-mesh/cache-localforage": "npm:0.6.50"
@@ -4582,7 +4582,7 @@ __metadata:
   peerDependencies:
     "@graphql-mesh/runtime": ^0.44.19
     graphql: "*"
-  checksum: c0946a235d052e6f3265a923a972cdd80a47505c21f8793ebfe75f761c83de7549fc05154b7f6afa665cf9e24ad81c3d1f666e06b7b4fe554368ed2396c23dc9
+  checksum: 575902b988a518c17d354d4bade7c18405a414fdcb8e9387d8a4ffe706346ddf4c33fc17e31ba747a556569e4b7502bbe7ea5c8ddb07a88bced11d9959601f9c
   languageName: node
   linkType: hard
 
