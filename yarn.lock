@@ -11625,14 +11625,13 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:1.1.2":
-  version: 1.1.2
-  resolution: "axios@npm:1.1.2"
+"axios@npm:0.27.2":
+  version: 0.27.2
+  resolution: "axios@npm:0.27.2"
   dependencies:
-    follow-redirects: "npm:^1.15.0"
+    follow-redirects: "npm:^1.14.9"
     form-data: "npm:^4.0.0"
-    proxy-from-env: "npm:^1.1.0"
-  checksum: 484d9b2af94b132342a836f76c0569a7e59fc2f6365ebf9e07c0bf9fec42d7649c753354a8779d44346b51068823bdf2f3bcc4e1e1b2b896302e21b7d6ad5fe5
+  checksum: 4cd898afe90caaf05307fc5a0da4c61012493b6bfd4937fff9774455c01d368db583b17c4737e73853f149b32e615487930b491661682a1f69a1973b1f533bb7
   languageName: node
   linkType: hard
 
@@ -16977,7 +16976,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"follow-redirects@npm:^1.10.0, follow-redirects@npm:^1.14.0, follow-redirects@npm:^1.15.0":
+"follow-redirects@npm:^1.10.0, follow-redirects@npm:^1.14.0, follow-redirects@npm:^1.14.9":
   version: 1.15.2
   resolution: "follow-redirects@npm:1.15.2"
   peerDependenciesMeta:
@@ -32425,7 +32424,7 @@ __metadata:
     "@vitest/coverage-istanbul": "npm:0.24.0"
     "@vitest/ui": "npm:0.24.0"
     autoprefixer: "npm:10.4.12"
-    axios: "npm:1.1.2"
+    axios: "npm:0.27.2"
     clsx: "npm:1.2.1"
     cors: "npm:2.8.5"
     cross-env: "npm:7.0.3"
