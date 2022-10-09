@@ -61,7 +61,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: 📥 Monorepo install
-        uses: ./.github/actions/monorepo-install
+        uses: ./.github/actions/yarn-nm-install
 
       # see https://github.com/vercel/next.js/pull/27362
       - name: Restore nextjs build website from cache
@@ -105,43 +105,8 @@ jobs:
           PUSHER_APP_ID: 111
           PUSHER_SECRET: balah
 
-      # Keep cached playwright binaries to required version
-      # https://playwright.dev/docs/ci#caching-browsers
-      - name: Get current Playwright version
-        id: playwright-version
-        shell: bash
-        run: |
-          playwright_version=$(npm info @playwright/test version)
-          echo "::set-output name=version::${playwright_version}"
-
-      - name: Get playwright cache-key
-        id: playwright-cache-key
-        run: |
-          playwright_cache_key="PL1-${{ runner.os }}-playwright-cache-${{ steps.playwright-version.outputs.version }}"
-          echo "::set-output name=key::${playwright_cache_key}"      
-
-      - name: Cache Playwright binaries
-        uses: actions/cache@v3
-        id: playwright-cache
-        with:
-          path: ${{ matrix.playwright_binary_path }}
-          key: ${{ steps.playwright-cache-key.outputs.key }}
-
-      - name: Playwright debug
-        shell: bash
-        run: |
-          echo "OS: ${{ matrix.os }}"
-          echo "Playwright version: ${{ steps.playwright-version.outputs.version }}"
-          echo "Playwright install dir: ${{ matrix.playwright_binary_path }}"
-          echo "Cache key: ${{ steps.playwright-cache-key.outputs.key }}"
-          echo "Cache hit: ${{ steps.playwright-cache.outputs.cache-hit == 'true' }}"
-
-      - name: Install Playwright OS deps
-        run: yarn playwright install-deps
-
-      - name: Install Playwright Browsers
-        if: steps.playwright-cache.outputs.cache-hit != 'true'
-        run: yarn playwright install chromium webkit
+      - name: 📥 Playwright install
+        uses: ./.github/actions/playwright-install
 
       - name: E2E run website playwright tests
         working-directory: apps/website

@@ -51,7 +51,7 @@ jobs:
           node-version: ${{ matrix.node-version }}
 
       - name: 📥 Monorepo install
-        uses: ./.github/actions/monorepo-install
+        uses: ./.github/actions/yarn-nm-install
 
       # see https://github.com/vercel/next.js/pull/27362
       - name: Restore nextjs build website from cache
