@@ -6819,14 +6819,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/graphql@npm:5.0.1":
-  version: 5.0.1
-  resolution: "@octokit/graphql@npm:5.0.1"
+"@octokit/graphql@npm:5.0.3":
+  version: 5.0.3
+  resolution: "@octokit/graphql@npm:5.0.3"
   dependencies:
     "@octokit/request": "npm:^6.0.0"
-    "@octokit/types": "npm:^7.0.0"
+    "@octokit/types": "npm:^8.0.0"
     universal-user-agent: "npm:^6.0.0"
-  checksum: 422130cabe17add79f03da558fd909a574f033176d9dbce0711fe25a6a288b91ca2ec0ac14ee5b70bd10eafa9d951614ac6754f1a54133b06abad73f0a16450d
+  checksum: ae753cf02199b0654f08b3b21e300d883b60693ac39d172e0f4eba866a477a2126a736a9a2c39c5a48ca5bac329edb73c54f6d63c03719264e5146f8ee540e84
   languageName: node
   linkType: hard
 
@@ -6837,10 +6837,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/openapi-types@npm:^13.0.0":
-  version: 13.0.1
-  resolution: "@octokit/openapi-types@npm:13.0.1"
-  checksum: 6682169a9069ac418fb184f91a00ae66a86c819670bf2ee38feed402bd16fa19da09193475b3968bc0fd05b152d75656289d907e50bb9e59274e43f99cac7552
+"@octokit/openapi-types@npm:^14.0.0":
+  version: 14.0.0
+  resolution: "@octokit/openapi-types@npm:14.0.0"
+  checksum: 8cf19776ad6324f7021316feccc497fe768372f17b78a16dbed9d8a4977b7fac4ab8423f865d81d781df48145bec7a7ea0a21e07d5045c14d5cbe4327b91bae6
   languageName: node
   linkType: hard
 
@@ -6878,12 +6878,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@octokit/types@npm:^7.0.0":
-  version: 7.0.0
-  resolution: "@octokit/types@npm:7.0.0"
+"@octokit/types@npm:^8.0.0":
+  version: 8.0.0
+  resolution: "@octokit/types@npm:8.0.0"
   dependencies:
-    "@octokit/openapi-types": "npm:^13.0.0"
-  checksum: de57aa83ff2432581c953d7f698f74601a4bd13780b6cb98e41a2a7c15c6186b066d6a06a0926393de5d3d2fe7e30fdffe9d19d93711a4b1e2b27496e9f6296f
+    "@octokit/openapi-types": "npm:^14.0.0"
+  checksum: 0dde710f26be2c1b4be0ad1d8dd024134404878af198086489f17b60ae112b47c0afd67ddc13306eacc81541286ea42b75d92570e5c3acdddc0de199a0c897c4
   languageName: node
   linkType: hard
 
@@ -32451,7 +32451,7 @@ __metadata:
     "@next-auth/prisma-adapter": "npm:1.0.5"
     "@next/bundle-analyzer": "npm:12.3.1"
     "@next/env": "npm:12.3.1"
-    "@octokit/graphql": "npm:5.0.1"
+    "@octokit/graphql": "npm:5.0.3"
     "@octokit/graphql-schema": "npm:12.11.0"
     "@playwright/test": "npm:1.27.1"
     "@pothos/core": "npm:3.22.5"
