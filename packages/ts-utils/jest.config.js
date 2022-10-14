@@ -30,7 +30,7 @@ const config = {
   extensionsToTreatAsEsm: ['.ts'],
   verbose: true,
   rootDir: './src',
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  // setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
     ...getTsConfigBasePaths(tsConfigFile),
