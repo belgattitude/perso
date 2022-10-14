@@ -1,10 +1,9 @@
 // @ts-check
+const { getTsconfig } = require('get-tsconfig');
+const { pathsToModuleNameMapper } = require('ts-jest');
+const { getJestCachePath } = require('../../cache.config.js');
 
-import { getTsconfig } from 'get-tsconfig';
-import { pathsToModuleNameMapper } from 'ts-jest';
-import { getJestCachePath } from '../../cache.config.js';
-
-const tsConfigFile = new URL('./tsconfig.json', import.meta.url).pathname;
+const tsConfigFile = './tsconfig.json';
 
 /**
  * Transform the tsconfig paths into jest compatible one (support extends)
@@ -25,12 +24,12 @@ const getTsConfigBasePaths = (tsConfigFile) => {
 
 /** @type {import('ts-jest').JestConfigWithTsJest} */
 const config = {
-  displayName: `api-gateway:unit`,
   cacheDirectory: getJestCachePath('@belgattitude/api-gateway'),
-  testEnvironment: 'jsdom',
+  testEnvironment: 'node',
+  // extensionsToTreatAsEsm: ['.ts'],
   verbose: true,
   rootDir: './src',
-  setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
+  // setupFilesAfterEnv: ['@testing-library/jest-dom/extend-expect'],
   testMatch: ['<rootDir>/**/*.{spec,test}.{js,jsx,ts,tsx}'],
   moduleNameMapper: {
     ...getTsConfigBasePaths(tsConfigFile),

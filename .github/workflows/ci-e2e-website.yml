@@ -46,9 +46,6 @@ jobs:
           - 16
         os:
           - ubuntu-latest
-        include:
-          - os: ubuntu-latest
-            playwright_binary_path: ~/.cache/ms-playwright
 
     runs-on: ${{ matrix.os }}
 

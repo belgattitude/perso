@@ -6,6 +6,9 @@ import { QueryClient, QueryClientProvider } from 'react-query';
 const queryClient = new QueryClient({});
 
 type Props = PropsWithChildren<{
+  /**
+   * next-auth sessions if available
+   */
   session?: Session | null;
 }>;
 
