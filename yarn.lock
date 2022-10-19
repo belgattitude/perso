@@ -192,14 +192,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-s3@npm:3.190.0":
-  version: 3.190.0
-  resolution: "@aws-sdk/client-s3@npm:3.190.0"
+"@aws-sdk/client-s3@npm:3.192.0":
+  version: 3.192.0
+  resolution: "@aws-sdk/client-s3@npm:3.192.0"
   dependencies:
     "@aws-crypto/sha1-browser": "npm:2.0.0"
     "@aws-crypto/sha256-browser": "npm:2.0.0"
     "@aws-crypto/sha256-js": "npm:2.0.0"
-    "@aws-sdk/client-sts": "npm:3.190.0"
+    "@aws-sdk/client-sts": "npm:3.192.0"
     "@aws-sdk/config-resolver": "npm:3.190.0"
     "@aws-sdk/credential-provider-node": "npm:3.190.0"
     "@aws-sdk/eventstream-serde-browser": "npm:3.190.0"
@@ -213,6 +213,7 @@ __metadata:
     "@aws-sdk/md5-js": "npm:3.190.0"
     "@aws-sdk/middleware-bucket-endpoint": "npm:3.190.0"
     "@aws-sdk/middleware-content-length": "npm:3.190.0"
+    "@aws-sdk/middleware-endpoint": "npm:3.190.0"
     "@aws-sdk/middleware-expect-continue": "npm:3.190.0"
     "@aws-sdk/middleware-flexible-checksums": "npm:3.190.0"
     "@aws-sdk/middleware-host-header": "npm:3.190.0"
@@ -222,7 +223,7 @@ __metadata:
     "@aws-sdk/middleware-retry": "npm:3.190.0"
     "@aws-sdk/middleware-sdk-s3": "npm:3.190.0"
     "@aws-sdk/middleware-serde": "npm:3.190.0"
-    "@aws-sdk/middleware-signing": "npm:3.190.0"
+    "@aws-sdk/middleware-signing": "npm:3.192.0"
     "@aws-sdk/middleware-ssec": "npm:3.190.0"
     "@aws-sdk/middleware-stack": "npm:3.190.0"
     "@aws-sdk/middleware-user-agent": "npm:3.190.0"
@@ -249,7 +250,7 @@ __metadata:
     "@aws-sdk/xml-builder": "npm:3.188.0"
     fast-xml-parser: "npm:4.0.11"
     tslib: "npm:^2.3.1"
-  checksum: 0c7135eadd418a9e6096e84c091d4001bc17e8a6dc47b2b5b95ad9881f139918781af051d0a2ed791629bc55282330f61ae625b25bdaf7f672965cb88f26a3c5
+  checksum: 009c606cbf154061c577498b030f98c5d1f899680c25397625889e43917c3e86c6a8a8ef7bb19df3d253d739cb49a4d165ea14361c607e7f058b5a3d6bce909d
   languageName: node
   linkType: hard
 
@@ -292,9 +293,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/client-sts@npm:3.190.0":
-  version: 3.190.0
-  resolution: "@aws-sdk/client-sts@npm:3.190.0"
+"@aws-sdk/client-sts@npm:3.192.0":
+  version: 3.192.0
+  resolution: "@aws-sdk/client-sts@npm:3.192.0"
   dependencies:
     "@aws-crypto/sha256-browser": "npm:2.0.0"
     "@aws-crypto/sha256-js": "npm:2.0.0"
@@ -308,9 +309,9 @@ __metadata:
     "@aws-sdk/middleware-logger": "npm:3.190.0"
     "@aws-sdk/middleware-recursion-detection": "npm:3.190.0"
     "@aws-sdk/middleware-retry": "npm:3.190.0"
-    "@aws-sdk/middleware-sdk-sts": "npm:3.190.0"
+    "@aws-sdk/middleware-sdk-sts": "npm:3.192.0"
     "@aws-sdk/middleware-serde": "npm:3.190.0"
-    "@aws-sdk/middleware-signing": "npm:3.190.0"
+    "@aws-sdk/middleware-signing": "npm:3.192.0"
     "@aws-sdk/middleware-stack": "npm:3.190.0"
     "@aws-sdk/middleware-user-agent": "npm:3.190.0"
     "@aws-sdk/node-config-provider": "npm:3.190.0"
@@ -331,7 +332,7 @@ __metadata:
     "@aws-sdk/util-utf8-node": "npm:3.188.0"
     fast-xml-parser: "npm:4.0.11"
     tslib: "npm:^2.3.1"
-  checksum: f02b9d96dc43c8bf9b8b17983a025c2bc522e6747b9377c67308e6ce61452485d12fe07dba64b2c43a298a774598694d4fddd93de14f1993c2f1e39b7e2071b9
+  checksum: 5673572516b6b3d11c1e43bb4e6a8be53672ec5f145117f90d090cc08c80288491286d6a7d2aca332094ce97434ecf1be76e3693e041b7d81a3a1491fe5188c3
   languageName: node
   linkType: hard
 
@@ -598,6 +599,22 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@aws-sdk/middleware-endpoint@npm:3.190.0":
+  version: 3.190.0
+  resolution: "@aws-sdk/middleware-endpoint@npm:3.190.0"
+  dependencies:
+    "@aws-sdk/middleware-serde": "npm:3.190.0"
+    "@aws-sdk/protocol-http": "npm:3.190.0"
+    "@aws-sdk/signature-v4": "npm:3.190.0"
+    "@aws-sdk/types": "npm:3.190.0"
+    "@aws-sdk/url-parser": "npm:3.190.0"
+    "@aws-sdk/util-config-provider": "npm:3.188.0"
+    "@aws-sdk/util-middleware": "npm:3.190.0"
+    tslib: "npm:^2.3.1"
+  checksum: a04e5361a5b08e4ca47517cb1642b454c1c859d330ad869801e65115e5642795b429436f79ab897ae3eb5dbc2ef288ad49ba91fc3371cae8073a11064760dce0
+  languageName: node
+  linkType: hard
+
 "@aws-sdk/middleware-expect-continue@npm:3.190.0":
   version: 3.190.0
   resolution: "@aws-sdk/middleware-expect-continue@npm:3.190.0"
@@ -692,17 +709,17 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/middleware-sdk-sts@npm:3.190.0":
-  version: 3.190.0
-  resolution: "@aws-sdk/middleware-sdk-sts@npm:3.190.0"
+"@aws-sdk/middleware-sdk-sts@npm:3.192.0":
+  version: 3.192.0
+  resolution: "@aws-sdk/middleware-sdk-sts@npm:3.192.0"
   dependencies:
-    "@aws-sdk/middleware-signing": "npm:3.190.0"
+    "@aws-sdk/middleware-signing": "npm:3.192.0"
     "@aws-sdk/property-provider": "npm:3.190.0"
     "@aws-sdk/protocol-http": "npm:3.190.0"
     "@aws-sdk/signature-v4": "npm:3.190.0"
     "@aws-sdk/types": "npm:3.190.0"
     tslib: "npm:^2.3.1"
-  checksum: b2c04a7c96eb3d16e0956a7a389c85355e0ce06f0bbc0e3c87a8d5bb60ce82c57580833721ecdd8dcf1eed81a2326f83b7115957212fca61351bb99ae561c741
+  checksum: 1ea36d48a1984ec71f1be23df7078b166e6888ae1e842a862567e857de98af3e3db477e636788a70410c66031bcd545828012e6bbf5262a406deee824026bd62
   languageName: node
   linkType: hard
 
@@ -716,9 +733,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@aws-sdk/middleware-signing@npm:3.190.0":
-  version: 3.190.0
-  resolution: "@aws-sdk/middleware-signing@npm:3.190.0"
+"@aws-sdk/middleware-signing@npm:3.192.0":
+  version: 3.192.0
+  resolution: "@aws-sdk/middleware-signing@npm:3.192.0"
   dependencies:
     "@aws-sdk/property-provider": "npm:3.190.0"
     "@aws-sdk/protocol-http": "npm:3.190.0"
@@ -726,7 +743,7 @@ __metadata:
     "@aws-sdk/types": "npm:3.190.0"
     "@aws-sdk/util-middleware": "npm:3.190.0"
     tslib: "npm:^2.3.1"
-  checksum: 43d02b95fae1901aac07b94b0e81da4ce960547b01fffe937d1ffbd969fb9c45b1f65ad529fd5c73b585f57fd7bf569f6fe7139fd7a9baf4641031b9f09af66c
+  checksum: 394b6ab195fcca07b6411813604d548cf9b8e1fdae240cb14830284a3d3a0ef4b37551f321bc065d01429b7c57a140a79560cc8fc2f21551de7efdf399e161b4
   languageName: node
   linkType: hard
 
@@ -3034,7 +3051,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/file-s3@workspace:packages/file-s3"
   dependencies:
-    "@aws-sdk/client-s3": "npm:3.190.0"
+    "@aws-sdk/client-s3": "npm:3.192.0"
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@size-limit/file": "npm:8.1.0"
     "@types/jest": "npm:29.2.0"
