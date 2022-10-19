@@ -6730,11 +6730,11 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@nrwl/nx-cloud@npm:14.7.0":
-  version: 14.7.0
-  resolution: "@nrwl/nx-cloud@npm:14.7.0"
+"@nrwl/nx-cloud@npm:15.0.0":
+  version: 15.0.0
+  resolution: "@nrwl/nx-cloud@npm:15.0.0"
   dependencies:
-    axios: "npm:^0.21.1"
+    axios: "npm:^0.21.2"
     chalk: "npm:4.1.0"
     dotenv: "npm:~10.0.0"
     fs-extra: "npm:^10.1.0"
@@ -6744,7 +6744,7 @@ __metadata:
     yargs-parser: "npm:>=21.0.1"
   bin:
     nx-cloud: bin/nx-cloud.js
-  checksum: 068b606ed422bf9fccfaaf43a9103dadd3b1a9806f64fb74d56814c6954adb338a5faa5123d52335a35462047288b51892dec5d518229fe99e5c8d260cf6746f
+  checksum: 76d17422c7bbe823442bac2ddcc36a876a005dcb5e8ff05671e663d264ddddf8e5f5d62e4a9755f1c79fcb669e2bfd5ef8624caa7ea0b6a599359347a8be8a0f
   languageName: node
   linkType: hard
 
@@ -11718,7 +11718,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"axios@npm:^0.21.1":
+"axios@npm:^0.21.1, axios@npm:^0.21.2":
   version: 0.21.4
   resolution: "axios@npm:0.21.4"
   dependencies:
@@ -12119,7 +12119,7 @@ __metadata:
     "@changesets/cli": "npm:2.25.0"
     "@commitlint/cli": "npm:17.1.2"
     "@commitlint/config-conventional": "npm:17.1.0"
-    "@nrwl/nx-cloud": "npm:14.7.0"
+    "@nrwl/nx-cloud": "npm:15.0.0"
     "@nrwl/workspace": "npm:15.0.0"
     "@playwright/test": "npm:1.27.1"
     "@types/prettier": "npm:2.7.1"
