@@ -13170,10 +13170,10 @@ __metadata:
   languageName: node
   linkType: hard
 
-"classnames@npm:^2.2.6, classnames@npm:^2.3.1":
-  version: 2.3.1
-  resolution: "classnames@npm:2.3.1"
-  checksum: 282e29eeb023740bfd9d00e44d6baf2b2f023f0d0a460cd327869062eaa512cea66a1fd97d730b4f934fb94b9425c1702963be62029fa0ec1383c5e34c89f404
+"classnames@npm:^2.2.6, classnames@npm:^2.3.2":
+  version: 2.3.2
+  resolution: "classnames@npm:2.3.2"
+  checksum: ecbd166e986b9095e01eba91958907ed43026e35aac98d667a9e958642795632c15a88f36785c66bcfbe05df32e47c1575d22faa46c29de271b013eb00202498
   languageName: node
   linkType: hard
 
@@ -16950,22 +16950,22 @@ __metadata:
   languageName: node
   linkType: hard
 
-"flowbite-react@npm:0.2.1":
-  version: 0.2.1
-  resolution: "flowbite-react@npm:0.2.1"
+"flowbite-react@npm:0.3.0":
+  version: 0.3.0
+  resolution: "flowbite-react@npm:0.3.0"
   dependencies:
     "@floating-ui/react-dom": "npm:^1.0.0"
     "@floating-ui/react-dom-interactions": "npm:^0.9.1"
-    classnames: "npm:^2.3.1"
+    classnames: "npm:^2.3.2"
     commitizen: "npm:^4.2.5"
-    react-icons: "npm:^4.4.0"
+    react-icons: "npm:^4.6.0"
     react-indiana-drag-scroll: "npm:^2.2.0"
   peerDependencies:
     flowbite: ^1
     react: ^18
     react-dom: ^18
     tailwindcss: ^3
-  checksum: 2ffc2710120cd3593abc235c70540467af646bffbde0fafcf7e184420339da8a94fc7789a79ae6e9c9d178abed2da68a7a124ea95cb91d5e3ac0c3aa5ae12558
+  checksum: d6d7d48c964e66c9f7585c21470dd14100be543a05296ad10854ccacc9626f7a8d27415123296a7194d5c8e8e7e046f56e760a4c8606a6c4959844c51036c121
   languageName: node
   linkType: hard
 
@@ -27121,12 +27121,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-icons@npm:^4.4.0":
-  version: 4.4.0
-  resolution: "react-icons@npm:4.4.0"
+"react-icons@npm:^4.6.0":
+  version: 4.6.0
+  resolution: "react-icons@npm:4.6.0"
   peerDependencies:
     react: "*"
-  checksum: bf7636ddd253fe199e2e71c030971ddc9a2f1d2c874409eecea88707ada655346a26153422cba6db30f7d6e4a7db8d545c76adba01b2197db0e57b4ea4d5b7ff
+  checksum: 66a5db76b504a78ca6a57d221f84d1bcd66c98e99b505ee698f3f4ff37529af4793bfb0decbe59648aba85598d31eaaa5988b0316088c7a0a665a67305c066ee
   languageName: node
   linkType: hard
 
@@ -32487,7 +32487,7 @@ __metadata:
     eslint-config-next: "npm:12.3.1"
     fast-glob: "npm:3.2.12"
     flowbite: "npm:1.5.3"
-    flowbite-react: "npm:0.2.1"
+    flowbite-react: "npm:0.3.0"
     framer-motion: "npm:7.6.1"
     get-tsconfig: "npm:4.2.0"
     got: "npm:12.5.2"
