@@ -45,7 +45,7 @@
     "test-e2e-local": "cross-env E2E_WEBSERVER_MODE=BUILD_AND_START playwright test",
     "test-e2e": "playwright test",
     "typecheck": "tsc --project ./tsconfig.json --noEmit",
-    "prettier-check": "yarn run --top-level prettier --check --cache --cache-strategy metadata --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
+    "prettier-check": "yarn run --top-level prettier --check --cache --cache-location ../../.cache/prettier/website.prettiercache --cache-strategy metadata --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "prettier-fix": "yarn run --top-level prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/website.eslintcache",
     "fix-all-files": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --fix"
