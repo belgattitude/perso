@@ -3129,13 +3129,6 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@belgattitude/http-exception@npm:1.5.0":
-  version: 1.5.0
-  resolution: "@belgattitude/http-exception@npm:1.5.0"
-  checksum: f45b3b03cdfccae2793175927ceeb52229555cedfd9c039c362af7d2276f4304f4766a3592e4a4b633b80b09ef301e384adcbdc7cd4df2f3bafa2a6199370ff7
-  languageName: node
-  linkType: hard
-
 "@belgattitude/ts-utils@workspace:^, @belgattitude/ts-utils@workspace:packages/ts-utils":
   version: 0.0.0-use.local
   resolution: "@belgattitude/ts-utils@workspace:packages/ts-utils"
@@ -5511,6 +5504,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"@httpx/exception@npm:1.6.2, @httpx/exception@npm:^1.6.0":
+  version: 1.6.2
+  resolution: "@httpx/exception@npm:1.6.2"
+  checksum: 3265de3d7917a7a857a0d1bccdb7aa773896e0f10f20d7b5e5d0eafa5d357ee2bc9a9ea64edf5baecf9e5fb772b5a9a4df96dcd960f98f3357ffb97561394d78
+  languageName: node
+  linkType: hard
+
 "@humanwhocodes/config-array@npm:^0.11.6":
   version: 0.11.6
   resolution: "@humanwhocodes/config-array@npm:0.11.6"
@@ -6606,6 +6606,31 @@ __metadata:
   version: 13.0.5
   resolution: "@next/swc-win32-x64-msvc@npm:13.0.5"
   conditions: os=win32 & cpu=x64
+  languageName: node
+  linkType: hard
+
+"@nextvalid/zod-request@npm:0.3.0":
+  version: 0.3.0
+  resolution: "@nextvalid/zod-request@npm:0.3.0"
+  dependencies:
+    "@httpx/exception": "npm:^1.6.0"
+    zod: "npm:^3.19.1"
+  peerDependencies:
+    "@types/node": "*"
+    next: ^11.0.0 || ^12.0.0 || ^13.0.0
+    react: ^17.0.2 || ^18.2.0
+    react-dom: ^17.0.2 || ^18.2.0
+    typescript: ^4.5.0 || ^5.0.0
+  peerDependenciesMeta:
+    "@types/node":
+      optional: true
+    react:
+      optional: true
+    react-dom:
+      optional: true
+    typescript:
+      optional: true
+  checksum: 877fdce57f050b97667b26230db9271e1b3f4dd55e7e845facebc9eb3c5b4ccdc74cac79c0f6a610769a4d9c8c9698235517651442f9fdc6be643bc950b37378
   languageName: node
   linkType: hard
 
@@ -24056,23 +24081,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"next-transpile-modules@npm:9.0.0":
-  version: 9.0.0
-  resolution: "next-transpile-modules@npm:9.0.0"
+"next-transpile-modules@npm:10.0.0":
+  version: 10.0.0
+  resolution: "next-transpile-modules@npm:10.0.0"
   dependencies:
-    enhanced-resolve: "npm:^5.7.0"
-    escalade: "npm:^3.1.1"
-  checksum: 03a47a6c7c520a739e2dfe4a2a820b2678c376a8eba6c3d68c631df739c6158c8be8c0720348f736f1768936cd319653cffa91c3d2518aee88313c2a56570569
-  languageName: node
-  linkType: hard
-
-"next-transpile-modules@patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch":
-  version: 9.0.0
-  resolution: "next-transpile-modules@patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch::version=9.0.0&hash=fc3bfa"
-  dependencies:
-    enhanced-resolve: "npm:^5.7.0"
-    escalade: "npm:^3.1.1"
-  checksum: 2890c8b2fe834a7fa29d6729aab999c639bdf307d768bc21a49566b5a8add1336679317f98b3d99fdcbb3e8bc89bef89d3432c53bf0a71cff89de47223b2d45c
+    enhanced-resolve: "npm:^5.10.0"
+  checksum: 14a7c8cc588514ac1b4d10da70f62c1605439dc84d87170aaa42072155a07c133a82759d55f0238724c3ee1fd38e745a60f45a52fa2e32e72d09e2ef4fdc24a2
   languageName: node
   linkType: hard
 
@@ -32656,7 +32670,6 @@ __metadata:
     "@belgattitude/db-main": "workspace:^"
     "@belgattitude/eslint-config-bases": "workspace:^"
     "@belgattitude/failwell": "workspace:^"
-    "@belgattitude/http-exception": "npm:1.5.0"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.10.5"
     "@emotion/cache": "npm:11.10.5"
@@ -32672,11 +32685,13 @@ __metadata:
     "@graphql-codegen/typescript-resolvers": "npm:2.7.7"
     "@headlessui/react": "npm:1.7.4"
     "@hookform/resolvers": "npm:2.9.10"
+    "@httpx/exception": "npm:1.6.2"
     "@jitsi/react-sdk": "npm:1.3.0"
     "@mdx-js/react": "npm:2.1.5"
     "@next-auth/prisma-adapter": "npm:1.0.5"
     "@next/bundle-analyzer": "npm:13.0.5"
     "@next/env": "npm:13.0.5"
+    "@nextvalid/zod-request": "npm:0.3.0"
     "@octokit/graphql": "npm:5.0.4"
     "@octokit/graphql-schema": "npm:12.31.0"
     "@playwright/test": "npm:1.28.1"
@@ -32755,7 +32770,7 @@ __metadata:
     next-secure-headers: "npm:2.2.0"
     next-seo: "npm:5.14.1"
     next-sitemap: "npm:3.1.32"
-    next-transpile-modules: "patch:next-transpile-modules@npm%3A9.0.0#~/.yarn/patches/next-transpile-modules-npm-9.0.0-f224c724ec.patch"
+    next-transpile-modules: "npm:10.0.0"
     npm-run-all: "npm:4.1.5"
     picocolors: "npm:1.0.0"
     pino: "npm:8.7.0"
@@ -33265,7 +33280,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"zod@npm:3.19.1":
+"zod@npm:3.19.1, zod@npm:^3.19.1":
   version: 3.19.1
   resolution: "zod@npm:3.19.1"
   checksum: 67b0f6d39002e19d56a55daf78ab278f1c958f76cb09602f810090162fbc179f40725b1a1bae22a6b08cc9691d81227b8ea94a21ae6a221e997fa537384f71f5

@@ -1,7 +1,4 @@
-import {
-  createHttpException,
-  HttpRequestTimeout,
-} from '@belgattitude/http-exception';
+import { createHttpException, HttpRequestTimeout } from '@httpx/exception';
 import axios, { AxiosError } from 'axios';
 
 const axiosWithHttpException = axios.create();

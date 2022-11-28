@@ -1,4 +1,4 @@
-import { isHttpException } from '@belgattitude/http-exception';
+import { isHttpException } from '@httpx/exception';
 import type { FC } from 'react';
 import { useQuery } from 'react-query';
 import { getGithubRepos } from '@/features/about/api/getGithubRepos';

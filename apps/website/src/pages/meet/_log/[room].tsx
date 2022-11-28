@@ -1,5 +1,5 @@
-import { HttpBadRequest } from '@belgattitude/http-exception';
 import { assertNonEmptyString } from '@belgattitude/ts-utils';
+import { HttpBadRequest } from '@httpx/exception';
 import type { GetServerSideProps, InferGetServerSidePropsType } from 'next';
 import type { ReactElement } from 'react';
 import { MeetLayout } from '@/features/meet/layouts/MeetLayout';

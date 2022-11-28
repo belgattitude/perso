@@ -1,6 +1,6 @@
 import type { IncomingMessage } from 'node:http';
-import { HttpMethodNotAllowed } from '@belgattitude/http-exception';
 import { assertIncludes } from '@belgattitude/ts-utils';
+import { HttpMethodNotAllowed } from '@httpx/exception';
 
 type HttpMethod =
   | 'GET'

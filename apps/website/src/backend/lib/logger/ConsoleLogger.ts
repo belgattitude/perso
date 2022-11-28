@@ -1,4 +1,4 @@
-import { isHttpException } from '@belgattitude/http-exception';
+import { isHttpException } from '@httpx/exception';
 import type { LoggerInterface, LogLevel } from './LoggerInterface';
 
 export class ConsoleLogger implements LoggerInterface {
