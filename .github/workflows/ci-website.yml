@@ -17,10 +17,7 @@ on:
       - '.github/workflows/**'
 
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
+    types: [opened, synchronize, reopened]
     # Optional:
     #   Only consider those files/paths to trigger the github action
     #   to prevent unnecessary builds.
