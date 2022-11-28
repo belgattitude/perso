@@ -45,13 +45,11 @@ export const PostCard: FC<Props> = (props) => {
         )}
       >
         <Link href={`/post/${post.slug}`}>
-
           <img
             loading={preloadImage ? 'eager' : 'lazy'}
             src={img}
             className="transition-all"
           />
-
         </Link>
         <h2 className="text-brand-primary mt-2 text-lg font-semibold tracking-normal dark:text-white">
           <Link href={`/post/${post.slug}`} legacyBehavior>
@@ -69,7 +67,9 @@ export const PostCard: FC<Props> = (props) => {
         <div>
           {data.summary && (
             <p className="mt-2 text-sm text-gray-500 line-clamp-3 dark:text-gray-400">
-              <Link href={`/post/${post.slug}`} legacyBehavior>{data.summary}</Link>
+              <Link href={`/post/${post.slug}`} legacyBehavior>
+                {data.summary}
+              </Link>
             </p>
           )}
         </div>

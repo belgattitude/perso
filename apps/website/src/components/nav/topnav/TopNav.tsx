@@ -24,10 +24,9 @@ export const TopNav: FC<Props> = (props) => {
         <div className="flex items-center space-x-2.5">
           <Link
             href="/"
-            className="flex items-center space-x-2.5 font-bold text-slate-800 no-underline dark:text-white">
-
+            className="flex items-center space-x-2.5 font-bold text-slate-800 no-underline dark:text-white"
+          >
             <span className="-mt-0.5">Home</span>
-
           </Link>
         </div>
         <nav className="hidden items-center divide-x divide-gray-200 dark:divide-gray-800 lg:flex">
