@@ -9,7 +9,7 @@ module.exports = {
       {
         userAgent: '*',
         allow: '/',
-        disallow: ['_monitor', '**/_monitor', 'admin', '**/admin'],
+        disallow: ['/_monitor', '**/_monitor', '/admin', '**/admin'],
       },
     ],
   },
