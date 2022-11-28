@@ -1,4 +1,4 @@
-import { isHttpException } from '@belgattitude/http-exception';
+import { isHttpException } from '@httpx/exception';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import type { LoggerInterface } from '@/backend/lib/logger';
 

@@ -1,6 +1,6 @@
 import type { IncomingMessage } from 'node:http';
-import type { HttpException } from '@belgattitude/http-exception';
-import { HttpBadRequest } from '@belgattitude/http-exception';
+import type { HttpException } from '@httpx/exception';
+import { HttpBadRequest } from '@httpx/exception';
 import type { NextApiRequest } from 'next';
 import type { z, ZodSchema } from 'zod';
 

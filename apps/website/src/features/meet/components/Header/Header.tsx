@@ -35,7 +35,7 @@ export const Header: FC<HeaderProps> = (props) => {
   return (
     <nav className="rounded border-gray-200 bg-white py-5 px-2 sm:px-4">
       <div className="container mx-auto flex flex-wrap items-center justify-between">
-        <Link href="/" className="flex items-center">
+        <Link href="/" className="flex items-center" legacyBehavior>
           <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
             {/* TITLE */}
           </span>

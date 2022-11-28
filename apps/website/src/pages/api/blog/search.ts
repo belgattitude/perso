@@ -1,4 +1,4 @@
-import { HttpInternalServerError } from '@belgattitude/http-exception';
+import { HttpInternalServerError } from '@httpx/exception';
 import type { NextApiRequest, NextApiResponse } from 'next';
 import { z } from 'zod';
 import { prismaDbMain } from '@/backend/config';

@@ -10,10 +10,7 @@ on:
       - '.github/workflows/**'
 
   pull_request:
-    types:
-      - opened
-      - synchronize
-      - reopened
+    types: [opened, synchronize, reopened]
     paths:
       - 'packages/db-main'
       - '.github/workflows/**'
@@ -27,7 +24,7 @@ jobs:
     strategy:
       fail-fast: false
       matrix:
-        node-version: [16.X]
+        node-version: [18.X]
 
     steps:
       - uses: actions/checkout@v3

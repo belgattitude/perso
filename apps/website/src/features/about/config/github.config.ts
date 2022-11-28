@@ -1,7 +1,8 @@
 export const filteredRepos = [
   ['nextjs-monorepo-example', ['typescript', 'react']],
   ['cache-interop', ['typescript', 'node']],
-  ['http-exception', ['typescript', 'node', 'npm']],
+  ['httpx', ['typescript', 'node', 'npm']],
+  ['nextvalid', ['typescript', 'nextjs', 'node']],
   ['soluble-japha', ['php7.1']],
   ['soluble-mediatools', ['php7.1', 'ffmpeg']],
   ['perso', ['typescript', 'react']],
