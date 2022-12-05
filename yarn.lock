@@ -9653,10 +9653,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/cors@npm:2.8.12":
-  version: 2.8.12
-  resolution: "@types/cors@npm:2.8.12"
-  checksum: cebfe092ba9a94b2077cda564efd6f13e173ff70a7884eb70210bfcefb585778aabb3873e7bc477ef1602c130b5ecf80978809e1212190343a5788be30250ea2
+"@types/cors@npm:2.8.13":
+  version: 2.8.13
+  resolution: "@types/cors@npm:2.8.13"
+  dependencies:
+    "@types/node": "npm:*"
+  checksum: 9c8b1c732295603fcc0e1e8e8f0a332e7ec03d10bb18b9398225e5e2fbf6a2fd64758926204d306ef100a5bdd7b35324bdc34bc57fc49ed9807446930bc678f9
   languageName: node
   linkType: hard
 
@@ -32835,7 +32837,7 @@ __metadata:
     "@trpc/next": "npm:9.27.4"
     "@trpc/react": "npm:9.27.4"
     "@trpc/server": "npm:9.27.4"
-    "@types/cors": "npm:2.8.12"
+    "@types/cors": "npm:2.8.13"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:29.2.4"
     "@types/node": "npm:18.11.9"
