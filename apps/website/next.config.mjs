@@ -6,7 +6,6 @@ import withBundleAnalyzer from '@next/bundle-analyzer';
 import { withSentryConfig } from '@sentry/nextjs';
 
 import { createSecureHeaders } from 'next-secure-headers';
-import withNextTranspileModules from 'next-transpile-modules';
 import pc from 'picocolors';
 import nextI18nConfig from './next-i18next.config.js';
 import packageJson from './package.json' assert { type: 'json' };
@@ -54,25 +53,6 @@ if (disableSourceMaps) {
   );
 }
 
-// Tell webpack to compile those packages
-// @link https://www.npmjs.com/package/next-transpile-modules
-const tmModules = [
-  // for legacy browsers support (only in prod)
-  ...(isProd
-    ? [
-        // ie: '@react-google-maps/api'...
-      ]
-    : []),
-  // ESM only packages are not yet supported by NextJs if you're not
-  // using experimental esmExternals
-  // @link {https://nextjs.org/blog/next-11-1#es-modules-support|Blog 11.1.0}
-  // @link {https://github.com/vercel/next.js/discussions/27876|Discussion}
-  // @link https://github.com/vercel/next.js/issues/23725
-  // @link https://gist.github.com/sindresorhus/a39789f98801d908bbc7ff3ecc99d99c
-  ...[
-    // ie: newer versions of https://github.com/sindresorhus packages
-  ],
-];
 
 // @link https://github.com/jagaapple/next-secure-headers
 const secureHeaders = createSecureHeaders({
@@ -179,6 +159,11 @@ const nextConfig = {
     ],
     unoptimized: false,
   },
+
+  // Packages to be transpiled part of nextjs build to follow nextjs/browserslist compatibility.
+  // This replaces next-transpile-modules starting from nextjs 13.1, if you're relying on css
+  // please see https://github.com/vercel/next.js/issues/42837
+  transpilePackages: isProd ? ['ky'] : [],
 
   experimental: {
     legacyBrowsers: false,
@@ -300,16 +285,6 @@ if (!NEXTJS_DISABLE_SENTRY) {
   config = rest;
 }
 
-if (tmModules.length > 0) {
-  console.info(
-    `${pc.green('notice')}- Will transpile [${tmModules.join(',')}]`
-  );
-
-  config = withNextTranspileModules(tmModules, {
-    resolveSymlinks: true,
-    debug: false,
-  })(config);
-}
 
 if (process.env.ANALYZE === 'true') {
   config = withBundleAnalyzer({
