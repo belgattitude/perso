@@ -53,7 +53,6 @@ if (disableSourceMaps) {
   );
 }
 
-
 // @link https://github.com/jagaapple/next-secure-headers
 const secureHeaders = createSecureHeaders({
   contentSecurityPolicy: {
@@ -284,7 +283,6 @@ if (!NEXTJS_DISABLE_SENTRY) {
   const { sentry, ...rest } = config;
   config = rest;
 }
-
 
 if (process.env.ANALYZE === 'true') {
   config = withBundleAnalyzer({
