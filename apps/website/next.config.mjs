@@ -164,6 +164,22 @@ const nextConfig = {
   // please see https://github.com/vercel/next.js/issues/42837
   transpilePackages: isProd ? ['ky'] : [],
 
+  modularizeImports: {
+    '@mui/material': {
+      transform: '@mui/material/{{member}}',
+    },
+    '@mui/icons-material': {
+      transform: '@mui/icons-material/{{member}}',
+    },
+    '@mui/styles': {
+      transform: '@mui/styles/{{member}}',
+    },
+    /* if needed
+    "@mui/lab": {
+      transform: "@mui/lab/{{member}}"
+    } */
+  },
+
   experimental: {
     legacyBrowsers: false,
 

@@ -1,9 +1,9 @@
 import { withTRPC } from '@trpc/next';
 import type { NextComponentType, NextPageContext } from 'next';
+import type { AppProps as NextAppProps } from 'next/app';
 import type { Session } from 'next-auth';
 import type { SSRConfig } from 'next-i18next';
 import { appWithTranslation } from 'next-i18next';
-import type { AppProps as NextAppProps } from 'next/app';
 import type { ReactElement, ReactNode } from 'react';
 import { getWithTrpcConfig } from '@/config/trpc.config';
 import { MainLayout } from '@/themes/layouts/main';
