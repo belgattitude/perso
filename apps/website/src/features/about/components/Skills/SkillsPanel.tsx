@@ -17,8 +17,8 @@ import {
   getListVariants,
 } from './SkillsPanelAnims';
 
-export type SkillSections = typeof skillSections[number];
-export type SkillType = typeof skillType[number];
+export type SkillSections = (typeof skillSections)[number];
+export type SkillType = (typeof skillType)[number];
 
 export type SkillRecord = {
   name: string;
