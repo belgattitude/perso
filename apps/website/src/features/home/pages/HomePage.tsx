@@ -1,6 +1,6 @@
+import dynamic from 'next/dynamic';
 import { useTranslation } from 'next-i18next';
 import { NextSeo } from 'next-seo';
-import dynamic from 'next/dynamic';
 import type { FC } from 'react';
 import type { WobbleCanvasProps } from '@/features/home/components/Wobble/WobbleCanvas';
 import { homeConfig } from '@/features/home/home.config';

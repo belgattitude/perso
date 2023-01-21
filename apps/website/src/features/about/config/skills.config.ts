@@ -12,7 +12,7 @@ export const skillSections = [
   'Dev',
   'Past stacks',
 ] as const;
-export const defaultSection: typeof skillSections[number] = 'Overview';
+export const defaultSection: (typeof skillSections)[number] = 'Overview';
 
 export const sectionAnimations: SectionAnimationConfig = {
   none: [],

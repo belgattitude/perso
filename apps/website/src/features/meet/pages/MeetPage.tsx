@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
-import { NextSeo } from 'next-seo';
 import { useRouter } from 'next/router';
+import { NextSeo } from 'next-seo';
 import type { FC } from 'react';
 import { logMeetEvent } from '@/features/meet/api/logMeetEvent';
 import type { MeetEventAction } from '@/features/meet/backend/logger';
