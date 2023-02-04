@@ -20,7 +20,7 @@
   "types": "dist/index.d.ts",
   "scripts": {
     "build-mesh": "mesh build",
-    "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo ./.eslintcache && jest --clear-cache",
+    "clean": "rimraf ./dist ./coverage ./tsconfig.tsbuildinfo ./.eslintcache && jest --clear-cache",
     "prettier-check": "yarn run --top-level prettier --check --cache --cache-location ../../.cache/prettier/api-gateway.prettiercache --cache-strategy metadata --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "prettier-fix": "yarn run --top-level prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/api-gateway.eslintcache",

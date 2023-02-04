@@ -27,7 +27,7 @@
     ]
   },
   "scripts": {
-    "clean": "rimraf --no-glob ./.next ./out ./coverage ./tsconfig.tsbuildinfo",
+    "clean": "rimraf ./.next ./out ./coverage ./tsconfig.tsbuildinfo",
     "dev": "next",
     "build": "next build",
     "build-sitemap": "next-sitemap --config ./next-sitemap.config.js",

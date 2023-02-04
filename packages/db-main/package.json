@@ -33,7 +33,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
+    "clean": "rimraf ./dist ./coverage ./tsconfig.tsbuildinfo",
     "prisma-migrate": "dotenv-flow -- yarn prisma migrate",
     "prisma-migrate-reset": "dotenv-flow -- yarn prisma migrate reset",
     "prisma-db-seed": "dotenv-flow -- yarn prisma db seed",

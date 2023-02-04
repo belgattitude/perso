@@ -47,7 +47,7 @@
   "scripts": {
     "build": "tsup",
     "dev": "tsup --watch",
-    "clean": "rimraf --no-glob ./dist ./coverage ./build ./tsconfig.tsbuildinfo",
+    "clean": "rimraf ./dist ./coverage ./build ./tsconfig.tsbuildinfo",
     "check-dist": "es-check -v",
     "check-size": "size-limit --highlight-less",
     "test": "yarn test-unit",
