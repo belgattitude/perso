@@ -29,18 +29,18 @@
     "LICENSE"
   ],
   "scripts": {
-    "clean": "rimraf --no-glob ./dist ./coverage ./tsconfig.tsbuildinfo",
+    "clean": "rimraf ./dist ./coverage ./tsconfig.tsbuildinfo",
     "prettier-check": "yarn run --top-level prettier --check --cache --cache-location ../../.cache/prettier/common-i18n.prettiercache --cache-strategy metadata --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "prettier-fix": "yarn run --top-level prettier --write --config ../../.prettierrc.js --ignore-path ../../.prettierignore \"./**/*.{js,jsx,cjs,mjs,ts,tsx,mts,md,mdx,json,css,scss,less}\"",
     "lint": "eslint . --ext .ts,.tsx,.js,.jsx,.mjs,.cjs,.mts,.cts --cache --cache-location ../../.cache/eslint/common-i18n.eslintcache",
     "typecheck": "tsc --project ./tsconfig.json --noEmit"
   },
   "devDependencies": {
-    "@belgattitude/eslint-config-bases": "workspace:^",
+    "@belgattitude/eslint-config-bases": "1.18.0",
     "@types/node": "18.11.18",
     "cross-env": "7.0.3",
-    "eslint": "8.32.0",
-    "rimraf": "4.1.1",
-    "typescript": "4.9.4"
+    "eslint": "8.33.0",
+    "rimraf": "4.1.2",
+    "typescript": "4.9.5"
   }
 }

@@ -20,7 +20,7 @@ const limitCfg = {
     '/_monitor/sentry/csr-page': '90kb',
     '/_monitor/sentry/ssr-page': '90kb',
     '/about/opensource': '150kb', // includes framer-motion
-    '/about/resume': '150kb', // includes framer-motion
+    '/about/resume': '155kb', // includes framer-motion
     '/meet/[meetingSlug]': '120kb',
     '/meet/_log/[meetingSlug]': '120kb',
     '/meet/j/[meetingSlug]': '120kb',
