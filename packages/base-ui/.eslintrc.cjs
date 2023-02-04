@@ -26,7 +26,7 @@ module.exports = {
     // '@belgattitude/eslint-config-bases/tailwind',
     '@belgattitude/eslint-config-bases/rtl',
     // Apply prettier and disable incompatible rules
-    '@belgattitude/eslint-config-bases/prettier',
+    '@belgattitude/eslint-config-bases/prettier-plugin',
   ],
   rules: {
     // For the sake of example

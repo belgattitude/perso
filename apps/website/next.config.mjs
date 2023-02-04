@@ -138,6 +138,10 @@ const nextConfig = {
 
   sentry: {
     hideSourceMaps: true,
+    // To disable the automatic instrumentation of API route handlers and server-side data fetching functions
+    // In other words, disable if you prefer to explicitly handle sentry per api routes (ie: wrapApiHandlerWithSentry)
+    // https://docs.sentry.io/platforms/javascript/guides/nextjs/manual-setup/#configure-server-side-auto-instrumentation
+    autoInstrumentServerFunctions: false,
   },
 
   // @link https://nextjs.org/docs/basic-features/image-optimization
@@ -283,7 +287,6 @@ const nextConfig = {
 let config = nextConfig;
 
 if (!NEXTJS_DISABLE_SENTRY) {
-  // @ts-ignore because sentry does not match nextjs current definitions
   config = withSentryConfig(config, {
     // Additional config options for the Sentry Webpack plugin. Keep in mind that
     // the following options are set automatically, and overriding them is not

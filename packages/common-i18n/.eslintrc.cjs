@@ -20,7 +20,7 @@ module.exports = {
   extends: [
     '@belgattitude/eslint-config-bases/typescript',
     // Apply prettier and disable incompatible rules
-    '@belgattitude/eslint-config-bases/prettier',
+    '@belgattitude/eslint-config-bases/prettier-plugin',
   ],
   rules: {
     // optional overrides per project

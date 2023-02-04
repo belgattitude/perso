@@ -22,7 +22,7 @@ module.exports = {
     '@belgattitude/eslint-config-bases/sonar',
     '@belgattitude/eslint-config-bases/regexp',
     // Apply prettier and disable incompatible rules
-    '@belgattitude/eslint-config-bases/prettier',
+    '@belgattitude/eslint-config-bases/prettier-plugin',
   ],
   overrides: [
     // optional overrides per project file match
