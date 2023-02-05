@@ -7515,9 +7515,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@react-three/drei@npm:9.56.12":
-  version: 9.56.12
-  resolution: "@react-three/drei@npm:9.56.12"
+"@react-three/drei@npm:9.56.17":
+  version: 9.56.17
+  resolution: "@react-three/drei@npm:9.56.17"
   dependencies:
     "@babel/runtime": "npm:^7.11.2"
     "@react-spring/three": "npm:^9.3.1"
@@ -7534,7 +7534,7 @@ __metadata:
     react-merge-refs: "npm:^1.1.0"
     stats.js: "npm:^0.17.0"
     suspend-react: "npm:^0.0.8"
-    three-mesh-bvh: "npm:^0.5.22"
+    three-mesh-bvh: "npm:^0.5.23"
     three-stdlib: "npm:^2.21.8"
     troika-three-text: "npm:^0.47.1"
     utility-types: "npm:^3.10.0"
@@ -7547,7 +7547,7 @@ __metadata:
   peerDependenciesMeta:
     react-dom:
       optional: true
-  checksum: 33ca600d80e8b8b3ec5df7b8274c5196ed4a42569927d98fb879a37ec4b4025517d2fe737c01af2b92c4bd00c6bad9d771b016363b6c52e98ffb3c55bac08563
+  checksum: e6653f4c42924e09de67f74be362b4b466ebc960e549a2d80e3d3957768c2bb6a246f95ede23944113f9028204e9b0f9fb3c848ffa3ba37ef715f79932c0cec9
   languageName: node
   linkType: hard
 
@@ -30348,12 +30348,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"three-mesh-bvh@npm:^0.5.22":
-  version: 0.5.22
-  resolution: "three-mesh-bvh@npm:0.5.22"
+"three-mesh-bvh@npm:^0.5.23":
+  version: 0.5.23
+  resolution: "three-mesh-bvh@npm:0.5.23"
   peerDependencies:
     three: ">= 0.123.0"
-  checksum: 74ee5b31447702367347d4d5aea5b2629c567b5266527d49dba0f2007f521ffc1ffce1a33c709182b4a8cbc2ec72b75d80cdc737f1b5490cc7b4e468b2cf3e3c
+  checksum: 9b673317e4e72b0a0066266273049c7bb072ec35c050a59c143abc05f3046a129c4085644815d9efd683506471fc485e1269b96e24739f1411ea05c11c31703a
   languageName: node
   linkType: hard
 
@@ -32501,7 +32501,7 @@ __metadata:
     "@pothos/plugin-errors": "npm:3.10.0"
     "@pothos/plugin-prisma": "npm:3.40.2"
     "@prisma/client": "npm:4.9.0"
-    "@react-three/drei": "npm:9.56.12"
+    "@react-three/drei": "npm:9.56.17"
     "@react-three/fiber": "npm:8.10.4"
     "@sentry/nextjs": "npm:7.36.0"
     "@sindresorhus/is": "npm:5.3.0"
