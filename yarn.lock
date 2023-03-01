@@ -2848,7 +2848,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/api-gateway@workspace:packages/api-gateway"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@graphql-mesh/cli": "npm:0.82.24"
     "@graphql-mesh/config": "npm:10.1.7"
     "@graphql-mesh/graphql": "npm:0.34.7"
@@ -2875,7 +2875,7 @@ __metadata:
   resolution: "@belgattitude/base-ui@workspace:packages/base-ui"
   dependencies:
     "@babel/core": "npm:7.21.0"
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@emotion/babel-plugin": "npm:11.10.6"
     "@emotion/babel-preset-css-prop": "npm:11.10.0"
     "@emotion/react": "npm:11.10.6"
@@ -2954,7 +2954,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@types/node": "npm:18.14.2"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.35.0"
@@ -2967,7 +2967,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/crypto@workspace:packages/crypto"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@size-limit/file": "npm:8.2.4"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/node": "npm:18.14.2"
@@ -2995,7 +2995,7 @@ __metadata:
   resolution: "@belgattitude/db-main@workspace:packages/db-main"
   dependencies:
     "@belgattitude/crypto": "workspace:^"
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@pothos/core": "npm:3.27.1"
     "@pothos/plugin-prisma": "npm:3.41.3"
     "@prisma/client": "npm:4.11.0"
@@ -3032,14 +3032,14 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@belgattitude/eslint-config-bases@npm:1.21.0":
-  version: 1.21.0
-  resolution: "@belgattitude/eslint-config-bases@npm:1.21.0"
+"@belgattitude/eslint-config-bases@npm:1.22.0":
+  version: 1.22.0
+  resolution: "@belgattitude/eslint-config-bases@npm:1.22.0"
   dependencies:
     "@rushstack/eslint-patch": "npm:^1.2.0"
-    "@tanstack/eslint-plugin-query": "npm:^4.24.8"
-    "@typescript-eslint/eslint-plugin": "npm:^5.52.0"
-    "@typescript-eslint/parser": "npm:^5.52.0"
+    "@tanstack/eslint-plugin-query": "npm:^4.24.11"
+    "@typescript-eslint/eslint-plugin": "npm:^5.54.0"
+    "@typescript-eslint/parser": "npm:^5.54.0"
     eslint-config-prettier: "npm:^8.6.0"
     eslint-import-resolver-typescript: "npm:^3.5.3"
     eslint-plugin-import: "npm:^2.27.5"
@@ -3052,8 +3052,8 @@ __metadata:
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-regexp: "npm:^1.12.0"
     eslint-plugin-sonarjs: "npm:^0.18.0"
-    eslint-plugin-storybook: "npm:^0.6.10"
-    eslint-plugin-tailwindcss: "npm:^3.8.3"
+    eslint-plugin-storybook: "npm:^0.6.11"
+    eslint-plugin-tailwindcss: "npm:^3.10.1"
     eslint-plugin-testing-library: "npm:^5.10.2"
   peerDependencies:
     "@angular-eslint/template-parser": ^15.2.0
@@ -3085,7 +3085,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: 015fcbe2b17e15588ffcac2924d1e721d6865b99aebe96df3fc24b33fb934ef6b346d2c672cce6459d4eae80d2d1c26e2e61fa0b9b44fbf35c13faaf840549f8
+  checksum: 6fc538d6b125f6d12aa3f6cb6cc12af2a266514731f3747a6648186c6e7bf8a8e37337a7e9b087085a31d9ca5c3c093422a4b3010b8d800903b2d217510a54d7
   languageName: node
   linkType: hard
 
@@ -3093,7 +3093,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/failwell@workspace:packages/failwell"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@size-limit/file": "npm:8.2.4"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/jest": "npm:29.4.0"
@@ -3122,7 +3122,7 @@ __metadata:
   resolution: "@belgattitude/file-s3@workspace:packages/file-s3"
   dependencies:
     "@aws-sdk/client-s3": "npm:3.281.0"
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@size-limit/file": "npm:8.2.4"
     "@types/jest": "npm:29.4.0"
     "@types/node": "npm:18.14.2"
@@ -3150,7 +3150,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/ts-utils@workspace:packages/ts-utils"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@size-limit/file": "npm:8.2.4"
     "@types/jest": "npm:29.4.0"
     "@types/node": "npm:18.14.2"
@@ -9610,7 +9610,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@tanstack/eslint-plugin-query@npm:^4.24.8":
+"@tanstack/eslint-plugin-query@npm:^4.24.11":
   version: 4.24.11
   resolution: "@tanstack/eslint-plugin-query@npm:4.24.11"
   checksum: f08541b5e02f177981483d6af16f8620a95ad7cc72733eef8fdd87916ed2b250c3e1125f3ea38ace06a789f83f859a73e070892e0ad38dd759d77a2332b9476a
@@ -10579,7 +10579,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/eslint-plugin@npm:^5.52.0":
+"@typescript-eslint/eslint-plugin@npm:^5.54.0":
   version: 5.54.0
   resolution: "@typescript-eslint/eslint-plugin@npm:5.54.0"
   dependencies:
@@ -10603,7 +10603,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@typescript-eslint/parser@npm:^5.42.0, @typescript-eslint/parser@npm:^5.52.0":
+"@typescript-eslint/parser@npm:^5.42.0, @typescript-eslint/parser@npm:^5.54.0":
   version: 5.54.0
   resolution: "@typescript-eslint/parser@npm:5.54.0"
   dependencies:
@@ -12553,7 +12553,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "belgattitude-perso@workspace:."
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@changesets/changelog-github": "npm:0.4.8"
     "@changesets/cli": "npm:2.26.0"
     "@commitlint/cli": "npm:17.4.4"
@@ -16595,9 +16595,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-storybook@npm:^0.6.10":
-  version: 0.6.10
-  resolution: "eslint-plugin-storybook@npm:0.6.10"
+"eslint-plugin-storybook@npm:^0.6.11":
+  version: 0.6.11
+  resolution: "eslint-plugin-storybook@npm:0.6.11"
   dependencies:
     "@storybook/csf": "npm:^0.0.1"
     "@typescript-eslint/utils": "npm:^5.45.0"
@@ -16605,19 +16605,19 @@ __metadata:
     ts-dedent: "npm:^2.2.0"
   peerDependencies:
     eslint: ">=6"
-  checksum: 73c5a27bd9bc0274c842e4ba521fbf36b5b374b021afe9b63ed80015c0265e67bb3390e2b29ebc82403d4eaa019d5f99bb476c3335c0d1e354d1ee4b12739a03
+  checksum: 3cc260efdb542f728b575680639ccf63ac0a5feb6251587bcbe36464b36caf970af5195b2c2914ed20360874fe1a3f0a4eeafa31f8ea90159f0d60d20adee22e
   languageName: node
   linkType: hard
 
-"eslint-plugin-tailwindcss@npm:^3.8.3":
-  version: 3.8.3
-  resolution: "eslint-plugin-tailwindcss@npm:3.8.3"
+"eslint-plugin-tailwindcss@npm:^3.10.1":
+  version: 3.10.1
+  resolution: "eslint-plugin-tailwindcss@npm:3.10.1"
   dependencies:
     fast-glob: "npm:^3.2.5"
     postcss: "npm:^8.4.4"
   peerDependencies:
     tailwindcss: ^3.2.2
-  checksum: 11ab6428f6dc350c15874c0eaeac4806b90968392a01ccc66d889bdad9a397e5be9a7fcf0caf20ba733cd8baa6749abcdc6727d7e9f57be207c65f70856b03a1
+  checksum: 7066f0d640fda9c7bd77ba684368b3496e52c2bbc8f39024a803043599476331e5a8475ddbdfa5b45f3c8c18cc8592a7a70418e7e360d94692262c1b4f29016a
   languageName: node
   linkType: hard
 
@@ -32750,7 +32750,7 @@ __metadata:
     "@belgattitude/common-i18n": "workspace:^"
     "@belgattitude/crypto": "workspace:^"
     "@belgattitude/db-main": "workspace:^"
-    "@belgattitude/eslint-config-bases": "npm:1.21.0"
+    "@belgattitude/eslint-config-bases": "npm:1.22.0"
     "@belgattitude/failwell": "workspace:^"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.10.6"
