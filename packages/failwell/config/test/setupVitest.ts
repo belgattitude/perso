@@ -5,4 +5,5 @@ const jestCompatOverride = {
   spyOn: vi.spyOn,
 };
 
-(global as Record<'jest', typeof jestCompatOverride>).jest = jestCompatOverride;
+(global as unknown as Record<'jest', typeof jestCompatOverride>).jest =
+  jestCompatOverride;
