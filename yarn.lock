@@ -2978,8 +2978,8 @@ __metadata:
   dependencies:
     "@belgattitude/crypto": "workspace:^"
     "@belgattitude/eslint-config-bases": "npm:1.20.2"
-    "@pothos/core": "npm:3.25.0"
-    "@pothos/plugin-prisma": "npm:3.41.0"
+    "@pothos/core": "npm:3.27.1"
+    "@pothos/plugin-prisma": "npm:3.41.1"
     "@prisma/client": "npm:4.10.1"
     "@soluble/dsn-parser": "npm:1.6.0"
     "@types/jest": "npm:29.4.0"
@@ -7368,12 +7368,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pothos/core@npm:3.25.0":
-  version: 3.25.0
-  resolution: "@pothos/core@npm:3.25.0"
+"@pothos/core@npm:3.27.1":
+  version: 3.27.1
+  resolution: "@pothos/core@npm:3.27.1"
   peerDependencies:
     graphql: ">=15.1.0"
-  checksum: 5bc047cde70b3be8fea624cb6600f0e9b150ba8b85be478ae03b616add2ce57c418209ef162bd0101a01bca51d364d5eada967ba94b2726858457b411c95e50f
+  checksum: 95b30e13fc2d5a6a25ce75433678fdd7193a365befc06c3c330db3f6c6bfd382a9cca750796fdfa8cf66bc343ed2839335b46376bf4be2e2e9ab9865a2bad475
   languageName: node
   linkType: hard
 
@@ -7387,9 +7387,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@pothos/plugin-prisma@npm:3.41.0":
-  version: 3.41.0
-  resolution: "@pothos/plugin-prisma@npm:3.41.0"
+"@pothos/plugin-prisma@npm:3.41.1":
+  version: 3.41.1
+  resolution: "@pothos/plugin-prisma@npm:3.41.1"
   dependencies:
     "@prisma/generator-helper": "npm:^4.9.0"
   peerDependencies:
@@ -7399,7 +7399,7 @@ __metadata:
     typescript: ">=4.7.2"
   bin:
     prisma-pothos-types: bin/generator.js
-  checksum: c537fa031d9ba873d103c2fc3e1969a151560211f64636c4279b6797f497192634107eb34054bcdf0545c54db8ed2a81a5ee0b4c3dad0c09e066eb6d31e2b4c2
+  checksum: 9a0a33b1713e413106d98fdfff32bff2d8e7fdd92e340ae5a6d81c9eb75888920995c803f324d5add14ccfc0a31514265c3d9854f777f07c95bbdda40f5b50fa
   languageName: node
   linkType: hard
 
@@ -32629,9 +32629,9 @@ __metadata:
     "@octokit/graphql": "npm:5.0.5"
     "@octokit/graphql-schema": "npm:13.3.2"
     "@playwright/test": "npm:1.30.0"
-    "@pothos/core": "npm:3.25.0"
+    "@pothos/core": "npm:3.27.1"
     "@pothos/plugin-errors": "npm:3.11.0"
-    "@pothos/plugin-prisma": "npm:3.41.0"
+    "@pothos/plugin-prisma": "npm:3.41.1"
     "@prisma/client": "npm:4.10.1"
     "@react-three/drei": "npm:9.56.25"
     "@react-three/fiber": "npm:8.11.1"
