@@ -29,11 +29,12 @@ module.exports = {
     '@belgattitude/eslint-config-bases/prettier-plugin',
   ],
   rules: {
-    // For the sake of example
     // https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/blob/HEAD/docs/rules/anchor-is-valid.md
     'jsx-a11y/anchor-is-valid': 'off',
     'jsx-a11y/click-events-have-key-events': 'off',
     'jsx-a11y/interactive-supports-focus': 'off',
+    // https://medium.com/@steven-lemon182/are-typescript-barrel-files-an-anti-pattern-72a713004250
+    'import/no-cycle': 2,
   },
   overrides: [
     {

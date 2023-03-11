@@ -26,7 +26,8 @@ module.exports = {
     '@belgattitude/eslint-config-bases/prettier-plugin',
   ],
   rules: {
-    // optional overrides per project
+    // https://medium.com/@steven-lemon182/are-typescript-barrel-files-an-anti-pattern-72a713004250
+    'import/no-cycle': 2,
   },
   overrides: [
     // optional overrides per project file match

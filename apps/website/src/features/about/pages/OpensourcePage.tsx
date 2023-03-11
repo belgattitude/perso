@@ -8,8 +8,8 @@ import {
   HeroBlock,
   AboutMeBlock,
   OpenSourceBlock,
-  Block,
 } from '@/features/about/blocks';
+import { Block } from '@/features/about/components/Block';
 import { defaultTheme } from '@/themes';
 import { pageConfig } from '../config/page.config';
 
