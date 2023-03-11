@@ -1,7 +1,7 @@
 import { css } from '@emotion/react';
 import dynamic from 'next/dynamic';
 import type { FC } from 'react';
-import { BlockTitle } from '@/features/about/blocks';
+import { BlockTitle } from '@/features/about/components/Block';
 import { defaultSection, skillsRecords } from '@/features/about/config';
 import type { SkillsPanelProps } from '../../components/Skills';
 import * as S from './styles';

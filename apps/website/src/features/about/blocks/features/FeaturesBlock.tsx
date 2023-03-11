@@ -1,6 +1,6 @@
 import type { FC } from 'react';
-import { BlockTitle } from '@/features/about/blocks';
 import { FeaturesCtn } from '@/features/about/blocks/features/styles';
+import { BlockTitle } from '@/features/about/components/Block';
 
 type FeaturesProps = {
   className?: string;

@@ -9,10 +9,9 @@ import {
   AboutMeBlock,
   OpenSourceBlock,
   FeaturesBlock,
-  Block,
-  BlockTitle,
 } from '@/features/about/blocks';
 import type { TechnosBlockProps } from '@/features/about/blocks/technos/TechnosBlock';
+import { Block, BlockTitle } from '@/features/about/components/Block';
 import { pageConfig } from '@/features/about/config';
 import LinkedInIcon from '@/public/icons/devicons/linkedin/linkedin-original.svg';
 import { defaultTheme } from '@/themes';

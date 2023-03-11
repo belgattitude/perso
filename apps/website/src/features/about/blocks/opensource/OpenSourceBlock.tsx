@@ -1,6 +1,6 @@
 import { css } from '@emotion/react';
 import type { FC } from 'react';
-import { BlockTitle } from '@/features/about/blocks';
+import { BlockTitle } from '@/features/about/components/Block';
 import { RepoList } from '@/features/about/components/Github';
 import GithubIcon from '@/public/icons/devicons/github/github-original.svg';
 import * as S from './styles';

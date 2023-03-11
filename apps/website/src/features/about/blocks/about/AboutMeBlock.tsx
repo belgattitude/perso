@@ -1,5 +1,5 @@
 import type { FC } from 'react';
-import { BlockTitle } from '@/features/about/blocks';
+import { BlockTitle } from '@/features/about/components/Block';
 import * as S from './styles';
 
 export type AboutMeProps = {
