@@ -2849,7 +2849,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/api-gateway@workspace:packages/api-gateway"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@graphql-mesh/cli": "npm:0.82.25"
     "@graphql-mesh/config": "npm:10.1.8"
     "@graphql-mesh/graphql": "npm:0.34.8"
@@ -2876,7 +2876,7 @@ __metadata:
   resolution: "@belgattitude/base-ui@workspace:packages/base-ui"
   dependencies:
     "@babel/core": "npm:7.21.0"
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@emotion/babel-plugin": "npm:11.10.6"
     "@emotion/babel-preset-css-prop": "npm:11.10.0"
     "@emotion/react": "npm:11.10.6"
@@ -2955,7 +2955,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@types/node": "npm:18.15.0"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.36.0"
@@ -2968,7 +2968,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/crypto@workspace:packages/crypto"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@size-limit/file": "npm:8.2.4"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/node": "npm:18.15.0"
@@ -2996,7 +2996,7 @@ __metadata:
   resolution: "@belgattitude/db-main@workspace:packages/db-main"
   dependencies:
     "@belgattitude/crypto": "workspace:^"
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@pothos/core": "npm:3.28.0"
     "@pothos/plugin-prisma": "npm:3.43.0"
     "@prisma/client": "npm:4.11.0"
@@ -3033,9 +3033,9 @@ __metadata:
   languageName: unknown
   linkType: soft
 
-"@belgattitude/eslint-config-bases@npm:1.24.0":
-  version: 1.24.0
-  resolution: "@belgattitude/eslint-config-bases@npm:1.24.0"
+"@belgattitude/eslint-config-bases@npm:1.25.1":
+  version: 1.25.1
+  resolution: "@belgattitude/eslint-config-bases@npm:1.25.1"
   dependencies:
     "@rushstack/eslint-patch": "npm:^1.2.0"
     "@tanstack/eslint-plugin-query": "npm:^4.26.2"
@@ -3048,7 +3048,7 @@ __metadata:
     eslint-plugin-jest-formatting: "npm:^3.1.0"
     eslint-plugin-jsx-a11y: "npm:^6.7.1"
     eslint-plugin-playwright: "npm:^0.12.0"
-    eslint-plugin-prettier: "npm:4.2.1"
+    eslint-plugin-prettier: "npm:^4.2.1"
     eslint-plugin-react: "npm:^7.32.2"
     eslint-plugin-react-hooks: "npm:^4.6.0"
     eslint-plugin-regexp: "npm:^1.12.0"
@@ -3060,13 +3060,13 @@ __metadata:
     "@angular-eslint/template-parser": ^15.2.0
     "@graphql-eslint/eslint-plugin": ^3.14.3
     eslint: ^8.29.0
-    eslint-plugin-mdx: 2.0.5
+    eslint-plugin-mdx: ^2.0.5
     graphql: ^16.6.0
-    prettier: ^2.7.0 || >= 3.0.0-alpha.4
-    react: ^18.0.2
-    react-dom: ^18.0.2
+    prettier: ^2.8.0 || >= 3.0.0-alpha.6
+    react: ^18.2.0
+    react-dom: ^18.2.0
     tailwindcss: ^3.2.2
-    typescript: ^4.9.4
+    typescript: ^4.9.4 || ^5.0.2
   peerDependenciesMeta:
     "@angular-eslint/template-parser":
       optional: true
@@ -3086,7 +3086,7 @@ __metadata:
       optional: true
     typescript:
       optional: true
-  checksum: e993acd5daa1c4ca5596164806910d4e710a151d082f75b6dc1bb7616c1c0ec364c8fcb3249cffc77a478355b7b81668197b3b29dc5d81de4bad62d3ee634475
+  checksum: b2fa1e7fe9e0d797eca5a793e17e1e857f8a79a8ebd0c40361c1937a52bea1c19d9057339175808fdd7c55dec80e5a702524d7cad924a5c616d5126c027cf37c
   languageName: node
   linkType: hard
 
@@ -3094,7 +3094,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/failwell@workspace:packages/failwell"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@size-limit/file": "npm:8.2.4"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/jest": "npm:29.5.0"
@@ -3123,7 +3123,7 @@ __metadata:
   resolution: "@belgattitude/file-s3@workspace:packages/file-s3"
   dependencies:
     "@aws-sdk/client-s3": "npm:3.294.0"
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@size-limit/file": "npm:8.2.4"
     "@types/jest": "npm:29.5.0"
     "@types/node": "npm:18.15.0"
@@ -3151,7 +3151,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "@belgattitude/ts-utils@workspace:packages/ts-utils"
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@size-limit/file": "npm:8.2.4"
     "@types/jest": "npm:29.5.0"
     "@types/node": "npm:18.15.0"
@@ -12616,7 +12616,7 @@ __metadata:
   version: 0.0.0-use.local
   resolution: "belgattitude-perso@workspace:."
   dependencies:
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@changesets/changelog-github": "npm:0.4.8"
     "@changesets/cli": "npm:2.26.0"
     "@commitlint/cli": "npm:17.4.4"
@@ -16582,7 +16582,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint-plugin-prettier@npm:4.2.1":
+"eslint-plugin-prettier@npm:^4.2.1":
   version: 4.2.1
   resolution: "eslint-plugin-prettier@npm:4.2.1"
   dependencies:
@@ -32902,7 +32902,7 @@ __metadata:
     "@belgattitude/common-i18n": "workspace:^"
     "@belgattitude/crypto": "workspace:^"
     "@belgattitude/db-main": "workspace:^"
-    "@belgattitude/eslint-config-bases": "npm:1.24.0"
+    "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@belgattitude/failwell": "workspace:^"
     "@belgattitude/ts-utils": "workspace:^"
     "@emotion/babel-plugin": "npm:11.10.6"
