@@ -17,7 +17,7 @@
     "packages/*"
   ],
   "resolutions": {
-    "@graphql-inspector/core": "3.3.0"
+    "@graphql-inspector/core": "4.2.1"
   },
   "scripts": {
     "g:clean": "yarn clean:global-cache && yarn workspaces foreach -pv run clean",
