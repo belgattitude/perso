@@ -9811,32 +9811,38 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trpc/client@npm:9.27.4":
-  version: 9.27.4
-  resolution: "@trpc/client@npm:9.27.4"
-  dependencies:
-    "@babel/runtime": "npm:^7.9.0"
+"@trpc/client@npm:11.19.0":
+  version: 11.19.0
+  resolution: "@trpc/client@npm:11.19.0"
   peerDependencies:
-    "@trpc/server": 9.27.4
-  checksum: d41680ae4e6ca17e20f43bd60ee161802d338c76f54f75a33854f8350daa5c5b74934ed61cb6b00269bf3612fd012978fd6409186f5d0da3ef454b9b8ab3ed5f
+    "@trpc/server": 11.19.0
+    typescript: ">=5.7.2"
+  bin:
+    intent: bin/intent.js
+  checksum: d99476030d21f7e3a20bf902f0a652962420aec992b1e15bf1ab5eb610953f224ce230cd8f1541108443e76547004a3804e5b197d7fcbb6c9713d2b60e9ad2e4
   languageName: node
   linkType: hard
 
-"@trpc/next@npm:9.27.4":
-  version: 9.27.4
-  resolution: "@trpc/next@npm:9.27.4"
-  dependencies:
-    "@babel/runtime": "npm:^7.9.0"
-    react-ssr-prepass: "npm:^1.5.0"
+"@trpc/next@npm:11.19.0":
+  version: 11.19.0
+  resolution: "@trpc/next@npm:11.19.0"
   peerDependencies:
-    "@trpc/client": 9.27.4
-    "@trpc/react": 9.27.4
-    "@trpc/server": 9.27.4
+    "@tanstack/react-query": ^5.59.15
+    "@trpc/client": 11.19.0
+    "@trpc/react-query": 11.19.0
+    "@trpc/server": 11.19.0
     next: "*"
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
-    react-query: ^3.37.0
-  checksum: 9361dd7b418f308140b65adf7c28e11813a82567d437156cd6a348bbd0ceddad944fb1ca41cd58ff6747dee087f0a24629bd7e5f294cdd124d6bf3e849c18f68
+    typescript: ">=5.7.2"
+  peerDependenciesMeta:
+    "@tanstack/react-query":
+      optional: true
+    "@trpc/react-query":
+      optional: true
+  bin:
+    intent: bin/intent.js
+  checksum: 605d6ed406b6daf9650a209e5324fff2e8677a10562945efac55e82a717185b7532610207bb42ed851fc67f579ed38e925fa0790bd6a7920f631a47798402651
   languageName: node
   linkType: hard
 
@@ -9855,10 +9861,14 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trpc/server@npm:9.27.4":
-  version: 9.27.4
-  resolution: "@trpc/server@npm:9.27.4"
-  checksum: ccb08f665f95a9a697572f2f83cf4295034c08df8a9c00ec1b7b4c96221b1dc4343efd8cb7e29aec7d557c6ac3f0d4c68b86f3f2b672348b9ad73257580f40ea
+"@trpc/server@npm:11.19.0":
+  version: 11.19.0
+  resolution: "@trpc/server@npm:11.19.0"
+  peerDependencies:
+    typescript: ">=5.7.2"
+  bin:
+    intent: bin/intent.js
+  checksum: 5a21dd1cf581c1dd6087b18f08c0c7be004dcb18a1cc96354dae0977736da1b637b017fcc5cdb1659ebd52e5482b7189e57a7713c55b1de173d1324b9752303b
   languageName: node
   linkType: hard
 
@@ -27649,15 +27659,6 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-ssr-prepass@npm:^1.5.0":
-  version: 1.5.0
-  resolution: "react-ssr-prepass@npm:1.5.0"
-  peerDependencies:
-    react: ^16.8.0 || ^17.0.0 || ^18.0.0
-  checksum: eea25592271fe6b0ee625fce39b1cb2d13f1ea19d3432658071d5a8061c380904540c122949974012e59a354a45a2db67ff2359cd929b5feea8df6feb4946c52
-  languageName: node
-  linkType: hard
-
 "react-use-measure@npm:^2.1.1":
   version: 2.1.1
   resolution: "react-use-measure@npm:2.1.1"
@@ -32949,10 +32950,10 @@ __metadata:
     "@theatre/core": "npm:0.6.0"
     "@theatre/r3f": "npm:0.6.0"
     "@theatre/studio": "npm:0.6.0"
-    "@trpc/client": "npm:9.27.4"
-    "@trpc/next": "npm:9.27.4"
+    "@trpc/client": "npm:11.19.0"
+    "@trpc/next": "npm:11.19.0"
     "@trpc/react": "npm:9.27.4"
-    "@trpc/server": "npm:9.27.4"
+    "@trpc/server": "npm:11.19.0"
     "@types/cors": "npm:2.8.13"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:29.5.0"
