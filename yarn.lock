@@ -2854,7 +2854,7 @@ __metadata:
     "@graphql-mesh/openapi": "npm:0.35.20"
     "@graphql-mesh/runtime": "npm:0.46.16"
     "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.36.0"
     get-tsconfig: "npm:4.4.0"
@@ -2897,7 +2897,7 @@ __metadata:
     "@testing-library/react": "npm:14.0.0"
     "@testing-library/user-event": "npm:14.4.3"
     "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     "@types/react": "npm:18.0.28"
     "@types/react-dom": "npm:18.0.11"
     "@vitejs/plugin-react": "npm:3.1.0"
@@ -2954,7 +2954,7 @@ __metadata:
   resolution: "@belgattitude/common-i18n@workspace:packages/common-i18n"
   dependencies:
     "@belgattitude/eslint-config-bases": "npm:1.25.1"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     cross-env: "npm:7.0.3"
     eslint: "npm:8.36.0"
     rimraf: "npm:4.4.0"
@@ -2969,7 +2969,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@size-limit/file": "npm:8.2.4"
     "@types/bcryptjs": "npm:2.4.2"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     "@vitest/coverage-istanbul": "npm:0.29.2"
     "@vitest/ui": "npm:0.29.2"
     bcryptjs: "npm:^2.4.3"
@@ -3000,7 +3000,7 @@ __metadata:
     "@prisma/client": "npm:4.11.0"
     "@soluble/dsn-parser": "npm:1.6.0"
     "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     "@vitest/coverage-istanbul": "npm:0.29.2"
     "@vitest/ui": "npm:0.29.2"
     camelcase: "npm:7.0.1"
@@ -3096,7 +3096,7 @@ __metadata:
     "@size-limit/file": "npm:8.2.4"
     "@types/bcryptjs": "npm:2.4.2"
     "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     "@vitest/coverage-istanbul": "npm:0.29.2"
     "@vitest/ui": "npm:0.29.2"
     bcryptjs: "npm:^2.4.3"
@@ -3124,7 +3124,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@size-limit/file": "npm:8.2.4"
     "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     "@vitest/ui": "npm:0.29.2"
     c8: "npm:7.13.0"
     es-check: "npm:7.1.0"
@@ -3152,7 +3152,7 @@ __metadata:
     "@belgattitude/eslint-config-bases": "npm:1.25.1"
     "@size-limit/file": "npm:8.2.4"
     "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     "@vitest/coverage-istanbul": "npm:0.29.2"
     "@vitest/ui": "npm:0.29.2"
     cross-env: "npm:7.0.3"
@@ -10300,10 +10300,12 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@types/node@npm:*, @types/node@npm:18.15.0":
-  version: 18.15.0
-  resolution: "@types/node@npm:18.15.0"
-  checksum: 3d8e41b54a715a4d69fced5ef10af7e41f640d343cac09bcd538d28dc1cfdc9495091a66b0e3eb1292ca4656715e87c2e129ab05130c6c592b67ce641780c804
+"@types/node@npm:*, @types/node@npm:18.19.130":
+  version: 18.19.130
+  resolution: "@types/node@npm:18.19.130"
+  dependencies:
+    undici-types: "npm:~5.26.4"
+  checksum: 88e0aeb6145a7956155e88347750d423f5a2674e2a3058140c8b8670df007a77110b7f45ccc0dd76545aafa50e51eb292bc8cc44252d33f7c13bb7cdf9a70e86
   languageName: node
   linkType: hard
 
@@ -31673,6 +31675,13 @@ __metadata:
   languageName: node
   linkType: hard
 
+"undici-types@npm:~5.26.4":
+  version: 5.26.5
+  resolution: "undici-types@npm:5.26.5"
+  checksum: 7f556493e22e9023f1f9be0d516f5c3cf74d1d6a090c2701ada5117e99900e8cdf8b5540ad3ceed1a672d3532bdfcd0149c444b980731aacc840eb0660ba8587
+  languageName: node
+  linkType: hard
+
 "undici@npm:^5.12.0, undici@npm:^5.8.0":
   version: 5.12.0
   resolution: "undici@npm:5.12.0"
@@ -32956,7 +32965,7 @@ __metadata:
     "@types/cors": "npm:2.8.13"
     "@types/ioredis": "npm:4.28.10"
     "@types/jest": "npm:29.5.0"
-    "@types/node": "npm:18.15.0"
+    "@types/node": "npm:18.19.130"
     "@types/react": "npm:18.0.28"
     "@types/react-dom": "npm:18.0.11"
     "@types/three": "npm:0.149.0"
